@@ -172,7 +172,7 @@ background-repeat: no-repeat;
 
 .nav {
   background: #000000;
-  height: 90px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -194,7 +194,7 @@ background-repeat: no-repeat;
 }
 
 .nav .icon p {
-  font-size: 19px;
+  font-size: 22px;
    color: #983c00;
 }
 
