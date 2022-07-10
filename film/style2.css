@@ -185,7 +185,7 @@ background-repeat: no-repeat;
 .nav .icon {
   flex: 1;
   text-align: center;
-  color: #cc0000;
+  color: #983c00;
 }
 
 .nav .icon i {
@@ -195,11 +195,11 @@ background-repeat: no-repeat;
 
 .nav .icon p {
   font-size: 17px;
-   color: #cc0000;
+   color: #983c00;
 }
 
 .active {
-  color: #cc0000 !important;
+  color: #983c00 !important;
 }
 
 ::-webkit-scrollbar {
