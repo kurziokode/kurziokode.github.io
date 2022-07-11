@@ -10,17 +10,20 @@ anime({
 
 anime({
   targets: '.nav .icon p',
-  duration: 1200,
+  duration: 10000,
   opacity: [0, 1],
-  delay: 700
+  delay:  (el, i) => {
+    return 4000 + 200 * i;
+  },
+  
 })
 
 anime({
   targets: '.live .person',
   translateY: [100, 0],
-  duration: 1200,
+  duration: 3000,
   delay: (el, i) => {
-    return 1000 + 100 * i;
+    return 1000 + 200 * i;
   },
 })
 
