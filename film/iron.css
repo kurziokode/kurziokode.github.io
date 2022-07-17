@@ -14,9 +14,9 @@ svg {
 .path {
 	stroke-dashoffset:1940;
 	stroke-dasharray:1940;
-	-webkit-animation: draw 50s ease-in-out infinite;
-  -moz-animation: draw 50s ease-in-out infinite;
-  animation: draw 50s ease-in-out infinite;
+	-webkit-animation: draw 30s ease-in-out infinite;
+  -moz-animation: draw 30s ease-in-out infinite;
+  animation: draw 30s ease-in-out infinite;
 	fill-opacity: 0;
 }
 
