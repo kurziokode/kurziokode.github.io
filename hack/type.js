@@ -62,12 +62,12 @@ class TextScramble {
 
 const phrases = [
   
-  'there\'s a difference',
-  'between knowing the path',
-  'and walking the path',
+  'auto den einai tipota psili',
+  'edv peftoun araxnes apo ton ourano',
+  'pali omvs petas laimo',
 
-  'I think it\'s easy to stop smoking',
-  'it is just hard not to commit a felony after you stop',
+  'mazepsou na poume',
+ 
   ]
 
 
