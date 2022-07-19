@@ -62,11 +62,11 @@ class TextScramble {
 
 const phrases = [
   
-  'auto den einai tipota psili',
+  
   'edv peftoun araxnes apo ton ourano',
-  'pali omvs petas laimo',
+  'min petas laimo na poume',
 
-  'mazepsou na poume',
+ 
  
   ]
 
