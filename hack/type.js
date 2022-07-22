@@ -63,8 +63,8 @@ class TextScramble {
 const phrases = [
   
   
-  'edv peftoun araxnes apo ton ourano',
-  'min petas laimo na poume',
+  'tech studio',
+  
 
  
  
