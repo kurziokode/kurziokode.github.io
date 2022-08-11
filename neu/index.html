@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Curzio</title>
+ <title>Curzio</title>
    <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
@@ -14,44 +14,54 @@
  
  <h1 :class="[toggle ? 'light' : 'dark']">curzio</h1>
 
+<br /><br />
+ <input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="accent">
+ <input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="info">
+ <input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="success">
+ <input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="warning">
+  <input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="warning">
+ <audio id="sound2" src="neg2.wav" preload="auto"></audio><a href="https://kurziokode.github.io/hack/home.html" target="_blank"><input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="error" onclick="document.getElementById('sound2').play();"></a>
+
 
  
- <button :class="[toggle ? 'light' : 'dark']" @click="toggle = !toggle">{{ toggle ? 'dark' : 'light' }}</button>
- <br /><br /><br />
- <button :class="[toggle ? 'light' : 'dark', 'accent']">accent</button>
-
- <br /><br /><br />
- <input :class="[toggle ? 'light' : 'dark', 'accent']" type="text" placeholder="accent">
- <input :class="[toggle ? 'light' : 'dark', 'info']" type="text" placeholder="info">
- <input :class="[toggle ? 'light' : 'dark', 'success']" type="text" placeholder="success">
- <input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="warning">
- <a href="https://kurziokode.github.io/hack/home.html" target="_blank"><input :class="[toggle ? 'light' : 'dark', 'error']" type="text" placeholder="error"></a>
-
 <br /><br /><br />
+ <br /><br />
 
-
-<p><h2 :class="[toggle ? 'light' : 'dark']">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
-    Iure id exercitationem nulla qui repellat laborum vitae, <br />
-    molestias tempora velit natus. Quas, assumenda nisi. <br />
-    Quisquam enim qui iure, consequatur velit sit?</h2>
+ <p><h2 :class="[toggle ? 'light' : 'dark']"> A great many people don't know how to laugh at all. However, there's nothing to know here: it's a gift, and it can't be fabricated.<br />
+   
+    </h2>
     
   </p>
-<br /><br /><br />
+ <br /><br /><br /><br />
+<button :class="[toggle ? 'light' : 'dark', 'warning']" @click="toggle = !toggle">{{ toggle ? 'dark' : 'light' }}</button>
+
+
+
+ <br /><br /><br />
+ <br /><br /><br />
+
+  
+
 
 <audio controls>
   <source src="https://jacksmith206.github.io/doulos/Doo Doo.mp3" type='audio/mp4'>
   <source src="https://jacksmith206.github.io/doulos/Doo Doo.oga" type='audio/ogg; codecs=vorbis'>
   <p>Your user agent does not support the HTML5 Audio element.</p>
 </audio>
-<br /><br /><br />
-  <iframe width="460" height="258" src="https://www.youtube.com/embed/Xm_k6RZnXIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+ <br /><br /><br />
+  <br /><br /><br />
+<iframe width="460" height="258" src="https://www.youtube.com/embed/Xm_k6RZnXIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <video controls  autoplay loop class="video-container">
         <source src="https://jacksmith206.github.io/doulos/intro.mp4" type="video/mp4" />
       </video>
       <iframe width="460" height="258" scrolling="no" frameborder="no" src="https://fidbak.audio/curzio/embed/29a7ae6bdca2/4bea1beedf3d"></iframe>
+
 <iframe width="460" height="258" src="https://www.youtube.com/embed/uycHb62FLH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-  </div>
+
+
+
+    </div>
 <!-- partial -->
 
 
