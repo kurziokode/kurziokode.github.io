@@ -1,0 +1,173 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 16px;
+  font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0.75em 10px;
+  color: #EBECF0;
+}
+h1.light {
+  text-shadow: 1px 1px 1px #fafafb, -1px -1px 1px #b1b5c4;
+  color: #bfc2cf;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+}
+h1.dark {
+  text-shadow: 1px 1px 1px #23252d, -1px -1px 1px black;
+  color: black;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 0.75em 10px;
+  color: #EBECF0;
+}
+h2.light {
+  text-shadow: 1px 1px 1px #fafafb, -1px -1px 1px #b1b5c4;
+  color: #bfc2cf;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+}
+h2.dark {
+  text-shadow: 1px 1px 1px #23252d, -1px -1px 1px black;
+  color: black;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+}
+
+
+
+
+
+#neumorphism {
+  height: 100vh;
+  background-color: #EBECF0;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+  outline: 0;
+  text-align: center;
+}
+#neumorphism.dark {
+  background-color: #18191f;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+  outline: 0;
+}
+
+button,
+input {
+  margin: 10px;
+  width: auto;
+  padding: 12px 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.75em;
+  outline: 0;
+  border: 0;
+  background-color: #EBECF0;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+  outline: 0;
+  box-shadow: 3px 3px 5px #ced0da, -3px -3px 5px #fafafb, -3px -3px 3px #fafafb;
+  border: 1px solid rgba(235, 236, 240, 0.2);
+  border-radius: 5px;
+}
+button:focus,
+input:focus {
+  box-shadow: 0 0 0 #ced0da, 0 0 0 #fafafb, 0 0 0 #fafafb, inset 3px 3px 5px #ced0da, inset -3px -3px 5px #fafafb, inset -3px -3px 3px #fafafb;
+  outline: 0;
+}
+button:hover,
+input:hover {
+  background-color: #e5e6ec;
+}
+button.light,
+input.light {
+  color: #9499ae;
+}
+button.light:hover,
+input.light:hover {
+  text-shadow: 0 0 3px #9499ae;
+}
+button.dark,
+input.dark {
+  color: #EBECF0;
+  background-color: #18191f;
+  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+  outline: 0;
+  box-shadow: 3px 3px 5px #020202, -3px -3px 5px #23252d, -3px -3px 3px #23252d;
+  border: 1px solid rgba(24, 25, 31, 0.2);
+  border-radius: 5px;
+}
+button.dark:focus,
+input.dark:focus {
+  box-shadow: 0 0 0 #020202, 0 0 0 #23252d, 0 0 0 #23252d, inset 3px 3px 5px #020202, inset -3px -3px 5px #23252d, inset -3px -3px 3px #23252d;
+  outline: 0;
+}
+button.dark:hover,
+input.dark:hover {
+  background-color: #141419;
+}
+button.dark:hover, button.dark:focus,
+input.dark:hover,
+input.dark:focus {
+  text-shadow: 0 0 3px #EBECF0;
+}
+button.accent,
+input.accent {
+  color: #A100B0;
+  text-shadow: 0 0 1px #A100B0;
+}
+button.accent:hover, button.accent:focus,
+input.accent:hover,
+input.accent:focus {
+  text-shadow: 0 0 3px #A100B0;
+}
+button.info,
+input.info {
+  color: #5FBAF2;
+  text-shadow: 0 0 1px #5FBAF2;
+}
+button.info:hover, button.info:focus,
+input.info:hover,
+input.info:focus {
+  text-shadow: 0 0 3px #5FBAF2;
+}
+button.success,
+input.success {
+  color: #00CD73;
+  text-shadow: 0 0 1px #00CD73;
+}
+button.success:hover, button.success:focus,
+input.success:hover,
+input.success:focus {
+  text-shadow: 0 0 3px #00CD73;
+}
+button.warning,
+input.warning {
+  color: #F67524;
+  text-shadow: 0 0 1px #F67524;
+}
+button.warning:hover, button.warning:focus,
+input.warning:hover,
+input.warning:focus {
+  text-shadow: 0 0 3px #F67524;
+}
+button.error,
+input.error {
+  color: #DB4655;
+  text-shadow: 0 0 1px #DB4655;
+}
+button.error:hover, button.error:focus,
+input.error:hover,
+input.error:focus {
+  text-shadow: 0 0 3px #DB4655;
+}
