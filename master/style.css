@@ -87,7 +87,7 @@ section, footer{
 .arrow{
 	width:32px;
 	height:54px;
-	background:url('../img/arrows.png') no-repeat;
+	background:url('arrows.png') no-repeat;
 	position:fixed;
 	top:50%;
 	margin-top:-27px;
