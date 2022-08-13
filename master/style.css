@@ -73,7 +73,7 @@ section, footer{
 }
 
 #impress p{
-	font: normal 18px/1.3 'Open Sans', sans-serif;
+	font: normal 18px/1.3 'PT Sans Narrow', sans-serif;
 	color:#f74605;
 	position:absolute;
 	z-index:10;
