@@ -124,6 +124,26 @@ section, footer{
 }
 
 
+#impress #red{
+	width: 800px;
+}
+
+#red h2{
+	text-align: center;
+    width: 100%;
+}
+
+#red p{
+	font-size: 22px;
+    left: 290px;
+    line-height: 1.6;
+    top: 220px;
+    white-space: nowrap;
+}
+
+#red img{
+	top: 120px;
+}
 /*----------------------------
 	Slide 1 - Intro
 -----------------------------*/
