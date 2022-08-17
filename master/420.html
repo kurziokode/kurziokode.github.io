@@ -157,7 +157,14 @@
 		<a id="arrowRight" class="arrow">&gt;</a>   
 	    
 	     
-	  
+	 <a href="https://www.google.com" id="demo">click me</a> 
+ 
+<script> 
+document.getElementById('demo').onclick = function changeLink(event) { 
+	event.preventDefault(); 
+	document.location.href='https://www.example.com/'; 
+} 
+</script> 
 	 
 		 
         <!-- JavaScript includes -->
