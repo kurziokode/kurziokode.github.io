@@ -144,6 +144,30 @@ section, footer{
 #red img{
 	top: 120px;
 }
+
+
+
+#impress #rain{
+	width: 800px;
+}
+
+#rain h2{
+	text-align: center;
+    width: 100%;
+}
+
+#rain p{
+	font-size: 22px;
+    left: 290px;
+    line-height: 1.6;
+    top: 220px;
+    white-space: nowrap;
+}
+
+#rain img{
+	top: 120px;
+}
+
 /*----------------------------
 	Slide 1 - Intro
 -----------------------------*/
