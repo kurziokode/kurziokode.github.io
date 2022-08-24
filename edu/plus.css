@@ -902,10 +902,9 @@ ul li a {
 }
 
 .active-text {
-  color: rgba(246, 3, 250, 0.918);
-  text-shadow: 0 0 15px rgb(246, 3, 250, 0.918);
+  color: #c70115;
+  text-shadow: 0 0 15px #270205;
 }
-
 
 
 
