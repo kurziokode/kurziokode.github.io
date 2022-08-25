@@ -174,7 +174,7 @@ ul li a {
 
 html {
     background: url('https://kurziokode.github.io/fcuk/earth.jpg') no-repeat;
- opacity: 1;
+ opacity: 0.8;
 
 }
 
@@ -184,6 +184,7 @@ body {
     font: 14px/1.3 'Segoe UI', Arial, sans-serif;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3) inset;
     height: 100%;
+    opacity: 0.8;
 }
 
 a,
@@ -856,7 +857,7 @@ bottom: 100px;
 }
 .popover__wrapper:hover .popover__content {
   z-index: 10;
-  opacity: 0.8;
+  opacity: 1;
   visibility: visible;
   transform: translate(0, -20px);
   transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
