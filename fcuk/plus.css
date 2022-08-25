@@ -818,7 +818,7 @@ a {
 .popover__wrapper {
   position: fixed;
   left: 130px;
-top: 490px;
+top: 500px;
   margin-top: 0rem;
   display: inline-block;
 }
