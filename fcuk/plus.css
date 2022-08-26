@@ -274,11 +274,11 @@ footer {
 }
 
 #arrowLeft {
-    left: 150px;
+    left: 110px;
 }
 
 #arrowRight {
-    right: 150px;
+    right: 110px;
     background-position: top right;
 }
 
