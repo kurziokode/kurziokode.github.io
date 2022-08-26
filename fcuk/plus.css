@@ -105,7 +105,7 @@ ul li:hover {
 }
 ul li a {
   display: inline-block;
-  color: #666666;
+  color: #595959;
   text-decoration: none;
   font-size: 40px;
   transition: all 0.5s;
