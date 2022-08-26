@@ -105,9 +105,9 @@ ul li:hover {
 }
 ul li a {
   display: inline-block;
-  color: #04040d;
+  color: #a30308;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 42px;
   transition: all 0.5s;
 }
 
@@ -152,7 +152,7 @@ ul li a {
 
 
 .active-text {
-  color: #c70115;
+  color: #9dff00;
   text-shadow: 0 0 15px #270205;
 }
 
