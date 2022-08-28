@@ -485,55 +485,6 @@ footer {
 -----------------------------*/
 
 
-footer {
-    background-color: #111111;
-    bottom: 0;
-    box-shadow: 0 -1px 2px #111111;
-    height: 45px;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 100000;
-}
-
-footer h2 {
-    color: #EEEEEE;
-    font-size: 14px;
-    font-weight: normal;
-    left: 50%;
-    margin-left: -400px;
-    padding: 13px 0 0;
-    position: absolute;
-    width: 540px;
-}
-
-footer h2 i {
-    font-style: normal;
-    color: #888;
-}
-
-footer a.tzine,
-a.tzine:visited {
-    color: #999999;
-    font-size: 12px;
-    left: 50%;
-    margin: 16px 0 0 110px;
-    position: absolute;
-    text-decoration: none;
-    top: 0;
-}
-
-footer a i {
-    color: #ccc;
-    font-style: normal;
-}
-
-footer a i b {
-    color: #c92020;
-    font-weight: normal;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -809,19 +760,14 @@ a {
   text-decoration: none;
 }
 
-.popover__title {
-  font-size: 24px;
-  line-height: 36px;
-  text-decoration: none;
-  color: rgb(228, 68, 68);
-  text-align: center;
-  padding: 15px 0;
-}
+
 
 .popover__wrapper {
+
+     opacity: 0; 
   position: fixed;
-  left: 120px;
-bottom: 100px;
+  left: 670px;
+bottom: 0px;
   margin-top: 0rem;
   display: inline-block;
 }
@@ -830,7 +776,7 @@ bottom: 100px;
 
 
 .popover__content {
-  opacity: 0.1;
+  opacity: 0;
   visibility: hidden;
   position: relative;
   left: 0px;
@@ -844,22 +790,9 @@ bottom: 100px;
 
 
 
-
-.popover__content:before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  right: calc(50% - 10px);
-  top: -8px;
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-color: transparent transparent #910210 transparent;
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
 .popover__wrapper:hover .popover__content {
   z-index: 10;
-  opacity: 1;
+  opacity: 0;
   visibility: visible;
   transform: translate(0, -20px);
   transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
@@ -870,102 +803,7 @@ bottom: 100px;
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) 
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px)
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px)
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px)
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px)
-}
 
 
 
 
-
-
-body {
-    margin: 0;
-    padding: 0;
-    background : #191c24;
-}
-
-.center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-
-
-
-
-
-input[type="checkbox"] {
-    margin: 10px;
-    position: relative;
-    width: 120px;
-    height: 40px;
-    -webkit-appearance: none;
-    background: linear-gradient(0deg, #333, #000);
-    outline: none;
-    border-radius: 20px;
-    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
-}
-
-input:checked[type="checkbox"]:nth-of-type(1) {
-    background: linear-gradient(0deg, #9b9b9a, hsla(0, 0%, 11%, 0.836));
-    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
-}
-
-input:checked[type="checkbox"]:nth-of-type(2) {
-    background: linear-gradient(0deg, #9b9b9a, hsla(0, 0%, 11%, 0.836));
-    box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
-}
-
-input[type="checkbox"]:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80px;
-    height: 40px;
-    background: linear-gradient(0deg, #000, #6b6b6b);
-    border-radius: 20px;
-    box-shadow: 0 0 0 1px #232323;
-    transform: scale(.98, .96);
-    transition: .5s;
-}
-
-input:checked[type="checkbox"]:before {
-    left: 40px;
-}
-
-input[type="checkbox"]:after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 2px);
-    left: 70px;
-    width: 4px;
-    height: 4px;
-    background: linear-gradient(0deg, #6b6b6b, #000);
-    border-radius: 50%;
-    transition: .5s;
-}
-
-input:checked[type="checkbox"]:after {
-    left: 110px;
-}
