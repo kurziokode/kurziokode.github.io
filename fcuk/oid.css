@@ -4,7 +4,7 @@
 
 @media only screen and (max-width: 480px) {
   img {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -38,10 +38,6 @@
 
 
 
-html, body {
-  width: 50%;
-  height: 50%;
-}
 
 body {
  
