@@ -152,7 +152,9 @@ ul li a {
 
 
 .active-text {
-  color: #f7cb04d1;
+ background: -webkit-linear-gradient( #333, #eee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
  
 }
 
@@ -701,15 +703,15 @@ a {
 }
 
 .loader span {
-    color: #faebd7;
-    text-shadow: 0 0 0 #faebd7;
+    color: #8b8b8a;
+    text-shadow: 0 0 0 #8b8b8a;
     -webkit-animation: loading 1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes loading {
     to {
-        text-shadow: 20px 0 70px #ff0266;
-        color: #ff0266;
+        text-shadow: 20px 0 70px #303030;
+        color: #212121;
     }
 }
 
@@ -925,12 +927,12 @@ input[type="checkbox"] {
 }
 
 input:checked[type="checkbox"]:nth-of-type(1) {
-    background: linear-gradient(0deg, #ffd500, hsla(48, 95%, 40%, 0.836));
+    background: linear-gradient(0deg, #9b9b9a, hsla(0, 0%, 11%, 0.836));
     box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
 }
 
 input:checked[type="checkbox"]:nth-of-type(2) {
-    background: linear-gradient(0deg, #ffd500, hsla(48, 95%, 40%, 0.836));
+    background: linear-gradient(0deg, #9b9b9a, hsla(0, 0%, 11%, 0.836));
     box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1);
 }
 
