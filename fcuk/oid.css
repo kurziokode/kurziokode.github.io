@@ -1,14 +1,10 @@
 
 
-
-
 @media only screen and (max-width: 480px) {
   img {
     width: 100%;
   }
 }
-
-
 
 
 
@@ -39,19 +35,21 @@
 
 
 
+
 body {
  
   font-family: "Source Sans Pro", sans-serif;
 }
 
 .buttons-container {
-  position: relative;
+  position: fixed;
   margin: auto;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 100;
   left: 0;
-
+  width: 710px;
+  height: 110px;
   border-radius: 60px;
   background: #151515;
   box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.5);
@@ -91,7 +89,8 @@ ul li {
   align-items: center;
   justify-content: center;
   margin: 1px;
-
+  height: 85px;
+  width: 95px;
   background: #141313f5;
   border-top: 1px solid #353535;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
@@ -124,12 +123,12 @@ ul li a {
 }
 
 .created-by {
-  position: relative;
+  position: absolute;
   margin: auto;
   left: 0;
   right: 0;
   bottom: 10%;
-
+  width: 200px;
   text-align: start;
   font-size: 10px;
   letter-spacing: 0.5em;
@@ -189,12 +188,10 @@ ul li a {
 html {
     background: url('https://kurziokode.github.io/fcuk/blackdroid.jpg') ;
  opacity: 0.9;
- width: 50%;
+
+  width: 50%;
 	  object-fit: cover;
   object-position: bottom;
-	
-	
-	
 }
 
 body {
@@ -817,6 +814,10 @@ bottom: 0px;
 .popover__message {
   text-align: center;
 }
+
+
+
+
 
 
 
