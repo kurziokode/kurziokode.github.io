@@ -132,7 +132,7 @@ ul li:hover {
 }
 ul li a {
   display: inline-block;
-  color:  #000000;
+ color:  #434141cf;
   text-decoration: none;
   font-size: 38px;
   transition: all 0.5s;
@@ -179,7 +179,7 @@ ul li a {
 
 
 .active-text {
- background: -webkit-linear-gradient( #333, #eee);
+ background: -webkit-linear-gradient(#24b603f5, #69eb06e2 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
  
