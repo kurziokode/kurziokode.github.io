@@ -49,7 +49,7 @@
 
           
        <div id="simplicity" class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="90">
-		        <audio id="sound100" src="https://kurziokode.github.io/fcuk/watch.mp3" preload="auto"></audio><a href="https://kurziokode.github.io/film/index.html" target="_blank" onclick="document.getElementById('sound100').play();">
+		        <audio id="sound100" src="#" preload="auto"></audio><a href="https://kurziokode.github.io/film/index.html" target="_blank" onclick="document.getElementById('sound100').play();">
 			<h3 class="span loader"><span class="m">&nbsp;</span><span class="m">&nbsp;</span><span class="m">W</span><span class="m">A</span><span class="m">T</span><span class="m">C</span><span class="m">H</span></h3>
             </a>
 			
@@ -60,7 +60,7 @@
  
 
 	   <div id="music" class="step" data-x="-1200" data-y="1000" data-scale="0.7" data-rotate="220">
-		        <audio id="sound200" src="https://kurziokode.github.io/fcuk/listen.mp3" preload="auto"></audio><a href="https://kurziokode.github.io/film/sound.html" target="_blank" onclick="document.getElementById('sound200').play();">
+		        <audio id="sound200" src="#" preload="auto"></audio><a href="https://kurziokode.github.io/film/sound.html" target="_blank" onclick="document.getElementById('sound200').play();">
 		
 				<h3 class="span loader"><span class="m">&nbsp;</span><span class="m">&nbsp;</span><span class="m">L</span><span class="m">I</span><span class="m">S</span><span class="m">T</span><span class="m">E</span><span class="m">N</span></h3>
  </a>
@@ -129,7 +129,26 @@
 
 <script  src="plus.js"></script>	
 
-      
+   	
+        <script type="text/javascript">
+
+var images = new Array();
+
+function preloadImages(){
+
+    for (i=0; i < preloadImages.arguments.length; i++){
+
+         images[i] = new Image();
+
+        images[i].src = preloadImages.arguments[i];
+
+    }
+
+}
+
+preloadImages("https://kurziokode.github.io/fcuk/black1.jpg");
+
+</script>     
 
 
 
