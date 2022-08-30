@@ -172,6 +172,7 @@ background-image: url('https://kurziokode.github.io/edu/edu1.jpg');
 
 .nav {
   background: #000000;
+  opacity: 0.7;
   height: 100px;
   width: 100%;
   display: flex;
