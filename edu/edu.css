@@ -288,7 +288,7 @@ footer {
     cursor: pointer;
     text-indent: -9999px;
     overflow: hidden;
-    opacity: 0.9;
+    opacity: 0.5;
     border: none !important;
     text-decoration: none !important;
 
@@ -308,7 +308,7 @@ footer {
 }
 
 #arrowRight {
-    right: 150px;
+    right: 50px;
     background-position: top right;
 }
 
