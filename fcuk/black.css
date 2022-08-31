@@ -36,9 +36,9 @@ body {
   position: fixed;
   margin: auto;
   top: 0;
-  right: 100;
+  right: 0;
   bottom: 100;
-  left: 0;
+  left: 100;
   width: 515px;
   height: 110px;
   border-radius: 60px;
@@ -53,9 +53,9 @@ body {
 .buttons-container2 {
   position: fixed;
   margin: auto;
-  top: 0;
+  top: 100;
   right: 0;
-  bottom: 100;
+  bottom: 0;
   left: 100;
   width: 515px;
   height: 110px;
