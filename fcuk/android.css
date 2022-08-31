@@ -39,7 +39,7 @@ body {
   right: 0;
   bottom: 100;
   left: 100;
-  width: 515px;
+  width: 360px;
   height: 110px;
   border-radius: 60px;
   background: #0b0b0d;
@@ -57,7 +57,7 @@ body {
   right: 0;
   bottom: 0;
   left: 100;
-  width: 515px;
+  width: 360px;
   height: 110px;
   border-radius: 60px;
   background: #0b0b0d;
@@ -95,8 +95,8 @@ ul li {
   align-items: center;
   justify-content: center;
   margin: 1px;
-  height: 85px;
-  width: 95px;
+  height: 60px;
+  width: 60px;
   background: #0f1014;
   border-top: 1px solid #353535;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
@@ -124,7 +124,7 @@ ul li a {
   display: inline-block;
   color:  #000000;
   text-decoration: none;
-  font-size: 44px;
+  font-size: 36px;
   transition: all 0.5s;
 }
 
@@ -192,7 +192,7 @@ ul li a {
 
 
 html {
-    background: url('https://kurziokode.github.io/fcuk/black1.jpg') ;
+    background: url('https://kurziokode.github.io/fcuk/blackdroid.jpg') ;
  opacity: 0.9;
 
 }
