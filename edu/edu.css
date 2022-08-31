@@ -179,9 +179,7 @@ ul li a {
 
 
 .active-text {
- background: -webkit-linear-gradient(#24b603f5, #69eb06e2 );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ background: #2ce203;
  
 }
 
