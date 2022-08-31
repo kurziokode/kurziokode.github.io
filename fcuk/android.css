@@ -40,7 +40,7 @@ body {
   bottom: 100;
   left: 100;
   width: 360px;
-  height: 110px;
+  height: 100px;
   border-radius: 60px;
   background: #0b0b0d;
   box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.5);
@@ -58,7 +58,7 @@ body {
   bottom: 0;
   left: 100;
   width: 360px;
-  height: 110px;
+  height: 100px;
   border-radius: 60px;
   background: #0b0b0d;
   box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.5);
@@ -124,7 +124,7 @@ ul li a {
   display: inline-block;
   color:  #000000;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 33px;
   transition: all 0.5s;
 }
 
@@ -272,7 +272,7 @@ footer {
     height: 54px;
     background: url('https://kurziokode.github.io/master/arrows.png') no-repeat;
     position: fixed;
-    top: 15%;
+    top: 5%;
     margin-top: -27px;
     cursor: pointer;
     text-indent: -9999px;
@@ -293,7 +293,7 @@ footer {
 }
 
 #arrowLeft {
-    left: 580px;
+    left: 320px;
 }
 
 #arrowRight {
