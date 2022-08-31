@@ -95,8 +95,8 @@ ul li {
   align-items: center;
   justify-content: center;
   margin: 1px;
-  height: 60px;
-  width: 60px;
+  height: 65px;
+  width: 65px;
   background: #0f1014;
   border-top: 1px solid #353535;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
@@ -272,7 +272,7 @@ footer {
     height: 54px;
     background: url('https://kurziokode.github.io/master/arrows.png') no-repeat;
     position: fixed;
-    top: 50%;
+    top: 15%;
     margin-top: -27px;
     cursor: pointer;
     text-indent: -9999px;
