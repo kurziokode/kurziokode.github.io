@@ -15,7 +15,7 @@ background-image: url('https://kurziokode.github.io/edu/field.jpg');
 }
 
 .live {
-  height: 190px;
+  height: 130px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -195,7 +195,7 @@ background-image: url('https://kurziokode.github.io/edu/field.jpg');
 }
 
 .nav .icon p {
-  font-size: 22px;
+  font-size: 32px;
    color: #cc0000;
 }
 
