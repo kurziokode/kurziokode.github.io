@@ -48,7 +48,7 @@ body {
   right: 0;
   bottom: 100;
   left: 0;
-  width: 370px;
+  width: 380px;
   height: 100px;
   border-radius: 60px;
   background: #0b0b0d;
@@ -66,7 +66,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 370px;
+  width: 380px;
   height: 100px;
   border-radius: 60px;
   background: #0b0b0d;
@@ -106,7 +106,7 @@ ul li {
   justify-content: center;
   margin: 1px;
   height: 70px;
-  width: 90px;
+  width: 80px;
   background: #0f1014;
   border-top: 1px solid #353535;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
@@ -134,7 +134,7 @@ ul li a {
   display: inline-block;
  color:  #363949;
   text-decoration: none;
-  font-size: 33px;
+  font-size: 30px;
   transition: all 0.5s;
 }
 
