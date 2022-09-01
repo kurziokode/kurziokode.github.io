@@ -272,7 +272,7 @@ footer {
     height: 54px;
     background: url('https://kurziokode.github.io/master/arrows.png') no-repeat;
     position: fixed;
-    top: 33%;
+    top: 50%;
     margin-top: -27px;
     cursor: pointer;
     text-indent: -9999px;
@@ -293,11 +293,11 @@ footer {
 }
 
 #arrowLeft {
-    left: 320px;
+    left: 120px;
 }
 
 #arrowRight {
-    right: 580px;
+    right: 120px;
     background-position: top right;
 }
 
