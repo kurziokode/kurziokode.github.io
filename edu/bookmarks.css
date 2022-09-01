@@ -34,8 +34,8 @@ body{
 	text-transform: none;
 	padding-left:2%;
 	padding-top: 2.5%;
-	vertical-align: ;
-	transition: color .2s ease;
+	
+	transition: color .0s ease;
 }
 
 .button:hover{
