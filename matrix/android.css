@@ -39,8 +39,8 @@ body {
     margin: auto;
     top: 0;
     right: 0;
-    bottom: 0;
-    left: 0;
+    bottom: 100;
+    left: 100;
     width: 385px;
     height: 100px;
     border-radius: 60px;
@@ -58,7 +58,7 @@ body {
     top: 100;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 100;
     width: 385px;
     height: 100px;
     border-radius: 60px;
@@ -201,7 +201,7 @@ ul li a {
 
 
 html {
-    background: url('https://kurziokode.github.io/matrix/red.jpg');
+    background: url('https://kurziokode.github.io/fcuk/blackdroid.jpg');
     opacity: 0.9;
 
 }
