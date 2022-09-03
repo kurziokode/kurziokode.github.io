@@ -58,8 +58,8 @@ canvas {
   text-align: center;
   color: rgb(167, 158, 3);
   letter-spacing: 4px;
-  font-size: 1.5em;
-  line-height: 5;
+  font-size: 1.2em;
+  line-height: 10;
 }
 
 a {
@@ -133,7 +133,7 @@ a {
   opacity: 0;
   transition: color 0.5s ease, opacity 0.3s ease;
   transform-origin: bottom;
-  color: #fee81e;
+  color: #c4b107cf;
 }
 .text-animation .letter.active {
   color: rgba(255, 255, 255, 0.3);
@@ -145,7 +145,7 @@ a {
 
 @-webkit-keyframes color {
   0% {
-    color: #fee81e;
+    color: #c4b107cf;
   }
   20% {
     color: rgba(255, 255, 255, 0.3);
@@ -157,7 +157,7 @@ a {
 
 @keyframes color {
   0% {
-    color: #fee81e;
+    color: #c4b107cf;
   }
   20% {
     color: rgba(255, 255, 255, 0.3);
