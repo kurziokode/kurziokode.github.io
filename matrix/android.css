@@ -37,10 +37,10 @@ body {
 .buttons-container {
     position: fixed;
     margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 100;
-    left: 100;
+    top: 100;
+    right: 100;
+    bottom: 0;
+    left: 0;
     width: 385px;
     height: 100px;
     border-radius: 60px;
