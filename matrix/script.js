@@ -228,7 +228,7 @@ class App {
     const state = this.state;
     state.text = {
       baseLine: 'top',
-      font: '400 175px Montserrat',
+      font: '400 95px Montserrat',
       value: 'christos doulos' };
 
   }
