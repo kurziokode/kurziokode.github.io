@@ -228,8 +228,8 @@ class App {
     const state = this.state;
     state.text = {
       baseLine: 'top',
-      font: '400 95px Montserrat',
-      value: 'christos doulos web<br>skid row internet' };
+       font: '500 95px Montserrat',
+      value: 'Curzio was here' };
 
   }
   initCheckingInterval() {
