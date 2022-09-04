@@ -229,7 +229,7 @@ class App {
     state.text = {
       baseLine: 'top',
       font: '400 95px Montserrat',
-      value: 'christos doulos web <br> skid row internet' };
+      value: 'christos doulos web<br>skid row internet' };
 
   }
   initCheckingInterval() {
