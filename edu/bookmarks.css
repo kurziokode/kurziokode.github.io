@@ -214,26 +214,3 @@ background-image: url('https://kurziokode.github.io/edu/field.jpg');
 
 
 
-h1 {
-  font-size: 33px;
-  color: #202022;
-  font-family: Montserrat, sans-serif;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  text-transform: uppercase;
-  font-weight: normal;
-  margin-left: -276px;
-  margin-top: -20px;
-  pointer-events: none;
-}
-
-h1 strong {
-  font-weight: 700;
-}
-
-h1 em {
-  font-family: 'Playfair Display', serif;
-  text-transform: lowercase;
-  font-style: italic;
-}
