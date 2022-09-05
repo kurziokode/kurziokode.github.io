@@ -55,9 +55,9 @@ body {
 .buttons-container2 {
     position: fixed;
     margin: auto;
-    top: 0;
+    top: 100;
     right: 0;
-    bottom: 100;
+    bottom: 0;
     left: 0;
     width: 452px;
     height: 100px;
