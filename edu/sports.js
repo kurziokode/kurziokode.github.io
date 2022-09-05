@@ -1,110 +1,79 @@
+$(document).ready(function(){
+
+//variables for the rings
+  var blueRing = $('#js_blueRing');
+  var blueRingAlt = $('#js_blueRingAlt');
+
+  var yellowRing = $('#js_yellowRing');
+  var yellowRingAlt = $('#js_yellowRingAlt');
+
+  var blackRing = $('#js_blackRing');
+
+  var greenRing = $('#js_greenRing');
+  var greenRingAlt = $('#js_greenRingAlt');
+
+  var redRing = $('#js_redRing');
+  var redRingAlt = $('#js_redRingAlt');
+
+function runit(){
+  //create a new timeline
+ var tl = new TimelineLite();
+//animate
+  tl
+    .from(blueRing, 2, {y:-400, opacity:0, ease: Power4.easeIn}) 
+    .add('ringyellow')
+    .to(blueRing, 0.667, {transformOrigin: "50% 100%", scaleY:0.5, yoyo:true, repeat:1})
+    .add('ringblack')
+    .add('ringgreen')
+    .add('ringred')
+    .to(blueRing, 1.667, {y:-200, ease:Circ.easeOut, yoyo:true, repeat:1})
+    .to(blueRing, 1, {transformOrigin: "50% 100%", scaleY:0.75, yoyo:true, repeat:1})
+
+    //show the overlapping part of the blue ring
+    .to(blueRingAlt, 0.6, {opacity:1})
+
+    //yellow ring
+    .from(yellowRing, 2, {y:-400, opacity:0, ease: Power4.easeIn}, 'ringyellow')
+    .to(yellowRing, 0.667, {transformOrigin: "50% 100%", scaleY:0.5, yoyo:true, repeat:1}, 'ringyellow+=2')
+    .to(yellowRing, 1.667, {y:-200, ease:Circ.easeOut, yoyo:true, repeat:1}, 'ringyellow+=3.334')
+    .to(yellowRing, 1, {transformOrigin: "50% 100%", scaleY:0.75, yoyo:true, repeat:1}, 'ringyellow+=6.668')
+    .to(yellowRingAlt, 0.6, {opacity:1}, 'ringyellow+=8.668')
+
+    //black ring
+    .from(blackRing, 2, {y:-400, opacity:0, ease: Power4.easeIn}, 'ringblack')
+    .to(blackRing, 0.667, {transformOrigin: "50% 100%", scaleY:0.5, yoyo:true, repeat:1}, 'ringblack+=2')
+    .to(blackRing, 1.667, {y:-200, ease:Circ.easeOut, yoyo:true, repeat:1}, 'ringblack+=3.334')
+    .to(blackRing, 1, {transformOrigin: "50% 100%", scaleY:0.75, yoyo:true, repeat:1}, 'ringblack+=6.668')
+
+    //green ring
+    .from(greenRing, 2, {y:-400, opacity:0, ease: Power4.easeIn}, 'ringgreen+=0.667')
+    .to(greenRing, 0.667, {transformOrigin: "50% 100%", scaleY:0.5, yoyo:true, repeat:1}, 'ringgreen+=2.667')
+    .to(greenRing, 1.667, {y:-200, ease:Circ.easeOut, yoyo:true, repeat:1}, 'ringgreen+=4.001')
+    .to(greenRing, 1, {transformOrigin: "50% 100%", scaleY:0.75, yoyo:true, repeat:1}, 'ringgreen+=7.335')
+    .to(greenRingAlt, 0.6, {opacity:1}, 'ringgreen+=9.335')   
+
+    //red ring
+    .from(redRing, 2, {y:-400, opacity:0, ease: Power4.easeIn}, 'ringred+=1.334') 
+    .to(redRing, 0.667, {transformOrigin: "50% 100%", scaleY:0.5, yoyo:true, repeat:1}, 'ringred+=3.334')
+    .to(redRing, 1.667, {y:-200, ease:Circ.easeOut, yoyo:true, repeat:1}, 'ringred+=4.668')
+    .to(redRing, 1, {transformOrigin: "50% 100%", scaleY:0.75, yoyo:true, repeat:1}, 'ringred+=8.002')
+    .to(redRingAlt, 0.6, {opacity:1}, 'ringred+=10.002') 
+
+  .timeScale(4);
+  return tl;
+  }
+  
+  var runAnimation = runit();
+
+  $( "#btn-replay" ).click(function() {
+    runAnimation.restart();
+});
+
+  $("#btn-replay").mouseup(function(){
+    $(this).blur();
+});
+});
 
 
 
-
-
-if ( ! Modernizr.webgl ) alert('Your browser dosent support WebGL');
-
-			var container, stats;
-
-			var camera, scene, renderer;
-      var mouseX = 0, mouseY = 0;
-
-      var windowHalfX = window.innerWidth / 2;
-			var windowHalfY = window.innerHeight / 2;
-
-			init();
-			animate();
-
-			function init() {
-
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
-
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.y = 400;
-
-				scene = new THREE.Scene();
-
-				var light, object, object2;
-
-				scene.add( new THREE.AmbientLight( 0xffffff, 0.8 ) );
-
-				light = new THREE.DirectionalLight( 0xffffff, 0.2 );
-				light.position.set( 1, 1, 1 );
-				scene.add( light );
-
-				var material = new THREE.MeshLambertMaterial( { ambient: 0x0885c2, side: THREE.DoubleSide } );
-        var material2 = new THREE.MeshLambertMaterial( { ambient: 0x000000, side: THREE.DoubleSide } );
-        var material3 = new THREE.MeshLambertMaterial( { ambient: 0xed334e, side: THREE.DoubleSide } );
-        var material4 = new THREE.MeshLambertMaterial( { ambient: 0xfbb132, side: THREE.DoubleSide } );
-        var material5 = new THREE.MeshLambertMaterial( { ambient: 0x1c8b3c, side: THREE.DoubleSide } );
-
-
-				object = new THREE.Mesh( new THREE.TorusGeometry( 100, 10, 10, 50 ), material );
-				object.position.set( -250, 0, 0 );
-				scene.add( object );
-        
-        object2 = new THREE.Mesh( new THREE.TorusGeometry( 100, 10, 10, 50 ), material2 );
-				object2.position.set( -10, 00, 5 );
-				scene.add( object2 );
-        
-        object3 = new THREE.Mesh( new THREE.TorusGeometry( 100, 10, 10, 50 ), material3 );
-				object3.position.set( 230, 0, 0 );
-				scene.add( object3 );
-        
-        object4 = new THREE.Mesh( new THREE.TorusGeometry( 100, 10, 10, 50 ), material4 );
-				object4.position.set(-125, -100, -5 );
-				scene.add( object4 );
-        
-        object5 = new THREE.Mesh( new THREE.TorusGeometry( 100, 10, 10, 50 ), material5 );
-				object5.position.set(115, -100, 10 );
-				scene.add( object5 );
-
-				renderer = new THREE.WebGLRenderer( { antialias: true } );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-
-				container.appendChild( renderer.domElement );
-        
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-				window.addEventListener( 'resize', onWindowResize, false );
-
-			}
-
-     function onDocumentMouseMove( event ) {
-
-				mouseX = event.clientX - windowHalfX;
-				mouseY = event.clientY - windowHalfY;
-
-			}
-
-
-			function onWindowResize() {
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-				renderer.setSize( window.innerWidth, window.innerHeight );
-
-			}
-
-			//
-
-			function animate() {
-				requestAnimationFrame( animate );
-				render();
-			}
-
-     
-			function render() {
-
-        camera.position.z = 650;
-        
-        camera.position.x += ( mouseX - camera.position.x ) * 0.05;
-				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
-
-				camera.lookAt( scene.position );
-				renderer.render( scene, camera );
-
-			}
 
