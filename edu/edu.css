@@ -434,7 +434,7 @@ h1:hover {
 }
 
 h3.span {
-    font-size:8vw;
+    font-size:6vw;
 
     letter-spacing: 0em;
     font-family: "ROBOTO", sans-serif;
@@ -446,7 +446,7 @@ h3.span {
 span:hover {
     color: #ff0266;
     font-weight: 700;
-    font-size: 7vw;
+    font-size: 5vw;
 }
 
 
