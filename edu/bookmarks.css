@@ -257,7 +257,7 @@ background-image: url('https://kurziokode.github.io/edu/field.jpg');
     #logo li {
       width: 12em;
       height: 12em;
-      border: solid 0.40em  #000d2e;
+      border: solid 0.40em  #062041;
       left: 0;
       top: 0;
       font-size: 1em;
@@ -271,11 +271,11 @@ background-image: url('https://kurziokode.github.io/edu/field.jpg');
       left: 1.1em;
       bottom: 1.1em;
       right: 1.1em;
-      border: solid 0.55em  #000d2e; 
+      border: solid 0.55em  #062041; 
 }
     
     #logo li:before, x:-moz-any-link, x:default  {
-      border: solid 0.45em  #000d2e;
+      border: solid 0.45em  #062041;
     }
     
     #logo li:after {
