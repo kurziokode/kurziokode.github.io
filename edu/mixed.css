@@ -130,7 +130,7 @@
 	border-bottom: 10px solid #FFDB4C;
 }
 .green {
-	left: 38%;
+	left: 37%;
 }
 .green .left, .green .right {
 	background: #0BD318;
@@ -145,7 +145,7 @@
 	border-bottom: 10px solid #87FC70;
 }
 .blue {
-	left: 48%;
+	left: 49%;
 }
 .blue .left, .blue .right {
 	background: #0295AF;
@@ -160,7 +160,7 @@
 	border-bottom: 10px solid #1AD6FD;
 }
 .indigo {
-	left: 58%;
+	left: 61%;
 }
 .indigo .left, .indigo .right {
 	background: #B512FB;
