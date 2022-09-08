@@ -20,6 +20,7 @@
   -ms-transition: .3s;
   -o-transition:.3s;
   transition: .3s;
+  opacity: 0.65;
 }
 .left,.center,.right {
   display:inline-block;
