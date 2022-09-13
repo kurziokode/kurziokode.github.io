@@ -1,0 +1,19 @@
+body{
+ background: url('https://kurziokode.github.io/matrix/monica.jpg');
+}
+
+.reveal p{
+  font-size: 26px;
+  line-height: 1.3em;
+}
+
+.reveal p.shadow{
+	margin-top: 100px;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.reveal p small{
+	font-size: 26px;
+	color:rgba(0,0,0,.6);
+  margin: 50px;
+}
