@@ -191,6 +191,8 @@ body {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.3) inset;
     height: 100%;
     opacity: 0.9;
+overflow: hidden;	
+	
 }
 
 a,
@@ -491,7 +493,9 @@ footer {
 
 footer {
     background-color: #111111;
-    bottom: 0;
+   
+	overflow: hidden;
+	bottom: 0;
     box-shadow: 0 -1px 2px #111111;
     height: 45px;
     left: 0;
@@ -546,6 +550,7 @@ footer a i b {
 
 body {
     font-family: "ROBOTO", sans-serif;
+	overflow: hidden;
 }
 
 .nav,
@@ -697,6 +702,7 @@ a {
 }
 
 .background {
+	overflow: hidden;
     position: absolute;
     height: 100vh;
     top: 0;
@@ -811,6 +817,7 @@ a {
 
 a {
   text-decoration: none;
+	overflow: hidden;
 }
 
 .popover__title {
@@ -903,6 +910,8 @@ body {
     margin: 0;
     padding: 0;
     background : #191c24;
+	overflow: hidden;
+	
 }
 
 .center {
