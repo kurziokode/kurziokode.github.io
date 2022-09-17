@@ -215,7 +215,7 @@ input:checked[type="checkbox"]:nth-of-type(2) {
 }
 
 input[type="checkbox"]:before {
-	 opacity: 0.7;
+
     content: '';
     position: absolute;
     top: 0;
