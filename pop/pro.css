@@ -17,7 +17,7 @@
 html {
     background: url('https://kurziokode.github.io/matrix/blackdroid.jpg');
  opacity: 0.9;
-
+ font-family: "ROBOTO", sans-serif;
 }
 
 
@@ -179,6 +179,7 @@ a {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+	 font-family: "ROBOTO", sans-serif;
 }
 
 
@@ -188,6 +189,7 @@ a {
 
 
 input[type="checkbox"] {
+	 font-family: "ROBOTO", sans-serif;
     margin: 10px;
     position: relative;
     width: 120px;
