@@ -45,9 +45,9 @@ body {
 .buttons-container {
   position: fixed;
   margin: auto;
-  top: 0;
+  top: 100;
   right: 0;
-  bottom: 100;
+  bottom: 0;
   left: 0;
   width: 370px;
   height: 100px;
