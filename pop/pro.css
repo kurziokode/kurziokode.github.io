@@ -90,7 +90,7 @@ a {
 .popover__wrapper3 {
     position: fixed;
  right: 0px;
-  bottom: 300px;
+  bottom: 375px;
     margin-top: 0rem;
     display: inline-block;
 }
@@ -100,7 +100,7 @@ a {
 .popover__wrapper4 {
     position: fixed;
  left: 0px;
-   bottom: 300px;
+   bottom: 375px;
     margin-top: 0rem;
     display: inline-block;
 }
