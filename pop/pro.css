@@ -1,48 +1,13 @@
 
 
-
-
-/*-------------------------
-	Simple reset
---------------------------*/
-
-
-
-
-/*-------------------------
-	General Styles
---------------------------*/
-
-
 html {
     background: url('https://kurziokode.github.io/matrix/blackdroid.jpg');
  opacity: 0.9;
  font-family: "ROBOTO", sans-serif;
+	overflow: hidden;
 }
 
 
-
-/*----------------------------
-	Styling the presentation
------------------------------*/
-
-
-
-/*----------------------------
-	The Footer
------------------------------*/
-
-
-
-
-
-
-
-
-/* Base styling*/
-
-
-/* Popover styling */
 
 a {
   text-decoration: none;
