@@ -89,7 +89,7 @@ a {
 
 .popover__wrapper3 {
     position: fixed;
- right: 0px;
+ right: 200px;
   bottom: 320px;
     margin-top: 0rem;
     display: inline-block;
@@ -99,7 +99,7 @@ a {
 
 .popover__wrapper4 {
     position: fixed;
- left: 0px;
+ left: 200px;
    bottom: 320px;
     margin-top: 0rem;
     display: inline-block;
