@@ -88,6 +88,7 @@ a {
 
 
 .popover__wrapper3 {
+	 opacity: 0;
     position: fixed;
  right: 185px;
   bottom: 320px;
@@ -98,6 +99,7 @@ a {
 
 
 .popover__wrapper4 {
+	 opacity: 0;
     position: fixed;
  left: 185px;
    bottom: 320px;
