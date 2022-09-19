@@ -90,7 +90,7 @@ a {
 .popover__wrapper3 {
 	 opacity: 1;
     position: fixed;
- right: 185px;
+ right: 15px;
   bottom: 320px;
     margin-top: 0rem;
     display: inline-block;
@@ -101,7 +101,7 @@ a {
 .popover__wrapper4 {
 	 opacity: 1;
     position: fixed;
- left: 185px;
+ left: 20px;
    bottom: 320px;
     margin-top: 0rem;
     display: inline-block;
