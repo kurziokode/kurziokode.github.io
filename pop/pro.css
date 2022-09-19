@@ -88,10 +88,10 @@ a {
 
 
 .popover__wrapper3 {
-	 opacity: 1;
+	 opacity: 0.9;
     position: fixed;
  right: 15px;
-  bottom: 320px;
+  bottom: 360px;
     margin-top: 0rem;
     display: inline-block;
 }
@@ -99,10 +99,10 @@ a {
 
 
 .popover__wrapper4 {
-	 opacity: 1;
+	 opacity: 0.9;
     position: fixed;
  left: 20px;
-   bottom: 320px;
+   bottom: 360px;
     margin-top: 0rem;
     display: inline-block;
 }
