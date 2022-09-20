@@ -161,8 +161,8 @@ input[type="checkbox"] {
 	 font-family: "ROBOTO", sans-serif;
     margin: 5px;
     position: relative;
-    width: 90px;
-    height: 30px;
+    width: 120px;
+    height: 40px;
     -webkit-appearance: none;
     background: linear-gradient(0deg, #333, #000);
     outline: none;
@@ -188,8 +188,8 @@ input[type="checkbox"]:before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60px;
-    height: 30px;
+    width: 80px;
+    height: 40px;
     background: linear-gradient(0deg, #000, #6b6b6b);
     border-radius: 20px;
     box-shadow: 0 0 0 1px #232323;
