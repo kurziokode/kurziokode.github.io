@@ -22,8 +22,8 @@ a {
 
 .popover__wrapper {
   position: fixed;
-   right: 0px;
-  bottom: 0px;
+  left: 270px;
+  bottom: 5px;
   margin-top: 0rem;
   display: inline-block;
 }
@@ -77,7 +77,8 @@ a {
 
 .popover__wrapper2 {
     position: fixed;
- right: 0px;
+
+ left: 270px;
     top: 40px;
     margin-top: 0rem;
     display: inline-block;
@@ -86,13 +87,15 @@ a {
 
 
 .popover__wrapper3 {
+   
 	 opacity: 0.9;
     position: fixed;
- left: 80px;
-  top: 60px;
+ left: 15px;
+  top: 40px;
     margin-top: 0rem;
     display: inline-block;
 }
+
 
 
 
@@ -176,7 +179,7 @@ input[type="checkbox"]:after {
     height: 4px;
     background: linear-gradient(0deg, #6b6b6b, #000);
     border-radius: 50%;
- 
+   
 }
 
 input:checked[type="checkbox"]:after {
