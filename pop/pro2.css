@@ -23,7 +23,7 @@ a {
 .popover__wrapper {
   position: fixed;
   left: 270px;
-  bottom: 5px;
+  bottom: 0px;
   margin-top: 0rem;
   display: inline-block;
 }
@@ -90,7 +90,7 @@ a {
    
 	 opacity: 0.9;
     position: fixed;
- left: 15px;
+ left: 70px;
   top: 40px;
     margin-top: 0rem;
     display: inline-block;
