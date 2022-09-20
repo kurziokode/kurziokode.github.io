@@ -32,12 +32,13 @@ a {
 
 
 .popover__content {
-  opacity: 1;
+  background-image: url('https://kurziokode.github.io/matrix/rain.jpg');
+  background-size:cover;
   visibility: hidden;
   position: relative;
   left: 0px;
   transform: translate(0, 10px);
-  background-color: #111113c7;
+ 
   padding: 1rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   width: auto;
