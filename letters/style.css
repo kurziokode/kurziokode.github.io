@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,300&display=swap");
+
+
+.e-white {
+  background-color: rgb(28, 27, 27);
+}
+
+.t-white {
+  color: rgb(35, 32, 32);
+}
+
+.e-black {
+  background-color: #000;
+}
+
+.t-black {
+  color: #000;
+}
+
+.t-dark {
+  color: var(--dark);
+}
+
+.e-color {
+  background-color: var(--color);
+}
+
+.e-dark {
+  background-color: var(--dark);
+}
+
+.t-color {
+  color: var(--color);
+}
+
+.e-gray {
+  background-color: var(--gray);
+}
+
+.t-gray {
+  color: var(--gray);
+}
+
+.t-100 {
+  font-weight: 300;
+}
+
+.t-400 {
+  font-weight: 400;
+}
+
+.t-500 {
+  font-weight: 500;
+}
+
+.t-700 {
+  font-weight: 700;
+}
+
+.t-900 {
+  font-weight: 900;
+}
+
+.e-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.e-flex-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.e-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.e-rel {
+  position: relative;
+}
+
+.e-abs {
+  position: absolute;
+}
+
+.e-fixed {
+  position: fixed;
+}
+
+.e-wp {
+  width: 100%;
+}
+
+.e-hp {
+  height: 100%;
+}
+
+.e-85 {
+  width: 85%;
+}
+
+.e-85w {
+  width: 85vw;
+}
+
+.e-wvw {
+  width: 100vw;
+}
+
+.e-hvh {
+  height: 100vh;
+}
+
+.e-dn {
+  display: none;
+}
+
+.e-img-fit {
+  object-fit: cover;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.e-hidden {
+  overflow: hidden;
+}
+
+.e-curp {
+  cursor: pointer;
+}
+
+e-upper {
+  text-transform: uppercase;
+}
+
+button {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  color: #26589F;
+  outline: none;
+  padding: 0;
+}
+
+@media only screen and (min-width: 1025px) {
+  .e-mobile {
+    display: none;
+  }
+}
+
+
+body {
+  --color: #88ce04;
+     background: url('https://kurziokode.github.io/edu/view2.jpg');
+     opacity: 1;
+  font-family: "Poppins", monospace;
+  font-weight: lighter;
+  color: #000;
+  overflow: hidden;
+}
+
+canvas#view {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.btns {
+  position: fixed;
+  bottom: 20vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+ul.btns__hold {
+  width: 80vw;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.btns__each {
+  cursor: pointer;
+  background: rgb(2, 2, 2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0.33rem 1.9rem;
+  border-radius: 50px;
+  color: #ff04e6b1;
+  font-weight: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.words {
+
+  color: #ff04e667;
+  opacity: 0.4;
+  line-height: 1.5;
+}
+
+.words span {
+  font-size: 8rem;
+  display: inline-block;
+  animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-30%, 0);
+  }
+
+  50% {
+    text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+  }
+
+  100% {
+    transform: translate(30%, 0);
+  }
+}
+
+.words span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.words span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.words span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.words span:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.words span:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.words span:nth-child(7) {
+  animation-delay: 3s;
+}
+
+
+
+
