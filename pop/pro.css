@@ -1,3 +1,4 @@
+
 html {
     background: url('https://kurziokode.github.io/matrix/monica.jpg');
  opacity: 1;
@@ -21,6 +22,8 @@ a {
 }
 
 .popover__wrapper {
+
+
   position: fixed;
   left: 630px;
   bottom: 0px;
@@ -32,17 +35,35 @@ a {
 
 
 .popover__content {
-  background-image: url('https://kurziokode.github.io/matrix/rain.jpg');
-  background-size:cover;
+
   visibility: hidden;
   position: relative;
   left: 0px;
   transform: translate(0, 10px);
- 
+  
+  
+   background-size:cover;
   padding: 1rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   width: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,7 +94,15 @@ a {
 
 
 
-
+.popover__wrapper0 {
+   
+	 opacity: 0.9;
+    position: fixed;
+ left: 35px;
+  top: 50px;
+    margin-top: 0rem;
+    display: inline-block;
+}
 
 
 .popover__wrapper2 {
@@ -91,8 +120,8 @@ a {
    
 	 opacity: 0.9;
     position: fixed;
- left: 35px;
-  top: 40px;
+ left: 20px;
+  top: 200px;
     margin-top: 0rem;
     display: inline-block;
 }
@@ -246,6 +275,5 @@ input[type="checkbox"]:after {
 input:checked[type="checkbox"]:after {
     left: 110px;
 }
-
 
 
