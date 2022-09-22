@@ -273,7 +273,7 @@ body{
 .pen{
   position: absolute;
   bottom: 0;
-  left:90%;
+  left:89%;
   transform: translate(-50%,0);
   width: 80px;
   height:60%;
