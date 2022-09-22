@@ -180,7 +180,7 @@ html, body {
 	border-bottom: 10px solid #1AD6FD;
 }
 .indigo {
-	left: 67%;
+	left: 46%;
 }
 .indigo .left, .indigo .right {
 	background: #B512FB;
@@ -195,7 +195,7 @@ html, body {
 	border-bottom: 10px solid #C644FC;
 }
 .violet {
-	left: 77%;
+	left: 58%;
 }
 .violet .left, .violet .right {
 	background: #C41286;
@@ -231,7 +231,7 @@ body{
 .main{
   position: absolute;
   bottom: 0;
-  left:89%;
+  left:91%;
   transform: translate(-50%,0);
   width: 80px;
   height:60%;
