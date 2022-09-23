@@ -150,7 +150,7 @@ html, body {
 	border-bottom: 10px solid #FFDB4C;
 }
 .green {
-	left: 47%;
+	left: 70%;
 }
 .green .left, .green .right {
 	background: #0BD318;
@@ -231,7 +231,7 @@ body{
 .main{
   position: absolute;
   bottom: 0;
-  left:91%;
+  left:84%;
   transform: translate(-50%,0);
   width: 80px;
   height:60%;
