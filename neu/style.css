@@ -70,7 +70,8 @@ input {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 0.75em;
+  font-size: 0.95em;
+  font-weight: bold;
   outline: 0;
   border: 0;
   background-color: #EBECF0;
