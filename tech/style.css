@@ -15,7 +15,8 @@ body {
 
 :root {
   --marquee-width: 100vw;
-  --marquee-height: 7vh;
+  --marquee-height: 5.5vh;
+  --marquee1-height: 15vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
@@ -25,15 +26,39 @@ body {
 .marquee {
   width: var(--marquee-width);
   height: var(--marquee-height);
-   background-image: url(https://media1.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif?cid=ecf05e47swifvxfkndaupesmvn1skf79x0dmg19iv0sbgs6b&rid=giphy.gif&ct=g);
-opacity: 0.45;
+   background-image: url(https://media4.giphy.com/media/dVtfrb8be6eNN9cjbP/giphy.gif?cid=ecf05e478eb7qwjb15yzo6f3w5xsq0yb6zx65habvnq5buih&rid=giphy.gif&ct=g);
+opacity: 0.5;
   overflow: hidden;
-   position: fixed;
-  top: 870px;
+  position: fixed;
+  top: 120px;
 }
+
+
+.marquee1 {
+  width: var(--marquee-width);
+  height: var(--marquee1-height);
+   background-image: url(https://media4.giphy.com/media/dVtfrb8be6eNN9cjbP/giphy.gif?cid=ecf05e478eb7qwjb15yzo6f3w5xsq0yb6zx65habvnq5buih&rid=giphy.gif&ct=g);
+opacity: 0.35;
+  overflow: hidden;
+  position: fixed;
+  top: 845px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .marquee:before, .marquee:after {
-  
-  
+  position: fixed;
+
   width: 10rem;
   height: 100%;
   content: "";
