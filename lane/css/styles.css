@@ -3549,7 +3549,7 @@ input::-moz-focus-inner {
     content: "";
     height: 10rem;
     width: 20rem;
-    background-image: url(../images/dots.svg);
+    background-image: url(https://kurziokode.github.io/lane/dots.svg);
     -webkit-transform: translateX(-4rem);
     transform: translateX(-4rem);
     opacity: .25;
