@@ -28,11 +28,12 @@ body {
    background-image: url(https://media1.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif?cid=ecf05e47swifvxfkndaupesmvn1skf79x0dmg19iv0sbgs6b&rid=giphy.gif&ct=g);
 opacity: 0.45;
   overflow: hidden;
-  position: absolute;
+   position: fixed;
+  top: 870px;
 }
 .marquee:before, .marquee:after {
-  position: absolute;
-  top: 0;
+  
+  
   width: 10rem;
   height: 100%;
   content: "";
