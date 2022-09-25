@@ -27,7 +27,7 @@ body {
   width: var(--marquee-width);
   height: var(--marquee-height);
    background-image: url(https://media4.giphy.com/media/dVtfrb8be6eNN9cjbP/giphy.gif?cid=ecf05e478eb7qwjb15yzo6f3w5xsq0yb6zx65habvnq5buih&rid=giphy.gif&ct=g);
-opacity: 0.5;
+opacity: 0.8;
   overflow: hidden;
   position: fixed;
   top: 120px;
@@ -38,7 +38,7 @@ opacity: 0.5;
   width: var(--marquee-width);
   height: var(--marquee1-height);
    background-image: url(https://media4.giphy.com/media/dVtfrb8be6eNN9cjbP/giphy.gif?cid=ecf05e478eb7qwjb15yzo6f3w5xsq0yb6zx65habvnq5buih&rid=giphy.gif&ct=g);
-opacity: 0.35;
+opacity: 0.5;
   overflow: hidden;
   position: fixed;
   top: 845px;
