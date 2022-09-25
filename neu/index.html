@@ -22,30 +22,16 @@
 
  <audio id="sound2" src="neg2.mp3" preload="auto"></audio><a href="https://listen.radioking.com/radio/10713/stream/224413" target="_blank"><input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="black radio" onclick="document.getElementById('sound2').play();"></a>
 
-
+<button :class="[toggle ? 'light' : 'dark', 'warning']" @click="toggle = !toggle">{{ toggle ? 'dark' : 'light' }}</button>
  
-<br /><br /><br />
- <br /><br />
+
 
  <p><h2 :class="[toggle ? 'light' : 'dark']">“In the beginning, sometimes I left messages in the street.” ― David Markson<br />
    
     </h2>
     
   </p>
- <br /><br /><br /><br />
-<button :class="[toggle ? 'light' : 'dark', 'warning']" @click="toggle = !toggle">{{ toggle ? 'dark' : 'light' }}</button>
 
-
-
- <br /><br /><br />
- <br /><br /><br />
-
-  
-
-
-
- <br /><br /><br />
-  <br /><br /><br />
 <iframe width="460" height="258" src="https://www.youtube.com/embed/Xm_k6RZnXIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <video controls  autoplay loop class="video-container">
         <source src="https://jacksmith206.github.io/doulos/intro.mp4" type="video/mp4" />
