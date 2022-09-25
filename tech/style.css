@@ -106,7 +106,7 @@ opacity: 0.5;
 }
 
 @media (max-width: 600px) {
-  html { font-size: 12px; }
+  html { font-size: 8px; }
   :root {
     --marquee-width: 100vw;
     --marquee-height: 16vh;
