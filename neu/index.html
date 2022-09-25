@@ -10,11 +10,21 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
+  
+   <p><h2 :class="[toggle ? 'light' : 'dark']">“In the beginning, sometimes I left messages in the street.” ― David Markson<br />
+   
+    </h2>
+    
+  </p>
+  
+  
+  
+  
 <div id="neumorphism" :class="toggle ? 'light' : 'dark'">
  
  <h1 :class="[toggle ? 'light' : 'dark']">curzio</h1>
 
-<br /><br />
+
  <a href="https://kurziokode.github.io/hack/home.html" target="_blank" style="font-weight: bold;"><input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="blog"></a>
  <a href="https://kurziokode.github.io/slide/index.html" target="_blank"><input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="420"></a>
  <a href="https://kurziokode.github.io/matrix/motor.html" target="_blank"><input :class="[toggle ? 'light' : 'dark', 'warning']" type="text" placeholder="motor"></a>
@@ -26,11 +36,7 @@
  
 
 
- <p><h2 :class="[toggle ? 'light' : 'dark']">“In the beginning, sometimes I left messages in the street.” ― David Markson<br />
-   
-    </h2>
-    
-  </p>
+
 
 <iframe width="460" height="258" src="https://www.youtube.com/embed/Xm_k6RZnXIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <video controls  autoplay loop class="video-container">
