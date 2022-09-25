@@ -15,9 +15,9 @@ body {
 
 :root {
   --marquee-width: 100vw;
-  --marquee-height: 5vh;
+  --marquee-height: 7vh;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
-  --marquee-elements-displayed: 12;
+  --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 8s);
 }
@@ -25,8 +25,8 @@ body {
 .marquee {
   width: var(--marquee-width);
   height: var(--marquee-height);
-   background-image: url(https://kurziokode.github.io/matrix/arch.jpg);
-
+   background-image: url(https://media1.giphy.com/media/077i6AULCXc0FKTj9s/giphy.gif?cid=ecf05e47swifvxfkndaupesmvn1skf79x0dmg19iv0sbgs6b&rid=giphy.gif&ct=g);
+opacity: 0.5;
   overflow: hidden;
   position: absolute;
 }
