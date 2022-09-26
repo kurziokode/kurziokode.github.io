@@ -4346,6 +4346,7 @@ html.no-csstransitions .s-hero__content {
     margin-bottom: 0;
 }
 
+
 .folio-item__project-link {
     z-index: 2;
     display: block;
@@ -4353,9 +4354,9 @@ html.no-csstransitions .s-hero__content {
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: white;
+    color: #e60000;
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #000000;
     padding: .6rem 1.2rem;
     opacity: 0;
     visibility: hidden;
@@ -4382,11 +4383,10 @@ html.no-csstransitions .s-hero__content {
 .folio-item__project-link:hover, 
 .folio-item__project-link:focus, 
 .folio-item__project-link:active {
-    background-color: white;
-    border: 1px solid white;
-    color: black;
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #00ff00;
 }
-
 /* on hover
  *---------------------------------------------- */
 .folio-item:hover .folio-item__thumb a::before {
