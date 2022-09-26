@@ -4355,7 +4355,7 @@ html.no-csstransitions .s-hero__content {
     font-size: 1.2rem;
     line-height: 2rem;
     color: #e60000;
-    background-color: transparent;
+    background-color: #000000;
     border: 1px solid #000000;
     padding: .6rem 1.2rem;
     opacity: 0;
@@ -4383,7 +4383,7 @@ html.no-csstransitions .s-hero__content {
 .folio-item__project-link:hover, 
 .folio-item__project-link:focus, 
 .folio-item__project-link:active {
-    background-color: transparent;
+    background-color: #000000;
     border: 1px solid #000000;
     color: #00ff00;
 }
