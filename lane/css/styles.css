@@ -188,7 +188,7 @@
     /* others
      */
     --color-body  : var(--color-1);
-    --color-bg    : #121417;
+    --color-bg    : #0b0c0e;
     --color-border: var(--color-gray-17);
 }
 
@@ -3477,7 +3477,7 @@ input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 .s-hero {
-    background-color: #121417;
+    background-color: #0b0c0e;
     width: 100%;
     height: 100vh;
     min-height: calc(25.5 * var(--space));
