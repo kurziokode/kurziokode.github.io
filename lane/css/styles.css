@@ -3098,7 +3098,7 @@ input::-moz-focus-inner {
 }
 
 .s-header.sticky.scrolling {
-    opacity: 1;
+    opacity: 0.9;
     visibility: visible;
 }
 
