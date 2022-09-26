@@ -321,6 +321,7 @@ html {
 
 body {
     margin: 0;
+     overflow: hidden;
 }
 
 /* Render the `main` element consistently in IE. */
