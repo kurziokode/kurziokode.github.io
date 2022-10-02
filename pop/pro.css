@@ -143,8 +143,8 @@ a {
 
 .popover__wrapper5 {
     position: fixed;
-  right: 20px;
-
+ 
+right: 450px;
     top: 40px;
     margin-top: 0rem;
     display: inline-block;
@@ -154,7 +154,7 @@ a {
 
 .popover__wrapper6 {
   position: fixed;
-  right: 450px;
+  left: 630px;
   top: 40px;
   margin-top: 0rem;
   display: inline-block;
