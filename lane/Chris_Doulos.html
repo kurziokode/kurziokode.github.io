@@ -161,7 +161,7 @@
 					  
 	<br><br><br><br>
 
- <p><a class="btn h-full-width" href="" target="_blank">random&nbsp;&nbsp;&nbsp;&nbsp;button</a></p>
+ <p><a class="btn h-full-width" href="#" onclick="randomSite();" target="_blank">random&nbsp;&nbsp;&nbsp;&nbsp;button</a></p>
 				  
 					  
 					  
@@ -410,6 +410,40 @@
     </section> 
 
 
+	 
+	 
+	 
+	<script>
+    var sites = [
+        'https://sarantakos.wordpress.com/',
+        'https://dromos.wordpress.com/',
+        'https://www.shortoftheweek.com/channels/film-noir/',
+        'https://shakespeare.folger.edu/shakespeares-works/',
+        'https://xastetoulaxistoneikosikilaseoktomeres.blogspot.com/',
+        'https://monicabellucci.net/',
+	'https://kurziokode.github.io/film/sound.html'
+    ];
+
+    function randomSite() {
+        var i = parseInt(Math.random() * sites.length);
+        location.href = sites[i];
+    }
+</script> 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
         <script type="text/javascript">
 
 var images = new Array();
