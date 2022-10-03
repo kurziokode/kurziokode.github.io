@@ -7,8 +7,17 @@ $('body').vegas({
   animation: 'random',
   animationDuration: 20000,
   slides: [
-    { src: 'https://jacksmith206.github.io/teetotaller/moto.jpg' },
-    { src: 'https://jacksmith206.github.io/teetotaller/lee.jpg' }
+    { src: 'https://kurziokode.github.io/1.jpg' },
+    { src: 'https://kurziokode.github.io/9.png' },
+    { src: 'https://kurziokode.github.io/8.jpg' },
+    { src: 'https://kurziokode.github.io/7.jpg' },
+     { src: 'https://kurziokode.github.io/6.jpg' },
+    { src: 'https://kurziokode.github.io/5.jpg' },
+    { src: 'https://kurziokode.github.io/4.png' },
+    { src: 'https://kurziokode.github.io/3.jpg' },
+      { src: 'https://kurziokode.github.io/2.jpg' },
+    { src: 'https://kurziokode.github.io/10.jpg' },
+     { src: 'https://kurziokode.github.io/11.jpg' }
  
    
   
