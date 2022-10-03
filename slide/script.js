@@ -8,7 +8,7 @@ $('body').vegas({
   animationDuration: 20000,
   slides: [
     { src: 'https://kurziokode.github.io/1.jpg' },
-    { src: 'https://kurziokode.github.io/9.png' },
+ 
     { src: 'https://kurziokode.github.io/8.jpg' },
     { src: 'https://kurziokode.github.io/7.jpg' },
      { src: 'https://kurziokode.github.io/6.jpg' },
