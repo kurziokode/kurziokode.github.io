@@ -16,7 +16,7 @@ $('body').vegas({
     { src: 'https://kurziokode.github.io/4.png' },
     { src: 'https://kurziokode.github.io/3.jpg' },
       { src: 'https://kurziokode.github.io/2.jpg' },
-    { src: 'https://kurziokode.github.io/10.jpg' },
+ 
      { src: 'https://kurziokode.github.io/11.jpg' }
  
    
