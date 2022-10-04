@@ -2383,7 +2383,7 @@ input[type="button"] {
 
     display: inline-block;
     font-family: var(--font-2);
-    font-weight: 600;
+    font-weight: 1000;
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: .5em;
