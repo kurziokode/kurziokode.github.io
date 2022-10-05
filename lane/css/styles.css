@@ -5058,7 +5058,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 8px;
     height: 80px;
-    background: #43010d;
+    background: #8d0c0c;
     z-index: 9;
     border-radius: 6px 6px 0 0;
 }
@@ -5078,7 +5078,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 2px;
     height:150px;
-    background: #8d0c0c;
+    background: #43010d;
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
