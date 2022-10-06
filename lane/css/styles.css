@@ -3164,7 +3164,7 @@ input::-moz-focus-inner {
 }
 
 .s-header__nav a:hover, .s-header__nav a:focus {
-    color: white !important;
+    color: #f71d53 !important;
 }
 
 .s-header__nav li {
