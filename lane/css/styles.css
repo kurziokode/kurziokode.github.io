@@ -4351,10 +4351,10 @@ html.no-csstransitions .s-hero__content {
     z-index: 2;
     display: block;
     font-family: var(--font-2);
-    font-weight: 400;
-    font-size: 1.7rem;
+    font-weight: 500;
+    font-size: 2rem;
     line-height: 2rem;
-    color: #595959;
+    color: #666666;
     background-color: #000000;
     border: 1px solid #000000;
     padding: .6rem 1.2rem;
