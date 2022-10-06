@@ -4365,8 +4365,8 @@ html.no-csstransitions .s-hero__content {
     -webkit-transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     position: absolute;
-    bottom: 3.9rem;
-    left: 3rem;
+    bottom: 15.5rem;
+    left: 5rem;
 }
 
 .folio-item__project-link::before {
