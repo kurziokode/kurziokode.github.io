@@ -2451,7 +2451,7 @@ input[type="button"].btn--primary:focus {
  * ------------------------------------------------- */
 .btn.h-full-width, 
 button.h-full-width {
-     width: 28.4%;
+    width: 58.5%;
     margin-right: 0;
 }
 
