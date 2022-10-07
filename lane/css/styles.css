@@ -3536,10 +3536,10 @@ input::-moz-focus-inner {
 }
 
 .s-hero__content h1 {
-    font-size: 9rem;
+   font-size: 10rem;
     font-weight: 600;
     letter-spacing: -.04em;
-    line-height: 1;
+    line-height: 1.5;
     color: var(--color-1);
     margin-bottom: 0;
     position: relative;
