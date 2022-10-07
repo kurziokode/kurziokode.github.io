@@ -4355,8 +4355,8 @@ html.no-csstransitions .s-hero__content {
     font-size: 2rem;
     line-height: 2rem;
     color: #666666;
-    background-color: transparent;
-    border: 0px solid rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+    border: 1px solid #000000;
     padding: .6rem 1.2rem;
     opacity: 0;
     visibility: hidden;
