@@ -3143,13 +3143,13 @@ input::-moz-focus-inner {
  * ## main navigation
  * ------------------------------------------------------------------- */
 .s-header__nav-wrap {
-    padding-left: 21.6rem;
+    padding-left: 5.5rem;
 }
 
 .s-header__nav {
     list-style: none;
     font-family: var(--font-2);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 6rem;
     padding-top: 1.4rem;
@@ -3164,7 +3164,7 @@ input::-moz-focus-inner {
 }
 
 .s-header__nav a:hover, .s-header__nav a:focus {
-    color: #f71d53 !important;
+    color: #d30808 !important;
 }
 
 .s-header__nav li {
