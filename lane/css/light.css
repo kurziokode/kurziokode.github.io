@@ -1586,7 +1586,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-    color: var(--color-1-light);
+    color: #990000;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
