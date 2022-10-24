@@ -63,7 +63,7 @@ body {
 }
 .mast__title {
   font-family: "Cutive Mono", monospace;
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: 1000;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -174,7 +174,7 @@ body {
 }
 .mast__text {
   font-family: "Cutive Mono", monospace;
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin: 0 0 0.5em;
   line-height: 1;
   white-space: pre;
