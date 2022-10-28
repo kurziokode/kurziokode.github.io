@@ -8,8 +8,8 @@ body {
 }
 div {
   position: absolute;
-  left: 49.2%;
-  top: 33.5%;
+  left: 50%;
+  top: 10%;
 }
 div::before,
 div::after {
