@@ -12,7 +12,7 @@ $('body').vegas({
    
     { src: 'https://aegeanews.gr/wp-content/uploads/2017/07/anna-panagiotarea-errikos-ntynan.jpg' },
      { src: 'https://www.ilovestyle.com/sites/default/files/454545454555555.jpg' },
-    { src: 'https://www.tanea.gr/wp-content/uploads/2019/07/oikoggeorgiadi.png' },
+    { src: 'https://www.in.gr/wp-content/uploads/2022/07/adonis-manolidoy.jpg' },
     { src: 'https://www.ekriti.gr/sites/default/files/2022-02/benizelos.jpg' },
     { src: 'https://www.kontranews.gr/wp-content/uploads/2019/07/21393268.jpg' },
  
