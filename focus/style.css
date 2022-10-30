@@ -9,7 +9,7 @@ body {
 div {
   position: absolute;
   left: 50%;
-  top: 69%;
+  top: 9%;
 }
 div::before,
 div::after {
