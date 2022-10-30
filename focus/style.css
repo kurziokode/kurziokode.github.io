@@ -3,7 +3,7 @@ body {
   height: 100vh;
   position: relative;
   background-image:url(https://kurziokode.github.io/type.jpg);
- 
+ background-repeat: no-repeat;
   text-align: center;
 }
 div {
