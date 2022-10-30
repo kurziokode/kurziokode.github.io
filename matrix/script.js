@@ -57,7 +57,7 @@ const cfg = {
   sectionHeight: 1,
   numberOffset: 5,
   shadowBlur: true,
-  bgColor: '#15151e' };
+  bgColor: '#002027' };
 
 
 const ui = {
