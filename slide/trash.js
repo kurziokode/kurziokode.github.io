@@ -1,11 +1,11 @@
 $('body').vegas({
   overlay: true,
   transition: 'fade', 
-  transitionDuration: 3000,
-  delay: 8000,
+  transitionDuration: 2000,
+  delay: 4000,
   color: 'red',
   animation: 'random',
-  animationDuration: 15000,
+  animationDuration: 8000,
   slides: [
     { src: 'https://www.athensmagazine.gr/photos/w_800px/articles/201812/377f97_2.jpg' },
  
