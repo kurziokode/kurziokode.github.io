@@ -8,6 +8,7 @@ $('body').vegas({
   animationDuration: 8000,
   slides: [
     { src: 'https://www.athensmagazine.gr/photos/w_800px/articles/201812/377f97_2.jpg' },
+    { src: 'https://www.iefimerida.gr/sites/default/files/styles/medium_article_image/public/2021-02/petros-filippidis-me-gyalia.jpg?itok=day63EVN' },
     { src: 'https://i1.prth.gr/images/963x541/files/2019-12-17/bo12.jpg' },
     { src: 'https://aegeanews.gr/wp-content/uploads/2017/07/anna-panagiotarea-errikos-ntynan.jpg' },
     { src: 'https://www.ilovestyle.com/sites/default/files/454545454555555.jpg' },
