@@ -1,0 +1,105 @@
+
+
+
+html {
+  box-sizing: border-box;
+ 
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+   text-decoration: none;
+}
+
+body {
+  
+  background-color: #0b0c0e;
+  color: #003366;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #97989b;
+
+}
+
+.content-area {
+  padding: 4rem;
+  max-width: 600px;
+  align-self: end;
+
+}
+
+.skew {
+  position: relative;
+  background-image: linear-gradient(180deg, #121416 0, #060709 100%);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  transform: skewY(-4deg);
+     
+}
+
+.bg-image {
+  background-color: #010309;
+  background-size: cover;
+  background-position: center 80%;
+}
+
+.top-left {
+  justify-self: end;
+}
+
+.top-right {
+ 
+ background-image: url(https://www.kello.hu/~/media/villon%2011.jpg?la=hu-hu&h=309&w=550);
+
+
+}
+
+.bottom-left {
+
+ background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pagenews.gr%2Fwp-content%2Fuploads%2F2018%2F05%2F1524511882000_kabafis-1024x594.jpg&f=1&nofb=1&ipt=4a3d0c93f0a4ee9064c9dffcb83da3c267af648fcc37fbadd1f432f2aa13d823&ipo=images);
+
+ 
+}
+
+.top-left, .top-right {
+  transform: skewY(4deg);
+}
+
+.bottom-left, .bottom-right {
+  transform: skewY(4deg);
+}
+
+.top-right, .bottom-right {
+  transform-origin: right;
+}
+
+.top-left, .bottom-left {
+  transform-origin: left;
+}
+
+@media (max-width: 800px) {
+  .skew > div {
+    grid-column-start: 0;
+    grid-column-end: 1;
+    transform-origin: center;
+  }
+
+  .top-left {
+    justify-self: start;
+  }
+
+  .bg-image {
+    height: 400px;
+  }
+
+  .bottom-left {
+    grid-row: 4;
+  }
+}
