@@ -154,7 +154,7 @@
 .fnc-slide__heading {
   margin-bottom: 10px;
   
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 .fnc-slide__heading-line {
   overflow: hidden;
