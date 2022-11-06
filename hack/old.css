@@ -2,6 +2,7 @@
     list-style: none outside none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 #nav {
     background: url('https://curzioplayscode.neocities.org/Drone/menu_bg.png') no-repeat scroll 0 0 transparent;
