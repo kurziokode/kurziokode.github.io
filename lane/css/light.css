@@ -173,7 +173,7 @@
     /* buttons
      */
    --color-btn                   : var(--color-black);
-    --color-btn-text              : var(--color-gray-15);
+    --color-btn-text              : #6c737d;
     --color-btn-hover             : var(--color-gray-19);
     --color-btn-hover-text        : #e60000;
     --color-btn-primary           : var(--color-1);
