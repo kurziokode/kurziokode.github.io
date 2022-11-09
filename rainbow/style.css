@@ -372,6 +372,7 @@ body {
 .credits-active .demo-cont__credits {
   transition: transform 0.7s 0.2333333333s;
   transform: translate3d(0, 0, 0);
+ transform: translate3d(-5px, 0, 0) rotateY(-33deg) scale(0.881);
 }
 .demo-cont__credits *, .demo-cont__credits *:before, .demo-cont__credits *:after {
   box-sizing: border-box;
