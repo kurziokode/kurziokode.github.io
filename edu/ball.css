@@ -257,7 +257,7 @@ overflow: hidden;
     #logo li {
       width: 12em;
       height: 12em;
-      border: solid 0.40em  #000000;
+      border: solid 0.20em  #000000;
       left: 0;
       top: 0;
       font-size: 1em;
@@ -271,7 +271,7 @@ overflow: hidden;
       left: 1.1em;
       bottom: 1.1em;
       right: 1.1em;
-      border: solid 0.55em  #000000; 
+      border: solid 0.20em  #000000; 
 }
     
     #logo li:before, x:-moz-any-link, x:default  {
@@ -295,11 +295,11 @@ overflow: hidden;
     #logo .red    { z-index: 10; left: 27.2em; top: 0px; }
     
     /*  */
-    #logo .blue:after   { border-color: #0085c7; }   
-    #logo .yellow:after { border-color: #f4c300; } 
+    #logo .blue:after   { border-color: #013d5b; }   
+    #logo .yellow:after { border-color: #856b04; } 
     #logo .black:after  { border-color: #0b0c0e; }
-    #logo .green:after  { border-color: #009f3d; } 
-    #logo .red:after    { border-color: #df0024; }
+    #logo .green:after  { border-color: #025421; } 
+    #logo .red:after    { border-color: #620212; }
     
     #logo .blue.alt { z-index: 24; }
     #logo .blue.alt, 
