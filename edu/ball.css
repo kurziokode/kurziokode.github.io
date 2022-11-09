@@ -271,11 +271,11 @@ overflow: hidden;
       left: 1.1em;
       bottom: 1.1em;
       right: 1.1em;
-      border: solid 0.55em  #062041; 
+      border: solid 0.55em  #000000; 
 }
     
     #logo li:before, x:-moz-any-link, x:default  {
-      border: solid 0.45em  #062041;
+      border: solid 0.45em  #000000;
     }
     
     #logo li:after {
