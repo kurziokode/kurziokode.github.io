@@ -295,11 +295,11 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 90px;
-  height: 45px;
-  font-size: 14px;
+  width: 100px;
+  height: 50px;
+  font-size: 17px;
 
-  text-transform: uppercase;
+  text-transform: lowercase;
   background: transparent;
   border: none;
   outline: none;
