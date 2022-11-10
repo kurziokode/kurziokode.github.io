@@ -295,9 +295,9 @@
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 90px;
-  height: 45px;
-  font-size: 15px;
+  width: 100px;
+  height: 50px;
+  font-size: 17px;
 
   text-transform: lowercase;
   background: #0b0c0e;
