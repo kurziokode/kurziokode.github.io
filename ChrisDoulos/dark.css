@@ -259,8 +259,8 @@
 .fnc-nav {
   z-index: 5;
   position: absolute;
-  right: 40.5%;
-  top: 0%;
+  right: 14%;
+  bottom: 5%;
 }
 .fnc-nav__bgs {
   z-index: -1;
