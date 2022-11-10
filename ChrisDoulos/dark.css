@@ -299,8 +299,8 @@
   height: 45px;
   font-size: 15px;
 
-  text-transform: uppercase;
-  background: transparent;
+  text-transform: lowercase;
+  background: #0b0c0e;
   border: none;
   outline: none;
   cursor: pointer;
