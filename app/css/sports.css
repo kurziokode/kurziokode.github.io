@@ -5059,7 +5059,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 8px;
     height: 80px;
-    background: #002027;
+    background: #b14003;
     z-index: 9;
     border-radius: 6px 6px 0 0;
 }
@@ -5069,7 +5069,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 4px;
     height: 90px;
-    background: #002027;
+    background: #b14003;
     z-index: 10;
     border-radius: 6px 6px 0 0;
 }
