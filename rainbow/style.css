@@ -2,7 +2,7 @@
  
 }
 .fnc-slider {
-  overflow: hidden;
+ 
    
   box-sizing: border-box;
   position: relative;
@@ -343,7 +343,7 @@ body {
 }
 
 .demo-cont {
-  overflow: hidden;
+  
   position: relative;
   height: 100vh;
   perspective: 1500px;
