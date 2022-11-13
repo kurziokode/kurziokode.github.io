@@ -339,11 +339,11 @@
 /* NOT PART OF COMMON SLIDER STYLES */
 body {
   margin: 0;
-
+  overflow: hidden;
 }
 
 .demo-cont {
-   overflow: hidden;
+  overflow: hidden;
   position: relative;
   height: 100vh;
   perspective: 1500px;
@@ -352,7 +352,7 @@ body {
 }
 .demo-cont__credits {
   box-sizing: border-box;
-
+  
   z-index: 1;
   position: absolute;
   right: 0;
