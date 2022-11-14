@@ -197,7 +197,7 @@
   line-height: 1;
   color: transparent;
   border: none;
-  text-transform: uppercase;
+  text-transform: lowercase;
   background: transparent;
   cursor: pointer;
   text-align: center;
