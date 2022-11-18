@@ -299,7 +299,7 @@
   transition: background-color 0.5s;
 }
 .fnc-nav__control.m--active-control {
-  background: #1F2833;
+  background: #0b0c0e;
 }
 .fnc-nav__control-progress {
   position: absolute;
@@ -443,7 +443,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.1);
+
 }
 
 .example-slider .fnc-slide__heading,
