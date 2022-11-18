@@ -288,9 +288,9 @@
   display: inline-block;
   vertical-align: top;
   width: 120px;
-  height: 5px;
+  height: 1px;
   font-size: 14px;
-  color: #fff;
+  color: #ff0000;
   text-transform: uppercase;
   background: transparent;
   border: none;
