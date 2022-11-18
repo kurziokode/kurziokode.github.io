@@ -299,7 +299,7 @@
   transition: background-color 0.5s;
 }
 .fnc-nav__control.m--active-control {
-  background: #0b0c0e;
+  background: transparent;
 }
 .fnc-nav__control-progress {
   position: absolute;
@@ -307,7 +307,7 @@
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #ff0000;
+  background: #ff3300;
   transform-origin: 0 50%;
   transform: scaleX(0);
   transition-timing-function: linear !important;
