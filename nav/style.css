@@ -299,7 +299,7 @@
   transition: background-color 0.5s;
 }
 .fnc-nav__control.m--active-control {
-  background: #1F2833;
+  background: #0b0c0e;
 }
 .fnc-nav__control-progress {
   position: absolute;
