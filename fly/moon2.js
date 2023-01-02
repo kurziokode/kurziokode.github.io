@@ -47,7 +47,7 @@ function init() {
     controls.enablePan = false;
 
     const loader = new THREE.TextureLoader();
-    const textureSphereBg = loader.load('https://kurziokode.github.io/fly/train.jpg');
+    const textureSphereBg = loader.load('https://kurziokode.github.io/fly/1.jpg');
     const texturenucleus = loader.load('https://kurziokode.github.io/fly/alk.jpg');
     const textureStar = loader.load("");
     const texture1 = loader.load("https://i.ibb.co/F8by6wW/p2-b3gnym.png");  
