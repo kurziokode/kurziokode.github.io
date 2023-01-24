@@ -121,10 +121,10 @@
   <div class="container">
   
     <nav id="menu">
-    <a href="https://curzioplayscode.neocities.org/about.jpg" target="_blank" style="color: #496683">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://curzioplayscode.neocities.org/about.jpg" target="_blank" style="color: #496683" class="myLink">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    
-      <a href="mailto:lestiflee@gmail.com" style="color: #496683">Mail</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank" style="color: #496683">Contact</a>
+      <a href="mailto:lestiflee@gmail.com" style="color: #496683" class="myLink">Mail</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank" style="color: #496683" class="myLink">Contact</a>
     </nav>
   
   </div>
@@ -277,7 +277,26 @@
 
     // Add animation to the timeline
     tl.to(heading, { duration: 2, x: 880, rotate: 360 });
-</script>  
+
+  
+  // Select all links with class "myLink"
+var links = document.querySelectorAll(".myLink");
+
+// Loop through the links and add an event listener for the "mouseover" event
+links.forEach(function(link) {
+  link.addEventListener("mouseover", function() {
+    // Create a timeline for the animation
+    var tl = gsap.timeline();
+    // Add animation to the timeline
+    tl.to(link, {duration: 0.5, scale: 1.2, color: "#b30000"})
+  });
+});
+  
+  
+  
+  
+  
+  </script>  
      
 
 
