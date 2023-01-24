@@ -13,7 +13,7 @@
     
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" href="https://kurziokode.github.io/table/style.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
 
 
@@ -132,6 +132,14 @@
   </div>
     
  
+  <div class="container">
+  <h1 id="myHeading" style="color: #2f4051">Projects</h1>
+</div>
+  
+  
+  
+  
+  
     <header>
       <nav>
         <ul>
@@ -157,7 +165,7 @@
   <table>
   
     <tr>
-      <td style="color: #2f4051">&nbsp;&nbsp;&nbsp;Projects</td>
+      <td></td>
 
  <td>
         <ul>
@@ -265,7 +273,16 @@
 
 
 
-     
+ 
+   <script>// Select the heading element
+    var heading = document.getElementById("myHeading");
+
+    // Create a timeline for the animation
+    var tl = gsap.timeline();
+
+    // Add animation to the timeline
+    tl.to(heading, { duration: 2, x: 100, rotate: 360 });
+</script>      
 
 
 
