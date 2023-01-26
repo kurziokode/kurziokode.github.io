@@ -99,6 +99,94 @@
 </style>
 
 
+<style>
+
+
+.clock {
+    display: flex;
+    width: ;
+    height: ;
+    justify-content: center;
+    align-items: center;
+  
+    border: 0px solid #43010d;
+    border-radius: 50%;
+
+}
+
+.clock:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #58010d;
+    border-radius: 50%;
+    z-index: 999;
+
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 130px;
+    height: 130px;
+}
+
+.clock .min, .mn {
+    width: 170px;
+    height: 170px;
+}
+
+.clock .sec, .sc {
+    width: 210px;
+    height: 210px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+    
+}
+
+.hr:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #002027;
+    z-index: 9;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #002027;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height:150px;
+    background: #58010d;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+</style>
+
 
 
   </head>
@@ -152,6 +240,31 @@
     <h2 id="myHeading" style="color: #2f4051">Audiovisual</h2>
 </div>
 
+    <div class="clock">
+
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+
+                    <div class="min">
+                        <div class="mn" id="mn"></div>
+                    </div>
+
+                    <div class="sec">
+                        <div class="sc" id="sc"></div>
+                    </div>
+
+                </div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 <header>
     <nav>
         <ul>
@@ -309,7 +422,27 @@ links.forEach(function(link) {
   
   </script>      
 
+<script>
+const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+        
+        setInterval(() =>{
+            
+             let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+        
+        hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+            
+        })
 
+
+</script>
 
 
 
