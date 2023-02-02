@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+  <title>Curzio Plays Code</title>
+  <link rel="icon" href="https://kurziokode.github.io/lane/ora.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://kurziokode.github.io/table/style.css">
+  
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="https://kurziokode.github.io/table/test.css">
+  
+  
+  
+  
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+
+
+  <style>
+
+#popup-image {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 750px;
+  height: 500px;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+#image-link:hover + #popup-image {
+  display: block;
+
+}
+
+
+
+    /* Default styles for all screen sizes */
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Styles for screens smaller than 600px (e.g. mobile devices) */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    /* Styles for screens between 600px and 900px (e.g. tablets) */
+    @media (min-width: 600px) and (max-width: 900px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    /* Styles for screens larger than 900px (e.g. desktop) */
+    @media (min-width: 900px) {
+      body {
+        font-size: 18px;
+      }
+    }
+
+    /* Make the navigation container a flexbox */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Make the navigation items flex items */
+    .nav-item {
+      flex: 1;
+    }
+
+    /* Stack the navigation items vertically on small screens */
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+      }
+    }
+
+    /* Create a grid container */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    /* Make the grid items flex items */
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+
+  <style>
+    .container {
+      display: -webkit-flexbox;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+  <script>document.oncontextmenu = function () {
+      return false;
+    }</script>
+
+
+
+
+
+  <div class="container">
+
+
+    <nav id="menu"><br>
+      <a href="https://curzioplayscode.neocities.org/about.jpg" target="_blank" style="color: #68470f"
+        class="myLink">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://metager.org/" target="_blank" style="color: #68470f" class="myLink">
+        Meta</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://chat.openai.com/chat" target="_blank" style="color: #68470f" class="myLink">
+        Chat
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://www.deepl.com/translator?il=en" target="_blank" style="color: #68470f" class="myLink">
+        Deep
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+      <a href="https://www.instantstreetview.com/" target="_blank" style="color: #68470f" class="myLink">
+        View
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/table/slide.html"
+        target="_blank" style="color: #68470f" class="myLink">
+        Share
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="mailto:lestiflee@gmail.com" style="color: #68470f"
+        class="myLink">Mail</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank" style="color: #68470f"
+        class="myLink">Contact</a>
+    </nav>
+
+  </div>
+
+  <div class="container">
+    <h2 id="myHeading" style="color: #2f4051">Curzio Plays Code</h2>
+  </div>
+
+
+
+
+
+
+  <header>
+    <nav>
+      <ul>
+
+
+
+
+        <li><a href="https://kurziokode.github.io/app/index.html" target="_blank" style="color: #ff7b00ad"><i
+              class="fa fa-graduation-cap"></i></a></li><br>
+        <li><a href="https://twitter.com/lestiflee" target="_blank" style="color: #ff7b00ad"><i
+              class="fab fa-twitter"></i></a></li><br>
+        <li><a href="https://www.facebook.com/lestiflee" target="_blank" style="color: #ff7b00ad"><i
+              class="fab fa-facebook-f"></i></a></li><br>
+        <li><a href="https://www.instagram.com/christos__doulos/?next=%2Fchristos__doulos%2F" target="_blank"
+            style="color: #ff7b00ad"><i class="fab fa-instagram"></i></a></li><br>
+        <li><a href="https://www.youtube.com/playlist?list=PLyVQ72RbBvU4ic878YeDJuaX0idMkfRSF" target="_blank"
+            style="color: #ff7b00ad"><i class="fab fa-youtube"></i></a></li>
+
+
+
+
+      </ul>
+    </nav>
+
+    <div class="clock">
+
+  <div class="hour">
+    <div class="hr" id="hr"></div>
+  </div>
+
+  <div class="min">
+    <div class="mn" id="mn"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sc" id="sc"></div>
+  </div>
+
+</div>
+
+
+<br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div class="container">
+      <h5 id="myHeading" style="color: #1c2631">
+        “When you know enough it’s obvious that every idea you have is no good.”
+        ― James Gleick</h5>
+    </div>
+<br><br><br>
+  </header>
+
+
+
+
+
+
+  <table>
+
+    <tr>
+      <td style="color: #2f4051">&nbsp;&nbsp;&nbsp;Listen</td>
+
+      <td>
+        <ul>
+          <li><a href="https://www.grittyrockradio.com/en" id="image-link" target="_blank">gritty</a>
+           
+            <div id="popup-image"><img src="./images/1.jpg" alt="Image"></div>
+           
+      </li>
+      
+          <li><a href="https://radioparadise.com/player/slideshow" id="image-link" target="_blank">paradise</a>
+          <div id="popup-image"><img src="./images/2.jpg" alt="Image"></div>
+          </li>
+
+
+          <li><a href="https://www.mixcloud.com/Sauvagesradio/" id="image-link" target="_blank">sauvages</a>
+          <div id="popup-image"><img src="./images/3.jpg" alt="Image"></div>
+          </li>
+
+
+
+        </ul>
+      </td>
+
+
+
+      <td>
+        <ul>
+          <li><a href="https://www.ertecho.gr/radio/kosmos-jazz/player/" id="image-link" target="_blank">jazz</a>
+          
+          <div id="popup-image"><img src="./images/4.jpg" alt="Image"></div>
+          
+          
+          </li>
+          <li><a
+              href="https://e1.pcloud.link/publink/show?code=kZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk#returl=https%3A//e1.pcloud.link/publink/show%3Fcode%3DkZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk&page=login" id="image-link"
+              target="_blank">mp3</a>
+            <div id="popup-image"><img src="./images/5.jpg" alt="Image"></div>
+            </li>
+         
+         
+         
+         
+              <li><a href="https://e1.pcloud.link/publink/show?code=kZNMWRZXJ8HziXJM55TKQzg6hqV34kCT5TX" id="image-link"
+              target="_blank">mp4</a>
+            
+            <div id="popup-image"><img src="./images/6.jpg" alt="Image"></div>
+            
+            </li>
+
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li><a
+              href="https://swans.bandcamp.com/album/the-glowing-man?from=search&search_item_id=2544108859&search_item_type=a&search_match_part=%3F&search_page_id=2099377261&search_page_no=0&search_rank=3&logged_out_menubar=true" id="image-link"
+              target="_blank">bandcamp</a>
+            
+            <div id="popup-image"><img src="./images/7.jpg" alt="Image"></div>
+            
+            </li>
+          <li><a href="https://www.last.fm/music/Swans/+tracks?date_preset=LAST_7_DAYS&page=1" id="image-link"
+              target="_blank">lastfm</a>
+            
+            <div id="popup-image"><img src="./images/8.jpg" alt="Image"></div>
+            </li>
+          <li><a href="https://soundcloud.com/swansofficial" id="image-link" target="_blank">soundcloud</a>
+          
+          <div id="popup-image"><img src="./images/9.jpg" alt="Image"></div>
+          
+          </li>
+        </ul>
+      </td>
+
+
+
+
+
+    </tr>
+
+    <tr>
+      <td style="color: #2f4051">&nbsp;&nbsp;&nbsp;Watch</td>
+
+      <td>
+        <ul>
+          <li><a href="https://www.ertflix.gr/epg/now-on-tv" id="image-link" target="_blank">ertflix</a>
+          <div id="popup-image"><img src="./images/10.jpg" alt="Image"></div>
+          
+          </li>
+          <li><a href="https://voody-online.com/" id="image-link" target="_blank">voody</a>
+          
+          <div id="popup-image"><img src="./images/11.jpg" alt="Image"></div>
+          
+          </li>
+          <li><a href="https://gamato-tv.com/" id="image-link" target="_blank">gamato</a>
+          
+          
+          <div id="popup-image"><img src="./images/12.jpg" alt="Image"></div>
+          
+          
+          </li>
+        </ul>
+      </td>
+
+
+      <td>
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLfUDdnIv_Ozp3dhdrjheLNRgjgR7_4bMd" id="image-link"
+              target="_blank">noir</a>
+            
+            <div id="popup-image"><img src="./images/13.jpg" alt="Image"></div>
+            
+            
+            </li>
+          <li><a href="https://tainio-mania.online/" id="image-link" target="_blank">mania</a>
+          <div id="popup-image"><img src="./images/14.jpg" alt="Image"></div>
+          
+          </li>
+          <li><a href="https://filmatic.online/" id="image-link" target="_blank">filmatic</a>
+          <div id="popup-image"><img src="./images/15.jpg" alt="Image"></div>
+          
+          </li>
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li><a href="https://xrysoi.pro/" id="image-link" target="_blank">gold</a>
+          <div id="popup-image"><img src="./images/16.jpg" alt="Image"></div>
+          
+          </li>
+          <li><a href="https://www.imdb.com/?ref_=nv_home" id="image-link" target="_blank">imdb</a>
+          <div id="popup-image"><img src="./images/17.jpg" alt="Image"></div>
+          </li>
+          <li><a href="https://www.rottentomatoes.com/" id="image-link" target="_blank">rotten</a>
+          <div id="popup-image"><img src="./images/18.jpg" alt="Image"></div>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+
+
+
+
+    <tr>
+      <td style="color: #2f4051">&nbsp;&nbsp;&nbsp;Projects</td>
+
+      <td>
+        <ul>
+          <li><a href="https://kurziokode.github.io/lane/lazy.html" target="_blank">curzio</a></li>
+          <li><a href="https://kurziokode.github.io/film/sound.html" target="_blank">music</a></li>
+          <li><a href="https://kurziokode.github.io/film/index.html" target="_blank">watch</a></li>
+          <li><a href="https://kurziokode.github.io/neu/index.html" target="_blank">dark</a></li>
+          <li><a href="https://kurziokode.github.io/rainbow/index.html" target="_blank">rainbow</a></li>
+          <li><a href="https://jacksmith206.github.io/red/jamaica.html" target="_blank">jamaica</a></li>
+          <li><a href="https://kurziokode.github.io/high/stay.html" target="_blank">text</a></li>
+          <li><a href="https://kurziokode.github.io/reverse/index.html" target="_blank">poets</a></li>
+          <li><a href="https://kurziokode.github.io/people/index.html" target="_blank">people</a></li>
+        </ul>
+      </td>
+
+
+
+      <td>
+        <ul>
+          <li><a href="https://kurziokode.github.io/edu/ball.html" target="_blank">sports</a></li>
+          <li><a href="https://kurziokode.github.io/edu/fr.html#/music" target="_blank">edu</a></li>
+          <li><a href="https://kurziokode.github.io/app/index.html" target="_blank">school</a></li>
+          <li><a href="https://kurziokode.github.io/master/link.html#/red" target="_blank">master</a></li>
+          <li><a href="https://kurziokode.github.io/hack/home.html" target="_blank">blog</a></li>
+          <li><a href="https://kurziokode.github.io/pop/index2.html" target="_blank">popup</a></li>
+          <li><a href="https://curzioplayscode.neocities.org/boot/" target="_blank">boot</a></li>
+          <li><a href="https://jacksmith206.github.io/doulos/studio.html" target="_blank">razamanaz</a></li>
+          <li><a href="https://jacksmith206.github.io/teetotaller/index.html" target="_blank">teetotaller</a></li>
+
+
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li><a href="https://kurziokode.github.io/hack/studio.html" target="_blank">studio</a></li>
+          <li><a href="https://kurziokode.github.io/matrix/index.html#/red" target="_blank">matrix</a></li>
+          <li><a href="https://kurziokode.github.io/nav/index.html" target="_blank">navigate</a></li>
+          <li><a href="https://kurziokode.github.io/slide/index.html" target="_blank">slide</a></li>
+          <li><a href="https://kurziokode.github.io/off/index.html" target="_blank">quote</a></li>
+          <li><a href="https://kurziokode.github.io/focus/index.html" target="_blank">focus</a></li>
+          <li><a href="https://curzioplayscode.neocities.org/metallic/loose/" target="_blank">metallic</a></li>
+          <li><a href="https://curzioplayscode.neocities.org/lane/tst" target="_blank">frames</a></li>
+          <li><a href="https://curzioplayscode.neocities.org/stu/chris" target="_blank">photoblog</a></li>
+
+        </ul>
+      </td>
+
+
+
+
+    <tr>
+      <td style="color: #2f4051">&nbsp;&nbsp;&nbsp;Read</td>
+
+      <td>
+        <ul>
+          <li><a href="https://librofilo.blogspot.com/" target="_blank">librofilo</a></li>
+          <li><a href="https://pandoxeio.com/" target="_blank">pandoxeio</a></li>
+          <li><a href="https://groovyhistory.com/" target="_blank">groovy history</a></li>
+          <li><a href="https://www.worldhistory.org/" target="_blank">world history</a></li>
+          <li><a href="https://stars.chromeexperiments.com/" target="_blank">stars</a></li>
+          <li><a href="https://www.zergnet.com/" target="_blank">zergnet</a></li>
+          <li><a href="https://www.urbandictionary.com/" target="_blank">urban dictionary</a></li>
+          <li><a href="https://www.npr.org/" target="_blank">npr</a></li>
+          <li><a href="https://informationisbeautiful.net/visualizations/common-mythconceptions/" target="_blank">info
+              beautiful</a></li>
+          <li><a href="https://www.vintag.es/" target="_blank">vintage</a></li>
+        </ul>
+      </td>
+
+
+
+      <td>
+        <ul>
+          <li><a href="https://www.pastemagazine.com/" target="_blank">paste</a></li>
+
+          <li><a href="https://www.smithsonianmag.com/category/art-artists/" target="_blank">smithsonian</a></li>
+          <li><a href="https://www.quantamagazine.org/" target="_blank">quanta</a></li>
+          <li><a
+              href="https://www.boredpanda.com/?utm_source=kurziokode.github&utm_medium=referral&utm_campaign=organic"
+              target="_blank">bored panda</a></li>
+          <li><a href="https://www.tcj.com/" target="_blank">tcj</a></li>
+          <li><a href="https://www.goodreads.com/author/quotes/10401.James_Gleick" target="_blank">goodreads</a></li>
+          <li><a href="https://www.ebaumsworld.com/newest/all/" target="_blank">ebaums world</a></li>
+          <li><a href="https://www.livescience.com/history" target="_blank">live science</a></li>
+          <li><a href="https://www.nowness.com/" target="_blank">nowness</a></li>
+          <li><a href="https://www.visualcapitalist.com/category/misc/maps/" target="_blank">visual capitalist</a></li>
+
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li><a href="https://www.wired.com/magazine/" target="_blank">wired</a></li>
+          <li><a href="https://www.vox.com/culture" target="_blank">vox</a></li>
+          <li><a href="https://www.bbc.com/culture" target="_blank">bbc</a></li>
+          <li><a href="https://bestimmung.blogspot.com/" target="_blank">bestimmung</a></li>
+          <li><a href="https://www.theguardian.com/uk/culture" target="_blank">guardian</a></li>
+          <li><a href="https://imgur.com/t/funny?source=featured_tag_module" target="_blank">imgur</a></li>
+          <li><a href="https://www.propublica.org/topics/technology" target="_blank">propublica</a></li>
+          <li><a href="https://www.nationalgeographic.com/history" target="_blank">national geographic</a></li>
+          <li><a href="https://variety.com/" target="_blank">variety</a></li>
+          <li><a href="https://www.factinate.com/" target="_blank">factinate</a></li>
+        </ul>
+      </td>
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+      <td style="color: #2f4051">&nbsp;&nbsp;&nbsp;Arts</td>
+
+      <td>
+        <ul>
+          <li><a href="https://www.rollingstone.com/" target="_blank">rolling stone</a></li>
+          <li><a href="https://www.metacritic.com/movie" target="_blank">metacritic</a></li>
+          <li><a href="https://www.spin.com/" target="_blank">spin</a></li>
+          <li><a href="https://pitchfork.com/" target="_blank">pitchfork</a></li>
+          <li><a href="https://www.undertheradarmag.com/" target="_blank">under the radar</a></li>
+          <li><a href="https://faroutmagazine.co.uk/articles/playlists/new-music-playlists/" target="_blank">far out</a>
+          </li>
+          <li><a href="https://www.milomanara.it/galleries/comics/?lang=en" target="_blank">milo manara</a></li>
+          <li><a href="https://hubertybreyne.com/en/artists/list/0/artists-list" target="_blank">huberty breyne</a></li>
+          <li><a href="https://musicoholics.com/" target="_blank">musicoholics</a></li>
+          <li><a href="https://playjunkie.com/category/art/" target="_blank">play junkie</a></li>
+        </ul>
+      </td>
+
+
+      <td>
+        <ul>
+          <li><a href="https://kexp.org/" target="_blank">kexp</a></li>
+          <li><a href="https://www.behance.net/search/projects/?search=street%20photography" target="_blank">behance</a>
+          </li>
+          <li><a href="https://www.deviantart.com/topic/photography" target="_blank">deviant art</a></li>
+          <li><a href="https://www.wbgo.org/" target="_blank">wbgo</a></li>
+          <li><a href="https://artsandculture.google.com/category/artist?hl=fr" target="_blank">arts and culture</a>
+          </li>
+          <li><a href="https://surfadelic2.wordpress.com/" target="_blank">surfadelic</a></li>
+          <li><a href="https://www.vulture.com/art/" target="_blank">vulture</a></li>
+          <li><a href="https://www.dailyartmagazine.com/" target="_blank">daily art</a></li>
+          <li><a href="https://500px.com/p/mrkirby?view=photos" target="_blank">500px</a></li>
+          <li><a href="https://magazine.artstation.com/" target="_blank">art station</a></li>
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li><a href="https://www.albumoftheyear.org/" target="_blank">album of the year</a></li>
+          <li><a href="https://www.revolvermag.com/" target="_blank">revolver</a></li>
+          <li><a href="https://www.flickr.com/photos/skorver1/9621595253/in/photostream/" target="_blank">flickr</a>
+          </li>
+          <li><a href="https://www.shortoftheweek.com/channels/film-noir/" target="_blank">short of the week</a></li>
+          <li><a href="https://www.dazeddigital.com/" target="_blank">dazed digital</a></li>
+          <li><a href="https://totalrock.com/" target="_blank">total rock</a></li>
+          <li><a href="https://www.loudersound.com/" target="_blank">louder sound</a></li>
+          <li><a href="https://www.gazettemusicale.com/essay/2017/9/1/the-agony-of-michael-gira" target="_blank">gazette
+              musicale</a></li>
+          <li><a href="https://www.electronicbeats.net/" target="_blank">electronic beats</a></li>
+          <li><a href="https://shakespeare.folger.edu/shakespeares-works/" target="_blank">shakespeare</a></li>
+        </ul>
+      </td>
+
+
+
+    </tr>
+
+
+
+  </table>
+  <br>
+
+  <style>
+    .involved-share:before {
+      content: '';
+    }
+
+    .involved-share:hover:before {
+      content: 'All Rights Reserved. Even my lawyer has a lawyer.';
+    }
+  </style>
+
+
+
+
+
+
+
+  <script>// Select the heading element
+    var heading = document.getElementById("myHeading");
+
+    // Create a timeline for the animation
+    var tl = gsap.timeline();
+
+    // Add animation to the timeline
+    tl.to(heading, { duration: 2, x: 0, rotate: 360 });
+
+    // Select all links with class "myLink"
+    var links = document.querySelectorAll(".myLink");
+
+    // Loop through the links and add an event listener for the "mouseover" event
+    links.forEach(function (link) {
+      link.addEventListener("mouseover", function () {
+        // Create a timeline for the animation
+        var tl = gsap.timeline();
+        // Add animation to the timeline
+        tl.to(link, { duration: 0.1, scale: 1.2, color: "#00b300" })
+      });
+    });
+
+
+ const deg = 6;
+    const hr = document.querySelector('#hr');
+    const mn = document.querySelector('#mn');
+    const sc = document.querySelector('#sc');
+
+    setInterval(() => {
+
+      let day = new Date();
+      let hh = day.getHours() * 30;
+      let mm = day.getMinutes() * deg;
+      let ss = day.getSeconds() * deg;
+
+      hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+      mn.style.transform = `rotateZ(${mm}deg)`;
+      sc.style.transform = `rotateZ(${ss}deg)`;
+
+    })
+
+
+  </script>
+
+
+
+
+
+</body>
+
+
+
+<body>
+
+
+
+  <script>document.oncontextmenu = function () {
+      return false;
+    }</script>
+
+
+
+
+  <div class="demo-cont">
+    <!-- slider start -->
+    <div class="fnc-slider example-slider">
+      <div class="fnc-slider__slides">
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-red m--active-slide">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+
+                  <a href="#"><span></span>
+                  </a>
+
+
+
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span></span>
+                </div>
+              </h2>
+                <button type="button" class="fnc-slide__action-btn">
+              
+                <font size="+2"><span data-text="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9834&#9835" style="color: #ff0000"></span></font><img src="https://curzioplayscode.neocities.org/pngegg.png">
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+      
+        <!-- slide end -->
+        <!-- slide start -->
+     
+        <!-- slide end -->
+        <!-- slide start -->
+
+        <!-- slide end -->
+      </div>
+      <nav class="fnc-nav">
+     
+        <div class="fnc-nav__controls">
+          <button class="fnc-nav__control">
+           
+           
+          </button><br>
+        
+
+        </div>
+      </nav>
+    </div>
+    <!-- slider end -->
+    <div class="demo-cont__credits">
+
+<br>
+
+      <div class="demo-cont__credits-close"></div>
+
+     
+<br><br><br><br>
+
+      <a href="https://stream.radioparadise.com/flac" target="_blank"
+        class="demo-cont__credits-link" style="color: #2f4051">&#9834;&nbsp;&nbsp;play</a><br>
+
+
+
+      <a href="https://stream.radioparadise.com/flac" target="_blank"><img
+          src="https://kurziokode.github.io/table/bass.png" /></a>
+
+    
+
+      <a href="https://radioparadise.com/player/list" target="_blank" class="demo-cont__credits-link"
+        style="color: #2f4051">playlist</a><br>
+
+
+
+    
+
+    </div>
+
+
+  </div>
+<br>
+
+ <div class="container">
+  <div><!-- Back to Top Button -->
+    <a href="#" id="back-to-top-btn" style="color: #58010d;">
+      <i class="fas fa-arrow-up fa-lg"></i>
+    </a>
+      
+    </a>
+</div>
+
+</div>
+
+<br> 
+  
+  
+  
+  
+  
+  
+<div class="container">
+
+  <div class="involved-share">
+    <footer style="color: #68470f">
+      <p>Copyright © 2023 Christos Doulos Website</p>
+    </footer>
+  </div>
+</div>
+
+<br>
+
+
+
+
+  <!-- partial -->
+  <script src="https://kurziokode.github.io/nav/script.js"></script>
+
+</body>
+
+</html>
