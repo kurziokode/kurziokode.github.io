@@ -200,7 +200,7 @@ color:  #00ff00bd;
 
 
 html {
-    background: url('https://kurziokode.github.io/edu/view.jpg') ;
+    background: url('https://kurziokode.github.io/cur.jpg') ;
  opacity: 1;
 
 
@@ -595,7 +595,7 @@ h1 {
 
 
 .video-container {
-    	opacity: 0.4;
+    	opacity: 0.5;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -625,7 +625,7 @@ h1 {
 	top: 0;
 	left: 0;
 	background: rgba(0, 0, 0, 0.5);
-    opacity: 0.1;
+    opacity: 0.9;
 	position: absolute;
 }
 
@@ -819,6 +819,8 @@ h1 {
   and (orientation: landscape) {
 
 }
+
+
 
 
 
