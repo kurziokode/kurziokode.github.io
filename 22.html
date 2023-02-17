@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>C u r z i o</title>
+  <link rel="icon" href="https://kurziokode.github.io/lane/ora.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://kurziokode.github.io/table/style.css">
+
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="https://kurziokode.github.io/table/test2.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+  <style>
+    #article {
+      width: 80%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #0b0c0e;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 767px) {
+      #article {
+        width: 90%;
+      }
+    }
+
+    #article-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #article-list li {
+      margin-bottom: 20px;
+    }
+
+    #article-list h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #article-list a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    @media (max-width: 767px) {
+      #article-list li {
+        margin-bottom: 40px;
+      }
+    }
+
+
+    #popup-image {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      width: 300px;
+      height: 200px;
+    }
+
+    #image-link:hover+#popup-image {
+      display: block;
+
+    }
+
+
+
+    /* Default styles for all screen sizes */
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Styles for screens smaller than 600px (e.g. mobile devices) */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    /* Styles for screens between 600px and 900px (e.g. tablets) */
+    @media (min-width: 600px) and (max-width: 900px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    /* Styles for screens larger than 900px (e.g. desktop) */
+    @media (min-width: 900px) {
+      body {
+        font-size: 18px;
+      }
+    }
+
+    /* Make the navigation container a flexbox */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Make the navigation items flex items */
+    .nav-item {
+      flex: 1;
+    }
+
+    /* Stack the navigation items vertically on small screens */
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+      }
+    }
+
+    /* Create a grid container */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    /* Make the grid items flex items */
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+
+  <style>
+    .container {
+      display: -webkit-flexbox;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+
+<style>
+  #rightClickMenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #0b0c0e;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#rightClickMenu a {
+  display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+#rightClickMenu a:hover {
+  background-color: #0b0c0e;
+}
+
+</style>
+
+<style>
+  .heart {
+    position: fixed;
+    /*color: red; */
+    top: -1vh;
+    transform: translateY(0);
+    animation: fall 3s linear forwards;
+    font-size: 30px;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(105vh);
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div id="rightClickMenu">
+  <a href="https://kurziokode.github.io/11.html" style="color: #68470f" class="myLink">Home Page</a>
+
+</div>
+
+
+  <div class="container">
+    <h2 id="myHeading" style="color: #2f4051"><font size="+4">Curzio</font></h2>
+
+  
+  </div>
+
+
+<header>
+
+  <br>
+
+</header>
+
+
+<table>
+    <tr>
+        <td style="color: #b05604">&nbsp;&nbsp;&nbsp;Read</td>
+
+        <td>
+            <ul>
+                <li><a href="https://librofilo.blogspot.com/" target="_blank" class="myLink">librofilo</a></li>
+                <li><a href="https://pandoxeio.com/" target="_blank" class="myLink">pandoxeio</a></li>
+                <li><a href="https://groovyhistory.com/" target="_blank" class="myLink">groovy history</a></li>
+                <li><a href="https://www.worldhistory.org/" target="_blank" class="myLink">world history</a></li>
+                <li><a href="https://stars.chromeexperiments.com/" target="_blank" class="myLink">stars</a></li>
+                <li><a href="https://www.zergnet.com/" target="_blank" class="myLink">zergnet</a></li>
+                <li><a href="https://www.urbandictionary.com/" target="_blank" class="myLink">urban dictionary</a></li>
+                <li><a href="https://www.npr.org/" target="_blank" class="myLink">npr</a></li>
+                <li><a href="https://informationisbeautiful.net/visualizations/common-mythconceptions/"
+                        target="_blank" class="myLink">info
+                        beautiful</a></li>
+                <li><a href="https://www.vintag.es/" target="_blank" class="myLink">vintage</a></li>
+            </ul>
+        </td>
+
+
+
+        <td>
+            <ul>
+                <li><a href="https://www.pastemagazine.com/" target="_blank" class="myLink">paste</a></li>
+
+                <li><a href="https://www.smithsonianmag.com/category/art-artists/" target="_blank" class="myLink">smithsonian</a></li>
+                <li><a href="https://www.quantamagazine.org/" target="_blank" class="myLink">quanta</a></li>
+                <li><a href="https://www.boredpanda.com/?utm_source=kurziokode.github&utm_medium=referral&utm_campaign=organic"
+                        target="_blank" class="myLink">bored panda</a></li>
+                <li><a href="https://www.tcj.com/" target="_blank" class="myLink">tcj</a></li>
+                <li><a href="https://www.goodreads.com/author/quotes/10401.James_Gleick" target="_blank" class="myLink">goodreads</a>
+                </li>
+                <li><a href="https://www.ebaumsworld.com/newest/all/" target="_blank" class="myLink">ebaums world</a></li>
+                <li><a href="https://www.livescience.com/history" target="_blank" class="myLink">live science</a></li>
+                <li><a href="https://www.nowness.com/" target="_blank" class="myLink">nowness</a></li>
+                <li><a href="https://www.visualcapitalist.com/category/misc/maps/" target="_blank" class="myLink">visual capitalist</a>
+                </li>
+
+            </ul>
+        </td>
+
+        <td>
+            <ul>
+                <li><a href="https://www.wired.com/magazine/" target="_blank" class="myLink">wired</a></li>
+                <li><a href="https://www.vox.com/culture" target="_blank" class="myLink">vox</a></li>
+                <li><a href="https://www.bbc.com/culture" target="_blank" class="myLink">bbc</a></li>
+                <li><a href="https://bestimmung.blogspot.com/" target="_blank" class="myLink">bestimmung</a></li>
+                <li><a href="https://www.theguardian.com/uk/culture" target="_blank" class="myLink">guardian</a></li>
+                <li><a href="https://imgur.com/t/funny?source=featured_tag_module" target="_blank" class="myLink">imgur</a></li>
+                <li><a href="https://www.propublica.org/topics/technology" target="_blank" class="myLink">propublica</a></li>
+                <li><a href="https://www.nationalgeographic.com/history" target="_blank" class="myLink">national geographic</a></li>
+                <li><a href="https://variety.com/" target="_blank" class="myLink">variety</a></li>
+                <li><a href="https://www.factinate.com/" target="_blank" class="myLink">factinate</a></li>
+            </ul>
+        </td>
+
+    </tr>
+
+
+    <tr>
+        <td style="color: #b05604">&nbsp;&nbsp;&nbsp;Arts</td>
+
+        <td>
+            <ul>
+                <li><a href="https://www.rollingstone.com/" target="_blank" class="myLink">rolling stone</a></li>
+                <li><a href="https://www.metacritic.com/movie" target="_blank" class="myLink">metacritic</a></li>
+                <li><a href="https://www.spin.com/" target="_blank" class="myLink">spin</a></li>
+                <li><a href="https://pitchfork.com/" target="_blank" class="myLink">pitchfork</a></li>
+                <li><a href="https://www.undertheradarmag.com/" target="_blank" class="myLink">under the radar</a></li>
+                <li><a href="https://faroutmagazine.co.uk/articles/playlists/new-music-playlists/" target="_blank" class="myLink">far
+                        out</a>
+                </li>
+                <li><a href="https://www.milomanara.it/galleries/comics/?lang=en" target="_blank" class="myLink">milo manara</a></li>
+                <li><a href="https://hubertybreyne.com/en/artists/list/0/artists-list" target="_blank" class="myLink">huberty
+                        breyne</a></li>
+                <li><a href="https://musicoholics.com/" target="_blank" class="myLink">musicoholics</a></li>
+                <li><a href="https://playjunkie.com/category/art/" target="_blank" class="myLink">play junkie</a></li>
+            </ul>
+        </td>
+
+
+        <td>
+            <ul>
+                <li><a href="https://kexp.org/" target="_blank" class="myLink">kexp</a></li>
+                <li><a href="https://www.behance.net/search/projects/?search=street%20photography"
+                        target="_blank" class="myLink">behance</a>
+                </li>
+                <li><a href="https://www.deviantart.com/topic/photography" target="_blank" class="myLink">deviant art</a></li>
+                <li><a href="https://www.wbgo.org/" target="_blank" class="myLink">wbgo</a></li>
+                <li><a href="https://artsandculture.google.com/category/artist?hl=fr" target="_blank" class="myLink">arts and
+                        culture</a>
+                </li>
+                <li><a href="https://surfadelic2.wordpress.com/" target="_blank" class="myLink">surfadelic</a></li>
+                <li><a href="https://www.vulture.com/art/" target="_blank" class="myLink">vulture</a></li>
+                <li><a href="https://www.dailyartmagazine.com/" target="_blank" class="myLink">daily art</a></li>
+                <li><a href="https://500px.com/p/mrkirby?view=photos" target="_blank" class="myLink">500px</a></li>
+                <li><a href="https://magazine.artstation.com/" target="_blank" class="myLink">art station</a></li>
+            </ul>
+        </td>
+
+        <td>
+            <ul>
+                <li><a href="https://www.albumoftheyear.org/" target="_blank" class="myLink">album of the year</a></li>
+                <li><a href="https://www.revolvermag.com/" target="_blank" class="myLink">revolver</a></li>
+                <li><a href="https://www.flickr.com/photos/skorver1/9621595253/in/photostream/"
+                        target="_blank" class="myLink">flickr</a>
+                </li>
+                <li><a href="https://www.shortoftheweek.com/channels/film-noir/" target="_blank" class="myLink">short of the week</a>
+                </li>
+                <li><a href="https://www.dazeddigital.com/" target="_blank" class="myLink">dazed digital</a></li>
+                <li><a href="https://totalrock.com/" target="_blank" class="myLink">total rock</a></li>
+                <li><a href="https://www.loudersound.com/" target="_blank" class="myLink">louder sound</a></li>
+                <li><a href="https://www.gazettemusicale.com/essay/2017/9/1/the-agony-of-michael-gira"
+                        target="_blank" class="myLink">gazette
+                        musicale</a></li>
+                <li><a href="https://www.electronicbeats.net/" target="_blank" class="myLink">electronic beats</a></li>
+                <li><a href="https://shakespeare.folger.edu/shakespeares-works/" target="_blank" class="myLink">shakespeare</a></li>
+            </ul>
+        </td>
+
+
+
+    </tr>
+
+
+
+</table>
+
+<div>
+
+
+
+
+  <div id="article">
+
+
+
+    <div class="container">
+      <h5 id="myHeading" style="color: #1c2631">
+        “Απο την ευκολία με την οποία ικανοποιείται το πνεύμα μπορεί να μετρηθεί η έκταση της απώλειάς του”
+      </h5>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+</div>
+  <script>// Select the heading element
+    var heading = document.getElementById("myHeading");
+
+    // Create a timeline for the animation
+    var tl = gsap.timeline();
+
+    // Add animation to the timeline
+    tl.to(heading, { duration: 2, x: 0, rotate: 360 });
+
+    // Select all links with class "myLink"
+    var links = document.querySelectorAll(".myLink");
+
+    // Loop through the links and add an event listener for the "mouseover" event
+    links.forEach(function (link) {
+      link.addEventListener("mouseover", function () {
+        // Create a timeline for the animation
+        var tl = gsap.timeline();
+        // Add animation to the timeline
+        tl.to(link, { duration: 0.1, scale: 1.2, color: "#00b300" })
+      });
+    });
+
+
+
+  </script>
+
+
+</body>
+
+
+<body>
+
+  <script>document.oncontextmenu = function () {
+      return false;
+    }</script>
+
+
+
+
+  <div class="demo-cont">
+
+
+    <!-- slider start -->
+    <div class="fnc-slider example-slider">
+      <div class="fnc-slider__slides">
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-red m--active-slide">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+
+                 
+
+
+
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span></span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+              
+                <font size="+2"><span data-text="➤➤" style="color: #800000">➤➤</span></font>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+
+        <!-- slide end -->
+        <!-- slide start -->
+
+        <!-- slide end -->
+        <!-- slide start -->
+
+        <!-- slide end -->
+      </div>
+      <nav class="fnc-nav">
+
+        <div class="fnc-nav__controls">
+          <button class="fnc-nav__control">
+
+
+          </button><br>
+
+
+        </div>
+      </nav>
+    </div>
+    <!-- slider end -->
+    <div class="demo-cont__credits">
+
+      <br>
+
+      <div class="demo-cont__credits-close"></div>
+
+
+      <br><br><br><br>
+
+      <a href="https://voody-online.com/load/egkl_mato/683-1.html" target="_blank" class="demo-cont__credits-link"
+        style="color: #2f4051">Pulp Fiction (1994)</a><br>
+
+<a href="https://voody-online.com/load/egkl_mato/5179-dyo_kapnism_ne_k_ne_lock_stock_and_two_smoking_barrels_1998.html" target="_blank" class="demo-cont__credits-link"
+  style="color: #2f4051">Lock, Stock and Two Smoking Barrels (1998)</a><br>
+
+      <a href="https://voody-online.com/load/mysthr_oy/13419-mulholland_drive_mulholland_dr_2001.html" target="_blank" class="demo-cont__credits-link"
+        style="color: #2f4051">Mulholland Drive (2001)</a><br>
+
+<a href="https://voody-online.com/load/dramaa/18144-m_no_oi_erast_m_noyn_zwntano_only_lovers_left_alive_2013.html" target="_blank" class="demo-cont__credits-link"
+  style="color: #2f4051">Only Lovers Left Alive (2013)</a><br>
+
+
+ 
+  
+  <a href="https://voody-online.com/load/comedya/27573-%CE%9C%CF%85%CF%83%CF%84%CE%B7%CF%81%CE%B9%CF%89%CE%B4%CE%B5%CF%83-%CE%A4%CF%81%CE%B1%CE%B9%CE%BD%CE%BFMystery-Train-1989.html" target="_blank" class="demo-cont__credits-link"
+    style="color: #2f4051">Mystery Train (1989)</a><br>
+  
+  <a href="https://voody-online.com/load/comedya/15866-coffee_and_cigarettes_2003.html" target="_blank" class="demo-cont__credits-link"
+    style="color: #2f4051">Coffee and Cigarettes (2003)</a><br>
+
+      <a href="https://voody-online.com/load/thr_ler/2216-pat_garrett_and_billy_the_kid_1973.html" target="_blank" class="demo-cont__credits-link"
+        style="color: #2f4051">Pat Garrett And Billy the Kid (1973)</a><br>
+    
+        <a href="https://voody-online.com/load/dramaa/27168-%CE%9F%CE%B9-%CE%94%CF%8D%CE%BF-%CE%9B%CE%B7%CF%83%CF%84%CE%AD%CF%82Butch-Cassidy-and-the-Sundance-Kid-1969.html" target="_blank" class="demo-cont__credits-link"
+          style="color: #2f4051">Butch Cassidy and the Sundance Kid (1969)</a><br>
+   
+ <a href="https://voody-online.com/load/egkl_mato/18693-exolothreyt_gioi_the_boondock_saints_1999.html" target="_blank" class="demo-cont__credits-link"
+        style="color: #2f4051">The Boondock Saints (1999)</a><br>
+    
+        <a href="https://voody-online.com/load/dramaa/16031-lucky_2017.html" target="_blank" class="demo-cont__credits-link"
+          style="color: #2f4051">Lucky (2017)</a>
+
+    </div>
+
+
+  </div>
+  <br><br><br>
+
+
+  <!-- partial -->
+  <script src="https://kurziokode.github.io/nav/script.js"></script>
+
+</body>
+
+
+
+
+<div class="container">
+<h5 id="myHeading" style="color: #1c2631">
+ * Right click to Home Page</h5></div>
+
+<br>
+
+
+<div class="container">
+  <div><!-- Back to Top Button -->
+    <a href="#" id="back-to-top-btn" style="color: #660000;">
+      <i class="fas fa-arrow-up fa-lg"></i>
+    </a>
+
+    </a>
+  </div>
+
+</div>
+
+<br>
+
+<div class="container">
+
+  <div class="involved-share">
+    <footer style="color: #68470f">
+       <p>Copyright © 2023 Curzio</p>
+    </footer>
+  </div>
+</div>
+
+ <style>
+    .involved-share:before {
+      content: '';
+    }
+
+    .involved-share:hover:before {
+      content: 'All Rights Reserved';
+    }
+  </style>
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("contextmenu", function (event) {
+      event.preventDefault();
+      var menu = document.getElementById("rightClickMenu");
+      menu.style.top = event.pageY + "px";
+      menu.style.left = event.pageX + "px";
+      menu.style.display = "block";
+    });
+
+    document.addEventListener("click", function (event) {
+      var menu = document.getElementById("rightClickMenu");
+      if (menu) {
+        menu.style.display = "none";
+      }
+    });
+
+</script>
+
+<script>
+  let randomRGBA;
+  const getRandomColor = () => {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+    var randomRGBA = `rgba(${red}, ${green}, ${blue}, 1)`;
+    return randomRGBA;
+  }
+
+
+  function makeHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.zIndex = Math.random() * 10;
+    heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+    heart.style.fontSize = Math.random() * 18 + 24 + 'px';
+    heart.style.color = getRandomColor();
+    heart.innerText = '⛛'
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+
+
+  setInterval(makeHeart, 3500);
+
+</script>
+
+
+
+
+
+
+
+
+
+</html>
+
+
