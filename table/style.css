@@ -1,92 +1,4 @@
-/* =================================================================== 
- * Flare Main Stylesheet
- * Template Ver. 1.0.0
- * 03-19-2020
- * ------------------------------------------------------------------
- *
- * TOC:
- * # settings and variables
- *      ## fonts
- *      ## colors
- *      ## vertical spacing and typescale
- *      ## grid variables
- * # normalize
- * # basic/base setup styles
- *      ## media
- *      ## typography resets
- *      ## links
- *      ## inputs
- * # Grid v3.0.0
- *      ## medium screen devices
- *      ## tablets
- *      ## mobile devices
- *      ## small mobile devices <= 400px
- * # block grids
- *      ## block grids - medium screen devices
- *      ## block grids - tablets
- *      ## block grids - mobile devices
- *      ## block grids - small mobile devices <= 400px
- * # MISC
- * # custom grid, block grid STACK breakpoints 
- * # base style overrides
- *      ## links
- * # typography & general theme styles
- *      ## lists
- *      ## responsive video container
- *      ## floated image
- *      ## tables
- *      ## spacing
- * # preloader
- * # forms 
- *      ## style placeholder text
- *      ## change autocomplete styles in Chrome
- * # buttons
- * # additional components
- *      ## additional typo styles
- *      ## skillbars
- *      ## alert box
- * # common and reusable styles
- *      ## item list 
- *      ## slick slider 
- * # site header
- *      ## header logo
- *      ## main navigation
- *      ## mobile menu toggle
- *      ## header contact button
- * # hero
- *      ## hero content
- *      ## hero video
- *      ## hero scroll
- *      ## animate intro content
- *      ## animations
- * # about
- *      ## about photo
- *      ## about process
- * # services
- * # portfolio
- *      ## portfolio list
- * # clients
- *      ## clients slider
- *      ## testimonials
- * # contact
- * # footer
- *      ## footer block
- *      ## footer list
- *      ## copyright
- *      ## go top
- *
- * ------------------------------------------------------------------ */
 
-
-
-/* ===================================================================
- * # settings and variables
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
- * ## fonts
- * ------------------------------------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Nunito+Sans:300,300i,400,400i,600,600i,700,700i&display=swap");
 
@@ -5082,4 +4994,18 @@ html.no-csstransitions .s-hero__content {
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
+
+
+
+/* Set expiry headers */
+<FilesMatch "\.(css)$">
+Header set Cache-Control "max-age=31536000, public"
+Header set Expires "access plus 1 year"
+</FilesMatch>
+
+
+
+
+
+
 
