@@ -602,3 +602,14 @@ body {
   transition-timing-function: ease;
   transform: rotate(-45deg) scaleX(0) translateZ(0);
 }
+
+
+
+
+
+/* Set expiry headers */
+<FilesMatch "\.(css)$">
+Header set Cache-Control "max-age=31536000, public"
+Header set Expires "access plus 1 year"
+</FilesMatch>
+
