@@ -5,7 +5,7 @@
   
 }
 #nav {
-    background: url('https://curzioplayscode.neocities.org/Drone/menu_bg.png') no-repeat scroll 0 0 transparent;
+    background: url('') no-repeat scroll 0 0 transparent;
     clear: both;
     font-size: 12px;
     height: 58px;
@@ -44,7 +44,7 @@
     transition: transform 0.1s linear;*/
 }
 #nav li {
-    background: url('https://curzioplayscode.neocities.org/Drone/menu_line.png') no-repeat scroll right 5px transparent;
+    background: url('') no-repeat scroll right 5px transparent;
     float: left;
     position: relative;
 }
@@ -89,7 +89,7 @@
     color: #00B4FF;
 }
 #lavalamp {
-    background: url('https://curzioplayscode.neocities.org/Drone/lavalamp.png') no-repeat scroll 0 0 transparent;
+    background: url('') no-repeat scroll 0 0 transparent;
     height: 16px;
     left: 13px;
     position: absolute;
