@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C u r z i o</title>
+    <link rel="icon" href="https://kurziokode.github.io/lane/ora.png" type="image/x-icon">
+
+    <meta name="description" content="Discover curzio the music art and culture interactive animation blog">
+    <meta name="keywords"
+        content="music, movies, listen, watch, read, links, art, rock, interactive, spiders, animation, culture">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(https://kurziokode.github.io/woman.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* Responsive styles for mobile devices */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+                 color: #333;
+            }
+
+            p {
+                font-size: 16px;
+                 color: #333;
+            }
+        }
+
+        /* Responsive styles for larger devices */
+        @media (min-width: 601px) {
+            h1 {
+                font-size: 48px;
+                 color: #333;
+            }
+
+            p {
+                font-size: 20px;
+                 color: #333;
+            }
+        }
+
+        /* Second background on scroll */
+        body::after {
+            content: "";
+            background-image: url();
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 7s;
+        }
+
+        /* Show second background on scroll */
+        body.show-background::after {
+            opacity: 1;
+
+        }
+
+
+ body.show-background p {
+       
+        transition: color 7s;
+      }
+
+    </style>
+
+    <style>
+        /* Set the background image */
+
+
+        /* Set the font size and line height */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Set the font color */
+        body {
+            color: #333;
+        }
+
+        /* Set the max width for the content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Style the heading */
+        h1 {
+            font-size: 36px;
+            margin: 40px 0;
+            text-align: center;
+            color: #4d0000;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin: 40px 0;
+            text-align: center;
+            color: #171a1c;
+        }
+
+        h3 {
+            font-size: 27px;
+            margin: 40px 0;
+            text-align: center;
+            color: #171a1c;
+        }
+
+        /* Style the paragraph */
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Set the responsive image */
+        .responsive-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style the header */
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #474c52;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            color: #800000;
+        }
+
+
+        a.myLink {
+            text-decoration: none;
+            font-size: 20px;
+            color: #474c52;
+        }
+
+
+        a.myLink:hover {
+            color: #800000 !important;
+        }
+
+        /* Style the card */
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card-item {
+            width: 300px;
+            margin: 20px;
+            background-color: transparent;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .card-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-item .content {
+            padding: 20px;
+        }
+
+        .card-item h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-item p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="rightClickMenu">
+
+
+        <a href="https://www.facebook.com/" class="myLink" target="_blank"
+            style="color: #474c52">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" class="myLink" target="_blank"
+            style="color: #474c52">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" class="myLink" target="_blank"
+            style="color: #474c52">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/" class="myLink" target="_blank"
+            style="color: #474c52">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+
+
+    </div>
+
+
+    <header>
+        <h1>C U R Z I O</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+          
+            <li><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Music, Art, Culture.</h2>
+        <p>“A God who counts minutes and pennies, a desperate sensual God, who grunts like a
+            pig.<br>A
+            pig
+            with golden wings, who
+            falls and falls, always belly side up, ready for caresses, that’s him, our master.<br>Come, kiss
+            me.”<br><br>
+            ― Louis-Ferdinand Céline, Journey to the End of the Night</p>
+
+
+        <h3 style="color: #171a1c">Stash</h3>
+
+       
+
+
+        <p><a href="https://duckduckgo.com/" target="_blank" class="myLink">Search
+            </a></p>
+
+
+
+        <p><a href="https://www.deepl.com/translator" target="_blank" class="myLink">Deep
+            </a></p>
+
+
+        <p><a href="https://www.instantstreetview.com/@37.76738,21.295653,229.99h,-28.33p,0z,CAoSLEFGMVFpcE1UVzRpZmlfYXA0U2pSVUdTNUVOcHhmM1ZCZm9VWDYtOWktWmVV"
+                target="_blank" class="myLink">View
+            </a></p><br>
+
+
+        <p>“Some sleepers have intelligent faces even in sleep, while other faces, even intelligent ones, become very
+            stupid
+            in
+            sleep and therefore ridiculous. I don't know what makes that happen; I only want to say that a laughing man,
+            like
+            a
+            sleeping one, most often knows nothing about his face. A great many people don't know how to laugh at all.
+            However,
+            there's nothing to know here: it's a gift, and it can't be fabricated. It can only be fabricated by
+            re-educating
+            oneself, developing oneself for the better, and overcoming the bad instincts of one's character; then the
+            laughter
+            of
+            such a person might quite possibly change for the better. A man can give himself away completely by his
+            laughter,
+            so
+            that you suddenly learn all of his innermost secrets. Even indisputably intelligent laughter is sometimes
+            repulsive.
+            Laughter calls first of all for sincerity, and where does one find sincerity? Laughter calls for lack of
+            spite,
+            but
+            people most often laugh spitefully. Sincere and unspiteful laughter is mirth. A man's mirth is a feature
+            that
+            gives away
+            the whole man, from head to foot. Someone's character won't be cracked for a long time, then the man bursts
+            out
+            laughing
+            somehow quite sincerely, and his whole character suddenly opens up as if on the flat of your hand. Only a
+            man of
+            the
+            loftiest and happiest development knows how to be mirthful infectiously, that is, irresistibly and
+            goodheartedly.
+            I'm
+            not speaking of his mental development, but of his character, of the whole man. And so, if you want to
+            discern a
+            man and
+            know his soul, you must look, not at how he keeps silent, or how he speaks, or how he weeps, or even how he
+            is
+            stirred
+            by the noblest ideas, but you had better look at him when he laughs. If a man has a good laugh, it means
+            he's a
+            good
+            man. Note at the same time all the nuances: for instance, a man's laughter must in no case seem stupid to
+            you,
+            however
+            merry and simplehearted it may be. The moment you notice the slightest trace of stupidity in someone's
+            laughter,
+            it
+            undoubtedly means that the man is of limited intelligence, though he may do nothing but pour out ideas. Or
+            if
+            his
+            laughter isn't stupid, but the man himself, when he laughs, for some reason suddenly seems ridiculous to
+            you,
+            even
+            just
+            slightly—know, then, that the man has no real sense of dignity, not fully in any case. Or finally, if his
+            laughter
+            is
+            infectious, but for some reason still seems banal to you, know, then, that the man's nature is on the banal
+            side
+            as
+            well, and all the noble and lofty that you noticed in him before is either deliberately affected or
+            unconsciously
+            borrowed, and later on the man is certain to change for the worse, to take up what's 'useful' and throw his
+            noble
+            ideas
+            away without regret, as the errors and infatuations of youth.”<br><br>― Fyodor Dostoevsky</p>
+    </div>
+
+    <footer>
+
+        <h4 style="color: #4d0000">
+            * Right click to Social</h4><br>
+
+
+        <a href="#" id="back-to-top-btn" class="myLink">
+            ▲
+        </a><br>
+
+        <p style="color: #333">Copyright © 2023 Curzio</p>
+
+
+    </footer>
+
+    <script>
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("rightClickMenu");
+            menu.style.top = event.pageY + "px";
+            menu.style.left = event.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+            var menu = document.getElementById("rightClickMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        // Select the heading element
+        var heading = document.getElementById("myHeading");
+
+        // Create a timeline for the animation
+        var tl = gsap.timeline();
+
+        // Add animation to the timeline
+        tl.to(heading, {
+            duration: 2,
+            x: 0,
+            rotate: 360
+        });
+
+        // Select all links with class "myLink"
+        var links = document.querySelectorAll(".myLink");
+
+
+
+        // Loop through the links and add an event listener for the "mouseover" event
+    </script>
+
+
+    <script>
+        // Add class to body on scroll to show second background
+        document.addEventListener("scroll", function () {
+            document.body.classList.add("show-background");
+        });
+    </script>
+</body>
+
+</html>
