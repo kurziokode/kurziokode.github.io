@@ -1,43 +1,29 @@
-(function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
+   // set the target date and time
+      const targetDate = new Date("June 14, 2023 00:00:00 GMT+0200");
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "06/14/",
-      birthday = dayMonth + yyyy;
-  
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
-  //end
-  
-  const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
+      // update the countdown timer every second
+      setInterval(() => {
+        // get the current time in Athens time zone
+        const now = new Date().toLocaleString("en-US", { timeZone: "Europe/Athens" });
+        const nowAthens = new Date(now);
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
+        // calculate the time difference between now and the target date
+        const timeDiff = targetDate - nowAthens;
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+        // convert the time difference to days, hours, minutes, and seconds
+        const totalSeconds = Math.floor(timeDiff / 1000);
+        const days = Math.floor(totalSeconds / (24 * 3600));
+        const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = Math.floor(totalSeconds % 60);
 
-        //do something later when date is reached
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "It's my birthday!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());
+        // display the countdown timer
+        const daysSpan = document.getElementById("days");
+        const hoursSpan = document.getElementById("hours");
+        const minutesSpan = document.getElementById("minutes");
+        const secondsSpan = document.getElementById("seconds");
+        daysSpan.textContent = days.toString().padStart(2, "0");
+        hoursSpan.textContent = hours.toString().padStart(2, "0");
+        minutesSpan.textContent = minutes.toString().padStart(2, "0");
+        secondsSpan.textContent = seconds.toString().padStart(2, "0");
+      }, 1000);
