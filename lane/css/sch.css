@@ -4928,7 +4928,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 15px;
     height: 15px;
-    background: #2b002b;
+    background: #630000;
     border-radius: 50%;
     z-index: 999;
 
@@ -4969,7 +4969,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 8px;
     height: 80px;
-    background: #2b002b;
+    background: #630000;
     z-index: 9;
     border-radius: 6px 6px 0 0;
 }
@@ -4979,7 +4979,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 4px;
     height: 90px;
-    background: #2b002b;
+    background: #630000;
     z-index: 10;
     border-radius: 6px 6px 0 0;
 }
@@ -4989,7 +4989,7 @@ html.no-csstransitions .s-hero__content {
     position: absolute;
     width: 2px;
     height:150px;
-    background: #2b002b;
+    background: #630000;
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
