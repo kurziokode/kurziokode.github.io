@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Background Image with Links</title>
+    <style>
+        /* set the background image */
+        body {
+
+            font-family: Arial, sans-serif;
+            background-image: url('https://kurziokode.github.io/mock.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+             height: 100vh;
+        width: 100vw;
+        }
+
+        /* set the link styles */
+        #left-link,
+        #right-link {
+            display: inline-block;
+            padding: 10px;
+            color: #e16f05;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            margin: 70px;
+        }
+
+        /* set the link positions */
+        #left-link {
+            float: left;
+        }
+
+        #right-link {
+            float: right;
+        }
+
+        /* clear the floats */
+        .clearfix {
+            clear: both;
+        }
+
+        /* set the responsive styles */
+        @media (max-width: 767px) {
+
+            #left-link,
+            #right-link {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a id="left-link" href="https://kurziokode.github.io/lane/ball.html"><b>SPORTS</b></a>
+    <a id="right-link" href="https://kurziokode.github.io/lane/1school.html"><b>SCHOOL</b></a>
+    <div class="clearfix"></div>
+
+<footer>
+
+    <div
+        style="position: fixed; bottom: 0; left: 0; right: 0; text-align: center; font-size: 1rem; color: #e16f05; padding: 10px; background-color: transparent;">
+        Copyright © 2023 Christos Doulos Website<br><br>
+    </div>
+
+    
+
+
+</footer>
+
+
+
+
+</body>
+
+</html>
+
+
+
