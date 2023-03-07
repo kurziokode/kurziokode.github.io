@@ -2,16 +2,14 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Christos Doulos Website</title>
     <link rel="icon" href="https://kurziokode.github.io/lane/ora.png" type="image/x-icon">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-     <style>
-        /* set the background image */
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
         body {
-
             font-family: Arial, sans-serif;
             background-image: url('https://kurziokode.github.io/mock.jpg');
             background-size: cover;
@@ -19,116 +17,103 @@
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;
-             height: 100vh;
-        width: 100vw;
+            height: 100vh;
+            width: 100vw;
         }
 
-        /* set the link styles */
-        #left-link,
-        #right-link {
-            display: inline-block;
-            padding: 10px;
-            color: #e16f05;
-            text-decoration: none;
-            background-color: #0b0c0e;
-            border-radius: 5px;
-            margin: 70px;
-        }
-
-        /* set the link positions */
-        #left-link {
-            float: left;
-        }
-
-        #right-link {
-            float: right;
-        }
-
-        /* clear the floats */
-        .clearfix {
-            clear: both;
-        }
-
-
- #link2 {
-           
-            display: inline-block;
-            padding: 10px;
+        #top-left-link {
+             display: inline-block;
+            padding: 15px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
             color: #800000;
             text-decoration: none;
-            background-color: #0b0c0e;
-            border-radius: 5px; 
+            font-size: 1.2rem;
+             background-color: #0b0c0e;
+            border-radius: 5px;
+            
+        }
 
- }
+        #top-right-link {
+             display: inline-block;
+            padding: 15px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #800000;
+            text-decoration: none;
+            font-size: 1.2rem;
+               background-color: #0b0c0e;
+            border-radius: 5px;
+           
+        }
 
-        /* set the responsive styles */
-        @media (max-width: 767px) {
-
-            #left-link,
-            #right-link {
-                width: 100%;
-                float: none;
-            }
+        #bottom-center-link {
+             display: inline-block;
+            padding: 15px;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #800000;
+            text-decoration: none;
+            font-size: 1.2rem;
+               background-color: #0b0c0e;
+            border-radius: 5px;
         }
     </style>
-     <style>
-        #rightClickMenu {
-            display: none;
-            position: absolute;
-            z-index: 9999;
-            background-color: #0b0c0e;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            font-size: 20px;
-        }
 
-        #rightClickMenu a {
-            display: block;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-        }
 
-        #rightClickMenu a:hover {
-            background-color: #0b0c0e;
-        }
-    </style>  
-     
+<style>
+    #rightClickMenu {
+        display: none;
+        position: absolute;
+        z-index: 9999;
+        background-color: #0b0c0e;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+    }
+
+    #rightClickMenu a {
+        display: block;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+    }
+
+    #rightClickMenu a:hover {
+        background-color: #0b0c0e;
+    }
+</style>
+
 
 </head>
 
 <body>
-     
-        <div id="rightClickMenu">
+
+<div id="rightClickMenu">
 
 
-        <a href="https://www.facebook.com/" target="_blank"
-            style="color: #800000">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/" target="_blank"
-            style="color: #800000">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-twitter"></i></a>
-        <a href="https://www.youtube.com/" target="_blank"
-            style="color: #800000">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"
-            style="color: #800000">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/" target="_blank" style="color: #800000">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/" target="_blank" style="color: #800000">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" style="color: #800000">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank" style="color: #800000">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fab fa-instagram"></i></a>
 
 
-    </div>
-     
+</div>
 
-     
-    <a id="left-link" href="https://kurziokode.github.io/lane/ball.html"><b>SPORTS</b></a>
-    <a id="right-link" href="https://kurziokode.github.io/lane/1school.html"><b>SCHOOL</b></a>
-    <div class="clearfix"></div>
 
-<footer>
 
-    <div
-        style="position: fixed; bottom: 0; left: 0; right: 0; text-align: center; font-size: 1.1rem; padding: 10px; background-color: transparent;">
-        <a id="link2" href="https://kurziokode.github.io/about.html" target="_blank">
-        Copyright © 2023 Christos Doulos Website</a><br><br>
-    </div>
+    <a id="top-left-link" href="https://kurziokode.github.io/lane/ball.html">Sports</a>
+    <a id="top-right-link" href="https://kurziokode.github.io/lane/1school.html">School</a>
+    <a id="bottom-center-link" href="https://kurziokode.github.io/about.html" target="_blank">Copyright © 2023 Christos Doulos</a>
 
-</footer>
-   <script>
+    <script>
         document.addEventListener("contextmenu", function (event) {
             event.preventDefault();
             var menu = document.getElementById("rightClickMenu");
@@ -144,9 +129,8 @@
             }
         });
     </script>
+
+
 </body>
 
 </html>
-
-
-
