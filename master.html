@@ -22,7 +22,7 @@
         }
 
         #top-left-link {
-             display: inline-block;
+            display: inline-block;
             padding: 15px;
             position: absolute;
             top: 15px;
@@ -30,13 +30,13 @@
             color: #800000;
             text-decoration: none;
             font-size: 1.2rem;
-             background-color: #0b0c0e;
+            background-color: #0b0c0e;
             border-radius: 5px;
-            
+
         }
 
         #top-right-link {
-             display: inline-block;
+            display: inline-block;
             padding: 15px;
             position: absolute;
             top: 15px;
@@ -44,26 +44,41 @@
             color: #800000;
             text-decoration: none;
             font-size: 1.2rem;
-               background-color: #0b0c0e;
+            background-color: #0b0c0e;
             border-radius: 5px;
-           
+
         }
 
-        #bottom-center-link {
-             display: inline-block;
+        #bottom-right-link {
+            display: inline-block;
             padding: 15px;
             position: absolute;
-            bottom: 0px;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 15px;
+            right: 15px;
+            color: #800000;
+            text-decoration: none;
+            font-size: 1.2rem;
+            background-color: #0b0c0e;
+            border-radius: 5px;
+
+        }
+
+
+        #bottom-center-link {
+            display: inline-block;
+            padding: 15px;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+           
             color: #800000;
             text-decoration: none;
             font-size: 1.1rem;
-               background-color: #0b0c0e;
+            background-color: #0b0c0e;
             border-radius: 5px;
         }
-        
-           #top-center-link {
+
+        #top-center-link {
             display: inline-block;
             padding: 15px;
             position: absolute;
@@ -76,60 +91,59 @@
             background-color: #0b0c0e;
             border-radius: 5px;
         }
-        
-
     </style>
 
 
-<style>
-    #rightClickMenu {
-        display: none;
-        position: absolute;
-        z-index: 9999;
-        background-color: #0b0c0e;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        font-size: 20px;
-    }
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
 
-    #rightClickMenu a {
-        display: block;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-    }
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
 
-    #rightClickMenu a:hover {
-        background-color: #0b0c0e;
-    }
-</style>
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
 
 
 </head>
 
 <body>
 
-<div id="rightClickMenu">
+    <div id="rightClickMenu">
 
 
-    <a href="https://www.facebook.com/" target="_blank" style="color: #800000">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i
-            class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/" target="_blank" style="color: #800000">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
-            class="fab fa-twitter"></i></a>
-    <a href="https://www.youtube.com/" target="_blank" style="color: #800000">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i
-            class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/" target="_blank" style="color: #800000">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i
-            class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" style="color: #800000">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank" style="color: #800000">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" style="color: #800000">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" style="color: #800000">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fab fa-instagram"></i></a>
 
 
-</div>
+    </div>
 
 
 
     <a id="top-left-link" href="https://kurziokode.github.io/lane/ball.html">Sports</a>
     <a id="top-right-link" href="https://kurziokode.github.io/lane/1school.html">School</a>
-    <a id="bottom-center-link" href="https://kurziokode.github.io/about.html" target="_blank">2023 © Christos
-        Doulos</a>
-     <a id="top-center-link" href="https://kurziokode.github.io/qrcode.png" target="_blank">Download</a>
+    <a id="bottom-right-link" href="https://kurziokode.github.io/about.html" target="_blank">2023 © Doulos</a>
+    <a id="top-center-link" href="https://jacksmith206.github.io/christos/doulos.html" target="_blank">Game</a>
+    <a id="bottom-center-link" href="https://kurziokode.github.io/qrcode.png" target="_blank">Download</a>
+    
     <script>
         document.addEventListener("contextmenu", function (event) {
             event.preventDefault();
