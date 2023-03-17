@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C u r z i o</title>
+    <link rel="icon" href="https://kurziokode.github.io/lane/ora.png" type="image/x-icon">
+
+    <meta name="description" content="Discover curzio the music art and culture interactive animation blog">
+    <meta name="keywords"
+        content="music, movies, listen, watch, read, links, art, rock, interactive, spiders, animation, culture">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(https://kurzio.neocities.org/str.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* Responsive styles for mobile devices */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            p {
+                font-size: 16px;
+                color: #333;
+            }
+        }
+
+        /* Responsive styles for larger devices */
+        @media (min-width: 601px) {
+            h1 {
+                font-size: 48px;
+                color: #333;
+            }
+
+            p {
+                font-size: 20px;
+                color: #333;
+            }
+        }
+
+        /* Second background on scroll */
+        body::after {
+            content: "";
+            background-image: url();
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 7s;
+        }
+
+        /* Show second background on scroll */
+        body.show-background::after {
+            opacity: 1;
+
+        }
+
+
+        body.show-background p {
+
+            transition: color 7s;
+        }
+    </style>
+
+    <style>
+        /* Set the background image */
+
+
+        /* Set the font size and line height */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Set the font color */
+        body {
+            color: #333;
+        }
+
+        /* Set the max width for the content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Style the heading */
+        h1 {
+            font-size: 36px;
+            margin: 40px 0;
+            text-align: center;
+            color: #334d00;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin: 40px 0;
+            text-align: center;
+            color: #223300;
+        }
+
+        h3 {
+            font-size: 27px;
+            margin: 40px 0;
+            text-align: center;
+            color: #223300;
+        }
+
+        /* Style the paragraph */
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Set the responsive image */
+        .responsive-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style the header */
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #474c52;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            color: #88cc00;
+        }
+
+
+        a.myLink {
+            text-decoration: none;
+            font-size: 20px;
+            color: #474c52;
+        }
+
+
+        a.myLink:hover {
+            color: #88cc00 !important;
+        }
+
+        /* Style the card */
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card-item {
+            width: 300px;
+            margin: 20px;
+            background-color: transparent;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .card-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-item .content {
+            padding: 20px;
+        }
+
+        .card-item h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-item p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="rightClickMenu">
+
+
+        <a href="https://www.facebook.com/" class="myLink" target="_blank"
+            style="color: #474c52">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" class="myLink" target="_blank"
+            style="color: #474c52">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" class="myLink" target="_blank"
+            style="color: #474c52">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/" class="myLink" target="_blank"
+            style="color: #474c52">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+
+
+    </div>
+
+
+    <header>
+       <div id="myElement" style="opacity:0;"><h1>C U R Z I O</h1>
+    </div> 
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+
+            <li><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <br>
+    <div class="container">
+        <h2 style="border: 2px solid #111a00;">Searh, Playground, Studio.</h2>
+        <br>
+
+        <p>“A God who counts minutes and pennies, a desperate sensual God, who grunts like a
+            pig.<br>A
+            pig
+            with golden wings, who
+            falls and falls, always belly side up, ready for caresses, that’s him, our master.<br>Come, kiss
+            me.”<br><br>
+            ― Louis-Ferdinand Céline, Journey to the End of the Night</p>
+
+        <br>
+       <h3>Stash</h3>
+
+
+<p><a href="https://chat.openai.com/chat" target="_blank" class="myLink">ChatGPT
+    </a></p>
+
+        <p><a href="https://duckduckgo.com/" target="_blank" class="myLink">Search
+            </a></p>
+
+
+<p><a href="https://kurziokode.github.io/hack/studio.html#" target="_blank" class="myLink">Studio
+    </a></p>
+
+
+
+<p><a href="https://www.deepl.com/translator" target="_blank" class="myLink">Deep
+    </a></p>
+
+
+            
+            <p><a href="https://you.com/" target="_blank" class="myLink">You
+                </a></p>
+            
+            
+<p><a href="https://www.phind.com/" target="_blank" class="myLink">Phind
+    </a></p>
+
+
+    <p><a href="https://metaphor.systems/" target="_blank" class="myLink">Metaphor
+        </a></p>
+
+            <p><a href="https://www.perplexity.ai/"
+                    target="_blank" class="myLink">Perplexity
+                </a></p>
+            
+
+            <p><a href="https://lexica.art/"
+                    target="_blank" class="myLink">Lexica . art
+                </a></p>
+            
+            
+            <p><a href="https://playgroundai.com/" target="_blank" class="myLink">Playground AI
+                </a></p>
+            
+            
+            <p><a href="https://docs.midjourney.com/"
+                    target="_blank" class="myLink">Midjourney
+                </a></p>
+            
+            <p><a href="https://www.instantstreetview.com/" target="_blank" class="myLink">View
+                </a></p>
+           
+
+            <br><br>
+
+
+    </div>
+
+    <footer>
+
+        <h4 style="color: #446600">
+            * Right click to Social</h4><br>
+
+
+        <a href="#" id="back-to-top-btn" class="myLink">
+            ▲
+        </a><br>
+
+        <p style="color: #333">Copyright © 2023 Curzio</p>
+
+
+    </footer>
+
+    <script>
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("rightClickMenu");
+            menu.style.top = event.pageY + "px";
+            menu.style.left = event.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+            var menu = document.getElementById("rightClickMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        // Select the heading element
+        var heading = document.getElementById("myHeading");
+
+        // Create a timeline for the animation
+        var tl = gsap.timeline();
+
+        // Add animation to the timeline
+        tl.to(heading, {
+            duration: 2,
+            x: 0,
+            rotate: 360
+        });
+
+        // Select all links with class "myLink"
+        var links = document.querySelectorAll(".myLink");
+
+
+
+        // Loop through the links and add an event listener for the "mouseover" event
+    </script>
+
+
+    <script>
+        // Add class to body on scroll to show second background
+        document.addEventListener("scroll", function () {
+            document.body.classList.add("show-background");
+        });
+    </script>
+
+<script>
+    window.onload = function () {
+        var element = document.getElementById('myElement');
+      
+        var opacity = 0;
+        var intervalID = setInterval(function () {
+            if (opacity < 1) {
+                opacity += 0.1;
+                element.style.opacity = opacity;
+            } else {
+                clearInterval(intervalID);
+            }
+        }, 100);
+    };
+</script>
+
+
+</body>
+
+</html>
