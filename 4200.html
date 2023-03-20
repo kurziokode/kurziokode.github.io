@@ -134,6 +134,23 @@
 		}
 	</script>
 
+	<script>
+    var images = [];
+    function preload() {
+        for (var i = 0; i < arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments[i];
+        }
+    }
+
+    //-- usage --//
+    preload(
+
+        "https://kurziokode.github.io/420.jpg"
+    )
+
+</script>
+	
 </body>
 
 </html>
