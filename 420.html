@@ -576,7 +576,22 @@
 
     document.body.style.cursor = 'none';
 </script>
+<script>
+    var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
 
+        //-- usage --//
+        preload(
+           
+            "https://kurzio.neocities.org/str.jpg"
+        )
+
+</script>
 
 </body>
 
