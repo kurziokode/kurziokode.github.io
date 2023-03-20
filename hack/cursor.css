@@ -24,7 +24,7 @@ span {
   pointer-events: none;
   position: absolute;
   padding: 0.3rem;
-  background-color: #b30000;
+  background-color: #990000;
   border-radius: 50%;
   mix-blend-mode: difference;
   transition: transform 0.3s ease;
