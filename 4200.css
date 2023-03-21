@@ -1,12 +1,4 @@
-/**
- * The CSS in this file is for styling the demo page,
- * Meny's critical styles (such as transforms) are applied
- * via JavaScript.
- *
- * See the documentation here: https://github.com/hakimel/meny#meny
- *
- * @author Hakim El Hattab | http://hakim.se
- */
+
 
 * {
 	margin: 0;
@@ -21,7 +13,7 @@ body {
 
 body {
 	background-color: transparent;
-	background-image: url(https://kurziokode.github.io/420.jpg);
+	background-image: url(https://kurziokode.github.io/4200.jpg);
 	background-repeat: repeat;
 
 	font-family: 'Lato', Helvetica, sans-serif;
