@@ -38,10 +38,10 @@ a {
 	        transition: 0.15s color ease;
 }
 	a:hover {
-		color: #7bb100;
+		color: #00e600;
 	}
          a.active {
-  color: #7bb100;
+  color: #00e600;
 }
 
 
