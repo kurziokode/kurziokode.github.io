@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Curzio loop</title>
+    <link rel="icon" href="https://kurziokode.github.io/loop.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lato', Helvetica, sans-serif;
+            background-image: url(https://kurzio.neocities.org/420.jpg);
+            opacity: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+
+
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            border: none;
+            opacity: 0;
+            animation: fade-in 5s ease-out forwards;
+            width: 100%;
+            height: 100%;
+        }
+
+        iframe:nth-child(0) {
+            animation-delay: 0s;
+        }
+
+        iframe:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        iframe:nth-child(2) {
+            animation-delay: 30s;
+        }
+
+        iframe:nth-child(3) {
+            animation-delay: 60s;
+        }
+
+        iframe:nth-child(4) {
+            animation-delay: 90s;
+        }
+
+        iframe:nth-child(5) {
+            animation-delay: 120s;
+        }
+
+           iframe:nth-child(6) {
+            animation-delay: 150s;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <iframe src="" class="page"></iframe>
+    </div>
+
+    <script>
+        const pages = [
+            'https://kurziokode.github.io/loop.html#',
+            'https://www.e-mme.gr/',
+            'https://www.tvopen.gr/live',
+            'https://www.skaitv.gr/live',
+            'https://www.pcsteps.gr/category/software/operating-systems/windows/',
+            'https://programmatileorasis.gr/'
+
+        ];
+
+        let currentPage = 0;
+        const pageElement = document.querySelector('.page');
+
+        function loadPage() {
+            if (currentPage >= pages.length) {
+                currentPage = 0;
+            }
+
+            const page = pages[currentPage];
+            pageElement.src = page;
+            currentPage++;
+            setTimeout(() => {
+                loadPage();
+            }, 30000);
+        }
+
+        pageElement.onload = () => {
+            pageElement.classList.add('page');
+        }
+
+        loadPage();
+    </script>
+</body>
+
+</html>
