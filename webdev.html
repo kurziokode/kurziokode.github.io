@@ -16,10 +16,8 @@
 
 
   <style>
-
-
     body {
-     font-family: 'Lato', Helvetica, sans-serif;
+      font-family: 'Lato', Helvetica, sans-serif;
       background-color: #0b0c0e;
       line-height: 2;
       padding-left: 1.5vw;
@@ -35,11 +33,11 @@
     }
 
     .demo>a:hover {
-     
+
       color: #79b00a;
     }
 
-   
+
 
     ol {
       margin-left: 0px;
@@ -54,7 +52,7 @@
       color: #0f7003;
       opacity: 0.25;
       user-select: none;
-      cursor: default!important;
+      cursor: default !important;
       margin-top: 0px;
       margin-bottom: -0.75em;
       text-align: center;
@@ -66,7 +64,7 @@
       color: #3d0238;
       opacity: 0.5;
       user-select: none;
-      cursor: default!important;
+      cursor: default !important;
       margin-top: 0px;
       margin-bottom: 0px;
       text-align: center;
@@ -78,7 +76,7 @@
       border-left: 2px solid #a8a8a8;
       padding-left: 14px;
     }
-    
+
     ul li:hover {
       background-color: transparent;
     }
@@ -90,17 +88,17 @@
     ul li:before {
       font-size: 0.5em;
     }
-    
+
     ul li:hover:before {
       background-color: transparent;
     }
-    
+
     ol li {
       counter-increment: step-counter;
     }
-    
+
     ol li:hover {
-      background-color: #161616;
+      background-color: transparent;
     }
 
     ol:before {
@@ -115,51 +113,55 @@
       padding-right: 1.5vw;
       padding-top: 0.9em;
       padding-bottom: 0.6em;
-     
-			-transition: 0.25s;
+
+      -transition: 0.25s;
     }
-    
+
     ol li:hover:before {
-      background-color: #161616;
-    
-			-transition: 0.25s;
+      background-color: transparent;
+
+      -transition: 0.25s;
     }
-    
+
     .styledList[type="A"] li::before {
-    	/*counter-increment: step-counter;*/
-    	content: counter(step-counter, upper-alpha);
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, upper-alpha);
     }
+
     .styledList[type="a"] li::before {
-    	/*counter-increment: step-counter;*/
-    	content: counter(step-counter, lower-alpha);
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, lower-alpha);
     }
+
     .styledList[type="1"] li::before {
-    	/*counter-increment: step-counter;*/
-    	content: counter(step-counter, decimal);
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, decimal);
     }
+
     .styledList[type="disc"] li::before {
-    	/*counter-increment: step-counter;*/
-    	content: counter(step-counter, disc);
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, disc);
     }
+
     .styledList[type="circle"] li::before {
-    	/*counter-increment: step-counter;*/
-    	content: counter(step-counter, circle);
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, circle);
     }
+
     .styledList[type="square"] li::before {
-    	/*counter-increment: step-counter;*/
-    	content: counter(step-counter, square);
-    } 
-    
-    .styledList[type="custom"] li::before {
-    	/*counter-increment: step-counter;*/
-    	content: counter(step-counter, " (" attr(entity) ")");
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, square);
     }
-    
-    .transitionCSS{
-           
-			-transition: 0.25s;
-		}
-		
+
+    .styledList[type="custom"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, " (" attr(entity) ")");
+    }
+
+    .transitionCSS {
+
+      -transition: 0.25s;
+    }
   </style>
 </head>
 
@@ -168,7 +170,7 @@
   <h2>Web Developer</h2><br><br>
 
   <ol class="styledList transitionCSS" type="1">
-      
+
     <!--<li class="Portfolio">
       <a href="portfolio.html" title="Portfolio">Portfolio</a>
     </li>-->
@@ -181,7 +183,7 @@
     <li class="demo transitionCSS">
       <a href="https://kurziokode.github.io/master.html" target="_blank" title="School">School</a>
     </li>
-  	<li class="demo transitionCSS">
+    <li class="demo transitionCSS">
       <a href="https://slides.com/curzio/desk/kiosk?started=true" target="_blank" title="Studio">Studio</a>
     </li>
 
