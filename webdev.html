@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Christronomy webDev">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Christronomy">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--Content-Type: text/html-->
+
+  <title>Christronomy</title>
+  <base target="_new">
+
+
+  <style>
+
+
+    body {
+     font-family: 'Lato', Helvetica, sans-serif;
+      background-color: #0b0c0e;
+      line-height: 2;
+      padding-left: 1.5vw;
+    }
+
+    .demo {
+      font-size: 1.3em;
+    }
+
+    .demo>a {
+      color: #117005;
+      text-decoration: none;
+    }
+
+    .demo>a:hover {
+     
+      color: #79b00a;
+    }
+
+    .demo>a:visited {
+      color: #808080;
+    }
+
+    .demo>a:active {
+      color: #646464;
+    }
+
+    ol {
+      margin-left: 0px;
+      padding-left: 0px;
+      list-style-type: none;
+      list-style-position: outside;
+    }
+
+    h1 {
+      font-size: calc(100vw / 11);
+      font-weight: 100;
+      color: #0f7003;
+      opacity: 0.25;
+      user-select: none;
+      cursor: default!important;
+      margin-top: 0px;
+      margin-bottom: -0.75em;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: calc(100vw / 18);
+      font-weight: 100;
+      color: #3d0238;
+      opacity: 0.5;
+      user-select: none;
+      cursor: default!important;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    span {
+      color: #a8a8a8;
+      border-left: 2px solid #a8a8a8;
+      padding-left: 14px;
+    }
+    
+    ul li:hover {
+      background-color: #161616;
+    }
+
+    ul:before {
+      font-size: 0.5em;
+    }
+
+    ul li:before {
+      font-size: 0.5em;
+    }
+    
+    ul li:hover:before {
+      background-color: #161616;
+    }
+    
+    ol li {
+      counter-increment: step-counter;
+    }
+    
+    ol li:hover {
+      background-color: #161616;
+    }
+
+    ol:before {
+      font-size: 0.5em;
+    }
+
+    ol li:before {
+      font-size: 0.75em;
+      color: #484848;
+      margin-left: -1.5vw;
+      padding-left: 3vw;
+      padding-right: 1.5vw;
+      padding-top: 0.9em;
+      padding-bottom: 0.6em;
+      -webkit-transition: 0.25s;
+			-moz-transition: 0.25s;
+			-ms-transition: 0.25s;
+			-o-transition: 0.25s;
+			-transition: 0.25s;
+    }
+    
+    ol li:hover:before {
+      background-color: #161616;
+      -webkit-transition: 0.25s;
+			-moz-transition: 0.25s;
+			-ms-transition: 0.25s;
+			-o-transition: 0.25s;
+			-transition: 0.25s;
+    }
+    
+    .styledList[type="A"] li::before {
+    	/*counter-increment: step-counter;*/
+    	content: counter(step-counter, upper-alpha);
+    }
+    .styledList[type="a"] li::before {
+    	/*counter-increment: step-counter;*/
+    	content: counter(step-counter, lower-alpha);
+    }
+    .styledList[type="1"] li::before {
+    	/*counter-increment: step-counter;*/
+    	content: counter(step-counter, decimal);
+    }
+    .styledList[type="disc"] li::before {
+    	/*counter-increment: step-counter;*/
+    	content: counter(step-counter, disc);
+    }
+    .styledList[type="circle"] li::before {
+    	/*counter-increment: step-counter;*/
+    	content: counter(step-counter, circle);
+    }
+    .styledList[type="square"] li::before {
+    	/*counter-increment: step-counter;*/
+    	content: counter(step-counter, square);
+    } 
+    
+    .styledList[type="custom"] li::before {
+    	/*counter-increment: step-counter;*/
+    	content: counter(step-counter, " (" attr(entity) ")");
+    }
+    
+    .transitionCSS{
+            -webkit-transition: 0.25s;
+			-moz-transition: 0.25s;
+			-ms-transition: 0.25s;
+			-o-transition: 0.25s;
+			-transition: 0.25s;
+		}
+		
+  </style>
+</head>
+
+<body>
+  <h1>CHRISTOS DOULOS</h1><br><br>
+  <h2>Web Developer</h2><br><br>
+
+  <ol class="styledList transitionCSS" type="1">
+      
+    <!--<li class="Portfolio">
+      <a href="portfolio.html" title="Portfolio">Portfolio</a>
+    </li>-->
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/420.html" target="_blank" title="Master">Master</a>
+    </li>
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/new/00.html" target="_blank" title="Timekiller">Timekiller</a>
+    </li>
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/master.html" target="_blank" title="School">School</a>
+    </li>
+  	<li class="demo transitionCSS">
+      <a href="https://slides.com/curzio/desk/kiosk?started=true" target="_blank" title="Studio">Studio</a>
+    </li>
+
+  </ol>
+</body>
+
+</html>
