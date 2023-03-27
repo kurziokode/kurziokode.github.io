@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Christos Doulos interactive animation developer">
+  <meta name="keywords" content="Christos Doulos, interactive, animation, web developer, culture">
+  <meta name="author" content="Christos Doulos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C u r z i o&nbsp;&nbsp;Web</title>
+  <link rel="icon" href="https://kurziokode.github.io/loop.png" type="image/x-icon">
+  <base target="_new">
+
+
+  <style>
+    body {
+      font-family: 'Lato', Helvetica, sans-serif;
+       background-image: url('https://kurziokode.github.io/420.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            text-decoration: none;
+            line-height: 2.3;
+    }
+
+    .demo {
+      font-size: 1.5em;
+    }
+
+    .demo>a {
+      color: #3b4045;
+      text-decoration: none;
+    }
+
+    .demo>a:hover {
+
+      color: #79b00a;
+    }
+
+
+
+    ol {
+      margin-left: 0px;
+      padding-left: 0px;
+      list-style-type: none;
+      list-style-position: outside;
+    }
+
+    h1 {
+      font-size: calc(100vw / 15);
+      font-weight: 100;
+      color: #117005;
+      opacity: 0.4;
+      user-select: none;
+      cursor: default !important;
+      margin-top: 0px;
+      margin-bottom: -0.75em;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: calc(100vw / 19);
+      font-weight: 100;
+      color: #3d0238;
+      opacity: 0.8;
+      user-select: none;
+      cursor: default !important;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    h3 {
+      font-size: calc(100vw / 3);
+      font-weight: 900;
+      color: #000000;
+      opacity: 0;
+      user-select: none;
+      cursor: default !important;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      white-space: nowrap;
+      z-index: -1;
+    }
+
+    p {
+      font-size: calc(100vw / 55);
+      font-weight: 100;
+      color: #3d0238;
+      opacity: 0.9;
+      user-select: none;
+      cursor: default !important;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    span {
+      color: #a8a8a8;
+      border-left: 2px solid #a8a8a8;
+      padding-left: 14px;
+    }
+
+    ul li:hover {
+      background-color: transparent;
+    }
+
+    ul:before {
+      font-size: 0.5em;
+    }
+
+    ul li:before {
+      font-size: 0.5em;
+    }
+
+    ul li:hover:before {
+      background-color: transparent;
+    }
+
+    ol li {
+      counter-increment: step-counter;
+    }
+
+    ol li:hover {
+      background-color: transparent;
+    }
+
+    ol:before {
+      font-size: 0.5em;
+    }
+
+    ol li:before {
+      font-size: 0.75em;
+      color: #484848;
+      margin-left: -1.5vw;
+      padding-left: 3vw;
+      padding-right: 1.5vw;
+      padding-top: 0.9em;
+      padding-bottom: 0.6em;
+
+      -transition: 0.25s;
+    }
+
+    ol li:hover:before {
+      background-color: transparent;
+
+      -transition: 0.25s;
+    }
+
+    .styledList[type="A"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, upper-alpha);
+    }
+
+    .styledList[type="a"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, lower-alpha);
+    }
+
+    .styledList[type="1"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, decimal);
+    }
+
+    .styledList[type="disc"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, disc);
+    }
+
+    .styledList[type="circle"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, circle);
+    }
+
+    .styledList[type="square"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, square);
+    }
+
+    .styledList[type="custom"] li::before {
+      /*counter-increment: step-counter;*/
+      content: counter(step-counter, " (" attr(entity) ")");
+    }
+
+    .transitionCSS {
+
+      -transition: 0.25s;
+    }
+      
+    @media only screen and (max-width: 480px) {
+      a {
+        font-size: 17px;
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+
+      p {
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+    }
+      
+      
+      /* Small devices (tablets) */
+@media only screen and (min-width: 481px) and (max-width: 867px) {
+
+  a {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 34px;
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+ 
+}
+
+  </style>
+</head>
+
+<body>
+  <h1>CHRISTOS DOULOS</h1>
+  <h2>Web Developer</h2><br><br>
+
+  <ol class="styledList transitionCSS" type="1">
+
+   
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/420.html" target="_blank" title="Master">Master</a>
+    </li>
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/new/00.html" target="_blank" title="Time killer">Time</a>
+    </li>
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/loop.html" target="_blank" title="Infinite loop">Loop</a>
+    </li>
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/master.html" target="_blank" title="School">Edu</a>
+    </li>
+    <li class="demo transitionCSS">
+      <a href="https://slides.com/curzio/desk/kiosk?started=true" target="_blank" title="Studio">Studio</a>
+    </li>
+    <li class="demo transitionCSS">
+      <a href="https://kurziokode.github.io/final.mp4" target="_blank" title="About">About</a>
+    </li>
+  </ol>
+  <div>
+    <h3 style="position: fixed; top: 95%; right: 0%; transform: translateY(-50%) rotate(-16deg);">
+      strange is fine</h3>
+  </div>
+  <br><br>
+  <p>Copyright © 2023 Curzio</p>
+</body>
+
+</html>
