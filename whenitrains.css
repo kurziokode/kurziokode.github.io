@@ -88,6 +88,6 @@ footer {
 }
 @media screen and (min-width: 1920px) {
   body {
-    filter: brightness(1.8);
+    filter: brightness(2.5);
   }
 }
