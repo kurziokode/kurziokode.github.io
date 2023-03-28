@@ -86,3 +86,8 @@ footer {
   padding: 10px;
   text-align: center;
 }
+@media screen and (min-width: 1920px) {
+  body {
+    filter: brightness(1.8);
+  }
+}
