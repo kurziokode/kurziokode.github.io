@@ -53,7 +53,7 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 25px;
 }
 
 h3 {
@@ -67,6 +67,9 @@ text-decoration: none;
 }
 
 
+p {
+  font-size: 25px;
+}
 ul {
   margin: 0;
   padding: 0;
