@@ -167,7 +167,7 @@ h2 {
 		bottom: 30px;
 	}
 
-@media screen and (min-width: 2020px) {
+@media screen and (min-width: 1922px) {
   body {
     filter: brightness(2.5);
   }
