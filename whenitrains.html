@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Christos Doulos interactive animation developer">
+  <meta name="keywords" content="Christos Doulos, interactive, animation, web developer, culture">
+  <meta name="author" content="Christos Doulos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C u r z i o&nbsp;&nbsp;Web</title>
+  <link rel="icon" href="https://kurziokode.github.io/loop.png" type="image/x-icon">
+    <link rel="stylesheet" href="fresh.css">
+    <style>
+  * {
+   
+    box-sizing: border-box;
+}
+
+body {
+   
+    align-items: center;
+    min-height: 100vh;
+    background: #0b0c0e;
+}
+
+.clock {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+  
+    border: 4px solid #0b0c0e;
+    border-radius: 50%;
+    box-shadow: -4px -4px 10px #0b0c0e,
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px ,
+        4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.clock:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #440101;
+    border-radius: 50%;
+    z-index: 999;
+
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 150px;
+    height: 150px;
+}
+
+.clock .min, .mn {
+    width: 180px;
+    height: 180px;
+}
+
+.clock .sec, .sc {
+    width: 210px;
+    height: 210px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+    
+}
+
+.hr:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #3e0202;
+    z-index: 9;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #490101;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height:150px;
+    background: #440101;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+    </style>
+  </head>
+  <body>
+       
+    <header>
+      <nav>
+        <ul>
+          
+          <li><a href="https://kurziokode.github.io/final.mp4">About</a></li>
+          <li><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1">Contact</a></li>
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/whenitrains.html#">Share</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1><a href="https://kurziokode.github.io/nemo.html">Curzio</a></h1>
+        <p>Here you will find information about me and my projects.</p>
+      </section>
+    
+    
+      <section>
+        <h2>My Projects</h2>
+        <ul>
+         
+            <li><h3><a href="https://kurziokode.github.io/420.html">Master</a></h3></li>
+        <li>
+          <h3><a href="https://kurziokode.github.io/new/00.html">Time</a></h3>
+        </li> 
+        <li>
+          <h3><a href="https://kurziokode.github.io/loop.html">Loop</a></h3>
+        </li>
+          <li>
+            <h3><a href="https://kurziokode.github.io/master.html">Edu</a></h3>
+          </li>
+          <li>
+            <h3><a href="https://slides.com/curzio/desk/kiosk?started=true">Studio</a></h3>
+          </li>
+         
+        
+        
+          
+        </ul><br>
+      <div class="clock">
+      
+        <div class="hour">
+          <div class="hr" id="hr"></div>
+        </div>
+      
+        <div class="min">
+          <div class="mn" id="mn"></div>
+        </div>
+      
+        <div class="sec">
+          <div class="sc" id="sc"></div>
+        </div>
+      
+      </div>
+      </section>
+          
+    </main>
+
+<br>
+    <footer>
+      
+      <p>Copyright © 2023</p>
+    </footer>
+    <script>
+      const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+
+        setInterval(() => {
+
+          let day = new Date();
+          let hh = day.getHours() * 30;
+          let mm = day.getMinutes() * deg;
+          let ss = day.getSeconds() * deg;
+
+          hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+          mn.style.transform = `rotateZ(${mm}deg)`;
+          sc.style.transform = `rotateZ(${ss}deg)`;
+
+        })
+    </script>
+  </body>
+</html>
