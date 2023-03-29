@@ -6,7 +6,7 @@ radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
 background-color:#0b0c0e;
 background-size:16px 16px;
  
-  color: #b05604;
+  color: #c86304;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-  color: #b05604;
+  color: #c86304;
   text-decoration: none;
 }
 
@@ -65,7 +65,7 @@ h3 {
 }
 
 a {
-  color: #b05604;
+  color: #c86304;
   opacity: 0.8;
 text-decoration: none;
 }
@@ -86,7 +86,7 @@ li {
 
 footer {
   background-color: #00000044;
-  color: #b05604;
+  color: #c86304;
   opacity: 0.35;
   padding: 10px;
   text-align: center;
