@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Christos Doulos interactive animation developer">
+  <meta name="keywords" content="Christos Doulos, interactive, animation, web developer, culture">
+  <meta name="author" content="Christos Doulos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C u r z i o&nbsp;&nbsp;Web</title>
+  <link rel="icon" href="https://kurziokode.github.io/loop.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://kurziokode.github.io/radial.css">
+    <style>
+  * {
+   
+    box-sizing: border-box;
+}
+
+body {
+   
+    align-items: center;
+    min-height: 100vh;
+    background: #0b0c0e;
+}
+
+
+
+    h5 {
+      font-size: calc(100vw / 3);
+      font-weight: 900;
+      color: #000000;
+      opacity: 0.5;
+      user-select: none;
+      cursor: default !important;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      white-space: nowrap;
+      z-index: -1;
+    }    
+  
+    a {
+ font-size: 20px;
+      
+}
+
+    a:hover {
+      
+      color: #ffaa00;
+    }
+
+.clock {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+  
+    border: 4px solid #0b0c0e;
+    border-radius: 50%;
+    box-shadow: -4px -4px 10px #0b0c0e,
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px ,
+        4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.clock:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #b05604;
+    border-radius: 50%;
+    z-index: 999;
+
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 150px;
+    height: 150px;
+}
+
+.clock .min, .mn {
+    width: 180px;
+    height: 180px;
+}
+
+.clock .sec, .sc {
+    width: 210px;
+    height: 210px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+    
+}
+
+.hr:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #7d3e03;
+    z-index: 9;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #7d3e03;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height:150px;
+    background: #b05604;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+    </style>
+  </head>
+  <body>
+       
+    <header>
+      <nav>
+        <ul>
+          
+          <li><a href="https://kurziokode.github.io/final.mp4" target="_blank">About</a></li>
+          <li><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank">Contact</a></li>
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/webdev.html#" target="_blank">Share</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+     <section>
+      <h1><a href="https://kurziokode.github.io/nemo.html" target="_blank"
+          style="font-size: xx-large;"><b>Curzio</b></a></h1><br>
+          <a href="https://kurziokode.github.io/poem.jpg" target="_blank">"black is not sad, black is poetic"</a>
+      <h2><a href="https://www.windy.com/37.797/21.351?rain,37.300,21.352,8" target="_blank">I'm only happy when it rains.</a></h2>
+    </section><br>
+      <section>
+        <h2>My Projects</h2><br>
+        <ul>
+         
+            <li><h3><a href="https://kurziokode.github.io/420.html" target="_blank">Master</a></h3></li>
+        <li>
+          <h3><a href="https://kurziokode.github.io/new/00.html" target="_blank">Time</a></h3>
+        </li> 
+        <li>
+          <h3><a href="https://kurziokode.github.io/loop.html" target="_blank">Loop</a></h3>
+        </li>
+          <li>
+            <h3><a href="https://kurziokode.github.io/master.html" target="_blank">Edu</a></h3>
+          </li>
+          <li>
+            <h3><a href="https://slides.com/curzio/desk/kiosk?started=true" target="_blank">Studio</a></h3>
+          </li>
+         
+        
+        
+          
+        </ul><br>
+      <div class="clock">
+      
+        <div class="hour">
+          <div class="hr" id="hr"></div>
+        </div>
+      
+        <div class="min">
+          <div class="mn" id="mn"></div>
+        </div>
+      
+        <div class="sec">
+          <div class="sc" id="sc"></div>
+        </div>
+      
+      </div>
+      </section>
+          
+    </main>
+  <div>
+    <h5 style="position: fixed; top: 50%; right: 5%; transform: translateY(-50%) rotate(-14deg);">
+      rains</h5>
+  </div>
+
+    <footer>
+      
+      <p>Copyright © 2023 C.Doulos</p>
+    </footer>
+    <script>
+      const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+
+        setInterval(() => {
+
+          let day = new Date();
+          let hh = day.getHours() * 30;
+          let mm = day.getMinutes() * deg;
+          let ss = day.getSeconds() * deg;
+
+          hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+          mn.style.transform = `rotateZ(${mm}deg)`;
+          sc.style.transform = `rotateZ(${ss}deg)`;
+
+        })
+    </script>
+  </body>
+</html>
