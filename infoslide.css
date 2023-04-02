@@ -205,3 +205,81 @@ h6 {
 	filter: contrast(2);  
   }
 }
+
+
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 575px) {
+ 
+  h1 {
+    font-size: 24px; /* Change font size */
+    /* Change font color */
+  }
+  p {
+    font-size: 16px; /* Change font size */
+     /* Change font color */
+  }
+  a {
+    font-size: 16px; /* Change font size */
+   /* Change font color */
+  }
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+  h1 {
+    font-size: 32px; /* Change font size */
+     /* Change font color */
+  }
+  p {
+    font-size: 18px; /* Change font size */
+    /* Change font color */
+  }
+  a {
+    font-size: 18px; /* Change font size */
+    /* Change font color */
+  }
+}
+
+/* Medium devices (laptops) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  h1 {
+    font-size: 48px; /* Change font size */
+    /* Change font color */
+  }
+  p {
+    font-size: 20px; /* Change font size */
+    /* Change font color */
+  }
+  a {
+    font-size: 20px; /* Change font size */
+    /* Change font color */
+  }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 992px) {
+
+  h1 {
+    font-size: 64px; /* Change font size */
+     /* Change font color */
+  }
+  p {
+    font-size: 22px; /* Change font size */
+     /* Change font color */
+  }
+  a {
+    font-size: 22px; /* Change font size */
+    /* Change font color */
+  }
+}
+
+
+
+
+
+
+
+
