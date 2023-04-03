@@ -26,7 +26,7 @@ body {
 }
 
 a {
-	color: purple;
+	color: #660066;
 	text-decoration: none;
 
 	-webkit-transition: 0.15s color ease;
