@@ -25,6 +25,16 @@ body {
 	
 }
 
+ button {
+      font-size: 20px;
+      padding: 15px;
+      background-color: #0b0c0e;
+      color: #02640a;
+      border: none;
+      cursor: pointer;
+    }
+
+
 a {
 	color: #660066;
 	text-decoration: none;
