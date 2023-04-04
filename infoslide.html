@@ -112,11 +112,23 @@
 
 <body>
 
-    <script>
-        document.oncontextmenu = function () {
-            return false;
-        }
-    </script>
+   <div id="rightClickMenu">
+
+<!-- Add a button to trigger full-screen mode -->
+<button id="fullscreen-btn">Enter full-screen</button>
+    <a href="https://www.facebook.com/" target="_blank"
+      style="color: rgb(2, 100, 10)">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/" target="_blank" style="color: rgb(2, 100, 10)">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
+        class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" style="color: rgb(2, 100, 10)">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i
+        class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"
+      style="color: rgb(2, 100, 10)">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+<!-- Add a button to exit full-screen mode -->
+<button id="exit-fullscreen-btn">Exit full-screen</button>
+    
+
+  </div>
 
     <div class="meny">
 
@@ -265,6 +277,54 @@
 
         })
     </script>
+    
+      <script>
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+        var menu = document.getElementById("rightClickMenu");
+        menu.style.top = event.pageY + "px";
+        menu.style.left = event.pageX + "px";
+        menu.style.display = "block";
+      });
+
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("rightClickMenu");
+        if (menu) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+    
+<script>
+  var fullscreenBtn = document.querySelector('#fullscreen-btn');
+  var exitFullscreenBtn = document.querySelector('#exit-fullscreen-btn');
+  var elem = document.documentElement;
+
+  // Enter full-screen mode
+  fullscreenBtn.addEventListener('click', function () {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  });
+
+  // Exit full-screen mode
+  exitFullscreenBtn.addEventListener('click', function () {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  });
+</script>
+    
+    
+    
 </body>
 
 </html>
