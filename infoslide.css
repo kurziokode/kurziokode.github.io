@@ -77,9 +77,9 @@ h5 {
 }
 
 h6 {
-  font-size: calc(100vw /25);
+  font-size: calc(100vw /26);
   font-weight: 900;
-  color: #161616;
+  color: #660066;
   opacity: 0.5;
   user-select: none;
   cursor: default !important;
