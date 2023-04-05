@@ -22,8 +22,8 @@
      
 .clock {
    display: flex;
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     justify-content: center;
     align-items: center;
   
@@ -53,18 +53,18 @@
 }
 
 .clock .hour, .hr {
+    width: 100px;
+    height: 100px;
+}
+
+.clock .min, .mn {
     width: 130px;
     height: 130px;
 }
 
-.clock .min, .mn {
+.clock .sec, .sc {
     width: 160px;
     height: 160px;
-}
-
-.clock .sec, .sc {
-    width: 190px;
-    height: 190px;
 }
 
 .hr, .mn, .sc {
@@ -80,7 +80,7 @@
     content: "";
     position: absolute;
     width: 7px;
-    height: 70px;
+    height: 60px;
     background: #191a19;
     z-index: 9;
     border-radius: 6px 6px 0 0;
@@ -90,7 +90,7 @@
     content: "";
     position: absolute;
     width: 4px;
-    height: 90px;
+    height: 80px;
     background: #310231;
     z-index: 10;
     border-radius: 6px 6px 0 0;
@@ -100,7 +100,7 @@
     content: "";
     position: absolute;
     width: 2px;
-    height:150px;
+    height:130px;
     background: #013205;
     z-index: 11;
     border-radius: 6px 6px 0 0;
