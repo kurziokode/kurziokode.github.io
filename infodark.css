@@ -137,15 +137,10 @@ footer {
   }
 }
 
-h5 {
- color: #001a00;
-  opacity: 0.6;
 
-}
 
 h6 {
-color: #660066;
-  opacity: 0.5;
+display: none;
 
 }
 
@@ -166,17 +161,7 @@ color: #660066;
     /* Change font color */
   }
 }
-h5 {
- color: #001a00;
-  opacity: 0.4;
 
-}
-
-h6 {
-color: #660066;
-  opacity: 0.15;
-
-}
 
 
 /* Medium devices (laptops) */
@@ -196,17 +181,7 @@ color: #660066;
   }
 }
 
-h5 {
- color: #001a00;
-  opacity: 0.4;
 
-}
-
-h6 {
-color: #660066;
-  opacity: 0.15;
-
-}
 /* Large devices (desktops) */
 @media only screen and (min-width: 992px) {
 
@@ -223,17 +198,7 @@ color: #660066;
     /* Change font color */
   }
   
-  h5 {
- color: #001a00;
-  opacity: 0.4;
 
-}
-
-h6 {
-color: #660066;
-  opacity: 0.15;
-
-}
 }
 
 
