@@ -166,6 +166,18 @@ h6 {
     /* Change font color */
   }
 }
+h5 {
+ 
+  opacity: 0.4;
+
+}
+
+h6 {
+
+  opacity: 0.15;
+
+}
+
 
 /* Medium devices (laptops) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -184,6 +196,17 @@ h6 {
   }
 }
 
+h5 {
+ 
+  opacity: 0.4;
+
+}
+
+h6 {
+
+  opacity: 0.15;
+
+}
 /* Large devices (desktops) */
 @media only screen and (min-width: 992px) {
 
@@ -199,6 +222,18 @@ h6 {
     font-size: 22px; /* Change font size */
     /* Change font color */
   }
+  
+  h5 {
+ 
+  opacity: 0.4;
+
+}
+
+h6 {
+
+  opacity: 0.15;
+
+}
 }
 
 
