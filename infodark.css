@@ -137,6 +137,19 @@ footer {
   }
 }
 
+h5 {
+ 
+  opacity: 0.6;
+
+}
+
+h6 {
+
+  opacity: 0.5;
+
+}
+
+
 /* Small devices (tablets) */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
 
