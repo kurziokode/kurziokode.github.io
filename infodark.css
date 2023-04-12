@@ -12,7 +12,7 @@ body {
   height: 100vh;
   width: 100vw;
   scrollbar-width: auto;
-  scrollbar-color: #310231 #040404;
+  scrollbar-color: #180118 #040404;
 
 }
 
@@ -208,13 +208,13 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #310231;
+  background-color: #180118;
   border-radius: 6px;
 }
 
 /* For Firefox */
 scrollbar-width: auto;
-scrollbar-color: #310231 #040404;
+scrollbar-color: #180118 #040404;
 
 
 
