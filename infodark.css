@@ -213,7 +213,7 @@ footer {
 }
 
 /* For Firefox */
-scrollbar-width: thin;
+scrollbar-width: auto;
 scrollbar-color: #310231 #040404;
 
 
