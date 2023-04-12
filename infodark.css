@@ -206,13 +206,13 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #800080;
+  background-color: #310231;
   border-radius: 6px;
 }
 
 /* For Firefox */
 scrollbar-width: thin;
-scrollbar-color: #800080 #040404;
+scrollbar-color: #310231 #040404;
 
 
 
