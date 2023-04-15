@@ -239,7 +239,7 @@
     <h5 style="position: fixed; top:50%; right:7%; transform: translateY(-50%) rotate(-90deg);">
         curzio</h5>
     
-     <a href="https://kurziokode.github.io/nemo.html" target="_blank" style="color: #191a19; position: fixed; bottom:4%; right:43%;">Copyright © 2023 C.Doulos</a>
+     <h8><a href="https://kurziokode.github.io/nemo.html" target="_blank" style="color: #191a19; position: fixed; bottom:4%; right:43%;">Copyright © 2023 C.Doulos</a></h8>
 </div>
     </div>
 
@@ -355,7 +355,39 @@
   });
 </script>
     
-    
+  <script>
+  // get the h1 element
+  const h1 = document.querySelector('h8');
+
+  // set the initial styles for the h1 element
+  h1.style.opacity = 0;
+  h1.style.transform = 'translateY(300%)';
+
+  // define the animation properties
+  const animationProps = {
+    duration: 5000, // in milliseconds
+    easing: 'ease-in-out', // easing function
+    fill: 'forwards' // keep the final state of the animation
+  };
+
+  // define the keyframes for the animation
+  const keyframes = [
+    {
+      opacity: 0,
+      transform: 'translateY(300%)'
+    },
+    {
+      opacity: 1,
+      transform: 'translateY(0)'
+    }
+  ];
+
+  // create the animation
+  const animation = h1.animate(keyframes, animationProps);
+
+  // play the animation
+  animation.play();
+</script>  
     
 </body>
 
