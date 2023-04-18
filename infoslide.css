@@ -68,13 +68,12 @@ h5 {
   color: #001a00;
   opacity: 0.45;
   user-select: none;
-  cursor: default !important;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
   white-space: nowrap;
   z-index: -1;
-  cursor: url('https://kurziokode.github.io/curs.png'), auto;
+  cursor: url('https://kurziokode.github.io/curs.png'), auto !important;
 
 }
 
