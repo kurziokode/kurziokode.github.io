@@ -391,18 +391,18 @@
     
  <script>
 
-   var backgroundImageChanged = false;
+ var backgroundImageChanged = false;
 
 function changeBackground(event) {
-    if (event.clientX <= 0 && !backgroundImageChanged) {
+    if (event.clientX <= 0) {
         document.body.style.backgroundImage = "url('https://kurziokode.github.io/back.jpg')";
         backgroundImageChanged = true;
-    } else if (event.clientX > 0 && backgroundImageChanged) {
+    } else if (backgroundImageChanged) {
         document.body.style.backgroundImage = "url('https://kurziokode.github.io/woman.jpg')";
-       
+        backgroundImageChanged = false;
     }
 }
-
+ 
   </script>   
     
 </body>
