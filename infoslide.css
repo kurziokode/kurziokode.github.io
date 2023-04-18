@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	cursor: url('https://kurziokode.github.io/curs.png'), auto;
+	cursor: url('https://kurziokode.github.io/curs2.png'), auto;
 }
 
 html,
@@ -73,7 +73,7 @@ h5 {
   text-align: center;
   white-space: nowrap;
   z-index: -1;
-  cursor: url('https://kurziokode.github.io/curs.png'), auto !important;
+  cursor: url('https://kurziokode.github.io/curs2.png'), auto !important;
 
 }
 
