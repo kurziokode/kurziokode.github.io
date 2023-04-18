@@ -104,7 +104,7 @@
 
 </head>
 
-<body>
+<body onmousemove="changeBackground(event)">
   <div id="rightClickMenu">
 
 <!-- Add a button to trigger full-screen mode -->
@@ -386,7 +386,28 @@
     }
   });
 </script>
-      
+  <script>
+
+   var backgroundImageIndex = 0;
+var backgroundImages = [
+    "https://kurziokode.github.io/woman.jpg",
+    "https://kurziokode.github.io/back.png",
+    "https://kurziokode.github.io/woman.jpg",
+    "https://kurziokode.github.io/back.png"
+];
+
+function changeBackground(event) {
+    var distanceFromLeftEdge = event.clientX;
+    if (distanceFromLeftEdge <= 0) {
+        backgroundImageIndex++;
+        if (backgroundImageIndex >= backgroundImages.length) {
+            backgroundImageIndex = 0;
+        }
+        document.body.style.backgroundImage = "url('" + backgroundImages[backgroundImageIndex] + "')";
+    }
+}
+
+  </script>        
     
 </body>
 
