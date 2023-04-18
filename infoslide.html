@@ -399,7 +399,7 @@ var backgroundImages = [
 ];
 
 function changeBackground(event) {
-    if (event.clientX <= 0) {
+    if (event.clientX <= 100) {
         backgroundImageIndex++;
         if (backgroundImageIndex >= backgroundImages.length) {
             backgroundImageIndex = 0;
