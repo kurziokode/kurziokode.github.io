@@ -400,7 +400,7 @@ var backgroundImages = [
 
 function changeBackground(event) {
     var distanceFromLeftEdge = event.clientX;
-    if (distanceFromLeftEdge <= 100) {
+    if (distanceFromLeftEdge <= 50) {
         backgroundImageIndex++;
         if (backgroundImageIndex >= backgroundImages.length) {
             backgroundImageIndex = 0;
