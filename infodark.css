@@ -18,7 +18,7 @@ body {
   width: 100vw;
   scrollbar-width: auto;
   scrollbar-color: #180118 #040404;
-
+  transition: background-image 0.7s ease;
 }
 
   button {
