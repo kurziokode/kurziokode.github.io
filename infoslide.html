@@ -238,7 +238,7 @@
     
     <h5 style="position: fixed; top:50%; right:7%; transform: translateY(-50%) rotate(-90deg);">
         curzio</h5>
-    
+    <a href="https://www.google.gr/" target="_blank" onclick="return openNewWindow();">Google</a>
      <h8><a href="https://kurziokode.github.io/nemo.html" target="_blank" style="color: #191a19; position: fixed; bottom:4%; right:43%;">Copyright © 2023 C.Doulos</a></h8>
 </div>
     </div>
@@ -412,6 +412,16 @@ function changeBackground(event) {
 
   </script>   
     
+   <script>
+function openNewWindow() {
+  var w = 500;
+  var h = 500;
+  var left = (screen.width/2) - (w/2);
+  var top = (screen.height/2) - (h/2);
+  var newWindow = window.open("https://www.google.gr/", "myWindow", "width="+w+",height="+h+",left="+left+",top="+top);
+  return false;
+}
+</script> 
 </body>
 
 </html>
