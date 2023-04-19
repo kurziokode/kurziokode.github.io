@@ -210,8 +210,10 @@
             <small>
                <br><br>
 
-                <a href="https://kurziokode.github.io/infodark.html#section4">◄ Home Page</a><br><br>
-               <a href="https://www.google.gr/" target="_blank" onclick="return openNewWindow();">Google</a>
+                <a href="https://kurziokode.github.io/infodark.html#section4">◄ Home Page</a>
+              <a href="https://godmode.space/?utm_source=www.therundown.ai&utm_medium=referral&utm_campaign=how-to-access-autogpt-in-your-browser#" target="_blank" onclick="return openNewWindow('https://example.com', 500, 500);">God Mode</a>
+              <a href="https://google.com" target="_blank" onclick="return openNewWindow('https://google.com', 800, 600);">Google</a>
+
                
             </small>
        
@@ -412,16 +414,14 @@ function changeBackground(event) {
 
   </script>   
     
-   <script>
-function openNewWindow() {
-  var w = 500;
-  var h = 500;
+<script>
+function openNewWindow(url, w, h) {
   var left = (screen.width/2) - (w/2);
   var top = (screen.height/2) - (h/2);
-  var newWindow = window.open("https://www.google.gr/", "myWindow", "width="+w+",height="+h+",left="+left+",top="+top);
+  var newWindow = window.open(url, "myWindow", "width="+w+",height="+h+",left="+left+",top="+top);
   return false;
 }
-</script> 
+</script>
 </body>
 
 </html>
