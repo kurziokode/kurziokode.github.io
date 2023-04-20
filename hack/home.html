@@ -150,17 +150,17 @@
                 <div>
 
 <input type="checkbox" id="myCheckbox">
-<a href="#" onclick="handleClick()"></a>
+<a href="#" onclick="handleClick(event)"></a>
 
                 </div>
              
-            <script>
-function handleClick() {
+<script>
+function handleClick(event) {
+  event.preventDefault();
   var checkbox = document.getElementById("myCheckbox");
   if (checkbox.checked) {
     window.open('https://blackscreen.app/', '_blank');
   }
-  return false;
 }
 </script>
 
