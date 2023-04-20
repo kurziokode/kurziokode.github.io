@@ -150,11 +150,19 @@
                 <div>
 
 <input type="checkbox" id="myCheckbox">
-<a href="https://blackscreen.app/" onclick="if (document.getElementById('myCheckbox').checked) { window.open('https://blackscreen.app/', '_blank'); } return false;"></a>
-
+<a href="https://blackscreen.app/" onclick="handleClick()"></a>
 
                 </div>
-               
+             
+            <script>
+function handleClick() {
+  var checkbox = document.getElementById("myCheckbox");
+  if (checkbox.checked) {
+    window.open('https://blackscreen.app/', '_blank');
+  }
+  return false;
+}
+</script>
 
             <!-- Widget Start -->
         <div class="container-fluid pt-4 px-4">
