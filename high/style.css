@@ -56,15 +56,7 @@ body {
   z-index: 2;
   position: relative;
 }
-.mast__bg {
-   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-}
+
 .mast__header {
   padding: 5%;
 }
