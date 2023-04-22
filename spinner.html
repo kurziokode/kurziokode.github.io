@@ -456,10 +456,11 @@
     spinner.style.display = "block";
 
     // Hide the spinner when the page is loaded
-    window.addEventListener("load", () => {
-      spinner.style.display = "none";
-    });
-  }
+ document.addEventListener("DOMContentLoaded", () => {
+  console.log("Page loaded");
+  spinner.style.display = "none";
+});
+
 
   </script>
 </body>
