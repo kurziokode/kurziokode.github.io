@@ -152,12 +152,27 @@
     }
   </style>
 
+<style>
+  .spinner {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+}
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+   </style>
 </head>
 
-<body onmousemove="changeBackground(event)" onload="showSpinner()">
+<body onmousemove="changeBackground(event)">
 
-<img src="https://kurziokode.github.io/gi.gif" alt="Loading..." id="spinner">
+<div class="spinner"></div>
+
 
   <div id="rightClickMenu">
 
@@ -450,18 +465,12 @@
   </script>
 
  <script>
-  function showSpinner() {
-    // Show the spinner
-    const spinner = document.getElementById("spinner");
-    spinner.style.display = "block";
+// Show the spinner
+document.querySelector('.spinner').style.display = 'block';
 
-    // Hide the spinner when the page is loaded
-  document.addEventListener("DOMContentLoaded", () => {
-      console.log("Page loaded");
-      spinner.style.display = "none";
-    });
+// Hide the spinner
+document.querySelector('.spinner').style.display = 'none';
 
-  }
   </script>
 </body>
 
