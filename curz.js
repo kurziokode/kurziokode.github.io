@@ -1,16 +1,23 @@
-
+/* Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. */
 
 (function( root, factory ) {
     if( typeof define === 'function' && define.amd ) {
-        // AMD module
+   
         define( factory );
     } else {
-        // Browser global
+    
         root.Curz = factory();
     }
 }(this, function () {
 
-// Date.now polyfill
+
 if( typeof Date.now !== 'function' ) Date.now = function() { return new Date().getTime(); };
 
 var Curz = {
@@ -29,20 +36,20 @@ var Curz = {
 				throw 'The menu and contents elements must have the same parent.';
 			}
 
-			// Constants
+		
 			var POSITION_T = 'top',
 				POSITION_R = 'right',
 				POSITION_B = 'bottom',
 				POSITION_L = 'left';
 
-			// Feature detection for 3D transforms
+		
 			var supports3DTransforms =  'WebkitPerspective' in document.body.style ||
 										'MozPerspective' in document.body.style ||
 										'msPerspective' in document.body.style ||
 										'OPerspective' in document.body.style ||
 										'perspective' in document.body.style;
 
-			// Default options, gets extended by passed in arguments
+		
 			var config = {
 				width: 300,
 				height: 300,
@@ -57,7 +64,7 @@ var Curz = {
 				touch: true
 			};
 
-			// Cache references to DOM elements
+		
 			var dom = {
 				menu: options.menuElement,
 				contents: options.contentsElement,
@@ -65,7 +72,7 @@ var Curz = {
 				cover: null
 			};
 
-			// State and input
+			
 			var indentX = dom.wrapper.offsetLeft,
 				indentY = dom.wrapper.offsetTop,
 				touchStartX = null,
@@ -121,13 +128,13 @@ var Curz = {
 
 				switch( config.position ) {
 					case POSITION_T:
-						// Primary transform:
+					
 						menuTransformOrigin = '50% 0%';
 						menuTransformClosed = 'rotateX( ' + menuAngle + 'deg ) translateY( -100% ) translateY( '+ config.overlap +'px )';
 						contentsTransformOrigin = '50% 0';
 						contentsTransformOpened = 'translateY( '+ config.height +'px ) rotateX( ' + contentsAngle + 'deg )';
 
-						// Position fallback:
+					
 						menuStyleClosed = { top: '-' + (config.height-config.overlap) + 'px' };
 						menuStyleOpened = { top: '0px' };
 						contentsStyleClosed = { top: '0px' };
@@ -135,13 +142,13 @@ var Curz = {
 						break;
 
 					case POSITION_R:
-						// Primary transform:
+					
 						menuTransformOrigin = '100% 50%';
 						menuTransformClosed = 'rotateY( ' + menuAngle + 'deg ) translateX( 100% ) translateX( -2px ) scale( 1.01 )';
 						contentsTransformOrigin = '100% 50%';
 						contentsTransformOpened = 'translateX( -'+ config.width +'px ) rotateY( ' + contentsAngle + 'deg )';
 
-						// Position fallback:
+					
 						menuStyleClosed = { right: '-' + (config.width-config.overlap) + 'px' };
 						menuStyleOpened = { right: '0px' };
 						contentsStyleClosed = { left: '0px' };
@@ -149,13 +156,13 @@ var Curz = {
 						break;
 
 					case POSITION_B:
-						// Primary transform:
+						
 						menuTransformOrigin = '50% 100%';
 						menuTransformClosed = 'rotateX( ' + -menuAngle + 'deg ) translateY( 100% ) translateY( -'+ config.overlap +'px )';
 						contentsTransformOrigin = '50% 100%';
 						contentsTransformOpened = 'translateY( -'+ config.height +'px ) rotateX( ' + -contentsAngle + 'deg )';
 
-						// Position fallback:
+						
 						menuStyleClosed = { bottom: '-' + (config.height-config.overlap) + 'px' };
 						menuStyleOpened = { bottom: '0px' };
 						contentsStyleClosed = { top: '0px' };
@@ -163,13 +170,13 @@ var Curz = {
 						break;
 
 					default:
-						// Primary transform:
+						
 						menuTransformOrigin = '100% 50%';
 						menuTransformClosed = 'translateX( -100% ) translateX( '+ config.overlap +'px ) scale( 1.01 ) rotateY( ' + -menuAngle + 'deg )';
 						contentsTransformOrigin = '0 50%';
 						contentsTransformOpened = 'translateX( '+ config.width +'px ) rotateY( ' + -contentsAngle + 'deg )';
 
-						// Position fallback:
+					
 						menuStyleClosed = { left: '-' + (config.width-config.overlap) + 'px' };
 						menuStyleOpened = { left: '0px' };
 						contentsStyleClosed = { left: '0px' };
@@ -178,12 +185,9 @@ var Curz = {
 				}
 			}
 
-			/**
-			 * The wrapper element holds the menu and contents.
-			 */
+		
 			function setupWrapper() {
-				// Add a class to allow for custom styles based on
-				// position
+				
 				Curz.addClass( dom.wrapper, 'curz-' + config.position );
 
 				originalStyles.wrapper = dom.wrapper.style.cssText;
@@ -200,7 +204,7 @@ var Curz = {
 
 				dom.cover = document.createElement( 'div' );
 
-				// Disabled until a falback fade in animation is added
+		
 				dom.cover.style.position = 'absolute';
 				dom.cover.style.display = 'block';
 				dom.cover.style.width = '100%';
@@ -211,7 +215,7 @@ var Curz = {
 				dom.cover.style.visibility = 'hidden';
 				dom.cover.style.opacity = 0;
 
-				// Silence unimportant errors in IE8
+				
 				try {
 					dom.cover.style.background = 'rgba( 0, 0, 0, 0.4 )';
 					dom.cover.style.background = '-ms-linear-gradient('+ config.position +','+ config.gradient;
@@ -229,7 +233,7 @@ var Curz = {
 
 			
 			function setupMenu() {
-				// Shorthand
+			
 				var style = dom.menu.style;
 
 				switch( config.position ) {
@@ -274,7 +278,7 @@ var Curz = {
 
 			
 			function setupContents() {
-				// Shorthand
+			
 				var style = dom.contents.style;
 
 				originalStyles.contents = style.cssText;
@@ -290,9 +294,7 @@ var Curz = {
 				}
 			}
 
-			/**
-			 * Attaches all input event listeners.
-			 */
+			
 			function bindEvents() {
 
 				if( 'ontouchstart' in window ) {
@@ -318,9 +320,7 @@ var Curz = {
 				}
 			}
 
-			/**
-			 * Expands the menu.
-			 */
+			
 			function open() {
 				if( !isOpen ) {
 					isOpen = true;
@@ -330,9 +330,9 @@ var Curz = {
 					dom.cover.style.height = dom.contents.scrollHeight + 'px';
 					dom.cover.style.visibility = 'visible';
 
-					// Use transforms and transitions if available...
+				
 					if( supports3DTransforms ) {
-						// 'webkitAnimationEnd oanimationend msAnimationEnd animationend transitionend'
+					
 						Curz.bindEventOnce( dom.wrapper, 'transitionend', function() {
 							Curz.dispatchEvent( dom.menu, 'opened' );
 						} );
@@ -342,7 +342,7 @@ var Curz = {
 						dom.contents.style[ Curz.prefix( 'transform' ) ] = contentsTransformOpened;
 						dom.menu.style[ Curz.prefix( 'transform' ) ] = menuTransformOpened;
 					}
-					// ...fall back on JS animation
+				
 					else {
 						menuAnimation && menuAnimation.stop();
 						menuAnimation = Curz.animate( dom.menu, menuStyleOpened, 500 );
@@ -356,18 +356,16 @@ var Curz = {
 				}
 			}
 
-			/**
-			 * Collapses the menu.
-			 */
+		
 			function close() {
 				if( isOpen ) {
 					isOpen = false;
 
 					Curz.removeClass( dom.wrapper, 'curz-active' );
 
-					// Use transforms and transitions if available...
+				
 					if( supports3DTransforms ) {
-						// 'webkitAnimationEnd oanimationend msAnimationEnd animationend transitionend'
+					
 						Curz.bindEventOnce( dom.wrapper, 'transitionend', function() {
 							Curz.dispatchEvent( dom.menu, 'closed' );
 						} );
@@ -378,7 +376,7 @@ var Curz = {
 						dom.contents.style[ Curz.prefix( 'transform' ) ] = contentsTransformClosed;
 						dom.menu.style[ Curz.prefix( 'transform' ) ] = menuTransformClosed;
 					}
-					// ...fall back on JS animation
+				
 					else {
 						menuAnimation && menuAnimation.stop();
 						menuAnimation = Curz.animate( dom.menu, menuStyleClosed, 500 );
@@ -418,15 +416,14 @@ var Curz = {
 			}
 
 
-			/// INPUT: /////////////////////////////////
+		
 
 			function onMouseDown( event ) {
 				isMouseDown = true;
 			}
 
 			function onMouseMove( event ) {
-				// Prevent opening/closing when mouse is down since
-				// the user may be selecting text
+			
 				if( !isMouseDown ) {
 					var x = event.clientX - indentX,
 						y = event.clientY - indentY;
@@ -492,7 +489,7 @@ var Curz = {
 
 				var swipeMethod = null;
 
-				// Check for swipe gestures in any direction
+				
 
 				if( Math.abs( touchMoveX - touchStartX ) > Math.abs( touchMoveY - touchStartY ) ) {
 					if( touchMoveX < touchStartX - config.threshold ) {
@@ -519,7 +516,7 @@ var Curz = {
 			function onTouchEnd( event ) {
 				Curz.unbindEvent( document, 'touchmove', onTouchMove );
 
-				// If there was no movement this was a tap
+			
 				if( touchMoveX === null && touchMoveY === null ) {
 					onTap();
 				}
@@ -581,7 +578,6 @@ var Curz = {
 			}
 
 
-			/// API: ///////////////////////////////////
 
 			return {
 				configure: configure,
@@ -594,9 +590,7 @@ var Curz = {
 					return isOpen;
 				},
 
-				/**
-				 * Forward event binding to the menu DOM element.
-				 */
+				
 				addEventListener: function( type, listener ) {
 					addedEventListeners.push( [type, listener] );
 					dom.menu && Curz.bindEvent( dom.menu, type, listener );
@@ -615,7 +609,7 @@ var Curz = {
 		
 			var interpolations = {};
 
-			// Format properties
+		
 			for( var p in properties ) {
 				interpolations[p] = {
 					start: parseFloat( element.style[p] ) || 0,
@@ -627,18 +621,18 @@ var Curz = {
 			var animationStartTime = Date.now(),
 				animationTimeout;
 
-			// Takes one step forward in the animation
+	
 			function step() {
-				// Ease out
+				
 				var progress = 1 - Math.pow( 1 - ( ( Date.now() - animationStartTime ) / duration ), 5 );
 
-				// Set style to interpolated value
+				
 				for( var p in interpolations ) {
 					var property = interpolations[p];
 					element.style[p] = property.start + ( ( property.end - property.start ) * progress ) + property.unit;
 				}
 
-				// Continue as long as we're not done
+			
 				if( progress < 1 ) {
 					animationTimeout = setTimeout( step, 1000 / 60 );
 				}
@@ -648,16 +642,16 @@ var Curz = {
 				}
 			}
 
-			// Cancels the animation
+	
 			function stop() {
 				clearTimeout( animationTimeout );
 			}
 
-			// Starts the animation
+		
 			step();
 
 
-			/// API: ///////////////////////////////////
+		
 
 			return {
 				stop: stop
@@ -665,19 +659,14 @@ var Curz = {
 		})();
 	},
 
-	/**
-	 * Extend object a with the properties of object b.
-	 * If there's a conflict, object b takes precedence.
-	 */
+
 	extend: function( a, b ) {
 		for( var i in b ) {
 			a[ i ] = b[ i ];
 		}
 	},
 
-	/**
-	 * Prefixes a style property with the correct vendor.
-	 */
+	
 	prefix: function( property, el ) {
 		var propertyUC = property.slice( 0, 1 ).toUpperCase() + property.slice( 1 ),
 			vendors = [ 'Webkit', 'Moz', 'O', 'ms' ];
@@ -693,23 +682,17 @@ var Curz = {
 		return property;
 	},
 
-	/**
-	 * Adds a class to the target element.
-	 */
+	
 	addClass: function( element, name ) {
 		element.className = element.className.replace( /\s+$/gi, '' ) + ' ' + name;
 	},
 
-	/**
-	 * Removes a class from the target element.
-	 */
+	
 	removeClass: function( element, name ) {
 		element.className = element.className.replace( name, '' );
 	},
 
-	/**
-	 * Adds an event listener in a browser safe way.
-	 */
+	
 	bindEvent: function( element, ev, fn ) {
 		if( element.addEventListener ) {
 			element.addEventListener( ev, fn, false );
@@ -719,9 +702,7 @@ var Curz = {
 		}
 	},
 
-	/**
-	 * Removes an event listener in a browser safe way.
-	 */
+	
 	unbindEvent: function( element, ev, fn ) {
 		if( element.removeEventListener ) {
 			element.removeEventListener( ev, fn, false );
@@ -740,10 +721,7 @@ var Curz = {
 		this.bindEvent( element, ev, listener );
 	},
 
-	/**
-	 * Dispatches an event of the specified type from the
-	 * menu DOM element.
-	 */
+
 	dispatchEvent: function( element, type, properties ) {
 		if( element ) {
 			var event = document.createEvent( "HTMLEvents", 1, 2 );
@@ -753,9 +731,7 @@ var Curz = {
 		}
 	},
 
-	/**
-	 * Retrieves query string as a key/value hash.
-	 */
+	
 	getQuery: function() {
 		var query = {};
 
