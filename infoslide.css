@@ -103,7 +103,7 @@ h6 {
 }
 
 
-.meny {
+.curz {
 	display: none;
 	padding: 20px;
 	overflow: auto;
@@ -114,26 +114,24 @@ h6 {
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-	.meny ul {
+	.curz ul {
 		margin-top: 10px;
 	}
-		.meny ul li {
+		.curz ul li {
 			display: inline-block;
 			width: 200px;
 			list-style: none;
 			font-size: 19px;
 			padding: 3px 10px;
 		}
-			.meny ul li:before {
+			.curz ul li:before {
 				content: '';
 				margin-right: 5px;
 				color: rgba( 255, 255, 255, 0.2 );
 			}
 
-/**
- * Hint graphic that appears while menu is inactive
- */
-.meny-arrow {
+
+.curz-arrow {
 	position: absolute;
 	z-index: 10;
 
@@ -145,31 +143,31 @@ h6 {
 	     -o-transition: opacity 0.4s ease 0.4s;
 	        transition: opacity 0.4s ease 0.4s;
 }
-	.meny-left .meny-arrow {
+	.curz-left .curz-arrow {
 		left: 20px;
 		top: 50%;
 		margin-top: -16px;
 		border-left: 16px solid #334d00;
 	}
-	.meny-right .meny-arrow {
+	.curz-right .curz-arrow {
 		right: 20px;
 		top: 50%;
 		margin-top: -16px;
 		border-right: 16px solid #02640a;
 	}
-	.meny-top .meny-arrow {
+	.curz-top .curz-arrow {
 		left: 50%;
 		top: 20px;
 		margin-left: -16px;
 		border-top: 16px solid #334d00;
 	}
-	.meny-bottom .meny-arrow {
+	.curz-bottom .curz-arrow {
 		left: 50%;
 		bottom: 14px;
 		margin-left: -16px;
 		border-bottom: 16px solid #333;
 	}
-	.meny-active .meny-arrow {
+	.curz-active .curz-arrow {
 		opacity: 0;
 
 		-webkit-transition: opacity 0.2s ease;
@@ -179,9 +177,7 @@ h6 {
 		        transition: opacity 0.2s ease;
 	}
 
-/**
- * Main contents area
- */
+
 .contents {
 	background: transparent;
 	padding: 20px 40px;
