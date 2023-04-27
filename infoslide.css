@@ -109,7 +109,7 @@ h6 {
   width:105px;
   height:38px;
   border-width:0px;
-  color:#0b0c0e;
+  color:#262626;
   text-align: center;
   border-color:#a511c0;
   font-weight:bold;
@@ -122,6 +122,7 @@ h6 {
 }
 
 .button2:hover {
+  color:#404040;	
   background: linear-gradient(#61116f, #52075f);
 }
               
