@@ -103,7 +103,7 @@ h6 {
 }
 
 
-.buttonClass {
+.lass {
   font-size:16px;
   font-family:Arial;
   width:140px;
@@ -120,7 +120,7 @@ h6 {
   background:linear-gradient(#c123de, #a20dbd);
 }
 
-.buttonClass:hover {
+.lass:hover {
   background: linear-gradient(#a20dbd, #c123de);
 }
               
