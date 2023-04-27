@@ -116,12 +116,12 @@ h6 {
   border-top-right-radius:42px;
   border-bottom-left-radius:42px;
   border-bottom-right-radius:42px;
-  box-shadow:inset 0px 1px 0px 0px #9e12ba;
-  background:linear-gradient(#4d0d59, #3e0548);
+  box-shadow:inset 0px 1px 0px 0px #760e8b;
+  background:linear-gradient(#3a0a43, #290330);
 }
 
 .button2:hover {
-  background: linear-gradient(#741485, #670877);
+  background: linear-gradient(#61116f, #52075f);
 }
               
 .curz {
