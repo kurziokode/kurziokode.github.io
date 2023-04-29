@@ -278,37 +278,43 @@ strictly prohibited. -->
    
      <h8><a href="https://kurziokode.github.io/nemo.html" target="_blank" class="hover-link" style="color: #191a19; position: fixed; bottom:3%; right:43%;">Copyright © 2023 C.Doulos</a>
     <img src="https://kurziokode.github.io/copy.jpg" alt="Image" class="hover-image"></h8>
-     <h2 style="position: fixed; bottom:3%; left:3%;">Create a Reminder</h2>
-    <label for="event-name">Event Name:</label>
+    
+   
     <input type="text" id="event-name" placeholder="Enter event name" required><br><br>
 
-    <label for="event-date">Event Date:</label>
     <input type="date" id="event-date" required><br><br>
 
-    <button onclick="setReminder()">Set Reminder</button>     
+    <input type="time" id="event-time" required><br><br>
+
+    <button onclick="setReminder()" style="position: fixed; bottom:3%; left:3%;">Set Reminder</button>    
+    
+       
 </div>
     </div>
 
-
        <script>
-        function setReminder() {
-            var eventDate = new Date(document.getElementById('event-date').value);
+         function setReminder() {
+            var eventName = document.getElementById('event-name').value;
+            var eventDate = document.getElementById('event-date').value;
+            var eventTime = document.getElementById('event-time').value;
 
-            if (isNaN(eventDate)) {
-                alert('Please enter a valid date!');
+            if (!eventName || !eventDate || !eventTime) {
+                alert('Please fill in all fields!');
                 return;
             }
 
-            var currentDate = new Date();
-            var timeDifference = eventDate.getTime() - currentDate.getTime();
+            var eventDateTime = new Date(eventDate + ' ' + eventTime);
+            var currentTime = new Date();
 
-            if (timeDifference < 0) {
-                alert('Event date has already passed!');
+            if (eventDateTime <= currentTime) {
+                alert('Please select a future date and time!');
                 return;
             }
+
+            var timeDifference = eventDateTime.getTime() - currentTime.getTime();
 
             setTimeout(function () {
-                alert('Event Reminder: ' + document.getElementById('event-name').value);
+                alert('Event Reminder: ' + eventName);
             }, timeDifference);
         }
     </script>
