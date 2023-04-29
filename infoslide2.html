@@ -278,17 +278,18 @@ strictly prohibited. -->
    
      <h8><a href="https://kurziokode.github.io/nemo.html" target="_blank" class="hover-link" style="color: #191a19; position: fixed; bottom:3%; right:43%;">Copyright © 2023 C.Doulos</a>
     <img src="https://kurziokode.github.io/copy.jpg" alt="Image" class="hover-image"></h8>
-</div>
-    </div>
-
-<h2>Create a Reminder</h2>
+     <h2>Create a Reminder</h2>
     <label for="event-name">Event Name:</label>
     <input type="text" id="event-name" placeholder="Enter event name" required><br><br>
 
     <label for="event-date">Event Date:</label>
     <input type="date" id="event-date" required><br><br>
 
-    <button onclick="setReminder()">Set Reminder</button>
+    <button onclick="setReminder()">Set Reminder</button>     
+</div>
+    </div>
+
+
        <script>
         function setReminder() {
             var eventDate = new Date(document.getElementById('event-date').value);
