@@ -298,7 +298,7 @@ strictly prohibited. -->
     </div>
 
        <script>
-         function setReminder() {
+           function setReminder() {
             var eventName = document.getElementById('event-name').value;
             var eventDate = document.getElementById('event-date').value;
             var eventTime = document.getElementById('event-time').value;
@@ -321,7 +321,33 @@ strictly prohibited. -->
             setTimeout(function () {
                 alert('Event Reminder: ' + eventName);
             }, timeDifference);
+
+            // Store reminder data in localStorage
+            var reminderData = {
+                eventName: eventName,
+                eventDateTime: eventDateTime.getTime()
+            };
+            localStorage.setItem('reminder', JSON.stringify(reminderData));
         }
+
+        window.addEventListener('DOMContentLoaded', function () {
+            // Retrieve reminder data from localStorage
+            var reminderData = localStorage.getItem('reminder');
+            if (reminderData) {
+                var reminder = JSON.parse(reminderData);
+                var currentTime = new Date().getTime();
+                var timeDifference = reminder.eventDateTime - currentTime;
+
+                if (timeDifference > 0) {
+                    setTimeout(function () {
+                        alert('Event Reminder: ' + reminder.eventName);
+                    }, timeDifference);
+                }
+
+                // Clear stored reminder data
+                localStorage.removeItem('reminder');
+            }
+        });
     </script>
     
     <script src="https://kurziokode.github.io/curz.js"></script>
