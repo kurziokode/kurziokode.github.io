@@ -307,8 +307,8 @@ strictly prohibited. -->
 </div>
     </div>
 
-       <script>
-           function setReminder() {
+     <script>
+        function setReminder() {
             var eventName = document.getElementById('event-name').value;
             var eventDate = document.getElementById('event-date').value;
             var eventTime = document.getElementById('event-time').value;
@@ -330,6 +330,7 @@ strictly prohibited. -->
 
             setTimeout(function () {
                 alert('Event Reminder: ' + eventName);
+                playSound(); // Trigger the sound
             }, timeDifference);
 
             // Store reminder data in localStorage
@@ -338,6 +339,11 @@ strictly prohibited. -->
                 eventDateTime: eventDateTime.getTime()
             };
             localStorage.setItem('reminder', JSON.stringify(reminderData));
+        }
+
+        function playSound() {
+            var audio = new Audio('https://kurziokode.github.io/land.mp3');
+            audio.play();
         }
 
         window.addEventListener('DOMContentLoaded', function () {
@@ -351,6 +357,7 @@ strictly prohibited. -->
                 if (timeDifference > 0) {
                     setTimeout(function () {
                         alert('Event Reminder: ' + reminder.eventName);
+                        playSound(); // Trigger the sound
                     }, timeDifference);
                 }
 
