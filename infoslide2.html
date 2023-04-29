@@ -281,7 +281,37 @@ strictly prohibited. -->
 </div>
     </div>
 
+<h2>Create a Reminder</h2>
+    <label for="event-name">Event Name:</label>
+    <input type="text" id="event-name" placeholder="Enter event name" required><br><br>
 
+    <label for="event-date">Event Date:</label>
+    <input type="date" id="event-date" required><br><br>
+
+    <button onclick="setReminder()">Set Reminder</button>
+       <script>
+        function setReminder() {
+            var eventDate = new Date(document.getElementById('event-date').value);
+
+            if (isNaN(eventDate)) {
+                alert('Please enter a valid date!');
+                return;
+            }
+
+            var currentDate = new Date();
+            var timeDifference = eventDate.getTime() - currentDate.getTime();
+
+            if (timeDifference < 0) {
+                alert('Event date has already passed!');
+                return;
+            }
+
+            setTimeout(function () {
+                alert('Event Reminder: ' + document.getElementById('event-name').value);
+            }, timeDifference);
+        }
+    </script>
+    
     <script src="https://kurziokode.github.io/curz.js"></script>
     <script>
         
