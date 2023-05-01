@@ -411,7 +411,7 @@ function openNewWindow(url, w, h) {
 <script> 
 function openPages() {
   // Open first page with specific size and position on the left
-  var page1 = window.open('https://kurziokode.github.io/infodark.html', 'Page 1', 'width=550,height=550,left=0,top=0');
+  var page1 = window.open('https://kurziokode.github.io/infodark.html', 'Page 1', 'width=550,height=550,left=0,top=300');
 
   // Open second page with specific size and position in the middle
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -420,10 +420,7 @@ function openPages() {
   var page2Top = (screenHeight / 2) - 300; // Adjust the value to center the page vertically
   var page2 = window.open('https://kurziokode.github.io/infoslide.html', 'Page 2', 'width=550,height=550,left=' + page2Left + ',top=' + page2Top);
 
-  // Open third page with specific size and position on the right
-  var page3Left = screenWidth - 1200; // Adjust the value to position the page on the right
-  var page3Top = 0;
-  var page3 = window.open('https://kurziokode.github.io/infoslide2.html', 'Page 3', 'width=550,height=550,left=' + page3Left + ',top=' + page3Top);
+ 
 }
  
 </script>    
