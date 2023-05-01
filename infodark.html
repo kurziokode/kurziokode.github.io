@@ -339,7 +339,8 @@ strictly prohibited. -->
     </article>
 
     <div>
-       <a href="https://kurziokode.github.io/infoslide.html" class="button2" style="position: fixed; top:3%; right:12%;"><span>▶</span></a>
+      <button class="button2" style="position: fixed; top:3%; right:12%;" onclick="openPages()">&#9724;&nbsp;&#9724;</button>
+  
       <h5 style="position: fixed; top:50%; right:7%; transform: translateY(-50%) rotate(-90deg);">
         curzio</h5>
     </div>
@@ -410,7 +411,23 @@ function changeBackground(event) {
 }
 
   </script>        
-    
+   <script> 
+
+function openPages() {
+  // Open first page with specific size and position in the middle (left page)
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  var page1Left = (screenWidth / 2) - 585; // Adjust the value to center the left page horizontally
+  var page1Top = (screenHeight / 2) - 405; // Adjust the value to center the left page vertically
+  var page1 = window.open('https://kurziokode.github.io/infoslide.html', 'Page 1', 'width=580,height=840,left=' + page1Left + ',top=' + page1Top);
+
+  // Open second page with specific size and position in the middle (right page)
+  var page2Left = (screenWidth / 2) - 0; // Adjust the value to position the right page
+  var page2Top = (screenHeight / 2) - 405; // Adjust the value to center the right page vertically
+  var page2 = window.open('https://kurziokode.github.io/infoslide2.html', 'Page 2', 'width=580,height=840,left=' + page2Left + ',top=' + page2Top);
+}
+
+</script>    
 </body>
 
 </html>
