@@ -192,7 +192,11 @@ strictly prohibited. -->
     <input type="time" id="event-time" required>
 
     <button class="button2" style="position: fixed; top: 80%; left:12%;" onclick="setReminder()">&#10010;</button>      
-</div>
+    
+    <button onclick="openPages()">Open Pages</button>
+
+     
+     </div>
         
     </div>
 
@@ -404,6 +408,20 @@ function openNewWindow(url, w, h) {
   return false;
 }
 </script>
+<script> 
+ function openPages() {
+  // Open first page with specific size
+  window.open('page1.html', 'Page 1', 'width=500,height=300');
+
+  // Open second page with specific size
+  window.open('page2.html', 'Page 2', 'width=800,height=600');
+
+  // Open third page with specific size
+  window.open('page3.html', 'Page 3', 'width=1200,height=900');
+}
+   
+</script>    
+  
 </body>
 
 </html>
