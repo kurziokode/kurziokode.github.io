@@ -409,24 +409,23 @@ function openNewWindow(url, w, h) {
 }
 </script>
 <script> 
+function openPages() {
+  // Open first page with specific size and position on the left
+  var page1 = window.open('https://kurziokode.github.io/infodark.html', 'Page 1', 'width=550,height=550,left=0,top=0');
 
- 
- function openPages() {
-  // Open first page with specific size
-  var page1 = window.open('https://kurziokode.github.io/infodark.html', 'Page 1', 'width=550,height=550');
+  // Open second page with specific size and position in the middle
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  var page2Left = (screenWidth / 2) - 400; // Adjust the value to center the page horizontally
+  var page2Top = (screenHeight / 2) - 300; // Adjust the value to center the page vertically
+  var page2 = window.open('https://kurziokode.github.io/infoslide.html', 'Page 2', 'width=550,height=550,left=' + page2Left + ',top=' + page2Top);
 
-  // Open second page with specific size after a delay
-  setTimeout(function() {
-    var page2 = window.open('https://kurziokode.github.io/infoslide.html', 'Page 2', 'width=550,height=550');
-  }, 1000); // 1000 milliseconds delay (adjust as needed)
-
-  // Open third page with specific size after a delay
-  setTimeout(function() {
-    var page3 = window.open('https://kurziokode.github.io/infoslide2.html', 'Page 3', 'width=550,height=550');
-  }, 2000); // 2000 milliseconds delay (adjust as needed)
+  // Open third page with specific size and position on the right
+  var page3Left = screenWidth - 1200; // Adjust the value to position the page on the right
+  var page3Top = 0;
+  var page3 = window.open('https://kurziokode.github.io/infoslide2.html', 'Page 3', 'width=550,height=550,left=' + page3Left + ',top=' + page3Top);
 }
-   
-    
+ 
 </script>    
   
 </body>
