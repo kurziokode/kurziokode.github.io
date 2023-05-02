@@ -9,6 +9,10 @@ strictly prohibited. */
 
 * {
   cursor: url('https://kurziokode.github.io/curs2.png'), auto;
+  .hide-cursor {
+  cursor: none !important;
+}
+
 }
 
 
