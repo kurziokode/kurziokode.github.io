@@ -427,7 +427,29 @@ function openPages() {
   var page2 = window.open('https://kurziokode.github.io/infoslide2.html', 'Page 2', 'width=580,height=840,left=' + page2Left + ',top=' + page2Top);
 }
 
-</script>    
+</script>   
+   <script>  
+    var cursorTimeout;
+
+function hideCursor() {
+  document.body.style.cursor = "none";
+}
+
+function showCursor() {
+  document.body.style.cursor = "default";
+}
+
+function resetCursorTimeout() {
+  clearTimeout(cursorTimeout);
+  cursorTimeout = setTimeout(hideCursor, 3000); // Adjust the idle time in milliseconds (e.g., 3000 = 3 seconds)
+  showCursor();
+}
+
+document.addEventListener("mousemove", resetCursorTimeout);
+document.addEventListener("mousedown", showCursor);
+document.addEventListener("keydown", showCursor);
+ 
+   </script>   
 </body>
 
 </html>
