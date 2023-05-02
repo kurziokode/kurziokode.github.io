@@ -11,10 +11,6 @@ strictly prohibited. */
   cursor: url('https://kurziokode.github.io/curs2.png'), auto;
  }
 
-body.hide-cursor {
-  cursor: transparent !important;
-}
-
 body {
 
   font-size: 18px;
