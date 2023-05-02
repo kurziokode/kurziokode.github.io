@@ -429,25 +429,26 @@ function openPages() {
 
 </script>   
    <script>  
-    var cursorTimeout;
+  var timeout;
 
 function hideCursor() {
-  document.body.style.cursor = "none";
+  document.body.classList.add("hide-cursor");
 }
 
 function showCursor() {
-  document.body.style.cursor = "default";
+  document.body.classList.remove("hide-cursor");
 }
 
 function resetCursorTimeout() {
-  clearTimeout(cursorTimeout);
-  cursorTimeout = setTimeout(hideCursor, 3000); // Adjust the idle time in milliseconds (e.g., 3000 = 3 seconds)
+  clearTimeout(timeout);
   showCursor();
+  timeout = setTimeout(hideCursor, 3000); // Adjust the idle time in milliseconds (e.g., 3000 = 3 seconds)
 }
 
 document.addEventListener("mousemove", resetCursorTimeout);
 document.addEventListener("mousedown", showCursor);
 document.addEventListener("keydown", showCursor);
+
  
    </script>   
 </body>
