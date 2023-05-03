@@ -44,17 +44,14 @@ body {
   align-items: center;
   font-size: 16px;
   font-family: Arial;
-  width: 105px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-width: 0px;
   color: #000000;
   text-align: center;
   border-color: #a511c0;
   font-weight: bold;
-  border-top-left-radius: 42px;
-  border-top-right-radius: 42px;
-  border-bottom-left-radius: 42px;
-  border-bottom-right-radius: 42px;
+  border-radius: 50%;
   box-shadow: inset 0px 1px 0px 0px #760e8b;
   background: linear-gradient(#3a0a43, #290330);
 }
