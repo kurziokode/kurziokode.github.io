@@ -1,0 +1,434 @@
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Christos Doulos interactive animation developer">
+  <meta name="keywords" content="Christos Doulos, interactive, animation, web developer, culture">
+  <meta name="author" content="Christos Doulos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C u r z i o&nbsp;&nbsp;Web</title>
+  <link rel="icon" href="https://kurziokode.github.io/loop.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://kurziokode.github.io/infodark.css">
+
+  <style>
+
+
+    #container {
+      height: 100%;
+
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section {
+
+      flex: 1;
+      padding: 1em;
+    }
+
+    article {
+
+
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 0px solid #5d5b5b;
+    }
+
+
+
+    article h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    article p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    article a {
+      font-size: 16px;
+      text-decoration: none;
+      color: #5d5b5b;
+    }
+
+    .article-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      opacity: 0.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+  </style>
+
+  <style>
+    #rightClickMenu {
+      display: none;
+      position: absolute;
+      z-index: 9999;
+      background-color: #0b0c0e;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      font-size: 20px;
+    }
+
+    #rightClickMenu a {
+      display: block;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    #rightClickMenu a:hover {
+      background-color: #0b0c0e;
+    }
+    
+   
+  </style>
+
+
+</head>
+
+<body onmousemove="changeBackground(event)">
+  <div id="rightClickMenu">
+
+<!-- Add a button to trigger full-screen mode -->
+<button id="fullscreen-btn">enter full-screen</button>
+
+    <a href="https://www.facebook.com/" target="_blank"
+      style="color: rgb(2, 100, 10)">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/" target="_blank" style="color: rgb(2, 100, 10)">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
+        class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" style="color: rgb(2, 100, 10)">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i
+        class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"
+      style="color: rgb(2, 100, 10)">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+
+    <!-- Add a button to exit full-screen mode -->
+<button id="exit-fullscreen-btn">exit full-screen</button>
+    
+
+  </div>
+  <div id="container">
+
+    <div class="section" id="section1">
+
+      <br><br><br><br><br><br><a href="#" style="color: purple;">&nbsp;&nbsp;&nbsp;Arts</a>
+      <a href="#section2" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Read</a>
+      <a href="#section3" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;AVisual</a>
+      <a href="#section4" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Studio</a>
+      <h2 style="text-align: center; color: purple;">Arts</h2>
+      <ul class="grid2" style="text-align: center;">
+
+        <li><a href="https://www.rollingstone.com/" target="_blank">rolling stone</a></li>
+        <li><a href="https://www.metacritic.com/movie" target="_blank">metacritic</a></li>
+        <li><a href="https://www.spin.com/" target="_blank">spin</a></li>
+        <li><a href="https://pitchfork.com/" target="_blank">pitchfork</a></li>
+        <li><a href="https://www.undertheradarmag.com/" target="_blank">under the radar</a></li>
+        <li><a href="https://faroutmagazine.co.uk/articles/playlists/new-music-playlists/" target="_blank">far out</a>
+        </li>
+        <li><a href="https://www.milomanara.it/galleries/comics/?lang=en" target="_blank">milo manara</a></li>
+        <li><a href="https://hubertybreyne.com/en/artists/list/0/artists-list" target="_blank">huberty breyne</a></li>
+        <li><a href="https://musicoholics.com/" target="_blank">musicoholics</a></li>
+        <li><a href="https://playjunkie.com/category/art/" target="_blank">play junkie</a></li>
+        <li><a href="https://kexp.org/" target="_blank">kexp</a></li>
+        <li><a href="https://www.behance.net/search/projects/?search=street%20photography" target="_blank">behance</a>
+        </li>
+        <li><a href="https://www.deviantart.com/topic/photography" target="_blank">deviant art</a></li>
+        <li><a href="https://www.wbgo.org/" target="_blank">wbgo</a></li>
+        <li><a href="https://artsandculture.google.com/category/artist?hl=fr" target="_blank">arts and culture</a>
+        </li>
+        <li><a href="https://surfadelic2.wordpress.com/" target="_blank">surfadelic</a></li>
+        <li><a href="https://www.vulture.com/art/" target="_blank">vulture</a></li>
+        <li><a href="https://www.dailyartmagazine.com/" target="_blank">daily art</a></li>
+        <li><a href="https://500px.com/p/mrkirby?view=photos" target="_blank">500px</a></li>
+        <li><a href="https://magazine.artstation.com/" target="_blank">art station</a></li>
+        <li><a href="https://www.albumoftheyear.org/" target="_blank">album of the year</a></li>
+        <li><a href="https://www.revolvermag.com/" target="_blank">revolver</a></li>
+        <li><a href="https://www.flickr.com/photos/skorver1/9621595253/in/photostream/" target="_blank">flickr</a>
+        </li>
+        <li><a href="https://www.shortoftheweek.com/channels/film-noir/" target="_blank">short of the week</a></li>
+        <li><a href="https://www.dazeddigital.com/" target="_blank">dazed digital</a></li>
+        <li><a href="https://totalrock.com/" target="_blank">total rock</a></li>
+        <li><a href="https://www.loudersound.com/" target="_blank">louder sound</a></li>
+        <li><a href="https://www.gazettemusicale.com/essay/2017/9/1/the-agony-of-michael-gira" target="_blank">gazette
+            musicale</a></li>
+        <li><a href="https://www.electronicbeats.net/" target="_blank">electronic beats</a></li>
+        <li><a href="https://shakespeare.folger.edu/shakespeares-works/" target="_blank">shakespeare</a></li>
+
+      </ul>
+
+    </div>
+    <div class="section" id="section2">
+
+      <br><br><br><br><br><br><a href="#section1" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Arts</a>
+      <a href="#" style="color: purple;">&nbsp;&nbsp;&nbsp;Read</a>
+      <a href="#section3" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;AVisual</a>
+      <a href="#section4" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Studio</a>
+      <h2 style="text-align: center; color: purple;">Read</h2>
+      <ul class="grid2" style="text-align: center;">
+        <li><a href="https://librofilo.blogspot.com/" target="_blank">librofilo</a></li>
+        <li><a href="https://pandoxeio.com/" target="_blank">pandoxeio</a></li>
+        <li><a href="https://groovyhistory.com/" target="_blank">groovy history</a></li>
+        <li><a href="https://www.worldhistory.org/" target="_blank">world history</a></li>
+        <li><a href="https://stars.chromeexperiments.com/" target="_blank">stars</a></li>
+        <li><a href="https://www.zergnet.com/" target="_blank">zergnet</a></li>
+        <li><a href="https://www.urbandictionary.com/" target="_blank">urban dictionary</a></li>
+        <li><a href="https://www.npr.org/" target="_blank">npr</a></li>
+        <li><a href="https://informationisbeautiful.net/visualizations/common-mythconceptions/" target="_blank">info
+            beautiful</a></li>
+        <li><a href="https://www.vintag.es/" target="_blank">vintage</a></li>
+        <li><a href="https://www.pastemagazine.com/" target="_blank">paste</a></li>
+
+        <li><a href="https://www.smithsonianmag.com/category/art-artists/" target="_blank">smithsonian</a></li>
+        <li><a href="https://www.quantamagazine.org/" target="_blank">quanta</a></li>
+        <li><a href="https://www.boredpanda.com/?utm_source=kurziokode.github&utm_medium=referral&utm_campaign=organic"
+            target="_blank">bored panda</a></li>
+        <li><a href="https://www.tcj.com/" target="_blank">tcj</a></li>
+        <li><a href="https://www.goodreads.com/author/quotes/10401.James_Gleick" target="_blank">goodreads</a></li>
+        <li><a href="https://www.ebaumsworld.com/newest/all/" target="_blank">ebaums world</a></li>
+        <li><a href="https://www.livescience.com/history" target="_blank">live science</a></li>
+        <li><a href="https://www.nowness.com/" target="_blank">nowness</a></li>
+        <li><a href="https://www.visualcapitalist.com/category/misc/maps/" target="_blank">visual capitalist</a></li>
+        <li><a href="https://www.wired.com/magazine/" target="_blank">wired</a></li>
+        <li><a href="https://www.vox.com/culture" target="_blank">vox</a></li>
+        <li><a href="https://www.bbc.com/culture" target="_blank">bbc</a></li>
+        <li><a href="https://bestimmung.blogspot.com/" target="_blank">bestimmung</a></li>
+        <li><a href="https://www.theguardian.com/uk/culture" target="_blank">guardian</a></li>
+        <li><a href="https://imgur.com/t/funny?source=featured_tag_module" target="_blank">imgur</a></li>
+        <li><a href="https://www.propublica.org/topics/technology" target="_blank">propublica</a></li>
+        <li><a href="https://www.nationalgeographic.com/history" target="_blank">national geographic</a></li>
+        <li><a href="https://variety.com/" target="_blank">variety</a></li>
+        <li><a href="https://www.factinate.com/" target="_blank">factinate</a></li>
+
+      </ul>
+
+    </div>
+    <div class="section" id="section3">
+
+      <br><br><br><br><br><br><a href="#section1" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Arts</a>
+      <a href="#section2" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Read</a>
+      <a href="#" style="color: purple;">&nbsp;&nbsp;&nbsp;AVisual</a>
+      <a href="#section4" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Studio</a>
+      <h2 style="text-align: center; color: purple;">Audio</h2>
+      <ul class="grid2" style="text-align: center;">
+        <li><a href="https://www.grittyrockradio.com/en" target="_blank">gritty</a></li>
+        <li><a href="https://radioparadise.com/player/slideshow/main-mix" target="_blank">paradise</a></li>
+        <li><a href="https://www.mixcloud.com/Sauvagesradio/" target="_blank">sauvages</a></li>
+        <li><a href="https://www.ertecho.gr/radio/kosmos-jazz/player/" target="_blank">jazz</a></li>
+        <li><a
+            href="https://e1.pcloud.link/publink/show?code=kZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk#returl=https%3A//e1.pcloud.link/publink/show%3Fcode%3DkZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk&page=login"
+            target="_blank">mp3</a></li>
+        <li><a href="https://e1.pcloud.link/publink/show?code=kZNMWRZXJ8HziXJM55TKQzg6hqV34kCT5TX"
+            target="_blank">mp4</a>
+        </li>
+        <li><a
+            href="https://swans.bandcamp.com/album/the-glowing-man?from=search&search_item_id=2544108859&search_item_type=a&search_match_part=%3F&search_page_id=2099377261&search_page_no=0&search_rank=3&logged_out_menubar=true"
+            target="_blank">bandcamp</a></li>
+        <li><a href="https://www.last.fm/music/Swans/+tracks?date_preset=LAST_7_DAYS&page=1" target="_blank">lastfm</a>
+        </li>
+        <li><a href="https://soundcloud.com/swansofficial" target="_blank">soundcloud</a></li>
+
+      </ul>
+      <br><br>
+      <h2 style="text-align: center; color: purple;">Visual</h2>
+
+
+      <ul class="grid2" style="text-align: center;">
+
+        <li><a href="https://www.ertflix.gr/epg/now-on-tv" target="_blank">ertflix</a></li>
+        <li><a href="https://voody-online.com/" target="_blank">voody</a></li>
+        <li><a href="https://gamatotv.pro/" target="_blank">gamato</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLfUDdnIv_Ozp3dhdrjheLNRgjgR7_4bMd" target="_blank">noir</a>
+        </li>
+        <li><a href="https://tainio-mania.online/" target="_blank">mania</a></li>
+        <li><a href="https://filmatic.online/" target="_blank">filmatic</a></li>
+        <li><a href="https://xrysoi.pro/" target="_blank">gold</a></li>
+        <li><a href="https://www.imdb.com/?ref_=nv_home" target="_blank">imdb</a></li>
+        <li><a href="https://www.rottentomatoes.com/" target="_blank">rotten</a></li>
+
+      </ul>
+
+    </div>
+
+    <div class="section" id="section4">
+
+      <br><br><br><br><br><br><a href="#section1" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Arts</a>
+      <a href="#section2" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;Read</a>
+      <a href="#section3" style="color: rgb(58, 59, 58);">&nbsp;&nbsp;&nbsp;AVisual</a>
+      <a href="#" style="color: purple;">&nbsp;&nbsp;&nbsp;Studio</a>
+      <h2 style="text-align: center; color: purple;">Studio</h2>
+      <ul class="grid2" style="text-align: center;">
+
+        <li><a href="https://duckduckgo.com/" target="_blank">duckduckgo</a></li>
+       <li><a href="https://www.deepl.com/translator" target="_blank">deepl</a></li>
+        <li><a href="https://you.com/" target="_blank">you com</a></li>
+        <li><a href="https://metaphor.systems/" target="_blank">metaphor</a></li>
+        <li><a href="https://lexica.art/" target="_blank">lexica</a>
+        </li>
+        <li><a href="https://playgroundai.com/" target="_blank">playgroundai</a></li>
+        <li><a href="https://www.instantstreetview.com/" target="_blank">streetview</a></li>
+        <li><a href="https://github.com/kurziokode/kurziokode.github.io" target="_blank">github</a></li>
+        <li><a href="https://codepen.io/pen/" target="_blank">codepen</a>
+        </li>
+        <li><a href="https://neocities.org/dashboard" target="_blank">neocities</a></li>
+        <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">mail</a></li>
+        <li><a
+            href="https://www.pcsteps.gr/853-%ce%b3%cf%81%ce%b1%ce%bc%ce%bc%ce%ae-%ce%b5%ce%bd%cf%84%ce%bf%ce%bb%cf%8e%ce%bd-%cf%83%cf%84%ce%b1-windows/?utm_source=getresponse&amp;utm_medium=email&amp;utm_campaign=pcsteps_gr&amp;utm_content=%CE%A0%CE%B5%CF%81%CE%B9%CF%83%CF%83%CF%8C%CF%84%CE%B5%CF%81%CE%BF%CF%82+%CE%A7%CF%8E%CF%81%CE%BF%CF%82+%CE%A3%CF%84%CE%BF+%CE%94%CE%AF%CF%83%CE%BA%CE%BF+%26+%CF%84%CE%B1+%CE%9D%CE%B5%CF%8C%CF%84%CE%B5%CF%81%CE%B1+%CE%86%CF%81%CE%B8%CF%81%CE%B1+%CF%84%CE%BF%CF%85+%5B%5Brss_title%5D%5D"
+            target="_blank">terminal</a>
+        </li>
+        <li><a href="https://www.webnots.com/200-run-commands-for-windows-10/" target="_blank">run commands</a></li>
+        <li><a
+            href="https://support.microsoft.com/el-gr/windows/%CF%83%CF%85%CE%BD%CF%84%CE%BF%CE%BC%CE%B5%CF%8D%CF%83%CE%B5%CE%B9%CF%82-%CF%80%CE%BB%CE%B7%CE%BA%CF%84%CF%81%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%BF%CF%85-%CF%83%CF%84%CE%B1-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec#WindowsVersion=Windows_10"
+            target="_blank">shortcuts</a></li>
+        <li><a href="https://metager.org/" target="_blank">metager</a></li>
+        <li><a href="https://webmaker.app/app/" target="_blank">webmaker</a></li>
+        <li><a href="https://blackscreen.app/" target="_blank">blackscreen</a></li>
+        <li><a href="https://fontawesome.com/v4/icons/" target="_blank">icons</a></li>
+        <li><a href="https://wepik.com/" target="_blank">wepik</a></li>
+        <li><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">colors</a>
+        </li>
+        <li><a href="https://watermarkly.com/add-text-to-photo/" target="_blank">text to photo</a></li>
+        <li><a href="https://pinetools.com/overlay-images" target="_blank">overlay</a></li>
+        <li><a href="https://www.canva.com/el_gr/" target="_blank">canva</a></li>
+        <li><a href="https://compress-or-die.com/jpg" target="_blank">compress</a></li>
+        <li><a href="https://tools.pingdom.com/" target="_blank">pingdom
+          </a></li>
+        <li><a href="https://www.photoenlarger.com/" target="_blank">photoenlarger</a></li>
+        <li><a href="https://pagespeed.web.dev/" target="_blank">pagespeed</a></li>
+
+      </ul>
+
+    </div>
+
+    <article style="text-align: center;"><br><br>
+
+         <a href="#section1" style="color: rgb(2, 100, 10); font-size: x-large;">▲</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank"
+        style="color: rgb(2, 100, 10); font-size: large;"><i class="fa fa-envelope"></i></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/infodark.html#" target="_blank"
+        style="color: rgb(2, 100, 10); font-size: large;"><i class="fa fa-paper-plane"></i></a>
+
+      <br><br><br><br><a href="https://kurziokode.github.io/nemo.html" target="_blank" style="color: #252725;">Copyright © 2023
+        C.Doulos</a>
+    
+    </article>
+
+    <div>
+      <button class="button2" style="position: fixed; top:3%; right:12%;" onclick="openPages()">&#9776;</button>
+  
+      <h5 style="position: fixed; top:50%; right:7%; transform: translateY(-50%) rotate(-90deg);">
+        curzio</h5>
+    </div>
+
+    <script>
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+        var menu = document.getElementById("rightClickMenu");
+        menu.style.top = event.pageY + "px";
+        menu.style.left = event.pageX + "px";
+        menu.style.display = "block";
+      });
+
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("rightClickMenu");
+        if (menu) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+    
+<script>
+  var fullscreenBtn = document.querySelector('#fullscreen-btn');
+  var exitFullscreenBtn = document.querySelector('#exit-fullscreen-btn');
+  var elem = document.documentElement;
+
+  // Enter full-screen mode
+  fullscreenBtn.addEventListener('click', function () {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  });
+
+  // Exit full-screen mode
+  exitFullscreenBtn.addEventListener('click', function () {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  });
+</script>
+  <script>
+
+   var backgroundImageIndex = 0;
+var backgroundImages = [
+    "https://kurziokode.github.io/woman.jpg",
+    "https://kurziokode.github.io/met.jpg",
+    "https://kurziokode.github.io/woman.jpg",
+    "https://kurziokode.github.io/met.jpg"
+];
+
+function changeBackground(event) {
+    var distanceFromLeftEdge = event.clientX;
+    if (distanceFromLeftEdge <= 0) {
+        backgroundImageIndex++;
+        if (backgroundImageIndex >= backgroundImages.length) {
+            backgroundImageIndex = 0;
+        }
+        document.body.style.backgroundImage = "url('" + backgroundImages[backgroundImageIndex] + "')";
+    }
+}
+
+  </script>        
+   <script> 
+
+function openPages() {
+  // Open first page with specific size and position in the middle (left page)
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  var page1Left = (screenWidth / 2) - 585; // Adjust the value to center the left page horizontally
+  var page1Top = (screenHeight / 2) - 405; // Adjust the value to center the left page vertically
+  var page1 = window.open('https://kurziokode.github.io/infoslide.html', 'Page 1', 'width=580,height=840,left=' + page1Left + ',top=' + page1Top);
+
+  // Open second page with specific size and position in the middle (right page)
+  var page2Left = (screenWidth / 2) - 0; // Adjust the value to position the right page
+  var page2Top = (screenHeight / 2) - 405; // Adjust the value to center the right page vertically
+  var page2 = window.open('https://kurziokode.github.io/infoslide2.html', 'Page 2', 'width=580,height=840,left=' + page2Left + ',top=' + page2Top);
+}
+
+</script>   
+ 
+</body>
+
+</html>
