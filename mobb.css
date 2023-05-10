@@ -1,0 +1,328 @@
+/* Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. */
+
+* {
+	margin: 0;
+	padding: 0;
+	cursor: url('https://kurziokode.github.io/curs2.png'), auto;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+	
+}
+
+body {
+	background-color: transparent;
+	background-image: url(https://kurziokode.github.io/woman.jpg);
+	background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            transition: background-image 0.7s ease;
+	 font-family: Arial, sans-serif;
+	font-size: 16px;
+	
+}
+
+ button {
+      font-size: 20px;
+      padding: 15px;
+      background-color: #0b0c0e;
+      color: #02640a;
+      border: none;
+      cursor: pointer;
+    }
+
+
+a {
+	color: #4d004d;
+	text-decoration: none;
+        font-size: 14px;
+	-webkit-transition: 0.15s color ease;
+	   -moz-transition: 0.15s color ease;
+	    -ms-transition: 0.15s color ease;
+	     -o-transition: 0.15s color ease;
+	        transition: 0.15s color ease;
+}
+	a:hover {
+		color: #049510;
+	}
+         a.active {
+  color: #00e600;
+}
+
+
+
+h1,
+h2 {
+	font-size: 24px;
+}
+
+
+h5 {
+  font-size: calc(100vw /7);
+  font-weight: 900;
+  color: #001a00;
+  opacity: 0.45;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/curs2.png'), auto !important;
+
+}
+
+h6 {
+  font-size: calc(100vw /27);
+  font-weight: 900;
+  color: #660066;
+  opacity: 0.15;
+  user-select: none;
+  cursor: default !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+
+
+}
+
+
+.button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: Arial;
+  width: 105px;
+  height: 38px;
+  border-width: 0px;
+  color: #000000;
+  text-align: center;
+  border-color: #a511c0;
+  font-weight: bold;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+  border-bottom-left-radius: 42px;
+  border-bottom-right-radius: 42px;
+  box-shadow: inset 0px 1px 0px 0px #760e8b;
+  background: linear-gradient(#3a0a43, #290330);
+}
+
+
+.button2:hover {
+  color:#049510;	
+  background: linear-gradient(#130316, #150218);
+}
+              
+.curz {
+	display: none;
+	padding: 20px;
+	overflow: auto;
+	background: #0b0c0e;
+	color: #474c52;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+	.curz ul {
+		margin-top: 10px;
+	}
+		.curz ul li {
+			display: inline-block;
+			width: 200px;
+			list-style: none;
+			font-size: 19px;
+			padding: 3px 10px;
+		}
+			.curz ul li:before {
+				content: '';
+				margin-right: 5px;
+				color: rgba( 255, 255, 255, 0.2 );
+			}
+
+
+.curz-arrow {
+	position: absolute;
+	z-index: 10;
+
+	border: 10px solid transparent;
+
+	-webkit-transition: opacity 0.4s ease 0.4s;
+	   -moz-transition: opacity 0.4s ease 0.4s;
+	    -ms-transition: opacity 0.4s ease 0.4s;
+	     -o-transition: opacity 0.4s ease 0.4s;
+	        transition: opacity 0.4s ease 0.4s;
+}
+	.curz-left .curz-arrow {
+		left: 20px;
+		top: 50%;
+		margin-top: -16px;
+		border-left: 16px solid #334d00;
+	}
+	.curz-right .curz-arrow {
+		right: 20px;
+		top: 50%;
+		margin-top: -16px;
+		border-right: 16px solid #02640a;
+	}
+	.curz-top .curz-arrow {
+		left: 50%;
+		top: 20px;
+		margin-left: -16px;
+		border-top: 16px solid #334d00;
+	}
+	.curz-bottom .curz-arrow {
+		left: 50%;
+		bottom: 14px;
+		margin-left: -16px;
+		border-bottom: 16px solid #333;
+	}
+	.curz-active .curz-arrow {
+		opacity: 0;
+
+		-webkit-transition: opacity 0.2s ease;
+		   -moz-transition: opacity 0.2s ease;
+		    -ms-transition: opacity 0.2s ease;
+		     -o-transition: opacity 0.2s ease;
+		        transition: opacity 0.2s ease;
+	}
+
+
+.contents {
+	background: transparent;
+	padding: 20px 40px;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform-style: preserve-3d;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+	.contents>article {
+		max-width: 400px;
+	}
+	.contents p {
+		margin: 10px 0 10px 0;
+		font-size: 16px;
+		line-height: 1.32;
+	}
+	.contents small {
+		display: block;
+		margin-top: 10px;
+		padding-top: 10px;
+		color: #474c52;
+		font-size: 0.9em;
+		border-top: 1px dashed transparent;
+
+		-webkit-text-size-adjust: none;
+	}
+	.contents .sharing {
+		position: absolute;
+		bottom: 30px;
+	}
+
+@media screen and (min-width: 1922px) {
+  body {
+    filter: brightness(2.5);
+	filter: contrast(2);  
+  }
+}
+
+
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 575px) {
+ 
+  h1 {
+    font-size: 24px; /* Change font size */
+    color: #3a3b3a;/* Change font color */
+  }
+  p {
+    font-size: 16px; /* Change font size */
+    color: #3a3b3a; /* Change font color */
+  }
+  a {
+    font-size: 16px; /* Change font size */
+   color: #3a3b3a;/* Change font color */
+  }
+}
+
+
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+  h1 {
+    font-size: 32px; /* Change font size */
+     color: #3a3b3a;/* Change font color */
+  }
+  p {
+    font-size: 18px; /* Change font size */
+    color: #3a3b3a;/* Change font color */
+  }
+  a {
+    font-size: 18px; /* Change font size */
+    color: #3a3b3a;/* Change font color */
+  }
+}
+
+/* Medium devices (laptops) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  h1 {
+    font-size: 48px; /* Change font size */
+    /* Change font color */
+  }
+  p {
+    font-size: 20px; /* Change font size */
+    /* Change font color */
+  }
+  a {
+    font-size: 20px; /* Change font size */
+    /* Change font color */
+  }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 992px) {
+
+  h1 {
+    font-size: 64px; /* Change font size */
+     /* Change font color */
+  }
+  p {
+    font-size: 22px; /* Change font size */
+     /* Change font color */
+  }
+  a {
+    font-size: 22px; /* Change font size */
+    /* Change font color */
+  }
+}
+
+
+
+
+
+
