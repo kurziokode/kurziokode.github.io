@@ -47,14 +47,8 @@ body {
 
 
 a {
-	  color: transparent;
-  background: linear-gradient(
-    to right, 
-    #3a0a43, 
-    #004d00
-  ) !important;
-  -webkit-background-clip: text;
-	
+
+	color: #004d00;
 	text-decoration: none;
         font-size: 14px;
 	-webkit-transition: 0.15s color ease;
