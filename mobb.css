@@ -107,7 +107,7 @@ h8 {
     to right, 
     #3a0a43, 
     #004d00
-  );
+  ) !important;
   -webkit-background-clip: text;
 }
 
