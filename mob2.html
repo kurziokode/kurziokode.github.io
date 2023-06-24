@@ -201,7 +201,41 @@ strictly prohibited. -->
         }
     </script>
 
-    
+       <script>
+        
+        var curz = Curz.create({
+           
+            menuElement: document.querySelector('.curz'),
+
+          
+            contentsElement: document.querySelector('.contents'),
+
+          
+            position: Curz.getQuery().p || 'left',
+
+           
+            height: 200,
+
+          
+            width: 260,
+
+         
+            threshold: 40,
+
+           
+            mouse: true,
+
+          
+            touch: true
+        });
+
+        if (Curz.getQuery().u && Curz.getQuery().u.match(/^http/gi)) {
+            var contents = document.querySelector('.contents');
+            contents.style.padding = '0px';
+            contents.innerHTML = '<div class="cover"></div><iframe src="' + Curz.getQuery().u +
+                '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+        }
+    </script>
       <script>
       document.addEventListener("contextmenu", function (event) {
         event.preventDefault();
