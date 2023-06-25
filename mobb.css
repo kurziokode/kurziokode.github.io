@@ -130,6 +130,36 @@ h6 {
   color:#049510;	
   background: linear-gradient(#130316, #150218);
 }
+
+
+.button22 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: Arial;
+  width: 105px;
+  height: 38px;
+  border-width: 0px;
+  color: #000000;
+  text-align: center;
+  border-color: #a511c0;
+  font-weight: bold;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+  border-bottom-left-radius: 42px;
+  border-bottom-right-radius: 42px;
+  box-shadow: inset 0px 1px 0px 0px #760e8b;
+  background: linear-gradient(#323232, #262626);
+}
+
+
+.button22:hover {
+  color:#049510;	
+  background: linear-gradient(#130316, #150218);
+}
+
+
  /* Media query for smaller screens */
 @media (max-width: 767px) {
   .button2 {
