@@ -143,14 +143,14 @@ h6 {
   border-width: 0px;
   color: #000000;
   text-align: center;
-  border-color: #a511c0;
+  border-color: #737373;
   font-weight: bold;
   border-top-left-radius: 42px;
   border-top-right-radius: 42px;
   border-bottom-left-radius: 42px;
   border-bottom-right-radius: 42px;
-  box-shadow: inset 0px 1px 0px 0px #760e8b;
-  background: linear-gradient(#323232, #262626);
+  box-shadow: inset 0px 1px 0px 0px #4d4d4d;
+  background: linear-gradient(#1a1a1a, #262626);
 }
 
 
