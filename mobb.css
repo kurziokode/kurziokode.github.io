@@ -184,7 +184,36 @@ h6 {
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
   }
-}             
+}  
+
+
+ /* Media query for smaller screens */
+@media (max-width: 767px) {
+  .button22 {
+    font-size: 14px;
+    width: 90px;
+    height: 32px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .button22 {
+    font-size: 14px;
+    width: 90px;
+    height: 32px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+}   
+
+
 .curz {
 	display: none;
 	padding: 20px;
