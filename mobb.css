@@ -81,7 +81,7 @@ h5 {
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
   white-space: nowrap;
   z-index: -1;
   cursor: url('https://kurziokode.github.io/curs2.png'), auto !important;
