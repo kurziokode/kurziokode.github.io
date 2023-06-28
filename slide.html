@@ -295,7 +295,7 @@ strictly prohibited. -->
       
       </div>     
  
-     <h5  id="Abyss" style="position: fixed; top:0%; left:2%; transform: translateY(-0%) rotate(-0deg);"><span class="first-letter">A</span>byss</h5>
+     <h5 style="position: fixed; top:0%; left:2%; transform: translateY(-0%) rotate(-0deg);"><span class="first-letter">A</span>byss</h5>
    
     <h8><a href="https://kurziokode.github.io/nemo.html" target="_blank" class="hover-link" style="color: #003300; text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); position: fixed; bottom:12%; right:11%;">© 2023 <span class="first-letter">C</span>hris <span class="first-letter">D</span>oulos</a>
     <img src="https://kurziokode.github.io/copy.jpg" alt="Image" class="hover-image"></h8>
@@ -452,29 +452,7 @@ function openNewWindow(url, w, h) {
   // play the animation
   animation.play();
 </script> 
-   <script>
-    function handleClick() {
-      // Perform actions when the letter is clicked
-      // Replace the alert with your desired functionality
-      alert("The letter 'y' was clicked!");
-    }
 
-    document.addEventListener("DOMContentLoaded", function() {
-      var AbyssElement = document.getElementById("Abyss");
-      var text = AbyssElement.innerHTML;
-      var modifiedText = "";
-
-      for (var i = 0; i < text.length; i++) {
-        if (text[i].toLowerCase() === "y") {
-          modifiedText += "<a href='https://blackscreen.app/' onclick='handleClick();'>" + text[i] + "</a>";
-        } else {
-          modifiedText += text[i];
-        }
-      }
-
-      AbyssElement.innerHTML = modifiedText;
-    });
-  </script> 
 </body>
 
 </html>
