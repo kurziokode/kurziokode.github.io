@@ -453,12 +453,15 @@ function openNewWindow(url, w, h) {
   // play the animation
   animation.play();
 </script> 
- <script>
+  <script>
     // Function to display the text message
     function displayMessage() {
       var messageElement = document.getElementById("message");
-      messageElement.innerHTML = "Your text message here";
+      messageElement.textContent = "Your text message here";
     }
+
+    // Call the displayMessage() function immediately
+    displayMessage();
 
     // Call the displayMessage() function every 10 seconds
     setInterval(displayMessage, 10000);
