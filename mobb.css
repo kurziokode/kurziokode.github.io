@@ -351,9 +351,10 @@ h6 {
     font-size: 16px; /* Change font size */
    color: #3a3b3a;/* Change font color */
   }
+  h5 {
+    display: none;
+  }
 }
-
-
 
 /* Small devices (tablets) */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
