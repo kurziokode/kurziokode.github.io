@@ -458,6 +458,12 @@ function openNewWindow(url, w, h) {
     function displayMessage() {
       var messageElement = document.getElementById("message");
       messageElement.textContent = "Your text message here";
+      messageElement.style.display = "block";
+
+      // Hide the message after 5 seconds
+      setTimeout(function() {
+        messageElement.style.display = "none";
+      }, 5000);
 
       // Call the displayMessage() function again after 10 seconds
       setTimeout(displayMessage, 10000);
