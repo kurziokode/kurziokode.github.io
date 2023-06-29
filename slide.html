@@ -471,7 +471,7 @@ function openNewWindow(url, w, h) {
       var linkElement = document.createElement("a");
       linkElement.textContent = "NETFLIX";
       linkElement.href = "https://www.netflix.com/browse"; // Replace with your desired link URL
-
+      linkElement.target = "_blank"; // Open in a new tab
       // Clear previous content
       messageElement.innerHTML = '';
 
