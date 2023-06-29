@@ -177,7 +177,7 @@ strictly prohibited. -->
 </head>
 
 <body>
-
+  <div id="message"></div>
    <div id="rightClickMenu">
 
 
@@ -453,7 +453,16 @@ function openNewWindow(url, w, h) {
   // play the animation
   animation.play();
 </script> 
+ <script>
+    // Function to display the text message
+    function displayMessage() {
+      var messageElement = document.getElementById("message");
+      messageElement.innerHTML = "Your text message here";
+    }
 
+    // Call the displayMessage() function every 10 seconds
+    setInterval(displayMessage, 10000);
+  </script>
 </body>
 
 </html>
