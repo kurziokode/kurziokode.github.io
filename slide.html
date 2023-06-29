@@ -34,6 +34,15 @@ strictly prohibited. -->
       text-align: center;
       margin-top: 20px;
     }
+
+  #message2 {
+      display: none;
+     
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+      
   </style>
      <style>
     #rightClickMenu {
@@ -468,6 +477,35 @@ function openNewWindow(url, w, h) {
       var linkElement = document.createElement("a");
       linkElement.textContent = "Infinite Loop";
       linkElement.href = "https://kurziokode.github.io/lloopp.html"; // Replace with your desired link URL
+
+      // Clear previous content
+      messageElement.innerHTML = '';
+
+      // Append the link element to the message element
+      messageElement.appendChild(linkElement);
+
+      // Show the message
+      messageElement.style.display = "block";
+
+      // Hide the message after 5 seconds
+      setTimeout(function() {
+        messageElement.style.display = "none";
+      }, 5000);
+
+      // Call the displayMessage() function again after 10 seconds
+      setTimeout(displayMessage, 10000);
+    }
+
+    // Initial call to start displaying the message
+    displayMessage();
+  </script>
+     <script>
+    // Function to display the text message
+    function displayMessage() {
+      var messageElement = document.getElementById("message2");
+      var linkElement = document.createElement("a");
+      linkElement.textContent = "Exit Loop";
+      linkElement.href = "https://kurziokode.github.io/slide.html"; // Replace with your desired link URL
 
       // Clear previous content
       messageElement.innerHTML = '';
