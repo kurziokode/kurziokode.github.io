@@ -467,7 +467,6 @@ function openNewWindow(url, w, h) {
   // play the animation
   animation.play();
 </script> 
-  
   <script>
     // Function to display the image and text
     function displayContent() {
@@ -478,18 +477,19 @@ function openNewWindow(url, w, h) {
 
       // Create a container div
       var containerElement = document.createElement("div");
+      containerElement.classList.add("content-container");
 
       // Create the text element
       var textElement = document.createElement("span");
       var linkElement = document.createElement("a");
-      linkElement.href = "https://www.netflix.com/browse"; // Replace with your desired link URL
+      linkElement.href = "https://example.com"; // Replace with your desired link URL
       linkElement.target = "_blank"; // Open in a new tab
-      linkElement.textContent = "NETFLIX";
+      linkElement.textContent = "Your text message here";
       textElement.appendChild(linkElement);
 
       // Create the image element
       var imageElement = document.createElement("img");
-      imageElement.src = " https://kurziokode.github.io/net.png "; // Replace with the path to your PNG image
+      imageElement.src = "path/to/your/image.png"; // Replace with the path to your PNG image
 
       // Wrap the image element with an anchor tag
       var imageLinkElement = document.createElement("a");
@@ -513,7 +513,7 @@ function openNewWindow(url, w, h) {
       }, 5000);
 
       // Call the displayContent() function again after 10 seconds
-      setTimeout(displayContent, 30000);
+      setTimeout(displayContent, 10000);
     }
 
     // Initial call to start displaying the content
