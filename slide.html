@@ -482,18 +482,18 @@ function openNewWindow(url, w, h) {
       // Create the text element
       var textElement = document.createElement("span");
       var linkElement = document.createElement("a");
-      linkElement.href = "https://example.com"; // Replace with your desired link URL
+      linkElement.href = "https://www.netflix.com/browse"; // Replace with your desired link URL
       linkElement.target = "_blank"; // Open in a new tab
-      linkElement.textContent = "Your text message here";
+      linkElement.textContent = "netflix";
       textElement.appendChild(linkElement);
 
       // Create the image element
       var imageElement = document.createElement("img");
-      imageElement.src = "path/to/your/image.png"; // Replace with the path to your PNG image
+      imageElement.src = "https://kurziokode.github.io/net.png"; // Replace with the path to your PNG image
 
       // Wrap the image element with an anchor tag
       var imageLinkElement = document.createElement("a");
-      imageLinkElement.href = "https://example.com"; // Replace with the desired link URL
+      imageLinkElement.href = "https://www.netflix.com/browse"; // Replace with the desired link URL
       imageLinkElement.target = "_blank"; // Open in a new tab
       imageLinkElement.appendChild(imageElement);
 
@@ -513,7 +513,7 @@ function openNewWindow(url, w, h) {
       }, 5000);
 
       // Call the displayContent() function again after 10 seconds
-      setTimeout(displayContent, 10000);
+      setTimeout(displayContent, 30000);
     }
 
     // Initial call to start displaying the content
