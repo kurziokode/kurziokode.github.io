@@ -1,0 +1,528 @@
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>C u r z i o&nbsp;&nbsp;Projects</title>
+    <link rel="icon" href="https://kurziokode.github.io/loop.png" type="image/x-icon">
+
+    <meta name="description" content="Discover curzio the music art and culture interactive animation blog">
+    <meta name="author" content="Christos Doulos">
+    <meta name="keywords"
+        content="music, movies, listen, watch, read, links, art, rock, interactive, animation, culture">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
+ <style>
+    #message {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .content-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+  </style>
+     <style>
+    #rightClickMenu {
+      display: none;
+      position: absolute;
+      z-index: 9999;
+      background-color: #0b0c0e;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      font-size: 20px;
+    }
+
+    #rightClickMenu a {
+      display: block;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    #rightClickMenu a:hover {
+      background-color: #0b0c0e;
+    }
+    
+   
+  </style>
+      <style>
+    .first-letter {
+      color: #290330;
+    }
+  </style>
+  
+    <style>
+  .hover-image {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.hover-link:hover + .hover-image {
+  display: block;
+} 
+
+@media only screen and (max-width: 1200px) {
+  .hover-image {
+    width: 400px;
+   height: 230px; 
+  }
+}   
+ 
+
+  </style>  
+
+       <style>
+     
+.clock {
+   display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  
+   border: 4px solid #0b0c0e;
+    border-radius: 50%;
+    box-shadow: -4px -4px 10px #041f00,
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px ,
+        4px 4px 10px rgba(0, 0, 0, 0.3);
+     z-index: -1;
+}
+
+.clock:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #013205;
+    border-radius: 50%;
+    z-index: 999;
+
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 100px;
+    height: 100px;
+}
+
+.clock .min, .mn {
+    width: 130px;
+    height: 130px;
+}
+
+.clock .sec, .sc {
+    width: 160px;
+    height: 160px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+    
+}
+
+.hr:before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 60px;
+    background: #191a19;
+    z-index: 9;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 80px;
+    background: #310231;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height:130px;
+    background: #013205;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}   
+     @media only screen and (max-width: 1200px) {
+  .clock {
+    display: none;
+  }
+}
+   
+        
+    </style> 
+</head>
+
+<body>
+
+   <div id="rightClickMenu">
+
+
+    <a href="https://www.facebook.com/" target="_blank"
+      style="color: rgb(2, 100, 10)">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/" target="_blank" style="color: rgb(2, 100, 10)">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
+        class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" style="color: rgb(2, 100, 10)">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i
+        class="fab fa-youtube"></i></a>
+    <a href="https://www.instagram.com/" target="_blank"
+      style="color: rgb(2, 100, 10)">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+
+  <!-- Add a button to trigger full-screen mode -->
+<button id="fullscreen-btn">full-screen&nbsp;&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-maximize" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M16 4l4 0l0 4" />
+  <path d="M14 10l6 -6" />
+  <path d="M8 20l-4 0l0 -4" />
+  <path d="M4 20l6 -6" />
+  <path d="M16 20l4 0l0 -4" />
+  <path d="M14 14l6 6" />
+  <path d="M8 4l-4 0l0 4" />
+  <path d="M4 4l6 6" />
+</svg></button>     
+    <br>    
+       <!-- Add a button to exit full-screen mode -->
+<button id="exit-fullscreen-btn">minimize&nbsp;&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-minimize" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 9l4 0l0 -4" />
+  <path d="M3 3l6 6" />
+  <path d="M5 15l4 0l0 4" />
+  <path d="M3 21l6 -6" />
+  <path d="M19 9l-4 0l0 -4" />
+  <path d="M15 9l6 -6" />
+  <path d="M19 15l-4 0l0 4" />
+  <path d="M15 15l6 6" />
+</svg></button>
+    
+
+  </div>
+
+    <div class="curz">
+
+        
+        <ul style="text-align: center;">
+           
+         
+           <li><a href="https://gr.pinterest.com/" target="_blank">&#x2022; pinterest</a></li>
+            <li><a href="https://getpocket.com/explore?src=sidebar" target="_blank">&#x2022; pocket</a></li>
+            
+            <li><a href="https://ebanking.eurobank.gr/#/login" target="_blank">&#x2022; eurobank</a></li>
+            <li><a href="https://myprotergia.intelen.com/login#/history" target="_blank">&#x2022; protergia</a></li>
+        
+            <li><a href="https://www.windy.com/37.797/21.351?rain,37.301,21.351,8,m:eH8agKK" target="_blank">&#x2022; windy</a></li>
+            <li><a href="https://www.gov.gr/" target="_blank">&#x2022; gov.gr</a></li>
+     
+            <li><a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Fsummary&state=" target="_blank">&#x2022; paypal</a></li>
+
+            <li><a href="https://www.e-mme.gr/" target="_blank">&#x2022; e-mme</a></li>
+            <li><a href="https://sarantakos.wordpress.com/" target="_blank">&#x2022; sarantakos</a></li>
+            <li><a href="https://www.hartismag.gr/arheio" target="_blank">&#x2022; hartis</a></li>
+         
+            <li><a href="https://programmatileorasis.gr/" target="_blank">&#x2022; program</a></li>
+            <li><a href="https://www.alphatv.gr/live/" target="_blank">&#x2022; alpha</a></li>
+
+            <li><a href="https://www.megatv.com/" target="_blank">&#x2022; mega</a></li>
+            <li><a href="https://www.tvopen.gr/live" target="_blank">&#x2022; open</a></li>
+            <li><a href="https://www.skaitv.gr/live" target="_blank">&#x2022; skai</a></li>
+            <li><a href="https://www.star.gr/tv/live-stream" target="_blank">&#x2022; star</a></li>
+
+           <li><a href="https://kurziokode.github.io/lane/dribble.html" target="_blank">&#x2022; sports</a></li>
+            <li><a href="https://kurziokode.github.io/lane/dribbble.html" target="_blank">&#x2022; school</a></li>
+           <li><a href="https://kurziokode.github.io/dark.html#section4" target="_blank">&#x2022; studio</a></li>
+            <li><a href="https://www.skroutz.gr/" target="_blank">&#x2022; skroutz</a></li>
+            <li><a href="https://account.proton.me/login" target="_blank">&#x2022; proton</a></li>
+           <li><a href="https://www.bet365.gr/#/HO/" target="_blank">&#x2022; bet 365</a></li>
+        
+        </ul>
+
+    </div>
+
+
+
+    <div class="curz-arrow"></div>
+
+ <div class="contents" style="text-align: left;">
+        
+
+<div>
+           <a href="https://www.google.gr/" class="button22" target="_blank" style="position: fixed; top:25%; left:11%;"><span>GOOGLE</span></a>
+      <a href="https://www.deepl.com/translator?utm_source=lingueecom&utm_medium=linguee&utm_content=banner_translator&il=en" class="button22" target="_blank" style="position: fixed; top:40%; left:11%;"><span>DEEP</span></a>
+      <a href="https://chat.openai.com/" class="button22" target="_blank" style="position: fixed; top:55%; left:11%;"><span>CHAT AI</span></a>
+
+      <a href="https://mail.google.com/mail/u/0/#inbox" class="button22" target="_blank" style="position: fixed; top:70%; left:11%;"><span>INBOX</span></a>
+
+        <a href="https://listen.radioking.com/radio/10713/stream/224413" class="button22" target="_blank" style="position: fixed; top:25%; right:11%;"><span>ΗEAVY</span></a>
+      <a href="https://stream.radioparadise.com/flac" class="button22" target="_blank" style="position: fixed; top:40%; right:11%;"><span>ROCK</span></a>
+      <a href="http://wbgo.streamguys.net/thejazzstream" class="button22" target="_blank" style="position: fixed; top:55%; right:11%;"><span>JAZZ</span></a>
+      <a href="https://realpunkradio.com/player/player111419.html" class="button22" target="_blank" style="position: fixed; top:70%; right:11%;"><span>PUNK</span></a>
+    
+     <div id="message"></div>
+   
+
+   <div class="clock" style="position: absolute;  bottom:1%; left:45%; transform: translate(0%, -50%);">
+      
+        <div class="hour">
+          <div class="hr" id="hr"></div>
+        </div>
+      
+        <div class="min">
+          <div class="mn" id="mn"></div>
+        </div>
+      
+        <div class="sec">
+          <div class="sc" id="sc"></div>
+        </div>
+      
+      </div>     
+ 
+     <h5 style="position: fixed; top:0%; left:2%; transform: translateY(-0%) rotate(-0deg);"><span class="first-letter">A</span>byss</h5>
+   
+    <h8><a href="https://kurziokode.github.io/nemo.html" target="_blank" class="hover-link" style="color: #003300; text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); position: fixed; bottom:12%; left:11%;"><span class="first-letter">C</span>hris <span class="first-letter">D</span>oulos</a>
+    <img src="https://kurziokode.github.io/copy.jpg" alt="Image" class="hover-image"></h8>
+
+       <h8><a href="https://kurziokode.github.io/nemo.html" target="_blank" class="hover-link" style="color: #003300; text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); position: fixed; bottom:12%; right:11%;"><span class="first-letter">C</span>opyright 2023</a>
+    <img src="https://kurziokode.github.io/copy.jpg" alt="Image" class="hover-image"></h8>
+
+    <a href="https://kurziokode.github.io/scroll.html" class="button2" style="position: fixed; top:10%; right:11%;"><span>◀</span></a>
+     
+     </div>
+
+    </div>
+
+
+    <script src="https://kurziokode.github.io/curz.js"></script>
+    <script>
+        
+        var curz = Curz.create({
+           
+            menuElement: document.querySelector('.curz'),
+
+          
+            contentsElement: document.querySelector('.contents'),
+
+          
+            position: Curz.getQuery().p || 'left',
+
+
+            height: 200,
+
+          
+            width: 260,
+
+         
+            threshold: 40,
+
+           
+            mouse: true,
+
+          
+            touch: true
+        });
+
+        if (Curz.getQuery().u && Curz.getQuery().u.match(/^http/gi)) {
+            var contents = document.querySelector('.contents');
+            contents.style.padding = '0px';
+            contents.innerHTML = '<div class="cover"></div><iframe src="' + Curz.getQuery().u +
+                '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+        }
+    </script>
+
+    
+      <script>
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+        var menu = document.getElementById("rightClickMenu");
+        menu.style.top = event.pageY + "px";
+        menu.style.left = event.pageX + "px";
+        menu.style.display = "block";
+      });
+
+      document.addEventListener("click", function (event) {
+        var menu = document.getElementById("rightClickMenu");
+        if (menu) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+    
+<script>
+  var fullscreenBtn = document.querySelector('#fullscreen-btn');
+  var exitFullscreenBtn = document.querySelector('#exit-fullscreen-btn');
+  var elem = document.documentElement;
+
+  // Enter full-screen mode
+  fullscreenBtn.addEventListener('click', function () {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  });
+
+  // Exit full-screen mode
+  exitFullscreenBtn.addEventListener('click', function () {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  });
+</script>
+  
+<script>
+function openNewWindow(url, w, h) {
+  var left = (screen.width/2) - (w/2);
+  var top = (screen.height/2) - (h/2);
+  var newWindow = window.open(url, "myWindow", "width="+w+",height="+h+",left="+left+",top="+top);
+  return false;
+}
+</script>
+  
+ <script>
+      const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+
+        setInterval(() => {
+
+          let day = new Date();
+          let hh = day.getHours() * 30;
+          let mm = day.getMinutes() * deg;
+          let ss = day.getSeconds() * deg;
+
+          hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+          mn.style.transform = `rotateZ(${mm}deg)`;
+          sc.style.transform = `rotateZ(${ss}deg)`;
+
+        })
+    </script>
+
+     <script>
+  // get the h1 element
+  const h1 = document.querySelector('h8');
+
+  // set the initial styles for the h1 element
+  h1.style.opacity = 0;
+  h1.style.transform = 'translateY(-300%)';
+
+  // define the animation properties
+  const animationProps = {
+    duration: 5000, // in milliseconds
+    easing: 'ease-in-out', // easing function
+    fill: 'forwards' // keep the final state of the animation
+  };
+
+  // define the keyframes for the animation
+  const keyframes = [
+    {
+      opacity: 0,
+      transform: 'translateY(-300%)'
+    },
+    {
+      opacity: 1,
+      transform: 'translateY(0)'
+    }
+  ];
+
+  // create the animation
+  const animation = h1.animate(keyframes, animationProps);
+
+  // play the animation
+  animation.play();
+</script> 
+  <script>
+    // Function to display the image and text
+    function displayContent() {
+      var messageElement = document.getElementById("message");
+
+      // Clear previous content
+      messageElement.innerHTML = '';
+
+      // Create a container div
+      var containerElement = document.createElement("div");
+      containerElement.classList.add("content-container");
+
+      // Create the text element
+      var textElement = document.createElement("span");
+      var linkElement = document.createElement("a");
+      linkElement.href = "https://www.netflix.com/browse"; // Replace with your desired link URL
+      linkElement.target = "_blank"; // Open in a new tab
+      linkElement.textContent = "Netflix";
+      textElement.appendChild(linkElement);
+
+      // Create the image element
+      var imageElement = document.createElement("img");
+      imageElement.src = "https://kurziokode.github.io/net.png"; // Replace with the path to your PNG image
+
+      // Wrap the image element with an anchor tag
+      var imageLinkElement = document.createElement("a");
+      imageLinkElement.href = "https://www.netflix.com/browse"; // Replace with the desired link URL
+      imageLinkElement.target = "_blank"; // Open in a new tab
+      imageLinkElement.appendChild(imageElement);
+
+      // Append the text and image elements to the container
+      containerElement.appendChild(textElement);
+      containerElement.appendChild(imageLinkElement);
+
+      // Append the container to the message element
+      messageElement.appendChild(containerElement);
+
+      // Show the message
+      messageElement.style.display = "block";
+
+      // Hide the message after 5 seconds
+      setTimeout(function() {
+        messageElement.style.display = "none";
+      }, 10000);
+
+      // Call the displayContent() function again after 10 seconds
+      setTimeout(displayContent, 60000);
+    }
+
+    // Initial call to start displaying the content
+    displayContent();
+  </script>
+
+</body>
+
+</html>
