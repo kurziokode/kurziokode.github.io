@@ -161,9 +161,6 @@ h6 {
 }
 
 
-}
-
-
  /* Media query for smaller screens */
 @media (max-width: 767px) {
   .button2 {
@@ -175,7 +172,8 @@ h6 {
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
   }
-}
+ }	
+
 
 /* Media query for tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
