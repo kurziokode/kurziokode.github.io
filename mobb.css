@@ -160,19 +160,7 @@ h6 {
   background: linear-gradient(#0d0d0d, #1a1a1a);
 }
 
-@media only screen and (max-device-width: 767px) and (orientation: landscape) {
-  /* CSS rules for mobile phones in landscape mode */
-  /* Place your styles here */
-  .button22 {
-    font-size: 10px;
-    width: 60px;
-    height: 21px;
-    border-top-left-radius: 21px;
-    border-top-right-radius: 21px;
-    border-bottom-left-radius: 21px;
-    border-bottom-right-radius: 21px;
-  }
-}	
+
 }
 
 
