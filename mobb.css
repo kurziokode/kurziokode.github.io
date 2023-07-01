@@ -113,9 +113,9 @@ h6 {
   width: 105px;
   height: 38px;
   border-width: 0px;
-  color: #262626;
+  color: #333333;
   text-align: center;
-  border-color: #a511c0;
+  border-color: #737373;
   font-weight: bold;
   border-top-left-radius: 42px;
   border-top-right-radius: 42px;
@@ -128,7 +128,7 @@ h6 {
 
 .button3:hover {
   color:#049510;	
-  background: linear-gradient(#130316, #150218);
+  background: linear-gradient(#0d0d0d, #1a1a1a);
 }
 
  /* Media query for smaller screens */
