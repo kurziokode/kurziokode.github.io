@@ -26,27 +26,7 @@ strictly prohibited. -->
         type='text/css'>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
-  <style>
-    /* Skeleton screen styles */
-    .skeleton {
-      background-color: #f0f0f0;
-      animation: pulse 1s infinite alternate;
-    }
 
-    @keyframes pulse {
-      0% { opacity: 1; }
-      100% { opacity: 0.5; }
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-      // Remove skeleton classes after the page is fully loaded
-      var skeletonElements = document.getElementsByClassName('skeleton');
-      while (skeletonElements.length > 0) {
-        skeletonElements[0].classList.remove('skeleton');
-      }
-    });
-  </script>
     <style>
     #typing-text {
   text-align: center;      
@@ -222,7 +202,7 @@ strictly prohibited. -->
 </head>
 
 <body>
-     <div class="skeleton">
+  
 <div id="typing-text"></div>
    <div id="rightClickMenu">
 
@@ -557,7 +537,7 @@ function typeText() {
 typeText();
 
   </script>
-    </div>     
+ 
 </body>
 
 </html>
