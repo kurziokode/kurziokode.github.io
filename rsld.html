@@ -27,6 +27,15 @@ strictly prohibited. -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
  <style>
+    #typing-text {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  border: 1px solid black;
+}
+  </style>
+
+    <style>
     #message {
       display: none;
       text-align: left;
@@ -256,6 +265,7 @@ strictly prohibited. -->
             <li><a href="https://gr.pinterest.com/" target="_blank">&#x2022; pinterest</a></li>
         </ul>
   <a href="https://kurziokode.github.io/pscroll.html" class="button3"><span>▼</span></a>
+        <div id="typing-text"></div>
     </div>
 
 
@@ -508,7 +518,22 @@ function openNewWindow(url, w, h) {
     // Initial call to start displaying the content
     displayContent();
   </script>
+  <script>
+    const text = "Welcome to my website!";
+const typingTextElement = document.getElementById("typing-text");
+let index = 0;
 
+function typeText() {
+  typingTextElement.textContent += text.charAt(index);
+  index++;
+
+  if (index < text.length) {
+    setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
+  }
+}
+
+typeText();
+  </script>
 </body>
 
 </html>
