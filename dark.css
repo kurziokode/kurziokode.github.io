@@ -48,7 +48,7 @@ body {
   width: 105px;
   height: 38px;
   border-width: 0px;
-  color: #333333;
+  color: #000000;
   text-align: center;
   border-color: #737373;
   font-weight: bold;
@@ -57,13 +57,13 @@ body {
   border-bottom-left-radius: 42px;
   border-bottom-right-radius: 42px;
   box-shadow: inset 0px 1px 0px 0px #4d4d4d;
-  background: linear-gradient(#000000, #0b0c0e);
+  background: linear-gradient(#0d0d0d, #262626);
 }
 
 
 .button3:hover {
   color:#049510;	
-  background: linear-gradient(#0d0d0d, #1a1a1a);
+  background: linear-gradient(#0b0c0e, #1a1a1a);
 }
 
  /* Media query for smaller screens */
