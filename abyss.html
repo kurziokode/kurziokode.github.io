@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Load content dynamically
+      function loadPage(url) {
+        $.ajax({
+          url: url,
+          dataType: 'html',
+          success: function(response) {
+            $('#content').fadeOut(200, function() {
+              $(this).html(response).fadeIn(200);
+            });
+          },
+          error: function(xhr, status, error) {
+            console.error(error);
+          }
+        });
+      }
+
+      // Handle page navigation
+      $('.nav-link').on('click', function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        loadPage(url);
+      });
+
+      // Load initial page
+      loadPage('page1.html');
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a class="nav-link" href="https://kurziokode.github.io/rsld.html">Page 1</a></li>
+      <li><a class="nav-link" href="https://kurziokode.github.io/lsld.html">Page 2</a></li>
+      <li><a class="nav-link" href="https://kurziokode.github.io/pscroll.html">Page 3</a></li>
+    </ul>
+  </nav>
+  <div id="content">
+    <!-- Page content will be dynamically loaded here -->
+  </div>
+</body>
+</html>
