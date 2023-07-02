@@ -433,7 +433,7 @@ function openNewWindow(url, w, h) {
 
   // define the animation properties
   const animationProps = {
-    duration: 10000, // in milliseconds
+    duration: 5000, // in milliseconds
     easing: 'ease-in-out', // easing function
     fill: 'forwards' // keep the final state of the animation
   };
@@ -499,7 +499,7 @@ function openNewWindow(url, w, h) {
       // Hide the message after 5 seconds
       setTimeout(function() {
         messageElement.style.display = "none";
-      }, 10000);
+      }, 5000);
 
       // Call the displayContent() function again after 10 seconds
       setTimeout(displayContent, 60000);
