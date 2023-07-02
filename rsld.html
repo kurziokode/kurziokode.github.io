@@ -444,7 +444,7 @@ function openNewWindow(url, w, h) {
 
   // define the animation properties
   const animationProps = {
-    duration: 5000, // in milliseconds
+    duration: 10000, // in milliseconds
     easing: 'ease-in-out', // easing function
     fill: 'forwards' // keep the final state of the animation
   };
@@ -510,7 +510,7 @@ function openNewWindow(url, w, h) {
       // Hide the message after 5 seconds
       setTimeout(function() {
         messageElement.style.display = "none";
-      }, 5000);
+      }, 10000);
 
       // Call the displayContent() function again after 10 seconds
       setTimeout(displayContent, 60000);
@@ -520,7 +520,7 @@ function openNewWindow(url, w, h) {
     displayContent();
   </script>
   <script>
-    const text = "Welcome to my website!";
+const text = "Welcome to my website!";
 const typingTextElement = document.getElementById("typing-text");
 let index = 0;
 
@@ -530,10 +530,15 @@ function typeText() {
 
   if (index < text.length) {
     setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
+  } else {
+    setTimeout(() => {
+      typingTextElement.style.display = "none";
+    }, 10000); // Delay for 10 seconds (10000 milliseconds)
   }
 }
 
 typeText();
+
   </script>
 </body>
 
