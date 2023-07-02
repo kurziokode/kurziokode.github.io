@@ -26,7 +26,20 @@ strictly prohibited. -->
         type='text/css'>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
- <style>
+  <style>
+    /* Add a CSS class to hide the content initially */
+    .hide {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      // Display the content after the page is fully loaded
+      document.body.classList.remove("hide");
+    });
+  </script>
+
+    <style>
     #message {
       display: none;
       text-align: right;
@@ -189,7 +202,7 @@ strictly prohibited. -->
     </style> 
 </head>
 
-<body>
+<body class="hide">
 
    <div id="rightClickMenu">
 
