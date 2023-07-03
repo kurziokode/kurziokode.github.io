@@ -242,13 +242,13 @@ h6 {
  /* Media query for smaller screens */
 @media (max-width: 767px) {
   .button2 {
-    font-size: 14px;
-    width: 90px;
-    height: 32px;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
+    font-size: 12px;
+    width: 75px;
+    height: 26px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
   }
  }	
 
