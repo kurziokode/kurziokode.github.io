@@ -134,13 +134,13 @@ h6 {
  /* Media query for smaller screens */
 @media (max-width: 767px) {
   .button3 {
-    font-size: 14px;
-    width: 90px;
-    height: 32px;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
+    font-size: 12px;
+    width: 67px;
+    height: 24px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
   }
  }	
 
@@ -246,13 +246,13 @@ h6 {
  /* Media query for smaller screens */
 @media (max-width: 767px) {
   .button22 {
-    font-size: 14px;
-    width: 90px;
-    height: 32px;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
+    font-size: 12px;
+    width: 67px;
+    height: 24px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
   }
 }
 
