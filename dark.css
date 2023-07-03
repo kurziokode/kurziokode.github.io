@@ -79,6 +79,19 @@ body {
   }
  }	
 
+ /* Media query for smaller screens */
+@media (max-width: 767px) {
+  .button2 {
+    font-size: 12px;
+    width: 75px;
+    height: 26px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+  }
+ }	
+
 
 /* Media query for tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
