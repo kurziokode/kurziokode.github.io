@@ -15,7 +15,8 @@ body {
 
   font-size: 18px;
   color: #6e6a3a;
-  font-family: Arial, sans-serif;
+ 
+ /*  font-family: Arial, sans-serif;
   background-image: url(https://kurziokode.github.io/met.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,7 +27,19 @@ body {
   width: 100vw;
   scrollbar-width: auto;
   scrollbar-color: #180118 #040404;
-  transition: background-image 0.7s ease;
+  transition: background-image 0.7s ease;  */
+
+ font-family: Arial, sans-serif;
+	
+	 background-color: #060606;
+            opacity: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
 }
 
   button {
