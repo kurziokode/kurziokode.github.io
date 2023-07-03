@@ -26,20 +26,7 @@ strictly prohibited. -->
         type='text/css'>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
-<style>
-    #message {
-      display: none;
-      text-align: right;
-      margin-top: 20px;
-    }
 
-    .content-container {
-      display: flex;
-      align-items: right;
-      justify-content: right;
-      gap: 0px;
-    }
-  </style>
      <style>
     #rightClickMenu {
       display: none;
@@ -448,58 +435,7 @@ function openNewWindow(url, w, h) {
   // play the animation
   animation.play();
 </script> 
-  <script>
-    // Function to display the image and text
-    function displayContent() {
-      var messageElement = document.getElementById("message");
 
-      // Clear previous content
-      messageElement.innerHTML = '';
-
-      // Create a container div
-      var containerElement = document.createElement("div");
-      containerElement.classList.add("content-container");
-
-      // Create the text element
-      var textElement = document.createElement("span");
-      var linkElement = document.createElement("a");
-      linkElement.href = "https://www.netflix.com/browse"; // Replace with your desired link URL
-      linkElement.target = "_blank"; // Open in a new tab
-      linkElement.textContent = "";
-      textElement.appendChild(linkElement);
-
-      // Create the image element
-      var imageElement = document.createElement("img");
-      imageElement.src = "https://kurziokode.github.io/net.png"; // Replace with the path to your PNG image
-
-      // Wrap the image element with an anchor tag
-      var imageLinkElement = document.createElement("a");
-      imageLinkElement.href = "https://www.netflix.com/browse"; // Replace with the desired link URL
-      imageLinkElement.target = "_blank"; // Open in a new tab
-      imageLinkElement.appendChild(imageElement);
-
-      // Append the text and image elements to the container
-      containerElement.appendChild(textElement);
-      containerElement.appendChild(imageLinkElement);
-
-      // Append the container to the message element
-      messageElement.appendChild(containerElement);
-
-      // Show the message
-      messageElement.style.display = "block";
-
-      // Hide the message after 5 seconds
-      setTimeout(function() {
-        messageElement.style.display = "none";
-      }, 16600);
-
-      // Call the displayContent() function again after 10 seconds
-      setTimeout(displayContent, 60000);
-    }
-
-    // Initial call to start displaying the content
-    displayContent();
-  </script>
     <script type="text/javascript">
 
 var images = new Array();
