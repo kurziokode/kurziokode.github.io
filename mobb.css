@@ -472,6 +472,13 @@ h6 {
     font-size: 48px; /* Change font size */
     /* Change font color */
   }
+
+
+  h8 {
+    font-size: 16px; /* Change font size */
+    /* Change font color */
+  }
+	
   p {
     font-size: 20px; /* Change font size */
     /* Change font color */
@@ -489,6 +496,12 @@ h6 {
     font-size: 64px; /* Change font size */
      /* Change font color */
   }
+
+ h8 {
+    font-size: 16px; /* Change font size */
+    /* Change font color */
+  }
+	
   p {
     font-size: 22px; /* Change font size */
      /* Change font color */
