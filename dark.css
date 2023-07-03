@@ -70,12 +70,12 @@ body {
 @media (max-width: 767px) {
   .button3 {
     font-size: 12px;
-    width: 67px;
-    height: 24px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    width: 75px;
+    height: 26px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
   }
  }	
 
