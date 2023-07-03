@@ -173,7 +173,7 @@ h3 {
 }
 
 h5 {
-  font-size: calc(100vw /9);
+  font-size: calc(100vw /8);
   font-weight: 900;
   color: #001a00;
   opacity: 0.45;
