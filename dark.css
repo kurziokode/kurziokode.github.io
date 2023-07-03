@@ -189,6 +189,11 @@ h5 {
 
 }
 
+@media only screen and (max-width: 466px) {
+  h5 {
+    display: none;
+  }
+}
 h6 {
   font-size: calc(100vw /27);
   font-weight: 900;
