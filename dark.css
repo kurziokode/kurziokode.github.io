@@ -242,7 +242,8 @@ footer {
   }
   a {
     font-size: 18px; /* Change font size */
-    /* Change font color */
+    color: #4d4d4d;
+	  /* Change font color */
   }
 }
 
@@ -300,9 +301,10 @@ footer {
 }
 
 /* For Firefox */
+scrollbar {
 scrollbar-width: auto;
 scrollbar-color: #180118 #040404;
-
+}
 
 
 
