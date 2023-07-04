@@ -98,6 +98,22 @@ h5 {
 
 }
 
+h7 {
+  font-size: calc(100vw /4);
+  font-weight: 900;
+  color: #000000;
+  opacity: 1;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+ 
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/curs2.png'), auto !important;
+
+}
+
 h6 {
   font-size: calc(100vw /27);
   font-weight: 900;
