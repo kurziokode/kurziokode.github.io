@@ -12,8 +12,8 @@ strictly prohibited. */
  }
 
 body {
- background: rgb(13,13,13);
-background: radial-gradient(circle, rgba(13,13,13,1) 42%, rgba(0,0,0,1) 55%); 
+ background: rgb(11,12,14);
+background: radial-gradient(circle, rgba(11,12,14,1) 35%, rgba(0,0,0,1) 65%); 
   font-size: 18px;
   color: #6e6a3a;
  
