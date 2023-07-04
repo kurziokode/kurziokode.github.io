@@ -43,7 +43,8 @@ strictly prohibited. -->
        }
    }     
   </style>
-    <style>
+
+<style>
   h7 {
     position: fixed;
     top: 29%;
@@ -54,9 +55,7 @@ strictly prohibited. -->
     white-space: nowrap;
     z-index: -1;
     cursor: url('https://kurziokode.github.io/curs2.png'), auto !important;
-    padding: 10px; /* Added padding for the border */
-    border: 2px solid black; /* Added border style */
-    display: inline-block; /* Ensuring the border respects the text's size */
+    display: inline-block;
   }
 
   h7 span {
@@ -71,6 +70,17 @@ strictly prohibited. -->
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    position: relative;
+  }
+
+  h7 span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid black;
   }
 </style>
       
