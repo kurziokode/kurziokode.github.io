@@ -33,9 +33,8 @@ body {
 	 transition: background-image 0.7s ease;
 	 background-color: #060606;
 	*/
-	
-           background: rgb(13,13,13);
-           background: radial-gradient(circle, rgba(13,13,13,1) 50%, rgba(0,0,0,1) 100%);  
+	 background: rgb(13,13,13);
+background: radial-gradient(circle, rgba(13,13,13,1) 42%, rgba(0,0,0,1) 55%); 
 	   font-family: Arial, sans-serif;
 	   font-size: 14px;
 	
