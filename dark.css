@@ -12,7 +12,8 @@ strictly prohibited. */
  }
 
 body {
-
+ background: rgb(13,13,13);
+background: radial-gradient(circle, rgba(13,13,13,1) 42%, rgba(0,0,0,1) 55%); 
   font-size: 18px;
   color: #6e6a3a;
  
@@ -30,11 +31,7 @@ body {
   transition: background-image 0.7s ease;  */
 
  font-family: Arial, sans-serif;
-	 background: rgb(13,13,13);
-background: radial-gradient(circle, rgba(13,13,13,1) 50%, rgba(0,0,0,1) 100%); 
-	   /*  background-color: #060606; 
-            background: rgb(13,13,13); 
-	    background: radial-gradient(circle, rgba(13,13,13,1) 50%, rgba(26,26,26,1) 100%); */
+	
 	    opacity: 1;
             background-size: cover;
             background-repeat: no-repeat;
