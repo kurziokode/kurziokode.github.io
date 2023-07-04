@@ -78,102 +78,7 @@ strictly prohibited. -->
 
   </style>  
 
-       <style>
-     
-.clock {
-   display: flex;
-    width: 200px;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-  
-   border: 4px solid #0b0c0e;
-    border-radius: 50%;
-    box-shadow: -4px -4px 10px #041f00,
-        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
-        inset -4px -4px 10px ,
-        4px 4px 10px rgba(0, 0, 0, 0.3);
-     z-index: -1;
-}
 
-.clock:before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #013205;
-    border-radius: 50%;
-    z-index: 999;
-
-}
-
-.clock .hour,
-.clock .min,
-.clock .sec {
-    position: absolute;
-}
-
-.clock .hour, .hr {
-    width: 100px;
-    height: 100px;
-}
-
-.clock .min, .mn {
-    width: 130px;
-    height: 130px;
-}
-
-.clock .sec, .sc {
-    width: 160px;
-    height: 160px;
-}
-
-.hr, .mn, .sc {
-    display: flex;
-    justify-content: center;
-    /*align-items: center;*/
-    position: absolute;
-    border-radius: 50%;
-    
-}
-
-.hr:before {
-    content: "";
-    position: absolute;
-    width: 7px;
-    height: 60px;
-    background: #191a19;
-    z-index: 9;
-    border-radius: 6px 6px 0 0;
-}
-
-.mn:before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 80px;
-    background: #310231;
-    z-index: 10;
-    border-radius: 6px 6px 0 0;
-}
-
-.sc:before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height:130px;
-    background: #013205;
-    z-index: 11;
-    border-radius: 6px 6px 0 0;
-}   
-     @media only screen and (max-width: 1200px) {
-  .clock {
-    display: none;
-  }
-}
-   
-        
-    </style> 
 </head>
 
 <body>
@@ -256,21 +161,7 @@ strictly prohibited. -->
       <a href="http://wbgo.streamguys.net/thejazzstream" class="button22" target="_blank" style="position: fixed; top:55%; right:11%;"><span>JAZZ</span></a>
       <a href="https://realpunkradio.com/player/player111419.html" class="button22" target="_blank" style="position: fixed; top:70%; right:11%;"><span>PUNK</span></a>
     
- <div class="clock" style="position: absolute;  bottom:0%; left:45%; transform: translate(0%, -50%);">
-      
-        <div class="hour">
-          <div class="hr" id="hr"></div>
-        </div>
-      
-        <div class="min">
-          <div class="mn" id="mn"></div>
-        </div>
-      
-        <div class="sec">
-          <div class="sc" id="sc"></div>
-        </div>
-      
-      </div>     
+  
  
      <h5 style="position: fixed; top:0%; left:22%; transform: translateY(-0%) rotate(-0deg);"><span class="first-letter">A</span>byss II</h5>
      <h7 style="position: fixed; top:3%; left:11%; transform: translateY(-0%) rotate(-0deg);"><span>AI</span></h7>
@@ -379,27 +270,7 @@ function openNewWindow(url, w, h) {
 }
 </script>
   
- <script>
-      const deg = 6;
-        const hr = document.querySelector('#hr');
-        const mn = document.querySelector('#mn');
-        const sc = document.querySelector('#sc');
-
-        setInterval(() => {
-
-          let day = new Date();
-          let hh = day.getHours() * 30;
-          let mm = day.getMinutes() * deg;
-          let ss = day.getSeconds() * deg;
-
-          hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
-          mn.style.transform = `rotateZ(${mm}deg)`;
-          sc.style.transform = `rotateZ(${ss}deg)`;
-
-        })
-    </script>
-
-     <script>
+<script>
   // get the h1 element
   const h1 = document.querySelector('h8');
 
