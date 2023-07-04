@@ -27,6 +27,23 @@ strictly prohibited. -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
   <style>
+    <style>
+    #typing-text {
+  text-align: center;      
+  font-size: 20px;
+  color: #4d4d4d;      
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  border: 0px solid black;
+}
+
+   @media only screen and (max-width: 1200px) {
+       #typing-text { 
+         display: none; 
+       }
+   }     
+  </style>
+      
     h7 {
       position: fixed;
       top: 10%;
@@ -200,7 +217,7 @@ strictly prohibited. -->
 
     <a href="https://kurziokode.github.io/pscroll.html" class="button2" style="position: fixed; top:10%; right:11%;"><span>2&nbsp;&nbsp; ▶ &nbsp;&nbsp;3</span></a> 
      </div>
-
+<div id="typing-text"></div>
     </div>
 
 
@@ -329,6 +346,27 @@ function openNewWindow(url, w, h) {
   // play the animation
   animation.play();
 </script> 
+  <script>
+const text = "Artificial Intelligence is here! Explore amazing AI tools.";
+const typingTextElement = document.getElementById("typing-text");
+let index = 0;
+
+function typeText() {
+  typingTextElement.textContent += text.charAt(index);
+  index++;
+
+  if (index < text.length) {
+    setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
+  } else {
+    setTimeout(() => {
+      typingTextElement.style.display = "none";
+    }, 10000); // Delay for 10 seconds (10000 milliseconds)
+  }
+}
+
+typeText();
+
+  </script>
 </body>
 
 </html>
