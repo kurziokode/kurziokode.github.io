@@ -404,27 +404,7 @@ strictly prohibited. -->
     }
   });
 </script>
-<script>
-const text = "Your ultimate destination for an artwork, reading and audio-visual experience.";
-const typingTextElement = document.getElementById("typing-text");
-let index = 0;
 
-function typeText() {
-  typingTextElement.textContent += text.charAt(index);
-  index++;
-
-  if (index < text.length) {
-    setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
-  } else {
-    setTimeout(() => {
-      typingTextElement.style.display = "none";
-    }, 10000); // Delay for 10 seconds (10000 milliseconds)
-  }
-}
-
-typeText();
-
-  </script>
 </body>
 
 </html>
