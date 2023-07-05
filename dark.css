@@ -286,7 +286,7 @@ footer {
 
 }
 
-/* For Chrome, Safari, and Opera */
+/* For Chrome, Safari, and Opera 
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -300,11 +300,32 @@ footer {
   border-radius: 6px;
 }
 
-/* For Firefox */
-scrollbar {
-scrollbar-width: auto;
-scrollbar-color: #180118 #040404;
-}
+*/
+
+ /* Styles for all browsers */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: red;
+  }
+
+  /* Media query for Firefox */
+  @-moz-document url-prefix() {
+    scrollbar-color: red;
+  }
+
+  /* Styles for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: red;
+  }
+
+  /* Style the scrollbar track in Firefox */
+  *::-moz-scrollbar-track {
+    background-color: #fca5a5;
+  }
 
 
 
