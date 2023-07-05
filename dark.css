@@ -224,10 +224,8 @@ footer {
     font-size: 16px; /* Change font size */
    color: #595959;/* Change font color */
   }
+
 }
-
-
-
 
 /* Small devices (tablets) */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -245,6 +243,11 @@ footer {
     color: #4d4d4d;
 	  /* Change font color */
   }
+
+h11 {
+    display: none;
+  }
+
 }
 
 
@@ -264,6 +267,11 @@ footer {
     font-size: 20px; /* Change font size */
     /* Change font color */
   }
+
+h11 {
+    display: none;
+  }
+
 }
 
 
@@ -283,6 +291,9 @@ footer {
     /* Change font color */
   }
   
+h11 {
+    display: none;
+  }
 
 }
 
