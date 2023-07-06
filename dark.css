@@ -269,7 +269,7 @@ h11 {
   }
 
 h11 {
-    display: none;
+     opacity: 0.5;
   }
 
 }
