@@ -245,7 +245,7 @@ footer {
   }
 
 h11 {
-   opacity: 0.2;   
+   opacity: 0.4;   
   }
 
 }
@@ -265,11 +265,11 @@ h11 {
   }
   a {
     font-size: 20px; /* Change font size */
-    /* Change font color */
+      color: #4d4d4d;/* Change font color */
   }
 
 h11 {
-     opacity: 0.2;
+     opacity: 0.4;
   }
 
 }
@@ -288,11 +288,11 @@ h11 {
   }
   a {
     font-size: 22px; /* Change font size */
-    /* Change font color */
+     color: #4d4d4d; /* Change font color */
   }
   
 h11 {
-     opacity: 0.2;
+     opacity: 0.4;
   }
 
 }
