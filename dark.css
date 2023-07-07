@@ -270,7 +270,7 @@ h11 {
 
 h11 {
      opacity: 0.4;
-	left: 9%;
+	
   }
 
 }
@@ -296,6 +296,12 @@ h11 {
      opacity: 0.4;
   }
 
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+h11 {
+    left: 10%;
+	  }
 }
 
 /* For Chrome, Safari, and Opera */
