@@ -387,7 +387,7 @@ strictly prohibited. -->
             // Hide the message after 5 seconds
             setTimeout(function () {
                 messageElement.style.display = "none";
-            }, 15250);
+            }, 10250);
 
             // Call the displayContent() function again after 10 seconds
             setTimeout(displayContent, 60000);
@@ -397,7 +397,7 @@ strictly prohibited. -->
         displayContent();
     </script>
     <script>
-        const text = "Welcome to my website! Navigate with purple button. Slide to explore. Right click to social.";
+        const text = "Navigate with purple button. Slide to explore. Right click to social.";
         const typingTextElement = document.getElementById("typing-text");
         let index = 0;
 
@@ -406,7 +406,7 @@ strictly prohibited. -->
             index++;
 
             if (index < text.length) {
-                setTimeout(typeText, 100); // Adjust the typing speed (milliseconds)
+                setTimeout(typeText, 200); // Adjust the typing speed (milliseconds)
             } else {
                 setTimeout(() => {
                     typingTextElement.style.display = "none";
