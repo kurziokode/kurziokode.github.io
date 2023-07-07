@@ -322,7 +322,7 @@ strictly prohibited. -->
 
         // define the animation properties
         const animationProps = {
-            duration: 10500, // in milliseconds
+            duration: 5000, // in milliseconds
             easing: 'ease-in-out', // easing function
             fill: 'forwards' // keep the final state of the animation
         };
@@ -387,7 +387,7 @@ strictly prohibited. -->
             // Hide the message after 5 seconds
             setTimeout(function () {
                 messageElement.style.display = "none";
-            }, 20250);
+            }, 15250);
 
             // Call the displayContent() function again after 10 seconds
             setTimeout(displayContent, 60000);
@@ -410,7 +410,7 @@ strictly prohibited. -->
             } else {
                 setTimeout(() => {
                     typingTextElement.style.display = "none";
-                }, 10000); // Delay for 10 seconds (10000 milliseconds)
+                }, 5000); // Delay for 10 seconds (10000 milliseconds)
             }
         }
 
