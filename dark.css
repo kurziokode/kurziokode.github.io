@@ -298,11 +298,7 @@ h11 {
 
 }
 
-@media only screen and (min-width: 576px) and (max-width: 1024px) {
-h11 {
-    left: 20% !important;
-	  }
-}
+
 
 /* For Chrome, Safari, and Opera */
 ::-webkit-scrollbar {
