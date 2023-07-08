@@ -111,8 +111,8 @@ h6 {
 
 .button2 {
   position: fixed;
-  top: 10%;
-  right: 11%;	
+  top: 20px;
+  right: 20px;	
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,13 +137,6 @@ h6 {
 .button2:hover {
   color: #049510;	
   background: linear-gradient(#130316, #150218);
-}
-
-@media screen and (max-width: 1023px) {
-  .button2 {
-    top: 20px;
-    right: 20px;
-  }
 }
  /* Media query for smaller screens */
 
