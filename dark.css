@@ -44,8 +44,8 @@ background: radial-gradient(circle, rgba(11,12,14,1) 35%, rgba(0,0,0,1) 65%);
 
 .button2 {
   position: fixed;
-  top: 10%;
-  right: 11%;	
+  top: 20px;
+  right: 20px;	
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,12 +71,6 @@ background: radial-gradient(circle, rgba(11,12,14,1) 35%, rgba(0,0,0,1) 65%);
  background: linear-gradient(#130316, #150218);
 }
 
-  @media screen and (max-width: 1023px) {
-  .button2 {
-    top: 20px;
-    right: 20px;
-  }
-}
  /* Media query for smaller screens */
 @media (max-width: 767px) {
   .button2 {
