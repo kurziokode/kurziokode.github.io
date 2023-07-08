@@ -359,9 +359,7 @@ h6 {
   h8 {
     font-size: 16px; /* Change font size */
     /* Change font color */
- position: fixed;
-            bottom: 7%;
-            left: 15%;
+
   }
 
 }
@@ -396,9 +394,7 @@ opacity: 0.7;
   h8 {
     font-size: 16px; /* Change font size */
     /* Change font color */
- position: fixed;
-            bottom: 7%;
-            left: 15%;
+
   }
 
 }
