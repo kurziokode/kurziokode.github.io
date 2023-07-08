@@ -228,7 +228,7 @@ footer {
 }
 
 /* Small devices (tablets) */
-@media only screen and (min-width: 576px) and (max-width: 770px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
 
   h1 {
     font-size: 32px; /* Change font size */
@@ -249,7 +249,7 @@ opacity: 0.7;
 }
 
 /* Medium devices (laptops) */
-@media only screen and (min-width: 771px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 
   h1 {
     font-size: 48px; /* Change font size */
