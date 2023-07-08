@@ -74,7 +74,7 @@ background: radial-gradient(circle, rgba(11,12,14,1) 35%, rgba(0,0,0,1) 65%);
   @media screen and (max-width: 1023px) {
   .button2 {
     top: 20px;
-    right: 30px;
+    right: 20px;
   }
 }
  /* Media query for smaller screens */
