@@ -139,7 +139,7 @@ h6 {
   background: linear-gradient(#130316, #150218);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .button2 {
     top: 20px;
     right: 30px;
