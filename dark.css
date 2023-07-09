@@ -238,6 +238,9 @@ footer {
   h11 {
 opacity: 0.7;
   }
+  h5 {
+    display: none;
+  }
 }
 
 /* Medium devices (laptops) */
