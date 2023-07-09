@@ -398,7 +398,9 @@ opacity: 0.7;
     /* Change font color */
 
   }
-
+  h5 {
+    display: none;
+  }
 }
 
 /* Medium devices (laptops) */
