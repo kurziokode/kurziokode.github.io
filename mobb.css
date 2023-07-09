@@ -219,6 +219,9 @@ h6 {
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;
   }
+ h5 {
+    display: none;
+  }
 }   
 
 
