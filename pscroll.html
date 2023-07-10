@@ -172,24 +172,14 @@ strictly prohibited. -->
  <style>
 #spinner-container {
   position: fixed;
-  top: 5%;
+  top: 4%;
   left: 50%;
-  transform: translateX(-50%);
-}
-
-@keyframes rotate720 {
-  0% {
-    transform: matrix(1, 0, 0, 1, 0, 0);
-  }
-  100% {
-    transform: matrix(0, 1, -1, 0, 0, 0);
-  }
+  transform: translate(-50%, -50%);
 }
 
 #spinner {
-  animation: rotate720 4s linear infinite;
+  position: relative;
 }
-
 </style>
 
 </head>
@@ -404,19 +394,26 @@ strictly prohibited. -->
             });
         </script>
  <script>
-var spinner = document.getElementById('spinner');
-var spinnerContainer = document.getElementById('spinner-container');
-var scrollThreshold = 100; // Adjust this value as needed
+function getRandomPosition(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
-document.addEventListener('scroll', function() {
-  if (window.pageYOffset > scrollThreshold) {
-    spinnerContainer.style.display = 'block';
-    spinner.style.animationPlayState = 'running';
-  } else {
-    spinnerContainer.style.display = 'none';
-    spinner.style.animationPlayState = 'paused';
-  }
-});
+function moveSpinner() {
+  var spinner = document.getElementById('spinner');
+  var containerWidth = window.innerWidth;
+  var containerHeight = window.innerHeight;
+  var spinnerWidth = spinner.offsetWidth;
+  var spinnerHeight = spinner.offsetHeight;
+  
+  var newX = getRandomPosition(0, containerWidth - spinnerWidth);
+  var newY = getRandomPosition(0, containerHeight - spinnerHeight);
+  
+  spinner.style.left = newX + 'px';
+  spinner.style.top = newY + 'px';
+}
+
+setInterval(moveSpinner, 3000); // Adjust the interval duration as needed
+
 
 </script>
 </body>
