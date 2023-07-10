@@ -177,17 +177,17 @@ strictly prohibited. -->
   transform: translateX(-50%);
 }
 
-@keyframes rotate360 {
+@keyframes rotate720 {
   0% {
     transform: matrix(1, 0, 0, 1, 0, 0);
   }
   100% {
-    transform: matrix(-1, 0, 0, -1, 0, 0);
+    transform: matrix(0, 1, -1, 0, 0, 0);
   }
 }
 
 #spinner {
-  animation: rotate360 2s linear infinite;
+  animation: rotate720 4s linear infinite;
 }
 
 </style>
