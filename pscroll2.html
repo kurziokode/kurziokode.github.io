@@ -172,7 +172,7 @@ strictly prohibited. -->
  <style>
 #spinner-container {
   position: fixed;
-  top: 50%;
+  top: 2%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -181,6 +181,7 @@ strictly prohibited. -->
   position: relative;
   transition: transform 0.5s ease-in-out;
 }
+
 </style>
 
 </head>
@@ -397,24 +398,24 @@ strictly prohibited. -->
  <script>
 var spinner = document.getElementById('spinner');
 var links = document.querySelectorAll('a[href^="#"]');
+var currentIndex = 0;
 
-function getRandomPosition(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
-function moveSpinnerRandomly() {
-  var randomLink = links[Math.floor(Math.random() * links.length)];
-  var target = document.querySelector(randomLink.getAttribute('href'));
+function moveSpinnerSequentially() {
+  var link = links[currentIndex];
+  var target = document.querySelector(link.getAttribute('href'));
   if (target) {
     var targetPosition = target.getBoundingClientRect();
-    var targetX = targetPosition.left + getRandomPosition(0, targetPosition.width);
-    var targetY = targetPosition.top + getRandomPosition(0, targetPosition.height);
+    var targetX = targetPosition.left + targetPosition.width / 2;
+    var targetY = targetPosition.top + targetPosition.height / 2;
 
     spinner.style.transform = `translate(${targetX}px, ${targetY}px)`;
   }
+
+  currentIndex = (currentIndex + 1) % links.length;
 }
 
-setInterval(moveSpinnerRandomly, 2000); // Adjust the interval duration as needed
+setInterval(moveSpinnerSequentially, 2000); // Adjust the interval duration as needed
+
 
 </script>
 </body>
