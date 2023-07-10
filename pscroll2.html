@@ -181,7 +181,6 @@ strictly prohibited. -->
   position: relative;
   transition: transform 0.5s ease-in-out;
 }
-
 </style>
 
 </head>
@@ -191,16 +190,7 @@ strictly prohibited. -->
   <img src="https://kurziokode.github.io/alle.png" alt="Spinner" id="spinner">
 </div>
 
-<a href="#section1">section 1</a>
-<a href="#section2">section 2</a>
-<a href="#section3">section 3</a>
-
-<div id="section1">section 1 content</div>
-<div id="section2">section 2 content</div>
-<div id="section3">section 3 content</div>
-
-
-    <div id="rightClickMenu">
+ <div id="rightClickMenu">
         <a href="https://www.facebook.com/" target="_blank"
             style="color: rgb(2, 100, 10)">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com/" target="_blank" style="color: rgb(2, 100, 10)">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
@@ -408,20 +398,23 @@ strictly prohibited. -->
 var spinner = document.getElementById('spinner');
 var links = document.querySelectorAll('a[href^="#"]');
 
-links.forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    var target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      var targetPosition = target.getBoundingClientRect();
-      var targetX = targetPosition.left + targetPosition.width / 2;
-      var targetY = targetPosition.top + targetPosition.height / 2;
+function getRandomPosition(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
-      spinner.style.transform = `translate(${targetX}px, ${targetY}px)`;
-    }
-  });
-});
+function moveSpinnerRandomly() {
+  var randomLink = links[Math.floor(Math.random() * links.length)];
+  var target = document.querySelector(randomLink.getAttribute('href'));
+  if (target) {
+    var targetPosition = target.getBoundingClientRect();
+    var targetX = targetPosition.left + getRandomPosition(0, targetPosition.width);
+    var targetY = targetPosition.top + getRandomPosition(0, targetPosition.height);
 
+    spinner.style.transform = `translate(${targetX}px, ${targetY}px)`;
+  }
+}
+
+setInterval(moveSpinnerRandomly, 2000); // Adjust the interval duration as needed
 
 </script>
 </body>
