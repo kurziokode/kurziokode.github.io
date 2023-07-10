@@ -26,7 +26,7 @@ strictly prohibited. -->
         type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
-
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         h7 {
             position: fixed;
@@ -114,12 +114,20 @@ strictly prohibited. -->
             }
         }
     </style>
+ <style>
+ #animated-png {
+      position: absolute;
+      transition: all 0.5s ease-in-out;
 
+ }
+
+</style>
 
 </head>
 
 <body>
 
+ <img id="animated-png" src="https://kurziokode.github.io/pngegg(14).png" alt="Animated PNG Image">
     <div id="rightClickMenu">
         <a href="https://www.facebook.com/" target="_blank"
             style="color: rgb(2, 100, 10)">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
@@ -311,7 +319,23 @@ strictly prohibited. -->
         // play the animation
         animation.play();
     </script>
+<script>
+ $(document).ready(function() {
+      var links = $('a');
+      var animatedPng = $('#animated-png');
+      var currentIndex = 0;
 
+      setInterval(function() {
+        var currentLink = links[currentIndex];
+        var linkPosition = $(currentLink).offset();
+        animatedPng.css({
+          top: linkPosition.top + 'px',
+          left: linkPosition.left + 'px'
+        });
+        currentIndex = (currentIndex + 1) % links.length;
+      }, 2000);
+    });
+</script>
 </body>
 
 </html>
