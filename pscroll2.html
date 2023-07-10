@@ -398,8 +398,8 @@ strictly prohibited. -->
         var currentLink = links[currentIndex];
         var linkPosition = $(currentLink).offset();
         animatedPng.css({
-          top: linkPosition.top + '-2px',
-          left: linkPosition.left + '0px'
+          top: linkPosition.top + 'px',
+          left: linkPosition.left + 'px'
         });
         currentIndex = (currentIndex + 1) % links.length;
       }, 2000);
