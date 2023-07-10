@@ -175,49 +175,24 @@ strictly prohibited. -->
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.move {
-  animation: moveSpinner 5s linear infinite;
+  animation: moveSpinner 5s infinite;
 }
 
 @keyframes moveSpinner {
-  0%, 10% {
-    top: 50%;
-    left: 50%;
-    opacity: 0;
+  0% {
+    transform: translate(-50%, -50%);
   }
-  15%, 85% {
-    opacity: 1;
+  25% {
+    transform: translate(0%, -50%);
   }
-  20%, 80% {
-    top: 20%;
-    left: 80%;
-    transform: rotate(90deg);
+  50% {
+    transform: translate(0%, 50%);
   }
-  25%, 75% {
-    top: 80%;
-    left: 80%;
-    transform: rotate(180deg);
+  75% {
+    transform: translate(-50%, 50%);
   }
-  30%, 70% {
-    top: 80%;
-    left: 20%;
-    transform: rotate(270deg);
-  }
-  35%, 65% {
-    top: 20%;
-    left: 20%;
-    transform: rotate(360deg);
+  100% {
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -436,7 +411,6 @@ strictly prohibited. -->
             });
         </script>
  <script>
-var spinner = document.getElementById('spinner');
 var links = document.querySelectorAll('a[href^="#"]');
 var currentIndex = 0;
 
@@ -444,16 +418,14 @@ function moveSpinnerSequentially() {
   var link = links[currentIndex];
   var target = document.querySelector(link.getAttribute('href'));
   if (target) {
-    target.classList.add('move');
-    setTimeout(function() {
-      target.classList.remove('move');
-    }, 5000);
+    target.scrollIntoView({ behavior: 'smooth' });
   }
 
   currentIndex = (currentIndex + 1) % links.length;
 }
 
-setInterval(moveSpinnerSequentially, 6000); // Adjust the interval duration as needed
+setInterval(moveSpinnerSequentially, 5000); // Adjust the interval duration as needed
+
 
 </script>
 </body>
