@@ -411,6 +411,7 @@ strictly prohibited. -->
             });
         </script>
  <script>
+var spinner = document.getElementById('spinner');
 var links = document.querySelectorAll('a[href^="#"]');
 var currentIndex = 0;
 
@@ -418,13 +419,19 @@ function moveSpinnerSequentially() {
   var link = links[currentIndex];
   var target = document.querySelector(link.getAttribute('href'));
   if (target) {
-    window.location.href = link.href;
+    var targetPosition = target.getBoundingClientRect();
+    var targetX = targetPosition.left + targetPosition.width / 2;
+    var targetY = targetPosition.top + targetPosition.height / 2;
+
+    spinner.style.transform = `translate(${targetX}px, ${targetY}px)`;
   }
 
   currentIndex = (currentIndex + 1) % links.length;
+
+  setTimeout(moveSpinnerSequentially, 2000); // Adjust the interval duration as needed
 }
 
-setInterval(moveSpinnerSequentially, 2000); // Adjust the interval duration as needed
+moveSpinnerSequentially();
 
 
 </script>
