@@ -399,16 +399,20 @@ strictly prohibited. -->
             });
         </script>
  <script>
- document.addEventListener('scroll', function() {
-  var spinnerContainer = document.getElementById('spinner-container');
-  var scrollThreshold = 100; // Adjust this value as needed
+var spinner = document.getElementById('spinner');
+var spinnerContainer = document.getElementById('spinner-container');
+var scrollThreshold = 100; // Adjust this value as needed
 
+document.addEventListener('scroll', function() {
   if (window.pageYOffset > scrollThreshold) {
     spinnerContainer.style.display = 'block';
+    spinner.style.animationPlayState = 'running';
   } else {
     spinnerContainer.style.display = 'none';
+    spinner.style.animationPlayState = 'paused';
   }
 });
+
 </script>
 </body>
 
