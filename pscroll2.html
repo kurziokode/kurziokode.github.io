@@ -414,8 +414,12 @@ function moveSpinnerSequentially() {
   currentIndex = (currentIndex + 1) % links.length;
 }
 
-setInterval(moveSpinnerSequentially, 2000); // Adjust the interval duration as needed
+function simulateClick() {
+  var link = links[currentIndex];
+  link.click();
+}
 
+setInterval(simulateClick, 2000); // Adjust the interval duration as needed
 
 </script>
 </body>
