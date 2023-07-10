@@ -400,30 +400,39 @@ var spinner = document.getElementById('spinner');
 var links = document.querySelectorAll('a[href^="#"]');
 var currentIndex = 0;
 
-function moveSpinnerSequentially() {
-  var link = links[currentIndex];
+function moveSpinnerToTarget(target) {
+  var targetPosition = target.getBoundingClientRect();
+  var targetX = targetPosition.left + targetPosition.width / 2;
+  var targetY = targetPosition.top + targetPosition.height / 2;
+
+  spinner.style.transform = `translate(${targetX}px, ${targetY}px)`;
+}
+
+function observeLink(link) {
   var target = document.querySelector(link.getAttribute('href'));
   if (target) {
-    var targetPosition = target.getBoundingClientRect();
-    var targetX = targetPosition.left + targetPosition.width / 2;
-    var targetY = targetPosition.top + targetPosition.height / 2;
+    var observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          moveSpinnerToTarget(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
 
-    spinner.style.transform = `translate(${targetX}px, ${targetY}px)`;
+    observer.observe(target);
   }
+}
+
+function scrollToNextLink() {
+  var link = links[currentIndex];
+  observeLink(link);
 
   currentIndex = (currentIndex + 1) % links.length;
 }
 
-function scrollToNextLink() {
-  moveSpinnerSequentially();
-  var link = links[currentIndex];
-  var target = document.querySelector(link.getAttribute('href'));
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
 setInterval(scrollToNextLink, 5000); // Adjust the interval duration as needed
+
 
 </script>
 </body>
