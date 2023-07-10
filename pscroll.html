@@ -172,14 +172,16 @@ strictly prohibited. -->
  <style>
 #spinner-container {
   position: fixed;
-  top: 4%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #spinner {
   position: relative;
+  transition: transform 2s linear;
 }
+
 </style>
 
 </head>
@@ -408,11 +410,10 @@ function moveSpinner() {
   var newX = getRandomPosition(0, containerWidth - spinnerWidth);
   var newY = getRandomPosition(0, containerHeight - spinnerHeight);
   
-  spinner.style.left = newX + 'px';
-  spinner.style.top = newY + 'px';
+  spinner.style.transform = `translate(${newX}px, ${newY}px)`;
 }
 
-setInterval(moveSpinner, 3000); // Adjust the interval duration as needed
+setInterval(moveSpinner, 2000); // Adjust the interval duration as needed
 
 
 </script>
