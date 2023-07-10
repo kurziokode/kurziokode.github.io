@@ -169,10 +169,30 @@ strictly prohibited. -->
             }
         }
     </style>
+ <style>
+ #spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#spinner {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
 
 </head>
 
 <body>
+<div id="spinner-container">
+  <img src="https://kurziokode.github.io/alle.png" alt="Spinner" id="spinner">
+</div>
 
     <div id="rightClickMenu">
         <a href="https://www.facebook.com/" target="_blank"
@@ -378,7 +398,18 @@ strictly prohibited. -->
                 }
             });
         </script>
+ <script>
+ document.addEventListener('scroll', function() {
+  var spinnerContainer = document.getElementById('spinner-container');
+  var scrollThreshold = 100; // Adjust this value as needed
 
+  if (window.pageYOffset > scrollThreshold) {
+    spinnerContainer.style.display = 'block';
+  } else {
+    spinnerContainer.style.display = 'none';
+  }
+});
+</script>
 </body>
 
 </html>
