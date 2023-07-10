@@ -179,9 +179,23 @@ strictly prohibited. -->
 
 #spinner {
   position: relative;
-  transition: transform 0.5s ease-in-out;
+  animation: moveSpinner 2s linear infinite;
 }
 
+@keyframes moveSpinner {
+  0% {
+    transform: translate(0, 0);
+  }
+  33.3% {
+    transform: translate(0, 100%);
+  }
+  66.6% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
 
 </style>
 
@@ -397,7 +411,6 @@ strictly prohibited. -->
             });
         </script>
  <script>
-var spinner = document.getElementById('spinner');
 var links = document.querySelectorAll('a[href^="#"]');
 var currentIndex = 0;
 
@@ -405,19 +418,14 @@ function moveSpinnerSequentially() {
   var link = links[currentIndex];
   var target = document.querySelector(link.getAttribute('href'));
   if (target) {
-    var targetPosition = target.getBoundingClientRect();
-    var targetX = targetPosition.left + targetPosition.width / 2;
-    var targetY = targetPosition.top + targetPosition.height / 2;
-
-    spinner.style.transform = `translate(${targetX}px, ${targetY}px)`;
+    window.location.href = link.href;
   }
 
   currentIndex = (currentIndex + 1) % links.length;
-
-  setTimeout(moveSpinnerSequentially, 2000); // Adjust the interval duration as needed
 }
 
-moveSpinnerSequentially();
+setInterval(moveSpinnerSequentially, 2000); // Adjust the interval duration as needed
+
 
 </script>
 </body>
