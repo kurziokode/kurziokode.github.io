@@ -178,13 +178,18 @@ strictly prohibited. -->
 }
 
 #spinner {
-  animation: spin 2s linear infinite;
+  animation: twist 2s linear infinite;
 }
 
-@keyframes spin {
-  0% { transform: rotate(360deg); }
-  100% { transform: rotate(0deg); }
+@keyframes twist {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(720deg);
+  }
 }
+
 </style>
 
 </head>
