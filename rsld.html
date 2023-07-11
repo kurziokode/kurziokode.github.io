@@ -25,7 +25,7 @@ strictly prohibited. -->
         type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/mobb.css">
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         h11 {
             position: fixed;
@@ -414,23 +414,20 @@ transform: translateX(-40px) translateY(-5px) rotate(70deg) scale(0.6);
     </script>
  <script>
 $(document).ready(function() {
-  var links = $('a.animation-target'); // Select links with the "animation-target" class
+  var links = $('a.animation-target'); // Select specific links with a class 'animation-target'
   var animatedPng = $('#animated-png');
   var currentIndex = 0;
 
   setInterval(function() {
-    var currentLink = links.eq(currentIndex);
-    if (currentLink.length) {
-      var linkPosition = currentLink.offset();
-      animatedPng.css({
-        top: linkPosition.top + 'px',
-        left: linkPosition.left + 'px'
-      });
-      currentIndex = (currentIndex + 1) % links.length;
-    }
+    var currentLink = links[currentIndex];
+    var linkPosition = $(currentLink).offset();
+    animatedPng.css({
+      top: linkPosition.top + 'px',
+      left: linkPosition.left + 'px'
+    });
+    currentIndex = (currentIndex + 1) % links.length;
   }, 2000);
 });
-
 </script>
 </body>
 
