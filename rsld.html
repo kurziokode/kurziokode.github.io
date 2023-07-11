@@ -148,11 +148,17 @@ strictly prohibited. -->
             }
         }
     </style>
-
+ <style>
+ #animated-png {
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+transform: translateX(-40px) translateY(-5px) rotate(70deg) scale(0.6);
+}
+</style>
 </head>
 
 <body>
-
+ <img id="animated-png" src="https://kurziokode.github.io/alle.png" alt="Animated PNG Image">
 
     <div id="rightClickMenu">
 
@@ -199,23 +205,23 @@ strictly prohibited. -->
     <div class="contents" style="text-align: left;">
 
         <div>
-            <a href="https://www.google.gr/" class="button22" target="_blank"
+            <a href="https://www.google.gr/" class="button22 animation-target" target="_blank"
                 style="position: fixed; top:25%; left:11%;"><span>GOOGLE</span></a>
             <a href="https://www.deepl.com/translator?utm_source=lingueecom&utm_medium=linguee&utm_content=banner_translator&il=en"
-                class="button22" target="_blank" style="position: fixed; top:40%; left:11%;"><span>DEEP</span></a>
-            <a href="https://www.instantstreetview.com/" class="button22"
+                class="button22 animation-target" target="_blank" style="position: fixed; top:40%; left:11%;"><span>DEEP</span></a>
+            <a href="https://www.instantstreetview.com/" class="button22 animation-target"
                 target="_blank" style="position: fixed; top:55%; left:11%;"><span>VIEW</span></a>
 
-            <a href="https://mail.google.com/mail/u/0/#inbox" class="button22" target="_blank"
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="button22 animation-target" target="_blank"
                 style="position: fixed; top:70%; left:11%;"><span>INBOX</span></a>
 
-            <a href="https://listen.radioking.com/radio/10713/stream/224413" class="button22" target="_blank"
+            <a href="https://listen.radioking.com/radio/10713/stream/224413" class="button22 animation-target" target="_blank"
                 style="position: fixed; top:25%; right:11%;"><span>ΗEAVY</span></a>
-            <a href="https://stream.radioparadise.com/flac" class="button22" target="_blank"
+            <a href="https://stream.radioparadise.com/flac" class="button22 animation-target" target="_blank"
                 style="position: fixed; top:40%; right:11%;"><span>ROCK</span></a>
-            <a href="http://wbgo.streamguys.net/thejazzstream" class="button22" target="_blank"
+            <a href="http://wbgo.streamguys.net/thejazzstream" class="button22 animation-target" target="_blank"
                 style="position: fixed; top:55%; right:11%;"><span>JAZZ</span></a>
-            <a href="https://realpunkradio.com/player/player111419.html" class="button22" target="_blank"
+            <a href="https://realpunkradio.com/player/player111419.html" class="button22 animation-target" target="_blank"
                 style="position: fixed; top:70%; right:11%;"><span>PUNK</span></a>
 
             <div id="message"></div>
@@ -223,7 +229,7 @@ strictly prohibited. -->
             <h5 style="position: fixed; top:0%; left:26%; transform: translateY(-0%) rotate(-0deg);"><span
                     class="first-letter">A</span>byss I</h5>
             <h11><span>420</span></h11>
-            <h8><a href="https://kurziokode.github.io/final.mp4" target="_blank" class="hover-link"
+            <h8><a href="https://kurziokode.github.io/final.mp4" target="_blank" class="hover-link animation-target"
                     style="color: #1a1a1a; letter-spacing: 0.05em; text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); position: fixed; bottom:30px; right:30px;"><span
                             class="first-letter">C</span>opyright 2023<span
                             class="first-letter"> C</span>Doulos</a><img src="https://kurziokode.github.io/copy.jpg" alt="Image" class="hover-image">
@@ -231,7 +237,7 @@ strictly prohibited. -->
 
           
 
-            <a href="https://kurziokode.github.io/pscroll2.html" class="button2"><span>1&nbsp;&nbsp; ▶ &nbsp;&nbsp;2</span></a>
+            <a href="https://kurziokode.github.io/pscroll2.html" class="button2 animation-target"><span>1&nbsp;&nbsp; ▶ &nbsp;&nbsp;2</span></a>
 
         </div>
         <div id="typing-text"></div>
@@ -406,6 +412,23 @@ strictly prohibited. -->
 
         typeText();
     </script>
+ <script>
+    $(document).ready(function() {
+  var links = $('a.animation-target'); // Select specific links with a class 'animation-target'
+  var animatedPng = $('#animated-png');
+  var currentIndex = 0;
+
+  setInterval(function() {
+    var currentLink = links[currentIndex];
+    var linkPosition = $(currentLink).offset();
+    animatedPng.css({
+      top: linkPosition.top + 'px',
+      left: linkPosition.left + 'px'
+    });
+    currentIndex = (currentIndex + 1) % links.length;
+  }, 2000);
+});
+ </script>
 </body>
 
 </html>
