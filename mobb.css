@@ -112,8 +112,8 @@ h6 {
 
 .button2 {
   position: fixed;
-  top: 98px;
-  right: 30px;	
+  top: 10%;
+  right: 11%;	
   display: flex;
   justify-content: center;
   align-items: center;
