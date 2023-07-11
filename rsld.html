@@ -414,14 +414,14 @@ transform: translateX(-40px) translateY(-5px) rotate(70deg) scale(0.6);
     </script>
  <script>
 $(document).ready(function() {
-  var links = $('a'); // Select all anchor elements
+  var links = $('a.animation-target'); // Select links with the "animation-target" class
   var animatedPng = $('#animated-png');
   var currentIndex = 0;
 
   setInterval(function() {
-    var currentLink = getNextAnimationTarget(links, currentIndex);
-    if (currentLink) {
-      var linkPosition = $(currentLink).offset();
+    var currentLink = links.eq(currentIndex);
+    if (currentLink.length) {
+      var linkPosition = currentLink.offset();
       animatedPng.css({
         top: linkPosition.top + 'px',
         left: linkPosition.left + 'px'
@@ -429,26 +429,9 @@ $(document).ready(function() {
       currentIndex = (currentIndex + 1) % links.length;
     }
   }, 2000);
-
-  function getNextAnimationTarget(links, currentIndex) {
-    var totalLinks = links.length;
-    var index = currentIndex;
-    var currentLink = null;
-
-    while (index < totalLinks) {
-      var link = links[index];
-      if ($(link).hasClass('animation-target')) {
-        currentLink = link;
-        break;
-      }
-      index++;
-    }
-
-    return currentLink;
-  }
 });
 
- </script>
+</script>
 </body>
 
 </html>
