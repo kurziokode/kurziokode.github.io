@@ -9,7 +9,9 @@ strictly prohibited. */
 
 * {
   cursor: url('https://kurziokode.github.io/curs2.png'), auto;
- }
+ overflow-x: hidden;
+  overflow-y: auto;
+}
 
 body {
  background: rgb(11,12,14);
