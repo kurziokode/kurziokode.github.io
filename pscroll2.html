@@ -388,21 +388,32 @@ transform: translateX(-40px) translateY(-5px) rotate(70deg) scale(0.6);
             });
         </script>
  <script>
- $(document).ready(function() {
-      var links = $('a');
-      var animatedPng = $('#animated-png');
-      var currentIndex = 0;
+$(document).ready(function() {
+  var links = $('a');
+  var animatedPng = $('#animated-png');
+  var currentIndex = 0;
 
-      setInterval(function() {
-        var currentLink = links[currentIndex];
-        var linkPosition = $(currentLink).offset();
-        animatedPng.css({
-          top: linkPosition.top + 'px',
-          left: linkPosition.left + 'px'
-        });
-        currentIndex = (currentIndex + 1) % links.length;
-      }, 2000);
+  setInterval(function() {
+    var currentLink = links[currentIndex];
+    
+    // Check if the href value should be skipped
+    if ($(currentLink).attr('href') === '#section1' ||
+        $(currentLink).attr('href') === '#section2' ||
+        $(currentLink).attr('href') === '#section3' ||
+        $(currentLink).attr('href') === '#') {
+      currentIndex = (currentIndex + 1) % links.length;
+      return; // Skip to the next iteration of setInterval
+    }
+    
+    var linkPosition = $(currentLink).offset();
+    animatedPng.css({
+      top: linkPosition.top + 'px',
+      left: linkPosition.left + 'px'
     });
+    currentIndex = (currentIndex + 1) % links.length;
+  }, 2000);
+});
+
 </script>
 </body>
 
