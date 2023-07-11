@@ -413,14 +413,14 @@ transform: translateX(-40px) translateY(-5px) rotate(70deg) scale(0.6);
         typeText();
     </script>
  <script>
-    $(document).ready(function() {
-  var links = $('a.animation-target'); // Select specific links with a class 'animation-target'
+$(document).ready(function() {
+  var links = $('a.animation-target');
   var animatedPng = $('#animated-png');
   var currentIndex = 0;
 
   setInterval(function() {
-    var currentLink = links[currentIndex];
-    var linkPosition = $(currentLink).offset();
+    var currentLink = links.eq(currentIndex);
+    var linkPosition = currentLink.offset();
     animatedPng.css({
       top: linkPosition.top + 'px',
       left: linkPosition.left + 'px'
@@ -428,6 +428,7 @@ transform: translateX(-40px) translateY(-5px) rotate(70deg) scale(0.6);
     currentIndex = (currentIndex + 1) % links.length;
   }, 2000);
 });
+
  </script>
 </body>
 
