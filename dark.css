@@ -131,21 +131,19 @@ h3 {
 }
 
 h5 {
-  font-size: calc(100vw /9);
+  font-size: calc(100vw / 9);
   letter-spacing: 0.05em;
   font-weight: 900;
   color: #001a00;
   opacity: 0.45;
   user-select: none;
-  cursor: default !important;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
-  text-shadow: 14px 14px 0px rgba(0, 0, 0, 1);
+  text-shadow: 14px 14px 0px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 0.5);
   white-space: nowrap;
   z-index: -1;
-
-
+  cursor: url('https://kurziokode.github.io/curs2.png'), auto !important;
 }
 
 @media only screen and (max-width: 467px) {
