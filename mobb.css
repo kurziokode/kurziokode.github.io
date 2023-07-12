@@ -184,7 +184,7 @@ h6 {
   border-top-right-radius: 42px;
   border-bottom-left-radius: 42px;
   border-bottom-right-radius: 42px;
-  box-shadow: inset 0px 1px 0px 0px #4d4d4d;
+  box-shadow: inset 0px 1px 0px 0px #4d4d4d, 0px 2px 4px rgba(0, 0, 0, 0.4);
   background: linear-gradient(#262626, #1a1a1a);
 }
 
