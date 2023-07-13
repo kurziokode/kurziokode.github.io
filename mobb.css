@@ -393,12 +393,7 @@ h6 {
     font-size: 18px; /* Change font size */
     color: #4c4d4c; /* Change font color */
   }
-  h11 {
-opacity: 0.7;
-  }
-  h7 {
-opacity: 0.7;
-  }	
+
   h8 {
     font-size: 16px; /* Change font size */
     /* Change font color */
@@ -430,12 +425,7 @@ opacity: 0.7;
     font-size: 20px; /* Change font size */
     /* Change font color */
  }
-  h11 {
-opacity: 0.7;
-  }
-  h7 {
-opacity: 0.7;
-  }
+
 }
 
 /* Large devices (desktops) */
@@ -459,13 +449,6 @@ opacity: 0.7;
     font-size: 22px; /* Change font size */
     /* Change font color */
   }
-  h11 {
-opacity: 0.7;
-  }
-  h7 {
-opacity: 0.7;
-  }
-
 }
 
 
