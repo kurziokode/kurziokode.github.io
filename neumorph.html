@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+<style>
+/* For all devices */
+body {
+  background-color: #1a1a1a;
+  color: #595959;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+
+nav {
+  background-color: #1a1a1a;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+ 
+  text-decoration: none;
+}
+
+article {
+  background-color: #1a1a1a;
+  padding: 20px;
+
+}
+
+figure {
+  margin-bottom: 20px;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+aside {
+  background-color: #1a1a1a;
+  padding: 20px;
+ 
+}
+
+footer {
+  background-color: #1a1a1a;
+  padding: 20px;
+
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  nav {
+    font-size: 12px;
+  }
+
+  article {
+    padding: 10px;
+
+}
+
+  figure {
+    margin-bottom: 10px;
+  }
+
+  aside {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
+
+/* For tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* For laptops and desktops */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.curz {
+	display: none;
+	padding: 20px;
+	overflow: auto;
+  background-color: #1a1a1a;
+
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+	.curz ul {
+		margin-top: 10px;
+	}
+		.curz ul li {
+			display: inline-block;
+			width: 200px;
+			list-style: none;
+			font-size: 14px;
+			padding: 3px 10px;
+		}
+			.curz ul li:before {
+				content: '';
+				margin-right: 5px;
+				color: rgba( 255, 255, 255, 0.2 );
+			}
+
+
+.curz-arrow {
+	position: absolute;
+	z-index: 10;
+
+	border: 10px solid transparent;
+
+	-webkit-transition: opacity 0.4s ease 0.4s;
+	   -moz-transition: opacity 0.4s ease 0.4s;
+	    -ms-transition: opacity 0.4s ease 0.4s;
+	     -o-transition: opacity 0.4s ease 0.4s;
+	        transition: opacity 0.4s ease 0.4s;
+}
+	.curz-left .curz-arrow {
+		left: 20px;
+		top: 50%;
+		margin-top: -16px;
+		border-left: 16px solid #02640a;
+	}
+	.curz-right .curz-arrow {
+		right: 20px;
+		top: 50%;
+		margin-top: -16px;
+		border-right: 16px solid ;
+	}
+	.curz-top .curz-arrow {
+		left: 50%;
+		top: 20px;
+		margin-left: -16px;
+		border-top: 16px solid #334d00;
+	}
+	.curz-bottom .curz-arrow {
+		left: 50%;
+		bottom: 14px;
+		margin-left: -16px;
+		border-bottom: 16px solid #333;
+	}
+	.curz-active .curz-arrow {
+		opacity: 0;
+
+		-webkit-transition: opacity 0.2s ease;
+		   -moz-transition: opacity 0.2s ease;
+		    -ms-transition: opacity 0.2s ease;
+		     -o-transition: opacity 0.2s ease;
+		        transition: opacity 0.2s ease;
+	}
+
+
+.contents {
+	background: transparent;
+	padding: 20px 40px;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform-style: preserve-3d;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+	.contents>article {
+		max-width: 400px;
+	}
+	.contents p {
+		margin: 10px 0 10px 0;
+		font-size: 16px;
+		line-height: 1.32;
+	}
+	.contents small {
+		display: block;
+		margin-top: 10px;
+		padding-top: 10px;
+	
+		font-size: 0.9em;
+		border-top: 1px dashed transparent;
+
+		-webkit-text-size-adjust: none;
+	}
+	.contents .sharing {
+		position: absolute;
+		bottom: 30px;
+	}
+</style>
+
+<style>
+  
+
+      .noselect {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-container a {
+            width: 150px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #1a1a1a;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: -5px -5px 15px #333, 5px 5px 15px #0d0d0d, inset 5px 5px 10px #333, inset -5px -5px 10px #0d0d0d;
+            color: #595959;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .button-container a:hover {
+            box-shadow: -5px -5px 15px #333, 5px 5px 15px #0d0d0d, inset 5px 5px 10px #0d0d0d, inset -5px -5px 10px #333;
+            font-size: 15px;
+            transition: 500ms;
+        }
+
+        .button-container a:focus {
+            outline: none;
+        }
+
+        .red:hover {
+            color: #f07171;
+            text-shadow: 0px 0px 10px #f07171;
+        }
+
+        .green:hover {
+            color: #93f071;
+            text-shadow: 0px 0px 10px #93f071;
+        }
+
+        .blue:hover {
+            color: #71b7f0;
+            text-shadow: 0px 0px 10px #71b7f0;
+        }
+
+        .purple:hover {
+            color: #b971f0;
+            text-shadow: 0px 0px 10px #b971f0;
+        }
+
+       
+ 
+</style>
+
+</head>
+<body>
+  <div class="curz">
+  
+    <ul class="button-container">
+   
+      <li><a href="https://www.windy.com/37.797/21.351?rain,37.301,21.351,8,m:eH8agKK"  class="noselect red" target="_blank">&#x2022; windy</a>
+      </li>
+      <li><a href="https://www.e-mme.gr/" target="_blank">&#x2022; e-mme</a></li>
+      <li><a href="https://programmatileorasis.gr/" target="_blank">&#x2022; program</a></li>
+      <li><a href="https://www.alphatv.gr/live/" target="_blank">&#x2022; alpha</a></li>
+      <li><a href="https://www.megatv.com/" target="_blank">&#x2022; mega</a></li>
+      <li><a href="https://www.tvopen.gr/live" target="_blank">&#x2022; open</a></li>
+      <li><a href="https://www.skaitv.gr/live" target="_blank">&#x2022; skai</a></li>
+      <li><a href="https://www.star.gr/tv/live-stream" target="_blank">&#x2022; star</a></li>
+      <li><a href="https://www.car.gr/" target="_blank">&#x2022; car.gr</a></li>
+      <li><a href="https://www.skroutz.gr/" target="_blank">&#x2022; skroutz</a></li>
+      <li><a href="https://www.bet365.gr/#/HO/" target="_blank">&#x2022; bet 365</a></li>
+      <li><a href="https://ebanking.eurobank.gr/#/login" target="_blank">&#x2022; eurobank</a></li>
+      <li><a href="https://myprotergia.intelen.com/login#/history" target="_blank">&#x2022; protergia</a></li>
+      <li><a href="https://www.gov.gr/" target="_blank">&#x2022; gov.gr</a></li>
+      <li><a href="https://www1.aade.gr/" target="_blank">&#x2022; taxis</a></li>
+      <li><a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Fsummary&state="
+          target="_blank">&#x2022; paypal</a></li>
+      <li><a href="https://gr.pinterest.com/" target="_blank">&#x2022; pinterest</a></li>
+    </ul>
+  
+  </div>
+  
+  <div class="curz-arrow"></div>
+  
+  <div class="contents"><div></div>
+      <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul class="button-container">
+                <li><a href="#" class="noselect red">Home</a></li>
+                <li><a href="#" class="noselect red">About</a></li>
+                <li><a href="#" class="noselect red">Contact</a></li>
+       
+              </ul>
+        </nav>
+      
+    </header>
+    
+<section>
+
+<main>
+    
+        <article>
+            <h2>This is the article</h2>
+            <p>This is the content of the article.</p>
+            <figure>
+                <img src="https://kurziokode.github.io/11.jpg" alt="This is an image">
+                <figcaption>This is the caption for the image</figcaption>
+            </figure>
+      
+        </article>
+  
+    </main>
+</section>
+<section>
+  
+    <aside>
+      <div class="button-container">
+<a href="#" class="noselect red">Button 3</a>
+<a href="#" class="noselect red">Button 3</a>
+<a href="#" class="noselect red">Button 3</a>
+
+      </div>
+      <div class="button-container">
+        <a href="#" class="noselect red">Button 3</a>
+        <a href="#" class="noselect red">Button 3</a>
+        <a href="#" class="noselect red">Button 3</a>
+       
+      </div>
+   
+    </aside>
+</section>
+
+    <footer class="button-container">
+    <p class="noselect red">Copyright &copy; 2023 My Website</p>
+    </footer>
+  
+<script src="https://kurziokode.github.io/curz.js"></script>
+  <script>
+    var curz = Curz.create({
+
+      menuElement: document.querySelector('.curz'),
+
+
+      contentsElement: document.querySelector('.contents'),
+
+
+      position: Curz.getQuery().p || 'right',
+
+
+      height: 200,
+
+
+      width: 260,
+
+
+      threshold: 40,
+
+
+      mouse: true,
+
+
+      touch: true
+    });
+
+    if (Curz.getQuery().u && Curz.getQuery().u.match(/^http/gi)) {
+      var contents = document.querySelector('.contents');
+      contents.style.padding = '0px';
+      contents.innerHTML = '<div class="cover"></div><iframe src="' + Curz.getQuery().u +
+        '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+    }
+  </script>
+</body>
+ 
+</html>
