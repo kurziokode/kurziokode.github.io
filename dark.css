@@ -243,9 +243,7 @@ footer {
     color: #4d4d4d;
 	  /* Change font color */
   }
-  h11 {
-opacity: 0.7;
-  }
+
   h5 {
     display: none;
   }
@@ -266,9 +264,7 @@ opacity: 0.7;
     font-size: 20px; /* Change font size */
       color: #4d4d4d;/* Change font color */
   }
-  h11 {
-opacity: 0.7;
-  }
+
  h8 {
     font-size: 17px; /* Change font size */
     /* Change font color */
@@ -294,9 +290,7 @@ opacity: 0.7;
     font-size: 22px; /* Change font size */
      color: #4d4d4d; /* Change font color */
   }
-   h11 {
-opacity: 0.7;
-  }
+
  h8 {
     font-size: 18px; /* Change font size */
     /* Change font color */
