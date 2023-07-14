@@ -13,6 +13,7 @@ strictly prohibited. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
     
 /* For Chrome, Safari, and Opera */
@@ -325,10 +326,44 @@ strictly prohibited. -->
       text-shadow: 0px 0px 10px #b971f0;
     }
   </style>
+  <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
 
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
 </head>
 
 <body>
+   <div id="rightClickMenu">
+
+
+        <a href="https://www.facebook.com/" class="myLink" target="_blank"
+            style="color: #474c52">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" class="myLink" target="_blank"
+            style="color: #474c52">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" class="myLink" target="_blank"
+            style="color: #474c52">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/" class="myLink" target="_blank"
+            style="color: #474c52">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+
+
+    </div>
   <div class="curz">
 
     <ul class="button-container">
@@ -453,6 +488,22 @@ strictly prohibited. -->
         contents.innerHTML = '<div class="cover"></div><iframe src="' + Curz.getQuery().u +
           '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
       }
+    </script>
+      <script>
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("rightClickMenu");
+            menu.style.top = event.pageY + "px";
+            menu.style.left = event.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+            var menu = document.getElementById("rightClickMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+        });
     </script>
 </body>
 
