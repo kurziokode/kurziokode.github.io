@@ -411,14 +411,20 @@ strictly prohibited. -->
       text-shadow: 0px 0px 0px #990099;
     }
  </style>
-
+<style>
+ #animated-png {
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+transform: translateX(-45px) translateY(-5px) rotate(70deg) scale(0.7);
+}
+</style>
 </head>
 
 <body>
      <script>document.oncontextmenu = function() {
   return false;
 }</script>
- 
+  <img id="animated-png" src="https://kurziokode.github.io/alle.png" alt="Animated PNG Image">
   <div class="curz">
 
     <ul class="button-container">
@@ -537,7 +543,23 @@ strictly prohibited. -->
           '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
       }
     </script>
+ <script>
+$(document).ready(function() {
+  var links = $('a.animation-target'); // Select specific links with a class 'animation-target'
+  var animatedPng = $('#animated-png');
+  var currentIndex = 0;
 
+  setInterval(function() {
+    var currentLink = links[currentIndex];
+    var linkPosition = $(currentLink).offset();
+    animatedPng.css({
+      top: linkPosition.top + 'px',
+      left: linkPosition.left + 'px'
+    });
+    currentIndex = (currentIndex + 1) % links.length;
+  }, 5000);
+});
+</script>
 </body>
 
 </html>
