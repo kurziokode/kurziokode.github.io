@@ -567,11 +567,12 @@ $(document).ready(function() {
 });
 </script>
  <script>
-  const myList = document.querySelectorAll('#myList li');
-  const myListArray = Array.from(myList);
-  const sortedListArray = myListArray.sort((a, b) => a.textContent.localeCompare(b.textContent));
-  const sortedList = document.querySelector('#myList');
-  sortedListArray.forEach(li => sortedList.appendChild(li));
+ const myList = document.getElementById('myList');
+  const listItems = Array.from(myList.querySelectorAll('li'));
+  const sortedListItems = listItems.sort((a, b) => a.textContent.localeCompare(b.textContent));
+  
+  listItems.forEach(li => li.remove());
+  sortedListItems.forEach(li => myList.appendChild(li));
 
 </script>	 
 </body>
