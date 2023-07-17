@@ -558,7 +558,15 @@ strictly prohibited. -->
           '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
       }
     </script>
+ <script>
+ const myList = document.getElementById('myList');
+  const listItems = Array.from(myList.querySelectorAll('li'));
+  const sortedListItems = listItems.sort((a, b) => a.textContent.localeCompare(b.textContent));
+  
+  listItems.forEach(li => li.remove());
+  sortedListItems.forEach(li => myList.appendChild(li));
 
+</script>
 </body>
 
 </html>
