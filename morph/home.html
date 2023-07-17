@@ -566,6 +566,25 @@ $(document).ready(function() {
   }, 5000);
 });
 </script>
+ <script>
+function sortList() {
+  var listItems = document.querySelectorAll("li");
+  var sortedListItems = [];
+
+  for (var i = 0; i < listItems.length; i++) {
+    sortedListItems.push(listItems[i]);
+  }
+
+  sortedListItems.sort(function(a, b) {
+    return a.textContent.toLowerCase() > b.textContent.toLowerCase();
+  });
+
+  for (var i = 0; i < sortedListItems.length; i++) {
+    listItems[i] = sortedListItems[i];
+  }
+}
+
+</script>	 
 </body>
 
 </html>
