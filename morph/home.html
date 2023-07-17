@@ -572,15 +572,13 @@ function sortList() {
   var sortedListItems = [];
 
   for (var i = 0; i < listItems.length; i++) {
-    sortedListItems.push(listItems[i]);
+    sortedListItems.push(listItems[i].textContent.toLowerCase());
   }
 
-  sortedListItems.sort(function(a, b) {
-    return a.textContent.toLowerCase() > b.textContent.toLowerCase();
-  });
+  sortedListItems.sort();
 
   for (var i = 0; i < sortedListItems.length; i++) {
-    listItems[i] = sortedListItems[i];
+    listItems[i].textContent = sortedListItems[i];
   }
 }
 
