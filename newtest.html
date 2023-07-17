@@ -20,11 +20,8 @@ strictly prohibited. -->
     <title>&nbsp;&nbsp;&nbsp;&nbsp;Abyss&nbsp;&nbsp;I I</title>
     <link rel="icon" href="https://kurziokode.github.io/alle.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<style>
-
- 
 * {
  cursor: url('https://kurziokode.github.io/bldot.png'), auto;
 }
@@ -82,8 +79,7 @@ strictly prohibited. -->
 
  </style>
 
-
-    <style>
+ <style>
         #container {
             height: 100%;
 
@@ -168,13 +164,6 @@ strictly prohibited. -->
     </style>
 
  <style>
- #animated-png {
-      position: absolute;
-      transition: all 0.5s ease-in-out;
-transform: translateX(-42px) translateY(-8px) rotate(0deg) scale(0.5);
-}
-</style>
- <style>
     .noselect {
       -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -246,7 +235,6 @@ transform: translateX(-42px) translateY(-8px) rotate(0deg) scale(0.5);
 </head>
 
 <body>
- <img id="animated-png" src="https://kurziokode.github.io/420.png" alt="Animated PNG Image">
 
  <div id="rightClickMenu">
         <a href="https://www.facebook.com/" target="_blank"
@@ -364,9 +352,7 @@ transform: translateX(-42px) translateY(-8px) rotate(0deg) scale(0.5);
                 <li><a href="https://www.rottentomatoes.com/" target="_blank">rotten</a></li>
             </ul>
        
-   
-
-        </div>
+ </div>
 
         <article style="text-align: center;">
 
@@ -386,8 +372,6 @@ transform: translateX(-42px) translateY(-8px) rotate(0deg) scale(0.5);
 
         <div>
 
-         
-          
             <h11 style="position: fixed; top:50%; left:2%; transform: translateY(-50%) rotate(-90deg);"><span>curzio</span></h11>
    </div>
 
@@ -407,34 +391,7 @@ transform: translateX(-42px) translateY(-8px) rotate(0deg) scale(0.5);
                 }
             });
         </script>
- <script>
-$(document).ready(function() {
-  var links = $('a');
-  var animatedPng = $('#animated-png');
-  var currentIndex = 0;
 
-  setInterval(function() {
-    var currentLink = links[currentIndex];
-    
-    // Check if the href value should be skipped
-    if ($(currentLink).attr('href') === '#section1' ||
-        $(currentLink).attr('href') === '#section2' ||
-        $(currentLink).attr('href') === '#section3' ||
-        $(currentLink).attr('href') === '#') {
-      currentIndex = (currentIndex + 1) % links.length;
-      return; // Skip to the next iteration of setInterval
-    }
-    
-    var linkPosition = $(currentLink).offset();
-    animatedPng.css({
-      top: linkPosition.top + 'px',
-      left: linkPosition.left + 'px'
-    });
-    currentIndex = (currentIndex + 1) % links.length;
-  }, 5000);
-});
-
-</script>
 </body>
 
 </html>
