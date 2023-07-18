@@ -45,7 +45,12 @@ strictly prohibited. -->
       overflow-y: auto;
     }
 
-    header {
+   .cursor {
+    cursor: url(https://kurziokode.github.io/bldot.png), auto;
+      transform: rotate(45deg); /* Adjust the rotation angle as needed */
+    }
+ 
+     header {
       background-color: #1a1a1a;
       padding: 20px;
     }
@@ -471,7 +476,7 @@ strictly prohibited. -->
           <a href="https://kurziokode.github.io/morph/arts.html" class="noselect red">Arts</a>
      </div>
         <div class="button-container">
-          <a href="#" class="noselect active" style="color: #8b008b;">AI&nbsp;&nbsp;<img src="https://kurziokode.github.io/alle.png"  width="24px" height="24px" alt="My image" /></a>
+          <a href="#" class="noselect active" style="color: #8b008b;">AI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://kurziokode.github.io/alle.png"  width="24px" height="24px" alt="My image" /></a>
           <a href="https://kurziokode.github.io/morph/tools.html" class="noselect purple">Tools</a>
      </div>
            </aside>
@@ -545,10 +550,7 @@ strictly prohibited. -->
   sortedListItems.forEach(li => myList.appendChild(li));
 
 </script>
- <script>	  
-const cursor = document.querySelector(".cursor");
-cursor.rotate(45);
-</script>	  
+	  
 </body>
 
 </html>
