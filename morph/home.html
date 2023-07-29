@@ -376,20 +376,7 @@ color: #141414;
       justify-content: center;
     }
 
-
-.blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
-  pointer-events: none; /* Allow interactions with elements behind the overlay */
-  display: none; /* Hide the overlay initially */
-}
-	  
-    .button-container a {
+  .button-container a {
       width: 150px;
       height: 50px;
       display: flex;
@@ -456,7 +443,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
   return false;
 }</script>
  
-  <div class="curz blur-overlay">
+  <div class="curz">
 
     <ul id="myList" class="button-container">
      <li><a href="https://www.google.com/" class="noselect green" target="_blank">&#x2022; google</a></li>
@@ -605,19 +592,7 @@ $(document).ready(function() {
   sortedListItems.forEach(li => myList.appendChild(li));
 
 </script>
-<script>
-const buttonContainer = document.querySelector('.button-container');
-const blurOverlay = document.querySelector('.blur-overlay');
-
-buttonContainer.addEventListener('mouseover', () => {
-  blurOverlay.style.display = 'block';
-});
-
-buttonContainer.addEventListener('mouseout', () => {
-  blurOverlay.style.display = 'none';
-});
-
-</script>	  
+	  
 </body>
 
 </html>
