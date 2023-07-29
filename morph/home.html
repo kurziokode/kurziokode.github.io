@@ -376,16 +376,18 @@ color: #141414;
       justify-content: center;
     }
 
-.button-container {
-  filter: blur(0); /* Initially, no blur effect */
-  transition: filter 0.3s ease; /* Add a smooth transition effect */
-}
 
-/* When hovering over the links, apply the blur effect to the container */
-.button-container:hover {
-  filter: blur(5px); /* You can adjust the blur amount as needed */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
+  pointer-events: none; /* Allow interactions with elements behind the overlay */
+  display: none; /* Hide the overlay initially */
 }
-
 	  
     .button-container a {
       width: 150px;
@@ -448,7 +450,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
 </style>
 </head>
 
-<body>
+<body class="blur-overlay">
 
      <script>document.oncontextmenu = function() {
   return false;
@@ -604,15 +606,17 @@ $(document).ready(function() {
 
 </script>
 <script>
-  // Optional: If you want to add a smooth transition for the blur effect
-  const container = document.querySelector('.button-container');
-  container.addEventListener('mouseover', () => {
-    container.style.filter = 'blur(5px)'; // Adjust the blur amount as needed
-  });
+const buttonContainer = document.querySelector('.button-container');
+const blurOverlay = document.querySelector('.blur-overlay');
 
-  container.addEventListener('mouseout', () => {
-    container.style.filter = 'blur(0)'; // Reset the blur on mouseout
-  });
+buttonContainer.addEventListener('mouseover', () => {
+  blurOverlay.style.display = 'block';
+});
+
+buttonContainer.addEventListener('mouseout', () => {
+  blurOverlay.style.display = 'none';
+});
+
 </script>	  
 </body>
 
