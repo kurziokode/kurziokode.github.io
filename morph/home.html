@@ -427,6 +427,40 @@ color: #141414;
       color: #730073;
       text-shadow: 0px 0px 0px #730073;
     }
+
+    .button-container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  .button-container2 a {
+      width: 150px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #0b0c0e;
+      margin: 10px;
+      border: none;
+      border-radius: 75px;
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+      color: #1160a2;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .button-container2 a:hover {
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+      font-size: 15px;
+      transition: 500ms;
+    }
+
+    .button-container2 a:focus {
+      outline: none;
+    }
+  
  </style>
 <style>
  #animated-png {
@@ -519,7 +553,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
            >instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
  </div>
     <div>&nbsp;</div>
-   <footer class="button-container">
+   <footer class="button-container2">
      <p><a href="#" id="back-to-top-btn" class="noselect green animation-target" style="font-size: x-large;">
         ▲
       </a></p>
