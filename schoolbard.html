@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Website</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    nav {
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-block {
+      margin: 20px 0;
+    }
+
+    .image-block {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      .text-block {
+        margin-bottom: 10px;
+      }
+
+      .image-block {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="text-block">
+      <h1>Welcome to Our School!</h1>
+      <p>We are a great school with a lot to offer our students. We have a strong academic program, a variety of extracurricular activities, and a caring staff. We would love for you to join us!</p>
+    </div>
+    <div class="image-block">
+      <img src="image.jpg" alt="School image">
+    </div>
+    <div class="text-block">
+      <h2>Our Mission</h2>
+      <p>Our mission is to provide our students with a quality education that will prepare them for college and beyond. We believe that all students can learn and succeed, and we are committed to helping each student reach their full potential.</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Our School</p>
+  </footer>
+</body>
+</html>
