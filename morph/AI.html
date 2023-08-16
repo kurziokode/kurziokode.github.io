@@ -482,16 +482,18 @@ h8 {
   z-index: -1; /* Place the cracks behind other content */
 }
 </style>
-<style>
-        /* Define a class to target the icon and change its color */
-        .android-icon {
+    <style>
+        /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .android-icon {
             color: #21232c;
-	transition: color 0.3s ease;	
+            transition: color 0.3s ease; /* Add a smooth transition */
         }
-     .android-icon:hover {
+
+        /* Change icon color on button hover */
+        .hover-color:hover .android-icon {
             color: #424657; /* Change to the desired hover color */
         }
-   </style>
+    </style>
 </head>
 
 <body>
