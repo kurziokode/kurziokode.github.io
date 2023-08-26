@@ -36,7 +36,7 @@ body {
 }
 
 .container {
-  color: #b30000;
+  color: #ffff00;
   margin: 0 auto;
   text-align: center;
 }
@@ -72,8 +72,8 @@ body {
 	width: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.5);
-    opacity: 0.8;
+	background: rgba(0, 0, 0, 0.7);
+    opacity: 0.2;
 	position: absolute;
 }
 
