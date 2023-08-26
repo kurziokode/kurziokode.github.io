@@ -41,6 +41,44 @@ body {
   text-align: center;
 }
 
+
+.video-container {
+    	opacity: 0.4;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 0%;
+	overflow: hidden;
+	background: var(--primary-color) url('') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+
+    min-width: 100%;
+	min-height: 100%;
+  position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+    opacity: 0.1;
+	position: absolute;
+}
+
+
+
 h1 {
   font-weight: normal;
   letter-spacing: .125rem;
