@@ -513,6 +513,13 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
             color: #6e7491; /* Change to the desired hover color */
         }
     </style>
+ <style>
+        .editable {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 100px;
+        }
+    </style>	
 </head>
 
 <body>
@@ -520,7 +527,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
      <script>document.oncontextmenu = function() {
   return false;
 }</script>
-  <div class="cracked-background">
+<div class="cracked-background">
   <div class="curz">
 
     <ul id="myList" class="button-container">
@@ -617,7 +624,8 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
 	  <h7 style="position: fixed; top:50%; left:78%; transform: translateY(-50%) rotate(-90deg);">HOME</h7>	
 	<h8 style="position: fixed; top:50%; left:0%; transform: translateY(-50%) rotate(-90deg);">SLIDE</h8>	
 	</div> 
-	  <div contenteditable="true">edit</div> 
+	  <div class="editable" contenteditable="true">Edit me</div>
+    <button id="makePermanent">Make Permanent</button>
     <script src="https://kurziokode.github.io/curz.js"></script>
     <script>
       var curz = Curz.create({
@@ -679,7 +687,15 @@ $(document).ready(function() {
   sortedListItems.forEach(li => myList.appendChild(li));
 
 </script>
-	  
+    <script>
+        const editableDiv = document.querySelector('.editable');
+        const makePermanentButton = document.querySelector('#makePermanent');
+
+        // Function to make changes permanent
+        makePermanentButton.addEventListener('click', () => {
+            editableDiv.setAttribute('contenteditable', 'false'); // Disable editing
+        });
+    </script>	  
 </body>
 
 </html>
