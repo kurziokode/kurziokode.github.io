@@ -503,6 +503,14 @@ h8 {
             color: #6e7491; /* Change to the desired hover color */
         }
     </style>
+  <style>
+        .editable {
+	    color: #660066;
+            border: 1px solid #21232c;
+            padding: 10px;
+            min-height: 15px;
+        }
+    </style>	
 </head>
 
 <body>
@@ -607,7 +615,8 @@ h8 {
    <div>
 	  <h7 style="position: fixed; top:50%; left:86%; transform: translateY(-50%) rotate(-90deg);">AI</h7>	
 	<h8 style="position: fixed; top:50%; left:0%; transform: translateY(-50%) rotate(-90deg);">SLIDE</h8>	
-	</div>  
+	</div> 
+	  <div class="editable" contenteditable="true"><i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note:</div>
 	  <script src="https://kurziokode.github.io/curz.js"></script>
     <script>
       var curz = Curz.create({
@@ -652,7 +661,28 @@ h8 {
   sortedListItems.forEach(li => myList.appendChild(li));
 
 </script>
-	  
+  <script>
+        const editableDiv = document.querySelector('.editable');
+
+        // Function to save the edited content to localStorage
+        function saveContent() {
+            localStorage.setItem('editableContent', editableDiv.innerHTML);
+        }
+
+        // Function to load the content from localStorage
+        function loadContent() {
+            const storedContent = localStorage.getItem('editableContent');
+            if (storedContent) {
+                editableDiv.innerHTML = storedContent;
+            }
+        }
+
+        // Load content when the page loads
+        window.addEventListener('load', loadContent);
+
+        // Listen for input events and save content automatically
+        editableDiv.addEventListener('input', saveContent);
+    </script>  	  
 </body>
 
 </html>
