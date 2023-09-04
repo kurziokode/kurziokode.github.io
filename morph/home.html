@@ -525,37 +525,6 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
         outline-color: #4d004d; /* Change the border color when the div is focused */
     }   
     </style>
- <style>
-	.link-container {
-  position: relative;
-}
-
-.link-container a {
-  text-decoration: none;
-}
-
-.link-container a:hover::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  background-color: #333;
-  color: #e6e600;
-  padding: 5px 10px;
-  border-radius: 5px;
-  bottom: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  font-family: 'GFS Neohellenic', sans-serif;
-  font-style: italic;	
-}
-
-.link-container a:hover::before {
-  opacity: 1;
-  visibility: visible;
-}
- </style>
 
 </head>
 
@@ -576,7 +545,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
       <li><a href="https://programmatileorasis.gr/" class="noselect green" target="_blank">&#x2022; program</a></li>
       <li><a href="https://www.car.gr/" class="noselect green" target="_blank">&#x2022; car.gr</a></li>
       <li><a href="https://www.skroutz.gr/" class="noselect green" target="_blank">&#x2022; skroutz</a></li>
-      <li class="link-container"><a href="https://www.bet365.gr/#/HO/" class="noselect green" target="_blank" data-tooltip="Στοίχημα">&#x2022; bet 365</a></li>
+      <li><a href="https://www.bet365.gr/#/HO/" class="noselect green" target="_blank">&#x2022; bet 365</a></li>
       <li><a href="https://ebanking.eurobank.gr/#/login" class="noselect green" target="_blank">&#x2022; eurobank</a></li>
       <li><a href="https://myprotergia.intelen.com/login#/history" class="noselect green" target="_blank">&#x2022; protergia</a></li>
       <li><a href="https://www.gov.gr/" class="noselect green" target="_blank">&#x2022; gov.gr</a></li>
