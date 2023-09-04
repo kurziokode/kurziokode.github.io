@@ -408,6 +408,27 @@ color: #141414;
       transition: 500ms;
     }
 
+    .button-container a:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.button-container a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+	  
     .button-container a:focus {
       outline: none;
     }
@@ -578,7 +599,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
       <aside>
    
      <div class="button-container">
-          <a href="https://kurziokode.github.io/morph/listen.html" class="noselect blue animation-target hover-color">Listen&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-headphones android-icon" aria-hidden="true"></i></a>
+          <a href="https://kurziokode.github.io/morph/listen.html" class="noselect blue animation-target hover-color" data-tooltip="This link will take you to the listening page">Listen&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-headphones android-icon" aria-hidden="true"></i></a>
           <a href="https://kurziokode.github.io/morph/watch.html" class="noselect blue animation-target hover-color">Watch&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-film android-icon" aria-hidden="true"></i></a>
      </div>
         <div class="button-container">
