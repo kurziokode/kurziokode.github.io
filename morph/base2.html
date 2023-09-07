@@ -499,6 +499,14 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
   opacity: 1; /* Adjust the opacity to control the intensity of the effect */
   z-index: -1; /* Place the cracks behind other content */
 }
+
+
+/* Media query for phones and tablets */
+@media (max-width: 768px) {
+  .cracked-background::after {
+    background-size: 25%; /* Display the image at 1/4 of its size */
+  }
+}	
 </style>
 
     <style>
