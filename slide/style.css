@@ -3,12 +3,13 @@ body {
   font-weight: 900;
   color: rgba(171, 7, 183, 0.604);
   background: #000;
+  margin: 0; /* Add this to remove default body margin */
+  overflow: hidden; /* Add this to prevent horizontal scrollbar */
 }
 
 h1, h2, p, strong {
-  margin: 5px 0;
+  margin: 0; /* Change from margin: 5px 0; to margin: 0; */
   padding: 0;
-  margin-right: 130px;
   line-height: 1em;
   text-align: right;
   text-transform: uppercase;
@@ -18,7 +19,7 @@ h1, h2, p, strong {
 h1 {
   font-size: 5.5em;
   letter-spacing: -10px;
-  margin-bottom: -10px;
+  margin-bottom: 0; /* Change from margin-bottom: -10px; to margin-bottom: 0; */
 }
 
 h1 strong {
@@ -52,8 +53,8 @@ a {
   text-shadow: 0 0 5px #000;
   font-size: 15px;
   color: rgba(236, 4, 205, 0.714);
-
 }
+
 @media screen and (max-width: 720px) {
   a {
     display: none;
@@ -61,13 +62,20 @@ a {
 }
 
 .container {
-  position: absolute;
+  /* Remove or adjust the positioning properties based on your layout needs */
+  /* position: absolute;
   bottom: 2em;
-  right: 2em;
+  right: 2em; */
 }
 
 .vegas-overlay {
   opacity: 0.2;
+  /* Add the following properties to ensure the overlay covers the entire viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .vegas-timer-progress {
