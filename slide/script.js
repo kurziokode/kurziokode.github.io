@@ -2,7 +2,7 @@ $('body').vegas({
   overlay: true,
   transition: 'fade', 
   transitionDuration: 5000,
-  delay: 145000,
+  delay: 21000,
   color: 'red',
   animation: 'random',
   animationDuration: 5000,
