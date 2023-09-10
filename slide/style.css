@@ -62,10 +62,13 @@ a {
 }
 
 .container {
-  /* Remove or adjust the positioning properties based on your layout needs */
-  /* position: absolute;
-  bottom: 2em;
-  right: 2em; */
+ position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
 }
 
 .vegas-overlay {
