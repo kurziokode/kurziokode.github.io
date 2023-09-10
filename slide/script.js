@@ -8,6 +8,7 @@ $('body').vegas({
   animationDuration: 21000,
   slides: [
     { src: 'https://kurziokode.github.io/1.jpg', properties: { width: '100%', height: 'auto' }  },
+    { src: 'https://kurziokode.github.io/4242.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/7.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/6.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/5.jpg', properties: { width: '100%', height: 'auto' }  },
