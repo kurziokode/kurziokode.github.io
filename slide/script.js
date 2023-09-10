@@ -1,11 +1,11 @@
 $('body').vegas({
   overlay: true,
   transition: 'fade', 
-  transitionDuration: 3000,
-  delay: 100000,
+  transitionDuration: 100000,
+  delay: 50000,
   color: 'red',
   animation: 'random',
-  animationDuration: 100000,
+  animationDuration: 145000,
   slides: [
     { src: 'https://kurziokode.github.io/1.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/7.jpg', properties: { width: '100%', height: 'auto' }  },
