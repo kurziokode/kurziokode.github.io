@@ -1,8 +1,8 @@
 $('body').vegas({
   overlay: true,
   transition: 'fade', 
-  transitionDuration: 100000,
-  delay: 50000,
+  transitionDuration: 5000,
+  delay: 25000,
   color: 'red',
   animation: 'random',
   animationDuration: 145000,
