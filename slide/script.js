@@ -12,7 +12,7 @@ $('body').vegas({
     { src: 'https://kurziokode.github.io/7.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/6.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/5.jpg', properties: { width: '100%', height: 'auto' }  },
-    { src: 'https://kurziokode.github.io/4.png', properties: { width: '100%', height: 'auto' }  },
+    { src: 'https://kurziokode.github.io/4243.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/3.jpg', properties: { width: '100%', height: 'auto' }  },
     { src: 'https://kurziokode.github.io/11.jpg', properties: { width: '100%', height: 'auto' }  }
   ]
