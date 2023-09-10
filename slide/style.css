@@ -72,7 +72,7 @@ a {
 }
 
 .vegas-overlay {
-  opacity: 0.2;
+  opacity: 1;
   /* Add the following properties to ensure the overlay covers the entire viewport */
   position: fixed;
   top: 0;
