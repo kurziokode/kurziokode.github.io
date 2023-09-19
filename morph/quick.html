@@ -75,7 +75,7 @@ strictly prohibited. -->
 }
 
 .custom-icon:hover {
-    color: blue; /* Change the color on hover */
+    color: ; /* Change the color on hover */
 }
 	
    header {
@@ -561,6 +561,18 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
         .hover-color:hover .android-icon {
             color: #6e7491; /* Change to the desired hover color */
         }
+
+     /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .custom-icon {
+            color: #21232c;
+            transition: color 0.3s ease; /* Add a smooth transition */
+        }
+
+        /* Change icon color on button hover */
+        .hover-color:hover .custom-icon {
+            color: #6e7491; /* Change to the desired hover color */
+        }
+	    
     </style>
    <style>
         .editable {
@@ -648,7 +660,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
     <header  class="button-container">
 	    
       
-	<p><a href="#" class="noselect active animation-target" style="color: #990099;">Home&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a></p>
+	<p><a href="#" class="noselect active animation-target hover-color" style="color: #990099;">Home&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a></p>
          <p><a href="https://kurziokode.github.io/final.mp4" target="_blank" class="noselect red animation-target">About&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">person</i></a></p>
          <p><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank" class="noselect purple animation-target">Contact&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">mail</i></a></p>
           
