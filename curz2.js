@@ -149,10 +149,10 @@ var Curz = {
 						contentsTransformOpened = 'translateX( -'+ config.width +'px ) rotateY( ' + contentsAngle + 'deg )';
 
 					
-						menuStyleClosed = { left: '-' + (config.width-config.overlap) + 'px' };
-						menuStyleOpened = { left: '0px' };
-						contentsStyleClosed = { right: '0px' };
-						contentsStyleOpened = { right: '-' + config.width + 'px' };
+						menuStyleClosed = { right: '-' + (config.width-config.overlap) + 'px' };
+						menuStyleOpened = { right: '0px' };
+						contentsStyleClosed = { left: '0px' };
+						contentsStyleOpened = { left: '-' + config.width + 'px' };
 						break;
 
 					case POSITION_B:
