@@ -1,0 +1,814 @@
+
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QE8B495353');
+</script>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
+   <title>&nbsp;&nbsp;&nbsp;&nbsp;C u r z i o</title> 
+  <link rel="icon" href="https://kurziokode.github.io/alle.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Fuggles" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    
+/* For Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 6px;
+}
+ 
+* {
+ cursor: url('https://kurziokode.github.io/bldot.png'), auto;
+}
+
+  /* For all devices */
+    body {
+     background-color: #111216;
+      color: #111216;
+      letter-spacing: 0.03em;
+      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: bold;
+      overflow-x: auto;
+      overflow-y: auto;
+ }
+
+    /* Style the icon with CSS */
+        .custom-icon {
+            font-size: 24px;
+            color: #21232c;
+  }
+
+.custom-icon  {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 25,
+  'opsz' 10
+}
+
+.custom-icon:hover {
+    color: ; /* Change the color on hover */
+}
+	
+   header {
+    background-color: ;
+      padding: 20px;
+    }
+
+    nav {
+     background-color: ;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+
+      text-decoration: none;
+    }
+
+    article {
+      background-color: transparent;
+      opacity: 1;
+      padding: 20px;
+
+    }
+
+  article2 {
+      background-color: transparent;
+      opacity: 1;
+      padding: 20px;
+
+    }
+    
+    figure {
+      margin-bottom: 20px;
+    }
+
+    figure img {
+      max-width: 100%;
+      width: px;
+      height: px;
+     }
+
+    aside {
+        background-color: ;
+      padding: 20px;
+
+    }
+
+    footer {
+       background-color: ;
+      padding: 20px;
+
+    }
+    .neumorphism-text {
+
+  font-family: 'Fuggles',sans-serif;
+  color: #0c161b;
+  text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;
+    }
+    h5 {
+  font-size: calc(100vw / 10);
+  letter-spacing: 0em;
+  font-weight: 800;
+  color: ;
+  opacity: 1;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+   }
+
+h7 {
+  font-size: calc(100vw / 12);
+  letter-spacing: 0em;
+  font-weight: 700;
+  color: #0D000D;
+  text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;	
+  opacity: 1;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+}
+
+	h8 {
+  font-family: 'Quicksand',sans-serif;
+  font-size: calc(100vw / 15);
+  letter-spacing: 0em;
+  font-weight: 100;
+  color: #320122;
+  text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;	
+  opacity: 1;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+}
+    @media screen and (min-width: 1922px) {
+  body {
+    filter: brightness(2.5);
+	filter: contrast(2);  
+  }
+}
+
+    /* For mobile devices */
+    @media (max-width: 480px) {
+      body {
+        font-size: 16px;
+	      
+      }
+
+      header {
+        padding: 10px;
+      }
+
+      nav {
+        font-size: 12px;
+      }
+
+      article {
+        padding: 10px;
+
+      }
+
+      figure {
+        margin-bottom: 10px;
+      } 
+
+      .neumorphism-text {
+              color: #3e3728;
+	      font-size: calc(100vw / 7);
+	      font-weight: 900; 
+   }    
+
+     h8 {
+  color: #3e3728;
+	     font-weight: 900; 
+   }       
+	    
+    aside {
+        padding: 10px;
+      }
+
+      footer {
+        padding: 10px;
+      }
+    }
+
+    /* For tablets */
+    @media (min-width: 481px) and (max-width: 967px) {
+      body {
+        font-size: 18px;
+ }
+   
+      figure img {
+    transform: scale();
+      }
+
+       .neumorphism-text {
+          color: #3e3728;
+	  font-size: calc(100vw / 7);       
+	  font-weight: 700;       
+   }  
+
+    h8 {
+            color: #3e3728;
+	    font-weight: 700; 
+   }  
+	    
+    }
+
+    /* For laptops and desktops */
+    @media (min-width: 968px) {
+      body {
+         font-size: 20px;
+      }
+   
+       figure img {
+      transform: scale();
+      }
+      }
+
+    .curz {
+      display: none;
+      padding: 20px;
+      overflow: auto;
+      background-color: #0b0c0e;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .curz ul {
+      margin-top: 10px;
+    }
+
+    .curz ul li {
+      display: inline-block;
+      width: 200px;
+      list-style: none;
+      font-size: 14px;
+      padding: 3px 10px;
+    }
+
+    .curz ul li:before {
+      content: '';
+      margin-right: 5px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+
+    .curz-arrow {
+      position: absolute;
+      z-index: 10;
+
+      border: 10px solid transparent;
+
+      -webkit-transition: opacity 0.4s ease 0.4s;
+      -moz-transition: opacity 0.4s ease 0.4s;
+      -ms-transition: opacity 0.4s ease 0.4s;
+      -o-transition: opacity 0.4s ease 0.4s;
+      transition: opacity 0.4s ease 0.4s;
+    }
+
+    .curz-left .curz-arrow {
+      left: 20px;
+      top: 23%;
+      margin-top: -16px;
+      border-left: 16px solid #660066;
+    }
+
+    .curz-right .curz-arrow {
+      right: 20px;
+      top: 50%;
+      margin-top: -16px;
+      border-right: 16px solid;
+    }
+
+    .curz-top .curz-arrow {
+      left: 50%;
+      top: 20px;
+      margin-left: -16px;
+      border-top: 16px solid #334d00;
+    }
+
+    .curz-bottom .curz-arrow {
+      left: 50%;
+      bottom: 14px;
+      margin-left: -16px;
+      border-bottom: 16px solid #333;
+    }
+
+    .curz-active .curz-arrow {
+      opacity: 0;
+
+      -webkit-transition: opacity 0.2s ease;
+      -moz-transition: opacity 0.2s ease;
+      -ms-transition: opacity 0.2s ease;
+      -o-transition: opacity 0.2s ease;
+      transition: opacity 0.2s ease;
+    }
+
+
+    .contents {
+      background: transparent;
+      padding: 20px 40px;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+
+      -webkit-overflow-scrolling: touch;
+      -webkit-transform-style: preserve-3d;
+
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .contents>article {
+      max-width: 400px;
+    }
+
+    .contents p {
+      margin: 10px 0 10px 0;
+      font-size: 16px;
+      line-height: 1.32;
+    }
+
+    .contents small {
+      display: block;
+      margin-top: 10px;
+      padding-top: 10px;
+
+      font-size: 0.9em;
+      border-top: 1px dashed transparent;
+
+      -webkit-text-size-adjust: none;
+    }
+
+    .contents .sharing {
+      position: absolute;
+      bottom: 30px;
+    }
+  </style>
+
+  <style>
+    .noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  .button-container a {
+      width: 150px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #0b0c0e;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+      color: #1160a2;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .button-container a:hover {
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+      font-size: 15px;
+      transition: 500ms;
+    }
+
+    .button-container a:focus {
+      outline: none;
+    }
+
+    .red:hover {
+     color: #188ae7;
+     text-shadow: 0px 0px 0px #188ae7;
+    }
+
+    .green:hover {
+      color: #188ae7;
+      text-shadow: 0px 0px 0px #188ae7;
+    }
+
+    .blue:hover {
+      color: #188ae7;
+      text-shadow: 0px 0px 0px #188ae7;
+    }
+
+    .purple:hover {
+      color: #188ae7;
+      text-shadow: 0px 0px 0px #188ae7;
+    }
+
+      .active:hover {
+      color: #730073;
+      text-shadow: 0px 0px 0px #730073;
+    }
+
+    .button-container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  .button-container2 a {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #0b0c0e;
+      margin: 20px;
+      border: none;
+      border-radius: 35px;
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+      color: #1160a2;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .button-container2 a:hover {
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+      font-size: 15px;
+      transition: 500ms;
+    }
+
+    .button-container2 a:focus {
+      outline: none;
+    }
+  
+ </style>
+<style>
+ #animated-png {
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
+}
+</style>
+<style>
+.cracked-background {
+  width: 100%;
+  height: 100%;
+  background: #0b0c0e; /* Replace this with your desired background color */
+  position: relative;
+}
+
+	.cracked-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0; /* Position the right image at the top-right corner */
+  width: 100%; /* Divide the width into two equal halves for two images */
+  height: 100%;
+  background: url('https://kurziokode.github.io/cra.png'); /* Replace 'right-cracks.png' with the path to your right image */
+  background-repeat: no-repeat;
+  background-position: right; /* Position the right image at the top-right corner */
+  opacity: 0.15;
+  z-index: -1;
+}
+	
+.cracked-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 8%;
+  width: 100%;
+  height: 100%;
+  background: url('https://kurziokode.github.io/glo.png'); /* Replace 'black-cracks.png' with the path to your black cracks image */
+  background-repeat: no-repeat; /* Ensure the image is not repeated */
+  background-position: right; /* Adjust the position of the image if needed */
+  opacity: 1; /* Adjust the opacity to control the intensity of the effect */
+  z-index: -1; /* Place the cracks behind other content */
+}
+
+
+/* Media query for phones and tablets */
+@media (max-width: 1024px) {
+  .cracked-background::after {
+    background-size: 10%; /* Display the image at 1/4 of its size */
+  }
+}	
+	
+/* Media query for laptops and desktops */
+@media (min-width: 1025px) {
+  .cracked-background::after {
+    background-size: 11%; /* Display the image at its original size */
+  }
+}
+</style>
+
+    <style>
+        /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .android-icon {
+            color: #21232c;
+            transition: color 0.3s ease; /* Add a smooth transition */
+        }
+
+        /* Change icon color on button hover */
+        .hover-color:hover .android-icon {
+            color: #6e7491; /* Change to the desired hover color */
+        }
+
+     /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .custom-icon {
+            color: #21232c;
+            transition: color 0.3s ease; /* Add a smooth transition */
+        }
+
+        /* Change icon color on button hover */
+        .hover-color:hover .custom-icon {
+            color: #6e7491; /* Change to the desired hover color */
+        }
+	    
+    </style>
+   <style>
+        .editable {
+	    color: #172c35;
+            outline: 1px solid transparent;
+            padding: 10px;
+            min-height: 15px;
+        }
+
+	 .editable:focus {
+        outline-color: #4d004d; /* Change the border color when the div is focused */
+    }   
+    </style>
+ <style>
+	.link-container {
+  position: relative;
+}
+
+.link-container a {
+  text-decoration: none;
+}
+
+.link-container a:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #121212;
+  color: #7c829c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;	
+}
+
+.link-container a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+ </style>
+</head>
+
+<body>
+<div class="cracked-background">
+  <div class="curz">
+
+    <ul id="myList" class="button-container">
+     <li><a href="https://www.google.com/" class="noselect green" target="_blank">&#x2022; google</a></li>
+     <li><a href="https://duckduckgo.com/" class="noselect green" target="_blank">&#x2022; duckduckgo</a></li>
+     <li><a href="https://metager.org/" class="noselect green" target="_blank">&#x2022; metager</a></li>
+     <li><a href="https://www.deepl.com/translator?utm_source=lingueecom&utm_medium=linguee&utm_content=banner_translator&il=en" class="noselect green" target="_blank">&#x2022; deep</a></li>
+     <li><a href="https://www.windy.com/37.797/21.351?rain,37.301,21.351,8,m:eH8agKK" class="noselect green" target="_blank">&#x2022; windy</a></li>
+      <li><a href="https://www.instantstreetview.com/" class="noselect green" target="_blank">&#x2022; view</a></li>
+      <li><a href="https://mail.google.com/mail/u/0/#inbox" class="noselect green" target="_blank">&#x2022; gmail</a></li>
+      <li><a href="https://mail.proton.me/u/0/inbox" class="noselect green" target="_blank">&#x2022; proton</a></li>
+      <li><a href="https://www.e-mme.gr/" class="noselect green" target="_blank">&#x2022; e-mme</a></li>
+      <li><a href="https://programmatileorasis.gr/" class="noselect green" target="_blank">&#x2022; program</a></li>
+      <li><a href="https://www.car.gr/" class="noselect green" target="_blank">&#x2022; car.gr</a></li>
+      <li><a href="https://www.skroutz.gr/" class="noselect green" target="_blank">&#x2022; skroutz</a></li>
+      <li><a href="https://www.bet365.gr/#/HO/" class="noselect green" target="_blank">&#x2022; bet 365</a></li>
+      <li><a href="https://ebanking.eurobank.gr/#/login" class="noselect green" target="_blank">&#x2022; eurobank</a></li>
+      <li><a href="https://myprotergia.intelen.com/login#/history" class="noselect green" target="_blank">&#x2022; protergia</a></li>
+      <li><a href="https://www.gov.gr/" class="noselect green" target="_blank">&#x2022; gov.gr</a></li>
+      <li><a href="https://www1.aade.gr/" class="noselect green" target="_blank">&#x2022; taxis</a></li>
+      <li><a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmyaccount%2Fsummary&state=" class="noselect green" target="_blank">&#x2022; paypal</a></li>
+      <li><a href="https://news.google.com/home?hl=el&gl=GR&ceid=GR:el" class="noselect green" target="_blank">&#x2022; news</a></li>
+      <li><a href="https://www.tiktok.com/foryou" class="noselect green" target="_blank">&#x2022; tiktok</a></li>
+      <li><a href="https://www.microsoft365.com/?auth=1" class="noselect green" target="_blank">&#x2022; office web</a></li>
+      <li><a href="https://www.sport24.gr/tvprogram/" class="noselect green" target="_blank">&#x2022; sport24</a></li>
+    </ul>
+
+  </div>
+
+  <div class="curz-arrow"></div>
+
+  <div class="contents">
+    <div></div>
+	
+<h5 class="neumorphism-text">chris doulos</h5> 
+	  <img id="animated-png" src="https://kurziokode.github.io/alle.png" alt="Animated PNG Image"> 
+    <header  class="button-container">
+	    
+      
+	<p><a href="#" class="noselect active animation-target hover-color" style="color: #990099;">Home&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a></p>
+         <p><a href="https://kurziokode.github.io/final.mp4" target="_blank" class="noselect red animation-target hover-color">About&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">person</i></a></p>
+         <p><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank" class="noselect purple animation-target hover-color">Contact&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">mail</i></a></p>
+          
+	 </header>
+
+  <section>
+ 
+      <aside>
+   
+     <div class="button-container">
+          <a href="https://kurziokode.github.io/morph/base3.html" class="noselect blue animation-target hover-color">Listen&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">headphones</i></a>
+          <a href="https://kurziokode.github.io/morph/base4.html" class="noselect blue animation-target hover-color">Watch&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">theaters</i></a>
+     </div>
+        <div class="button-container">
+          <a href="https://kurziokode.github.io/morph/base5.html" class="noselect red animation-target hover-color">World&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">book</i></a>
+          <a href="https://kurziokode.github.io/morph/base6.html" class="noselect red animation-target hover-color">Arts&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">brush</i></a>
+     </div>
+    
+           </aside>
+    </section>
+ 
+
+   <div>&nbsp;</div>
+   <div class="button-container">
+        <a href="https://www.facebook.com/" class="noselect blue animation-target hover-color" target="_blank"
+            >Facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f android-icon"></i></a>
+        <a href="https://twitter.com/" class="noselect red animation-target hover-color" target="_blank"
+           >Twitter&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-twitter android-icon"></i></a> 
+        </div>
+ <div class="button-container">
+ <a href="https://www.youtube.com/" class="noselect purple animation-target hover-color" target="_blank"
+           >Youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube android-icon"></i></a>
+        <a href="https://www.instagram.com/" class="noselect green animation-target hover-color" target="_blank"
+           >Instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram android-icon"></i></a>
+ </div>
+    <div>&nbsp;</div>
+   <footer class="button-container2">
+   <p class="link-container"><a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/morph/base.html#"  class="noselect green hover-color" target="_blank" data-tooltip="Share"><i class="material-icons custom-icon">send</i></a></p>
+      <p class="link-container"><a href="https://kurziokode.github.io/pnemo.html" class="noselect green hover-color" target="_blank" data-tooltip="Copyright"><i class="material-icons custom-icon">copyright</i></a></p>
+<p class="link-container"><a href="https://kurziokode.github.io/morph/quick2.html" class="noselect green hover-color" data-tooltip="Right Menu"><i class="material-icons custom-icon">autorenew</i></a></p>
+<p><a href="#" id="back-to-top-btn"
+     class="noselect hover-color"
+     style="font-size: large; color: #21232c;"
+     onmouseover="this.style.color='#6e7491';"
+     onmouseout="this.style.color='#21232c';"
+  >
+   <i class="material-icons custom-icon">eject</i>
+  </a>
+</p> 
+      </footer>
+	<div>
+	  <h7 style="position: fixed; top:50%; left:78%; transform: translateY(-50%) rotate(-90deg);"></h7>	
+	<h8 style="position: fixed; top:50%; left:7%; transform: translateY(-50%) rotate(-90deg);">home</h8>	
+	</div> 
+	<div class="editable" contenteditable="true"><i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note:&nbsp;&nbsp;&nbsp;&nbsp;</div>
+   
+    <script src="https://kurziokode.github.io/curz.js"></script>
+    <script>
+      var curz = Curz.create({
+
+        menuElement: document.querySelector('.curz'),
+
+
+        contentsElement: document.querySelector('.contents'),
+
+
+        position: Curz.getQuery().p || 'left',
+
+
+        height: 200,
+
+
+        width: 260,
+
+
+        threshold: 40,
+
+
+        mouse: true,
+
+
+        touch: true
+      });
+
+      if (Curz.getQuery().u && Curz.getQuery().u.match(/^http/gi)) {
+        var contents = document.querySelector('.contents');
+        contents.style.padding = '0px';
+        contents.innerHTML = '<div class="cover"></div><iframe src="' + Curz.getQuery().u +
+          '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+      }
+    </script>
+ <script>
+$(document).ready(function() {
+  var links = $('a.animation-target'); // Select specific links with a class 'animation-target'
+  var animatedPng = $('#animated-png');
+  var currentIndex = 0;
+
+  setInterval(function() {
+    var currentLink = links[currentIndex];
+    var linkPosition = $(currentLink).offset();
+    animatedPng.css({
+      top: linkPosition.top + 'px',
+      left: linkPosition.left + 'px'
+    });
+    currentIndex = (currentIndex + 1) % links.length;
+  }, 3000);
+});
+</script>
+ <script>
+ const myList = document.getElementById('myList');
+  const listItems = Array.from(myList.querySelectorAll('li'));
+  const sortedListItems = listItems.sort((a, b) => a.textContent.localeCompare(b.textContent));
+  
+  listItems.forEach(li => li.remove());
+  sortedListItems.forEach(li => myList.appendChild(li));
+
+</script>
+     <script>
+        const editableDiv = document.querySelector('.editable');
+
+        // Function to save the edited content to localStorage
+        function saveContent() {
+            localStorage.setItem('editableContent', editableDiv.innerHTML);
+        }
+
+        // Function to load the content from localStorage
+        function loadContent() {
+            const storedContent = localStorage.getItem('editableContent');
+            if (storedContent) {
+                editableDiv.innerHTML = storedContent;
+            }
+        }
+
+        // Load content when the page loads
+        window.addEventListener('load', loadContent);
+
+        // Listen for input events and save content automatically
+        editableDiv.addEventListener('input', saveContent);
+    </script>  
+</body>
+
+</html>
