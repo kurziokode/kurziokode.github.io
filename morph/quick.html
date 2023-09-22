@@ -505,7 +505,7 @@ h7 {
             text-align: center;
             font-size: 20px;
 	    font-weight: 200;
-            color: #310021;
+            color: #990099;
             font-family: Quicksand, sans-serif;
             padding: 10px;
             border: 0px solid black;
@@ -885,11 +885,11 @@ $(document).ready(function() {
             index++;
 
             if (index < text.length) {
-                setTimeout(typeText, 60); // Adjust the typing speed (milliseconds)
+                setTimeout(typeText, 40); // Adjust the typing speed (milliseconds)
             } else {
                 setTimeout(() => {
                     typingTextElement.style.display = "none";
-                }, 6000); // Delay for 10 seconds (10000 milliseconds)
+                }, 10000); // Delay for 10 seconds (10000 milliseconds)
             }
         }
 
