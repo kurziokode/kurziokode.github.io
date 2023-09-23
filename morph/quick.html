@@ -879,7 +879,7 @@ $(document).ready(function() {
 </script>
 
 	    <script>
-        const text = "Slide to explore";
+        const text = "Slide left to navigate";
         const typingTextElement = document.getElementById("typing-text");
         let index = 0;
 
@@ -888,7 +888,7 @@ $(document).ready(function() {
             index++;
 
             if (index < text.length) {
-                setTimeout(typeText, 80); // Adjust the typing speed (milliseconds)
+                setTimeout(typeText, 70); // Adjust the typing speed (milliseconds)
             } else {
                 setTimeout(() => {
                     typingTextElement.style.display = "none";
