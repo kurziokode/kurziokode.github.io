@@ -500,24 +500,7 @@ h7 {
     }
   
  </style>
-	 <style>
-        #typing-text {
-    text-align: center;
-    font-size: 17px;
-    font-weight: 600;
-    color: #800080;
-    font-family: Quicksand, sans-serif;
-    padding: 0px;
-    border: 0px solid black;
-    bottom: ;
-        }
 
-        @media only screen and (max-width: 1350px) {
-            #typing-text {
-                display: none;
-            }
-        }
-    </style>
 <style>
  #animated-png {
       position: absolute;
@@ -746,8 +729,7 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
 	    
    <p class="link-container"><a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/morph/quick.html#"  class="noselect green hover-color" target="_blank" data-tooltip="Share"><i class="material-icons custom-icon">send</i></a></p>
       <p class="link-container"><a href="https://kurziokode.github.io/pnemo.html" class="noselect green hover-color" target="_blank" data-tooltip="Copyright"><i class="material-icons custom-icon">copyright</i></a></p>
-	   <div id="typing-text"></div> 
-<p class="link-container"><a href="https://kurziokode.github.io/morph/school.html" class="noselect green hover-color" data-tooltip="School"><i class="material-icons custom-icon">school</i></a></p>
+	<p class="link-container"><a href="https://kurziokode.github.io/morph/school.html" class="noselect green hover-color" data-tooltip="School"><i class="material-icons custom-icon">school</i></a></p>
 <p><a href="#" id="back-to-top-btn"
      class="noselect hover-color"
      style="font-size: large; color: #21232c;"
@@ -883,26 +865,6 @@ $(document).ready(function() {
     animation.play();
 </script>
 
-	    <script>
-        const text = "Slide left to navigate";
-        const typingTextElement = document.getElementById("typing-text");
-        let index = 0;
-
-        function typeText() {
-            typingTextElement.textContent += text.charAt(index);
-            index++;
-
-            if (index < text.length) {
-                setTimeout(typeText, 80); // Adjust the typing speed (milliseconds)
-            } else {
-                setTimeout(() => {
-                    typingTextElement.style.display = "none";
-                }, 81000); // Delay for 10 seconds (10000 milliseconds)
-            }
-        }
-
-        typeText();
-    </script>
 </body>
 
 </html>
