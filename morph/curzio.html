@@ -611,17 +611,41 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
 	    
     </style>
    <style>
-        .editable {
-	    color: #660000;
+         .editable {
+            color: #660000;
             font-weight: 600;
             outline: 1px solid transparent;
             padding: 10px;
             min-height: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(40) infinite, blink-caret 0.5s step-end infinite;
         }
 
-	 .editable:focus {
-        outline-color: #4d0000; /* Change the border color when the div is focused */
-    }   
+        .editable:focus {
+            outline-color: #4d0000; /* Change the border color when the div is focused */
+        }
+
+        /* Keyframes for the typing animation */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Blink caret for the typing animation */
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #660000;
+            }
+        } 
     </style>
  <style>
 	.link-container {
