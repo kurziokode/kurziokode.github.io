@@ -872,6 +872,15 @@ $(document).ready(function() {
     // play the animation
     animation.play();
 </script>
+ <script>
+        var image = new Image();
+        image.src = 'https://kurziokode.github.io/morph/red.png';
+        // You can add an onload event listener if you need to perform an action after the image is loaded
+        image.onload = function() {
+            console.log('Image preloaded');
+            // You can now use the preloaded image as needed
+        };
+    </script>	  
 </body>
 
 </html>
