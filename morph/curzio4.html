@@ -873,13 +873,22 @@ $(document).ready(function() {
     animation.play();
 </script>
  <script>
-        var image = new Image();
-        image.src = 'https://kurziokode.github.io/morph/red.png';
-        // You can add an onload event listener if you need to perform an action after the image is loaded
-        image.onload = function() {
-            console.log('Image preloaded');
-            // You can now use the preloaded image as needed
-        };
+       var image1 = new Image();
+    image1.src = 'https://kurziokode.github.io/morph/red.png';
+
+    var image2 = new Image();
+    image2.src = 'https://kurziokode.github.io/morph/red2.png';
+
+    // You can add onload event listeners for each image if needed
+    image1.onload = function() {
+        console.log('Image 1 preloaded');
+        // You can now use the preloaded image as needed
+    };
+
+    image2.onload = function() {
+        console.log('Image 2 preloaded');
+        // You can now use the preloaded image as needed
+    };
     </script>	  
 </body>
 
