@@ -847,7 +847,7 @@ $(document).ready(function() {
         editableDiv.addEventListener('input', saveContent);
     </script>  
 	  <script>
-    // get the h1 element
+  // get the h1 element
     const h1 = document.querySelector('h5');
 
     // set the initial styles for the h1 element
@@ -856,8 +856,8 @@ $(document).ready(function() {
 
     // define the animation properties
     const animationProps = {
-        duration: 2000, // in milliseconds
-        easing: 'ease-in-out', // easing function
+        duration: 3000, // in milliseconds
+        easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
         fill: 'forwards' // keep the final state of the animation
     };
 
