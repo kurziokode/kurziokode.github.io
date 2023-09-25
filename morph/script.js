@@ -1,9 +1,9 @@
 $(document).ready(function() {
     // Function to start the marquee animation
     function startMarquee() {
-        $(".marquee").animate({ left: "100%" }, 10000, "linear", function() {
+        $(".marquee").animate({ left: "-100%" }, 10000, "linear", function() {
             // Animation complete, reset position and restart
-            $(this).css("left", "-100%");
+            $(this).css("left", "100%");
             startMarquee();
         });
     }
@@ -15,7 +15,7 @@ $(document).ready(function() {
     $(".marquee-container").hover(function() {
         $(".marquee").stop();
     }, function() {
-        $(".marquee").css("left", "-100%");
+        $(".marquee").css("left", "100%");
         startMarquee();
     });
 });
