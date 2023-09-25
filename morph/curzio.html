@@ -411,27 +411,30 @@ h7 {
     }
   </style>
 <style>
-		body {
-    overflow-x: hidden;
+.marquee-container {
+    overflow: hidden;
 }
-	.marquee {
+
+.marquee {
     white-space: nowrap;
+    position: relative;
     animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        left: 100%;
     }
     100% {
-        transform: translateX(-100%);
+        left: -100%;
     }
 }
 
 img {
     width: 400px; /* Adjust the width as needed */
     height: auto; /* Preserve aspect ratio */
-}	
+}
+	
 </style>	
   <style>
     .noselect {
