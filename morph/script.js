@@ -4,8 +4,8 @@ $(document).ready(function() {
     // Function to start the marquee animation
     function startMarquee() {
         animationTimeout = setTimeout(function() {
-            $(".marquee").css("right", "100%");
-            $(".marquee").animate({ right: "-100%" }, 10000, "linear", function() {
+            $(".marquee").css("left", "-100%");
+            $(".marquee").animate({ left: "100%" }, 10000, "linear", function() {
                 // Animation complete, reset position and restart
                 startMarquee();
             });
@@ -23,6 +23,7 @@ $(document).ready(function() {
         startMarquee();
     });
 });
+
 
 
 
