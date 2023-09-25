@@ -1,14 +1,14 @@
 $(document).ready(function() {
-    let animationTimeout;
+    let animationInterval;
 
     // Function to start the marquee animation
     function startMarquee() {
-        clearTimeout(animationTimeout);
-        $(".marquee").animate({ right: "100%" }, 10000, "linear", function() {
-            // Animation complete, reset position and restart
-            $(this).css("right", "-100%");
-            animationTimeout = setTimeout(startMarquee, 1000); // Pause for 1 second before restarting
-        });
+        animationInterval = setInterval(function() {
+            $(".marquee").animate({ left: "100%" }, 10000, "linear", function() {
+                // Animation complete, reset position
+                $(this).css("left", "-100%");
+            });
+        }, 1000); // Restart every 1 second
     }
 
     // Start the marquee animation on page load
@@ -16,11 +16,11 @@ $(document).ready(function() {
 
     // Pause the marquee on hover
     $(".marquee-container").hover(function() {
-        $(".marquee").stop();
-        clearTimeout(animationTimeout);
+        clearInterval(animationInterval); // Pause the animation
     }, function() {
-        startMarquee();
+        startMarquee(); // Resume the animation
     });
 });
+
 
 
