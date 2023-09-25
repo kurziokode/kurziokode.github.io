@@ -413,31 +413,24 @@ h7 {
 <style>
 body {
     overflow: ;
-    margin: 0;
-    padding: 0;
 }
 
 .marquee-container {
     overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: inline-block;
 }
 
 .marquee {
     white-space: nowrap;
-    position: absolute;
+    position: relative;
     animation: marquee 10s linear infinite;
-    left: 100%; /* Start from the right edge */
 }
 
 @keyframes marquee {
     0% {
-        left: -100%; /* Move to the left edge */
+        left: 100%;
     }
     100% {
-        left: 100%; /* Back to the right edge */
+        left: -100%;
     }
 }
 
@@ -445,6 +438,8 @@ img {
     width: 200px; /* Adjust the width as needed */
     height: auto; /* Preserve aspect ratio */
 }
+
+
 
  </style>	
   <style>
