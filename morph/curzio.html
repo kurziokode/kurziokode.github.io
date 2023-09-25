@@ -413,27 +413,31 @@ h7 {
 <style>
 body {
     overflow: ;
+    margin: 0;
+    padding: 0;
 }
 
 .marquee-container {
     overflow: hidden;
     position: relative;
     width: 100%;
+    height: auto;
+    display: inline-block;
 }
 
 .marquee {
     white-space: nowrap;
     position: absolute;
     animation: marquee 10s linear infinite;
-    right: -100%; /* Start from the right edge */
+    left: 100%; /* Start from the right edge */
 }
 
 @keyframes marquee {
     0% {
-        right: 100%; /* Move to the left edge */
+        left: -100%; /* Move to the left edge */
     }
     100% {
-        right: -100%; /* Back to the right edge */
+        left: 100%; /* Back to the right edge */
     }
 }
 
@@ -441,7 +445,6 @@ img {
     width: 200px; /* Adjust the width as needed */
     height: auto; /* Preserve aspect ratio */
 }
-
 
  </style>	
   <style>
@@ -782,11 +785,11 @@ img {
 	  <h7 style="position: fixed; top:50%; left:78%; transform: translateY(-50%) rotate(-90deg);"></h7>	
 	<h8 style="position: fixed; top:50%; left:11%; transform: translateY(-50%) rotate(-90deg);">Chris Doulos</h8>	
 	</div> 
-<div class="marquee-container">
-	   <div class="marquee">
-        <img src="https://kurziokode.github.io/morph/afri.png" alt="Moving Image">
-    </div>
-</div>	     
+   <div class="marquee-container">
+        <div class="marquee">
+            <img src="https://kurziokode.github.io/morph/afri.png" alt="Moving Image">
+        </div>
+    </div>   
 	<div class="editable" contenteditable="true">Slide Left and Scroll&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note Here :&nbsp;&nbsp;&nbsp;&nbsp;</div>
    
     <script src="https://kurziokode.github.io/curz.js"></script>
