@@ -1,10 +1,14 @@
 $(document).ready(function() {
+    let animationInterval;
+    
     // Function to start the marquee animation
     function startMarquee() {
-        $(".marquee").animate({ left: "-100%" }, 10000, "linear", function() {
+        $(".marquee").animate({ left: "-100%" }, 30000, "linear", function() {
             // Animation complete, reset position and restart
             $(this).css("left", "100%");
-            startMarquee();
+            if (!$(this).hasClass("paused")) {
+                startMarquee();
+            }
         });
     }
 
@@ -13,12 +17,13 @@ $(document).ready(function() {
 
     // Pause the marquee on hover
     $(".marquee-container").hover(function() {
-        $(".marquee").stop();
+        $(".marquee").stop().addClass("paused");
     }, function() {
-        $(".marquee").css("left", "100%");
+        $(".marquee").removeClass("paused");
         startMarquee();
     });
 });
+
 
 
 
