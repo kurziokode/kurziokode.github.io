@@ -15,7 +15,7 @@ $(document).ready(function() {
     $(".marquee-container").hover(function() {
         $(".marquee").stop();
     }, function() {
+        $(".marquee").css("left", "-100%");
         startMarquee();
     });
 });
-
