@@ -27,16 +27,27 @@ $(document).ready(function() {
     });
   }
 
-  $(".marquee-container").hover(
-    function() {
-      $(".marquee").stop(true).addClass("paused");
-    },
-    function() {
-      $(".marquee").removeClass("paused");
-      startMarquee();
-    }
-  );
+ //   $(".marquee-container").hover(
+  //    function() {
+ //       $(".marquee").stop(true).addClass("paused");
+    //  },
+   //   function() {
+    //    $(".marquee").removeClass("paused");
+     //   startMarquee();
+   //   }
+  //  );
 
   // Start the marquee animation on page load
   startMarquee();
 });
+
+  $(document).ready(function() {
+    $(".marquee-container").hover(
+      function() {
+        $(".marquee").addClass("paused");
+      },
+      function() {
+        $(".marquee").removeClass("paused");
+      }
+    );
+  });
