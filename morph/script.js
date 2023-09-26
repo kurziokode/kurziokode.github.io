@@ -18,6 +18,38 @@ $(document).ready(function() {
 $('.marquee_text').marquee({
   pauseOnHover: true
 });
+
+   $(".marquee-container").on('mouseenter', function() {
+    $(".marquee").stop().addClass("paused");
+}).on('mouseleave', function() {
+    $(".marquee").removeClass("paused");
+    startMarquee();
+});
+
+    <marquee onmouseover="this.stop();" onmouseout="this.start();">
+  my text here
+</marquee>
+
+$(function() {
+  var marquee = $('div.marquee');
+  marquee.each(function() {
+    var mar = $(this),
+        indent = mar.width();
+    mar.marquee = function() {
+      indent--;
+      mar.css('text-indent', indent);
+      if (indent < -1 * mar.children('div.marquee-text').width()) {
+        indent = mar.width();
+      }
+    };
+    mar.data('interval', setInterval(mar.marquee, 1000 / 60));
+    mar.hover(function() {
+      clearInterval($(this).data("interval"));
+    }, function() {
+      $(this).data('interval', setInterval(mar.marquee, 1000 / 60));
+    });
+  });
+});
     
     // Pause the marquee on hover
     $(".marquee-container").hover(function() {
