@@ -15,6 +15,10 @@ $(document).ready(function() {
     // Start the marquee animation on page load
     startMarquee();
 
+$('.marquee_text').marquee({
+  pauseOnHover: true
+});
+    
     // Pause the marquee on hover
     $(".marquee-container").hover(function() {
         $(".marquee").stop().addClass("paused");
