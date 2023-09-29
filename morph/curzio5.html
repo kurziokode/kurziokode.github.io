@@ -654,8 +654,22 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
   visibility: visible;
 }
  </style>
-</head>
+	 <style>
+	#message-container {
+    /* Set your desired styles for larger screens */
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
 
+/* Add a media query to hide the message container on screens narrower than 768px */
+@media (max-width: 967px) {
+    #message-container {
+        display: none;
+    }
+}
+ </style>
+</head>
 <body>
 <div class="cracked-background">
   <div class="curz">
@@ -742,6 +756,10 @@ transform: translateX(100px) translateY(-5px) rotate(0deg) scale(0.5);
         <a href="https://www.instagram.com/" class="noselect green animation-target hover-color" target="_blank"
            >Instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram android-icon"></i></a>
  </div>
+<div id="message-container">
+    <p>This is your text message.</p>
+</div>
+  
     <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
    <footer class="button-container2">
    <p class="link-container"><a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/morph/curzio5.html#"  class="noselect green hover-color" target="_blank" data-tooltip="Share"><i class="material-icons custom-icon">send</i></a></p>
