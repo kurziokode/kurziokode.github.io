@@ -570,7 +570,7 @@ img {
 	
 .cracked-background::after {
   content: '';
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   right: 14%;
   width: 100%;
@@ -579,7 +579,7 @@ img {
   background-repeat: no-repeat; /* Ensure the image is not repeated */
   background-position: right; /* Adjust the position of the image if needed */
   opacity: 1; /* Adjust the opacity to control the intensity of the effect */
-  z-index: 1000; /* Place the cracks behind other content */
+  z-index: -1; /* Place the cracks behind other content */
 }
 
 
