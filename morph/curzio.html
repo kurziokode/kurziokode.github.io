@@ -681,12 +681,7 @@ img {
   visibility: visible;
 }
  </style>
-  <style>
-        .container {
-            overflow: hidden;
-            width: 300px; /* Set a specific width for the container */
-        }
-    </style>	
+
 </head>
 
 <body>
@@ -695,7 +690,7 @@ img {
 }</script>
  	
 <div class="cracked-background">
-  <div class="container"></div>
+
 <div class="curz">
 
     <ul id="myList" class="button-container">
@@ -866,37 +861,37 @@ img {
         editableDiv.addEventListener('input', saveContent);
     </script>  
 	  <script>
-    // get the h1 element
-        const h1 = document.querySelector('h5');
+   // get the h1 element
+    const h1 = document.querySelector('h5');
 
-        // set the initial styles for the h1 element
-        h1.style.opacity = 1;
-        h1.style.transform = 'translateX(-300%)';
+    // set the initial styles for the h1 element
+    h1.style.opacity = 1;
+    h1.style.transform = 'translateX(-300%)';
 
-        // define the animation properties
-        const animationProps = {
-            duration: 3000, // in milliseconds
-            easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
-            fill: 'forwards' // keep the final state of the animation
-        };
+    // define the animation properties
+    const animationProps = {
+        duration: 3000, // in milliseconds
+        easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
+        fill: 'forwards' // keep the final state of the animation
+    };
 
-        // define the keyframes for the animation
-        const keyframes = [
-            {
-                opacity: 1,
-                transform: 'translateX(-300%)'
-            },
-            {
-                opacity: 1,
-                transform: 'translateX(0)' // Smoothly move to the original position
-            }
-        ];
+    // define the keyframes for the animation
+    const keyframes = [
+        {
+            opacity: 1,
+            transform: 'translateX(-300%)'
+        },
+        {
+            opacity: 1,
+            transform: 'translateX(0)' // Smoothly move to the original position
+        }
+    ];
 
-        // create the animation
-        const animation = h1.animate(keyframes, animationProps);
+    // create the animation
+    const animation = h1.animate(keyframes, animationProps);
 
-        // play the animation
-        animation.play();
+    // play the animation
+    animation.play();
 </script>
   <script>
       var image1 = new Image();
