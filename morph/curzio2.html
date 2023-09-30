@@ -681,6 +681,20 @@ img {
   visibility: visible;
 }
  </style>
+<style>
+.underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 110%;
+    z-index: -1;
+    border: solid 8px #681c18;
+    border-color: #681c18 transparent transparent transparent;
+    border-radius: 100%;
+}
+</style>	
 </head>
 
 <body>
@@ -777,7 +791,7 @@ img {
       </footer>
 	<div>
 	  <h7 style="position: fixed; top:50%; left:78%; transform: translateY(-50%) rotate(-90deg);"></h7>	
-	<h8 style="position: fixed; top:50%; left:15%; transform: translateY(-50%) rotate(-90deg);">Chris<br>&nbsp;&nbsp;Doulos</h8>	
+	<h8 class="underline" style="position: fixed; top:50%; left:15%; transform: translateY(-50%) rotate(-90deg);">Chris<br>&nbsp;&nbsp;Doulos</h8>	
 	</div> 
  
 	<div class="editable" contenteditable="true">Slide and Scroll&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;&nbsp;</div>
