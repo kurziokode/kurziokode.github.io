@@ -864,8 +864,9 @@ const h1 = document.querySelector('h5');
 // set the initial styles for the h1 element
 h1.style.position = 'absolute'; 
 h1.style.opacity = 1;
-h1.style.left = '50%'; // set the left edge of the element at the center of its parent
-h1.style.transform = 'translateX(-50%)'; // move the element leftwards by half of its width
+h1.style.left = '50%'; 
+h1.style.transform = 'translateX(-50%)'; 
+h1.style.zIndex = '999'; // set a high z-index value
 
 // define the animation properties
 const animationProps = {
