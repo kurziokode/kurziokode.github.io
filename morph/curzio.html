@@ -579,7 +579,7 @@ img {
   background-repeat: no-repeat; /* Ensure the image is not repeated */
   background-position: right; /* Adjust the position of the image if needed */
   opacity: 1; /* Adjust the opacity to control the intensity of the effect */
-  z-index: -1; /* Place the cracks behind other content */
+  z-index: 1000; /* Place the cracks behind other content */
 }
 
 
@@ -862,11 +862,10 @@ img {
 const h1 = document.querySelector('h5');
 
 // set the initial styles for the h1 element
-h1.style.position = 'absolute'; 
+h1.style.position = 'absolute'; // Add this line to take the h1 out of the document flow
 h1.style.opacity = 1;
-h1.style.left = '50%'; 
-h1.style.transform = 'translateX(-50%)'; 
-h1.style.zIndex = '999'; // set a high z-index value
+h1.style.transform = 'translateX(-300%)';
+h1.style.zIndex = '999'; // Add this line to ensure the h1 appears on top of other elements
 
 // define the animation properties
 const animationProps = {
@@ -883,7 +882,7 @@ const keyframes = [
     },
     {
         opacity: 1,
-        transform: 'translateX(-50%)' // Smoothly move to the center
+        transform: 'translateX(0)' // Smoothly move to the original position
     }
 ];
 
