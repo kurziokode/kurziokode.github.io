@@ -682,11 +682,19 @@ img {
 }
  </style>
   <style>
-    /* Add CSS to style the container element */
+     /* Add CSS to style the container element */
     .container {
-      width: 100px; /* Adjust the width as needed */
-      height: 100px; /* Adjust the height as needed */
+      width: 100%; /* Set the width to 100% to cover the screen width */
+      height: 100vh; /* Set the height to 100vh to cover the screen height */
       overflow: hidden; /* Clip the contents that overflow the container */
+    }
+
+    /* Add CSS to center the content both vertically and horizontally */
+    .center-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Ensure the content is centered vertically */
     }
   </style>
 </head>
@@ -734,7 +742,7 @@ img {
   <div class="contents">
     <div></div>
 	
-<h5 class="neumorphism-text container">The Ride - <span style="color: #21232c;">Home</span></h5> 
+<h5 class="neumorphism-text container center-content">The Ride - <span style="color: #21232c;">Home</span></h5> 
     <header  class="button-container">
 	    
       <p><a href="#" class="noselect red animation-target hover-color">Home&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a></p>
@@ -867,7 +875,7 @@ img {
         editableDiv.addEventListener('input', saveContent);
     </script>  
 	  <script>
-   // get the h5 element
+    // get the h5 element
     const h5 = document.querySelector('h5');
 
     // set the initial styles for the h5 element
