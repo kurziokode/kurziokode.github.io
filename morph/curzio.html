@@ -681,24 +681,7 @@ img {
   visibility: visible;
 }
  </style>
-  <style>
-     /* Add CSS to style the container element */
-    .container {
-      width: 100%; /* Set the width to 100% to cover the screen width */
-      height: 100vh; /* Set the height to 100vh to cover the screen height */
-      overflow: hidden; /* Clip the contents that overflow the container */
-    }
-
-    /* Add CSS to center the content both vertically and horizontally */
-    .center-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%; /* Ensure the content is centered vertically */
-    }
-  </style>
 </head>
-
 <body>
 <script>document.oncontextmenu = function() {
   return false;
@@ -742,7 +725,7 @@ img {
   <div class="contents">
     <div></div>
 	
-<h5 class="neumorphism-text container center-content">The Ride - <span style="color: #21232c;">Home</span></h5> 
+<h5 class="neumorphism-text">The Ride - <span style="color: #21232c;">Home</span></h5> 
     <header  class="button-container">
 	    
       <p><a href="#" class="noselect red animation-target hover-color">Home&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a></p>
@@ -875,34 +858,34 @@ img {
         editableDiv.addEventListener('input', saveContent);
     </script>  
 	  <script>
-    // get the h5 element
-    const h5 = document.querySelector('h5');
+     // get the h1 element
+    const h1 = document.querySelector('h5');
 
-    // set the initial styles for the h5 element
-    h5.style.opacity = 1;
-    h5.style.transform = 'translateX(-300%)';
+    // set the initial styles for the h1 element
+    h1.style.opacity = 1;
+    h1.style.transform = 'translateX(-300%)';
 
     // define the animation properties
     const animationProps = {
-      duration: 3000, // in milliseconds
-      easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
-      fill: 'forwards' // keep the final state of the animation
+        duration: 3000, // in milliseconds
+        easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
+        fill: 'forwards' // keep the final state of the animation
     };
 
     // define the keyframes for the animation
     const keyframes = [
-      {
-        opacity: 1,
-        transform: 'translateX(-300%)'
-      },
-      {
-        opacity: 1,
-        transform: 'translateX(0)' // Smoothly move to the original position
-      }
+        {
+            opacity: 1,
+            transform: 'translateX(-300%)'
+        },
+        {
+            opacity: 1,
+            transform: 'translateX(0)' // Smoothly move to the original position
+        }
     ];
 
     // create the animation
-    const animation = h5.animate(keyframes, animationProps);
+    const animation = h1.animate(keyframes, animationProps);
 
     // play the animation
     animation.play();
