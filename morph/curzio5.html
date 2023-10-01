@@ -969,6 +969,22 @@ $(document).ready(function() {
         // You can now use the preloaded image as needed
     };
     </script> 
+  <script>
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("rightClickMenu");
+            menu.style.top = event.pageY + "px";
+            menu.style.left = event.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+            var menu = document.getElementById("rightClickMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+        });
+    </script>		  
 </body>
 
 </html>
