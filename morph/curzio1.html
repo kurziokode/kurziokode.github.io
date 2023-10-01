@@ -694,7 +694,28 @@ img {
     border-color: #204660 transparent transparent transparent;
     border-radius: 100%;
 }
-</style>		
+</style>
+  <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>	
 </head>
 
 <body>
@@ -886,6 +907,22 @@ img {
         // You can now use the preloaded image as needed
     };
     </script>
+  <script>
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("rightClickMenu");
+            menu.style.top = event.pageY + "px";
+            menu.style.left = event.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+            var menu = document.getElementById("rightClickMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+        });
+    </script>	  
   </body>
 
 </html>
