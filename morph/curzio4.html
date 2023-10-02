@@ -655,10 +655,23 @@ display: none;
     bottom: 0;
     left: 0;
     height: 10px;
-    width: 900%;
+    width: 100%;
     z-index: -1;
-    border: solid 2px #45650e;
-    border-color: #45650e transparent transparent transparent;
+    border: solid 4px #4d0000;
+    border-color: #4d0000 transparent transparent transparent; 
+    border-radius: 100%;
+}
+
+.underline2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    z-index: -1;
+    border: solid 4px #250033;
+    border-color: #250033 transparent transparent transparent;
     border-radius: 100%;
 }
 </style>
@@ -688,7 +701,7 @@ display: none;
     /* Set your desired styles for larger screens */
     font-size: calc(100vw / 35);
     font-family: 'Fuggles',sans-serif;
-    background-color: #0b0c0e;
+    background-color: transparent;
     color: #1C1D25;	
     padding: 20px;
     text-align: center;
@@ -820,8 +833,8 @@ display: none;
 </p> 
       </footer>
 	<div>
-	  <h7 style="position: fixed; top:50%; left:78%; transform: translateY(-50%) rotate(-90deg);"></h7>	
-<h8 class="underline" style="position: fixed; top:50%; left:4%; transform: translateY(-50%) rotate(-0deg);">Chris<br>&nbsp;&nbsp;Doulos</h8>
+<h8 class="underline" style="position: fixed; top:20%; left:10%; transform: translateY(-50%) rotate(-0deg);">Chris</h8>
+<h8 class="underline2" style="position: fixed; top:40%; left:20%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>	
 	</div> 
  
 	<div class="editable" contenteditable="true">Slide and Scroll&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;&nbsp;</div>
