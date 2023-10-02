@@ -662,6 +662,21 @@ h7 {
     border-color: #5e0080 transparent transparent transparent;
     border-radius: 100%;
 }
+
+.underline2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 1000%;
+    z-index: -1;
+    border: solid 2px #000000;
+    border-color: #000000 transparent transparent transparent;
+    border-radius: 100%;
+}	
+
+	
 </style>
   <style>
         #rightClickMenu {
@@ -878,7 +893,7 @@ h7 {
 	<div>
 	  <h7 style="position: fixed; top:50%; left:78%; transform: translateY(-50%) rotate(-90deg);"></h7>	
 <h8 class="underline" style="position: fixed; top:26%; left:4%; transform: translateY(-50%) rotate(-0deg);">Chris</h8>
-<h8 class="underline" style="position: fixed; top:80%; left:14%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>	
+<h8 class="underline2" style="position: fixed; top:80%; left:14%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>	
 	</div> 
  
 	<div class="editable" contenteditable="true">Slide and Scroll&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;&nbsp;</div>
