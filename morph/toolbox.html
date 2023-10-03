@@ -72,13 +72,16 @@ strictly prohibited. -->
       overflow-y: auto;
  }
 .line {
-  position: absolute;
-  width: 1000px;
-  height: 1px;
-  background: #000;
+  position: fixed;
+  top: 50vh; /* vertically center the line */
+  left: 50vw; /* horizontally center the line */
+  transform: translate(-50%, -50%); /* adjust the position of the line */
+  width: 50vw; /* the length of the line is 50% of the viewport width */
+  height: 1px; /* the thickness of the line */
+  background: #000; /* the color of the line */
 }
 
-    /* Style the icon with CSS */
+  /* Style the icon with CSS */
         .custom-icon {
             font-size: 24px;
             color: #21232c;
@@ -1011,17 +1014,7 @@ h7 {
             }
         });
     </script>	
-	  <script>	
-	  window.onload = function() {
-  var line = document.querySelector('.line');
-  var windowHeight = window.innerHeight;
-  var windowWidth = window.innerWidth;
-  var randomTop = Math.floor(Math.random() * windowHeight);
-  var randomLeft = Math.floor(Math.random() * windowWidth);
-  line.style.top = randomTop + 'px';
-  line.style.left = randomLeft + 'px';
-}
-</script>	
+
   </body>
 
 </html>
