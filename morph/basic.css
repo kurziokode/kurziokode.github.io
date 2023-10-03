@@ -1,0 +1,674 @@
+  
+/* For Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 6px;
+}
+ 
+* {
+ cursor: url('https://kurziokode.github.io/bldot.png'), auto;
+}
+
+  /* For all devices */
+    body {
+     background-color: #0b0c0e;
+      color: ;
+      letter-spacing: 0.03em;
+      text-align: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: bold;
+      overflow-x: auto;
+      overflow-y: auto;
+ }
+
+    /* Style the icon with CSS */
+        .custom-icon {
+            font-size: 24px;
+            color: #21232c;
+  }
+
+	.custom-icon2 {
+  color: #990099; /* Set the color to red */
+}
+
+.custom-icon  {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 25,
+  'opsz' 10
+}
+
+.custom-icon:hover {
+    color: ; /* Change the color on hover */
+}
+	
+   header {
+    background-color: ;
+      padding: 20px;
+    }
+
+    nav {
+     background-color: ;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+
+      text-decoration: none;
+    }
+
+    article {
+      background-color: transparent;
+      opacity: 1;
+      padding: 20px;
+
+    }
+
+  article2 {
+      background-color: transparent;
+      opacity: 1;
+      padding: 20px;
+
+    }
+    
+    figure {
+      margin-bottom: 20px;
+    }
+
+    figure img {
+      max-width: 100%;
+      width: px;
+      height: px;
+     }
+
+    aside {
+        background-color: ;
+      padding: 20px;
+
+    }
+
+    footer {
+       background-color: ;
+      padding: 20px;
+
+    }
+    .neumorphism-text {
+
+  font-family: 'Fuggles',sans-serif;
+  color: #400000;
+  text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;
+    }
+    h5 {
+  font-size: calc(100vw / 15);
+  letter-spacing: 0em;
+  font-weight: 800;
+  color: ;
+  opacity: 1;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+   }
+
+h7 {
+  font-size: calc(100vw / 12);
+  letter-spacing: 0em;
+  font-weight: 700;
+  color: #0D000D;
+  text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;	
+  opacity: 1;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+}
+
+	h8 {
+  font-family: 'Fuggles',sans-serif;
+  font-size: calc(100vw / 23);
+  letter-spacing: 0em;
+  font-weight: 900;
+  color: #232322;
+  text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;	
+  opacity: 1;
+  user-select: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: -1;
+  cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+}
+    @media screen and (min-width: 1922px) {
+  body {
+    filter: brightness(2.5);
+	filter: contrast(2);  
+  }
+}
+
+    /* For mobile devices */
+    @media (max-width: 480px) {
+      body {
+        font-size: 16px;
+	      
+      }
+
+      header {
+        padding: 10px;
+      }
+
+      nav {
+        font-size: 12px;
+      }
+
+      article {
+        padding: 10px;
+
+      }
+
+      figure {
+        margin-bottom: 10px;
+      } 
+
+      .neumorphism-text {
+              color: ;
+	      font-size: calc(100vw / 7);
+	      font-weight: 900; 
+   }    
+
+     h8 {
+ display: none;
+   }       
+	    
+    aside {
+        padding: 10px;
+      }
+
+      footer {
+        padding: 10px;
+      }
+    }
+
+    /* For tablets */
+    @media (min-width: 481px) and (max-width: 967px) {
+      body {
+        font-size: 18px;
+ }
+   
+      figure img {
+    transform: scale();
+      }
+
+       .neumorphism-text {
+          color: ;
+	  font-size: calc(100vw / 7);       
+	  font-weight: 700;       
+   }  
+
+    h8 {
+         display: none;
+   }  
+	    
+    }
+
+    /* For laptops and desktops */
+    @media (min-width: 968px) {
+      body {
+         font-size: 20px;
+      }
+   
+       figure img {
+      transform: scale();
+      }
+      }
+
+    .curz {
+      display: none;
+      padding: 20px;
+      overflow: auto;
+      background-color: #0b0c0e;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .curz ul {
+      margin-top: 10px;
+    }
+
+    .curz ul li {
+      display: inline-block;
+      width: 200px;
+      list-style: none;
+      font-size: 14px;
+      padding: 3px 10px;
+    }
+
+    .curz ul li:before {
+      content: '';
+      margin-right: 5px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+
+    .curz-arrow {
+      position: absolute;
+      z-index: 10;
+
+      border: 10px solid transparent;
+
+      -webkit-transition: opacity 0.4s ease 0.4s;
+      -moz-transition: opacity 0.4s ease 0.4s;
+      -ms-transition: opacity 0.4s ease 0.4s;
+      -o-transition: opacity 0.4s ease 0.4s;
+      transition: opacity 0.4s ease 0.4s;
+    }
+
+    .curz-left .curz-arrow {
+      left: 20px;
+      top: 23%;
+      margin-top: -16px;
+      border-left: 16px solid #9600cc;
+    }
+
+    .curz-right .curz-arrow {
+      right: 20px;
+      top: 50%;
+      margin-top: -16px;
+      border-right: 16px solid;
+    }
+
+    .curz-top .curz-arrow {
+      left: 50%;
+      top: 20px;
+      margin-left: -16px;
+      border-top: 16px solid #334d00;
+    }
+
+    .curz-bottom .curz-arrow {
+      left: 50%;
+      bottom: 14px;
+      margin-left: -16px;
+      border-bottom: 16px solid #333;
+    }
+
+    .curz-active .curz-arrow {
+      opacity: 0;
+
+      -webkit-transition: opacity 0.2s ease;
+      -moz-transition: opacity 0.2s ease;
+      -ms-transition: opacity 0.2s ease;
+      -o-transition: opacity 0.2s ease;
+      transition: opacity 0.2s ease;
+    }
+
+
+    .contents {
+      background: transparent;
+      padding: 20px 40px;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+
+      -webkit-overflow-scrolling: touch;
+      -webkit-transform-style: preserve-3d;
+
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .contents>article {
+      max-width: 400px;
+    }
+
+    .contents p {
+      margin: 10px 0 10px 0;
+      font-size: 16px;
+      line-height: 1.32;
+    }
+
+    .contents small {
+      display: block;
+      margin-top: 10px;
+      padding-top: 10px;
+
+      font-size: 0.9em;
+      border-top: 1px dashed transparent;
+
+      -webkit-text-size-adjust: none;
+    }
+
+    .contents .sharing {
+      position: absolute;
+      bottom: 30px;
+    }
+ 
+    .noselect {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  .button-container a {
+      width: 150px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #0b0c0e;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+      color: #800000;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .button-container a:hover {
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+      font-size: 15px;
+      transition: 500ms;
+    }
+
+    .button-container a:focus {
+      outline: none;
+    }
+
+    .red:hover {
+     color: #b30000;
+     text-shadow: 0px 0px 0px ;
+    }
+
+    .green:hover {
+      color: #b30000;
+      text-shadow: 0px 0px 0px ;
+    }
+
+    .blue:hover {
+      color: #b30000;
+      text-shadow: 0px 0px 0px ;
+    }
+
+    .purple:hover {
+      color: #b30000;
+      text-shadow: 0px 0px 0px ;
+    }
+
+      .active:hover {
+      color: #b30000;
+      text-shadow: 0px 0px 0px ;
+    }
+
+    .button-container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  .button-container2 a {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #0b0c0e;
+      margin: 20px;
+      border: none;
+      border-radius: 35px;
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+      color: #1160a2;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .button-container2 a:hover {
+      box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+      font-size: 15px;
+      transition: 500ms;
+    }
+
+    .button-container2 a:focus {
+      outline: none;
+    }
+  
+
+.cracked-background {
+  width: 100%;
+  height: 100%;
+  background: #0b0c0e; /* Replace this with your desired background color */
+  position: relative;
+}
+
+	.cracked-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0%; /* Position the right image at the top-right corner */
+  width: 100%; /* Divide the width into two equal halves for two images */
+  height: 100%;
+  background: url('https://kurziokode.github.io/morph/red2.png'); /* Replace 'right-cracks.png' with the path to your right image */
+  background-repeat: no-repeat;
+  background-position: left; /* Position the right image at the top-right corner */
+  opacity: 1;
+  z-index: -1;
+}
+	
+.cracked-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 4%;
+  width: 100%;
+  height: 100%;
+  background: url('https://kurziokode.github.io/morph/tool.png'); /* Replace 'black-cracks.png' with the path to your black cracks image */
+  background-repeat: no-repeat; /* Ensure the image is not repeated */
+  background-position: right; /* Adjust the position of the image if needed */
+  opacity: 0.7; /* Adjust the opacity to control the intensity of the effect */
+  z-index: -1; /* Place the cracks behind other content */
+}
+
+
+/* Media query for phones and tablets */
+@media (max-width: 1024px) {
+  .cracked-background::after {
+    background-size: %; /* Display the image at 1/4 of its size */
+  }
+}	
+	
+/* Media query for laptops and desktops */
+@media (min-width: 1025px) {
+  .cracked-background::after {
+    background-size: %; /* Display the image at its original size */
+  }
+}
+
+/* Media query for phones and tablets */
+@media (max-width: 1024px) {
+  .cracked-background::before {
+    background-size: 25%; /* Display the image at 1/4 of its size */
+  }
+}	
+	
+/* Media query for laptops and desktops */
+@media (min-width: 1025px) {
+  .cracked-background::before {
+    background-size: 20%; /* Display the image at its original size */
+  }
+}
+	
+
+        /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .android-icon {
+            color: #21232c;
+            transition: color 0.3s ease; /* Add a smooth transition */
+        }
+
+        /* Change icon color on button hover */
+        .hover-color:hover .android-icon {
+            color: #6e7491; /* Change to the desired hover color */
+        }
+
+     /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .custom-icon {
+            color: #21232c;
+            transition: color 0.3s ease; /* Add a smooth transition */
+        }
+
+        /* Change icon color on button hover */
+        .hover-color:hover .custom-icon {
+            color: #6e7491; /* Change to the desired hover color */
+        }
+	    
+   
+          .editable {
+	    color: #5e0080;
+            font-weight: 500;
+            outline: 1px solid transparent;
+            padding: 10px;
+            min-height: 15px;
+        }
+
+	 .editable:focus {
+        outline-color: #5e0080; /* Change the border color when the div is focused */
+    }  
+ 
+	.link-container {
+  position: relative;
+}
+
+.link-container a {
+  text-decoration: none;
+}
+
+.link-container a:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: #121212;
+  color: #8600b3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;	
+}
+
+.link-container a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 194%;
+    z-index: -1;
+    border: solid 2px #39004d;
+    border-color: #39004d transparent transparent transparent; 
+    border-radius: 100%;
+}
+
+.underline2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 120%;
+    z-index: -1;
+    border: solid 2px #39004d;
+    border-color: #39004d transparent transparent transparent;
+    border-radius: 100%;
+}	
+
+
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+
+	#message-container {
+    /* Set your desired styles for larger screens */
+    font-size: calc(100vw / 35);
+    font-family: 'Fuggles',sans-serif;
+    background-color: transparent;
+    color: #1C1D25;	
+    padding: 20px;
+    text-align: center;
+    max-width: 600px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    height: 95px;
+}
+
+/* Add a media query to hide the message container on screens narrower than 768px */
+@media (max-width: 967px) {
+    #message-container {
+        display: none;
+    }
+}
+
+/* For screens larger than 1200px (e.g. desktops) */
+@media only screen and (min-width: 1300px) { 
+   #message-container {
+       font-size: calc(100vw / 45);
+    }
+}
+
