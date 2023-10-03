@@ -71,6 +71,12 @@ strictly prohibited. -->
       overflow-x: auto;
       overflow-y: auto;
  }
+.line {
+  position: absolute;
+  width: 1000px;
+  height: 1px;
+  background: #000;
+}
 
     /* Style the icon with CSS */
         .custom-icon {
@@ -730,6 +736,7 @@ h7 {
 </head>
 
 <body>
+	<div class="line"></div>
 <div class="cracked-background">
   <div class="curz">
 
@@ -1003,7 +1010,18 @@ h7 {
                 menu.style.display = "none";
             }
         });
-    </script>	  
+    </script>	
+	  <script>	
+	  window.onload = function() {
+  var line = document.querySelector('.line');
+  var windowHeight = window.innerHeight;
+  var windowWidth = window.innerWidth;
+  var randomTop = Math.floor(Math.random() * windowHeight);
+  var randomLeft = Math.floor(Math.random() * windowWidth);
+  line.style.top = randomTop + 'px';
+  line.style.left = randomLeft + 'px';
+}
+</script>	
   </body>
 
 </html>
