@@ -102,6 +102,17 @@ strictly prohibited. -->
   height: 3px; /* the thickness of the line */
   background: #000000; /* the color of the line */
   z-index: -1; /* stack order of the line */
+}
+
+.line4 {
+  position: fixed;
+  top: 20vh; /* vertically center the line */
+  right: 48vw; /* horizontally center the line */
+  transform: translateY(-0%) rotate(-90deg); /* adjust the position of the line */
+  width: 65vw; /* the length of the line is 50% of the viewport width */
+  height: 3px; /* the thickness of the line */
+  background: #000; /* the color of the line */
+  z-index: -1; /* stack order of the line */
 }		
     /* Style the icon with CSS */
         .custom-icon {
@@ -287,6 +298,10 @@ h7 {
  .line3 {
          display: none;
    }  
+ .line4 {
+         display: none;
+   }  
+	    
 	    
     aside {
         padding: 10px;
@@ -328,7 +343,9 @@ h7 {
  .line3 {
          display: none;
    } 
-	    
+	 .line4 {
+         display: none;
+   }      
     }
 
     /* For laptops and desktops */
@@ -885,7 +902,7 @@ img {
       </footer>
 	<div>
 	<h8 class="underline" style="position: fixed; top:50%; left:4%; transform: translateY(-50%) rotate(-0deg);">Christos</h8>
-        <h8 class="underline2" style="position: fixed; top:52%; left:13%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>			
+        <h8 style="position: fixed; top:52%; left:13%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>			
 	</div> 
  
 	<div class="editable" contenteditable="true">Slide and Scroll&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;&nbsp;</div>
