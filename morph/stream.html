@@ -711,19 +711,7 @@ img {
         }
 	    
     </style>
-   <style>
-            .editable {
-	    color: #21232c;
-            font-weight: 500;
-            outline: 1px solid transparent;
-            padding: 10px;
-            min-height: 15px;
-        }
 
-	 .editable:focus {
-        outline-color: #21232c; /* Change the border color when the div is focused */
-    }   
-    </style>
  <style>
 	.link-container {
   position: relative;
@@ -906,8 +894,7 @@ img {
         <h8 style="position: fixed; top:52%; left:13%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>			
 	</div> 
 
-	<div class="editable" contenteditable="true">Slide and Scroll&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;&nbsp;</div>
-    <div id="rightClickMenu">
+  <div id="rightClickMenu">
  <a href="https://www.google.com/" target="_blank"
             style="color: #474c52">Google</a>	    
  <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
@@ -962,30 +949,8 @@ img {
   sortedListItems.forEach(li => myList.appendChild(li));
 
 </script>
-     <script>
-        const editableDiv = document.querySelector('.editable');
-
-        // Function to save the edited content to localStorage
-        function saveContent() {
-            localStorage.setItem('editableContent', editableDiv.innerHTML);
-        }
-
-        // Function to load the content from localStorage
-        function loadContent() {
-            const storedContent = localStorage.getItem('editableContent');
-            if (storedContent) {
-                editableDiv.innerHTML = storedContent;
-            }
-        }
-
-        // Load content when the page loads
-        window.addEventListener('load', loadContent);
-
-        // Listen for input events and save content automatically
-        editableDiv.addEventListener('input', saveContent);
-    </script>  
-
-  <script>
+  
+ <script>
       var image1 = new Image();
     image1.src = 'https://kurziokode.github.io/morph/orle5.png';
 
