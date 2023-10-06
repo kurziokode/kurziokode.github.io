@@ -8,7 +8,7 @@
     player = new YT.Player('player', {
       height: '360',
       width: '640',
-      videoId: 'b1ecN3rOoFQ', // replace with your video id
+      videoId: 'BLF-f4kUtAw', // replace with your video id
       events: {
         'onReady': onPlayerReady,
       }
