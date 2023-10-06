@@ -1,9 +1,11 @@
+
+
+/*
 var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-/*
   var player;
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -48,37 +50,40 @@ var tag = document.createElement('script');
   });
 */
 
+  var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '180',
-    width: '320',
-    videoId: 'BLF-f4kUtAw', // replace with your video id
-    events: {
-      'onReady': onPlayerReady,
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '180',
+        width: '320',
+        videoId: 'BLF-f4kUtAw', // replace with your video id
+        events: {
+          'onReady': onPlayerReady,
+        }
+      });
     }
-  });
-}
 
-function onPlayerReady(event) {
-  event.target.pauseVideo(); // Pause the video when it's ready
-}
-
-$(document).ready(function() {
-  // ...
-
-  $(".marquee-container").hover(
-    function() {
-      $(".marquee").addClass("paused");
-      player.playVideo(); // Play the video when the marquee is hovered over
-    },
-    function() {
-      $(".marquee").removeClass("paused");
-      player.pauseVideo(); // Pause the video when the marquee is not being hovered over
+    function onPlayerReady(event) {
+      event.target.pauseVideo(); // Pause the video when it's ready
     }
-  );
-});
+
+    $(document).ready(function() {
+      $(".marquee-container").hover(
+        function() {
+          $(".marquee").addClass("paused");
+          player.playVideo(); // Play the video when the marquee is hovered over
+        },
+        function() {
+          $(".marquee").removeClass("paused");
+          player.pauseVideo(); // Pause the video when the marquee is not being hovered over
+        }
+      );
+    });
+
 
   
 
