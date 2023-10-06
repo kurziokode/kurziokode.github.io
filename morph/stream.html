@@ -804,40 +804,7 @@ img {
             background-color: #0b0c0e;
         }
     </style>	
- <style>
-/* Container for the audio player */
-#audio-player-container {
-  width: 100%;
-  background-color: transparent;
-  border: 0px solid ;
-  padding: 10px;
-}
 
-/* Play/pause button */
-#play-icon {
-  width: 50px;
-  height: 50px;
-  background-color: #400000;
-  color: transparent;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* Seek slider */
-#seek-slider {
-  width: 100%;
-  margin-top: 10px;
-}
-
-/* Volume control slider */
-#volume-slider {
-  width: 100%;
-  margin-top: 10px;
-}
-
- </style>
-	
 </head>
 <body>
 <div class="cracked-background">
@@ -950,14 +917,7 @@ img {
             style="color: #474c52">Translate</a>
     </div><br>
  <div id="player"></div>
-	<div id="audio-player-container">
-  <button id="play-pause-button">Play</button>
-  <span id="current-time">0:00</span>
-  <input type="range" id="seek-slider" min="0" max="100" value="0">
-  <span id="duration">0:00</span>
-  <input type="range" id="volume-slider" min="0" max="100" value="100">
-</div>  
-    <script src="https://kurziokode.github.io/curz.js"></script>
+   <script src="https://kurziokode.github.io/curz.js"></script>
 	   <script src="https://kurziokode.github.io/morph/stream.js"></script>
     <script>
       var curz = Curz.create({
