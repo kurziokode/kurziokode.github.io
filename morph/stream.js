@@ -1,28 +1,48 @@
+ var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-$(document).ready(function() {
-  let animationInterval;
-  let audioElement = new Audio('http://wbgo.streamguys.net/thejazzstream');
-
-  function startMarquee() {
-    $(".marquee").animate({ left: "-100%" }, 60000, "linear", function() {
-      $(this).css("left", "100%");
-      if (!$(this).hasClass("paused")) {
-        startMarquee();
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: 'M7lc1UVf-VE', // replace with your video id
+      events: {
+        'onReady': onPlayerReady,
       }
     });
   }
 
-  // Start the marquee animation on page load
-  startMarquee();
+  function onPlayerReady(event) {
+    event.target.pauseVideo();
+  }
 
-  $(".marquee-container").hover(
-    function() {
-      $(".marquee").addClass("paused");
-      audioElement.play();
-    },
-    function() {
-      $(".marquee").removeClass("paused");
-      audioElement.pause();
+  $(document).ready(function() {
+    let animationInterval;
+
+    function startMarquee() {
+      $(".marquee").animate({ left: "-100%" }, 60000, "linear", function() {
+        $(this).css("left", "100%");
+        if (!$(this).hasClass("paused")) {
+          startMarquee();
+        }
+      });
     }
-  );
-});
+
+    // Start the marquee animation on page load
+    startMarquee();
+
+    $(".marquee-container").hover(
+      function() {
+        $(".marquee").addClass("paused");
+        player.playVideo();
+      },
+      function() {
+        $(".marquee").removeClass("paused");
+        player.pauseVideo();
+      }
+    );
+  });
+
