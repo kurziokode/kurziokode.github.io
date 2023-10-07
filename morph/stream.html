@@ -1120,7 +1120,40 @@ img {
                 menu.style.display = "none";
             }
         });
-    </script>	  
+    </script>
+  <script>
+  // get the h1 element
+    const h1 = document.querySelector('h5');
+
+    // set the initial styles for the h1 element
+    h1.style.opacity = 1;
+    h1.style.transform = 'translateX(-300%)';
+
+    // define the animation properties
+    const animationProps = {
+        duration: 3000, // in milliseconds
+        easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
+        fill: 'forwards' // keep the final state of the animation
+    };
+
+    // define the keyframes for the animation
+    const keyframes = [
+        {
+            opacity: 1,
+            transform: 'translateX(-300%)'
+        },
+        {
+            opacity: 1,
+            transform: 'translateX(0)' // Smoothly move to the original position
+        }
+    ];
+
+    // create the animation
+    const animation = h1.animate(keyframes, animationProps);
+
+    // play the animation
+    animation.play();
+</script>	  
   </body>
 
 </html>
