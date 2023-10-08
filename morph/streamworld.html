@@ -116,7 +116,7 @@ strictly prohibited. -->
 }		
     /* Style the icon with CSS */
         .custom-icon {
-            font-size: 24px;
+            font-size: 20px;
             color: #660000;
   }
 
@@ -232,7 +232,7 @@ h7 {
 
 	h8 {
   font-family: 'Fuggles',sans-serif;
-  font-size: calc(100vw / 23);
+  font-size: calc(100vw / 30);
   letter-spacing: 0em;
   font-weight: 900;
   color: #232322;
@@ -302,12 +302,8 @@ h7 {
          display: none;
    }  
 	    
-	 .button-container3 a {    
-   width: 35px;
-      height: 35px;
-	 }	 
-		 
-      aside {
+
+   aside {
         padding: 10px;
       }
 
@@ -316,7 +312,7 @@ h7 {
       }
     }
 
-@media (max-width: 1150px) {
+@media (max-width: 768px) {
     .editable {
         display: none;
     }
@@ -357,10 +353,7 @@ h7 {
 	 .line4 {
          display: none;
    } 
-	 .button-container3 a {    
-   width: 40px;
-      height: 40px;
-	 }	
+	
  }
 
     /* For laptops and desktops */
@@ -607,8 +600,8 @@ img {
     }
 
   .button-container2 a {
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -616,15 +609,15 @@ img {
       background: #0b0c0e;
       margin: 20px;
       border: none;
-      border-radius: 35px;
-      box-shadow: -4px -4px 12px #111216, 4px 4px 12px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+      border-radius: 25px;
+        box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
       color: ;
       font-size: 17px;
       text-decoration: none;
     }
 
     .button-container2 a:hover {
-      box-shadow: -4px -4px 12px #111216, 4px 4px 12px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+      box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
       font-size: 15px;
       transition: 500ms;
     }
@@ -637,9 +630,9 @@ img {
       display: flex;
      flex-direction: column;
       position: fixed;
-    bottom: 10%;
-    right: 1%;
-    gap: 10px;   
+    bottom: 7%;
+    right: 3%;
+    gap: 7px;   
     }
 
   .button-container3 a {
@@ -651,7 +644,7 @@ img {
       cursor: pointer;
       background: #0b0c0e;
       border: none;
-        border-radius: 25px;
+      border-radius: 25px;
       box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
       color: ;
       font-size: 17px;
@@ -667,7 +660,42 @@ img {
     .button-container3 a:focus {
       outline: none;
     }	  
-  
+
+   .button-container4 {
+      display: flex;
+     flex-direction: column;
+      position: fixed;
+    bottom: 7%;
+    left: 3%;
+    gap: 7px;   
+    }
+
+  .button-container4 a {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #0b0c0e;
+      border: none;
+      border-radius: 25px;
+      box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+      color: ;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .button-container4 a:hover {
+      box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+      font-size: 15px;
+      transition: 500ms;
+    }
+
+    .button-container4 a:focus {
+      outline: none;
+    }	
+	  
  </style>
 
 <style>
@@ -811,7 +839,7 @@ img {
   padding: 5px 10px;
   border-radius: 5px;
   bottom: 100%;
-  left: 25%;
+  left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   visibility: hidden;
@@ -832,7 +860,7 @@ img {
     bottom: 0;
     left: 0;
     height: 10px;
-    width: 194%;
+    width: 100%;
     z-index: -1;
     border: solid 3px #400000;
     border-color: #400000 transparent transparent transparent; 
@@ -889,19 +917,13 @@ img {
  </style>
   <style>
           .editable {
-	  position: fixed;
-          bottom: 10%;
-          left: 1%;		  
 	    color: #404040;
             font-weight: 500;
             outline: 1px solid transparent;
             padding: 10px;
             min-height: 15px;
-	max-width: 640px; 
-	min-width: 320px;	  
-        }
-
-	 .editable:focus {
+		     }
+ .editable:focus {
         outline-color: #400000; /* Change the border color when the div is focused */
     }  
     </style>	
@@ -948,7 +970,7 @@ img {
                 <li><a href="https://www.latimes.com/entertainment-arts" class="noselect blue" target="_blank">&#x2022; L.A Times</a></li>
                 <li><a href="https://www.pcsteps.gr/%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF-%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CE%B5%CF%8D%CF%83%CE%B5%CF%89%CE%BD/" class="noselect blue" target="_blank">&#x2022; pcsteps</a></li>
                 <li><a href="https://9gag.com/" class="noselect blue" target="_blank">&#x2022; ninegag</a></li>
-                <li><a href="https://dromos.wordpress.com/" class="noselect blue" target="_blank">&#x2022; stray</a></li>     
+                <li><a href="https://dromos.wordpress.com/" class="noselect blue" target="_blank">&#x2022; stray</a></li>        
 </ul>
 
   </div>
@@ -960,34 +982,26 @@ img {
 	
 <h5 class="neumorphism-text">The Ride - <span style="color: #21232c;">World</span></h5> 
    
-	  <header  class="button-container">
-	    
-      <p><a href="https://kurziokode.github.io/morph/stream.html " class="noselect red hover-color">Home&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a></p>
-         <p><a href="https://kurziokode.github.io/final.mp4" target="_blank" class="noselect red hover-color">About&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">person</i></a></p>
-         <p><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank" class="noselect purple hover-color">Contact&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">mail</i></a></p>
-          
-	 </header>
-
-  <section>
- 
-      <aside>
-   
+ <section>
+   <aside>
+    <div class="button-container">
+	<a href="https://kurziokode.github.io/morph/stream.html" class="noselect red hover-color">Home&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a>    
+    </div>
      <div class="button-container">
-          <a href="https://kurziokode.github.io/morph/streamlisten.html" class="noselect blue hover-color">Listen&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">headphones</i></a>
+          <a href="https://kurziokode.github.io/morph/streamlisten.html" class="noselect blue hover-color">Listen&nbsp;&nbsp;<i class="material-icons custom-icon">headphones</i></a>
           </div>
     <div class="button-container">
-      <a href="https://kurziokode.github.io/morph/streamwatch.html" class="noselect blue hover-color">Watch&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">theaters</i></a>
+      <a href="https://kurziokode.github.io/morph/streamwatch.html" class="noselect blue hover-color">Watch&nbsp;&nbsp;<i class="material-icons custom-icon">theaters</i></a>
      </div>
 	 <div class="button-container">
-       <a href="#" class="noselect red hover-color">World&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">language</i></a>
+       <a href="#" class="noselect red hover-color">World&nbsp;&nbsp;<i class="material-icons custom-icon">language</i></a>
      </div>
      <div class="button-container">
-      <a href="https://kurziokode.github.io/morph/streamarts.html" class="noselect red hover-color">Arts&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">brush</i></a>
+      <a href="https://kurziokode.github.io/morph/streamarts.html" class="noselect red hover-color">Arts&nbsp;&nbsp;<i class="material-icons custom-icon">brush</i></a>
      </div>  
      <div class="button-container">
-      <a href="https://kurziokode.github.io/morph/streamschool.html" class="noselect red hover-color">School&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons custom-icon">school</i></a>
-     </div>  
-    
+      <a href="https://kurziokode.github.io/morph/streamschool.html" class="noselect red hover-color">School&nbsp;&nbsp;<i class="material-icons custom-icon">school</i></a>
+     </div>       
            </aside>
     </section>
 <div class="marquee-container">
@@ -1002,13 +1016,19 @@ img {
 	<p class="link-container"><a href="https://twitter.com/" class="noselect green hover-color" target="_blank" data-tooltip="Twitter"><i class="fab fa-twitter android-icon"></i></a></p>
         <p class="link-container"><a href="https://www.youtube.com/" class="noselect green hover-color" target="_blank" data-tooltip="Youtube"><i class="fab fa-youtube android-icon"></i></a></p>	   
 </div>  
+<div class="button-container4">  
+	<p class="link-container"><a href="https://kurziokode.github.io/final.mp4" class="noselect green hover-color" target="_blank" data-tooltip="About"><i class="material-icons custom-icon">person</i></a></p>
+        <p class="link-container"><a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" class="noselect green hover-color" target="_blank" data-tooltip="Contact"><i class="material-icons custom-icon">mail</i></a></p>
+	<p class="link-container"><a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/morph/stream.html#" class="noselect green hover-color" target="_blank" data-tooltip="Share"><i class="material-icons custom-icon">send</i></a></p>
+        <p class="link-container"><a href="https://kurziokode.github.io/pnemo.html" class="noselect green hover-color" target="_blank" data-tooltip="Copyright"><i class="material-icons custom-icon">copyright</i></a></p>	   
+</div>  
+
+	  
 	   <div id="message-container">
-   <h9>When you know enough it’s obvious<br>That every idea you have is no good<br>- James Gleick</h9>  
+   <h9>When you know enough it’s obvious<br>That every idea you have is no good<br>- James Gleick</h9>   
 </div>
-<div class="editable" contenteditable="true"><i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;</div>	  
+
    <footer class="button-container2">
-<p class="link-container"><a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/morph/stream.html#"  class="noselect green hover-color" target="_blank" data-tooltip="Share"><i class="material-icons custom-icon">send</i></a></p>
-<p class="link-container"><a href="https://kurziokode.github.io/pnemo.html" class="noselect green hover-color" target="_blank" data-tooltip="Copyright"><i class="material-icons custom-icon">copyright</i></a></p>
 <p><a href="#" id="back-to-top-btn"
      class="noselect hover-color"
      style="font-size: large; color: #21232c;"
@@ -1018,12 +1038,12 @@ img {
    <i class="material-icons custom-icon">eject</i>
   </a>
 </p> 
-      </footer>
-	<div>
-	<h8 class="underline" style="position: fixed; top:50%; left:4%; transform: translateY(-50%) rotate(-0deg);">Christos</h8>
-        <h8 style="position: fixed; top:52%; left:13%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>			
-	</div> 
-
+    </footer>
+  <div>
+	<h8 class="underline" style="position: fixed; top:21%; left:4%; transform: translateY(-50%) rotate(-0deg);">Christos</h8>
+        <h8 style="position: fixed; top:22%; left:14%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>			
+</div> 
+<div class="editable" contenteditable="true"><i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;</div>	
   <div id="rightClickMenu">
  <a href="https://www.google.com/" target="_blank"
             style="color: #474c52">Google</a>	    
@@ -1136,7 +1156,41 @@ img {
                 menu.style.display = "none";
             }
         });
-    </script>	  
+    </script>
+  <script>
+  // get the h1 element
+    const h1 = document.querySelector('h5');
+
+    // set the initial styles for the h1 element
+    h1.style.opacity = 1;
+    h1.style.transform = 'translateX(-300%)';
+
+    // define the animation properties
+    const animationProps = {
+        duration: 3000, // in milliseconds
+        easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
+        fill: 'forwards' // keep the final state of the animation
+    };
+
+    // define the keyframes for the animation
+    const keyframes = [
+        {
+            opacity: 1,
+            transform: 'translateX(-300%)'
+        },
+        {
+            opacity: 1,
+            transform: 'translateX(0)' // Smoothly move to the original position
+        }
+    ];
+
+    // create the animation
+    const animation = h1.animate(keyframes, animationProps);
+
+    // play the animation
+    animation.play();
+</script>	  
   </body>
 
 </html>
+
