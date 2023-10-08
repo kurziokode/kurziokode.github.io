@@ -928,15 +928,24 @@ img {
     }  
     </style>	
 <style>
-   #myImage {
-       animation-name: fadeInOut;
-       animation-duration: 2s;
+    #loadingScreen {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.5);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       z-index: 9999;
    }
-   @keyframes fadeInOut {
-       0%   {opacity: 0;}
-       50%  {opacity: 1;}
-       100% {opacity: 0;}
+
+   #loadingScreen img {
+       max-width: 100%;
+       max-height: 100%;
    }
+
 </style>		  
 </head>
 <body>
@@ -1047,7 +1056,10 @@ img {
 <a href="https://translate.google.com/?sl=auto&tl=el&op=translate" target="_blank"
             style="color: #474c52">Translate</a>
     </div>
- <img id="myImage" src="https://kurziokode.github.io/morph/oh.png" alt="Description of image">
+   <div id="loadingScreen" style="display: none;">
+       <img src="https://kurziokode.github.io/morph/oh.png" alt="Loading...">
+   </div>
+
    <script src="https://kurziokode.github.io/curz.js"></script>
 
 <!--   <script src="https://kurziokode.github.io/morph/stream.js"></script> -->	  
@@ -1186,13 +1198,17 @@ img {
     animation.play();
 </script>
 <script>
-   window.addEventListener('beforeunload', function(event) {
-       var image = document.getElementById('myImage');
-       image.style.display = 'block';
-       setTimeout(function() {
-           image.style.display = 'none';
-       }, 2000);
+   document.querySelectorAll('a').forEach(function(link) {
+       link.addEventListener('click', function(event) {
+           event.preventDefault();
+           var loadingScreen = document.getElementById('loadingScreen');
+           loadingScreen.style.display = 'block';
+           setTimeout(function() {
+               window.location.href = event.target.href;
+           }, 2000);
+       });
    });
+
 </script>	  
   </body>
 
