@@ -716,7 +716,7 @@ img {
   background: url('https://kurziokode.github.io/morph/red2.png'); /* Replace 'right-cracks.png' with the path to your right image */
   background-repeat: no-repeat;
   background-position: left; /* Position the right image at the top-right corner */
-  opacity: 1;
+  opacity: 0.5;
   z-index: -1;
 }
 	
@@ -730,7 +730,7 @@ img {
   background: url('https://kurziokode.github.io/morph/orle5.png'); 
   background-repeat: no-repeat; 
   background-position: right; 
-  opacity: 0.4; 
+  opacity: 0.5; 
   z-index: -1; 
 }
 
@@ -753,14 +753,14 @@ img {
 /* Media query for phones and tablets */
 @media (max-width: 1024px) {
   .cracked-background::before {
-    background-size: 25%; /* Display the image at 1/4 of its size */
+    background-size: %; /* Display the image at 1/4 of its size */
   }
 }	
 	
 /* Media query for laptops and desktops */
 @media (min-width: 1025px) {
   .cracked-background::before {
-    background-size: 20%; /* Display the image at its original size */
+    background-size: %; /* Display the image at its original size */
   }
 }
 	
