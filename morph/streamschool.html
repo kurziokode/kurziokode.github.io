@@ -1047,8 +1047,7 @@ img {
 <a href="https://translate.google.com/?sl=auto&tl=el&op=translate" target="_blank"
             style="color: #474c52">Translate</a>
     </div>
- <img id="close-image" src="https://kurziokode.github.io/morph/oh.png" style="display: none;">
-   <script src="https://kurziokode.github.io/curz.js"></script>
+  <script src="https://kurziokode.github.io/curz.js"></script>
 
 <!--   <script src="https://kurziokode.github.io/morph/stream.js"></script> -->	  
 	  
@@ -1185,21 +1184,6 @@ img {
     // play the animation
     animation.play();
 </script>
-<script>
-function displayImage() {
-  var image = document.getElementById('close-image');
-  image.style.display = 'block';
-  
-  setTimeout(function() {
-    image.style.display = 'none';
-  }, 1000); // Hide the image after 1 second
-}
-
-window.onbeforeunload = function() {
-  displayImage();
-};
-</script>	  
-  </body>
-
+ </body>
 </html>
 
