@@ -993,19 +993,19 @@ img {
 	<a href="#" class="noselect red hover-color">Home&nbsp;&nbsp;<i class="material-icons custom-icon">home</i></a>    
     </div>
      <div class="button-container">
-          <a href="https://kurziokode.github.io/morph/streamlisten.html" class="noselect blue hover-color">Listen&nbsp;&nbsp;<i class="material-icons custom-icon">headphones</i></a>
+          <a href="https://kurziokode.github.io/morph/streamlisten.html" class="noselect blue hover-color animated-link">Listen&nbsp;&nbsp;<i class="material-icons custom-icon">headphones</i></a>
           </div>
     <div class="button-container">
-      <a href="https://kurziokode.github.io/morph/streamwatch.html" class="noselect blue hover-color">Watch&nbsp;&nbsp;<i class="material-icons custom-icon">theaters</i></a>
+      <a href="https://kurziokode.github.io/morph/streamwatch.html" class="noselect blue hover-color animated-link">Watch&nbsp;&nbsp;<i class="material-icons custom-icon">theaters</i></a>
      </div>
 	 <div class="button-container">
-       <a href="https://kurziokode.github.io/morph/streamworld.html" class="noselect red hover-color">World&nbsp;&nbsp;<i class="material-icons custom-icon">language</i></a>
+       <a href="https://kurziokode.github.io/morph/streamworld.html" class="noselect red hover-color animated-link">World&nbsp;&nbsp;<i class="material-icons custom-icon">language</i></a>
      </div>
      <div class="button-container">
-      <a href="https://kurziokode.github.io/morph/streamarts.html" class="noselect red hover-color">Arts&nbsp;&nbsp;<i class="material-icons custom-icon">brush</i></a>
+      <a href="https://kurziokode.github.io/morph/streamarts.html" class="noselect red hover-color animated-link">Arts&nbsp;&nbsp;<i class="material-icons custom-icon">brush</i></a>
      </div>  
      <div class="button-container">
-      <a href="https://kurziokode.github.io/morph/streamschool.html" class="noselect red hover-color">School&nbsp;&nbsp;<i class="material-icons custom-icon">school</i></a>
+      <a href="https://kurziokode.github.io/morph/streamschool.html" class="noselect red hover-color animated-link">School&nbsp;&nbsp;<i class="material-icons custom-icon">school</i></a>
      </div>       
            </aside>
     </section>
@@ -1198,17 +1198,16 @@ img {
     animation.play();
 </script>
 <script>
-   document.querySelectorAll('a').forEach(function(link) {
-       link.addEventListener('click', function(event) {
-           event.preventDefault();
-           var loadingScreen = document.getElementById('loadingScreen');
-           loadingScreen.style.display = 'block';
-           setTimeout(function() {
-               window.location.href = event.target.href;
-           }, 2000);
-       });
-   });
-
+document.querySelectorAll('.animated-link').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var loadingScreen = document.getElementById('loadingScreen');
+        loadingScreen.style.display = 'block';
+        setTimeout(function() {
+            window.location.href = event.target.href;
+        }, 2000);
+    });
+});
 </script>	  
   </body>
 
