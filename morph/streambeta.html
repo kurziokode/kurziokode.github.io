@@ -72,7 +72,7 @@ strictly prohibited. -->
       overflow-y: auto;
  }
 
-.hover-link:hover:after {
+.hover-link:after {
     content: url('https://kurziokode.github.io/morph/about.png'); /* replace with your image path */
     display: block;
     position: absolute;
@@ -80,6 +80,14 @@ strictly prohibited. -->
     top: -75px; /* adjust as needed */
     width: 75px; /* adjust as needed */
     height: 75px; /* adjust as needed */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.hover-link:hover:after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .line {
