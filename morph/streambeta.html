@@ -80,13 +80,15 @@ strictly prohibited. -->
     top: -75px; /* adjust as needed */
     width: 75px; /* adjust as needed */
     height: 75px; /* adjust as needed */
-    transition: left 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
 }
 
 .hover-link:hover:after {
-    left: 50px; /* adjust as needed */
+    opacity: 1;
+    visibility: visible;
 }
-
 
 .line {
   position: fixed;
