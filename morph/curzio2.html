@@ -110,7 +110,7 @@ strictly prohibited. -->
   right: 58vw; /* horizontally center the line */
   transform: translateY(-0%) rotate(-90deg); /* adjust the position of the line */
   width: 43vw; /* the length of the line is 50% of the viewport width */
-  height: 2px; /* the thickness of the line */
+  height: 1px; /* the thickness of the line */
   background: #400000; /* the color of the line */
   z-index: -1; /* stack order of the line */
 }		
@@ -231,10 +231,10 @@ h7 {
 }
 
 	h8 {
-  font-family: 'Fuggles',sans-serif;
-  font-size: calc(100vw / 30);
+  font-family: 'Quicksand',sans-serif;
+  font-size: calc(100vw / 40);
   letter-spacing: 0em;
-  font-weight: 900;
+  font-weight: 100;
   color: #232322;
   text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;	
   opacity: 1;
@@ -411,7 +411,7 @@ h7 {
 
     .curz-left .curz-arrow {
       left: 20px;
-      top: 23%;
+      top: 40%;
       margin-top: -16px;
       border-left: 16px solid #585c74;
     }
@@ -716,7 +716,7 @@ img {
   background: url('https://kurziokode.github.io/morph/red2.png'); /* Replace 'right-cracks.png' with the path to your right image */
   background-repeat: no-repeat;
   background-position: left; /* Position the right image at the top-right corner */
-  opacity: 1;
+  opacity: 0.15;
   z-index: -1;
 }
 	
@@ -730,7 +730,7 @@ img {
   background: url('https://kurziokode.github.io/morph/wa.png'); 
   background-repeat: no-repeat; 
   background-position: right; 
-  opacity: 0.7; 
+  opacity: 0.5; 
   z-index: -1; 
 }
 
@@ -739,7 +739,7 @@ img {
 /* Media query for phones and tablets */
 @media (max-width: 1024px) {
   .cracked-background::after {
-    background-size: %; /* Display the image at 1/4 of its size */
+    display: none;  /* Display the image at 1/4 of its size */
   }
 }	
 	
@@ -753,14 +753,14 @@ img {
 /* Media query for phones and tablets */
 @media (max-width: 1024px) {
   .cracked-background::before {
-    background-size: 25%; /* Display the image at 1/4 of its size */
+    background-size: %; /* Display the image at 1/4 of its size */
   }
 }	
 	
 /* Media query for laptops and desktops */
 @media (min-width: 1025px) {
   .cracked-background::before {
-    background-size: 20%; /* Display the image at its original size */
+    background-size: 40%; /* Display the image at its original size */
   }
 }
 	
@@ -834,7 +834,7 @@ img {
 .link-container a:hover::before {
   content: attr(data-tooltip);
   position: absolute;
-  background-color: #121212;
+  background-color: transparent;
   color: #990000;
   padding: 5px 10px;
   border-radius: 5px;
@@ -902,19 +902,7 @@ img {
             background-color: #0b0c0e;
         }
     </style>
- <style>		
-#player {
- 
-	
-}
 
-
-@media only screen and (max-width: 967px) {
-  #player {
-   display: none; 
-  }
-}
- </style>
   <style>
           .editable {
 	    color: #404040;
@@ -970,10 +958,7 @@ img {
      <div class="button-container">
           <a href="https://kurziokode.github.io/morph/streamlisten.html" class="noselect blue hover-color">Listen&nbsp;&nbsp;<i class="material-icons custom-icon">headphones</i></a>
           </div>
-    <div class="button-container">
-      <a href="#" class="noselect blue hover-color">Watch&nbsp;&nbsp;<i class="material-icons custom-icon">theaters</i></a>
-     </div>
-	 <div class="button-container">
+   <div class="button-container">
        <a href="https://kurziokode.github.io/morph/streamworld.html" class="noselect red hover-color">World&nbsp;&nbsp;<i class="material-icons custom-icon">language</i></a>
      </div>
      <div class="button-container">
@@ -983,18 +968,18 @@ img {
       <a href="https://kurziokode.github.io/morph/streamschool.html" class="noselect red hover-color">School&nbsp;&nbsp;<i class="material-icons custom-icon">school</i></a>
      </div>       
            </aside>
-    </section>
+    </section><br><br>
 <div class="marquee-container">
-	<div id="player" style="margin-bottom: 30px; box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;"></div>
+	<!--<div id="player" style="margin-bottom: 30px; box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;"></div>-->
 	<div class="marquee">
 		 <img src="https://kurziokode.github.io/morph/afri.png" alt="Moving Image">	 
         </div>
  </div>   
 	<div class="button-container3">  
-	<p class="link-container"><a href="https://www.facebook.com/" class="noselect green hover-color" target="_blank" data-tooltip="Facebook"><i class="fab fa-facebook-f android-icon"></i></a></p>
-        <p class="link-container"><a href="https://www.instagram.com/" class="noselect green hover-color" target="_blank" data-tooltip="Instagram"><i class="fab fa-instagram android-icon"></i></a></p>
+<p class="link-container"><a href="https://www.facebook.com/" class="noselect green hover-color" target="_blank" data-tooltip="Facebook"><i class="fab fa-facebook-f android-icon"></i></a></p>
+        <p class="link-container"><a href="https://www.youtube.com/" class="noselect green hover-color" target="_blank" data-tooltip="Youtube"><i class="fab fa-youtube android-icon"></i></a></p>
 	<p class="link-container"><a href="https://twitter.com/" class="noselect green hover-color" target="_blank" data-tooltip="Twitter"><i class="fab fa-twitter android-icon"></i></a></p>
-        <p class="link-container"><a href="https://www.youtube.com/" class="noselect green hover-color" target="_blank" data-tooltip="Youtube"><i class="fab fa-youtube android-icon"></i></a></p>	   
+       	<p class="link-container"><a href="https://www.instagram.com/" class="noselect green hover-color" target="_blank" data-tooltip="Instagram"><i class="fab fa-instagram android-icon"></i></a></p>   	   
 </div>  
 <div class="button-container4">  
 	<p class="link-container"><a href="https://kurziokode.github.io/final.mp4" class="noselect green hover-color" target="_blank" data-tooltip="About"><i class="material-icons custom-icon">person</i></a></p>
@@ -1020,8 +1005,8 @@ img {
 </p> 
     </footer>
   <div>
-	<h8 class="underline" style="position: fixed; top:21%; left:4%; transform: translateY(-50%) rotate(-0deg);">Christos</h8>
-        <h8 style="position: fixed; top:22%; left:14%; transform: translateY(-50%) rotate(-90deg);">Doulos</h8>			
+<h8 style="position: fixed; top:21%; left:4%; transform: translateY(-50%) rotate(-0deg);">Slide <span style="color: #400000;">+</span></h8>
+        <h8 style="position: fixed; top:22%; left:10%; transform: translateY(-50%) rotate(-90deg);">Scroll</h8>		
 </div> 
 <div class="editable" contenteditable="true"><i class="fa fa-bell android-icon" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;</div>	
   <div id="rightClickMenu">
@@ -1137,39 +1122,7 @@ img {
             }
         });
     </script>
-  <script>
-  // get the h1 element
-    const h1 = document.querySelector('h5');
-
-    // set the initial styles for the h1 element
-    h1.style.opacity = 1;
-    h1.style.transform = 'translateX(-300%)';
-
-    // define the animation properties
-    const animationProps = {
-        duration: 3000, // in milliseconds
-        easing: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)', // custom cubic-bezier for a bounce effect
-        fill: 'forwards' // keep the final state of the animation
-    };
-
-    // define the keyframes for the animation
-    const keyframes = [
-        {
-            opacity: 1,
-            transform: 'translateX(-300%)'
-        },
-        {
-            opacity: 1,
-            transform: 'translateX(0)' // Smoothly move to the original position
-        }
-    ];
-
-    // create the animation
-    const animation = h1.animate(keyframes, animationProps);
-
-    // play the animation
-    animation.play();
-</script>	  
+	  
   </body>
 
 </html>
