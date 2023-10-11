@@ -23,8 +23,8 @@ strictly prohibited. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
 <meta http-equiv="Cache-Control" content="max-age=40003200, public">
 <meta http-equiv="Expires" content="Sat, 01 Jan 2025 00:00:00 GMT">
-<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B e t a</title> 
-  <link rel="icon" href="https://kurziokode.github.io/morph/idea.png" type="image/x-icon">
+<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H o m e</title> 
+  <link rel="icon" href="https://kurziokode.github.io/alle2.png" type="image/x-icon">
  <!-- Preconnect and crossorigin for Font Awesome -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -35,8 +35,8 @@ strictly prohibited. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fuggles" rel="stylesheet">
-
- <!-- Preconnect and crossorigin for jQuery -->
+    
+    <!-- Preconnect and crossorigin for jQuery -->
     <link rel="preconnect" href="https://code.jquery.com" crossorigin>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<style>
@@ -509,34 +509,32 @@ h7 {
   </style>
 <style>
 .marquee-container {
-  overflow: hidden;
-  position: relative;
+overflow: hidden;
+filter: brightness(66%);	
 }
 
 .marquee {
-  white-space: nowrap;
-  position: absolute;
-  top: -100%; /* Start the image above the visible area */
-  animation: fall 5s linear infinite;
+    white-space: nowrap;
+    position: relative;
+    animation: marquee 90s linear infinite;
 }
 
-@keyframes fall {
-  0% {
-    top: -100%;
-    opacity: 1; /* Start with full opacity */
+  .marquee.paused {
+    animation-play-state: paused;
   }
-  90% {
-    opacity: 1; /* Maintain full opacity until the last 10% */
-  }
-  100% {
-    top: 100%; /* Move the image below the visible area */
-    opacity: 0; /* Fade out the image completely */
-  }
+	
+@keyframes marquee {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 
 img {
-  width: 130px; /* Adjust the width as needed */
-  height: auto; /* Preserve aspect ratio */
+    width: 347px; /* Adjust the width as needed */
+    height: auto; /* Preserve aspect ratio */
 }
 
  </style>	
@@ -870,34 +868,6 @@ img {
 }
  </style>
 <style>
-.underline::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 10px;
-    width: 10%;
-    z-index: -1;
-    border: solid 3px #400000;
-    border-color: #400000 transparent transparent transparent; 
-    border-radius: 100%;
-}
-
-.underline2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 10px;
-    width: 700%;
-    z-index: -1;
-    border: solid 3px #000000;
-    border-color: #000000 transparent transparent transparent;
-    border-radius: 100%;
-}	
-
-</style>
-  <style>
         #rightClickMenu {
             display: none;
             position: absolute;
@@ -968,7 +938,7 @@ img {
   <div class="contents">
     <div></div>
 	
-<h5 class="neumorphism-text">The Ride - <span style="color: #21232c;">Home</span> (beta)</h5> 
+<h5 class="neumorphism-text">The Ride - <span style="color: #21232c;">Home</span></h5> 
    
  <section>
    <aside>
@@ -992,7 +962,7 @@ img {
 <div class="marquee-container">
 	<!--<div id="player" style="margin-bottom: 30px; box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;"></div>-->
 	<div class="marquee">
-		 <img src="https://kurziokode.github.io/morph/idea.png" alt="Moving Image">	 
+		 <img src="https://kurziokode.github.io/morph/ride.png" alt="Moving Image">	 
         </div>
  </div>   
 <div class="button-container3">  
@@ -1173,20 +1143,6 @@ img {
     // play the animation
     animation.play();
 </script>
-<script>	  
-$(document).ready(function() {
-  // Calculate the height of the marquee container
-  var containerHeight = $('.marquee-container').height();
-  
-  // Set the starting position of the marquee to the negative height of the container
-  $('.marquee').css('top', '-' + containerHeight + 'px');
-  
-  // Start the fade-out effect when the animation reaches 90%
-  $('.marquee').on('animationiteration', function() {
-    $(this).find('img').fadeOut();
-  });
-});
-</script>	
   </body>
 
 </html>
