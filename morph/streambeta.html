@@ -508,42 +508,35 @@ h7 {
     }
   </style>
 <style>
-
 .marquee-container {
-overflow: hidden;
-filter: brightness(66%);	
+  overflow: hidden;
+  position: relative;
 }
 
 .marquee {
-    white-space: nowrap;
-position: absolute;
-animation: fall 5s linear forwards;
+  white-space: nowrap;
+  position: absolute;
+  top: -100%; /* Start the image above the visible area */
+  animation: fall 5s linear infinite;
 }
 
-  .marquee.paused {
-    animation-play-state: paused;
-  }
-	
-@keyframes marquee {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
-}
 @keyframes fall {
   0% {
-    top: 0;
+    top: -100%;
+    opacity: 1; /* Start with full opacity */
+  }
+  90% {
+    opacity: 1; /* Maintain full opacity until the last 10% */
   }
   100% {
-    top: 100%;
-    opacity: 0;
+    top: 100%; /* Move the image below the visible area */
+    opacity: 0; /* Fade out the image completely */
   }
 }
+
 img {
-    width: 130px; /* Adjust the width as needed */
-    height: auto; /* Preserve aspect ratio */
+  width: 130px; /* Adjust the width as needed */
+  height: auto; /* Preserve aspect ratio */
 }
 
  </style>	
@@ -1180,7 +1173,20 @@ img {
     // play the animation
     animation.play();
 </script>
-	  
+<script>	  
+$(document).ready(function() {
+  // Calculate the height of the marquee container
+  var containerHeight = $('.marquee-container').height();
+  
+  // Set the starting position of the marquee to the negative height of the container
+  $('.marquee').css('top', '-' + containerHeight + 'px');
+  
+  // Start the fade-out effect when the animation reaches 90%
+  $('.marquee').on('animationiteration', function() {
+    $(this).find('img').fadeOut();
+  });
+});
+</script>	
   </body>
 
 </html>
