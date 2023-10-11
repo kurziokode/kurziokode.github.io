@@ -508,29 +508,39 @@ h7 {
     }
   </style>
 <style>
+
 .marquee-container {
-    overflow: hidden;
-    position: relative;
-    height: 100vh; /* Adjust as needed */
+overflow: hidden;
+filter: brightness(66%);	
 }
 
 .marquee {
-    position: absolute;
-    bottom: -100px; /* Initial position off the screen */
-    animation: fall 6s linear 1 forwards;
+    white-space: nowrap;
+position: absolute;
+animation: fall 5s linear forwards;
 }
 
-@keyframes fall {
+  .marquee.paused {
+    animation-play-state: paused;
+  }
+	
+@keyframes marquee {
     0% {
-        transform: translateY(-100px); /* Start off-screen */
-        opacity: 1;
+        left: -100%;
     }
     100% {
-        transform: translateY(100vh); /* End off-screen */
-        opacity: 0;
+        left: 100%;
     }
 }
-
+@keyframes fall {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
 img {
     width: 130px; /* Adjust the width as needed */
     height: auto; /* Preserve aspect ratio */
@@ -1170,29 +1180,7 @@ img {
     // play the animation
     animation.play();
 </script>
-<script>	  
-$(document).ready(function() {
-    var marquee = $(".marquee");
-
-    function pauseMarquee() {
-        marquee.addClass("paused");
-    }
-
-    function resumeMarquee() {
-        marquee.removeClass("paused");
-    }
-
-    // Pause the animation when it's fully off-screen
-    marquee.on("animationend", function() {
-        pauseMarquee();
-    });
-
-    // Example: You can resume the animation after a delay (3 seconds in this case)
-    setTimeout(function() {
-        resumeMarquee();
-    }, 3000);
-});
-</script>	  
+	  
   </body>
 
 </html>
