@@ -1171,6 +1171,27 @@ img {
     // play the animation
     animation.play();
 </script>
+<script>	  
+$(document).ready(function() {
+    var $marquee = $('.marquee');
+    var $img = $marquee.find('img');
+    var fallingDistance = 45000; // Adjust this value as needed
+
+    $img.animate({
+        left: '100%'
+    }, {
+        duration: 90000,
+        progress: function(animation, progress, remainingMs) {
+            var currentDistance = parseInt($(this).css('left'), 10);
+            if (currentDistance >= fallingDistance) {
+                $(this).stop(true, false).animate({
+                    top: '200px' // Adjust the value as needed
+                }, remainingMs);
+            }
+        }
+    });
+});
+</script>	  
   </body>
 
 </html>
