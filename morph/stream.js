@@ -58,9 +58,9 @@ var tag = document.createElement('script');
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '180',
-    width: '320',
-    videoId: 'BLF-f4kUtAw', // replace with your video id
+    height: '0',
+    width: '0',
+    videoId: 'LlDZ0AFN5C0', // replace with your video id
     events: {
       'onReady': onPlayerReady,
     }
