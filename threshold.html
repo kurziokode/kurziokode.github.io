@@ -18,6 +18,43 @@ strictly prohibited. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://kurziokode.github.io/threshold.css">
     <style>
+.cracked-background {
+  width: 100%;
+  height: 100%;
+  background: #0b0c0e; /* Replace this with your desired background color */
+  position: relative;
+}
+
+	.cracked-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0%; /* Position the right image at the top-right corner */
+  width: 100%; /* Divide the width into two equal halves for two images */
+  height: 100%;
+  background: url('https://kurziokode.github.io/morph/red2.png'); /* Replace 'right-cracks.png' with the path to your right image */
+  background-repeat: no-repeat;
+  background-position: left; /* Position the right image at the top-right corner */
+  opacity: 0.15;
+  z-index: -1;
+}
+	
+/* Media query for phones and tablets */
+@media (max-width: 1024px) {
+  .cracked-background::before {
+    background-size: %; /* Display the image at 1/4 of its size */
+  }
+}	
+	
+/* Media query for laptops and desktops */
+@media (min-width: 1025px) {
+  .cracked-background::before {
+    background-size: 40%; /* Display the image at its original size */
+  }
+}
+	
+</style>
+    <style>
         #container {
             height: 100%;
             overflow-y: scroll;
@@ -98,6 +135,7 @@ strictly prohibited. -->
 </head>
 
 <body>
+    <div class="cracked-background">
     <div id="rightClickMenu">
         <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
             style="color: rgb(2, 100, 10)">gmail&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-google"></i></a>
@@ -264,7 +302,7 @@ strictly prohibited. -->
         <div>
             <a href="#" class="button2" style="position: fixed; top:16%; right:10%;"><span>▶</span></a>
         </div>
-
+</div>
         <script>
             document.addEventListener("contextmenu", function (event) {
                 event.preventDefault();
