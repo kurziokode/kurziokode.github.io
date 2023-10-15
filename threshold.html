@@ -210,7 +210,7 @@ strictly prohibited. -->
             </ul>
 
         </div>
-        <div class="section myList" id="section3">
+        <div class="section" id="section3">
 
             <a href="#section1" style="color: #006600; font-weight: bold;">&nbsp;&nbsp;Arts</a>
             <a href="#section2" style="color: #006600; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read</a>
@@ -281,15 +281,6 @@ strictly prohibited. -->
                 }
             });
         </script>
- <script>
- const myList = document.getElementById('myList');
-  const listItems = Array.from(myList.querySelectorAll('li'));
-  const sortedListItems = listItems.sort((a, b) => a.textContent.localeCompare(b.textContent));
-  
-  listItems.forEach(li => li.remove());
-  sortedListItems.forEach(li => myList.appendChild(li));
-
-</script>
 </body>
 
 </html>
