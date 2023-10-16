@@ -101,8 +101,8 @@ h1 {
 }
 
 h2 {
- font-size: 45px;
-    opacity: 1;
+ font-size: 42px;
+    opacity: 0.8;
     padding: 20px;
     border: 7px solid transparent;
     border-radius: 0%;
