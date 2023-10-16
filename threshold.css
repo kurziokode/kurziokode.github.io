@@ -26,7 +26,7 @@ body {
     height: 100vh;
     width: 100vw;
     scrollbar-width: auto;
-    scrollbar-color: #008000 #040404;
+    scrollbar-color: #220001 #040404;
     transition: background-image 0.7s ease;
 
 }
@@ -320,6 +320,6 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #008000;
+    background-color: #220001;
     border-radius: 6px;
 }
