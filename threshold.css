@@ -59,13 +59,13 @@ body {
 /* Media query for smaller screens */
 @media (max-width: 767px) {
     .button2 {
-        font-size: 12px;
-        width: 70px;
-        height: 30px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
+        font-size: 14px;
+        width: 65px;
+        height: 25px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
 }
 
