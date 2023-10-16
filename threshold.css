@@ -200,10 +200,8 @@ footer {
 /* Extra small devices (phones) */
 @media only screen and (max-width: 575px) {
 
-    h1 {
-        font-size: 24px;
-        /* Change font size */
-        /* Change font color */
+    h2 {
+        color: #330000;
     }
 
     p {
