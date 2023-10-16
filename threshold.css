@@ -60,12 +60,12 @@ body {
 @media (max-width: 767px) {
     .button2 {
         font-size: 12px;
-        width: 60px;
-        height: 20px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        width: 70px;
+        height: 30px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
 }
 
