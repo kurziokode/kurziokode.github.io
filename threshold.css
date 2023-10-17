@@ -31,12 +31,6 @@ body {
 
 }
 
-@media (min-width: 1025px) {
-  .background-image {
-   filter: brightness(30%);
-  }
-}
-
 .button2 {
     display: flex;
     justify-content: center;
