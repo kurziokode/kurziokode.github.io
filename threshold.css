@@ -33,7 +33,7 @@ body {
 
 body {
   background-image: url('https://kurziokode.github.io/woman2.jpg');
-  filter: brightness(0%);
+  filter: brightness(100%);
 }
 
 @media (max-width: 600px) {
