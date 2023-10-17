@@ -108,6 +108,7 @@ h2 {
     border-radius: 0%;
     font-weight: 900;
     letter-spacing: 0.02em;  
+    z-index: -1;
 }
 
 h3 {
