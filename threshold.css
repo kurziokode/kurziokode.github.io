@@ -49,6 +49,7 @@ body {
     border-bottom-right-radius: 42px;
     box-shadow: inset 0px 1px 0px 0px #990000;
     background: linear-gradient(#4d0000, #330000);
+    z-index: 10;
 }
 
 .button2:hover {
@@ -108,8 +109,7 @@ h2 {
     border-radius: 0%;
     font-weight: 900;
     letter-spacing: 0.02em;  
-    z-index: -1;
-}
+   }
 
 h3 {
     font-size: 18px;
