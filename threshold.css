@@ -31,26 +31,9 @@ body {
 
 }
 
-body {
-  background-image: url('https://kurziokode.github.io/woman2.jpg');
-  filter: brightness(100%);
-}
-
-@media (max-width: 600px) {
-  body {
-    filter: brightness(0%);
-  }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-  body {
-    filter: brightness(0%);
-  }
-}
-
 @media (min-width: 1025px) {
-  body {
-    filter: brightness(30%);
+  .background-image {
+   filter: brightness(30%);
   }
 }
 
