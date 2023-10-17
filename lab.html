@@ -1,0 +1,267 @@
+
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;C u r z i o</title>
+    <link rel="icon" href="https://kurziokode.github.io/alle2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://kurziokode.github.io/threshold.css">
+
+    <style>
+        #container {
+            height: 100%;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            flex: 1;
+            padding: 1em;
+        }
+
+        article {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 0px solid #5d5b5b;
+        }
+
+        article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        article a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #5d5b5b;
+        }
+
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+    </style>
+
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #020202;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
+ <style>
+.link-container {
+  position: relative;
+}
+
+.link-container a {
+  text-decoration: none;
+}
+
+.link-container a:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: transparent;
+  color: #990000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 95%;
+  transform: translateX(-40%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-style: italic;	
+}
+
+.link-container a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+ </style>
+
+</head>
+
+<body>
+   
+    <div id="rightClickMenu">
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
+            style="color: rgb(2, 100, 10)">gmail&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-google"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"
+            style="color: rgb(2, 100, 10)">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"
+            style="color: rgb(2, 100, 10)">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank" style="color: rgb(2, 100, 10)">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i
+                class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"
+            style="color: rgb(2, 100, 10)">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+    </div>
+    <div id="container"> 
+        <div class="section" id="section1">
+           <a href="#section2" class="button2" style="position: fixed; bottom:30%; right:2%;"><span>READ</span></a> 
+           <h2 style="text-align: center; color: #330000;">ARTS</h2> 
+            <ul class="grid2" style="text-align: center;">
+                <li><a href="https://www.rollingstone.com/" target="_blank">rolling stone</a></li>
+                <li><a href="https://www.metacritic.com/movie" target="_blank">metacritic</a></li>
+                <li><a href="https://www.spin.com/" target="_blank">spin</a></li>
+                <li><a href="https://pitchfork.com/" target="_blank">pitchfork</a></li>
+                <li><a href="https://www.undertheradarmag.com/" target="_blank">under the radar</a></li>
+                <li><a href="https://faroutmagazine.co.uk/" target="_blank">far out</a>
+                </li>
+                <li><a href="https://www.milomanara.it/galleries/comics/?lang=en" target="_blank">milo manara</a></li>
+                <li><a href="https://hubertybreyne.com/en/artists/list/0/artists-list" target="_blank">huberty
+                        breyne</a></li>
+                <li><a href="https://musicoholics.com/" target="_blank">musicoholics</a></li>
+                <li><a href="https://playjunkie.com/category/art/" target="_blank">play junkie</a></li>
+                <li><a href="https://kexp.org/" target="_blank">kexp</a></li>
+                <li><a href="https://www.behance.net/search/projects/?search=street%20photography"
+                        target="_blank">behance</a>
+                </li>
+                <li><a href="https://www.deviantart.com/topic/photography" target="_blank">deviant art</a></li>
+                <li><a href="https://www.wbgo.org/" target="_blank">wbgo</a></li>
+                <li><a href="https://artsandculture.google.com/category/artist?hl=fr" target="_blank">arts and
+                        culture</a>
+                </li>
+                <li><a href="https://surfadelic2.wordpress.com/" target="_blank">surfadelic</a></li>
+                <li><a href="https://www.vulture.com/art/" target="_blank">vulture</a></li>
+                <li><a href="https://www.dailyartmagazine.com/" target="_blank">daily art</a></li>
+                <li><a href="https://500px.com/p/mrkirby?view=photos" target="_blank">500px</a></li>
+                <li><a href="https://magazine.artstation.com/" target="_blank">art station</a></li>
+                <li><a href="https://www.albumoftheyear.org/" target="_blank">album of the year</a></li>
+                <li><a href="https://www.revolvermag.com/" target="_blank">revolver</a></li>
+                <li><a href="https://www.flickr.com/photos/skorver1/9621595253/in/photostream/"
+                        target="_blank">flickr</a>
+                </li>
+                <li><a href="https://www.shortoftheweek.com/channels/film-noir/" target="_blank">short of the week</a>
+                </li>
+                <li><a href="https://www.dazeddigital.com/" target="_blank">dazed digital</a></li>
+                <li><a href="https://totalrock.com/" target="_blank">total rock</a></li>
+                <li><a href="https://www.loudersound.com/" target="_blank">louder sound</a></li>
+                <li><a href="https://www.gazettemusicale.com/essay/2017/9/1/the-agony-of-michael-gira"
+                        target="_blank">gazette
+                        musicale</a></li>
+                <li><a href="https://www.electronicbeats.net/" target="_blank">electronic beats</a></li>
+                <li><a href="https://shakespeare.folger.edu/shakespeares-works/" target="_blank">shakespeare</a></li>
+
+            </ul>
+
+        </div>
+        <div class="section" id="section2">
+             <a href="#section1" class="button2" style="position: fixed; bottom:45%; right:2%;"><span>ARTS</span></a> 
+            <h2 style="text-align: center; color: #330000;">READ</h2>
+       <ul class="grid2" style="text-align: center;">
+                <li><a href="https://librofilo.blogspot.com/" target="_blank">librofilo</a></li>
+                <li><a href="https://pandoxeio.com/" target="_blank">pandoxeio</a></li>
+                <li><a href="https://sarantakos.wordpress.com/" target="_blank">sarantakos</a></li>
+                <li><a href="https://www.hartismag.gr/arheio" target="_blank">hartis</a></li>
+                <li><a href="https://groovyhistory.com/" target="_blank">groovy history</a></li>
+                <li><a href="https://www.worldhistory.org/" target="_blank">world history</a></li>
+                <li><a href="https://stars.chromeexperiments.com/" target="_blank">stars</a></li>
+                <li><a href="https://www.zergnet.com/" target="_blank">zergnet</a></li>
+                <li><a href="https://www.urbandictionary.com/" target="_blank">urban dictionary</a></li>
+                <li><a href="https://www.npr.org/" target="_blank">npr</a></li>
+                <li><a href="https://informationisbeautiful.net/visualizations/common-mythconceptions/"
+                        target="_blank">info beautiful</a></li>
+                <li><a href="https://www.vintag.es/" target="_blank">vintage</a></li>
+                <li><a href="https://www.pastemagazine.com/" target="_blank">paste</a></li>
+                <li><a href="https://www.smithsonianmag.com/category/art-artists/" target="_blank">smithsonian</a></li>
+                <li><a href="https://www.quantamagazine.org/" target="_blank">quanta</a></li>
+                <li><a href="https://www.boredpanda.com/?utm_source=kurziokode.github&utm_medium=referral&utm_campaign=organic"
+                        target="_blank">bored panda</a></li>
+                <li><a href="https://www.tcj.com/" target="_blank">tcj</a></li>
+                <li><a href="https://www.goodreads.com/author/quotes/10401.James_Gleick" target="_blank">goodreads</a>
+                </li>
+                <li><a href="https://www.ebaumsworld.com/newest/all/" target="_blank">ebaums world</a></li>
+                <li><a href="https://www.livescience.com/history" target="_blank">live science</a></li>
+                <li><a href="https://www.nowness.com/" target="_blank">nowness</a></li>
+                <li><a href="https://www.visualcapitalist.com/category/misc/maps/" target="_blank">visual capitalist</a>
+                </li>
+                <li><a href="https://www.wired.com/magazine/" target="_blank">wired</a></li>
+                <li><a href="https://www.vox.com/culture" target="_blank">vox</a></li>
+                <li><a href="https://www.bbc.com/culture" target="_blank">bbc</a></li>
+                <li><a href="https://bestimmung.blogspot.com/" target="_blank">bestimmung</a></li>
+                <li><a href="https://www.theguardian.com/uk/culture" target="_blank">guardian</a></li>
+                <li><a href="https://imgur.com/t/funny?source=featured_tag_module" target="_blank">imgur</a></li>
+             
+            </ul>
+
+        </div>
+
+        <article  class="link-container" style="text-align: center;">
+            <a href="https://kurziokode.github.io/final.mp4" class="hover-link" target="_blank" data-tooltip="About" style="color: #660000; font-size: large;"><i class="fa fa-user"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" class="hover-link" target="_blank" data-tooltip="Contact"
+                style="color: #660000; font-size: large;"><i class="fa fa-envelope"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://kurziokode.github.io/pnemo.html" class="hover-link" target="_blank" data-tooltip="Copyright"
+                style="color: #660000; font-size: large;"><i class="fa fa-copyright"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/threshold.html#" class="hover-link"
+                target="_blank" data-tooltip="Share" style="color: #660000; font-size: large;"><i class="fa fa-paper-plane"></i></a>
+             <h2 style="text-align: center; color: #330000;">END OF STORY</h2> 
+           </article>
+
+        <div>
+            <a href="https://kurziokode.github.io/threshold.html" class="button2" style="position: fixed; bottom:15%; right:2%;"><span>1&nbsp;◀</span></a>
+        </div>
+        <script>
+            document.addEventListener("contextmenu", function (event) {
+                event.preventDefault();
+                var menu = document.getElementById("rightClickMenu");
+                menu.style.top = event.pageY + "px";
+                menu.style.left = event.pageX + "px";
+                menu.style.display = "block";
+            });
+
+            document.addEventListener("click", function (event) {
+                var menu = document.getElementById("rightClickMenu");
+                if (menu) {
+                    menu.style.display = "none";
+                }
+            });
+        </script>
+</body>
+
+</html>
