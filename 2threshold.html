@@ -94,7 +94,37 @@ strictly prohibited. -->
             background-color: #0b0c0e;
         }
     </style>
+ <style>
+	.link-container {
+  position: relative;
+}
 
+.link-container a {
+  text-decoration: none;
+}
+
+.link-container a:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: transparent;
+  color: #990000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;	
+}
+
+.link-container a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+ </style>
 
 </head>
 
@@ -204,7 +234,7 @@ strictly prohibited. -->
         </div>
 
         <article style="text-align: center;">
-            <a href="https://kurziokode.github.io/final.mp4" target="_blank" style="color: #660000; font-size: large;"><i class="fa fa-user"></i></a>
+            <a href="https://kurziokode.github.io/final.mp4" class="hover-link" target="_blank" data-tooltip="About" style="color: #660000; font-size: large;"><i class="fa fa-user"></i></a>
             &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank"
                 style="color: #660000; font-size: large;"><i class="fa fa-envelope"></i></a>
             &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://kurziokode.github.io/pnemo.html" target="_blank"
