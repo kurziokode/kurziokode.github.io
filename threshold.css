@@ -92,10 +92,10 @@ section {
 
 }
 
-h1,
+
 h3 {
       font-size: 30px;
-      margin: 20px 0;
+      margin: 0px 0;
       text-align: center;
       color: #171a1c;
 }
@@ -113,11 +113,6 @@ h2 {
     font-weight: 900;
     letter-spacing: 0.02em; 
     }
-
-h3 {
-    font-size: 18px;
-
-}
 
 h5 {
     font-size: calc(100vw / 9);
