@@ -204,8 +204,8 @@ footer {
 /* Extra small devices (phones) */
 @media only screen and (max-width: 575px) {
 
-    h2 {
-        
+    h4 {
+       color: #4d0000; 
     }
 
     p {
@@ -232,6 +232,10 @@ footer {
         /* Change font color */
     }
 
+   h4 {
+       color: #4d0000; 
+    }
+    
     p {
         font-size: 18px;
         /* Change font size */
