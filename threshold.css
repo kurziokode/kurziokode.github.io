@@ -94,7 +94,10 @@ section {
 
 h1,
 h3 {
-    font-weight: lighter;
+      font-size: 30px;
+      margin: 20px 0;
+      text-align: center;
+      color: #171a1c;
 }
 
 h1 {
