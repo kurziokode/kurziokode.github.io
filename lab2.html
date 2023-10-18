@@ -1,0 +1,305 @@
+
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;T h e&nbsp;&nbsp;&nbsp;&nbsp;L a b</title>
+    <link rel="icon" href="https://kurziokode.github.io/alle2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://kurziokode.github.io/threshold.css">
+
+    <style>
+        #container {
+            height: 100%;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            flex: 1;
+            padding: 1em;
+        }
+
+        article {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 0px solid #5d5b5b;
+             }
+
+        article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        article a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #5d5b5b;
+        }
+
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+	#invisible-link a {
+        opacity: 0;
+    }    
+    </style>
+
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #020202;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
+ <style>
+.link-container {
+  position: relative;
+}
+
+.link-container a {
+  text-decoration: none;
+}
+
+.link-container a:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background-color: transparent;
+  color: #990000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 95%;
+  transform: translateX(-40%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 18px;	
+  font-style: italic;	
+}
+
+.link-container a:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+ </style>
+    <style>
+    .first-letter {
+      color: #4d0000;
+    }
+  </style>
+</head>
+
+<body>
+ 
+    <div id="rightClickMenu">
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
+            style="color: rgb(2, 100, 10)">&#x2022; gmail&nbsp;&nbsp;&nbsp;<i class="fab fa-google"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"
+            style="color: rgb(2, 100, 10)">&#x2022; youtube&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"
+            style="color: rgb(2, 100, 10)">&#x2022; facebook&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" target="_blank" style="color: rgb(2, 100, 10)">&#x2022; twitter&nbsp;&nbsp;&nbsp;<i
+                class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"
+            style="color: rgb(2, 100, 10)">&#x2022; instagram&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+    </div>
+    <div id="container"> 
+	    <div class="section" id="section1">
+	 <h3 style="position: fixed; top:2%;">The <span class="first-letter">Lab</span> of Killing Time</h3>   	    
+           <a href="#section1" class="button2" style="position: fixed; bottom:75%; right:1%;"><span>AVisual</span></a> 
+           <h2 style="text-align: center; color: #330000;">AVisua<span class="first-letter">l</span></h2> 
+          <ul class="grid2" style="text-align: center;">
+                <li><a href="https://www.netflix.com/browse" target="_blank">&#x2022; netflix</a></li>
+                <li><a href="https://www.ertflix.gr/epg/now-on-tv" target="_blank">&#x2022; ertflix</a></li>
+                <li><a href="https://voody-online.com/" target="_blank">&#x2022; voody</a></li>
+                <li><a href="https://gamatotv.pro/" target="_blank">&#x2022; gamato</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLfUDdnIv_Ozp3dhdrjheLNRgjgR7_4bMd" target="_blank">&#x2022; noir</a></li>
+                <li><a href="https://tainio-mania.online/" target="_blank">&#x2022; mania</a></li>
+                <li><a href="https://filmatic.online/" target="_blank">&#x2022; filmatic</a></li>
+                <li><a href="https://xrysoi.pro/" target="_blank">&#x2022; gold</a></li>
+                <li><a href="https://www.imdb.com/?ref_=nv_home" target="_blank">&#x2022; imdb</a></li>
+                <li><a href="https://www.rottentomatoes.com/" target="_blank">&#x2022; rotten</a></li>
+                <li><a href="https://www.alphatv.gr/live/" target="_blank">&#x2022; alpha</a></li>
+                <li><a href="https://www.megatv.com/" target="_blank">&#x2022; mega</a></li>
+                <li><a href="https://www.tvopen.gr/live" target="_blank">&#x2022; open</a></li>
+                <li><a href="https://www.skaitv.gr/live" target="_blank">&#x2022; skai</a></li>
+                <li><a href="https://www.star.gr/tv/live-stream" target="_blank">&#x2022; star</a></li>  
+                <li><a href="https://www.grittyrockradio.com/en" target="_blank">&#x2022; gritty</a></li>
+        <li><a href="https://listen.radioking.com/radio/10713/stream/224413" target="_blank">&#x2022; king</a></li>
+        <li><a href="https://radioparadise.com/player/slideshow/main-mix" target="_blank">&#x2022; paradise</a></li>
+        <li><a href="https://stream.radioparadise.com/flac" target="_blank">&#x2022; flac</a></li>
+        <li><a href="https://www.mixcloud.com/Sauvagesradio/" target="_blank">&#x2022; sauvages</a></li>
+        <li><a href="https://www.ertecho.gr/radio/kosmos-jazz/player/" target="_blank">&#x2022; jazz</a></li>
+        <li><a href="http://wbgo.streamguys.net/thejazzstream" target="_blank">&#x2022; streamguys</a></li>
+	<li><a href="https://realpunkradio.com/player/player111419.html" target="_blank">&#x2022; punk</a></li>   
+	<li><a href="https://e1.pcloud.link/publink/show?code=kZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk#returl=https%3A//e1.pcloud.link/publink/show%3Fcode%3DkZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk&page=login" target="_blank">&#x2022; mp3</a></li>
+        <li><a href="https://e1.pcloud.link/publink/show?code=kZNMWRZXJ8HziXJM55TKQzg6hqV34kCT5TX" target="_blank">&#x2022; mp4</a></li>
+        <li><a href="https://swans.bandcamp.com/album/the-glowing-man?from=search&search_item_id=2544108859&search_item_type=a&search_match_part=%3F&search_page_id=2099377261&search_page_no=0&search_rank=3&logged_out_menubar=true" target="_blank">&#x2022; bandcamp</a></li>
+        <li><a href="https://www.last.fm/music/Swans/+tracks?date_preset=LAST_7_DAYS&page=1" target="_blank">&#x2022; lastfm</a></li>
+        <li><a href="https://soundcloud.com/you/sets" target="_blank">&#x2022; soundcloud</a></li> 
+     	  <li id="invisible-link"><a href="https://kurziokode.github.io/morph/streamstudio.html" target="_blank">&#x2022; studio</a></li>
+	  <li id="invisible-link"><a href="https://kurziokode.github.io/darkk.html" target="_blank">&#x2022; projects</a></li>	    
+            </ul>
+<h4 style="text-align: center; color: #4d0000;">
+            * Right click to Social</h4> 
+        </div>
+  
+  <div class="section" id="section2">
+	 
+             <a href="#section2" class="button2" style="position: fixed; bottom:50%; right:1%;"><span>Base</span></a> 
+            <h2 style="text-align: center; color: #330000;">Bas<span class="first-letter">e</span></h2>
+      
+	  <ul class="grid2" style="text-align: center;">
+                <li><a href="https://librofilo.blogspot.com/" target="_blank">librofilo</a></li>
+                <li><a href="https://pandoxeio.com/" target="_blank">pandoxeio</a></li>
+                <li><a href="https://sarantakos.wordpress.com/" target="_blank">sarantakos</a></li>
+                <li><a href="https://www.hartismag.gr/arheio" target="_blank">hartis</a></li>
+                <li><a href="https://groovyhistory.com/" target="_blank">groovy history</a></li>
+                <li><a href="https://www.worldhistory.org/" target="_blank">world history</a></li>
+                <li><a href="https://stars.chromeexperiments.com/" target="_blank">stars</a></li>
+                <li><a href="https://www.zergnet.com/" target="_blank">zergnet</a></li>
+                <li><a href="https://www.urbandictionary.com/" target="_blank">urban dictionary</a></li>
+                <li><a href="https://www.npr.org/" target="_blank">npr</a></li>
+                <li><a href="https://informationisbeautiful.net/visualizations/common-mythconceptions/"
+                        target="_blank">info beautiful</a></li>
+                <li><a href="https://www.vintag.es/" target="_blank">vintage</a></li>
+                <li><a href="https://www.pastemagazine.com/" target="_blank">paste</a></li>
+                <li><a href="https://www.smithsonianmag.com/category/art-artists/" target="_blank">smithsonian</a></li>
+                <li><a href="https://www.quantamagazine.org/" target="_blank">quanta</a></li>
+                <li><a href="https://www.boredpanda.com/?utm_source=kurziokode.github&utm_medium=referral&utm_campaign=organic"
+                        target="_blank">bored panda</a></li>
+                <li><a href="https://www.tcj.com/" target="_blank">tcj</a></li>
+                <li><a href="https://www.goodreads.com/author/quotes/10401.James_Gleick" target="_blank">goodreads</a>
+                </li>
+                <li><a href="https://www.ebaumsworld.com/newest/all/" target="_blank">ebaums world</a></li>
+                <li><a href="https://www.livescience.com/history" target="_blank">live science</a></li>
+                <li><a href="https://www.nowness.com/" target="_blank">nowness</a></li>
+                <li><a href="https://www.visualcapitalist.com/category/misc/maps/" target="_blank">visual capitalist</a>
+                </li>
+                <li><a href="https://www.wired.com/magazine/" target="_blank">wired</a></li>
+                <li><a href="https://www.vox.com/culture" target="_blank">vox</a></li>
+                <li><a href="https://www.bbc.com/culture" target="_blank">bbc</a></li>
+                <li><a href="https://bestimmung.blogspot.com/" target="_blank">bestimmung</a></li>
+                <li><a href="https://www.theguardian.com/uk/culture" target="_blank">guardian</a></li>
+                <li><a href="https://imgur.com/t/funny?source=featured_tag_module" target="_blank">imgur</a></li>
+              <li><a href="https://www.electronicbeats.net/" target="_blank">electronic beats</a></li>
+                <li><a href="https://shakespeare.folger.edu/shakespeares-works/" target="_blank">shakespeare</a></li>
+            </ul>
+
+        </div>
+
+           <div class="section" id="section3">
+		   
+           <a href="#section3" class="button2" style="position: fixed; bottom:25%; right:1%;"><span>School</span></a> 
+           <h2 style="text-align: center; color: #330000;">Schoo<span class="first-letter">l</span></h2> 
+            <ul class="grid2" style="text-align: center;">
+                <li><a href="https://www.dnews.gr/eidhseis/paideia" target="_blank">&#x2022; News</a></li>
+                <li><a href="https://www.alfavita.gr/" target="_blank">&#x2022; Alfavita</a></li>
+                <li><a href="https://www.esos.gr/" target="_blank">&#x2022; Esos</a></li>
+                <li><a href="https://blogs.sch.gr/3dimgast/" target="_blank">&#x2022; Ιστοσελίδα</a></li>
+                <li><a href="https://www.sch.gr/" target="_blank">&#x2022; Δίκτυο</a></li>
+                <li><a href="https://saferinternet4kids.gr/yliko-dhmotikou/?age[]=for-small-children&submit=%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7" target="_blank">&#x2022; Διαδίκτυο</a></li>
+                <li><a href="https://edtech.gr/" target="_blank">&#x2022; Εργαλεία</a></li>
+                <li><a href="https://edu.klimaka.gr/nomothesia" target="_blank">&#x2022; Νομοθεσία</a></li>
+                <li><a href="https://www.gov.gr/upourgeia/upourgeio-paideias-kai-threskeumaton" target="_blank">&#x2022; Υπουργείο</a></li>
+                <li><a href="https://nationaldigitalacademy.gov.gr/mathimata/ergaleia-ka8hmerinhs-xrhshs-3" target="_blank">&#x2022; Ψηφιακά</a></li>
+                <li><a href="http://photodentro.edu.gr/aggregator/" target="_blank">&#x2022; Φωτόδεντρο</a></li>
+                <li><a href="http://dipe.ilei.sch.gr/" target="_blank">&#x2022; Πρωτοβάθμια</a></li>
+                <li><a href="https://www.youtube.com/@user-lf2qi4bz2m/playlists" target="_blank">&#x2022; Μαθαίνουμε</a></li>
+                <li><a href="https://sway.office.com/rLQlOjxCWFWezarm?ref=Link&loc=play" target="_blank">&#x2022; Κανονισμοί</a></li>
+	              <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__gMD8dNUNkxQMzlWQUxBVFlOOE1UWVdZOERYSUk0Ui4u" target="_blank">&#x2022; Τεστ</a></li>
+	              <li><a href="https://quizizz.com/join/presentation/5fbe19ee016d6e001b17f40a/start?studentShare=true" target="_blank">&#x2022; Κουίζ</a></li>
+                <li><a href="https://www.fitnessblender.com/videos?exclusive%5B%5D=0&equipment%5B%5D=26" target="_blank">&#x2022; Στο Σπίτι</a></li>
+                <li><a href="https://app.sworkit.com/exercise-library" target="_blank">&#x2022; Με Βίντεο</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLLUFOmb1L6KFXl1UvRmMUjEcmnicnDPtg" target="_blank">&#x2022; Χοροί</a></li>	    
+                <li><a href="http://ebooks.edu.gr/ebooks/v2/allcourses.jsp" target="_blank">&#x2022; Βιβλία</a></li>
+                <li><a href="https://www.youtube.com/c/FitnessProjectGr/playlists" target="_blank">&#x2022; Προγράμματα</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLIh1VGKM_YYye-qffT9UNU-exrO9CjPSd" target="_blank">&#x2022; Πρώτες Βοήθειες</a></li>
+                <li><a href="https://fittoplay.org/sports/" target="_blank">&#x2022; Προθέρμανση</a></li>	    
+                <li><a href="https://www.youtube.com/playlist?list=PLpLZE-ZyDcSnAFWwrzfWOsVWdPVRkoNLT" target="_blank">&#x2022; Παιχνίδια</a></li>
+                <li><a href="https://www.youtube.com/@MVMTwithCailin/playlists" target="_blank">&#x2022; Pilates</a></li>
+	              <li><a href="https://eyzhn.edu.gr/useful-material/" target="_blank">&#x2022; Παλίνδρομο</a></li>
+                <li><a href="https://depositphotos.com/gr/videos/human-body-anatomy-muscular-system.html" target="_blank">&#x2022; Ανατομία</a></li>
+	              <li><a href="https://www.xleventakis.com/" target="_blank">&#x2022; Συντονιστής</a></li>
+                <li><a href="https://roloi.net/chronometro/#" target="_blank">&#x2022; Χρονόμετρο</a></li>    
+                <li><a href="https://www.taexeiola.gr/" target="_blank">&#x2022; Βοηθήματα</a></li> 
+
+            </ul>
+
+        </div>
+        <article  class="link-container" style="text-align: center;">
+            <a href="https://kurziokode.github.io/final.mp4" class="hover-link" target="_blank" data-tooltip="About" style="color: #660000;"><i class="fa fa-user"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" class="hover-link" target="_blank" data-tooltip="Contact"
+                style="color: #660000;"><i class="fa fa-envelope"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://kurziokode.github.io/pnemo.html" class="hover-link" target="_blank" data-tooltip="Copyright"
+                style="color: #660000;"><i class="fa fa-copyright"></i></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/lab.html#" class="hover-link"
+                target="_blank" data-tooltip="Share" style="color: #660000;"><i class="fa fa-paper-plane"></i></a>
+        </article>
+	     <div><a href="https://kurziokode.github.io/lab.html" class="button2" style="position: fixed; bottom:50%; left:1%;"><span>Page 1</span></a></div> 
+        <script>
+            document.addEventListener("contextmenu", function (event) {
+                event.preventDefault();
+                var menu = document.getElementById("rightClickMenu");
+                menu.style.top = event.pageY + "px";
+                menu.style.left = event.pageX + "px";
+                menu.style.display = "block";
+            });
+
+            document.addEventListener("click", function (event) {
+                var menu = document.getElementById("rightClickMenu");
+                if (menu) {
+                    menu.style.display = "none";
+                }
+            });
+        </script>
+</body>
+
+</html>
