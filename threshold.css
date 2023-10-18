@@ -98,6 +98,7 @@ h3 {
       margin: 0px 0;
       text-align: center;
       color: #171a1c;
+      z-index: -1;
 }
 
 h1 {
@@ -133,6 +134,10 @@ h5 {
 @media only screen and (max-width: 767px) {
     h2 {
         font-size: 28px;
+    }
+
+       h3 {
+        font-size: 18px;
     }
 }
 
