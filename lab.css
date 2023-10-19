@@ -1,0 +1,332 @@
+/* Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. */
+
+* {
+    cursor: url('https://kurziokode.github.io/curs2.png'), auto;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 18px;
+    opacity: 1;
+    font-family: Arial, sans-serif;
+    background-image: url(https://kurziokode.github.io/lab.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    scrollbar-width: auto;
+    scrollbar-color: #220001 #040404;
+    transition: background-image 0.7s ease;
+
+}
+
+.button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: Arial;
+    width: 105px;
+    height: 38px;
+    border-width: 0px;
+    color: #595959;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 42px;
+    border-top-right-radius: 42px;
+    border-bottom-left-radius: 42px;
+    border-bottom-right-radius: 42px;
+    box-shadow: inset 0px 1px 0px 0px #990000;
+    background: linear-gradient(#4d0000, #330000);
+    z-index: 10;
+}
+
+.button2:hover {
+    color: #737373;
+    background: linear-gradient(#1a0000, #330000);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .button2 {
+        font-size: 14px;
+        width: 65px;
+        height: 25px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .button2 {
+        font-size: 14px;
+        width: 90px;
+        height: 32px;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+    }
+
+    h5 {
+        display: none;
+    }
+}
+
+section {
+    margin-bottom: 0px;
+
+}
+
+  h4 {
+     color: #660000;  
+    }
+h3 {
+      font-size: 30px;
+      margin: 0px 0;
+      text-align: center;
+      color: #171a1c;
+      z-index: -1;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 42px;
+    opacity: 0.85;
+    padding: 20px;
+    border: 7px solid transparent;
+    border-radius: 0%;
+    font-weight: 900;
+    letter-spacing: 0.02em; 
+    }
+
+h5 {
+    font-size: calc(100vw / 9);
+    letter-spacing: 0.05em;
+    font-weight: 900;
+    color: #001a00;
+    opacity: 0.4;
+    user-select: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-shadow: 14px 14px 0px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    z-index: -1;
+    cursor: url('https://kurziokode.github.io/curs2.png'), auto !important;
+}
+
+@media only screen and (max-width: 767px) {
+    h2 {
+        font-size: 28px;
+    }
+
+       h3 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    h2 {
+        font-size: 37px;
+    }
+}
+
+h6 {
+    font-size: calc(100vw /27);
+    font-weight: 900;
+    color: #660066;
+    opacity: 0.15;
+    user-select: none;
+    cursor: default !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: -1;
+
+}
+
+
+a {
+    font-size: 26px;
+    font-weight: lighter;
+    color: #5c5a5a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9e2415;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #00000044;
+    color: #4a0202;
+    padding: 10px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1922px) {
+    body {
+        filter: brightness(2.5);
+        filter: contrast(2);
+    }
+}
+
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 575px) {
+
+    h4 {
+       opacity: 0.7;
+    }
+
+    p {
+        font-size: 16px;
+        /* Change font size */
+        /* Change font color */
+    }
+
+    a {
+        font-size: 18px;
+        color: #747272;
+        /* Change font size */
+        /* Change font color */
+    }
+
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    h1 {
+        font-size: 32px;
+        /* Change font size */
+        /* Change font color */
+    }
+
+   h4 {
+        opacity: 0.7;
+    }
+    
+    p {
+        font-size: 18px;
+        /* Change font size */
+        /* Change font color */
+    }
+
+    a {
+        font-size: 20px;
+        /* Change font size */
+
+    }
+
+    h5 {
+        display: none;
+    }
+}
+
+/* Medium devices (laptops) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    h1 {
+        font-size: 48px;
+        /* Change font size */
+        /* Change font color */
+    }
+
+    p {
+        font-size: 20px;
+        /* Change font size */
+        /* Change font color */
+    }
+
+    a {
+        font-size: 22px;
+        /* Change font size */
+
+    }
+
+    h8 {
+        font-size: 17px;
+        /* Change font size */
+        /* Change font color */
+    }
+}
+
+
+
+
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 992px) {
+
+    h1 {
+        font-size: 64px;
+        /* Change font size */
+        /* Change font color */
+    }
+
+    p {
+        font-size: 22px;
+        /* Change font size */
+        /* Change font color */
+    }
+
+    a {
+        font-size: 24px;
+        /* Change font size */
+
+    }
+
+    h8 {
+        font-size: 18px;
+        /* Change font size */
+        /* Change font color */
+    }
+}
+
+
+
+/* For Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #040404;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #220001;
+    border-radius: 6px;
+}
