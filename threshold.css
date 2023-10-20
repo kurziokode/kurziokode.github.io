@@ -202,8 +202,13 @@ footer {
     }
 }
 
-
+@media only screen and (max-height: 575px) {
 /* Extra small devices (phones) */
+     h2 {
+       display: none;
+    }
+}
+    
 @media only screen and (max-width: 575px) {
 
     h4 {
