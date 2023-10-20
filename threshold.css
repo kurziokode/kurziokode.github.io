@@ -138,7 +138,7 @@ h5 {
 
 @media only screen and (max-width: 767px) {
     h2 {
-        font-size: 90px;
+        font-size: 80px;
     }
 
        h3 {
@@ -148,7 +148,7 @@ h5 {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     h2 {
-        font-size: 95px;
+        font-size: 90px;
     }
 }
 
