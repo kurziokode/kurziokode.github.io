@@ -101,6 +101,9 @@ h3 {
       text-align: left;
       color: #22272a;
       z-index: -1;
+      font-weight: 100;
+      letter-spacing: 0.02em;
+      opacity: 0.55;
 }
 
 h1 {
@@ -108,7 +111,7 @@ h1 {
 }
 
 h2 {
-    font-size: 90px;
+    font-size: 100px;
     opacity: 0.55;
     padding: 25px;
     border: 7px solid transparent;
@@ -135,7 +138,7 @@ h5 {
 
 @media only screen and (max-width: 767px) {
     h2 {
-        font-size: 80px;
+        font-size: 90px;
     }
 
        h3 {
@@ -145,7 +148,7 @@ h5 {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     h2 {
-        font-size: 85px;
+        font-size: 95px;
     }
 }
 
