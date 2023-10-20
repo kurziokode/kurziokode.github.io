@@ -103,7 +103,7 @@ h3 {
       z-index: -1;
       font-weight: 100;
       letter-spacing: 0.02em;
-      opacity: 0.55;
+      opacity: 0.75;
 }
 
 h1 {
@@ -112,7 +112,7 @@ h1 {
 
 h2 {
     font-size: 100px;
-    opacity: 0.55;
+    opacity: 0.75;
     padding: 25px;
     border: 7px solid transparent;
     border-radius: 0%;
