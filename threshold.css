@@ -96,14 +96,14 @@ section {
      color: #660000;  
     }
 h3 {
-      font-size: 50px;
+      font-size: 45px;
       margin: 0px 0;
       text-align: left;
       color: #394146;
       z-index: -1;
       font-weight: 100;
       letter-spacing: 0.02em;
-      opacity: 0.85;
+      opacity: 0.9;
 }
 
 h1 {
@@ -112,7 +112,7 @@ h1 {
 
 h2 {
     font-size: 100px;
-    opacity: 0.85;
+    opacity: 0.8;
     padding: 0px;
     border: 7px solid transparent;
     border-radius: 0%;
