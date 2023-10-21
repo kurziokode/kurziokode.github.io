@@ -428,7 +428,11 @@ body {
 .example-slider .fnc-slide-1 .fnc-slide__mask-inner {
   background-image: url("https://kurziokode.github.io/lab.jpg");
 }
-.example-slider .fnc-slide-1 .fnc-slide__inner:before {
+.example-slider .fnc-slide-2 .fnc-slide__inner,
+.example-slider .fnc-slide-2 .fnc-slide__mask-inner {
+  background-image: url("https://kurziokode.github.io/lab.jpg");
+}
+.example-slider .fnc-slide-2 .fnc-slide__inner:before {
   content: "";
   position: absolute;
   left: 0;
