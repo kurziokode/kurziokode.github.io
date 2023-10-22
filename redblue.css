@@ -234,7 +234,7 @@
   background: transparent;
   opacity: 0;
   transform-origin: 50% 0;
-  transform: translateY(100%) rotateX(-90deg);
+  
   transition: opacity 0.15s 0.15s;
 }
 .fnc-slide__action-btn:hover span {
