@@ -188,9 +188,9 @@
 }
 .fnc-slide__action-btn {
   position: relative;
-  margin-left: 0px;
-  padding: 0px 0px;
-  font-size: 26px;
+  margin-left: -80px;
+  padding: -50px 0px;
+  font-size: 22px;
   line-height: 1;
   color: transparent;
   border: none;
@@ -200,7 +200,7 @@
   outline: none;
 }
 .fnc-slide__action-btn span {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -214,7 +214,7 @@
 }
 .fnc-slide__action-btn span:before {
   content: "";
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -225,7 +225,7 @@
 }
 .fnc-slide__action-btn span:after {
   content: attr(data-text);
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -233,8 +233,6 @@
   line-height: 30px;
   background: transparent;
   opacity: 0;
-  
-  
   transition: opacity 0.15s 0.15s;
 }
 .fnc-slide__action-btn:hover span {
@@ -403,7 +401,7 @@ body {
   text-decoration: none;
   margin-bottom: 10px;
   font-size: 22px;
-  color: #386e2c;
+  color: #727227;
 }
 
 .demo-cont__credits-link:hover {
@@ -616,13 +614,13 @@ body {
 }
 
 .fnc-slide__action-btn {
- font-size: 20px;
+ font-size: 17px;
  }
 
 .demo-cont__credits-link {
  
   font-size: 16px;
-  color: #386e2c;
+ 
 }
 
 .demo-cont__credits {
@@ -647,13 +645,13 @@ body {
 }
 
 .fnc-slide__action-btn {
- font-size: 20px;
+ font-size: 16px;
  }
 
  .demo-cont__credits-link {
  
   font-size: 16px;
-  color: #386e2c;
+ 
 }
 
 .demo-cont__credits {
@@ -677,13 +675,13 @@ body {
 }
 
 .fnc-slide__action-btn {
- font-size: 22px;
+ font-size: 16px;
  }
 
  .demo-cont__credits-link {
  
   font-size: 18px;
-  color: #386e2c;
+  
 }
 
 .demo-cont__credits {
@@ -707,13 +705,13 @@ body {
 }
 
 .fnc-slide__action-btn {
- font-size: 22px;
+ font-size: 17px;
  }
 
   .demo-cont__credits-link {
  
   font-size: 18px;
-  color: #386e2c;
+  
 }
 
 .demo-cont__credits {
@@ -737,13 +735,13 @@ body {
 }
 
 .fnc-slide__action-btn {
- font-size: 24px;
+ font-size: 18px;
  }
 
   .demo-cont__credits-link {
  
   font-size: 20px;
-  color: #386e2c;
+  
 }
 
 .demo-cont__credits {
@@ -767,13 +765,13 @@ body {
 }
 
 .fnc-slide__action-btn {
- font-size: 24px;
+ font-size: 19px;
  }
 
   .demo-cont__credits-link {
  
   font-size: 20px;
-  color: #386e2c;
+ 
 }
 
 .demo-cont__credits {
@@ -791,5 +789,8 @@ body {
 	filter: contrast(2);  
   }
 }
+
+
+
 
 
