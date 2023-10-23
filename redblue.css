@@ -361,8 +361,8 @@ body {
   position: absolute;
   right: 20px;
   top: 20px;
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 .demo-cont__credits-close:before, .demo-cont__credits-close:after {
