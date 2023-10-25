@@ -27,7 +27,7 @@ body {
     width: 100vw;
     scrollbar-width: auto;
     scrollbar-color: transparent transparent;
- 
+    transition: opacity 3s ease-in-out;
 }
 
 #background-image {
