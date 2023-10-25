@@ -27,8 +27,7 @@ body {
     width: 100vw;
     scrollbar-width: auto;
     scrollbar-color: transparent transparent;
-    transition: background-image 0.7s ease;
-
+ 
 }
 
 #background-image {
@@ -51,7 +50,7 @@ body {
     left: 0;
     background: inherit;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 3s ease-in-out;
 }
 
 .button2 {
@@ -191,7 +190,7 @@ h6 {
 a {
     font-size: 26px;
     font-weight: lighter;
-    color: #5c5a5a;
+    color: #727227;
     text-decoration: none;
 }
 
@@ -241,7 +240,7 @@ footer {
 
     a {
         font-size: 18px;
-        color: #747272;
+        color: #727227;
         /* Change font size */
         /* Change font color */
     }
