@@ -148,9 +148,8 @@ strictly prohibited. -->
 </head>
 
 <body>
- <div id="background-image"></div>
 
-    <div id="rightClickMenu">
+ <div id="rightClickMenu">
         <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
             style="color: #454518;">&#x2022; gmail&nbsp;&nbsp;&nbsp;<i class="fab fa-google"></i></a>
         <a href="https://www.youtube.com/" target="_blank"
@@ -241,29 +240,7 @@ strictly prohibited. -->
                 }
             });
         </script>
-	   <script>
-       (function () {
-    var curImgId = 0;
-    var imgArray = ["https://kurziokode.github.io/b1.jpg", "https://kurziokode.github.io/sch2.jpg"]; // Add the URLs of your images here
-    var numOfImages = imgArray.length;
-
-    var bgImageDiv = document.getElementById('background-image');
-
-    setInterval(function () {
-        bgImageDiv.style.backgroundImage = 'url(' + imgArray[curImgId] + ')';
-        curImgId = (curImgId + 1) % numOfImages;
-
-        setTimeout(function() {
-            bgImageDiv.classList.add('fade-in');
-        }, 100);
-
-        setTimeout(function() {
-            bgImageDiv.classList.remove('fade-in');
-        }, 1000);
-    }, 15 * 1000);
-})();
-
-        </script>    
+  
 </body>
 
 </html>
