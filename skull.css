@@ -30,29 +30,6 @@ body {
     transition: opacity 3s ease-in-out;
 }
 
-#background-image {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
-#background-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: inherit;
-    opacity: 0;
-    transition: opacity 3s ease-in-out;
-}
-
 .button2 {
     display: flex;
     justify-content: center;
