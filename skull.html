@@ -240,6 +240,17 @@ strictly prohibited. -->
                 }
             });
         </script>
+	   <script>
+            (function () {
+                    var curImgId = 0;
+                    var imgArray = ["https://kurziokode.github.io/b1.jpg", "https://kurziokode.github.io/sch2.jpg"]; // Add the URLs of your images here
+                    var numOfImages = imgArray.length;
+                    setInterval(function () {
+                        document.body.style.backgroundImage = 'url(' + imgArray[curImgId] + ')';
+                        curImgId = (curImgId + 1) % numOfImages;
+                    }, 10 * 1000);
+                })();
+        </script>    
 </body>
 
 </html>
