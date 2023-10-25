@@ -157,7 +157,7 @@ h5 {
 
 @media only screen and (max-width: 767px) {
     h2 {
-        font-size: 28px;
+        font-size: 33px;
     }
 
        h3 {
@@ -239,7 +239,7 @@ footer {
     }
 
     a {
-        font-size: 18px;
+        font-size: 22px;
         color: #727227;
         /* Change font size */
         /* Change font color */
