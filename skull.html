@@ -53,8 +53,8 @@ strictly prohibited. -->
    }
     
         article {
-            margin-bottom: 20px;
-            padding: 60px;
+            margin-bottom: 0px;
+            padding: 15px;
             border: 0px solid #5d5b5b;
              }
 
@@ -122,6 +122,8 @@ strictly prohibited. -->
  <style>
 .link-container {
   position: relative;
+background-color: #0b0c0e;
+ opacity: 0.7;
 }
 
 .link-container a {
@@ -131,13 +133,13 @@ strictly prohibited. -->
 .link-container a:hover::before {
   content: attr(data-tooltip);
   position: absolute;
-  background-color: transparent;
-  color: #990000;
+  background-color: #000;
+  color: #cc0000;
   padding: 5px 10px;
   border-radius: 5px;
-  bottom: 70%;
+  bottom: 80%;
   transform: translateX(-40%);
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   font-size: 18px;	
