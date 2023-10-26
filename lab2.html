@@ -40,6 +40,18 @@ strictly prohibited. -->
             padding: 1em;
         }
 
+        .section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 61px;
+    background-color: rgba(26, 26, 0, 0.3); /* Black color with 50% transparency */
+    backdrop-filter: blur(2px);
+    z-index: 2;
+   }
+	    
         article {
             margin-bottom: 20px;
             padding: 20px;
