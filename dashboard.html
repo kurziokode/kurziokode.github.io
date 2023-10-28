@@ -7,17 +7,14 @@
     <style>
         body {
     margin: 0;
-    padding: 1px; /* This is the new line */
+    padding: 0.5px; /* This is the new line */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     border: 20px solid black;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);        
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);        
         }
 
-.element-with-shadow {
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-}
 
      .iframe-container {
             display: flex;
@@ -29,6 +26,7 @@
             height: 50vh;
             /* Adjust this value as needed */
             position: relative;
+             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); 
         }
 
         .iframe-container iframe {
@@ -56,11 +54,10 @@
 <body>
     <div class="iframe-container">
         <div class="iframe-wrapper">
-             <div class="element-with-shadow">
-            <iframe src="https://kurziokode.github.io/morph/streamstudio.html"></iframe>
-        </div></div>
+             <iframe src="https://kurziokode.github.io/morph/streamstudio.html"></iframe>
+        </div>
         <div class="iframe-wrapper">
-            <iframe src="https://kurziokode.github.io/redblue.html"></iframe>
+          <iframe src="https://kurziokode.github.io/redblue.html"></iframe>
         </div>
     </div>
 </body>
