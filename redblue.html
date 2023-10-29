@@ -79,7 +79,7 @@
         <!-- slider end -->
         <div class="demo-cont__credits">
             <div class="demo-cont__credits-close"></div>
-            <a href="https://stream.radioparadise.com/flac" target="_blank"><img
+            <a href="https://stream.radioparadise.com/flac" target="_blank" onclick="return openNewWindow('https://stream.radioparadise.com/flac', 400, 300);"><img
                     src="https://kurziokode.github.io/green.png" /></a><br>
             <a href="https://stream.radioparadise.com/rock-320" target="_blank"
                 class="demo-cont__credits-link">Rock</a><br>
@@ -93,8 +93,17 @@
             <div style="position:relative;  font-size: 18px;  color: #404040">All Rights Reserved</div>
         </div>
     </div>
+      <script>
+function openNewWindow(url, w, h) {
+  var left = (screen.width/2) - (w/2);
+  var top = (screen.height/2) - (h/2);
+  var newWindow = window.open(url, "myWindow", "width="+w+",height="+h+",left="+left+",top="+top);
+  return false;
+}
+</script>
     <!-- partial -->
     <script src="https://kurziokode.github.io/redblue.js"></script>
+      
 </body>
 
 </html>
