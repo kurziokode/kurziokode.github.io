@@ -54,7 +54,7 @@ body {
 
 .button2:hover {
     color: #737373;
-    background: linear-gradient(#1a0000, #330000);
+    background: linear-gradient(#0d0d0d, #1a1a1a);
 }
 
 /* Media query for smaller screens */
