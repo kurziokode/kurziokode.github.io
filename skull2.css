@@ -17,7 +17,6 @@ body {
     font-size: 18px;
     opacity: 1;
     font-family: Arial, sans-serif;
-    background-image: url(https://kurziokode.github.io/time.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -29,6 +28,19 @@ body {
     scrollbar-color: transparent transparent;
     transition: opacity 3s ease-in-out;
 }
+
+@media screen and (min-width: 641px) {
+   body {
+       background-image: url('https://kurziokode.github.io/time2.jpg');
+   }
+}
+
+@media screen and (max-width: 640px) {
+   body {
+       background-image: url('https://kurziokode.github.io/time.jpg');
+   }
+}
+
 
 .button2 {
   display: flex;
