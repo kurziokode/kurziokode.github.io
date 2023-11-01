@@ -223,7 +223,7 @@ footer {
 }
 
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1922px) {
     body {
         filter: brightness(2.5);
         filter: contrast(2);
