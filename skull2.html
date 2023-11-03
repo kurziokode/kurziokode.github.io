@@ -160,9 +160,50 @@ background-color: rgb(0, 0, 0);
             font-weight: 100;   
     }
   </style>
+<style>
+	.pagination {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.pagination a {
+ color: black;
+ padding: 8px 16px;
+ text-decoration: none;
+ margin: 4px;
+ transition: background-color .3s;
+}
+
+.pagination a:hover:not(.active) {
+ background-color: #ddd;
+}
+
+/* For screens smaller than 600px */
+@media screen and (max-width: 600px) {
+ .pagination a {
+   font-size: 18px;
+ }
+}
+
+/* For screens smaller than 400px */
+@media screen and (max-width: 400px) {
+ .pagination a {
+   font-size: 14px;
+ }
+}
+</style>
 </head>
 
 <body>
+<div class="pagination">
+  <a href="page1.html">1</a>
+  <a href="page2.html">2</a>
+  <a href="page3.html">3</a>
+  <a href="page4.html">4</a>
+  <a href="page5.html">5</a>
+  <a href="page6.html">6</a>
+</div>
 
  <div id="rightClickMenu">
         <a href="https://www.youtube.com/" target="_blank"
