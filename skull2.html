@@ -193,8 +193,17 @@ background-color: rgb(0, 0, 0);
  }
 }
 </style>
+<style>
+iframe {
+   display: block;
+   margin: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+</style>
 </head>
-
 <body>
 <div id="rightClickMenu">
         <a href="https://www.youtube.com/" target="_blank"
@@ -259,9 +268,7 @@ background-color: rgb(0, 0, 0);
 	 </ul>
         </div>
 <!-- Add the MySitemapGenerator widget to your website -->
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- <iframe src="https://www.mysitemapgenerator.com/embed/rss/0/f04136ffe6dbc0573740c2a91b1e0237" style="position: absolute; top: 0; left: 0; width: 60%; height: 100%;" frameborder=0></iframe>
-</div>
+<iframe src="https://www.mysitemapgenerator.com/embed/rss/0/f04136ffe6dbc0573740c2a91b1e0237" width="60%" height="580" frameborder=0 onload="this.style.height=this.contentWindow.document.body.scrollHeight+'px';"></iframe>
 
         <article  class="link-container" style="text-align: center;">
             <a href="https://kurziokode.github.io/final.mp4" class="hover-link" target="_blank" data-tooltip="About" style="color: #404040;"><i class="fa fa-user"></i></a>
