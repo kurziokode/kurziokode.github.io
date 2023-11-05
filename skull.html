@@ -253,7 +253,11 @@ background-color: #00111a;
                 }
             });
         </script>
-  
+  <script>
+document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+ link.setAttribute('rel', 'noopener noreferrer');
+});
+</script>
 </body>
 
 </html>
