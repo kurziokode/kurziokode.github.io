@@ -105,7 +105,11 @@ function openNewWindow(url, w, h) {
 </script>
     <!-- partial -->
     <script src="https://kurziokode.github.io/redblue.js"></script>
-      
+ <script>
+document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+ link.setAttribute('rel', 'noopener noreferrer');
+});
+</script>     
 </body>
 
 </html>
