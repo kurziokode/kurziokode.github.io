@@ -45,7 +45,7 @@
         body {
             overflow-x: hidden;
             overflow-y: auto;
-            background-image: url('https://kurziokode.github.io/sunset.jpg');
+            background-color: #000000;
             font-family: Arial, Helvetica, sans-serif;
             background-size: cover;
             background-repeat: no-repeat;
@@ -57,6 +57,16 @@
             color: #474c52;
             font-size: 20px;
         }
+        
+img {
+ width: 100%;
+ height: auto;
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+
 
         /* Header/logo Title */
         .header {
@@ -156,6 +166,27 @@
             flex: 60%;
 
             padding: 20px;
+        }
+
+        @media screen and (min-width: 1225px) {
+            body {
+                background-image: url('https://kurziokode.github.io/archl.jpg');
+            }
+
+           img {
+   width: 25%;
+ }
+
+        }
+
+        @media screen and (max-width: 1224px) {
+            body {
+                background-image: url('https://kurziokode.github.io/sunset.jpg');
+            }
+
+             img {
+   width: 50%;
+ }
         }
 
         /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -288,8 +319,8 @@
         </div>
     </div>
     <div class="header">
+        <div style="opacity:0.8;"><img src="https://kurziokode.github.io/spl.png" /></div>
         <h1><span class="first-letter">C</span>urzio</h1>
-        <div style="opacity:0.8;"><img src="https://kurziokode.github.io/mrk.png" /></div>
     </div>
     <div class="icon-bar">
         <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
@@ -300,7 +331,7 @@
     </div>
     <div class="row">
         <div class="side">
-            <div style="opacity:0.6;"><img src="https://kurziokode.github.io/spl.png" /></div>
+           
         </div>
         <div class="main">
             <h5>The Red Shirt<br>Dashboard.</h5>
