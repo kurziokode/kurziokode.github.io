@@ -8,6 +8,7 @@ or in part, is
 strictly prohibited. -->
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
     <script>
@@ -45,7 +46,7 @@ strictly prohibited. -->
         .navbar {
             overflow: hidden;
             background-color: #010101;
-            opacity: 0.6;
+            opacity: 0.7;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -54,7 +55,7 @@ strictly prohibited. -->
         .navbar a {
             float: left;
             display: block;
-            color: rgb(145, 145, 22);
+            color: rgb(94, 94, 15);
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -62,12 +63,12 @@ strictly prohibited. -->
         }
 
         .navbar a:hover {
-            background-color: rgb(145, 145, 22);
+            background-color: rgb(94, 94, 15);
             color: black;
         }
 
         .navbar a.active {
-            background-color: rgb(145, 145, 22);
+            background-color: rgb(94, 94, 15);
             color: black;
         }
 
@@ -76,11 +77,27 @@ strictly prohibited. -->
         }
 
         @media screen and (max-width: 600px) {
-            .navbar a:not(:first-child) {
+
+        .navbar {
+           opacity: 1;
+          
+        }
+ 
+        .navbar a:hover {
+            background-color: rgb(94, 94, 15);
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: rgb(94, 94, 15);
+            color: black;
+        }
+
+        .navbar a:not(:first-child) {
                 display: none;
             }
 
-            .navbar a.icon {
+        .navbar a.icon {
                 float: right;
                 display: block;
             }
@@ -101,11 +118,11 @@ strictly prohibited. -->
 
         }
 
-          @media screen and (min-width: 1922px) {
+        @media screen and (min-width: 1922px) {
             body {
-        filter: brightness(2.5);
-        filter: contrast(2);
-             }
+                filter: brightness(2.5);
+                filter: contrast(2);
+            }
         }
     </style>
     <style>
@@ -265,9 +282,11 @@ strictly prohibited. -->
     <div class="icon2-bar">
         <a href="https://www.google.com/?hl=el" target="_blank"><i class="fa fa-google"></i></a>
         <a href="https://kurziokode.github.io/final.mp4" target="_blank"><i class="fa fa-user"></i></a>
-        <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank"><i class="fa fa-pencil"></i></a>
+        <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank"><i
+                class="fa fa-pencil"></i></a>
         <a href="https://kurziokode.github.io/pnemo.html" target="_blank"><i class="fa fa-copyright"></i></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/mobnav.html#" target="_blank"><i class="fa fa-paper-plane"></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/mobnav.html#"
+            target="_blank"><i class="fa fa-paper-plane"></i></a>
     </div>
     <div class="navbar" id="myNavbar">
         <a href="#home" class="active">Home</a>
@@ -282,7 +301,7 @@ strictly prohibited. -->
         <p>Resize the browser window to see how it works.</p>
     </div>
 
- <script>
+    <script>
         function myFunction() {
             var x = document.getElementById("myNavbar");
             if (x.className === "navbar") {
@@ -292,11 +311,11 @@ strictly prohibited. -->
             }
         }
     </script>
- <script>   
-document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
- link.setAttribute('rel', 'noopener noreferrer');
-});
- </script>
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
 </body>
 
 </html>
