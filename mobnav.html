@@ -3,6 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
 
@@ -82,11 +83,72 @@
             }
 
         }
+
     </style>
+    <style>
+        .icon-bar {
+            position: absolute;
+            top: 1%;
+        }
+    
+        .icon-bar a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: rgb(94, 94, 15);
+            font-size: 20px;
+        }
+    
+        .icon-bar a:hover {
+            background-color: transparent;
+            color: rgb(200, 200, 15);
+        }
+    </style>
+    <style>
+        .icon2-bar {
+            position: absolute;
+            top: 1%;
+            right: 1%;
+        }
+    
+        .icon2-bar a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: rgb(94, 94, 15);
+            font-size: 20px;
+        }
+    
+        .icon2-bar a:hover {
+            background-color: transparent;
+            color: rgb(200, 200, 15);
+        }
+    </style>
+
 </head>
 
 <body>
-
+<div class="icon-bar">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+    <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-envelope"></i></a>
+</div>
+<div class="icon2-bar">
+    <a href="https://www.google.com/?hl=el" data-tooltip="Google"><i
+            class="fa fa-google"></i></a>
+    <a href="https://kurziokode.github.io/final.mp4" data-tooltip="About"><i
+            class="fa fa-user"></i></a>
+    <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" data-tooltip="Contact"><i
+            class="fa fa-pencil"></i></a>
+    <a href="https://kurziokode.github.io/pnemo.html" data-tooltip="Copyright"><i
+            class="fa fa-copyright"></i></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/theredshirt.html#"
+        data-tooltip="Share"><i class="fa fa-paper-plane"></i></a>
+</div>
     <div class="navbar" id="myNavbar">
         <a href="#home" class="active">Home</a>
         <a href="#news">News</a>
@@ -99,6 +161,8 @@
         <h2>Responsive Bottom Navbar Example</h2>
         <p>Resize the browser window to see how it works.</p>
     </div>
+
+    
 
     <script>
         function myFunction() {
