@@ -1,12 +1,29 @@
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
 <!DOCTYPE html>
-<html>
-
+<html lang="en-US">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QE8B495353');
+    </script>
+    <title>&nbsp;&nbsp;&nbsp;C u r z i o</title>
+    <link rel="icon" href="https://kurziokode.github.io/alle2.png" type="image/x-icon">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-
             overflow-x: hidden;
             overflow-y: auto;
             font-size: 18px;
@@ -239,20 +256,18 @@
 
 <body>
     <div class="icon-bar">
-        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
-        <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fa fa-envelope"></i></a>
     </div>
     <div class="icon2-bar">
-        <a href="https://www.google.com/?hl=el" data-tooltip="Google"><i class="fa fa-google"></i></a>
-        <a href="https://kurziokode.github.io/final.mp4" data-tooltip="About"><i class="fa fa-user"></i></a>
-        <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" data-tooltip="Contact"><i
-                class="fa fa-pencil"></i></a>
-        <a href="https://kurziokode.github.io/pnemo.html" data-tooltip="Copyright"><i class="fa fa-copyright"></i></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/theredshirt.html#"
-            data-tooltip="Share"><i class="fa fa-paper-plane"></i></a>
+        <a href="https://www.google.com/?hl=el" target="_blank"><i class="fa fa-google"></i></a>
+        <a href="https://kurziokode.github.io/final.mp4" target="_blank"><i class="fa fa-user"></i></a>
+        <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank"><i class="fa fa-pencil"></i></a>
+        <a href="https://kurziokode.github.io/pnemo.html" target="_blank"><i class="fa fa-copyright"></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/mobnav.html#" target="_blank"><i class="fa fa-paper-plane"></i></a>
     </div>
     <div class="navbar" id="myNavbar">
         <a href="#home" class="active">Home</a>
@@ -277,7 +292,11 @@
             }
         }
     </script>
-
+ <script>   
+document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
+ link.setAttribute('rel', 'noopener noreferrer');
+});
+ </script>
 </body>
 
 </html>
