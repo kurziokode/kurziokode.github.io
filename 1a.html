@@ -105,10 +105,6 @@
 
   </style>
 
-  <script src="assets/library/jquery.min.js"></script>
-  <script src="../dist/components/visibility.js"></script>
-  <script src="../dist/components/sidebar.js"></script>
-  <script src="../dist/components/transition.js"></script>
   <script>
   $(document)
     .ready(function() {
@@ -134,22 +130,7 @@
     })
   ;
   </script>
-  <script>
-    $('.ui.labeled.icon.sidebar')
-     .sidebar({
-       onShow: function() {
-         $('.ui.labeled.icon.sidebar').removeClass('hidden');
-       },
-       onHidden: function() {
-         $('.ui.labeled.icon.sidebar').addClass('hidden');
-       }
-     })
-    ;
-    
-    $('#toggleButton').click(function() {
-     $('.ui.labeled.icon.sidebar').sidebar('toggle');
-    });
-    </script>
+
 </head>
 <body>
 
@@ -217,9 +198,7 @@
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
-            <button id="toggleButton" class="circular ui icon button">
-                <i class="icon settings"></i>
-               </button>
+    
           <h3 class="ui header">We Help Companies and Companions</h3>
           <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
           <h3 class="ui header">We Make Bananas That Can Dance</h3>
@@ -298,22 +277,6 @@
       </div>
     </div>
   </div>
-</div>
-
-
-<div class="ui left demo vertical inverted sidebar labeled icon menu">
-  <a class="item">
-    <i class="home icon"></i>
-    Home
-  </a>
-  <a class="item">
-    <i class="block layout icon"></i>
-    Topics
-  </a>
-  <a class="item">
-    <i class="smile icon"></i>
-    Friends
-  </a>
 </div>
 
 </body>
