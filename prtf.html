@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
         integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <style>
+        * {
+            cursor: url('https://kurziokode.github.io/curs2.png'), auto;
+        }
+    </style>
 </head>
 
 
@@ -298,7 +302,11 @@
             document.getElementById("nav-content").classList.toggle("hidden");
         }
     </script>
-
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
 </body>
 
 </html>
