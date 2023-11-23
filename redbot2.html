@@ -36,10 +36,34 @@ strictly prohibited. -->
             height: 100vh;
             width: 100vw;
         }
+
+        .line {
+  position: fixed;
+  top: 19vh; /* vertically center the line */
+  left: 0vw; /* horizontally center the line */
+  transform: translateY(-0%) rotate(-0deg); /* adjust the position of the line */
+  width: 30vw; /* the length of the line is 50% of the viewport width */
+  height: 2px; /* the thickness of the line */
+  background: #160404; /* the color of the line */
+  z-index: -1; /* stack order of the line */
+}
+
+.line2 {
+  position: fixed;
+  top: 19vh; /* vertically center the line */
+  right: 0vw; /* horizontally center the line */
+  transform: translateY(-0%) rotate(-0deg); /* adjust the position of the line */
+  width: 22vw; /* the length of the line is 50% of the viewport width */
+  height: 2px; /* the thickness of the line */
+  background: #160404; /* the color of the line */
+  z-index: -1; /* stack order of the line */
+}
     </style>
 </head>
 
 <body class="font-sans">
+     <div class="line"></div>
+    <div class="line2"></div>
     <nav id="header" class="w-full z-10 top-0">
         <div id="progress" class="h-1 z-20 top-0"
             style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
