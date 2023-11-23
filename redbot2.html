@@ -38,32 +38,38 @@ strictly prohibited. -->
         }
 
         .line {
-  position: fixed;
-  top: 19vh; /* vertically center the line */
-  left: 0vw; /* horizontally center the line */
-  transform: translateY(-0%) rotate(-0deg); /* adjust the position of the line */
-  width: 22vw; /* the length of the line is 50% of the viewport width */
-  height: 2px; /* the thickness of the line */
-  background: #220606; /* the color of the line */
-  z-index: -1; /* stack order of the line */
-}
+            position: absolute;
+            left: 0%;
+            transform: translateY(-0%) rotate(-0deg);
+            /* adjust the position of the line */
+            width: 22vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 2px;
+            /* the thickness of the line */
+            background: #220606;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
 
-.line2 {
-  position: fixed;
-  top: 19vh; /* vertically center the line */
-  right: 0vw; /* horizontally center the line */
-  transform: translateY(-0%) rotate(-0deg); /* adjust the position of the line */
-  width: 22vw; /* the length of the line is 50% of the viewport width */
-  height: 2px; /* the thickness of the line */
-  background: #220606; /* the color of the line */
-  z-index: -1; /* stack order of the line */
-}
+        .line2 {
+            position: absolute;
+            right: 0%;
+            transform: translateY(-0%) rotate(-0deg);
+            /* adjust the position of the line */
+            width: 22vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 2px;
+            /* the thickness of the line */
+            background: #220606;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
     </style>
 </head>
 
 <body class="font-sans">
-     <div class="line"></div>
-    <div class="line2"></div>
     <nav id="header" class="w-full z-10 top-0">
         <div id="progress" class="h-1 z-20 top-0"
             style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
@@ -100,6 +106,8 @@ strictly prohibited. -->
             </div>
         </div>
     </nav>
+    <div class="line"></div>
+    <div class="line2"></div>
     <div class="relative   flex items-center  n justify-center overflow-hidden z-50 ">
         <div
             class="relative mx-auto h-full px-4  pb-20   md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
@@ -133,7 +141,7 @@ strictly prohibited. -->
                                         d="M7.25 2a5.25 5.25 0 103.144 9.455l2.326 2.325a.75.75 0 101.06-1.06l-2.325-2.326A5.25 5.25 0 007.25 2zM3.5 7.25a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0z" />
                                 </svg>
                             </a>
-                           <a href="#section4"
+                            <a href="#section4"
                                 class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-gray-900 px-10 font-medium tracking-wide text-gray-500 shadow-md transition hover:text-gray-400 hover:bg-red-900 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
                                 Roll&nbsp;&nbsp;&nbsp;&nbsp;
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5"
@@ -157,13 +165,13 @@ strictly prohibited. -->
     <aside class="w-72 bg-transparent flex flex-col items-center space-y-1 rounded">
         <!-- menu items -->
         <div class="w-full pr-1 flex flex-col gap-y-1 text-gray-500 fill-gray-500 text-sm">
-           
+
             <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer text-gray-800 text-base">
-                
-                    <img src="https://kurziokode.github.io/aaii.png" style="opacity: 0.25; scale: 1;" alt="Img by https://kurziokode.github.io/aaii.png "
-                        class="w-full h-auto object-cover">
+
+                <img src="https://kurziokode.github.io/aaii.png" style="opacity: 0.25; scale: 1;"
+                    alt="Img by https://kurziokode.github.io/aaii.png " class="w-full h-auto object-cover">
             </div>
-            
+
             <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
                 <div
                     class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
@@ -217,7 +225,7 @@ strictly prohibited. -->
                             class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Scholar</span></a>
                 </div>
             </div>
-             <br>
+            <br>
             <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
                 <div
                     class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
@@ -225,7 +233,7 @@ strictly prohibited. -->
                             class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Poe</span></a>
                 </div>
             </div>
-               <br>
+            <br>
             <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
                 <div
                     class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
@@ -244,10 +252,11 @@ strictly prohibited. -->
     <main>
         <div id="section1">
             <footer class="relative py-20 flex flex-col items-center overflow-hidden">
-            <img src="https://icons.iconarchive.com/icons/iynque/flurry-extras-8/128/RSS-Notifier-icon.png" width="72"
-                height="72">
+                <div class="line"></div>
+                <div class="line2"></div>
+                <img src="https://icons.iconarchive.com/icons/iynque/flurry-extras-8/128/RSS-Notifier-icon.png"
+                    width="72" height="72">
                 <div class="relative z-[1] container m-auto px-6 md:px-12">
-                   
                     <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
                         <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
                             <div class="w-full space-x-12 flex justify-center text-gray-600 sm:w-7/12 md:justify-start">
@@ -255,7 +264,6 @@ strictly prohibited. -->
                                     <div class="text-2xl font-normal text-red-900 dark:text-gray-400">
                                         <span>Media</span>
                                     </div>
-                                    
                                     <li>
                                         <a href="https://www.youtube.com/" target="_blank"
                                             class="flex items-center space-x-3 hover:text-red-600 text-xl">
@@ -351,7 +359,10 @@ strictly prohibited. -->
         </div>
         <div id="section2">
             <footer class="relative py-20 flex flex-col items-center overflow-hidden">
-            <img src="https://icons.iconarchive.com/icons/svengraph/i-love/128/Cinema-icon.png" width="72" height="72">
+                <div class="line"></div>
+                <div class="line2"></div>
+                <img src="https://icons.iconarchive.com/icons/svengraph/i-love/128/Cinema-icon.png" width="72"
+                    height="72">
                 <div class="relative z-[1] container m-auto px-6 md:px-12">
                     <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
                         <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
@@ -404,7 +415,10 @@ strictly prohibited. -->
         </div>
         <div id="section3">
             <footer class="relative py-20 flex flex-col items-center overflow-hidden">
-                <img src="https://icons.iconarchive.com/icons/3dlb/3d/128/magnifying-glass-icon.png" width="128" height="128">
+                <div class="line"></div>
+                <div class="line2"></div>
+                <img src="https://icons.iconarchive.com/icons/3dlb/3d/128/magnifying-glass-icon.png" width="128"
+                    height="128">
                 <div class="relative z-[1] container m-auto px-6 md:px-12">
                     <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
                         <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
@@ -451,10 +465,10 @@ strictly prohibited. -->
                 </div>
             </footer>
         </div>
-        
         <div id="section4">
-            
             <footer class="relative py-20 flex flex-col items-center overflow-hidden">
+                <div class="line"></div>
+                <div class="line2"></div>
                 <img src="https://icons.iconarchive.com/icons/3dlb/3d/128/dice-icon.png" width="128" height="128">
                 <div class="relative z-[1] container m-auto px-6 md:px-12">
                     <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
@@ -509,8 +523,8 @@ strictly prohibited. -->
                                             class="hover:text-red-600 text-xl">Maître</a></li>
                                     <li><a href="https://www.livescience.com/" target="_blank"
                                             class="hover:text-red-600 text-xl">Science</a></li>
-                                    <li><a href="https://artsandculture.google.com/category/artist?hl=fr" target="_blank"
-                                            class="hover:text-red-600 text-xl">Artistes</a></li>
+                                    <li><a href="https://artsandculture.google.com/category/artist?hl=fr"
+                                            target="_blank" class="hover:text-red-600 text-xl">Artistes</a></li>
                                 </ul>
                             </div>
                         </div>
