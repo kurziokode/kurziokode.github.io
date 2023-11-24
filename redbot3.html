@@ -1,0 +1,452 @@
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kill&nbsp;&nbsp;Your&nbsp;&nbsp;Time</title>
+    <link rel="icon" href="https://kurziokode.github.io/alle2.png" type="image/x-icon">
+    <meta name="author" content="Chris Doulos" />
+    <meta name="description" content="An ecosystem to kill Your Time, by Chris Doulos" />
+    <meta name="keywords" content="Kill your Time, AI, Media, AVisual, Search, Roll" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+        crossorigin="anonymous" />
+    <link rel="canonical" href="https://tailwindcomponents.com/component/sidebar-menu-4" itemprop="URL">
+    <style>
+        * {
+            cursor: url('https://kurziokode.github.io/curs2.png'), auto;
+        }
+
+        body {
+            background: url('https://kurziokode.github.io/flo.png') repeat #070707;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .line {
+            position: absolute;
+            left: 0%;
+            transform: translateY(-0%) rotate(-0deg);
+            /* adjust the position of the line */
+            width: 22vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 2px;
+            /* the thickness of the line */
+            background: #0C111A;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
+
+        .line2 {
+            position: absolute;
+            right: 0%;
+            transform: translateY(-0%) rotate(-0deg);
+            /* adjust the position of the line */
+            width: 22vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 2px;
+            /* the thickness of the line */
+            background: #0C111A;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <nav id="header" class="w-full z-10 top-0">
+        <div id="progress" class="h-1 z-20 top-0"
+            style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+        <div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+            <div class="pl-4">
+                <a class="text-gray-800 hover:text-red-700 no-underline hover:no-underline font-semibold text-2xl"
+                    href="https://kurziokode.github.io/final.mp4" target="_blank">
+                    ChrisDoulos
+                </a>
+            </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 text-red-800 hover:text-gray-800 hover:border-red-900 appearance-none focus:outline-none">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-900 md:bg-transparent z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block text-gray-500 text-base no-underline hover:text-red-600 hover:text-underline py-2 px-4"
+                            href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1"
+                            target="_blank">Contact</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-gray-500 text-base no-underline hover:text-red-600 hover:text-underline py-2 px-4"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/redbot2.html#"
+                            target="_blank">Share</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="line"></div>
+    <div class="line2"></div>
+    <div class="relative   flex items-center  n justify-center overflow-hidden z-50 ">
+        <div
+            class="relative mx-auto h-full px-4  pb-20   md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
+            <div class="flex flex-col items-center justify-between lg:flex-row py-16">
+                <div class=" relative ">
+                    <div class="lg:max-w-xl lg:pr-5 relative z-40">
+                        <div class="mt-10 flex flex-col items-center md:flex-row">
+                            <a href="#section1"
+                                class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-gray-900 px-10 font-medium tracking-wide text-gray-500 shadow-md transition hover:text-gray-400 hover:bg-red-900 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
+                                Code&nbsp;&nbsp;&nbsp;&nbsp;
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5"
+                                    viewBox="0 0 28 28">
+                                    <path
+                                        d="M13.9991 2C10.6405 2 7.88924 4.6739 7.88924 8.00723C7.88924 10.1497 9.02582 12.0197 10.7297 13.0825C5.95609 14.5248 2.41965 19.0144 2.00617 24.0771C1.91662 25.1735 2.81571 26 3.81688 26H24.1831C25.1843 26 26.0834 25.1735 25.9938 24.0771C25.5803 19.014 22.0433 14.524 17.2691 13.0821C18.9726 12.0193 20.109 10.1494 20.109 8.00723C20.109 4.6739 17.3577 2 13.9991 2ZM9.74071 8.00723C9.74071 5.72598 11.6315 3.84838 13.9991 3.84838C16.3667 3.84838 18.2575 5.72598 18.2575 8.00723C18.2575 10.2885 16.3667 12.1661 13.9991 12.1661C11.6315 12.1661 9.74071 10.2885 9.74071 8.00723ZM4.95086 24.1516C4.36361 24.1516 3.89887 23.6462 4.01091 23.0697C4.94115 18.2837 9.09806 14.4476 14 14.4476C18.902 14.4476 23.0589 18.2837 23.9891 23.0697C24.1011 23.6462 23.6364 24.1516 23.0492 24.1516H4.95086Z" />
+                                </svg></a>
+                            <a href="#section2"
+                                class="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-gray-900 px-10 font-medium tracking-wide text-gray-500 shadow-md transition hover:text-gray-400 hover:bg-red-900 focus:outline-none md:mr-4 md:mb-0 md:w-auto">
+                                Design&nbsp;&nbsp;&nbsp;&nbsp;
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 5a7 7 0 0 0-7 7v1h2.08c.67 0 1 0 1.26.13.23.12.41.3.53.53.13.25.13.59.13 1.26v4.16c0 .67 0 1-.13 1.26-.12.23-.3.41-.53.53-.25.13-.59.13-1.26.13H6.2c-1.12 0-1.68 0-2.1-.22a2 2 0 0 1-.88-.87C3.02 19.5 3 18.99 3 18v-6a9 9 0 1 1 18 0v6c0 .99-.01 1.5-.22 1.9a2 2 0 0 1-.87.88c-.43.22-.99.22-2.11.22h-.88c-.67 0-1 0-1.26-.13a1.2 1.2 0 0 1-.53-.53c-.13-.25-.13-.59-.13-1.26v-4.16c0-.67 0-1 .13-1.26.12-.23.3-.41.53-.53.25-.13.59-.13 1.26-.13H19v-1a7 7 0 0 0-7-7z" />
+                                </svg>
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="mb-0  font-light leading-snug tracking-tight text-3xl sm:leading-snug text-gray-600">
+                An ecosystem to
+                <span
+                    class=" inline-block font-light text-4xl text-red-800 text-g4 animate__animated animate__flash">Kill
+                    Your Time</span>
+            </h2>
+        </div>
+    </div>
+    <aside class="w-72 bg-transparent flex flex-col items-center space-y-1 rounded">
+        <!-- menu items -->
+        <div class="w-full pr-1 flex flex-col gap-y-1 text-gray-500 fill-gray-500 text-sm">
+
+            <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer text-gray-800 text-base">
+
+                <img src="https://kurziokode.github.io/aaii.png" style="opacity: 0.25; scale: 1;"
+                    alt="Img by https://kurziokode.github.io/aaii.png " class="w-full h-auto object-cover">
+            </div>
+
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://kurziokode.github.io/latest.html#" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Big</span></a>
+                </div>
+            </div><br>
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://kurziokode.github.io/mobnav.html#home" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Red</span></a>
+                </div>
+            </div><br>
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://fck-ai.chaibuilder.xyz/#" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Pale</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- menu items -->
+        <div class="w-full pr-3 flex flex-col gap-y-1 text-gray-500 fill-gray-500 text-sm">
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://kurziokode.github.io/blvck.html#section1" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Black</span></a>
+                </div>
+            </div><br>
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://kurziokode.github.io/lab.html" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;AVisual</span></a>
+                </div>
+            </div><br>
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://kurziokode.github.io/skull.html" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;School</span></a>
+                </div>
+            </div>
+            <br>
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://kurziokode.github.io/redblue.html" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Frames</span></a>
+                </div>
+            </div>
+            <br>
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://kurziokode.github.io/prtf.html#" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;portfolio</span></a>
+                </div>
+            </div>
+            <br>
+            <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
+                <div
+                    class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
+                    <a href="https://jacksmith206.github.io/dashboard.html" target="_blank"><span
+                            class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;dashboard</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-sm mx-auto relative shadow-md rounded-lg cursor-pointer text-gray-800 text-base">
+            <a href="https://opentip.kaspersky.com/https%3A%2F%2Fkurziokode.github.io%2Fredbot2.html%23/?tab=web"
+                class="text-slate-700 hover:text-slate-900" target="_blank">
+                <img src="https://kurziokode.github.io/air6.png" alt="Img by https://kurziokode.github.io/air6.png "
+                    class="w-full h-auto object-cover rounded-lg">Tested by T.I.P</a>
+        </div>
+    </aside>
+    <main>
+        <div id="section1">
+            <footer class="relative py-20 flex flex-col items-center overflow-hidden">
+                <div class="line"></div>
+                <div class="line2"></div>
+                <img src="https://icons.iconarchive.com/icons/svengraph/daft-punk/128/Daft-Punk-Thomas-Off-icon.png"
+                    width="64" height="64">
+                <div class="relative z-[1] container m-auto px-6 md:px-12">
+                    <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
+                        <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
+                            <div class="w-full space-x-12 flex justify-center text-gray-600 sm:w-7/12 md:justify-start">
+                                <ul class="list-disc list-inside space-y-9">
+                                    <div class="text-2xl font-normal text-red-900 dark:text-gray-400">
+                                        <span>Code</span>
+                                    </div>
+                                    <li><a href="https://www.webintoapp.com/app-maker" target="_blank" class="hover:text-red-600 text-xl">intoapp</a></li>
+                                    <li><a href="https://tiiny.host/" target="_blank" class="hover:text-red-600 text-xl">host</a></li>
+                                    <li><a href="https://www.literallyanything.io/" target="_blank" class="hover:text-red-600 text-xl">anything</a></li>
+                                    <li><a href="https://ora.ai/create" target="_blank" class="hover:text-red-600 text-xl">ora</a></li>
+                                    <li><a href="https://app.steve.ai/dashboard" target="_blank" class="hover:text-red-600 text-xl">steve</a></li>
+                                    <li><a href="https://durable.co/ai-website-builder" target="_blank" class="hover:text-red-600 text-xl">durable</a></li>
+                                    <li><a href="https://app.vizcom.ai/organization/create/name" target="_blank" class="hover:text-red-600 text-xl">vizcom</a></li>
+                                    <li><a href="https://pagespeed.web.dev/" target="_blank" class="hover:text-red-600 text-xl">pagespeed</a></li>
+                                    <li><a href="https://tools.pingdom.com/" target="_blank" class="hover:text-red-600 text-xl">pingdom</a></li>
+                                    <li><a href="https://webmaker.app/app/" target="_blank" class="hover:text-red-600 text-xl">webmaker</a></li>
+                                    <li><a href="https://neocities.org/" target="_blank" class="hover:text-red-600 text-xl">neocities</a></li>
+                                    <li><a href="https://www.pcsteps.gr/853-%ce%b3%cf%81%ce%b1%ce%bc%ce%bc%ce%ae-%ce%b5%ce%bd%cf%84%ce%bf%ce%bb%cf%8e%ce%bd-%cf%83%cf%84%ce%b1-windows/?utm_source=getresponse" target="_blank" class="hover:text-red-600 text-xl">pcsteps</a></li>
+                                    <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank" class="hover:text-red-600 text-xl">virustotal</a></li>
+                                    <li><a href="https://metadefender.opswat.com/" target="_blank" class="hover:text-red-600 text-xl">opswat</a></li>
+                                    <li><a href="https://www.hybrid-analysis.com/" target="_blank" class="hover:text-red-600 text-xl">hybrid</a></li>
+                                    <li><a href="https://formkeep.com/forms/cfa4fbf72c8a/submissions" target="_blank" class="hover:text-red-600 text-xl">formkeep</a></li>
+                                    <li><a href="https://www.pustudy.com/" target="_blank" class="hover:text-red-600 text-xl">pustudy</a></li>
+                                    <li><a href="https://gamma.app/templates" target="_blank" class="hover:text-red-600 text-xl">gamma</a></li>
+                                    <li><a href="https://analytics.google.com/analytics/web/?authuser=0#/p403325376/realtime/overview?params=_u..nav%3Dmaui" target="_blank" class="hover:text-red-600 text-xl">analytics</a></li>
+                                    <li><a href="https://www.qrcode-monkey.com/" target="_blank" class="hover:text-red-600 text-xl">qrcode</a></li>
+                                    <li><a href="https://tinywow.com/" target="_blank" class="hover:text-red-600 text-xl">tinywow</a></li>
+                                    <li><a href="https://www.getnotify.com/signin/" target="_blank" class="hover:text-red-600 text-xl">getnotify</a></li>
+                                    <li><a href="https://github.com/kurziokode/kurziokode.github.io" target="_blank" class="hover:text-red-600 text-xl">github</a></li>
+                                    <li><a href="https://kurziokode.github.io/morph/streamstudio.html" target="_blank" class="hover:text-red-600 text-xl">morph</a></li>
+                                    <li><a href="https://kurziokode.github.io/indy.html" target="_blank" class="hover:text-red-600 text-xl">indy</a></li>
+                                    <li><a href="https://kurziokode.github.io/radial.html" target="_blank" class="hover:text-red-600 text-xl">radial</a></li>
+                                    <li><a href="https://kurziokode.github.io/420.html" target="_blank" class="hover:text-red-600 text-xl">420</a></li>
+                                    <li><a href="https://kurziokode.github.io/new/00.html" target="_blank" class="hover:text-red-600 text-xl">new</a></li>
+                                    <li><a href="https://kurziokode.github.io/loop.html" target="_blank" class="hover:text-red-600 text-xl">loop</a></li>
+                                    <li><a href="https://kurziokode.github.io/loopara.html" target="_blank" class="hover:text-red-600 text-xl">loopara</a></li>
+                                    <li><a href="https://kurziokode.github.io/lane/dribble.html" target="_blank" class="hover:text-red-600 text-xl">dribble</a></li>
+                                    <li><a href="https://kurziokode.github.io/master.html" target="_blank" class="hover:text-red-600 text-xl">master</a></li>
+                                  
+                                </ul>
+                                <ul class="list-disc list-inside space-y-9">
+                                    <div class="text-2xl font-normal text-red-900 dark:text-gray-400">
+                                        <span style="visibility: hidden;">Media</span>
+                                    </div>
+                                    <li><a href="https://cookup.ai/" target="_blank" class="hover:text-red-600 text-xl">cookup</a></li>
+                                    <li><a href="https://minigpt-4.github.io/" target="_blank" class="hover:text-red-600 text-xl">minigpt</a></li>
+                                    <li><a href="https://promptwave.ai/" target="_blank" class="hover:text-red-600 text-xl">promptwave</a></li>
+                                    <li><a href="https://docus.ai/" target="_blank" class="hover:text-red-600 text-xl">docus</a></li>
+                                    <li><a href="https://topapps.ai/" target="_blank" class="hover:text-red-600 text-xl">topapps</a></li>
+                                    <li><a href="https://codepen.io/pen/" target="_blank" class="hover:text-red-600 text-xl">codepen</a></li>
+                                    <li><a href="https://github.com/Dogfalo/awesome-design" target="_blank" class="hover:text-red-600 text-xl">awesome</a></li>
+                                    <li><a href="https://www.notion.so/Getting-Started-61e65ea233ac400ab79bd6bc63ecee91?showMoveTo=true&saveParent=true" target="_blank" class="hover:text-red-600 text-xl">notion</a></li>
+                                    <li><a href="https://support.microsoft.com/el-gr/windows/%CF%83%CF%85%CE%BD%CF%84%CE%BF%CE%BC%CE%B5%CF%8D%CF%83%CE%B5%CE%B9%CF%82-%CF%80%CE%BB%CE%B7%CE%BA%CF%84%CF%81%CE%BF%CE%BB%CE%BF%CE%B3%CE%AF%CE%BF%CF%85-%CF%83%CF%84%CE%B1-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec#WindowsVersion=Windows_10" target="_blank" class="hover:text-red-600 text-xl">microsoft</a></li>
+                                    <li><a href="https://www.avast.com/random-password-generator#pc" target="_blank" class="hover:text-red-600 text-xl">password</a></li>
+                                    <li><a href="https://www.bibekoli.com/" target="_blank" class="hover:text-red-600 text-xl">bibekoli</a></li>
+                                    <li><a href="https://consensus.app/search/" target="_blank" class="hover:text-red-600 text-xl">consensus</a></li>
+                                    <li><a href="https://kurziokode.github.io/film/sound.html" target="_blank" class="hover:text-red-600 text-xl">sound</a></li>
+                                    <li><a href="https://kurziokode.github.io/neu/index.html" target="_blank" class="hover:text-red-600 text-xl">neu</a></li>
+                                    <li><a href="https://kurziokode.github.io/rainbow/index.html" target="_blank" class="hover:text-red-600 text-xl">rainbow</a></li>
+                                    <li><a href="https://jacksmith206.github.io/red/jamaica.html" target="_blank" class="hover:text-red-600 text-xl">jamaica</a></li>
+                                    <li><a href="https://kurziokode.github.io/high/stay.html" target="_blank" class="hover:text-red-600 text-xl">high</a></li>
+                                    <li><a href="https://kurziokode.github.io/reverse/index.html" target="_blank" class="hover:text-red-600 text-xl">reverse</a></li>
+                                    <li><a href="https://kurziokode.github.io/edu/fr.html#/music" target="_blank" class="hover:text-red-600 text-xl">edu</a></li>
+                                    <li><a href="https://kurziokode.github.io/hack/home.html" target="_blank" class="hover:text-red-600 text-xl">hack</a></li>
+                                    <li><a href="https://kurziokode.github.io/fly/moon.html" target="_blank" class="hover:text-red-600 text-xl">fly</a></li>
+                                    <li><a href="https://kurziokode.github.io/matrix/index.html#/red" target="_blank" class="hover:text-red-600 text-xl">matrix</a></li>
+                                    <li><a href="https://kurziokode.github.io/nav/index.html" target="_blank" class="hover:text-red-600 text-xl">nav</a></li>
+                                    <li><a href="https://kurziokode.github.io/slide/index.html" target="_blank" class="hover:text-red-600 text-xl">slide</a></li>
+                                    <li><a href="https://kurziokode.github.io/off/index.html" target="_blank" class="hover:text-red-600 text-xl">off</a></li>
+                                    <li><a href="https://kurziokode.github.io/focus/index.html" target="_blank" class="hover:text-red-600 text-xl">focus</a></li>
+                                    <li><a href="https://kurziokode.github.io/people/index.html" target="_blank" class="hover:text-red-600 text-xl">people</a></li>
+                                    <li><a href="https://jacksmith206.github.io/teetotaller/index.html" target="_blank" class="hover:text-red-600 text-xl">teetotaller</a></li>
+                                    <li><a href="https://jacksmith206.github.io/christos/doulos.html" target="_blank" class="hover:text-red-600 text-xl">jacksmith</a></li>
+                                    <li><a href="https://kurzio.neocities.org/listennot" target="_blank" class="hover:text-red-600 text-xl">listen</a></li>
+                                    <li><a href="https://kurziokode.github.io/table/plus.html" target="_blank" class="hover:text-red-600 text-xl">table</a></li>
+                                    <li><a href="https://kurziokode.github.io/lane/lazy.html" target="_blank" class="hover:text-red-600 text-xl">lazy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="section2">
+            <footer class="relative py-20 flex flex-col items-center overflow-hidden">
+                <div class="line"></div>
+                <div class="line2"></div>
+                <img src="https://icons.iconarchive.com/icons/kyo-tux/phuzion/128/Device-Headphones-icon.png" width="64"
+                    height="64">
+                <div class="relative z-[1] container m-auto px-6 md:px-12">
+                    <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
+                        <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
+                            <div class="w-full space-x-12 flex justify-center text-gray-600 sm:w-7/12 md:justify-start">
+                                <ul class="list-disc list-inside space-y-9">
+                                    <div class="text-2xl font-normal text-red-900 dark:text-gray-400">
+                                        <span>Design</span>
+                                    </div>
+                                    <li><a href="https://lexica.art/" target="_blank" class="hover:text-red-600 text-xl">lexica</a></li>
+                                    <li><a href="https://playgroundai.com/" target="_blank" class="hover:text-red-600 text-xl">playgroundai</a></li>
+                                    <li><a href="https://www.stylized.ai/" target="_blank" class="hover:text-red-600 text-xl">stylized</a></li>
+                                    <li><a href="https://www.artbreeder.com/" target="_blank" class="hover:text-red-600 text-xl">artbreeder</a></li>
+                                    <li><a href="https://convertio.co/" target="_blank" class="hover:text-red-600 text-xl">convertio</a></li>
+                                    <li><a href="https://blackscreen.app/" target="_blank" class="hover:text-red-600 text-xl">blackscreen</a></li>
+                                    <li><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank" class="hover:text-red-600 text-xl">colors</a></li>
+                                    <li><a href="https://www.flexclip.com/" target="_blank" class="hover:text-red-600 text-xl">flexclip</a></li>
+                                    <li><a href="https://www.adobe.com/express/" target="_blank" class="hover:text-red-600 text-xl">adobe</a></li>
+                                    <li><a href="https://wepik.com/" target="_blank" class="hover:text-red-600 text-xl">wepik</a></li>
+                                    <li><a href="https://ssstwitter.com/" target="_blank" class="hover:text-red-600 text-xl">ssstwitter</a></li>
+                                    <li><a href="https://www.webdevvisuals.com/" target="_blank" class="hover:text-red-600 text-xl">devvisuals</a></li>
+                                    <li><a href="https://rows.com/app/templates" target="_blank" class="hover:text-red-600 text-xl">rows</a></li>
+                                    <li><a href="https://pinetools.com/overlay-images" target="_blank" class="hover:text-red-600 text-xl">overlay</a></li>
+                                    <li><a href="https://emojinarium.com/object/" target="_blank" class="hover:text-red-600 text-xl">emoji</a></li>
+                                    <li><a href="https://voicemaker.in/" target="_blank" class="hover:text-red-600 text-xl">voicemaker</a></li>
+                                    <li><a href="https://photoeditor.ai/" target="_blank" class="hover:text-red-600 text-xl">photoedit</a></li>
+                                    <li><a href="https://reccloud.com/" target="_blank" class="hover:text-red-600 text-xl">reccloud</a></li>
+                                    <li><a href="https://www.watermarkremover.io/upload" target="_blank" class="hover:text-red-600 text-xl">watermark</a></li>
+                                    <li><a href="https://snapinsta.app/el" target="_blank" class="hover:text-red-600 text-xl">snapinsta</a></li>
+                                    <li><a href="https://ssyoutube.com/en741dP/" target="_blank" class="hover:text-red-600 text-xl">ssyoutube</a></li>
+                                    <li><a href="https://wallscloud.net/en" target="_blank" class="hover:text-red-600 text-xl">wallscloud</a></li>
+                                    <li><a href="https://www.websiteplanet.com/webtools/" target="_blank" class="hover:text-red-600 text-xl">siteplanet</a></li>
+                                    <li><a href="https://lex.page/welcome" target="_blank" class="hover:text-red-600 text-xl">lex</a></li>
+                                    <li><a href="https://www.w3schools.com/howto/default.asp" target="_blank" class="hover:text-red-600 text-xl">howto</a></li>
+                                </ul>
+                                <ul class="list-disc list-inside space-y-9">
+                                    <div class="text-2xl font-normal text-red-900 dark:text-gray-400">
+                                        <span style="visibility: hidden;">AVisual</span>
+                                    </div>
+                                    <li><a href="https://compress-or-die.com/jpg" target="_blank" class="hover:text-red-600 text-xl">compress</a></li>
+                                    <li><a href="https://www.compart.com/en/unicode/html" target="_blank" class="hover:text-red-600 text-xl">compart</a></li>
+                                    <li><a href="https://www.cssbuttongenerator.com/" target="_blank" class="hover:text-red-600 text-xl">cssbutton</a></li>
+                                    <li><a href="https://tablericons.com/" target="_blank" class="hover:text-red-600 text-xl">tablericons</a></li>
+                                    <li><a href="https://watermarkly.com/add-text-to-photo/" target="_blank" class="hover:text-red-600 text-xl">textphoto</a></li>
+                                    <li><a href="https://www.photoenlarger.com/" target="_blank" class="hover:text-red-600 text-xl">enlarger</a></li>
+                                    <li><a href="https://slides.com/curzio" target="_blank" class="hover:text-red-600 text-xl">slides</a></li>
+                                    <li><a href="https://fontawesome.com/v4/icons/" target="_blank" class="hover:text-red-600 text-xl">fontawesome</a></li>
+                                    <li><a href="https://www.canva.com/el_gr/" target="_blank" class="hover:text-red-600 text-xl">canva</a></li>
+                                    <li><a href="https://online-video-cutter.com/add-text-to-video" target="_blank" class="hover:text-red-600 text-xl">cutter</a></li>
+                                    <li><a href="https://www.realtimecolors.com/?colors=000000-ffffff-4685ff-f2f2f2-ffb084&fonts=Poppins-Poppins" target="_blank" class="hover:text-red-600 text-xl">realtime</a></li>
+                                    <li><a href="https://www.xconvert.com/compress-mp4" target="_blank" class="hover:text-red-600 text-xl">xconvert</a></li>
+                                    <li><a href="https://animate.style/" target="_blank" class="hover:text-red-600 text-xl">animate</a></li>
+                                    <li><a href="https://snapdrop.net/" target="_blank" class="hover:text-red-600 text-xl">snapdrop</a></li>
+                                    <li><a href="https://rdrop.link/" target="_blank" class="hover:text-red-600 text-xl">rdrop</a></li>
+                                    <li><a href="https://www.remove.bg/" target="_blank" class="hover:text-red-600 text-xl">remove</a></li>
+                                    <li><a href="https://temp-mail.org/" target="_blank" class="hover:text-red-600 text-xl">tempmail</a></li>
+                                    <li><a href="https://www.iconarchive.com/" target="_blank" class="hover:text-red-600 text-xl">iconarchive</a></li>
+                                    <li><a href="https://www.opensourcealternative.to/" target="_blank" class="hover:text-red-600 text-xl">alternative</a></li>
+                                    <li><a href="https://fonts.google.com/icons" target="_blank" class="hover:text-red-600 text-xl">fontsgoogle</a></li>
+                                    <li><a href="https://www.mediafire.com/" target="_blank" class="hover:text-red-600 text-xl">mediafire</a></li>
+                                    <li><a href="https://my.pcloud.com/" target="_blank" class="hover:text-red-600 text-xl">pcloud</a></li>
+                                    <li><a href="https://llava.hliu.cc/" target="_blank" class="hover:text-red-600 text-xl">llava</a></li>
+                                    <li><a href="https://app.maxai.me/prompts" target="_blank" class="hover:text-red-600 text-xl">prompts</a></li>
+                                    <li><a href="https://www.fullblackscreen.com/" target="_blank" class="hover:text-red-600 text-xl">fullblack</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+       
+     
+    </main>
+    <div class="px-7 bg-gray-900 shadow-lg rounded">
+        <div class="flex">
+            <div class="flex-1 group">
+                <a href="#"
+                    class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-500 group-hover:text-red-700">
+                    <span class="block px-1 pt-1 pb-1">
+                        <span class="block text-lg pb-2">Home</span>
+                        <span class="block w-5 mx-auto h-1 group-hover:bg-red-800 rounded-full"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="flex-1 group">
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"
+                    class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-500 group-hover:text-red-700">
+                    <span class="block px-1 pt-1 pb-1">
+                        <span class="block text-lg pb-2">Inbox</span>
+                        <span class="block w-5 mx-auto h-1 group-hover:bg-red-800 rounded-full"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="flex-1 group">
+                <a href="mailto:lestiflee@gmail.com?subject=Hello Chris&body=Your%20website%20is%20..." target="_blank"
+                    class="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-500 group-hover:text-red-700">
+                    <span class="block px-1 pt-1 pb-1">
+                        <span class="block text-lg pb-2">Email</span>
+                        <span class="block w-5 mx-auto h-1 group-hover:bg-red-800 rounded-full"></span>
+                    </span>
+                </a>
+            </div>
+        </div><br>
+        <a href="https://kurziokode.github.io/pnemo.html" target="_blank" style="text-align: center;"><span
+                class="block text-gray-600 hover:text-red-800">&copy; 2023 All Rights Reserved</span></a><br>
+    </div>
+    <script>
+        //Javascript to toggle the navbar menu mobile
+        document.getElementById('nav-toggle').onclick = function () {
+            document.getElementById("nav-content").classList.toggle("hidden");
+        }
+    </script>
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
+</body>
+
+</html>
