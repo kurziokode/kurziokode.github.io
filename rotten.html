@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-<meta charset="UTF-8" />
-
-<style id="webmakerstyle">
+  <meta charset="UTF-8">
+  <title>Rot in Style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Montserrat" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
 /* 
 ==================================================
 Base Styles
@@ -520,18 +525,6 @@ Media Queries
 </style>
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Rot in Style</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="format-detection" content="telephone=no">
-<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Montserrat" rel="stylesheet">
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-</head>
-<body>
 <!-- partial:index.partial.html -->
 <nav class="standard-nav">
 	<div class="links">
@@ -750,12 +743,7 @@ Media Queries
             link.setAttribute('rel', 'noopener noreferrer');
         });
     </script>
-  
-</body>
-</html>
-
-
-<script>
+ <script>
 /* 
 =======================================
 Mobile menu functionality
@@ -771,56 +759,9 @@ $(".close-burger").on("click", function() {
 	});
 
 
-
-
-/* 
-=======================================
-Scroll to anchor id's
-=======================================
-*/
-
-// Select all links with hashes
-
-$('a[href*="#"]')
-	// Remove links that don't actually link to anything
-	.not('[href="#"]')
-	.not('[href="#0"]')
-	.click(function(event) {
-		// On-page links
-		if (
-			location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
-			location.hostname == this.hostname
-		) {
-			// Figure out element to scroll to
-			var target = $(this.hash);
-			target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-			// Does a scroll target exist?
-			if (target.length) {
-				// Only prevent default if animation is actually gonna happen
-				event.preventDefault();
-				$("html, body").animate(
-					{
-						scrollTop: target.offset().top
-					},
-					1000,
-					function() {
-						// Callback after animation
-						// Must change focus!
-						var $target = $(target);
-						$target.focus();
-						if ($target.is(":focus")) {
-							// Checking if the target was focused
-							return false;
-						} else {
-							$target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-							$target.focus(); // Set focus again
-						}
-					}
-				);
-			}
-		}
-	});
-//# sourceURL=userscript.js
-</script>
+</script> 
 </body>
 </html>
+
+
+
