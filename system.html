@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TW Elements - 500&#43; free Tailwind CSS components</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
+    <link rel="shortcut icon" href="https://kurziokode.github.io/C.png" type="image/x-icon" />
+    <link rel="icon" href="https://kurziokode.github.io/C.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <meta name="theme-color" content="#f8fafc" />
+    <script>
+        try {
+            if (
+                localStorage.theme === "dark" ||
+                (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.documentElement.classList.add("dark");
+                document
+                    .querySelector('meta[name="theme-color"]')
+                    .setAttribute("content", "#0B1120");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+        } catch (_) {}
+    </script>
+
+</head>
+
+<body class="bg-white transition-colors duration-500 dark:bg-neutral-800">
+
+    <nav class=" sticky left-0 top-0 z-50 w-full bg-white shadow dark:bg-neutral-800">
+        <div class="px-3">
+            <div class="relative flex h-[58px] items-center justify-between">
+                <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <div id="hamburger" class=" mr-4 flex text-neutral-400" data-te-sidenav-toggle-ref
+                            data-te-target="#sidenav-main">
+                            <a href="#" class="text-neutral-400">
+                                <svg fill="hsl(224, 7.2%, 40%)" viewBox="0 0 100 80" width="20" height="20">
+                                    <rect width="80" height="14"></rect>
+                                    <rect y="30" width="80" height="14"></rect>
+                                    <rect y="60" width="80" height="14"></rect>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <a href="/"
+                            class="flex items-center justify-center rounded-md pr-6 text-lg font-medium dark:text-gray-400"
+                            aria-current="page">
+                            <picture>
+
+                                <img src="https://kurziokode.github.io/C.png" class="mr-2 h-[20px]" alt="C" />
+                            </picture>
+
+                            Doulos
+
+                        </a>
+
+                    </div>
+
+
+
+
+                    <div class="ml-auto hidden items-center sm:flex">
+                        <div class="flex">
+
+
+                            <div class="relative" data-te-dropdown-ref>
+                                <button
+                                    class="hidden items-center py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-yellow-600 dark:hover:text-neutral-300 dark:focus:text-neutral-300 sm:flex sm:px-3 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                                    type="button" id="dropdownMenuButton1" data-te-dropdown-toggle-ref
+                                    aria-expanded="false">
+                                    Translate
+                                    <span class="w-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            class="h-5 w-5">
+                                            <path fill-rule="evenodd"
+                                                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="absolute z-[1000] float-left m-0 hidden min-w-[180px] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+                                    aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref>
+                                    <li>
+                                        <a class="flex w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                                            href="/" data-te-dropdown-item-ref>
+
+                                            Deep</a>
+                                    </li>
+                                    <li>
+                                        <a class="flex w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                                            href="/docs/react" data-te-dropdown-item-ref>
+
+                                            Google</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute inset-y-0 right-0 flex items-center pr-0 sm:static sm:inset-auto sm:ml-4">
+
+                    <div id="theme-switcher" class="w-8">
+                        <button
+                            class="rounded-2 flex items-center justify-center whitespace-nowrap px-1.5 py-2 uppercase text-neutral-500 transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 sm:p-2"
+                            type="button" id="themeSwitcher" data-te-dropdown-toggle-ref
+                            data-te-dropdown-position="dropend" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="h-6 w-6">
+                                <path fill-rule="evenodd"
+                                    d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="absolute z-[1000] float-left m-0 hidden w-[120px] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-800 [&[data-te-dropdown-show]]:block"
+                            aria-labelledby="themeSwitcher" data-te-dropdown-menu-ref>
+
+
+                            <li></li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-3 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 focus:bg-neutral-200 focus:outline-none active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600 focus:dark:bg-neutral-600"
+                                    href="#" data-theme="light" data-te-dropdown-item-ref>
+                                    <div class="pointer-events-none">
+                                        <div class="inline-block w-[24px] text-center align-middle"
+                                            data-theme-icon="light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="inline-block h-5 w-5">
+                                                <path
+                                                    d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+                                            </svg>
+                                        </div>
+                                        <span data-theme-name="light">Light</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-3 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 focus:bg-neutral-200 focus:outline-none active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600 focus:dark:bg-neutral-600"
+                                    href="#" data-theme="dark" data-te-dropdown-item-ref>
+                                    <div class="pointer-events-none">
+                                        <div class="-mt-1 inline-block w-[24px] text-center align-middle"
+                                            data-theme-icon="dark">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="inline-block h-4 w-4">
+                                                <path fill-rule="evenodd"
+                                                    d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <span data-theme-name="dark">Dark</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-3 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 focus:bg-neutral-200 focus:outline-none active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600 focus:dark:bg-neutral-600"
+                                    href="#" data-theme="system" data-te-dropdown-item-ref>
+                                    <div class="pointer-events-none">
+                                        <div class="inline-block w-[24px] text-center" data-theme-icon="system">
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                                                class="inline-block w-4" role="img" viewBox="0 0 640 512">
+                                                <path fill="currentColor"
+                                                    d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z" />
+                                            </svg>
+                                        </div>
+                                        <span data-theme-name="system">System</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <nav id="sidenav-main"
+        class="fixed left-0 top-0 z-[1036] h-screen w-60 -translate-x-full overflow-hidden bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] dark:bg-neutral-800 xl:data-[te-sidenav-hidden='false']:translate-x-0"
+        data-te-sidenav-init data-te-sidenav-mode="over" data-te-sidenav-content="#page-content"
+        data-te-sidenav-accordion="true"><br>
+        <a href="/" class="flex items-center justify-center rounded-md pr-6 text-lg font-medium dark:text-gray-400"
+            aria-current="page">
+            <picture>
+
+                <img src="https://kurziokode.github.io/C.png" class="mr-2 h-[20px]" alt="C" />
+            </picture>
+
+            Doulos
+
+        </a><br>
+
+        <ul class="relative m-0 mx-2 list-none px-[0.2rem] pb-80" data-te-sidenav-menu-ref>
+
+
+
+
+
+            <li class="relative">
+                <a class="
+        hover:bg-[rgba(59,113,202,0.05)] dark:hover:bg-white/10
+        hover:text-inherit hover:outline-none focus:bg-[rgba(59,113,202,0.05)]
+        focus:text-inherit focus:outline-none active:[rgba(59,113,202,0.05)]
+        active:text-inherit active:outline-none motion-reduce:transition-none
+        dark:focus:bg-white/10 dark:active:bg-white/10
+       flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none dark:text-gray-300"
+                    data-te-sidenav-link-ref>
+                    <span class="mr-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
+                        </svg>
+                    </span>
+                    <span>Integrations</span>
+                    <span
+                        class=" absolute -right-1 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
+                        data-te-sidenav-rotate-icon-ref>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </a>
+                <ul class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block"
+                    data-te-sidenav-collapse-ref>
+
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/angular-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Angular
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/django-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Django
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/express-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Express
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/laravel-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Laravel
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/next-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Next
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/nuxt-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Nuxt
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/react-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            React
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/remix-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Remix
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/solid-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Solid
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/svelte-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Svelte
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/integrations/vue-integration/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Vue
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+            <li class="relative">
+                <a class="
+        hover:bg-[rgba(59,113,202,0.05)] dark:hover:bg-white/10
+        hover:text-inherit hover:outline-none focus:bg-[rgba(59,113,202,0.05)]
+        focus:text-inherit focus:outline-none active:[rgba(59,113,202,0.05)]
+        active:text-inherit active:outline-none motion-reduce:transition-none
+        dark:focus:bg-white/10 dark:active:bg-white/10
+       flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none dark:text-gray-300"
+                    data-te-sidenav-link-ref>
+                    <span class="mr-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                            <path fill-rule="evenodd"
+                                d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 00-3.471 2.987 10.04 10.04 0 014.815 4.815 18.748 18.748 0 002.987-3.472l3.386-5.079A1.902 1.902 0 0020.599 1.5zm-8.3 14.025a18.76 18.76 0 001.896-1.207 8.026 8.026 0 00-4.513-4.513A18.75 18.75 0 008.475 11.7l-.278.5a5.26 5.26 0 013.601 3.602l.502-.278zM6.75 13.5A3.75 3.75 0 003 17.25a1.5 1.5 0 01-1.601 1.497.75.75 0 00-.7 1.123 5.25 5.25 0 009.8-2.62 3.75 3.75 0 00-3.75-3.75z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <span>Content & styles</span>
+                    <span
+                        class=" absolute -right-1 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
+                        data-te-sidenav-rotate-icon-ref>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </a>
+                <ul class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block"
+                    data-te-sidenav-collapse-ref>
+
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/animations/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Animations
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/animations-extended/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Animations Extended
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/colors/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Colors
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/dividers/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Dividers
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/figures/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Figures
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/headings/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Headings
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/hover-effects/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Hover effects
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/icons/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Icons
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/images/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Images
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/mask/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Mask
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/shadows/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Shadows
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/content-styles/typography/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Typography
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+
+            <li class="relative">
+                <a class="
+        hover:bg-[rgba(59,113,202,0.05)] dark:hover:bg-white/10
+        hover:text-inherit hover:outline-none focus:bg-[rgba(59,113,202,0.05)]
+        focus:text-inherit focus:outline-none active:[rgba(59,113,202,0.05)]
+        active:text-inherit active:outline-none motion-reduce:transition-none
+        dark:focus:bg-white/10 dark:active:bg-white/10
+       flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none dark:text-gray-300"
+                    data-te-sidenav-link-ref>
+                    <span class="mr-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                        </svg>
+                    </span>
+                    <span>Forms</span>
+                    <span
+                        class=" absolute -right-1 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
+                        data-te-sidenav-rotate-icon-ref>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </a>
+                <ul class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block"
+                    data-te-sidenav-collapse-ref>
+
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/checkbox/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Checkbox
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/datepicker/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Datepicker
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/datetimepicker/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Datetimepicker
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/file-input/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            File input
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/form-templates/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Form templates
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/input-group/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Input Group
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/inputs/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Inputs
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/login-form/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Login form
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/radio/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Radio
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/range/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Range
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/registration-form/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Registration form
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/search/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Search
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/select/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Select
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/switch/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Switch
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/textarea/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Textarea
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/timepicker/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Timepicker
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/forms/validation/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Validation
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+            <li class="relative">
+                <a class="
+        hover:bg-[rgba(59,113,202,0.05)] dark:hover:bg-white/10
+        hover:text-inherit hover:outline-none focus:bg-[rgba(59,113,202,0.05)]
+        focus:text-inherit focus:outline-none active:[rgba(59,113,202,0.05)]
+        active:text-inherit active:outline-none motion-reduce:transition-none
+        dark:focus:bg-white/10 dark:active:bg-white/10
+       flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none dark:text-gray-300"
+                    data-te-sidenav-link-ref>
+                    <span class="mr-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+                        </svg>
+                    </span>
+                    <span>Data</span>
+                    <span
+                        class=" absolute -right-1 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
+                        data-te-sidenav-rotate-icon-ref>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </a>
+                <ul class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block"
+                    data-te-sidenav-collapse-ref>
+
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/data/charts/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Charts
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/data/charts-advanced/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Charts advanced
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/data/datatables/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Datatables
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/data/tables/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Tables
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+            <li class="relative">
+                <a class="
+        hover:bg-[rgba(59,113,202,0.05)] dark:hover:bg-white/10
+        hover:text-inherit hover:outline-none focus:bg-[rgba(59,113,202,0.05)]
+        focus:text-inherit focus:outline-none active:[rgba(59,113,202,0.05)]
+        active:text-inherit active:outline-none motion-reduce:transition-none
+        dark:focus:bg-white/10 dark:active:bg-white/10
+       flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none dark:text-gray-300"
+                    data-te-sidenav-link-ref>
+                    <span class="mr-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                        </svg>
+                    </span>
+                    <span>Methods</span>
+                    <span
+                        class=" absolute -right-1 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
+                        data-te-sidenav-rotate-icon-ref>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </a>
+                <ul class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block"
+                    data-te-sidenav-collapse-ref>
+
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/clipboard/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Clipboard
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/infinite-scroll/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Infinite scroll
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/lazy-loading/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Lazy loading
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/loading-management/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Loading management
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/ripple/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Ripple
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/scrollbar/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Scrollbar
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/smooth-scroll/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Smooth scroll
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/sticky/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Sticky
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/methods/touch/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Touch
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+            <li class="relative">
+                <a class="
+        hover:bg-[rgba(59,113,202,0.05)] dark:hover:bg-white/10
+        hover:text-inherit hover:outline-none focus:bg-[rgba(59,113,202,0.05)]
+        focus:text-inherit focus:outline-none active:[rgba(59,113,202,0.05)]
+        active:text-inherit active:outline-none motion-reduce:transition-none
+        dark:focus:bg-white/10 dark:active:bg-white/10
+       flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none dark:text-gray-300"
+                    data-te-sidenav-link-ref>
+                    <span class="mr-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                            <path
+                                d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
+                            <path
+                                d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
+                            <path
+                                d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
+                        </svg>
+                    </span>
+                    <span>Design Blocks</span>
+                    <span
+                        class=" absolute -right-1 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
+                        data-te-sidenav-rotate-icon-ref>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </a>
+                <ul class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block"
+                    data-te-sidenav-collapse-ref>
+
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/banners/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Banners
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/contact/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/content/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Content
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/cta/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            CTA
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/faq/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/features/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Features
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/headers/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Headers
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/hero-sections/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Hero / Intro sections
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/logo-clouds/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Logo clouds
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/mega-menu/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Mega menu
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/news/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            News
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/newsletter/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Newsletter
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/pricing/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/project-sections/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Projects
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/stats/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Stats
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/team/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Team
+                        </a>
+                    </li>
+
+                    <li class="mx-1 first:mt-1">
+                        <a href="/docs/standard/designblocks/testimonials/"
+                            class="
+              hover:bg-blue-100/20 dark:hover:bg-white/10 hover:text-inherit
+              hover:outline-none focus:bg-blue-200/20 focus:text-inherit
+              focus:outline-none active:bg-blue-200/20 active:text-inherit
+              active:outline-none
+             flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref>
+                            Testimonials
+                        </a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+            <li class="relative">
+                <a class="active:[rgba(59,113,202,0.05)] flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-[rgba(59,113,202,0.05)] hover:text-inherit hover:outline-none focus:bg-[rgba(59,113,202,0.05)] focus:text-inherit focus:outline-none active:text-inherit active:outline-none data-[te-sidenav-state-active]:bg-[rgba(18,102,241,0.05)] data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10 data-[te-sidenav-state-active]:dark:bg-white/20"
+                    data-te-sidenav-link-ref>
+                    <span class="mr-4 [&>svg]:h-3.5 [&>svg]:w-3.5 [&>svg]:text-gray-400 dark:[&>svg]:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                        </svg>
+                    </span>
+
+                    <span>Tools</span>
+                    <span
+                        class=" absolute -right-1 ml-auto mr-[0.8rem] transition-transform duration-300 ease-linear motion-reduce:transition-none [&>svg]:h-4 [&>svg]:w-4 [&>svg]:text-gray-600 dark:[&>svg]:text-gray-300"
+                        data-te-sidenav-rotate-icon-ref>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </a>
+                <ul class="!visible relative m-0 hidden list-none p-0 data-[te-collapse-show]:block"
+                    data-te-sidenav-collapse-ref>
+                    <li class="mx-1 mt-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/button-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Button generator
+                        </a>
+                    </li>
+                    <li class="mx-1 mt-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/card-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Card generator
+                        </a>
+                    </li>
+                    <li class="mx-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/flexbox-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Flexbox generator
+                        </a>
+                    </li>
+                    <li class="mx-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/footer-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Footer generator
+                        </a>
+                    </li>
+                    <li class="mx-1 mt-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/grid-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Grid generator
+                        </a>
+                    </li>
+                    <li class="mx-1 mt-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/icon-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Icon generator
+                        </a>
+                    </li>
+                    <li class="mx-1 mt-1">
+                        <a target="_blank"
+                            href="https://www.designtoolshub.com/tailwind-css/instagram-filters-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Instagram Filters generator
+                        </a>
+                    </li>
+                    <li class="mx-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/universal/logo-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Logo generator
+                        </a>
+                    </li>
+                    <li class="mx-1 mt-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/table-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Table generator
+                        </a>
+                    </li>
+                    <li class="mx-1 mt-1">
+                        <a target="_blank" href="https://www.designtoolshub.com/tailwind-css/typography-generator"
+                            class="flex h-6 cursor-pointer items-center truncate rounded-[5px] py-4 pl-[3.4rem] pr-6 text-[0.78rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-blue-100/20 hover:text-inherit hover:outline-none focus:bg-blue-200/20 focus:text-inherit focus:outline-none active:bg-blue-200/20 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
+                            data-te-sidenav-link-ref="" tabindex="0">
+                            Typography generator
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
+
+        </ul>
+
+    </nav>
+
+    <div id="gtmDC-frontpage-all" class="absolute top-[60px] z-10 hidden h-[74px] w-full lg:block"></div>
+
+    <main class="relative leading-[1.6]">
+
+        <!-- Section: Intro -->
+        <section
+            class="mx-auto mb-[64px] mt-12 pb-[64px] min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px] min-[1400px]:max-w-[1320px]">
+            <div class="grid grid-cols-1 items-center pt-6 lg:grid-cols-12">
+                <div class="relative mx-3 text-center lg:col-span-5 lg:text-left">
+                    <div>
+                        <h1 class="mb-8 mt-0 text-3xl font-bold text-gray-500">
+                            An ecosystem to<br />
+                            <span class="text-primary dark:text-yellow-700">Connect and get the job done.</span>
+                        </h1>
+
+                        <p class="mb-4 text-sm font-medium text-gray-600 dark:text-gray-400">
+                            Click Up Left to Open Sidebar Menu and Explore :
+                        </p>
+
+                        <div class="">
+                            <ol class="text-md mb-10 text-gray-600 dark:text-gray-400">
+                                <li class="mb-4">
+                                    <span
+                                        class="mr-2 inline-block pb-1 align-middle text-primary dark:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="3" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg> </span>Artificial Intelligence
+                                </li>
+                                <li class="mb-4">
+                                    <span
+                                        class="mr-2 inline-block pb-1 align-middle text-primary dark:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="3" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg> </span>Search Engines
+                                </li>
+                                <li class="mb-4">
+                                    <span
+                                        class="mr-2 inline-block pb-1 align-middle text-primary dark:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="3" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg> </span>Audio Visual
+                                </li>
+                                <li class="mb-4">
+                                    <span
+                                        class="mr-2 inline-block pb-1 align-middle text-primary dark:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="3" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg> </span>Code Workstation
+                                </li>
+                                <li class="mb-4">
+                                    <span
+                                        class="mr-2 inline-block pb-1 align-middle text-primary dark:text-primary-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="3" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.5 12.75l6 6 9-13.5" />
+                                        </svg> </span>Design Toolbox and more...
+                                </li>
+                            </ol>
+
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <a class="inline-block rounded bg-gray-700 px-12 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-yellow-600 hover:text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                                    href="https://mail.google.com/mail/u/0/#inbox" target="_blank" role="button"
+                                    data-te-ripple-init data-te-ripple-color="light">Gmail Inbox</a>
+
+                            </div>
+                            <br>
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <a class="inline-block rounded bg-gray-700 px-12 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-yellow-600 hover:text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                                    href="https://mail.google.com/mail/u/0/#inbox" target="_blank" role="button"
+                                    data-te-ripple-init data-te-ripple-color="light">Proton Inbox</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mx-3 mt-5 flex justify-center lg:col-span-7 lg:mt-0">
+                    <picture>
+
+                        <img src="https://kurziokode.github.io/mask.png"
+                            class="absolute left-0 top-0 w-full px-4 transition-opacity duration-500 dark:opacity-0"
+                            alt="TE light main components preview" />
+                    </picture>
+                    <picture>
+
+                        <img src="https://kurziokode.github.io/mask.png"
+                            class="w-full px-4 opacity-0 transition-opacity duration-500 dark:opacity-100"
+                            alt="TE dark main components preview" />
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Intro -->
+
+        <!--Section: Technology-->
+        <section class="bg-secondary-100 py-5 dark:bg-neutral-900">
+            <div
+                class="mx-auto mb-[64px] mt-24 pb-[64px] min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px] min-[1400px]:max-w-[1320px]">
+                <div class="">
+                    <h4 class="pb-2 text-center text-[2rem] font-bold text-gray-600 dark:text-gray-600">
+                        Social Media
+                    </h4>
+
+                    <p class="mb-5 mt-7 text-center text-sm text-gray-400">
+
+                    </p>
+
+                    <!--GRID - DEDICATED PACKAGES-->
+                    <div class="grid grid-cols-2 gap-5 md:grid-cols-5">
+                        <!--Tailwind-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 0 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>Pinterest-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-300.000000, -260.000000)"
+                                                fill="#CC2127">
+                                                <path
+                                                    d="M324.001411,260 C310.747575,260 300,270.744752 300,284.001411 C300,293.826072 305.910037,302.270594 314.368672,305.982007 C314.300935,304.308344 314.357382,302.293173 314.78356,300.469924 C315.246428,298.522491 317.871229,287.393897 317.871229,287.393897 C317.871229,287.393897 317.106368,285.861351 317.106368,283.59499 C317.106368,280.038808 319.169518,277.38296 321.73505,277.38296 C323.91674,277.38296 324.972306,279.022755 324.972306,280.987123 C324.972306,283.180102 323.572411,286.462515 322.852708,289.502205 C322.251543,292.050803 324.128418,294.125243 326.640325,294.125243 C331.187158,294.125243 334.249427,288.285765 334.249427,281.36532 C334.249427,276.10725 330.707356,272.170048 324.263891,272.170048 C316.985006,272.170048 312.449462,277.59746 312.449462,283.659905 C312.449462,285.754101 313.064738,287.227377 314.029988,288.367613 C314.475922,288.895396 314.535191,289.104251 314.374316,289.708238 C314.261422,290.145705 313.996119,291.21256 313.886047,291.633092 C313.725172,292.239901 313.23408,292.460046 312.686541,292.234256 C309.330746,290.865408 307.769977,287.193509 307.769977,283.064385 C307.769977,276.248368 313.519139,268.069148 324.921503,268.069148 C334.085729,268.069148 340.117128,274.704533 340.117128,281.819721 C340.117128,291.235138 334.884459,298.268478 327.165285,298.268478 C324.577174,298.268478 322.138649,296.868584 321.303228,295.279591 C321.303228,295.279591 319.908979,300.808608 319.615452,301.875463 C319.107426,303.724114 318.111131,305.575587 317.199506,307.014994 C319.358617,307.652849 321.63909,308 324.001411,308 C337.255248,308 348,297.255248 348,284.001411 C348,270.744752 337.255248,260 324.001411,260"
+                                                    id="Pinterest"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Pinterest
+                            </p>
+
+                            <a href="/docs/standard/getting-started/quick-start/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+
+
+                        <!--Figma-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 -4 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>Twitter-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-300.000000, -164.000000)"
+                                                fill="#00AAEC">
+                                                <path
+                                                    d="M348,168.735283 C346.236309,169.538462 344.337383,170.081618 342.345483,170.324305 C344.379644,169.076201 345.940482,167.097147 346.675823,164.739617 C344.771263,165.895269 342.666667,166.736006 340.418384,167.18671 C338.626519,165.224991 336.065504,164 333.231203,164 C327.796443,164 323.387216,168.521488 323.387216,174.097508 C323.387216,174.88913 323.471738,175.657638 323.640782,176.397255 C315.456242,175.975442 308.201444,171.959552 303.341433,165.843265 C302.493397,167.339834 302.008804,169.076201 302.008804,170.925244 C302.008804,174.426869 303.747139,177.518238 306.389857,179.329722 C304.778306,179.280607 303.256911,178.821235 301.9271,178.070061 L301.9271,178.194294 C301.9271,183.08848 305.322064,187.17082 309.8299,188.095341 C309.004402,188.33225 308.133826,188.450704 307.235077,188.450704 C306.601162,188.450704 305.981335,188.390033 305.381229,188.271578 C306.634971,192.28169 310.269414,195.2026 314.580032,195.280607 C311.210424,197.99061 306.961789,199.605634 302.349709,199.605634 C301.555203,199.605634 300.769149,199.559408 300,199.466956 C304.358514,202.327194 309.53689,204 315.095615,204 C333.211481,204 343.114633,188.615385 343.114633,175.270495 C343.114633,174.831347 343.106181,174.392199 343.089276,173.961719 C345.013559,172.537378 346.684275,170.760563 348,168.735283"
+                                                    id="Twitter"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">Twitter</p>
+
+                            <a target="_blank"
+                                href="https://www.figma.com/community/file/1255241951305406231/Material-Minimal-design-system"
+                                class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--React-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="-0.5 0 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>Google-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-401.000000, -860.000000)">
+                                                <g id="Google" transform="translate(401.000000, 860.000000)">
+                                                    <path
+                                                        d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24"
+                                                        id="Fill-1" fill="#FBBC05"> </path>
+                                                    <path
+                                                        d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333"
+                                                        id="Fill-2" fill="#EB4335"> </path>
+                                                    <path
+                                                        d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
+                                                        id="Fill-3" fill="#34A853"> </path>
+                                                    <path
+                                                        d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24"
+                                                        id="Fill-4" fill="#4285F4"> </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Google
+                            </p>
+                            <a href="/docs/react/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--Angular-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="-3 0 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>Shopify-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-203.000000, -660.000000)"
+                                                fill="#81BF37">
+                                                <path
+                                                    d="M233.8471,666.99462 C234.633657,667.77951 235.525036,668.6685 235.525036,668.6685 C235.525036,668.6685 239.195316,668.9415 239.368457,668.9565 C239.54309,668.9715 239.753545,669.105 239.786382,669.3465 C239.819219,669.588 245,704.7915 245,704.7915 L232.287087,707.554966 L233.8471,666.99462 Z M231.896906,665.661214 C231.799504,665.673829 231.715018,665.693029 231.656242,665.7105 C231.624898,665.7195 231.099506,665.883 230.229326,666.153 C229.377057,663.69 227.874018,661.4265 225.230641,661.4265 C225.157504,661.4265 225.081382,661.4295 225.006752,661.434 C224.254487,660.435 223.32311,660 222.518604,660 C216.358684,660 213.415295,667.74 212.492875,671.6715 C210.09876,672.417 208.398699,672.9465 208.182274,673.0155 C206.844913,673.437 206.80312,673.479 206.628487,674.7435 C206.495647,675.702 203,702.8715 203,702.8715 L230.239774,708 L230.268734,707.993705 L231.896906,665.661214 Z M224.805252,667.572 C224.805252,667.6665 224.80376,667.7535 224.80376,667.8405 C223.303707,668.307 221.675291,668.814 220.042397,669.3225 C220.958847,665.7675 222.676819,664.05 224.179857,663.402 C224.557482,664.356 224.805252,665.7255 224.805252,667.572 Z M222.348449,661.6605 C222.615622,661.6605 222.882796,661.752 223.139522,661.929 C221.164825,662.862 219.049824,665.214 218.155762,669.909 C216.849746,670.3155 215.573581,670.713 214.392942,671.0805 C215.439248,667.4985 217.924411,661.6605 222.348449,661.6605 Z M223.409681,682.593 C223.409681,682.593 221.815594,681.738 219.861793,681.738 C216.99602,681.738 216.851238,683.5455 216.851238,684 C216.851238,686.4855 223.296244,687.438 223.296244,693.258 C223.296244,697.836 220.406589,700.785 216.509435,700.785 C211.83315,700.785 209.44202,697.86 209.44202,697.86 L210.694303,693.7035 C210.694303,693.7035 213.1526,695.8245 215.2273,695.8245 C216.58108,695.8245 217.133338,694.752 217.133338,693.969 C217.133338,690.7275 211.84509,690.582 211.84509,685.2555 C211.84509,680.7735 215.046697,676.4355 221.509613,676.4355 C223.999254,676.4355 225.230641,677.1525 225.230641,677.1525 L223.409681,682.593 Z M226.418743,667.338 C226.418743,667.1745 226.420235,667.014 226.420235,666.8385 C226.420235,665.3085 226.208287,664.0755 225.869469,663.099 C227.232204,663.27 228.139699,664.8285 228.723302,666.621 C228.039696,666.834 227.262056,667.0755 226.418743,667.338 Z"
+                                                    id="Shopify"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Skroutz
+                            </p>
+
+                            <a href="/angular/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--Angular-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 0 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>Facebook-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-200.000000, -160.000000)"
+                                                fill="#4460A0">
+                                                <path
+                                                    d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z"
+                                                    id="Facebook"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Facebook
+                            </p>
+
+                            <a href="/angular/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!--Angular-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 0 44 44" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>RSS-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-800.000000, -760.000000)"
+                                                fill="#FF9A00">
+                                                <path
+                                                    d="M800.000471,797.714286 C800.000471,794.243 802.81487,791.428571 806.286118,791.428571 C809.757367,791.428571 812.571765,794.243 812.571765,797.714286 C812.571765,801.185571 809.757367,804 806.286118,804 C802.81487,804 800.000471,801.185571 800.000471,797.714286 Z M844,804 L835.619661,804 C835.619661,784.358714 819.641547,768.380429 800.000471,768.380429 L800.000471,760 C824.261497,760 844,779.738714 844,804 Z M829.333543,804 L820.953204,804 C820.953204,792.446857 811.553019,783.048143 800,783.048143 L800,774.666143 C816.174541,774.666143 829.333543,787.825286 829.333543,804 Z"
+                                                    id="RSS"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                News
+                            </p>
+
+                            <a href="/angular/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!--Angular-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 -3 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>drive-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-601.000000, -955.000000)">
+                                                <g id="drive" transform="translate(601.000000, 955.000000)">
+                                                    <polygon id="Shape" fill="#3777E3"
+                                                        points="8.00048064 42 15.9998798 28 48 28 39.9998798 42">
+                                                    </polygon>
+                                                    <polygon id="Shape" fill="#FFCF63"
+                                                        points="32.0004806 28 48 28 32.0004806 0 15.9998798 0">
+                                                    </polygon>
+                                                    <polygon id="Shape" fill="#11A861"
+                                                        points="0 28 8.00048064 42 24 14 15.9998798 0"> </polygon>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Drive
+                            </p>
+
+                            <a href="/angular/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!--Angular-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 -0.5 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>Github-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-700.000000, -560.000000)"
+                                                fill="#3E75C3">
+                                                <path
+                                                    d="M723.9985,560 C710.746,560 700,570.787092 700,584.096644 C700,594.740671 706.876,603.77183 716.4145,606.958412 C717.6145,607.179786 718.0525,606.435849 718.0525,605.797328 C718.0525,605.225068 718.0315,603.710086 718.0195,601.699648 C711.343,603.155898 709.9345,598.469394 709.9345,598.469394 C708.844,595.686405 707.2705,594.94548 707.2705,594.94548 C705.091,593.450075 707.4355,593.480194 707.4355,593.480194 C709.843,593.650366 711.1105,595.963499 711.1105,595.963499 C713.2525,599.645538 716.728,598.58234 718.096,597.964902 C718.3135,596.407754 718.9345,595.346062 719.62,594.743683 C714.2905,594.135281 708.688,592.069123 708.688,582.836167 C708.688,580.205279 709.6225,578.054788 711.1585,576.369634 C710.911,575.759726 710.0875,573.311058 711.3925,569.993458 C711.3925,569.993458 713.4085,569.345902 717.9925,572.46321 C719.908,571.928599 721.96,571.662047 724.0015,571.651505 C726.04,571.662047 728.0935,571.928599 730.0105,572.46321 C734.5915,569.345902 736.603,569.993458 736.603,569.993458 C737.9125,573.311058 737.089,575.759726 736.8415,576.369634 C738.3805,578.054788 739.309,580.205279 739.309,582.836167 C739.309,592.091712 733.6975,594.129257 728.3515,594.725612 C729.2125,595.469549 729.9805,596.939353 729.9805,599.18773 C729.9805,602.408949 729.9505,605.006706 729.9505,605.797328 C729.9505,606.441873 730.3825,607.191834 731.6005,606.9554 C741.13,603.762794 748,594.737659 748,584.096644 C748,570.787092 737.254,560 723.9985,560"
+                                                    id="Github"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Github
+                            </p>
+
+                            <a href="/angular/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <!--Angular-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 -2.5 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>pocket-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-301.000000, -955.000000)"
+                                                fill="#F43B53">
+                                                <path
+                                                    d="M324.985226,955.0009 C331.498623,955.0009 338.012021,954.998949 344.525419,955.002025 C346.543666,955.003001 348.27863,956.305308 348.781244,958.197233 C348.86062,958.495907 348.910567,958.812441 348.910717,959.12072 C348.913787,964.209954 348.938798,969.299488 348.892895,974.388422 C348.846018,979.587894 347.273176,984.295081 344.072901,988.405521 C340.511466,992.979956 335.918293,995.992807 330.257363,997.300968 C317.258873,1000.30474 304.841925,991.915161 301.776964,980.17331 C301.368402,978.60805 301.090137,977.019601 301.076658,975.403011 C301.031428,969.989589 300.997656,964.575867 301.000127,959.162294 C301.001251,956.883369 303.034174,955.003901 305.407591,955.002326 C311.933494,954.998123 318.459322,955.0009 324.985226,955.0009 L324.985226,955.0009 Z M324.993463,976.87957 C324.872152,976.766854 324.780121,976.683706 324.690711,976.597856 C321.790418,973.811786 318.893494,971.022189 315.989007,968.240547 C314.658636,966.966456 312.616577,967.013509 311.349107,968.330524 C310.100733,969.627579 310.117806,971.682348 311.430879,972.950961 C315.194574,976.586975 318.968901,980.212107 322.749669,983.830336 C324.00935,985.035837 325.949194,985.023455 327.226998,983.833263 C327.738748,983.356661 328.237993,982.866551 328.742255,982.381919 C331.975179,979.275038 335.205781,976.165755 338.442149,973.062401 C339.219884,972.316617 339.627023,971.415718 339.524882,970.34312 C339.39496,968.979427 338.675709,967.997556 337.384726,967.527408 C336.097488,967.05861 334.926992,967.34175 333.933893,968.290376 C332.308184,969.843104 330.690187,971.404011 329.069194,972.961767 C327.719204,974.259046 326.369513,975.556776 324.993463,976.87957 L324.993463,976.87957 Z"
+                                                    id="pocket"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Pocket
+                            </p>
+
+                            <a href="/angular/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--Vue-->
+                        <div class="relative max-w-xs overflow-hidden rounded-md bg-white bg-cover bg-no-repeat p-5 text-center dark:bg-neutral-800"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <div class="flex items-center justify-center">
+                                <svg width="64px" height="64px" viewBox="0 -7 48 48" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    fill="#000000">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>Youtube-color</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs> </defs>
+                                        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Color-" transform="translate(-200.000000, -368.000000)"
+                                                fill="#CE1312">
+                                                <path
+                                                    d="M219.044,391.269916 L219.0425,377.687742 L232.0115,384.502244 L219.044,391.269916 Z M247.52,375.334163 C247.52,375.334163 247.0505,372.003199 245.612,370.536366 C243.7865,368.610299 241.7405,368.601235 240.803,368.489448 C234.086,368 224.0105,368 224.0105,368 L223.9895,368 C223.9895,368 213.914,368 207.197,368.489448 C206.258,368.601235 204.2135,368.610299 202.3865,370.536366 C200.948,372.003199 200.48,375.334163 200.48,375.334163 C200.48,375.334163 200,379.246723 200,383.157773 L200,386.82561 C200,390.73817 200.48,394.64922 200.48,394.64922 C200.48,394.64922 200.948,397.980184 202.3865,399.447016 C204.2135,401.373084 206.612,401.312658 207.68,401.513574 C211.52,401.885191 224,402 224,402 C224,402 234.086,401.984894 240.803,401.495446 C241.7405,401.382148 243.7865,401.373084 245.612,399.447016 C247.0505,397.980184 247.52,394.64922 247.52,394.64922 C247.52,394.64922 248,390.73817 248,386.82561 L248,383.157773 C248,379.246723 247.52,375.334163 247.52,375.334163 L247.52,375.334163 Z"
+                                                    id="Youtube"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="mt-7 font-medium text-gray-500 dark:text-gray-400">
+                                Youtube
+                            </p>
+
+                            <a href="/vue/" class="items-center justify-center">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,56%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
+        </section>
+        <!--Section: / Technology-->
+
+
+
+
+    </main>
+
+    <footer
+        class=" mt-16 bg-slate-100 text-center text-neutral-600 transition-colors duration-500 dark:bg-neutral-900 dark:text-neutral-100 lg:text-left">
+        <div
+            class="mx-auto py-12 min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px] min-[1400px]:max-w-[1320px]">
+            <div class="flex flex-col items-center justify-center lg:justify-between">
+
+                <div class="flex justify-center space-x-2">
+                    <a href="#"
+                        class="flex items-center justify-center rounded bg-gray-700 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-yellow-600 hover:text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-gray-800 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                        GO TO THE TOP
+
+                    </a>
+                </div>
+            </div>
+            <hr class=" my-12 border-neutral-300 dark:border-neutral-600" />
+            <div class="pb-10 text-center text-gray-600 md:text-left">
+                <div class="grid-2 grid gap-10 px-12 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="">
+                        <h3
+                            class="mb-2.5 flex items-center justify-center text-xl font-semibold uppercase md:justify-start">
+
+                            Tailwind ELEMENTS
+                        </h3>
+                        <p>
+                            An open-source collection of components, templates and plugins for
+                            Tailwind CSS. Easily customizable &amp; optimized for performance.
+                        </p>
+                    </div>
+
+                    <div class="mx-12">
+                        <h4 class="mb-2.5 text-xl font-bold uppercase">Useful Links</h4>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/license/#contactFormLicense"
+                                class="text-neutral-700 dark:text-gray-500">Contact Us</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://mdbootstrap.com/services/"
+                                class="text-neutral-700 dark:text-gray-500">Services</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/license/"
+                                class="text-neutral-700 dark:text-gray-500">License</a>
+                        </p>
+
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/press-pack/"
+                                class="text-neutral-700 dark:text-gray-500">Press Pack</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://mdbgo.com/" class="text-neutral-700 dark:text-gray-500">Free Hosting</a>
+                        </p>
+
+                    </div>
+
+                    <div class="mx-12">
+                        <h4 class="mb-2.5 text-xl font-bold uppercase">Coming Soon</h4>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/docs/standard/templates/"
+                                class="text-neutral-700 dark:text-gray-500">Templates</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/docs/standard/builder/"
+                                class="text-neutral-700 dark:text-gray-500">Drag &amp; Drop Builder</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/angular/"
+                                class="text-neutral-700 dark:text-gray-500">Angular</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/vue/"
+                                class="text-neutral-700 dark:text-gray-500">Vue</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/vue/"
+                                class="text-neutral-700 dark:text-gray-500">Vue</a>
+                        </p>
+                    </div>
+
+                    <div class="mx-12 md:me-0 md:ms-5">
+                        <h4 class="mb-2.5 text-xl font-bold uppercase">Community</h4>
+
+                        <p class="mb-1">
+                            <a href="https://github.com/mdbootstrap/Tailwind-Elements/discussions"
+                                class="text-neutral-700 dark:text-gray-500">Discussion</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://github.com/mdbootstrap/Tailwind-Elements/issues"
+                                class="text-neutral-700 dark:text-gray-500">Issues</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/docs/standard/getting-started/contribute/"
+                                class="text-neutral-700 dark:text-gray-500">Contribute</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://github.com/mdbootstrap/Tailwind-Elements/issues"
+                                class="text-neutral-700 dark:text-gray-500">Issues</a>
+                        </p>
+                        <p class="mb-1">
+                            <a href="https://tailwind-elements.com/docs/standard/getting-started/contribute/"
+                                class="text-neutral-700 dark:text-gray-500">Contribute</a>
+                        </p>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slate-200 p-4 text-center text-gray-500 dark:bg-black">
+            <span>© 2023 Copyright : </span>
+            <a class="font-semibold text-primary dark:text-yellow-800"
+                href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </footer>
+
+
+    <script type="module" src="https://tw-elements.com/js/tw-elements.umd.min.js?v=1.0.0"></script>
+
+    <script type="text/javascript" src="https://tw-elements.com/js/theme.js"></script>
+
+    <script type="text/javascript" src="https://tw-elements.com/js/new-prism.js"></script>
+    <link rel="stylesheet" href="https://tw-elements.com/css/new-prism.css" />
+
+
+
+    <script type="module">
+        window.addEventListener("load", (event) => {
+            const locationHash = window.location.hash;
+            const scrollTop = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            };
+
+            if (locationHash === "#docsTabsAPI") {
+                const apiTab = document.querySelector(
+                    '#docs-nav-pills a[href="#docsTabsAPI"]'
+                );
+
+                if (apiTab) {
+                    const apiTabsInstance = new te.Tab(apiTab);
+
+                    apiTabsInstance.show();
+                    scrollTop();
+                }
+            } else if (locationHash === "#docsTabsOverview") {
+                scrollTop();
+            } else if (
+                ["#topTemplates", "#newTemplates", "#trendingTemplates"].indexOf(
+                    locationHash
+                ) !== -1
+            ) {
+                const templateTab = document.querySelector(
+                    '#templates-nav-pills a[href="' + locationHash + '"]'
+                );
+
+                if (templateTab) {
+                    const templateTabsInstance = new mdb.Tab(templateTab);
+
+                    templateTabsInstance.show();
+                    scrollTop();
+                }
+            } else if (locationHash) {
+                const el = document.querySelector(locationHash);
+                const width = el && getComputedStyle(el).width;
+
+                if (el && width === "auto") {
+                    const apiTab = document.querySelector(
+                        '#docs-nav-pills a[href="#docsTabsAPI"]'
+                    );
+
+                    const apiTabsInstance = new te.Tab(apiTab);
+                    apiTabsInstance.show();
+
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: el.offsetTop - 75,
+                            behavior: "smooth"
+                        });
+                    }, 200);
+                }
+            }
+
+            const navPills = document.querySelectorAll(
+                '#docs-nav-pills a[data-te-toggle="pill"]'
+            );
+
+            if (navPills.length) {
+                navPills.forEach((el) => {
+                    el.addEventListener("click", (e) => {
+                        window.location.hash = e.target.hash;
+
+                        scrollTop();
+                    });
+                });
+            }
+
+            const templatePills = document.querySelectorAll(
+                '#templates-nav-pills a[data-te-toggle="pill"]'
+            );
+
+            if (templatePills.length) {
+                templatePills.forEach((el) => {
+                    el.addEventListener("click", (e) => {
+                        window.location.hash = e.target.hash;
+
+                        scrollTop();
+                    });
+                });
+            }
+        });
+    </script>
+
+
+    <script>
+        const switchInputs = document.querySelectorAll("[data-te-umd-toggler]");
+
+        switchInputs.forEach((item) => {
+            const umdScriptEnabled = item.dataset.script.toLowerCase() === "javascript";
+
+            if (umdScriptEnabled) {
+                item.checked = true;
+            }
+
+            const tabs = [...item.parentNode.parentNode.querySelectorAll("a")];
+
+
+            const indexOfUmd = tabs.findIndex(
+                (item) => item.textContent.toLowerCase() === "umd"
+            );
+            if (indexOfUmd >= 0) {
+                tabs[indexOfUmd].textContent = "javascript";
+            }
+        });
+
+        switchInputs.forEach((item) =>
+            item.addEventListener("change", toggleScriptTab)
+        );
+
+        function getSortedScriptTabs(e, tabs) {
+
+            const providedArray = e.target.value
+                .replace("[", "")
+                .replace("]", "")
+                .split(" ");
+            const isScriptFirst =
+                providedArray.indexOf("umd") > providedArray.indexOf("javascript");
+
+
+            const scripts = tabs.filter((item) => item.textContent === "javascript");
+            return isScriptFirst ? scripts : scripts.reverse();
+        }
+
+        function toggleScriptTab(e) {
+            const inputParent = e.target.parentNode.parentNode;
+            const tabs = [...inputParent.querySelectorAll("a")];
+
+            const sortedScriptTabs = getSortedScriptTabs(e, tabs);
+
+
+            const activeTab = inputParent
+                .querySelector("[data-te-nav-active]")
+                .textContent.toLowerCase();
+            const isScriptCurrentTab =
+                activeTab === "javascript" || activeTab === "umd";
+
+
+            e.target.checked ?
+                _toggleScriptTabs(...sortedScriptTabs, isScriptCurrentTab) :
+                _toggleScriptTabs(
+                    ...sortedScriptTabs.slice().reverse(),
+                    isScriptCurrentTab
+                );
+        }
+
+        function _toggleScriptTabs(tab1, tab2, isScriptCurrentTab) {
+            tab1.classList.toggle("hidden");
+            tab2.classList.toggle("hidden");
+
+            isScriptCurrentTab && tab2.click();
+        }
+    </script>
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+
+
+</body>
+
+</html>
