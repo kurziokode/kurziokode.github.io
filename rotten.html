@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Rot in Style</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="format-detection" content="telephone=no">
-<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Montserrat" rel="stylesheet">
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<style>
-/* 
+    <meta charset="UTF-8">
+    <title>Rot in Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Montserrat" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+        integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        /* 
 ==================================================
 Base Styles
 
@@ -18,744 +21,753 @@ font-family: 'Merriweather Sans', sans-serif;
 ================================================== 
 */
 
-*,
-*:before,
-*:after {
-	cursor: url('https://kurziokode.github.io/curs2.png'), auto;
-	box-sizing: border-box;
-}
+        *,
+        *:before,
+        *:after {
+            cursor: url('https://kurziokode.github.io/curs2.png'), auto;
+            box-sizing: border-box;
+        }
 
-*:focus {
-	outline: none;
-}
+        *:focus {
+            outline: none;
+        }
 
-body {
-	padding-top: 45px;
-	background: #0b0c0e;
-	font-family: "Montserrat", sans-serif;
-	letter-spacing: 0px;
-	line-height: 1.5em;
-}
+        body {
+            padding-top: 45px;
+            background: #0b0c0e;
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: 0px;
+            line-height: 1.5em;
+        }
 
-h1,
-h2
-	{
-		font-family: "Merriweather Sans",
-		sans-serif;
-		letter-spacing: 1px;
-                color: #404040;
-		opacity: 1;
+        h1,
+        h2 {
+            font-family: "Merriweather Sans",
+                sans-serif;
+            letter-spacing: 1px;
+            color: #404040;
+            opacity: 1;
 
-}
-
-
-
-h3,
-h4,
-h5,
-h6,
-p {
-	font-family: "Merriweather Sans", sans-serif;
-	letter-spacing: 1px;
-	color: #5e5e5e;
-}
-
-ul {
-	list-style: none;
-}
-
-li {
-	display: inline;
-	color: #41253e;
-}
-
-a {
-	text-decoration: none;
-	color: #41253e;
-}
-
-.svg-inline--fa {
-	font-size: 1.2em;
-}
+        }
 
 
 
-.myrow-uneven {
-	max-width: 1460px;
-	margin: 0 auto;
-}
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-family: "Merriweather Sans", sans-serif;
+            letter-spacing: 1px;
+            color: #5e5e5e;
+        }
 
-/* 
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: inline;
+            color: #41253e;
+        }
+
+        a {
+            text-decoration: none;
+            color: #41253e;
+        }
+
+        .svg-inline--fa {
+            font-size: 1.2em;
+        }
+
+
+
+        .myrow-uneven {
+            max-width: 1460px;
+            margin: 0 auto;
+        }
+
+        /* 
 ==================================================
 Navigation menus
 ================================================== 
 */
 
-/* **********
+        /* **********
 STANDARD MENU 
 ********** */
 
-.standard-nav {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	z-index: 9999;
-	display: flex;
-	justify-content: space-between;
-	background: #100910;
-	padding: 2px;
-}
+        .standard-nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            background: #100910;
+            padding: 2px;
+        }
 
-.links {
-	padding: 12px 2px;
-	
-}
+        .links {
+            padding: 12px 2px;
 
-.links a {
-	padding: 0px 12px;
-	color: #5e5e5e;
-	transition: all 0.35s;
-	display: inline-block;
-}
+        }
 
-.links a:hover {
-	transform: scale(1.1);
-	color: #aa099c;
-}
+        .links a {
+            padding: 0px 12px;
+            color: #5e5e5e;
+            transition: all 0.35s;
+            display: inline-block;
+        }
 
-.brand {
-	color: #eee;
-	padding: 12px 15px;
-	display: inline-block;
-}
+        .links a:hover {
+            transform: scale(1.1);
+            color: #aa099c;
+        }
 
-/* 
+        .brand {
+            color: #eee;
+            padding: 12px 15px;
+            display: inline-block;
+        }
+
+        /* 
 ==================================================
 Hero
 ================================================== 
 */
 
-.top-intro {
-	text-align: center;
-}
+        .top-intro {
+            text-align: center;
+        }
 
-.top-intro h1 {
-	font-size: 3em;
-	line-height: 1.2em;
-	
-}
+        .top-intro h1 {
+            font-size: 3em;
+            line-height: 1.2em;
 
-.top-intro p {
-	font-size: 1.2em;
-}
+        }
 
-.accent {
-	background: #000;
-	color: #412541;
-	padding: 5px 10px;
-}
+        .top-intro p {
+            font-size: 1.2em;
+        }
 
-#home .myrow {
-	margin-bottom: 0;
-}
+        .accent {
+            background: #000;
+            color: #412541;
+            padding: 5px 10px;
+        }
 
-.hero .myrow {
-	background: transparent;
-}
+        #home .myrow {
+            margin-bottom: 0;
+        }
 
-.hero {
-	height: 768px;
-	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("https://images.unsplash.com/photo-1475695752828-6d2b0a83cf8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1321&q=80")no-repeat
-			center;
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	color: #311c2f;
-	padding: 40px;
-}
+        .hero .myrow {
+            background: transparent;
+        }
 
-.hero h1 {
-	font-size: 4em;
-	text-transform: uppercase;
-}
+        .hero {
+            height: 768px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("https://images.unsplash.com/photo-1475695752828-6d2b0a83cf8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1321&q=80")no-repeat center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            color: #311c2f;
+            padding: 40px;
+        }
 
-.hero p {
-	font-size: 1.5em;
-}
+        .hero h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+        }
 
-/* 
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        /* 
 ==================================================
 Posts
 ================================================== 
 */
 
-.blog-header {
-	text-align: center;
-}
+        .blog-header {
+            text-align: center;
+        }
 
-.blog-header h2 {
-	text-transform: uppercase;
-}
+        .blog-header h2 {
+            text-transform: uppercase;
+        }
 
-.date {
-	color: #737373;
-}
+        .date {
+            color: #737373;
+        }
 
-.date2 {
-	color: #404040;
-}
+        .date2 {
+            color: #404040;
+        }
 
-.likes,
-.replies {
-	padding: 10px 15px;
-	cursor: pointer;
-	transition: all 0.35s;
-}
+        .likes,
+        .replies {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.35s;
+        }
 
-.likes {
-	border: 1px solid #b2b2b2;
-	background: transparent;
-	font-weight: bold;
-}
+        .likes {
+            border: 1px solid #b2b2b2;
+            background: transparent;
+            font-weight: bold;
+        }
 
-.likes:hover {
-	border: 1px solid #000;
-	background: #000;
-	color: #fff;
-}
+        .likes:hover {
+            border: 1px solid #000;
+            background: #000;
+            color: #fff;
+        }
 
-.replies {
-	border: 1px solid #000;
-	background: #000;
-	color: #fff;
-}
+        .replies {
+            border: 1px solid #000;
+            background: #000;
+            color: #fff;
+        }
 
-.replies:hover {
-	border: 1px solid #f1f1f1;
-	background: #f1f1f1;
-	color: #000;
-}
+        .replies:hover {
+            border: 1px solid #f1f1f1;
+            background: #f1f1f1;
+            color: #000;
+        }
 
-.count {
-	background: #97088b;
-	color: #fff;
-	padding: 5px;
-	margin-left: 15px;
-}
+        .count {
+            background: #97088b;
+            color: #fff;
+            padding: 5px;
+            margin-left: 15px;
+        }
 
-.post-btm-bar {
-	display: flex;
-	justify-content: space-between;
-}
+        .post-btm-bar {
+            display: flex;
+            justify-content: space-between;
+        }
 
-/* 
+        /* 
 ==================================================
 Sidebar
 ================================================== 
 */
 
-.profile .author {
-	padding: 0;
-}
+        .profile .author {
+            padding: 0;
+        }
 
-.abt {
-	padding: 10px 20px;
-	background: #000;
-	color: #fff;
-	margin-top: -7px;
-}
+        .abt {
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            margin-top: -7px;
+        }
 
-.profile-title {
-}
+        .profile-title {}
 
-/************
+        /************
 POPULAR POSTS
 ************/
 
-.sidebar-header {
-	background: #000;
-	color: #fff;
-	padding: 1px 20px;
-}
+        .sidebar-header {
+            background: #000;
+            color: #fff;
+            padding: 1px 20px;
+        }
 
-.p-img img {
-	width: 100%;
-	height: auto;
-}
+        .p-img img {
+            width: 100%;
+            height: auto;
+        }
 
-.p-img {
-	margin-right: 10px;
-	max-width: 100px;
-}
+        .p-img {
+            margin-right: 10px;
+            max-width: 100px;
+        }
 
-.p-posts {
-	display: flex;
-	align-items: center;
-	transition: all 0.35s;
-	cursor: pointer;
-	
-}
+        .p-posts {
+            display: flex;
+            align-items: center;
+            transition: all 0.35s;
+            cursor: pointer;
 
-.popular-posts .myrow {
-	margin-bottom: 0;
-	border-bottom: 1px solid #211221;
-	
-}
+        }
 
-.p-posts:hover {
-	background: #000 !important;
-	
-}
+        .popular-posts .myrow {
+            margin-bottom: 0;
+            border-bottom: 1px solid #211221;
 
-.popular-posts .myrow:last-child {
-	margin-bottom: 20px;
-	border: none;
-	
-}
+        }
 
-.p-text h5 {
-	line-height: 0;
-}
+        .p-posts:hover {
+            background: #000 !important;
 
-/************
+        }
+
+        .popular-posts .myrow:last-child {
+            margin-bottom: 20px;
+            border: none;
+
+        }
+
+        .p-text h5 {
+            line-height: 0;
+        }
+
+        /************
 TAG CLOUD
 ************/
 
-.tag {
-	display: inline-block;
-	background: #211221;
-	padding: 5px 10px;
-	font-size: 0.85em;
-	margin-bottom: 5px;
-	cursor: pointer;
-	transition: all 0.35s;
-	color: #5e5e5e;
-}
+        .tag {
+            display: inline-block;
+            background: #211221;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: all 0.35s;
+            color: #5e5e5e;
+        }
 
-.tag:hover {
-	background: #000;
-	color: #aa099c;
-}
+        .tag:hover {
+            background: #000;
+            color: #aa099c;
+        }
 
-/************
+        /************
 SOCIAL FOLLOW
 ************/
 
-.follow a {
-	transition: all 0.35s;
-	display: inline-block;
-	font-size: 1.2em;
-	padding: 10px;
-	color: #5e5e5e;
-}
+        .follow a {
+            transition: all 0.35s;
+            display: inline-block;
+            font-size: 1.2em;
+            padding: 10px;
+            color: #5e5e5e;
+        }
 
-.follow a:hover {
-	transform: scale(1.1);
-	color: #aa099c;
-}
+        .follow a:hover {
+            transform: scale(1.1);
+            color: #aa099c;
+        }
 
-/************
+        /************
 SUBSCRIBE
 ************/
 
 
 
-/* 
+        /* 
 ==================================================
 Footer
 ================================================== 
 */
 
-footer {
-	text-align: center;
-	background: #100910;
-	color: #5e5e5e;
-	padding: 5px;
-}
+        footer {
+            text-align: center;
+            background: #100910;
+            color: #5e5e5e;
+            padding: 5px;
+        }
 
-footer .myrow,
-footer .mycol {
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
+        footer .myrow,
+        footer .mycol {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
 
-footer a {
-	display: inline-block;
-	padding-right: 10px;
-	color: #5e5e5e;
-	transition: all 0.35s;
-}
+        footer a {
+            display: inline-block;
+            padding-right: 10px;
+            color: #5e5e5e;
+            transition: all 0.35s;
+        }
 
-footer a:hover {
-	transform: scale(1.05);
-	color: #aa099c;
-}
+        footer a:hover {
+            transform: scale(1.05);
+            color: #aa099c;
+        }
 
-footer p {
-	font-size: 0.75em;
-	color: #5e5e5e;
-	text-transform: uppercase;
-}
+        footer p {
+            font-size: 0.75em;
+            color: #5e5e5e;
+            text-transform: uppercase;
+        }
 
-footer .svg-inline--fa {
-	font-size: 1em;
-}
+        footer .svg-inline--fa {
+            font-size: 1em;
+        }
 
-/* 
+        /* 
 ==================================================
 Grid Layout
 ================================================== 
 */
 
-.myrow {
-	display: flex;
-	margin: 0 0 30px 0;
-}
+        .myrow {
+            display: flex;
+            margin: 0 0 30px 0;
+        }
 
-.mycol {
-	padding: 20px;
-}
+        .mycol {
+            padding: 20px;
+        }
 
-.myrow-uneven .mycol {
-	background: #0b0c0e;
-	/* padding: 20px; */
-}
+        .myrow-uneven .mycol {
+            background: #0b0c0e;
+            /* padding: 20px; */
+        }
 
-.myrow-uneven {
-	padding: 30px;
-}
+        .myrow-uneven {
+            padding: 30px;
+        }
 
-.mycol-left {
-	margin-right: 15px;
-}
+        .mycol-left {
+            margin-right: 15px;
+        }
 
-.mycol-right {
-	margin-left: 15px;
-}
+        .mycol-right {
+            margin-left: 15px;
+        }
 
-.myrow .mycol {
-	flex: 1;
-}
+        .myrow .mycol {
+            flex: 1;
+        }
 
-.myrow-halves,
-.myrow-thirds,
-.myrow-fourths,
-.myrow-uneven {
-	display: flex;
-	justify-content: space-between;
-}
+        .myrow-halves,
+        .myrow-thirds,
+        .myrow-fourths,
+        .myrow-uneven {
+            display: flex;
+            justify-content: space-between;
+        }
 
-.myrow-uneven .mycol-left {
-	width: 70%;
-}
+        .myrow-uneven .mycol-left {
+            width: 70%;
+        }
 
-.myrow-uneven .mycol-right {
-	width: 30%;
-}
+        .myrow-uneven .mycol-right {
+            width: 30%;
+        }
 
-.myrow-halves .mycol {
-	width: 49%;
-	margin: 0 auto;
-}
+        .myrow-halves .mycol {
+            width: 49%;
+            margin: 0 auto;
+        }
 
-.myrow-thirds .mycol {
-	width: 32%;
-}
+        .myrow-thirds .mycol {
+            width: 32%;
+        }
 
-.myrow-fourths .mycol {
-	width: 24%;
-}
+        .myrow-fourths .mycol {
+            width: 24%;
+        }
 
-/* 
+
+        .first-letter {
+            color: #733f73;
+            
+            opacity: 0.7;
+            
+        }
+        /* 
 ==================================================
 Media Queries
 ================================================== 
 */
 
-@media (max-width: 970px) {
-	.myrow,
-	.myrow-halves,
-	.myrow-thirds,
-	.myrow-fourths,
-	.myrow-uneven {
-		display: block;
-	}
+        @media (max-width: 970px) {
 
-	.myrow .mycol,
-	.myrow-halves .mycol,
-	.myrow-thirds .mycol,
-	.myrow-fourths .mycol,
-	.myrow-uneven .mycol-left,
-	.myrow-uneven .mycol-right {
-		width: 100%;
-		margin: 0 0 10px 0;
-	}
-}
+            .myrow,
+            .myrow-halves,
+            .myrow-thirds,
+            .myrow-fourths,
+            .myrow-uneven {
+                display: block;
+            }
 
-@media (max-width: 650px) {
-	.hero h1 {
-	font-size: 4em;
-	text-transform: uppercase;
-}
+            .myrow .mycol,
+            .myrow-halves .mycol,
+            .myrow-thirds .mycol,
+            .myrow-fourths .mycol,
+            .myrow-uneven .mycol-left,
+            .myrow-uneven .mycol-right {
+                width: 100%;
+                margin: 0 0 10px 0;
+            }
+        }
 
-.hero p {
-	font-size: 1.5em;
-}
-}
+        @media (max-width: 650px) {
+            .hero h1 {
+                font-size: 4em;
+                text-transform: uppercase;
+            }
 
-@media (max-width: 550px) {
-	.hero h1 {
-	font-size: 3em;
-	text-transform: uppercase;
-		line-height: 1.2em;
-}
+            .hero p {
+                font-size: 1.5em;
+            }
+        }
 
-.hero p {
-	font-size: 1.5em;
-	line-height: 0;
-}
-}
+        @media (max-width: 550px) {
+            .hero h1 {
+                font-size: 3em;
+                text-transform: uppercase;
+                line-height: 1.2em;
+            }
 
-@media(max-width: 480px) {
-	.top-intro h1 {
-		font-size: 2.5em;
-	}
-}
-</style>
+            .hero p {
+                font-size: 1.5em;
+                line-height: 0;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .top-intro h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<nav class="standard-nav">
-	<div class="links">
-		<a href="#"><i class="fab fa-facebook-f"></i></a>
-		<a href="#"><i class="fab fa-twitter"></i></a>
-		<a href="#"><i class="fab fa-pinterest"></i></a>
-		<a href="#"><i class="fab fa-instagram"></i></a>
-		<a href="#"><i class="fab fa-youtube"></i></a>
-		
-	</div>
-	<div class="links">
-		<a href="#"><i class="fas fa-search"></i></a>
-	</div>
-</nav>
+    <!-- partial:index.partial.html -->
+    <nav class="standard-nav">
+        <div class="links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
 
-<section id="home">
-	<div class="myrow">
-		<div class="mycol">
-			<header class="top-intro">
-				
-				<p><span class="accent">THE FINE ART OF CULT</span></p>
-			</header>
-		</div>
-	</div>
-	<section class="hero">
-		<div class="myrow">
-			<div class="mycol">
-				<header>
-					
-					<p><span class="accent">
-						By CURZIO</span>
-					</p>
-				</header>
-			</div>
-		</div>
-	</section>
-</section>
+        </div>
+        <div class="links">
+            <a href="#"><i class="fas fa-search"></i></a>
+        </div>
+    </nav>
 
-<div class="myrow-uneven">
-	<div class="mycol-left">
-		<div class="myrow">
-			<div class="mycol">
-				<header class="blog-header">
-					<h2>
-						Out and About
-					</h2>
-					<p>Best shops in town,<span class="date">&nbsp;April 2, 2018</span></p>
-				</header>
-				<img src="https://kurziokode.github.io/1707.jpg" style="width:100%">
-				<p><strong>In this post</strong> you'll find all the coolest, hippest and most skilled tattoo shops across the World.Sed mattis nunc id lorem euismod placerat...</p>
-				
-			</div>
-		</div>
+    <section id="home">
+        <div class="myrow">
+            <div class="mycol">
+                <header class="top-intro">
 
-		<div class="myrow">
-			<div class="mycol">
-				<header class="blog-header">
-					<h2>
-						Tattoos and Work
-					</h2>
-					<p>Stigmas attached to tattoos<span class="date">&nbsp;March 30, 2018</span></p>
-				</header>
-				<img src="https://kurziokode.github.io/9299.jpg" style="width:100%">
-				<p><strong>In this post</strong> you'll find all the coolest, hippest and most skilled tattoo shops across the World.Sed mattis nunc id lorem euismod placerat...</p>
-				
-			</div>
-		</div>
+                    <p><span class="accent">THE FINE ART OF CULT</span></p>
+                </header>
+            </div>
+        </div>
+        <section class="hero">
+            <div class="myrow">
+                <div class="mycol">
+                    <header>
 
-	
+                        <p><span class="accent">
+                                by Curzio</span>
+                        </p>
+                    </header>
+                </div>
+            </div>
+        </section>
+    </section>
 
-	</div>
+    <div class="myrow-uneven">
+        <div class="mycol-left">
+            <div class="myrow">
+                <div class="mycol">
+                    <header class="blog-header">
+                        <h2>
+                            Out and <span class="first-letter">About</span>
+                        </h2>
+                        <p>Best shops in town,<span class="date">&nbsp;April 2, 2018</span></p>
+                    </header>
+                    <img src="https://kurziokode.github.io/1707.jpg" style="width:100%">
+                    <p><strong>In this post</strong> you'll find all the coolest, hippest and most skilled tattoo shops
+                        across the World.Sed mattis nunc id lorem euismod placerat...</p>
 
-	<!-- SIDEBAR -->
-	<div class="mycol-right">
-		<section class="profile">
-			<div class="myrow author">
-				<div class="mycol author">
-					<img src="https://kurziokode.github.io/dewa.jpg" style="width:100%">
-					<div class="abt">
-						<h3 class="profile-title">Megan Moore</h3>
-						<p>Megan is a lifestyle blogger who loves to write about her passions of tattoos. </p>
-					</div>
-				</div>
-			</div>
-		</section>
+                </div>
+            </div>
 
-		<section class="popular-posts">
-			<header class="sidebar-header">
-				<h2 class="date2">Popular Posts</h2>
-			</header>
-			<div class="myrow">
-				<div class="mycol p-posts">
-					<div class="p-img">
-						<img src="https://kurziokode.github.io/mag.jpg">
-					</div>
-					<div class="p-text">
-						<h5 class="date">Adventures</h5>
-						<p>Sed mattis nunct...</p>
-					</div>
-				</div>
-			</div>
+            <div class="myrow">
+                <div class="mycol">
+                    <header class="blog-header">
+                        <h2>
+                            Tattoos and <span class="first-letter">Work</span>
+                        </h2>
+                        <p>Stigmas attached to tattoos<span class="date">&nbsp;March 30, 2018</span></p>
+                    </header>
+                    <img src="https://kurziokode.github.io/9299.jpg" style="width:100%">
+                    <p><strong>In this post</strong> you'll find all the coolest, hippest and most skilled tattoo shops
+                        across the World.Sed mattis nunc id lorem euismod placerat...</p>
 
-			<div class="myrow">
-				<div class="mycol p-posts">
-					<div class="p-img">
-						<img src="https://kurziokode.github.io/luk.jpg">
-					</div>
-					<div class="p-text">
-						<h5 class="date">Art Walks</h5>
-						<p>Sed mattis nunc...</p>
-					</div>
-				</div>
-			</div>
-			<div class="myrow">
-				<div class="mycol p-posts">
-					<div class="p-img">
-						<img src="https://kurziokode.github.io/max.jpg">
-					</div>
-					<div class="p-text">
-						<h5 class="date">Conventions</h5>
-						<p>Sed mattis nunc...</p>
-					</div>
-				</div>
-			</div>
-			<div class="myrow">
-				<div class="mycol p-posts">
-					<div class="p-img">
-						<img src="https://kurziokode.github.io/dav.jpg">
-					</div>
-					<div class="p-text">
-						<h5 class="date">New School</h5>
-						<p>Sed mattis nunc...</p>
-					</div>
-				</div>
-			</div>
-			<div class="myrow">
-				<div class="mycol p-posts">
-					<div class="p-img">
-						<img src="https://kurziokode.github.io/ale.jpg">
-					</div>
-					<div class="p-text">
-						<h5 class="date">Traditional</h5>
-						<p>Sed mattis nunc...</p>
-					</div>
-				</div>
-			</div>
-		</section>
+                </div>
+            </div>
 
-		<section class="tag-cloud">
-			<header class="sidebar-header">
-				<h2 class="date2">Tags</h2>
-			</header>
-			<div class="myrow">
-				<div class="mycol">
-					<a href="#"><span class="tag">Art</span></a>
-				    <a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-					<a href="#"><span class="tag">Art</span></a>
-				
-				</div>
-			</div>
-		</section>
 
-		<section class="follow">
-			<header class="sidebar-header">
-				<h2 class="date2">Follow me</h2>
-			</header>
-			<div class="myrow">
-				<div class="mycol">
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-pinterest"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-snapchat"></i></a>
-					
-				</div>
-			</div>
-		</section>
 
-		<section class="subscribe">
-			
+        </div>
 
-		</section>
+        <!-- SIDEBAR -->
+        <div class="mycol-right">
+            <section class="profile">
+                <div class="myrow author">
+                    <div class="mycol author">
+                        <img src="https://kurziokode.github.io/dewa.jpg" style="width:100%">
+                        <div class="abt">
+                            <h3 class="profile-title">Megan Moore</h3>
+                            <p>Megan is a lifestyle blogger who loves to write about her passions of tattoos. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-	</div>
-</div>
+            <section class="popular-posts">
+                <header class="sidebar-header">
+                    <h2 class="date2">Popular Posts</h2>
+                </header>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="https://kurziokode.github.io/mag.jpg">
+                        </div>
+                        <div class="p-text">
+                            <h5 class="date">Adventures</h5>
+                            <p class="date2">Sed mattis nunct...</p>
+                        </div>
+                    </div>
+                </div>
 
-<footer>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="https://kurziokode.github.io/luk.jpg">
+                        </div>
+                        <div class="p-text">
+                            <h5 class="date">Art Walks</h5>
+                            <p class="date2">Sed mattis nunc...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="https://kurziokode.github.io/max.jpg">
+                        </div>
+                        <div class="p-text">
+                            <h5 class="date">Conventions</h5>
+                            <p class="date2">Sed mattis nunc...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="https://kurziokode.github.io/dav.jpg">
+                        </div>
+                        <div class="p-text">
+                            <h5 class="date">New School</h5>
+                            <p class="date2">Sed mattis nunc...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="https://kurziokode.github.io/ale.jpg">
+                        </div>
+                        <div class="p-text">
+                            <h5 class="date">Traditional</h5>
+                            <p class="date2">Sed mattis nunc...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-	<div class="myrow">
-		<div class="mycol">
-			<p>Copyright <i class="far fa-copyright"></i> 2023 | crafted by Chris Doulos </p>
-		</div>
-	</div>
-</footer>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+            <section class="tag-cloud">
+                <header class="sidebar-header">
+                    <h2 class="date2">Tags</h2>
+                </header>
+                <div class="myrow">
+                    <div class="mycol">
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+                        <a href="#"><span class="tag">Art</span></a>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="follow">
+                <header class="sidebar-header">
+                    <h2 class="date2">Follow me</h2>
+                </header>
+                <div class="myrow">
+                    <div class="mycol">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-snapchat"></i></a>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="subscribe">
+
+
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="myrow">
+            <div class="mycol">
+                <p>Copyright <i class="far fa-copyright"></i> 2023 | CHRIS DOULOS</p>
+            </div>
+        </div>
+    </footer>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script>
         document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
             link.setAttribute('rel', 'noopener noreferrer');
         });
     </script>
- <script>
-/* 
-=======================================
-Mobile menu functionality
-=======================================
-*/
+    <script>
+        /* 
+        =======================================
+        Mobile menu functionality
+        =======================================
+        */
 
-$(".open-burger").on("click", function() {
-		$("#myNav").css("width", "100%");
-	});
+        $(".open-burger").on("click", function () {
+            $("#myNav").css("width", "100%");
+        });
 
-$(".close-burger").on("click", function() {
-		$("#myNav").css("width", "0%");
-	});
+        $(".close-burger").on("click", function () {
+            $("#myNav").css("width", "0%");
+        });
 
 
-</script> 
+    </script>
 </body>
+
 </html>
 
 
