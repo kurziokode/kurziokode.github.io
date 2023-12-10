@@ -33,7 +33,12 @@ font-family: 'Merriweather Sans', sans-serif;
 
         body {
             padding-top: 45px;
-            background: #0b0c0e;
+            background: url('https://kurziokode.github.io/cars.png') repeat #0b0c0e;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
             font-family: "Arial", sans-serif;
             letter-spacing: 0px;
             line-height: 1.5em;
@@ -41,7 +46,7 @@ font-family: 'Merriweather Sans', sans-serif;
 
         h1,
         h2 {
-           
+
             letter-spacing: 1px;
             color: #404040;
             opacity: 1;
@@ -152,10 +157,10 @@ Hero
         }
 
         .accent {
-            font-size: xx-large;
+            font-size: xxx-large;
             font-family: "Arial", sans-serif;
-            background: #070708;
-            color: #4d5617;
+            background: transparent;
+            color: #24290a;
             font-weight: 100;
         }
 
@@ -169,8 +174,7 @@ Hero
 
         .hero {
             height: 768px;
-            background: 
-                url("https://kurziokode.github.io/Penc.jpg")no-repeat center;
+            background: url("https://kurziokode.github.io/Penc.jpg")no-repeat center;
             background-size: cover;
             display: flex;
             align-items: center;
@@ -203,7 +207,7 @@ Posts
 
         .date {
             color: #4d5617;
-            font-size: 15px;  
+            font-size: 15px;
         }
 
         .date2 {
@@ -271,7 +275,7 @@ Sidebar
             margin-top: -7px;
         }
 
-       
+
 
         /************
 POPULAR POSTS
@@ -394,7 +398,7 @@ Footer
         }
 
         footer p:hover {
-           
+
             color: #bc050a;
         }
 
@@ -489,6 +493,11 @@ Media Queries
 
         @media (max-width: 970px) {
 
+              .accent {
+                font-size: x-large;
+                color: #485115;
+            }
+
             .myrow,
             .myrow-halves,
             .myrow-thirds,
@@ -510,8 +519,9 @@ Media Queries
 
         @media (max-width: 650px) {
 
-        .accent {
-            font-size: x-large;
+            .accent {
+                font-size: x-large;
+                color: #485115;
             }
 
             .hero h1 {
@@ -527,7 +537,8 @@ Media Queries
         @media (max-width: 550px) {
 
             .accent {
-            font-size: x-large;
+                font-size: x-large;
+                color: #485115;
             }
 
             .hero h1 {
@@ -545,7 +556,8 @@ Media Queries
         @media(max-width: 480px) {
 
             .accent {
-            font-size: large;
+                font-size: large;
+                color: #485115;
             }
 
             .top-intro h1 {
@@ -580,7 +592,7 @@ Media Queries
             </div>
         </div>
         <section class="hero">
-            
+
         </section>
     </section>
 
@@ -722,7 +734,7 @@ Media Queries
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-pinterest"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                       
+
 
                     </div>
                 </div>
@@ -730,7 +742,7 @@ Media Queries
             <section class="profile">
                 <div class="myrow author">
                     <div class="mycol author">
-            
+
                         <div class="abt">
                             <h3 class="first-letter">Χρήστος Δούλος</h3>
                             <p>Megan is a lifestyle blogger who loves to write about her passions of tattoos. </p>
@@ -738,7 +750,7 @@ Media Queries
                     </div>
                 </div>
             </section>
-          
+
 
         </div>
     </div>
