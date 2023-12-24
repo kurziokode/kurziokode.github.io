@@ -16,7 +16,7 @@ html, body {
     overflow: hidden;
     position: relative;
     z-index: 0;
-    background: url(https://img.youtube.com/vi/hvt5xjZTN1U/maxresdefault.jpg) center center no-repeat;
+    background: url() center center no-repeat;
     background-size: cover;
 }
 .blur {
