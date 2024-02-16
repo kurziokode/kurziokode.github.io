@@ -1,5 +1,5 @@
    // set the target date and time
-      const targetDate = new Date("December 22, 2023 00:00:00 GMT+0200");
+      const targetDate = new Date("June 15, 2024 00:00:00 GMT+0200");
 
       // update the countdown timer every second
       setInterval(() => {
