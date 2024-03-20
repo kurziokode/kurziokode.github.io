@@ -521,7 +521,36 @@
         .button-container a:focus {
             outline: none;
         }
+        
+        .button-container p {
+            width: 150px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: #4d5617;
+            font-size: 17px;
+            text-decoration: none;
+        }
 
+        .button-container p:hover {
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 15px;
+            font-weight: bold;
+            color: #bc050a;
+            transition: 100ms;
+        }
+
+        .button-container p:focus {
+            outline: none;
+        }
+        
         .button-container3 {
             display: flex;
             flex-wrap: wrap;
@@ -1106,8 +1135,8 @@
                         <div class="button-container3"><a href="#" style="font-size: x-large;"><span>▲</span></a>
 
                         </div>
-                        <div>
-                            <p class="button-container neumorphism-text2">made by <span style="color:#0c5a5a">Chris</span></p>
+                        <div class="button-container">
+                            <p class="neumorphism-text2">made by <span style="color:#0c5a5a">Chris</span></p>
                        
                         </div>
                     </div>
