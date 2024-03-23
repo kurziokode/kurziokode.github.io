@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QE8B495353');
+    </script>
+    <meta charset="UTF-8">
+    <title>&nbsp;&nbsp;K u r z i o</title>
+    <link rel="icon" href="ng.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+        integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fuggles" rel="stylesheet">
+    <style>
+        *,
+        *:before,
+        *:after {
+            cursor: url('curs2.png'), auto;
+            box-sizing: border-box;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        body {
+            padding-top: 45px;
+            background:  url('501.webp') repeat #030405;
+            filter: brightness(80%) contrast(104%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            font-size: 1.1em;
+            font-family: "Arial", sans-serif;
+            letter-spacing: 0px;
+            line-height: 1.8em;
+        }
+
+        h1,
+        h2 {
+
+            letter-spacing: 1px;
+            color: #404040;
+            opacity: 1;
+
+        }
+
+
+
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-family: "Arial", sans-serif;
+            letter-spacing: 1px;
+            color: #5e5e5e;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            display: inline;
+            color: #404040;
+        }
+
+        a {
+            text-decoration: none;
+            color: #404040;
+        }
+
+        .svg-inline--fa {
+            font-size: 1.2em;
+        }
+
+
+
+        .myrow-uneven {
+            max-width: 1460px;
+            margin: 0 auto;
+        }
+
+        .dark-mode-iframe {
+            filter: brightness(0.5) hue-rotate(120deg);
+
+        }
+
+
+        .standard-nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.75);
+            /* Black color with 50% transparency */
+            backdrop-filter: blur(2px);
+            padding: 0px;
+        }
+
+        .links {
+            padding: 12px 2px;
+
+        }
+
+        .links a {
+            padding: 0px 12px;
+            color: #0c5a5a;
+            transition: all 0.35s;
+            display: inline-block;
+        }
+
+        .links a:hover {
+            transform: scale(1.3);
+            color: #bc050a;
+        }
+
+        .brand {
+            color: #eee;
+            padding: 12px 15px;
+            display: inline-block;
+        }
+
+
+        .top-intro {
+            text-align: center;
+        }
+
+        .top-intro h1 {
+            font-size: 3em;
+            line-height: 1.2em;
+
+        }
+
+        .top-intro p {
+            font-size: 1.2em;
+        }
+
+        .accent {
+            font-size: xxx-large;
+            font-family: "Arial", sans-serif;
+            background: transparent;
+            color: #24290a;
+            font-weight: 100;
+        }
+
+        #home .myrow {
+            margin-bottom: 0;
+        }
+
+        .hero .myrow {
+            background: transparent;
+        }
+
+        .hero {
+            height: 768px;
+            background: url("")no-repeat center;
+            filter: brightness(80%) contrast(105%);
+
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            
+            padding: 10px;
+            margin: 1%;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+
+        .blog-header {
+            text-align: center;
+        }
+
+        .blog-header h2 {
+            font-size: 1.3em;
+
+        }
+
+        .date {
+            color: #006161;
+            
+           
+            font-size: 15px;
+        }
+
+        .date1 {
+            color: #067a7a;
+
+            text-decoration-color: #23280b;
+            font-size: 15px;
+        }
+
+        .date2 {
+            color: #404040;
+            font-size: 15px;
+        }
+
+        .likes,
+        .replies {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.35s;
+        }
+
+        .likes {
+            border: 1px solid #b2b2b2;
+            background: transparent;
+            font-weight: bold;
+        }
+
+        .likes:hover {
+            border: 1px solid #000;
+            background: #000;
+            color: #fff;
+        }
+
+        .replies {
+            border: 1px solid #000;
+            background: #000;
+            color: #fff;
+        }
+
+        .replies:hover {
+            border: 1px solid #f1f1f1;
+            background: #f1f1f1;
+            color: #000;
+        }
+
+        .count {
+            background: #97088b;
+            color: #fff;
+            padding: 5px;
+            margin-left: 15px;
+        }
+
+        .post-btm-bar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .profile .author {
+            padding: 10;
+        }
+
+        .abt {
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            margin-top: 0px;
+        }
+
+
+
+
+        .sidebar-header {
+            font-size: 0.85em;
+
+            background: #0b0c0e;
+            color: #fff;
+            padding: 1px 20px;
+        }
+
+        .p-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .p-img {
+            margin-right: 0px;
+            max-width: 160px;
+        }
+
+        .p-posts {
+            display: flex;
+            align-items: center;
+            transition: all 0.35s;
+            cursor: pointer;
+
+        }
+
+        .popular-posts .myrow {
+            margin-bottom: 0;
+            border-bottom: 1px solid #001e33;
+
+        }
+
+        .p-posts:hover {
+
+            background: #000 !important;
+
+        }
+
+        .p-text:hover h5 {
+            color: #ae040a;
+        }
+
+        .p-text:hover p {
+            color: #bc050a;
+        }
+
+        .popular-posts .myrow:last-child {
+            margin-bottom: 20px;
+            border: none;
+
+        }
+
+        .p-text h5 {
+            line-height: 0;
+        }
+
+
+
+        .tag {
+            display: inline-block;
+            background: #1a0000;
+            padding: 5px 10px;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: all 0.35s;
+            color: #5e5e5e;
+        }
+
+        .tag:hover {
+            background: #000;
+            color: #bc050a;
+
+        }
+
+        .tag2 {
+            display: inline-block;
+            background: #00101a;
+            padding: 5px 10px;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: all 0.35s;
+            color: #5e5e5e;
+        }
+
+        .tag2:hover {
+            background: #000;
+            color: #bc050a;
+
+        }
+
+        .follow a {
+            transition: all 0.35s;
+            display: inline-block;
+            font-size: 1em;
+            padding: 12px;
+            color: #4d5617;
+        }
+
+        .follow a:hover {
+            transform: scale(1.3);
+            color: #bc050a;
+        }
+
+
+
+        footer {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.75);
+            /* Black color with 50% transparency */
+            backdrop-filter: blur(2px);
+            color: #4d5617;
+            padding: 5px;
+        }
+
+        footer .myrow,
+        footer .mycol {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        footer a {
+            display: inline-block;
+            padding-right: 10px;
+            color: #079292;
+            transition: all 0.35s;
+        }
+
+        footer p:hover {
+
+            color: #bc050a;
+        }
+
+        footer p {
+            font-size: 0.8em;
+            color: #079292;
+            text-transform: uppercase;
+        }
+
+        footer .svg-inline--fa {
+            font-size: 1em;
+        }
+
+
+
+        .myrow {
+            display: flex;
+            margin: 0 0 30px 0;
+        }
+
+        .mycol {
+            padding: 20px;
+        }
+
+        .myrow-uneven .mycol {
+            background: #0b0c0e;
+            /* padding: 20px; */
+        }
+
+        .myrow-uneven {
+            padding: 30px;
+        }
+
+        .mycol-left {
+            margin-right: 15px;
+        }
+
+        .mycol-right {
+            margin-left: 15px;
+        }
+
+        .myrow .mycol {
+            flex: 1;
+        }
+
+        .myrow-halves,
+        .myrow-thirds,
+        .myrow-fourths,
+        .myrow-uneven {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .myrow-uneven .mycol-left {
+            width: 70%;
+        }
+
+        .myrow-uneven .mycol-right {
+            width: 30%;
+        }
+
+        .myrow-halves .mycol {
+            width: 49%;
+            margin: 0 auto;
+        }
+
+        .myrow-thirds .mycol {
+            width: 32%;
+        }
+
+        .myrow-fourths .mycol {
+            width: 24%;
+        }
+
+
+        .first-letter {
+            color: #4d5617;
+
+            opacity: 0.8;
+
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-container a {
+            width: 150px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: #079292;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .button-container a:hover {
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 15px;
+            font-weight: bold;
+            color: #bc050a;
+            transition: 100ms;
+        }
+
+        .button-container a:focus {
+            outline: none;
+        }
+
+
+
+        .button-container3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-container3 a {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            border: none;
+            border-radius: 35px;
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: #404040;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .button-container3 a:hover {
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 16px;
+            font-weight: bold;
+            color: #bc050a;
+            transition: 100ms;
+        }
+
+        .button-container3 a:focus {
+            outline: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            transform: scale(0.5);
+            opacity: 0.6;
+        }
+
+        .neumorphism-text {
+            font-size: calc(100vw / 5);
+            letter-spacing: 0em;
+            font-weight: 600;
+         transform: translateY(-280px) translateX(100px);
+         
+            font-family: 'Fuggles', sans-serif;
+            color: #630306;
+            text-shadow: 5px 5px 15px #000;
+           text-align: center;
+        }
+
+        .neumorphism-text2 {
+            font-size: calc(100vw / 24);
+            filter: brightness(50%) contrast(105%);
+            letter-spacing: 0em;
+            font-weight: 600;
+
+            text-align: center;
+            font-family: 'Fuggles', sans-serif;
+            color: #e1050c;
+
+
+        }
+
+        .text-wrapper {
+            background-color: #000000;
+            /* Black background */
+            padding: 15px;
+            /* Adjust padding to control the size of the background */
+            /* Make the span behave like a block element */
+        }
+
+        .text-wrapper2 {
+            background-color: #000000;
+            /* Black background */
+            padding: 0px;
+            /* Adjust padding to control the size of the background */
+            /* Make the span behave like a block element */
+        }
+
+        .neumorphism-text3 {
+            font-size: calc(100vw / 34);
+            filter: brightness(50%) contrast(105%);
+            letter-spacing: 0em;
+            font-weight: 600;
+
+            text-align: center;
+            font-family: 'Fuggles', sans-serif;
+            color: #e1050c;
+
+        }
+
+        @media (max-width: 970px) {
+
+            .neumorphism-text {
+                font-size: calc(100vw / 5);
+              
+              
+
+            }
+
+            .neumorphism-text2 {
+                font-size: calc(100vw / 12);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            .neumorphism-text3 {
+                font-size: calc(100vw / 16);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            img {
+
+                transform: scale(0.4);
+            }
+
+            .accent {
+                font-size: x-large;
+                color: #485115;
+            }
+
+            .myrow,
+            .myrow-halves,
+            .myrow-thirds,
+            .myrow-fourths,
+            .myrow-uneven {
+                display: block;
+            }
+
+            .myrow .mycol,
+            .myrow-halves .mycol,
+            .myrow-thirds .mycol,
+            .myrow-fourths .mycol,
+            .myrow-uneven .mycol-left,
+            .myrow-uneven .mycol-right {
+                width: 100%;
+                margin: 0 0 10px 0;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .neumorphism-text {
+                font-size: calc(100vw / 5);
+
+               
+
+            }
+
+            .neumorphism-text2 {
+                font-size: calc(100vw / 10);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            .neumorphism-text3 {
+                font-size: calc(100vw / 12);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            img {
+
+                transform: scale(0.5);
+            }
+
+            .accent {
+                font-size: x-large;
+                color: #485115;
+            }
+
+            .hero h1 {
+                font-size: 4em;
+                text-transform: uppercase;
+            }
+
+            .hero p {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .neumorphism-text {
+                font-size: calc(100vw / 5);
+
+              
+
+            }
+
+            .neumorphism-text2 {
+                font-size: calc(100vw / 8);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            .neumorphism-text3 {
+                font-size: calc(100vw / 10);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            img {
+
+                transform: scale(0.6);
+            }
+
+            .accent {
+                font-size: x-large;
+                color: #485115;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+                text-transform: uppercase;
+                line-height: 1.2em;
+            }
+
+            .hero p {
+                font-size: 1.5em;
+                line-height: 0;
+            }
+        }
+
+        @media(max-width: 480px) {
+
+            .neumorphism-text {
+                font-size: calc(100vw / 4);
+
+              
+
+            }
+
+            .neumorphism-text2 {
+                font-size: calc(100vw / 6);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            .neumorphism-text3 {
+                font-size: calc(100vw / 8);
+                letter-spacing: 0em;
+                font-weight: 600;
+            }
+
+            img {
+
+                transform: scale(0.7);
+            }
+
+            .accent {
+                font-size: large;
+                color: #485115;
+            }
+
+            .top-intro h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+    <style>
+        .hover-container {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .hover-image {
+            position: absolute;
+            top: -220px;
+            left: 0;
+            display: none;
+            max-width: 150%;
+            /* Adjust this value as needed */
+            height: auto;
+            filter: brightness(155%) contrast(112%);
+            transform: scale(1.5);
+
+        }
+
+        .hover-container:hover .hover-image {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>document.oncontextmenu = function () {
+            return false;
+        }</script>
+    <nav class="standard-nav">
+        <div class="links">
+
+            <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://gr.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>             
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>            
+        </div>
+        <div class="links">
+            <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+
+        </div>
+    </nav>
+    <section class="hero">
+        <div>
+            <h6 class="neumorphism-text"><span>kurzio</span></h6>
+        </div>
+
+    </section>
+    <div class="myrow-uneven">
+        <div class="mycol-left">
+            <div class="myrow">
+                <div class="mycol">  <img src="ng.png" style="width:12%">
+                    <header class="blog-header">
+                        <h2>
+                            In the beginning, sometimes I left messages in the street.
+                        </h2>
+                        <p><span class="date">March 22, 2024</span></p><br>
+                    </header>
+                  
+                    <p><strong>I am the twentieth century.</strong> I am the ragtime and the tango; sans-serif, clean
+                        geometry. I am the virgin's-hair whip and the cunningly detailed shackles of decadent passion. I
+                        am every lonely railway station in every capital of Europe. I am the Street, the fanciless
+                        buildings of government. the cafe-dansant, the clockwork figure, the jazz saxophone, the
+                        tourist-lady's hairpiece, the fairy's rubber breasts, the travelling clock which always tells
+                        the wrong time and chimes in different keys. I am the dead palm tree, the Negro's dancing pumps,
+                        the dried fountain after tourist season. I am all the appurtenances of night.
+                        <br><br><strong>― Thomas Pynchon</strong>
+                    </p>
+
+                </div>
+            </div>
+
+            <section class="profile"> 
+                <div class="myrow author">
+            
+                    <div class="mycol author"><img src="ng.png" style="width:12%"><div class="mycol"> 
+                        <iframe style="border: 0; width: 100%; height: 605px; filter: brightness(55%) contrast(115%);"
+                            src="https://bandcamp.com/EmbeddedPlayer/album=1318949458/size=large/bgcol=0b0c0e/linkcol=00cccc/artwork=small/transparent=true/"
+                            seamless><a href="https://thefallmusic.bandcamp.com/album/fall-heads-roll">Fall Heads Roll
+                                by The
+                                Fall</a></iframe>
+                    </div>
+                    <div class="mycol author">
+            
+                        <iframe style="filter: brightness(40%) contrast(110%);" width="100%" height="605"
+                            src="https://www.youtube.com/embed/DI2Ka8eXPgM?si=5QucY-hZsCMv5xft" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            
+            </section>
+            <section class="tag-cloud">
+                <header class="sidebar-header"><img src="ng.png" style="width:12%">
+                    <h2>Links</h2>
+                </header>
+                <div>
+                    <div class="mycol">
+            
+            
+                        <a href="https://www.smithsonianmag.com/category/arts-culture/" target="_blank"><span
+                                class="tag">smithsonian</span></a>
+                        <a href="https://www.rollingstone.com/" target="_blank"><span class="tag">rolling
+                                stone</span></a>
+                        <a href="https://www.albumoftheyear.org/" target="_blank"><span class="tag">album of the
+                                year</span></a>
+                        <a href="https://pitchfork.com/" target="_blank"><span class="tag">pitchfork</span></a>
+                        <a href="https://faroutmagazine.co.uk/" target="_blank"><span class="tag">far out</span></a>
+                        <a href="https://www.undertheradarmag.com/" target="_blank"><span class="tag">under the
+                                radar</span></a>
+                        <a href="https://www.gazettemusicale.com/" target="_blank"><span class="tag">gazette</span></a>
+                        <a href="https://www.dailyartmagazine.com/" target="_blank"><span class="tag">daily
+                                art</span></a>
+                        <a href="https://hubertybreyne.com/en/artists/list/0/artists-list" target="_blank"><span
+                                class="tag">illustrators</span></a>
+                        <a href="https://magazine.artstation.com/" target="_blank"><span class="tag">station</span></a>
+                        <a href="https://www.vulture.com/art/" target="_blank"><span class="tag">vulture</span></a>
+                        <a href="https://www.spin.com/" target="_blank"><span class="tag">spin</span></a>
+                        <a href="https://www.npr.org/sections/pop-culture/" target="_blank"><span class="tag">npr</span></a>
+                        <a href="https://www.zergnet.com/v/movies" target="_blank"><span class="tag">zergnet</span></a>
+                        <a href="https://www.loudersound.com/" target="_blank"><span class="tag">louder sound</span></a>
+                        <a href="https://www.tasteofcinema.com/" target="_blank"><span class="tag">taste of
+                                cinema</span></a>
+                        <a href="https://www.folger.edu/explore/shakespeares-works/" target="_blank"><span
+                                class="tag">shakespeare</span></a>
+                        <a href="https://artsandculture.google.com/category/artist?hl=fr" target="_blank"><span class="tag">arts and
+                                culture</span></a>
+                        <a href="https://www.deviantart.com/" target="_blank"><span class="tag">deviant</span></a>
+                        <a href="https://www.rottentomatoes.com/" target="_blank"><span class="tag">rotten
+                                tomatoes</span></a>
+                        <a href="https://www.artnews.com/" target="_blank"><span class="tag">art news</span></a>
+                        <a href="https://www.boredpanda.com/" target="_blank"><span class="tag">bored panda</span></a>
+                        <a href="https://www.flickr.com/search/?text=Street+Photography" target="_blank"><span
+                                class="tag">flickr</span></a>
+                    </div>
+            
+              
+            
+
+                <header class="sidebar-header">
+                    <h2>Exotic</h2>
+                </header>
+              
+                    <div class="mycol">
+                        <a href="https://www.windy.com/37.797/21.351?rain%2C37.298%2C21.352%2C8%2Cm%3AeH8agKK="
+                            target="_blank"><span class="tag2">windy</span></a>
+                        <a href="https://www.instantstreetview.com/@37.769993,21.29357,53.57h,-1.02p,1z,CAoSLEFGMVFpcE9JYnVBa3dJdm1nWkE5Z0ctaWhaQUt0djVoM3RiZjdxcFJHZGE5"
+                            target="_blank"><span class="tag2">street view</span></a>
+                        <a href="https://www.e-mme.gr/" target="_blank"><span class="tag2">e-mme</span></a>
+                        <a href="https://pitsirikos.net/" target="_blank"><span class="tag2">pitsirikos</span></a>
+                        <a href="https://librofilo.blogspot.com/" target="_blank"><span class="tag2">librofilo</span></a>
+                        <a href="https://pandoxeio.com/" target="_blank"><span class="tag2">pandoxeio</span></a>
+                        <a href="https://www.greek-language.gr/digitalResources/literature/tools/concordance/browse.html?cnd_id=9"
+                            target="_blank"><span class="tag2">kavafis</span></a>
+                        <a href="https://www.vakxikon.gr/francois-villon-in-profundum-malorum/" target="_blank"><span
+                                class="tag2">francois
+                                villon</span></a>
+                        <a href="https://www.poiein.gr/2014/01/10/ren-char-4-dhiethiaoa-iaouonaoc-aioeauic-aciconeuaio/"
+                            target="_blank"><span class="tag2">rene char</span></a>
+                        <a href="https://www.hartismag.gr/" target="_blank"><span class="tag2">hartis</span></a>
+                        <a href="https://sarantakos.wordpress.com/" target="_blank"><span class="tag2">sarantakos</span></a>
+            
+                        <a href="https://www.2020mag.gr/" target="_blank"><span class="tag2">2020</span></a>
+                        <a href="https://bookpress.gr/" target="_blank"><span class="tag2">bookpress</span></a>
+            
+                        <a href="https://eranistis.net/wordpress/" target="_blank"><span class="tag2">eranistis</span></a>
+                        <a href="https://diavazontas.blogspot.com/p/blog-page_4.html" target="_blank"><span
+                                class="tag2">diavazontas</span></a>
+                        <a href="https://popaganda.gr/" target="_blank"><span class="tag2">popaganda</span></a>
+                        <a href="https://www.toperiodiko.gr/" target="_blank"><span class="tag2">periodiko</span></a>
+                        <a href="https://info-war.gr/" target="_blank"><span class="tag2">infowar</span></a>
+                        <a href="https://www.ertflix.gr/show/movies" target="_blank"><span class="tag2">ertflix</span></a>
+                    </div>
+                </div>
+
+            </section>
+            
+            
+            
+            </div>
+
+        <div class="mycol-right">
+
+
+            <section class="popular-posts">
+                <header class="sidebar-header"><img src="ng.png" style="width:20%">
+                    <h2>Popular</h2>
+                </header>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="21.jpg">
+                        </div>
+                        <div class="p-text">
+                            <a href="https://www.imdb.com/" target="_blank">
+                                <h5 class="date1">IMDb</h5>
+                                <p class="date2">Watch</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="22.jpg">
+                        </div>
+                        <div class="p-text">
+                            <a href="https://www.urbandictionary.com/" target="_blank">
+                                <h5 class="date1">Urban</h5>
+                                <p class="date2">Dictionary</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="23.jpg">
+                        </div>
+                        <div class="p-text">
+                            <a href="https://www.pastemagazine.com/" target="_blank">
+                                <h5 class="date1">Paste</h5>
+                                <p class="date2">Reviews</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="24.jpg">
+                        </div>
+                        <div class="p-text">
+                            <a href="https://www.bbc.com/culture" target="_blank">
+                                <h5 class="date1">BBC</h5>
+                                <p class="date2">Culture</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="25.jpg">
+                        </div>
+                        <div class="p-text">
+                            <a href="https://www.latimes.com/entertainment-arts" target="_blank">
+                                <h5 class="date1">LA Times</h5>
+                                <p class="date2">Arts</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="myrow">
+                    <div class="mycol p-posts">
+                        <div class="p-img">
+                            <img src="26.jpg">
+                        </div>
+                        <div class="p-text">
+                            <a href="https://www.theguardian.com/world" target="_blank">
+                                <h5 class="date1">Guardian</h5>
+                                <p class="date2">World</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tag-cloud">
+                <header class="sidebar-header"><img src="ng.png" style="width:20%">
+                    <h2>Music</h2>
+                </header>
+                <div class="myrow">
+                    <div class="mycol button-container">
+                        <a href="https://stream.radioparadise.com/rock-320" target="_blank"><span>radio
+                                paradise</span></a>
+                        <a href="https://listen.radioking.com/radio/10713/stream/224413" target="_blank"><span>radio
+                                king</span></a>
+                        <a href="https://stream.radioparadise.com/flac" target="_blank"><span>eclectic</span></a>
+                        <a href="https://realpunkradio.com/player/player111419.html" target="_blank"><span>real
+                                punk</span></a>
+                        <a href="https://www.mixcloud.com/Sauvagesradio/" target="_blank"><span>sauvages</span></a>
+                        <a href="https://bandcamp.com/discover" target="_blank"><span>bandcamp</span></a>
+                        <a href="https://www.last.fm/music" target="_blank"><span>last fm</span></a>
+                        <a href="https://soundcloud.com/you/sets" target="_blank"><span>soundcloud</span></a>
+                        <a href="https://www.ertecho.gr/radio/kosmos-jazz/player/" target="_blank"><span>jazz
+                                player</span></a>
+                        <a href="https://radiostreaming.ert.gr/ert-kosmos" target="_blank"><span>kosmos</span></a>
+                        <a href="https://e1.pcloud.link/publink/show?code=kZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk#returl=https%3A//e1.pcloud.link/publink/show%3Fcode%3DkZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk&page=login"
+                            target="_blank"><span>audio</span></a>
+                        <a href="https://e1.pcloud.link/publink/show?code=kZNMWRZXJ8HziXJM55TKQzg6hqV34kCT5TX"
+                            target="_blank"><span>video</span></a>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile">
+                <div class="myrow author">
+                    <div class="mycol author"><img src="ng.png" style="width:20%">
+
+
+                        <div class="button-container3"><a href="https://you.com/" target="_blank"><span>AI</span></a>
+                        </div><br>
+                        <div class="button-container3"><a href="https://duckduckgo.com/" target="_blank"><span><i
+                                        class="fa fa-user-secret"></i></span></a></div><br>
+
+                        <div class="button-container3"><a href="#" style="font-size: x-large;"><span>▲</span></a>
+
+                        </div>
+                        <div>
+                            <p class="neumorphism-text3"><span style="color:#067979">made by</span> Chris<br><br><img
+                                    src="ode.jpg" style="width: 50%; height: auto;"></p>
+
+                        </div>
+                         <div class="mycol author">
+                    <p><strong><span class="neumorphism-text3">* kurzio</span></strong>&nbsp;&nbsp;is my
+                    <strong>non-commercial use</strong> website, the rights of the authors are fully preserved. Thanks for visiting.</p>
+                </div>               
+                    </div>
+
+
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="myrow">
+
+            <div class="mycol">
+                <a href="https://www.deepl.com/translator?il=en" target="_blank" style="font-size: large;"><i
+                        class="fas fa-globe"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurzio.neocities.org/smack"
+                    target="_blank" style="font-size: large;"><i
+                        class="fa fa-paper-plane"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Hello+Chris&to=lestiflee@gmail.com&body=Your+website+is+..."
+                    target="_blank" style="font-size: large;"><i class="fa fa-envelope"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://formkeep.com/p/c274248f33658c417854dae70750617c?guest=1" target="_blank"
+                    style="font-size: large;"><i class="fa fa-comment"></i></a><br>
+
+                <div class="hover-container">
+                    <p>Copyright <i class="far fa-copyright"></i> 2024 doulos</p>
+                    <img class="hover-image" src="imag.png" alt="Description">
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
+    <script>
+        $(".open-burger").on("click", function () {
+            $("#myNav").css("width", "100%");
+        });
+
+        $(".close-burger").on("click", function () {
+            $("#myNav").css("width", "0%");
+        });
+    </script>
+    <script type="text/javascript">
+
+        var images = [];
+
+        function preloadImages(...urls) {
+            urls.forEach((url, index) => {
+                var img = new Image();
+                img.onload = function () {
+                    console.log(`Image ${url} loaded successfully.`);
+                };
+                img.onerror = function () {
+                    console.error(`Failed to load image ${url}.`);
+                };
+                img.src = url;
+                images[index] = img;
+            });
+        }
+
+        preloadImages("post.webp");
+
+    </script>
+
+</body>
+
+</html>
