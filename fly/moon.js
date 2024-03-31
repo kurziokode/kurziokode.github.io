@@ -48,7 +48,7 @@ function init() {
 
     const loader = new THREE.TextureLoader();
     const textureSphereBg = loader.load('https://i.ibb.co/4gHcRZD/bg3-je3ddz.jpg');
-    const texturenucleus = loader.load('https://i.ibb.co/5GBNhc2/wow.webp');
+    const texturenucleus = loader.load('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnI0YjA0aTRpOGk1MjNsN2xtam4zMXI4N3JmcGdwcHZiN2VtNHAyZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/347Ui7AnyQoD1f2FVW/giphy-downsized-large.gif');
     const textureStar = loader.load("");
     const texture1 = loader.load("https://i.ibb.co/F8by6wW/p2-b3gnym.png");  
     const texture2 = loader.load("https://i.ibb.co/yYS2yx5/p3-ttfn70.png");
