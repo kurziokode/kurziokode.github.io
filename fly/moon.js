@@ -48,7 +48,7 @@ function init() {
 
     const loader = new THREE.TextureLoader();
     const textureSphereBg = loader.load('https://i.ibb.co/4gHcRZD/bg3-je3ddz.jpg');
-    const texturenucleus = loader.load('https://ibb.co/gmz5Zg6');
+    const texturenucleus = loader.load('https://i.ibb.co/5GBNhc2/wow.webp');
     const textureStar = loader.load("");
     const texture1 = loader.load("https://i.ibb.co/F8by6wW/p2-b3gnym.png");  
     const texture2 = loader.load("https://i.ibb.co/yYS2yx5/p3-ttfn70.png");
