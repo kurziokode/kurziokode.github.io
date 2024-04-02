@@ -567,6 +567,11 @@ strictly prohibited. -->
             <script src="https://kurziokode.github.io/lane/js/jquery-3.2.1.min.js"></script>
             <script src="https://kurziokode.github.io/lane/js/plugins.js"></script>
             <script src="https://kurziokode.github.io/lane/js/main.js"></script>
+            <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
 </body>
 
 </html>
