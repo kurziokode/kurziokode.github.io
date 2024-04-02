@@ -48,7 +48,7 @@ function init() {
 
     const loader = new THREE.TextureLoader();
     const textureSphereBg = loader.load('pro1.jpg');
-    const texturenucleus = loader.load('.jpg');
+    const texturenucleus = loader.load('image44.webp');
     const textureStar = loader.load("");
     const texture1 = loader.load("un2.png");  
     const texture2 = loader.load("un3.png");
