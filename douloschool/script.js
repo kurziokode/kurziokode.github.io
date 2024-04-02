@@ -47,7 +47,7 @@ function init() {
     controls.enablePan = false;
 
     const loader = new THREE.TextureLoader();
-    const textureSphereBg = loader.load('https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F84%2Fa8%2F79%2F84a8798bb4372a2d24d21d5ea03dedfa.jpg&sp=1712030411Tc31d7061c5f46cfd169b6a030efdce11bdb39170f209b8375d821b9bb896d5c1');
+    const textureSphereBg = loader.load('https://i.pinimg.com/originals/42/76/f7/4276f7eb291f1b8ef912b2ed03ac7a56.jpg');
     const texturenucleus = loader.load('image44.webp');
     const textureStar = loader.load("");
     const texture1 = loader.load("un2.png");  
