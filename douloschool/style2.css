@@ -5064,16 +5064,16 @@ html.no-csstransitions .s-hero__content {
     transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
     position: fixed;
     bottom: var(--vspace-1);
-    right: 4rem;
+    right: 3rem;
 }
 
 .ss-go-top a {
     text-decoration: none;
     border: 0 none;
     display: block;
-    height: 5.4rem;
-    width: 5.4rem;
-    line-height: 5.4rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
     text-align: center;
     border-radius: 50%;
     background-color: var(--color-gray-19) !important;
