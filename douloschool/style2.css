@@ -5071,9 +5071,9 @@ html.no-csstransitions .s-hero__content {
     text-decoration: none;
     border: 0 none;
     display: block;
-    height: 6.4rem;
-    width: 6.4rem;
-    line-height: 6.4rem;
+    height: 5.4rem;
+    width: 5.4rem;
+    line-height: 5.4rem;
     text-align: center;
     border-radius: 50%;
     background-color: var(--color-gray-19) !important;
