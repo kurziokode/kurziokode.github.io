@@ -1,0 +1,837 @@
+<!-- Copyright 2024 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QE8B495353');
+    </script>
+    <meta charset="utf-8">
+    <title>3ο Δημοτικό Σχ. Γαστούνης</title>
+    <link rel="icon" href="shrp.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="https://kurziokode.github.io/lane/css/vendor.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kurziokode.github.io/lane/js/modernizr.js"></script>
+    <script defer src="https://kurziokode.github.io/lane/js/fontawesome/all.min.js"></script>
+    <style>
+        .button0 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-family: Arial;
+            width: 114px;
+            height: 38px;
+            border-width: 0px;
+            color: #595959;
+            text-align: center;
+            font-weight: 100;
+            border-top-left-radius: 42px;
+            border-top-right-radius: 42px;
+            border-bottom-left-radius: 42px;
+            border-bottom-right-radius: 42px;
+            box-shadow: inset 0px 1px 0px 0px #990000;
+            background: linear-gradient(#4d0000, #330000);
+            z-index: 10;
+            position: absolute;
+            /* Add this line */
+            top: 10px;
+            /* Add this line */
+            right: 15px;
+        }
+
+        .button0:hover {
+            color: #737373;
+            background: linear-gradient(#1a0000, #330000);
+        }
+
+        .button1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-family: Arial;
+            width: 114px;
+            height: 38px;
+            border-width: 0px;
+            color: #595959;
+            text-align: center;
+            font-weight: 100;
+            border-top-left-radius: 42px;
+            border-top-right-radius: 42px;
+            border-bottom-left-radius: 42px;
+            border-bottom-right-radius: 42px;
+            box-shadow: inset 0px 1px 0px 0px #990000;
+            background: linear-gradient(#4d0000, #330000);
+            z-index: 10;
+            position: absolute;
+            /* Add this line */
+            top: 60px;
+            /* Add this line */
+            right: 15px;
+        }
+
+        .button1:hover {
+            color: #737373;
+            background: linear-gradient(#1a0000, #330000);
+        }
+
+        .button2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-family: Arial;
+            width: 114px;
+            height: 38px;
+            border-width: 0px;
+            color: #595959;
+            text-align: center;
+            font-weight: 100;
+            border-top-left-radius: 42px;
+            border-top-right-radius: 42px;
+            border-bottom-left-radius: 42px;
+            border-bottom-right-radius: 42px;
+            box-shadow: inset 0px 1px 0px 0px #990000;
+            background: linear-gradient(#4d0000, #330000);
+            z-index: 10;
+            position: absolute;
+            /* Add this line */
+            top: 110px;
+            /* Add this line */
+            right: 15px;
+        }
+
+        .button2:hover {
+            color: #737373;
+            background: linear-gradient(#1a0000, #330000);
+        }
+
+        .button3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-family: Arial;
+            width: 114px;
+            height: 38px;
+            border-width: 0px;
+            color: #595959;
+            text-align: center;
+            font-weight: 100;
+            border-top-left-radius: 42px;
+            border-top-right-radius: 42px;
+            border-bottom-left-radius: 42px;
+            border-bottom-right-radius: 42px;
+            box-shadow: inset 0px 1px 0px 0px #990000;
+            background: linear-gradient(#4d0000, #330000);
+            z-index: 10;
+            position: absolute;
+            /* Add this line */
+            top: 160px;
+            /* Add this line */
+            right: 15px;
+        }
+
+        .button3:hover {
+            color: #737373;
+            background: linear-gradient(#1a0000, #330000);
+        }
+
+.main{
+  position: fixed;
+  top: 0;
+  left:0%;
+  
+  width: 80px;
+  height:15%;
+  background: #ab8260;
+  border-radius:8px;
+  box-shadow: 1px -35px 60px -20px #fff;
+}
+
+.m1{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 20px;
+  height:100%;
+  background:#954901;
+  animation: m1Anim 5s linear  infinite;
+  border-radius: 120px 150px 0 0;
+  box-shadow: inset -5px 5px 5px 0px #8d4a00;
+}
+.m2{
+  position: absolute;
+  top:0;
+  left:20px;
+  width: 40px;
+  height:100%;
+  background: #d68a00;
+  animation: m2Anim 5s linear infinite;
+  border-radius: 150px 150px 0 0;
+  box-shadow: inset -5px 2px 5px 0px #eca841,
+              inset 3px 0px 5px 0px #8d4a00;
+}
+.m3{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 20px;
+  height:100%;
+  background: #ed9e00;
+  animation: m3Anim 5s linear infinite;
+  box-shadow: inset 5px 5px 5px 0px #f1b05f;
+  border-radius: 150px 120px 0 0;
+}
+.sh{
+  position: absolute;
+  top:-143px;
+  
+  right:0;
+  width: 100%;
+  height:160px;
+  
+  background-image: linear-gradient(85deg,#ab8260,#815e3e,#caa68c,#a77c60);
+  clip-path: polygon(50% 0%, 100% 91%, 100% 100%, 0 100%, 0 91%);
+  box-shadow:  inset 20px 15px 20px 10px #8d5e31;
+                
+}
+.pn{
+   position: absolute;
+  top:0;
+  
+  right:0;
+  width: 100%;
+  height:50px;
+  
+  background-image: linear-gradient(82deg,#26221e,#26221e,#26221e,#26221e,#26221f,#9d9397,#26221f,#26221e,#26221e,#26221e);
+ 
+}
+@keyframes m1Anim {
+  0%{
+     background:#a41259;
+     box-shadow: inset -2px 2px 5px 0px #ef95bd;
+  }
+  16.5%{
+     background:#a41259;
+     box-shadow: inset -2px 2px 5px 0px #ef95bd;
+  }
+ 33%{
+    background:#0c3e6e;
+     box-shadow: inset -1px 2px 5px 0px  #4b95c9;
+  }
+  49.5%{
+    background:#0c3e6e;
+     box-shadow: inset -1px 2px 5px 0px  #4b95c9;
+  }
+  66%{
+    background: #007868;
+     box-shadow: inset -1px 2px 5px 0px   #089e92;
+  }
+   82.5%{
+    background:#007868;
+     box-shadow: inset -1px 2px 5px 0px    #089e92;
+  }
+  100%{
+     background:#a41259;
+     box-shadow: inset -2px 2px 5px 0px #ef95bd;
+  }
+}
+@keyframes m2Anim {
+  0%{
+     background: #ea4e95;
+  
+  box-shadow: inset -5px 2px 5px 0px #f38cb6,
+              inset 3px 0px 5px 0px #ef95bd;
+  }
+  16.5%{
+     background: #ea4e95;
+  
+  box-shadow: inset -5px 2px 5px 0px #f38cb6,
+              inset 3px 0px 5px 0px #ef95bd;
+  }
+  33%{
+    background:#02659a; 
+     box-shadow: inset -4px 2px 5px 0px  #4b95c9,
+              inset 1px 0px 5px 0px #4b95c9;
+  }
+  49.5%{
+    background:#02659a; 
+     box-shadow: inset -4px 2px 5px 0px  #4b95c9,
+              inset 1px 0px 5px 0px #4b95c9;
+  }
+  66%{
+   
+      
+      background:#04a294;  
+    box-shadow: inset -4px 2px 5px 0px   #2acfc1,
+              inset 1px 0px 5px 0px #2acfc1;
+  }
+  82.5%{   
+      background:#04a294;
+    box-shadow: inset -4px 2px 5px 0px   #2acfc1,
+              inset 1px 0px 5px 0px #2acfc1;
+  }
+  100%{
+     background: #ea4e95;
+
+   box-shadow: inset -5px 2px 5px 0px #f38cb6,
+              inset 3px 0px 5px 0px #ef95bd;
+  }
+}
+@keyframes m3Anim {
+  0%{
+     background: #f08ab6;
+  
+  box-shadow: inset 5px 5px 5px 0px #f49ac3;
+  }
+  16.5%{
+     background: #f08ab6;
+  
+  box-shadow: inset 5px 5px 5px 0px #f49ac3;
+  }
+  33%{
+    background:#1383bb;
+      box-shadow: inset 2px 2px 5px 0px #6fb5e1;
+  }
+  49.5%{
+    background:#1383bb;
+      box-shadow: inset 2px 2px 5px 0px #6fb5e1;
+  }
+  66%{
+    background:#018e7e ;
+      box-shadow: inset 2px 2px 5px 0px #30d7c6;
+  }
+  82.5%{
+    background:#018e7e ;
+      box-shadow: inset 2px 2px 5px 0px #30d7c6;
+  }
+  100%{
+     background: #f08ab6;
+  
+  box-shadow: inset 5px 5px 5px 0px #f49ac3;
+  }
+}
+
+        
+    </style>
+    <style>
+        .link-container {
+            position: relative;
+            background-color: transparent;
+            opacity: 0.6;
+        }
+
+        .link-container a {
+            text-decoration: none;
+        }
+
+        .link-container a:hover::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            background-color: #000;
+            color: #c98a1d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            bottom: 9%;
+            transform: translateX(-20%);
+            opacity: 1;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .link-container a:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+ <style>
+        /* Smartphones (landscape) */
+        @media only screen and (min-width : 321px) and (max-width : 500px) {
+
+            .img1 {
+                width: 50%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 50%;
+                /* Styles for img1 and img2 */
+            }
+
+        }
+
+        @media only screen and (min-width : 801px) and (max-width : 1080px) {
+
+            .img1 {
+                width: 50%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 50%;
+                /* Styles for img1 and img2 */
+            }
+
+
+
+        }
+
+        @media only screen and (min-width : 641px) and (max-width : 800px) {
+
+            .img1 {
+                width: 30%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 30%;
+                /* Styles for img1 and img2 */
+            }
+
+           
+
+        }
+
+        @media only screen and (min-width : 501px) and (max-width : 640px) {
+
+            .img1 {
+                width: 40%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 40%;
+                /* Styles for img1 and img2 */
+            }
+
+
+
+        }
+
+ @media only screen and (max-width : 1080px) {
+
+           .main{
+display: none;
+} 
+
+} 
+
+        /* Smartphones (portrait) */
+        @media only screen and (max-width : 320px) {
+
+            .img1 {
+                width: 65%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 65%;
+                /* Styles for img1 and img2 */
+            }
+
+
+
+        }
+
+        @media only screen and (min-width : 1080px) and (max-width : 1223px) {
+
+            .img1 {
+                width: 40%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 40%;
+                /* Styles for img1 and img2 */
+            }
+
+             .main{
+transform: scale(0.5) rotate(90deg);
+}  
+
+        }
+
+                @media only screen and (max-width : 1400px) {
+
+            .img1 {
+                width: 40%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 35%;
+                /* Styles for img1 and img2 */
+            }
+
+             .main{
+transform: scale(0.5) rotate(90deg);
+}  
+
+        }
+
+        /* Desktops and laptops */
+        @media only screen and (min-width : 1224px) {
+
+            .img1 {
+                width: 40%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 35%;
+                /* Styles for img1 and img2 */
+            }
+
+             .main{
+transform: scale(0.5) rotate(90deg);
+}  
+
+        }
+
+        /* Large screens */
+        @media only screen and (min-width : 1824px) {
+
+            .img1 {
+                width: 40%;
+                /* Styles for img1 and img2 */
+            }
+
+            .img2 {
+                width: 35%;
+                /* Styles for img1 and img2 */
+            }
+
+        }
+
+</style>
+</head>
+
+<body id="top">
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="stars"></div>
+    <div id="canvas_container"></div>
+    <header class="s-header">
+        <div class="s-header__content">
+            <nav class="s-header__nav-wrap">
+                <ul class="s-header__nav">
+                    <li><a class="smoothscroll button0" href="#portfolio" title="">
+                            Επικοινωνία
+                        </a></li>
+                    <li><a class="smoothscroll button1" href="#portfolio1" title="">
+                            Ανακοινώσεις
+                        </a></li>
+                    <li><a class="smoothscroll button2" href="#portfolio2" title="">
+                            Σύνδεσμοι
+                        </a></li>
+                    <li><a class="smoothscroll button3" href="#portfolio3" title="">
+                            Δράσεις
+                        </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <section id="portfolio">
+        <div class="row">
+            <div class="column large-6 tab-12">
+                <div class="section-title" data-num="01" data-aos="fade-up">
+                    <h3 class="h6" style="color: #68470f">
+                        <font size="+2">ΕΠΙΚΟΙΝΩΝΙΑ</font>
+                    </h3>
+                </div>
+                <b>3ο Δημοτικό Σχολείο Γαστούνης</b><br><br>
+                <b>Διεύθυνση:</b> Καραΐσκου 9, Γαστούνη Ηλείας<br><br>
+                <b>Τηλέφωνο:</b> 26230 - 32244<br><br>
+                <b>Email:</b> mail@3dim-gastoun.ilei.sch.gr
+            </div>
+            <div class="column large-6 tab-12 link-container">
+                <br><br>
+                <div class="img1">
+                    <a href="https://kurziokode.github.io/final.mp4" target="_blank"><img src="28.png"
+                            loading="lazy"></a>
+                </div>
+                <div class="img2">
+                    <img src="qrsch.png" loading="lazy">
+                </div>
+                <a href="https://www.google.com/" target="_blank" data-tooltip="Αναζήτηση" style="color: #970202"
+                    title=""><i class="fab fa-google fa-lg" aria-hidden="true"></i></a>
+                &nbsp;&nbsp;&nbsp;<a href="https://translate.google.com/?sl=auto&tl=el&op=translate" target="_blank"
+                    data-tooltip="Μετάφραση" style="color: #970202" title=""><i class="fa fa-globe fa-lg"
+                        aria-hidden="true"></i></a>
+                &nbsp;&nbsp;&nbsp;<a
+                    href="https://www.windy.com/37.851/21.254?rain%2C36.342%2C21.687%2C6%2Cm%3AeH8agKK=" target="_blank"
+                    data-tooltip="Καιρός" style="color: #970202" title=""><i class="fa fa-sun fa-lg"
+                        aria-hidden="true"></i></a>
+                &nbsp;&nbsp;&nbsp;<a
+                    href="https://www.instantstreetview.com/@37.850945,21.251651,204.3h,18.58p,1z,9lNwush5s5vwjYg9f5a2DQ"
+                    target="_blank" data-tooltip="Τοποθεσία" style="color: #970202" title=""><i
+                        class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+                &nbsp;&nbsp;&nbsp;<a href="mailto:mail@3dim-gastoun.ilei.sch.gr" target="_blank"
+                    data-tooltip="Στείλε email" style="color: #970202" title=""><i class="fa fa-envelope fa-lg"
+                        aria-hidden="true"></i></a>
+                &nbsp;&nbsp;&nbsp;<a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io/douloschool/index.html#"
+                    target="_blank" data-tooltip="Μοιράσου" style="color: #970202" title=""><i
+                        class="fa fa-paper-plane fa-lg" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio1" class="s-portfolio">
+        <div class="row s-porfolio__top">
+            <div class="column large-6 w-900-stack">
+                <div class="section-title" data-num="02" data-aos="fade-up">
+                    <h3 class="h6" style="color: #68470f">
+                        <font size="+2">Ανακοινωσεις
+                    </h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up"></h1>
+            </div>
+        </div>
+        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" data-size="1050x544">
+                            <img src="3331.jpg" loading="lazy">
+                        </a>
+                    </div>
+                    <a href="https://blogs.sch.gr/3dimgast/eggrafes-mathiton-gia-to-scholiko-etos-2024-25/" target="_blank"
+                        class="folio-item__project-link">ΕΓΓΡΑΦΕΣ</a>
+                </div>
+            </div>
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" data-size="1050x544">
+                            <img src="3341.jpg" loading="lazy">
+                        </a>
+                    </div>
+                    <a href="https://blogs.sch.gr/3dimgast/episkepsi-sti-dimotiki-vivliothiki/" target="_blank"
+                        class="folio-item__project-link">ΕΠΙΣΚΕΨΗ</a>
+                </div>
+            </div>
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" data-size="1050x544">
+                            <img src="3351.jpg" loading="lazy">
+                        </a>
+                    </div>
+                    <a href="https://blogs.sch.gr/3dimgast/ekpaideytikoi/" target="_blank"
+                        class="folio-item__project-link">ΕΚΠΑΙΔΕΥΤΙΚΟΙ</a>
+                </div>
+            </div>
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" data-size="1050x544">
+                            <img src="3361.jpg" loading="lazy">
+                        </a>
+                    </div>
+                    <a href="https://blogs.sch.gr/3dimgast/istoria-toy-scholeioy-mas/" target="_blank"
+                        class="folio-item__project-link">ΙΣΤΟΡΙΑ</a>
+                </div>
+            </div>
+    </section>
+    <section id="portfolio2" class="s-portfolio">
+        <div class="row s-porfolio__top">
+            <div class="column large-6 w-900-stack">
+                <div class="section-title" data-num="03" data-aos="fade-up">
+                    <h3 class="h6" style="color: #68470f">
+                        <font size="+2">Συνδεσμοι
+                    </h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up"></h1>
+            </div>
+            <div class="row" style="font-size: large;">
+                <div class=" large-6">
+                    <p style="color: #710101;"><b>Εκπαιδευτικά</b></p>
+                    <ul>
+                        <li><a href="https://www.microsoft365.com/?auth=1" target="_blank"> Office</a></li>
+                        <li><a href="https://www.dnews.gr/eidhseis/paideia" target="_blank"> News</a></li>
+                        <li><a href="https://www.alfavita.gr/" target="_blank"> Alfavita</a></li>
+                        <li><a href="https://www.esos.gr/" target="_blank"> Esos</a></li>
+                        <li><a href="https://blogs.sch.gr/3dimgast/" target="_blank"> Ιστοσελίδα</a></li>
+                        <li><a href="https://www.sch.gr/" target="_blank"> Δίκτυο</a></li>
+                        <li><a href="https://edtech.gr/" target="_blank"> Εργαλεία</a></li>
+                        <li><a href="https://edu.klimaka.gr/nomothesia" target="_blank"> Νομοθεσία</a></li>
+                        <li><a href="https://www.gov.gr/upourgeia/upourgeio-paideias-kai-threskeumaton" target="_blank">
+                                Υπουργείο</a></li>
+                        <li><a href="https://nationaldigitalacademy.gov.gr/mathimata/ergaleia-ka8hmerinhs-xrhshs-3"
+                                target="_blank">
+                                Ψηφιακά</a></li>
+                        <li><a href="http://photodentro.edu.gr/aggregator/" target="_blank"> Φωτόδεντρο</a></li>
+                        <li><a href="http://dipe.ilei.sch.gr/" target="_blank"> Πρωτοβάθμια</a></li>
+                        <li><a href="https://www.youtube.com/@user-lf2qi4bz2m/playlists" target="_blank"> Μαθαίνουμε</a>
+                        </li>
+                        <li><a href="http://ebooks.edu.gr/ebooks/v2/allcourses.jsp" target="_blank"> Βιβλία</a></li>
+                        <li><a href="https://www.taexeiola.gr/" target="_blank"> Βοηθήματα</a></li>
+                        <li><a href="https://saferinternet4kids.gr/yliko-dhmotikou/?age[]=for-small-children&submit=%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7"
+                                target="_blank"> Διαδίκτυο</a></li>
+                    </ul><br><br>
+                </div>
+                <div class=" large-6">
+                    <p style="color: #710101;"><b>Φυσική Αγωγή</b></p>
+                    <ul>
+                        <li><a href="https://sway.office.com/rLQlOjxCWFWezarm?ref=Link&loc=play" target="_blank">
+                                Κανονισμοί</a>
+                        </li>
+                        <li><a href="https://www.fitnessblender.com/videos?exclusive%5B%5D=0&equipment%5B%5D=26"
+                                target="_blank">
+                                Στο Σπίτι</a></li>
+                        <li><a href="https://app.sworkit.com/exercise-library" target="_blank"> Με Βίντεο</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLLUFOmb1L6KFXl1UvRmMUjEcmnicnDPtg"
+                                target="_blank">
+                                Χοροί</a></li>
+                        <li><a href="https://www.youtube.com/c/FitnessProjectGr/playlists" target="_blank">
+                                Προγράμματα</a></li>
+                        <li><a href="https://fittoplay.org/sports/" target="_blank"> Προθέρμανση</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLpLZE-ZyDcSnAFWwrzfWOsVWdPVRkoNLT"
+                                target="_blank">
+                                Παιχνίδια</a></li>
+                        <li><a href="https://www.youtube.com/@MVMTwithCailin/playlists" target="_blank"> Pilates</a>
+                        </li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLIh1VGKM_YYye-qffT9UNU-exrO9CjPSd"
+                                target="_blank">
+                                First aid</a></li>                    
+                        <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__gMD8dNUNkxQMzlWQUxBVFlOOE1UWVdZOERYSUk0Ui4u"
+                                target="_blank"> Τεστ</a></li>
+                        <li><a href="https://quizizz.com/join/presentation/5fbe19ee016d6e001b17f40a/start?studentShare=true"
+                                target="_blank"> Κουίζ</a></li>
+                        <li><a href="https://eyzhn.edu.gr/useful-material/" target="_blank"> Παλίνδρομο</a></li>
+                        <li><a href="https://depositphotos.com/gr/videos/human-body-anatomy-muscular-system.html"
+                                target="_blank">
+                                Ανατομία</a></li>
+                        <li><a href="https://www.xleventakis.com/" target="_blank"> Συντονιστής</a></li>
+                        <li><a href="https://roloi.net/chronometro/#" target="_blank"> Χρονόμετρο</a></li>
+                        <li><a href="https://www.sport24.gr/tvprogram/" target="_blank"> Μεταδόσεις</a></li>
+                    </ul>
+                </div>
+            </div>
+            <section id="portfolio3" class="s-portfolio">
+                <div class="row s-porfolio__top">
+                    <div class="column large-6 w-900-stack">
+                        <div class="section-title" data-num="04" data-aos="fade-up">
+                            <h3 class="h6" style="color: #68470f">
+                                <font size="+2">Δρασεις
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="column large-6 w-900-stack">
+                        <h1 class="display-1" data-aos="fade-up"></h1>
+                    </div>
+                    <div class="row" style="filter: brightness(75%);">
+                        <div class="column large-6 tab-12">
+
+                            <a href="https://blogs.sch.gr/3dimgast/episkepsi-sti-farma-ileias/" target="_blank"><img
+                                    src="555.jpg" loading="lazy"></a>
+                        </div>
+                        <div class="column large-6 tab-12">
+
+                            <a href="https://blogs.sch.gr/3dimgast/tsiknopempti-sto-scholeio-mas/" target="_blank"><img
+                                    src="666.jpg" loading="lazy"></a>
+                        </div>
+                    </div>
+                    <div class="row" style="filter: brightness(75%);">
+                        <div class="column large-6 tab-12">
+
+                            <a href="https://blogs.sch.gr/3dimgast/theatro-skion/" target="_blank"><img
+                                    src="777.jpg" loading="lazy"></a>
+                        </div>
+                        <div class="column large-6 tab-12">
+
+                            <a href="https://blogs.sch.gr/3dimgast/mikroi-zografoi/" target="_blank"><img
+                                    src="888.jpg" loading="lazy"></a>
+                        </div>
+                    </div>
+                    <div><a href="https://kurziokode.github.io/pnemo.html" target="_blank" style="font-size: 17px;  color: #68470f">Copyright &copy; Doulos
+                            2024</a></div>
+                    <br>
+                </div>
+<div class="main">
+    <a href="https://kurziokode.github.io/douloschool/indexx.html#">
+        <div class="sh">
+            <div class="pn"></div>
+        </div>
+    </a>
+    <a href="https://kurziokode.github.io/douloschool/indexx.html#">
+        <div class="m1"></div>
+    </a>
+    <a href="https://kurziokode.github.io/douloschool/indexx.html#">
+        <div class="m2"></div>
+    </a>
+    <a href="https://kurziokode.github.io/douloschool/indexx.html#">
+        <div class="m3"></div>
+    </a>
+</div>
+           
+            </section>
+            <div class="ss-go-top">
+                <a class="smoothscroll button1" title="Back to Top" href="#top" style="font-size: 20px; color: #595959">
+                    ▲
+                </a><br><br>
+            </div>
+
+            <script type="text/javascript">
+                var images = new Array();
+
+                function preloadImages() {
+
+                    for (i = 0; i < preloadImages.arguments.length; i++) {
+
+                        images[i] = new Image();
+
+                        images[i].src = preloadImages.arguments[i];
+
+                    }
+
+                }
+
+                preloadImages("pro444.jpg");
+            </script>
+            <script src='https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js'></script>
+            <script src='https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js'></script>
+            <script src="./scriptress.js"></script>
+            <script src="https://kurziokode.github.io/lane/js/jquery-3.2.1.min.js"></script>
+            <script src="https://kurziokode.github.io/lane/js/plugins.js"></script>
+            <script src="https://kurziokode.github.io/lane/js/main.js"></script>
+            <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
+</body>
+
+</html>
