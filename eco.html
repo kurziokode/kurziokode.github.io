@@ -22,6 +22,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+            letter-spacing: 0.0625em;
         }
 
         /* Responsive styles for mobile devices */
@@ -50,34 +51,7 @@
             }
         }
 
-        /* Second background on scroll */
-        body::after {
-            content: "";
-            background-image: url();
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 7s;
-        }
 
-        /* Show second background on scroll */
-        body.show-background::after {
-            opacity: 1;
-
-        }
-
-
-        body.show-background p {
-
-            transition: color 7s;
-        }
     </style>
 
     <style>
@@ -108,7 +82,7 @@
             margin: 20px;
             text-align: center;
             color: #5a0000;
-            letter-spacing: 0.0625em;
+           
         }
 
         h2 {
