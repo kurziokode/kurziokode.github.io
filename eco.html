@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C u r z i o</title>
+    <link rel="icon" href="https://kurziokode.github.io/lane/ora.png" type="image/x-icon">
+
+    <meta name="description" content="Discover curzio the music art and culture interactive animation blog">
+    <meta name="keywords"
+        content="music, movies, listen, watch, read, links, art, rock, interactive, spiders, animation, culture">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(985.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* Responsive styles for mobile devices */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            p {
+                font-size: 16px;
+                color: #5b6371;
+            }
+        }
+
+        /* Responsive styles for larger devices */
+        @media (min-width: 601px) {
+            h1 {
+                font-size: 48px;
+                color: #333;
+            }
+
+            p {
+                font-size: 20px;
+                color: #5b6371;
+            }
+        }
+
+        /* Second background on scroll */
+        body::after {
+            content: "";
+            background-image: url();
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 7s;
+        }
+
+        /* Show second background on scroll */
+        body.show-background::after {
+            opacity: 1;
+
+        }
+
+
+        body.show-background p {
+
+            transition: color 7s;
+        }
+    </style>
+
+    <style>
+        /* Set the background image */
+
+
+        /* Set the font size and line height */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Set the font color */
+        body {
+            color: #333;
+        }
+
+        /* Set the max width for the content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Style the heading */
+        h1 {
+            font-size: 36px;
+            margin: 20px;
+            text-align: center;
+            color: #660000;
+           
+        }
+
+        h2 {
+            font-size: 30px;
+            margin: 40px 0;
+            text-align: center;
+            color: #444a55;
+        }
+
+        h3 {
+            font-size: 27px;
+            margin: 40px 0;
+            text-align: center;
+            color: #5b6371;
+        }
+
+        /* Style the paragraph */
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            
+           
+        }
+
+        h4 {
+            color: #5b6371;
+            font-size: 18px;
+            font-weight: 100;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #0b0c0ebd;
+            padding: 7%;
+        }
+
+        /* Set the responsive image */
+        .responsive-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style the header */
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #5b6371;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            color: #800000;
+        }
+
+
+        a.myLink {
+            text-decoration: none;
+            font-size: 20px;
+            color: #5b6371;
+        }
+
+
+        a.myLink:hover {
+            color: #800000 !important;
+        }
+
+        /* Style the card */
+
+
+        /* Style the footer */
+        footer {
+           
+            text-align: center;
+        }
+
+        /* For Chrome, Safari, and Opera */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #040404;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4d0000;
+            border-radius: 6px;
+        }
+
+
+    </style>
+
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="rightClickMenu">
+
+
+        <a href="https://www.facebook.com/" class="myLink" target="_blank"
+            style="color: #5b6371">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" class="myLink" target="_blank"
+            style="color: #5b6371">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" class="myLink" target="_blank"
+            style="color: #5b6371">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/" class="myLink" target="_blank"
+            style="color: #5b6371">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+        <a href="https://gr.pinterest.com/" class="myLink" target="_blank"
+            style="color: #5b6371">pinterest&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-pinterest"></i></a>
+
+    </div>
+
+
+    <header>
+        <h1>C U R Z I O</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://github.com/kurziokode/kurziokode.github.io/tree/main" target="_blank">Github</a></li>
+
+            <li><a href="https://neocities.org/dashboard" target="_blank">Neocities</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>An ecosystem for my Projects</h2>
+
+
+
+
+
+        <p><a href="https://kurziokode.github.io/system.html#" target="_blank" class="myLink">System
+            </a></p>
+
+        <p><a href="https://kurzio.neocities.org/#" target="_blank" class="myLink">Bend Sinister II
+            </a></p>
+
+        <p><a href="https://kurziokode.github.io/douloschool/index.html#" target="_blank" class="myLink">School
+            </a></p>
+
+
+        <p><a href="https://kurziokode.github.io/redbot3.html#"
+                target="_blank" class="myLink">Master
+            </a></p>
+
+
+        <h4>“ Welcome to my Site. A showcase of my projects in HTML, CSS, and JavaScript. This isn't just a
+        portfolio; it's a testament to my dedication to mastering the details of the digital field. ”<br><br>― Chris Doulos</h4>
+    </div><br>
+
+    <footer>
+
+        <p style="color: #800000">
+            * Right click to Social</p>
+
+
+        <a href="#" class="myLink">
+            ▲
+        </a><br>
+
+        <p style="color: #5b6371">Copyright © 2024 C.Doulos</p>
+
+
+    </footer>
+
+    <script>
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("rightClickMenu");
+            menu.style.top = event.pageY + "px";
+            menu.style.left = event.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+            var menu = document.getElementById("rightClickMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        // Select the heading element
+        var heading = document.getElementById("myHeading");
+
+        // Create a timeline for the animation
+        var tl = gsap.timeline();
+
+        // Add animation to the timeline
+        tl.to(heading, {
+            duration: 2,
+            x: 0,
+            rotate: 360
+        });
+
+        // Select all links with class "myLink"
+        var links = document.querySelectorAll(".myLink");
+
+
+
+        // Loop through the links and add an event listener for the "mouseover" event
+    </script>
+
+
+    <script>
+        // Add class to body on scroll to show second background
+        document.addEventListener("scroll", function () {
+            document.body.classList.add("show-background");
+        });
+    </script>
+</body>
+
+</html>
