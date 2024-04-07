@@ -317,7 +317,7 @@
             ▲
         </a><br>
 
-        <p style="color: #5b6371">Copyright © 2024 C.Doulos</p>
+        <p style="color: #5b6371">Copyright © 2024</p>
 
 
     </footer>
@@ -355,17 +355,10 @@
 
         // Select all links with class "myLink"
         var links = document.querySelectorAll(".myLink");
-
-
-
-        // Loop through the links and add an event listener for the "mouseover" event
-    </script>
-
-
-    <script>
-        // Add class to body on scroll to show second background
-        document.addEventListener("scroll", function () {
-            document.body.classList.add("show-background");
+ </script>
+            <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
         });
     </script>
 </body>
