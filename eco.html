@@ -18,7 +18,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url(985.jpg) repeat #030405;
+            background: url(985.jpg) repeat #040406;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -29,12 +29,12 @@
         @media (max-width: 600px) {
             h1 {
                 font-size: 24px;
-               
+
             }
 
             p {
                 font-size: 16px;
-                
+
             }
         }
 
@@ -42,16 +42,14 @@
         @media (min-width: 601px) {
             h1 {
                 font-size: 48px;
-               
+
             }
 
             p {
                 font-size: 20px;
-               
+
             }
         }
-
-
     </style>
 
     <style>
@@ -82,7 +80,7 @@
             margin: 20px;
             text-align: center;
             color: #5a0000;
-           
+
         }
 
         h2 {
@@ -105,7 +103,7 @@
             margin-bottom: 20px;
             text-align: center;
             color: #5b6371;
-           
+
         }
 
         h4 {
@@ -179,7 +177,7 @@
 
         /* Style the footer */
         footer {
-           
+
             text-align: center;
         }
 
@@ -198,7 +196,7 @@
         }
 
         .hover-container {
-          display: block;
+            display: block;
 
         }
 
@@ -217,7 +215,7 @@
 
         .hover-container:hover .hover-image {
             display: block;
-        } 
+        }
     </style>
 
     <style>
@@ -241,7 +239,36 @@
             background-color: #0b0c0e;
         }
     </style>
+<style>
+    .center {
+        text-align: center;
+    }
 
+    .pagination {
+        display: inline-block;
+    }
+
+    .pagination a {
+        color: #5b6371;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        
+        margin: 0 4px;
+    }
+
+    .pagination a.active {
+        background-color: #0b0c0ebd;
+        color: #800000;
+       
+    }
+
+    .pagination a:hover:not(.active) {
+        background-color: #0b0c0ebd;
+        color: #800000;
+    }
+</style>
 </head>
 
 <body>
@@ -278,27 +305,42 @@
     <div class="container">
         <h2>An ecosystem for my Projects</h2>
 
-        <p class="hover-container"><a href="https://kurziokode.github.io/system.html#" target="_blank" class="myLink"><img class="hover-image" src="5Z.jpg" alt="Description">System
+        <p class="hover-container"><a href="https://kurziokode.github.io/system.html#" target="_blank"
+                class="myLink"><img class="hover-image" src="5Z.jpg" alt="Description">System
             </a></p>
 
-        <p class="hover-container"><a href="https://kurziokode.github.io/douloschool/index.html#" target="_blank" class="myLink"><img class="hover-image" src="95Z.jpg" alt="Description">School
+        <p class="hover-container"><a href="https://kurziokode.github.io/douloschool/index.html#" target="_blank"
+                class="myLink"><img class="hover-image" src="95Z.jpg" alt="Description">School
             </a></p>
 
 
-        <p class="hover-container"><a href="https://kurziokode.github.io/redbot3.html#" target="_blank" class="myLink"><img class="hover-image" src="7Z.jpg" alt="Description">Master
+        <p class="hover-container"><a href="https://kurziokode.github.io/redbot3.html#" target="_blank"
+                class="myLink"><img class="hover-image" src="7Z.jpg" alt="Description">Master
             </a></p>
 
 
-        <p class="hover-container"><a href="https://kurzio.neocities.org/#" target="_blank" class="myLink"><img class="hover-image" src="9Z.jpg" alt="Description">Bend Sinister II
-            </a></p><br>
- 
-<h4>“ Welcome to my Site. A showcase of my projects in HTML, CSS, and JavaScript. ”<br><br>― Chris Doulos</h4>
+        <p class="hover-container"><a href="https://kurzio.neocities.org/#" target="_blank" class="myLink"><img
+                    class="hover-image" src="9Z.jpg" alt="Description">Bend Sinister II
+            </a></p>
+
+        <h4>“ Welcome to my Site. A showcase of my projects in HTML, CSS, and JavaScript. ”<br><br>― Chris Doulos</h4>
     </div><br>
-
+<div class="center">
+    <div class="pagination">
+        
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+       
+        
+    </div>
+</div><br>
     <footer>
 
         <p style="color: #800000">
-            * Right click to Social</p>
+            * Right click to Social</p><br>
 
 
         <a href="#" class="myLink">
@@ -343,8 +385,8 @@
 
         // Select all links with class "myLink"
         var links = document.querySelectorAll(".myLink");
- </script>
-            <script>
+    </script>
+    <script>
         document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
             link.setAttribute('rel', 'noopener noreferrer');
         });
