@@ -197,7 +197,27 @@
             border-radius: 6px;
         }
 
+        .hover-container {
+          display: block;
 
+        }
+
+        .hover-image {
+            position: absolute;
+            top: 18%;
+            left: 30%;
+            display: none;
+            max-width: 100%;
+            /* Adjust this value as needed */
+            height: auto;
+            filter: brightness(155%) contrast(112%);
+            transform: scale(0.8);
+
+        }
+
+        .hover-container:hover .hover-image {
+            display: block;
+        } 
     </style>
 
     <style>
@@ -258,20 +278,19 @@
     <div class="container">
         <h2>An ecosystem for my Projects</h2>
 
-        <p><a href="https://kurziokode.github.io/system.html#" target="_blank" class="myLink">System
-            </a></p>
+        <p class="hover-container"><a href="https://kurziokode.github.io/system.html#" target="_blank" class="myLink">System
+            </a><img class="hover-image" src="5Z.jpg" alt="Description"></p>
 
-        <p><a href="https://kurziokode.github.io/douloschool/index.html#" target="_blank" class="myLink">School
-            </a></p>
+        <p class="hover-container"><a href="https://kurziokode.github.io/douloschool/index.html#" target="_blank" class="myLink">School
+            </a><img class="hover-image" src="95Z.jpg" alt="Description"></p>
 
 
-        <p><a href="https://kurziokode.github.io/redbot3.html#"
-                target="_blank" class="myLink">Master
-            </a></p>
+        <p class="hover-container"><a href="https://kurziokode.github.io/redbot3.html#" target="_blank" class="myLink">Master
+            </a><img class="hover-image" src="7Z.jpg" alt="Description"></p>
 
-       
-        <p><a href="https://kurzio.neocities.org/#" target="_blank" class="myLink">Bend Sinister II
-            </a></p><br>
+
+        <p class="hover-container"><a href="https://kurzio.neocities.org/#" target="_blank" class="myLink">Bend Sinister II
+            </a><img class="hover-image" src="9Z.jpg" alt="Description"></p><br>
  
 <h4>“ Welcome to my Site. A showcase of my projects in HTML, CSS, and JavaScript. ”<br><br>― Chris Doulos</h4>
     </div><br>
