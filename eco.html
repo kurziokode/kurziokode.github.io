@@ -357,24 +357,24 @@
             }
         });
     </script>
+            <script type="text/javascript">
+                var images = new Array();
 
-    <script>
-        // Select the heading element
-        var heading = document.getElementById("myHeading");
+                function preloadImages() {
 
-        // Create a timeline for the animation
-        var tl = gsap.timeline();
+                    for (i = 0; i < preloadImages.arguments.length; i++) {
 
-        // Add animation to the timeline
-        tl.to(heading, {
-            duration: 2,
-            x: 0,
-            rotate: 360
-        });
+                        images[i] = new Image();
 
-        // Select all links with class "myLink"
-        var links = document.querySelectorAll(".myLink");
-    </script>
+                        images[i].src = preloadImages.arguments[i];
+
+                    }
+
+                }
+
+                preloadImages("162.webp");
+            </script>
+
     <script>
         document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
             link.setAttribute('rel', 'noopener noreferrer');
