@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&nbsp;&nbsp;Kurzio's trip</title>
+    <link rel="icon" href="https://kurziokode.github.io/lane/ora.png" type="image/x-icon">
+
+    <meta name="description" content="Discover curzio the music art and culture interactive animation blog">
+    <meta name="keywords"
+        content="music, movies, listen, watch, read, links, art, rock, interactive, spiders, animation, culture">
+<!-- Preconnect to Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Load the Google Fonts stylesheet -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+<!-- Preconnect to Cloudflare CDN -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+<!-- Load Font Awesome stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<!-- Load your custom stylesheet -->
+<link rel="stylesheet" href="./sliced.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url(985.jpg) repeat #040406;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            letter-spacing: 0.05em;
+        }
+
+        /* Responsive styles for mobile devices */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+
+            }
+
+            p {
+                font-size: 16px;
+
+            }
+        }
+
+        /* Responsive styles for larger devices */
+        @media (min-width: 601px) {
+            h1 {
+                font-size: 48px;
+
+            }
+
+            p {
+                font-size: 20px;
+
+            }
+        }
+    </style>
+
+    <style>
+        /* Set the background image */
+
+
+        /* Set the font size and line height */
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Set the font color */
+        body {
+            color: #333;
+        }
+
+        /* Set the max width for the content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Style the heading */
+        h1 {
+            font-size: 36px;
+            margin: 20px;
+            text-align: center;
+            color: #5a0000;
+
+        }
+
+        h2 {
+            font-size: 26px;
+            margin: 40px 0;
+            text-align: center;
+            color: #444a55;
+        }
+
+        h3 {
+            font-size: 27px;
+            margin: 40px 0;
+            text-align: center;
+            color: #5b6371;
+        }
+
+        /* Style the paragraph */
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #5b6371;
+
+        }
+
+        h4 {
+            color: #5b6371;
+            font-size: 18px;
+            font-weight: 100;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #0b0c0ebd;
+            padding: 7%;
+        }
+
+        /* Set the responsive image */
+        .responsive-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style the header */
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #5b6371;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            color: #800000;
+        }
+
+
+        a.myLink {
+            text-decoration: none;
+            font-size: 20px;
+            color: #5b6371;
+        }
+
+
+        a.myLink:hover {
+            color: #800000 !important;
+        }
+
+        /* Style the card */
+
+
+        /* Style the footer */
+        footer {
+
+            text-align: center;
+        }
+
+        /* For Chrome, Safari, and Opera */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #040404;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4d0000;
+            border-radius: 6px;
+        }
+
+        .hover-container {
+            display: block;
+
+        }
+
+        .hover-image {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            display: none;
+            max-width: 100%;
+            /* Adjust this value as needed */
+            height: auto;
+            filter: brightness(155%) contrast(112%);
+            transform: scale(0.7);
+
+        }
+
+        .hover-container:hover .hover-image {
+            display: block;
+        }
+    </style>
+
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+        }
+    </style>
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: #5b6371;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+
+            margin: 0 4px;
+        }
+
+        .pagination a.active {
+            background-color: #0b0c0ebd;
+            color: #800000;
+
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #0b0c0ebd;
+            color: #800000;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="top">Kurzio's trip</div>
+        <div class="bottom" aria-hidden="true">Kurzio's trip</div>
+    </section>
+    <div id="rightClickMenu">
+
+
+        <a href="https://www.facebook.com/" class="myLink" target="_blank"
+            style="color: #5b6371">facebook&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/" class="myLink" target="_blank"
+            style="color: #5b6371">twitter&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/" class="myLink" target="_blank"
+            style="color: #5b6371">youtube&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/" class="myLink" target="_blank"
+            style="color: #5b6371">instagram&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"></i></a>
+        <a href="https://gr.pinterest.com/" class="myLink" target="_blank"
+            style="color: #5b6371">pinterest&nbsp;&nbsp;&nbsp;&nbsp;<i class="fab fa-pinterest"></i></a>
+
+    </div>
+
+
+   
+
+
+
+    <div class="container">
+
+        
+
+        <h4>
+        <img class="responsive-image" src="43.jpg" alt="Description of the image">
+        <p style="color: #800000"><b>Fall Heads Roll (2005)​<br><br>10. 04. 2024</b></p><br>
+        
+   
+            “ I was walking down the street<br>
+            I saw a poster at the top<br>
+            
+            I was only on one leg<br>
+            The streets were fucked<br>
+            
+            And the poster at the top of street said:<br>
+            "Do you work hard? ”<br><br>― ​The Fall</h4>
+    </div><br>
+    <div class="center">
+        <div class="pagination">
+
+            <a href="#" class="active">▲</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+
+
+        </div>
+    </div><br>
+    <footer>
+
+
+
+
+     
+
+        <p style="color: #5b6371">Copyright © 2024</p>
+
+
+    </footer>
+
+    <script>
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("rightClickMenu");
+            menu.style.top = event.pageY + "px";
+            menu.style.left = event.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        document.addEventListener("click", function (event) {
+            var menu = document.getElementById("rightClickMenu");
+            if (menu) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+
+
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
+</body>
+
+</html>
