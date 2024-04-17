@@ -13,7 +13,7 @@
  body {
             margin: 0;
             font-family: 'Lato', Helvetica, sans-serif;
-            background-image: url(https://kurzio.neocities.org/420.jpg);
+            background-color: #0b0c0e;
             opacity: 1;
             background-size: cover;
             background-repeat: no-repeat;
@@ -110,15 +110,12 @@
 
     <script>
         const pages = [
-            'https://kurziokode.github.io/webdev.html#',
-            'https://kurziokode.github.io/420.html', 
-            'https://kurziokode.github.io/master.html',
-            'https://slides.com/curzio/desk/kiosk?started=true',
-            'https://kurziokode.github.io/new/00.html',
-            'https://kurziokode.github.io/new/03.html',
-            'https://kurziokode.github.io/new/02.html',
-            'https://kurziokode.github.io/new/01.html',
-            'https://www.e-mme.gr/'
+            'https://kurziokode.github.io/eco.html#',
+            'https://kurziokode.github.io/system.html#', 
+            'https://kurziokode.github.io/douloschool/index.html#',
+            'https://kurziokode.github.io/redbot3.html#',
+            'https://kurzio.neocities.org/#'
+          
         ];
 
         let currentPage = 0;
@@ -134,7 +131,7 @@
             currentPage++;
             setTimeout(() => {
                 loadPage();
-            }, 30000);
+            }, 10000);
         }
 
         pageElement.onload = () => {
