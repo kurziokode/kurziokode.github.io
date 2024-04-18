@@ -528,41 +528,34 @@ strictly prohibited. -->
         }
     </style>
     <style>
-        body {
-            overflow: ;
-        }
+.marquee-container {
+overflow: hidden;
+filter: brightness(90%);	
+}
 
-        .marquee-container {
-            overflow: hidden;
-            filter: brightness(75%);
-        }
+.marquee {
+    white-space: nowrap;
+    position: relative;
+    animation: marquee 90s linear infinite;
+}
 
-        .marquee {
-            white-space: nowrap;
-            position: relative;
-            animation: marquee 90s linear infinite;
-        }
+  .marquee.paused {
+    animation-play-state: paused;
+  }
+	
+@keyframes marquee {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
 
-        .marquee.paused {
-            animation-play-state: paused;
-        }
-
-        @keyframes marquee {
-            0% {
-                left: -100%;
-            }
-
-            100% {
-                left: 100%;
-            }
-        }
-
-        img {
-            width: 106px;
-            /* Adjust the width as needed */
-            height: auto;
-            /* Preserve aspect ratio */
-        }
+img {
+    width: 347px; /* Adjust the width as needed */
+    height: auto; /* Preserve aspect ratio */
+}
     </style>
     <style>
         .noselect {
