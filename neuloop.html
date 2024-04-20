@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>C u r z i o&nbsp;&nbsp;Loop</title>
+  <link rel="icon" href="https://kurziokode.github.io/loop.png" type="image/x-icon">
+    <style>
+
+ body {
+            margin: 0;
+            font-family: 'Lato', Helvetica, sans-serif;
+            background-color: #0b0c0e;
+            opacity: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+
+
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            border: none;
+            opacity: 0;
+            animation: fade-in 3s ease-out forwards;
+            width: 100%;
+            height: 100%;
+        }
+        
+          iframe:nth-child(0) {
+            animation-delay: 0s;
+        } 
+
+        iframe:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        iframe:nth-child(2) {
+            animation-delay: 15s;
+        }
+
+        iframe:nth-child(3) {
+            animation-delay: 30s;
+        }
+
+          iframe:nth-child(4) {
+            animation-delay: 45s;
+        }
+        
+          iframe:nth-child(5) {
+            animation-delay: 60s;
+        }
+
+          iframe:nth-child(6) {
+            animation-delay: 75s;
+        }
+      
+          iframe:nth-child(7) {
+            animation-delay: 90s;
+        }
+      
+          iframe:nth-child(8) {
+            animation-delay: 105s;
+        }
+          
+          iframe:nth-child(9) {
+            animation-delay: 120s;
+        }
+      
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+      
+      @media screen and (min-width: 1922px) {
+  body {
+    filter: brightness(2.5);
+    filter: contrast(2);
+  }
+}
+      
+   
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <iframe src="" class="page"></iframe>
+    </div>
+
+    <script>
+        const pages = [
+            'https://kurziokode.github.io/marquee.html#',
+            'https://kurziokode.github.io/marrquee.html#', 
+            'https://kurziokode.github.io/marrrquee.html#',
+            'https://kurziokode.github.io/marrrrquee.html#'
+          
+        ];
+
+        let currentPage = 0;
+        const pageElement = document.querySelector('.page');
+
+        function loadPage() {
+            if (currentPage >= pages.length) {
+                currentPage = 0;
+            }
+
+            const page = pages[currentPage];
+            pageElement.src = page;
+            currentPage++;
+            setTimeout(() => {
+                loadPage();
+            }, 15000);
+        }
+
+        pageElement.onload = () => {
+            pageElement.classList.add('page');
+        }
+
+        loadPage();
+    </script>
+</body>
+
+</html>
+
+    
