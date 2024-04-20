@@ -741,33 +741,32 @@ img {
         .cracked-background::before {
             content: '';
             position: absolute;
-            top: -10%;
-            left: 11%;
+
             width: 100%;
             height: 100%;
-            background: url('https://kurziokode.github.io/orle8.png');
+            background: url('https://kurziokode.github.io/flo.png');
             /* Replace 'right-cracks.png' with the path to your right image */
             background-repeat: no-repeat;
             background-position: left;
             /* Position the right image at the top-right corner */
             opacity: 1;
             z-index: -1;
-	    transform: scale(0.8);
+	   
         }
 
         .cracked-background::after {
             content: '';
             position: absolute;
-            top: -10%;
-            right: 11%;
+            top: -20%;
+            left: 20%;
             width: 100%;
             height: 100%;
             background: url('https://kurziokode.github.io/orle7.png');
             background-repeat: no-repeat;
-            background-position: right;
+            background-position: left;
             opacity: 1;
             z-index: -1;
-	    transform: scale(0.8);
+	   
         }
 
 
@@ -791,7 +790,7 @@ img {
         /* Media query for phones and tablets */
         @media (max-width: 767px) {
             .cracked-background::before {
-                 display: none;
+                 display: ;
                 /* Display the image at 1/4 of its size */
             }
         }
@@ -799,7 +798,7 @@ img {
         /* Media query for laptops and desktops */
         @media (min-width: 768px) {
             .cracked-background::before {
-              background-size: 20%; 
+              background-size: 100%; 
                 /* Display the image at its original size */
             }
         }
