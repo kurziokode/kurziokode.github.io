@@ -23,7 +23,7 @@
  font-weight: bold;
  text-align: center;
  margin: 0;
- text-shadow: 1px 1px 1px #23252d, -1px -1px 1px black;
+ text-shadow: 1px 1px 1px #16181d, -1px -1px 1px black;
  color: black;
  transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
  font-family: Proxima Nova, Helvetica, Arial, sans-serif;
