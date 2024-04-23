@@ -30,6 +30,13 @@
 
        }
 
+        @media (max-width: 320px) {
+
+            .h1 {
+ color: #1a1a1a;                          
+                }
+    }
+
     img {
         vertical-align: middle;
     }
