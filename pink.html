@@ -1,0 +1,1236 @@
+<!-- Copyright 2023 Christos Doulos
+All rights reserved.
+Any unauthorized use, 
+copying or distribution 
+of this software,
+whether in whole 
+or in part, is 
+strictly prohibited. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QE8B495353');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="max-age=40003200, public">
+    <meta http-equiv="Expires" content="Sat, 01 Jan 2025 00:00:00 GMT">
+    <title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S t u d i o</title>
+    <link rel="icon" href="https://kurziokode.github.io/alle2.png" type="image/x-icon">
+    <!-- Preconnect and crossorigin for Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Preconnect and crossorigin for Google Fonts and Material Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fuggles" rel="stylesheet">
+
+    <!-- Preconnect and crossorigin for jQuery -->
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* For Chrome, Safari, and Opera */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #0d0d0d;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #000000;
+            border-radius: 6px;
+        }
+
+        * {
+            cursor: url('https://kurziokode.github.io/bldot.png'), auto;
+        }
+
+        /* For all devices */
+        body {
+	
+            background-color: #0b0c0e;         
+            color: ;
+            letter-spacing: 0.03em;
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+
+	
+    h1 {
+ 
+ font-size: 3.5em;
+ font-weight: bold;
+ text-align: center;
+ margin: 0;
+ text-shadow: 1px 1px 1px #16181d, -1px -1px 1px black;
+ color: black;
+ transition: cubic-bezier(0.6, 0, 0.4, 1) 0.2s;
+ font-family: Helvetica, Arial, sans-serif;
+
+       }
+
+         @media (max-width: 767px) {
+
+             h1 {
+               font-size: 2.5em; 
+
+            } 
+
+            img {
+    width: 64px; /* Adjust the width as needed */
+    height: auto;
+
+            }
+
+         }
+
+        .line {
+            position: fixed;
+            top: 20vh;
+            /* vertically center the line */
+            left: 58vw;
+            /* horizontally center the line */
+            transform: translateY(-0%) rotate(-90deg);
+            /* adjust the position of the line */
+            width: 43vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 1px;
+            /* the thickness of the line */
+            background: #000;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
+
+        .line2 {
+            position: fixed;
+            top: 15vh;
+            /* vertically center the line */
+            left: 65vw;
+            /* horizontally center the line */
+            transform: translateY(-0%) rotate(-0deg);
+            /* adjust the position of the line */
+            width: 25vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 1px;
+            /* the thickness of the line */
+            background: #400000;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
+
+        .line3 {
+            position: fixed;
+            top: 15vh;
+            /* vertically center the line */
+            right: 65vw;
+            /* horizontally center the line */
+            transform: translateY(-0%) rotate(-0deg);
+            /* adjust the position of the line */
+            width: 25vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 1px;
+            /* the thickness of the line */
+            background: #000000;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
+
+        .line4 {
+            position: fixed;
+            top: 20vh;
+            /* vertically center the line */
+            right: 58vw;
+            /* horizontally center the line */
+            transform: translateY(-0%) rotate(-90deg);
+            /* adjust the position of the line */
+            width: 43vw;
+            /* the length of the line is 50% of the viewport width */
+            height: 1px;
+            /* the thickness of the line */
+            background: #400000;
+            /* the color of the line */
+            z-index: -1;
+            /* stack order of the line */
+        }
+
+        /* Style the icon with CSS */
+        .custom-icon {
+            font-size: 20px;
+            color: #660000;
+        }
+
+        .custom-icon2 {
+            color: #660000;
+            /* Set the color to red */
+        }
+
+        .custom-icon {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 200,
+                'GRAD' 25,
+                'opsz' 10
+        }
+
+        .custom-icon:hover {
+            color: ;
+            /* Change the color on hover */
+        }
+
+        header {
+            background-color: ;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: ;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+
+            text-decoration: none;
+        }
+
+        article {
+            background-color: transparent;
+            opacity: 1;
+            padding: 20px;
+
+        }
+
+        article2 {
+            background-color: transparent;
+            opacity: 1;
+            padding: 20px;
+
+        }
+
+        figure {
+            margin-bottom: 20px;
+        }
+
+        figure img {
+            max-width: 100%;
+            width: px;
+            height: px;
+        }
+
+        aside {
+            background-color: ;
+            padding: 20px;
+
+        }
+
+        footer {
+            background-color: ;
+            padding: 20px;
+
+        }
+
+        .neumorphism-text {
+
+            font-family: 'Fuggles', sans-serif;
+            color: #400000;
+            text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;
+        }
+
+        .neumorphism-text2 {
+            font-size: calc(100vw / 42);
+            font-family: 'Quicksand', sans-serif;
+            color: #2c2d3a;
+            text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;
+        }
+
+        h5 {
+            font-size: calc(100vw / 16);
+            letter-spacing: 0em;
+            font-weight: 800;
+            color: ;
+            opacity: 1;
+            user-select: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+            white-space: nowrap;
+            z-index: -1;
+            cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+        }
+
+        h7 {
+            font-size: calc(100vw / 12);
+            letter-spacing: 0em;
+            font-weight: 700;
+            color: #0D000D;
+            text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;
+            opacity: 1;
+            user-select: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+            white-space: nowrap;
+            z-index: -1;
+            cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+        }
+
+        h8 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: calc(100vw / 42);
+            letter-spacing: 0em;
+            font-weight: 100;
+            color: #2c2d3a;
+            text-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000;
+            opacity: 1;
+            user-select: none;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+            white-space: nowrap;
+            z-index: -1;
+            cursor: url('https://kurziokode.github.io/bldot.png'), auto !important;
+        }
+
+        @media screen and (min-width: 1922px) {
+            body {
+                filter: brightness(2.5);
+                filter: contrast(2);
+            }
+        }
+
+        /* For mobile devices */
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+
+            }
+
+            header {
+                padding: 10px;
+            }
+
+            nav {
+                font-size: 12px;
+            }
+
+            article {
+                padding: 10px;
+
+            }
+
+            figure {
+                margin-bottom: 10px;
+            }
+
+            .neumorphism-text {
+                color: ;
+                font-size: calc(100vw / 7);
+                font-weight: 900;
+            }
+
+            h8 {
+                display: none;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .line2 {
+                display: none;
+            }
+
+            .line3 {
+                display: none;
+            }
+
+            .line4 {
+                display: none;
+            }
+
+
+            aside {
+                padding: 10px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+
+
+
+
+        /* For tablets */
+        @media (min-width: 481px) and (max-width: 967px) {
+            body {
+                font-size: 18px;
+            }
+
+            figure img {
+                transform: scale();
+            }
+
+            .neumorphism-text {
+                color: ;
+                font-size: calc(100vw / 7);
+                font-weight: 700;
+            }
+
+            h8 {
+                display: none;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .line2 {
+                display: none;
+            }
+
+            .line3 {
+                display: none;
+            }
+
+            .line4 {
+                display: none;
+            }
+
+        }
+
+        /* For laptops and desktops */
+        @media (min-width: 968px) {
+            body {
+                font-size: 20px;
+            }
+
+            figure img {
+                transform: scale();
+            }
+        }
+
+        .curz {
+            display: none;
+            padding: 20px;
+            overflow: auto;
+            background-color: #0b0c0e;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .curz ul {
+            margin-top: 10px;
+        }
+
+        .curz ul li {
+            display: inline-block;
+            width: 200px;
+            list-style: none;
+            font-size: 14px;
+            padding: 3px 10px;
+        }
+
+        .curz ul li:before {
+            content: '';
+            margin-right: 5px;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+
+        .curz-arrow {
+            position: absolute;
+            z-index: 10;
+
+            border: 10px solid transparent;
+
+            -webkit-transition: opacity 0.4s ease 0.4s;
+            -moz-transition: opacity 0.4s ease 0.4s;
+            -ms-transition: opacity 0.4s ease 0.4s;
+            -o-transition: opacity 0.4s ease 0.4s;
+            transition: opacity 0.4s ease 0.4s;
+        }
+
+        .curz-left .curz-arrow {
+            left: 20px;
+            top: 40%;
+            margin-top: -16px;
+            border-left: 16px solid #585c74;
+        }
+
+        .curz-right .curz-arrow {
+            right: 20px;
+            top: 50%;
+            margin-top: -16px;
+            border-right: 16px solid;
+        }
+
+        .curz-top .curz-arrow {
+            left: 50%;
+            top: 20px;
+            margin-left: -16px;
+            border-top: 16px solid #334d00;
+        }
+
+        .curz-bottom .curz-arrow {
+            left: 50%;
+            bottom: 14px;
+            margin-left: -16px;
+            border-bottom: 16px solid #333;
+        }
+
+        .curz-active .curz-arrow {
+            opacity: 0;
+
+            -webkit-transition: opacity 0.2s ease;
+            -moz-transition: opacity 0.2s ease;
+            -ms-transition: opacity 0.2s ease;
+            -o-transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
+        }
+
+
+        .contents {
+            background: transparent;
+            padding: 20px 40px;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+
+            -webkit-overflow-scrolling: touch;
+            -webkit-transform-style: preserve-3d;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .contents>article {
+            max-width: 400px;
+        }
+
+        .contents p {
+            margin: 10px 0 10px 0;
+            font-size: 16px;
+            line-height: 1.32;
+        }
+
+        .contents small {
+            display: block;
+            margin-top: 10px;
+            padding-top: 10px;
+
+            font-size: 0.9em;
+            border-top: 1px dashed transparent;
+
+            -webkit-text-size-adjust: none;
+        }
+
+        .contents .sharing {
+            position: absolute;
+            bottom: 30px;
+        }
+    </style>
+    <style>
+.marquee-container {
+overflow: hidden;
+filter: brightness(100%);	
+}
+
+.marquee {
+    white-space: nowrap;
+    position: relative;
+    animation: marquee 90s linear infinite;
+}
+
+  .marquee.paused {
+    animation-play-state: paused;
+  }
+	
+@keyframes marquee {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+img {
+    width: 128px; /* Adjust the width as needed */
+    height: auto; /* Preserve aspect ratio */
+}
+
+         @media (max-width: 767px) {
+
+ img {
+    width: 64px; /* Adjust the width as needed */
+    height: auto;
+
+            }
+
+         }
+    </style>
+    <style>
+        .noselect {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-container a {
+            width: 150px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            margin: 0px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: #6f113b;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .button-container a:hover {
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 15px;
+            transition: 500ms;
+        }
+
+        .button-container a:focus {
+            outline: none;
+        }
+
+        .button-container5 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-container5 a {
+            width: 150px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: #800000;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .button-container5 a:hover {
+            box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 15px;
+            transition: 500ms;
+        }
+
+        .button-container5 a:focus {
+            outline: none;
+        }	    
+
+        .red:hover {
+            color: #6e7491;
+            text-shadow: 0px 0px 0px;
+        }
+
+        .green:hover {
+            color: #6e7491;
+            text-shadow: 0px 0px 0px;
+        }
+
+        .blue:hover {
+            color: #6e7491;
+            text-shadow: 0px 0px 0px;
+        }
+
+        .purple:hover {
+            color: #6e7491;
+            text-shadow: 0px 0px 0px;
+        }
+
+        .active:hover {
+            color: #6e7491;
+            text-shadow: 0px 0px 0px;
+        }
+
+        .button-container2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-container2 a {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            margin: 20px;
+            border: none;
+            border-radius: 30px;
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: ;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .button-container2 a:hover {
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 15px;
+            transition: 500ms;
+        }
+
+        .button-container2 a:focus {
+            outline: none;
+        }
+
+        .button-container3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+        }
+
+        .button-container3 a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            border: none;
+            border-radius: 25px;
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: ;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .button-container3 a:hover {
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 15px;
+            transition: 500ms;
+        }
+
+        .button-container3 a:focus {
+            outline: none;
+        }
+
+        .button-container4 {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            bottom: 7%;
+            left: 3%;
+            gap: 7px;
+        }
+
+        .button-container4 a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            border: none;
+            border-radius: 25px;
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: ;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        .button-container4 a:hover {
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 15px;
+            transition: 500ms;
+        }
+
+        .button-container4 a:focus {
+            outline: none;
+        }
+    </style>
+
+    <style>
+        .cracked-background {
+            width: 100%;
+            height: 100%;
+            background: #0b0c0e;
+            /* Replace this with your desired background color */
+            position: relative;
+        }
+
+        .cracked-background::before {
+            content: '';
+            position: absolute;
+
+            width: 85%;
+            height: 100%;
+            background: url('pnge.png');
+            /* Replace 'right-cracks.png' with the path to your right image */
+            background-repeat: no-repeat;
+            background-position: left;
+            /* Position the right image at the top-right corner */
+            opacity: 0.2;
+            z-index: -1;
+	   
+        }
+
+        .cracked-background::after {
+            content: '';
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background: url('pnge.png');
+            background-repeat: no-repeat;
+            background-position: left;
+            opacity: 1;
+            z-index: -1;
+	   
+        }
+
+
+
+        /* Media query for phones and tablets */
+        @media (max-width: 767px) {
+            .cracked-background::after {
+                display: none;
+                /* Display the image at 1/4 of its size */
+            }
+        }
+
+        /* Media query for laptops and desktops */
+        @media (min-width: 768px) {
+            .cracked-background::after {
+           background-size: 15%;
+                /* Display the image at its original size */
+            }
+        }
+
+        /* Media query for phones and tablets */
+        @media (max-width: 767px) {
+            .cracked-background::before {
+                 
+              background-size: 100%;    
+                /* Display the image at 1/4 of its size */
+            }
+        }
+
+        /* Media query for laptops and desktops */
+        @media (min-width: 768px) {
+            .cracked-background::before {
+             background-size: 60%;  
+                /* Display the image at its original size */
+            }
+        }
+    </style>
+    <style>
+        #message-container {
+            /* Set your desired styles for larger screens */
+            display: flex;
+            position: fixed;
+            top: 17%;
+            right: 1%;
+            font-size: calc(100vw / 42);
+            font-family: 'Fuggles', sans-serif;
+            background-color: transparent;
+            color: #2c2d3a;
+            padding: 20px;
+            text-align: center;
+            max-width: 600px;
+            /* Set a maximum width for the container */
+            margin: 0 auto;
+            /* Center the container horizontally */
+            height: 95px;
+        }
+
+        /* Add a media query to hide the message container on screens narrower than 768px */
+        @media (max-width: 767px) {
+            #message-container {
+                display: none;
+            }
+        }
+
+        /* For screens larger than 1200px (e.g. desktops) */
+        @media only screen and (min-width: 1300px) {
+            #message-container {
+                font-size: calc(100vw / 42);
+            }
+        }
+    </style>
+    <style>
+        /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .android-icon {
+            color: #660000;
+            transition: color 0.3s ease;
+            /* Add a smooth transition */
+        }
+
+        /* Change icon color on button hover */
+        .hover-color:hover .android-icon {
+            color: #6e7491;
+            /* Change to the desired hover color */
+        }
+
+        /* Define a class to target the anchor tag and change icon color on hover */
+        .hover-color .custom-icon {
+            color: #660000;
+            transition: color 0.3s ease;
+            /* Add a smooth transition */
+        }
+
+        /* Change icon color on button hover */
+        .hover-color:hover .custom-icon {
+            color: #6e7491;
+            /* Change to the desired hover color */
+        }
+    </style>
+
+    <style>
+        .link-container {
+            position: relative;
+        }
+
+        .link-container a {
+            text-decoration: none;
+        }
+
+        .link-container a:hover::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            background-color: transparent;
+            color: #990000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            bottom: -75%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            font-family: 'Quicksand', sans-serif;
+            font-style: italic;
+        }
+
+        .link-container a:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+    <style>
+        #rightClickMenu {
+            display: none;
+            position: absolute;
+            z-index: 9999;
+            background-color: #0b0c0e;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+        }
+
+        #rightClickMenu a {
+            display: block;
+            color: #660000;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        #rightClickMenu a:hover {
+            background-color: #0b0c0e;
+            color: #6e7491;
+        }
+    </style>
+
+    <style>
+        .editable {
+            color: #373849;
+            font-weight: 500;
+            outline: 1px solid transparent;
+            padding: 10px;
+            min-height: 15px;
+        }
+
+        .editable:focus {
+            outline-color: #400000;
+            /* Change the border color when the div is focused */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cracked-background">
+        <div class="line"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+       
+
+
+<div class="curz">
+<ul id="myList" class="button-container">
+    <li><a href="https://www.grittyrockradio.com/en" class="noselect blue" target="_blank">&#x2022; gritty</a></li>
+    <li><a href="https://listen.radioking.com/radio/10713/stream/224413" class="noselect blue" target="_blank">&#x2022; king</a></li>
+    <li><a href="https://radioparadise.com/player/slideshow/main-mix" class="noselect blue" target="_blank">&#x2022; paradise</a></li>
+    <li><a href="https://stream.radioparadise.com/flac" class="noselect blue" target="_blank">&#x2022; flac</a></li>
+  
+    <li><a href="https://www.mixcloud.com/Sauvagesradio/" class="noselect blue" target="_blank">&#x2022; sauvages</a></li>
+    <li><a href="https://www.ertecho.gr/radio/kosmos-jazz/player/" class="noselect blue" target="_blank">&#x2022; jazz</a></li>
+
+    <li><a href="https://realpunkradio.com/player/player111419.html" class="noselect blue" target="_blank">&#x2022; punk</a></li>
+    <li><a href="https://e1.pcloud.link/publink/show?code=kZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk#returl=https%3A//e1.pcloud.link/publink/show%3Fcode%3DkZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk&page=login" class="noselect blue" target="_blank">&#x2022; mp3</a></li>
+    <li><a href="https://e1.pcloud.link/publink/show?code=kZNMWRZXJ8HziXJM55TKQzg6hqV34kCT5TX" class="noselect blue" target="_blank">&#x2022; mp4</a></li>
+    <li><a href="https://swans.bandcamp.com/album/the-glowing-man?from=search&search_item_id=2544108859&search_item_type=a&search_match_part=%3F&search_page_id=2099377261&search_page_no=0&search_rank=3&logged_out_menubar=true" class="noselect blue" target="_blank">&#x2022; bandcamp</a></li>
+    <li><a href="https://www.last.fm/music/Swans/+tracks?date_preset=LAST_7_DAYS&page=1" class="noselect blue" target="_blank">&#x2022; lastfm</a></li>
+    <li><a href="https://soundcloud.com/you/sets" class="noselect blue" target="_blank">&#x2022; soundcloud</a></li>
+</ul>
+        </div>
+
+        <div class="curz-arrow"></div>
+                            <br><div class="editable" contenteditable="true">&nbsp;&nbsp;&nbsp;<i class="fa fa-bell android-icon"
+                                    aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Take a Note :&nbsp;&nbsp;&nbsp;</div>
+        <div class="contents">
+          
+            <div class="button-container3">
+                <p class="link-container"><a href="https://www.google.com/" class="noselect green hover-color" target="_blank"
+                        data-tooltip="Google"><i class="fab fa-google android-icon"></i></a></p>
+                <p class="link-container"><a href="https://mail.google.com/mail/u/0/#inbox" class="noselect green hover-color"
+                        target="_blank" data-tooltip="Gmail"><i class="fa fa-envelope android-icon"></i></a></p>
+                <p class="link-container"><a href="https://www.deepl.com/translator?il=en" class="noselect green hover-color"
+                        target="_blank" data-tooltip="Translate"><i class="fa fa-globe android-icon"></i></a></p>
+            
+            </div>
+            <br><h1>Chris Doulos</h1><br>
+
+            <section>
+                <aside>
+                    <div class="button-container5">
+                        <a href="#"
+                            class="noselect green hover-color" style="color: #373849">Home</a>
+                    </div>
+                    <div class="button-container5">
+                        <a href="https://kurziokode.github.io/marrquee.html#"
+                            class="noselect blue hover-color">Listen</a>
+                    </div>
+                    <div class="button-container5">
+                        <a href="https://kurziokode.github.io/marrrquee.html#"
+                            class="noselect blue hover-color">Watch</a>
+                    </div>
+                    <div class="button-container5">
+                        <a href="https://kurziokode.github.io/marrrquee.html#" class="noselect blue hover-color">Read</a>
+                    </div>
+
+                 
+                
+                </aside>
+            </section>
+            <div class="marquee-container">
+                <div id="player" style="margin-bottom:0px; box-shadow: -5px -5px 15px #111216, 5px 5px 15px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;"></div>
+                <div class="marquee">
+                    <span style="color: #800000;">Shpongle</span><img src="https://kurziokode.github.io/ride.png" alt="Moving Image"><span style="color: #800000;">London, 2013</span>
+                </div>
+            </div>
+
+            <div class="button-container3">
+                <p class="link-container"><a href="https://www.google.com/" class="noselect green hover-color"
+                        target="_blank" data-tooltip="Google"><i class="fab fa-google android-icon"></i></a></p>
+                <p class="link-container"><a href="https://mail.google.com/mail/u/0/#inbox" class="noselect green hover-color"
+                        target="_blank" data-tooltip="Gmail"><i class="fa fa-envelope android-icon"></i></a></p>
+                <p class="link-container"><a href="https://www.deepl.com/translator?il=en" class="noselect green hover-color" target="_blank"
+                    data-tooltip="Translate"><i class="fa fa-globe android-icon"></i></a></p>
+               
+           
+         
+              
+              
+            </div>
+ 
+
+            <div id="message-container">
+                <h9 class="neumorphism-text2"style="position: fixed; bottom:15%; left:4%; transform: translateY(-0%) rotate(-0deg);">Right Click<br>to <span style="color: #400000;">Social</span></h9>
+            </div>
+
+            <footer class="button-container2">
+                <p><a href="#" id="back-to-top-btn" class="noselect hover-color"
+                        style="font-size: large; color: #373849;" onmouseover="this.style.color='#6e7491';"
+                        onmouseout="this.style.color='#373849';">UP</a>
+                </p>
+
+            </footer>
+            <div>
+                <h8 style="position: fixed; top:15%; left:4%; transform: translateY(-50%) rotate(-0deg);">Slide <span
+                        style="color: #400000;">+</span></h8>
+                <h8 style="position: fixed; top:15%; left:10%; transform: translateY(-50%) rotate(-90deg);">Scroll</h8>
+            </div>
+
+            <div id="rightClickMenu">
+<a href="https://www.facebook.com/" target="_blank">facebook&nbsp;&nbsp;<i class="fab fa-facebook-f android-icon"></i></a>
+<a href="https://twitter.com/" target="_blank">twitter&nbsp;&nbsp;<i class="fab fa-twitter android-icon"></i></a>
+<a href="https://www.youtube.com/" target="_blank">youtube&nbsp;&nbsp;<i class="fab fa-youtube android-icon"></i></a>
+<a href="https://www.instagram.com/" target="_blank">instagram&nbsp;&nbsp;<i class="fab fa-instagram android-icon"></i></a>
+<a href="https://gr.pinterest.com/" target="_blank">pinterest&nbsp;&nbsp;<i class="fab fa-pinterest android-icon"></i></a>
+
+	    </div>
+
+            <script src="https://kurziokode.github.io/curz.js"></script>
+
+             <script src="https://kurziokode.github.io/morph/shpongle.js"></script> 
+
+            <script>
+                var curz = Curz.create({
+
+                    menuElement: document.querySelector('.curz'),
+
+
+                    contentsElement: document.querySelector('.contents'),
+
+
+                    position: Curz.getQuery().p || 'left',
+
+
+                    height: 200,
+
+
+                    width: 260,
+
+
+                    threshold: 40,
+
+
+                    mouse: true,
+
+
+                    touch: true
+                });
+
+                if (Curz.getQuery().u && Curz.getQuery().u.match(/^http/gi)) {
+                    var contents = document.querySelector('.contents');
+                    contents.style.padding = '0px';
+                    contents.innerHTML = '<div class="cover"></div><iframe src="' + Curz.getQuery().u +
+                        '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+                }
+            </script>
+
+            <script>
+                const myList = document.getElementById('myList');
+                const listItems = Array.from(myList.querySelectorAll('li'));
+                const sortedListItems = listItems.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+                listItems.forEach(li => li.remove());
+                sortedListItems.forEach(li => myList.appendChild(li));
+
+            </script>
+            <script>
+                const editableDiv = document.querySelector('.editable');
+
+                // Function to save the edited content to localStorage
+                function saveContent() {
+                    localStorage.setItem('editableContent', editableDiv.innerHTML);
+                }
+
+                // Function to load the content from localStorage
+                function loadContent() {
+                    const storedContent = localStorage.getItem('editableContent');
+                    if (storedContent) {
+                        editableDiv.innerHTML = storedContent;
+                    }
+                }
+
+                // Load content when the page loads
+                window.addEventListener('load', loadContent);
+
+                // Listen for input events and save content automatically
+                editableDiv.addEventListener('input', saveContent);
+            </script>
+            <script>
+                var image1 = new Image();
+                image1.src = 'pnge.png';
+
+                var image2 = new Image();
+                image2.src = 'pnge.png';
+
+                // You can add onload event listeners for each image if needed
+                image1.onload = function () {
+                    console.log('Image 1 preloaded');
+                    // You can now use the preloaded image as needed
+                };
+
+                image2.onload = function () {
+                    console.log('Image 2 preloaded');
+                    // You can now use the preloaded image as needed
+                };
+            </script>
+            <script>
+                document.addEventListener("contextmenu", function (event) {
+                    event.preventDefault();
+                    var menu = document.getElementById("rightClickMenu");
+                    menu.style.top = event.pageY + "px";
+                    menu.style.left = event.pageX + "px";
+                    menu.style.display = "block";
+                });
+
+                document.addEventListener("click", function (event) {
+                    var menu = document.getElementById("rightClickMenu");
+                    if (menu) {
+                        menu.style.display = "none";
+                    }
+                });
+            </script>
+            <script>
+                document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+                    link.setAttribute('rel', 'noopener noreferrer');
+                });
+            </script>
+</body>
+
+</html>
