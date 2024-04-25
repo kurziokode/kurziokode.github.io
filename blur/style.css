@@ -38,6 +38,8 @@ html, body {
     justify-content: center;
 }
 .blur h1 {
+    position: absolute;
+    top: 0%;
     align-self: center;
     color: #0b0c0e;
     text-align: center;
