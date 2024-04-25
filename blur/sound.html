@@ -23,37 +23,17 @@ body, html {
     height: 100%;
 }
 
-#play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    display: block;
-    width: 100px;
-    height: 30px;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-}
+
 </style>
 </head>
 <body>
 
 <div id="video-container">
-  <iframe width="100%" height="auto" src="https://www.youtube.com/embed/0HUCLjFqWRo?si=EYRsxHs5P9vAsY6W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <button id="play-button">Play Video</button>
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0HUCLjFqWRo?si=EYRsxHs5P9vAsY6W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
 </div>
 
-<script>
-document.getElementById('play-button').addEventListener('click', function() {
-    var video = document.getElementById('video');
-    video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-    video.contentWindow.postMessage('{"event":"command","func":"unMute","args":""}', '*');
-});
-</script>
+
 
 </body>
 </html>
