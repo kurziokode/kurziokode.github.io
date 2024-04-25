@@ -44,6 +44,6 @@ html, body {
     font-size: 160px;
     font-family: 'Poppins', sans-serif;
     line-height: .85;
-    text-transform: uppercase;
+    
     text-shadow: 0 0 20px rgba(15,15,15,.5);
 }
