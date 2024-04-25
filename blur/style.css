@@ -39,7 +39,7 @@ html, body {
 }
 .blur h1 {
     position: fixed;
-    top: 2%;
+    top: 5%;
     align-self: center;
     color: #0b0c0e;
     text-align: center;
@@ -52,7 +52,7 @@ html, body {
 
 .blur h2 {
     position: fixed;
-    bottom: -50%;
+    bottom: -95%;
     align-self: center;
     color: #0b0c0e;
     text-align: center;
