@@ -49,3 +49,16 @@ html, body {
     
     text-shadow: 0 0 20px rgba(15,15,15,.5);
 }
+
+.blur h2 {
+    position: fixed;
+    bottom: 0%;
+    align-self: center;
+    color: #0b0c0e;
+    text-align: center;
+    font-size: 160px;
+    font-family: 'Poppins', sans-serif;
+    line-height: .85;
+    
+    text-shadow: 0 0 20px rgba(15,15,15,.5);
+}
