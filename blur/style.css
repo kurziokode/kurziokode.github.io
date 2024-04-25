@@ -38,7 +38,7 @@ html, body {
     justify-content: center;
 }
 .blur h1 {
-    position: absolute;
+    position: fixed;
     top: 0%;
     align-self: center;
     color: #0b0c0e;
