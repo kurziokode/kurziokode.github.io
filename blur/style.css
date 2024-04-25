@@ -24,17 +24,7 @@ html, body {
     background-size: cover;
 }
 
- #play-button {
-    display: block;
-    width: 100px;
-    height: 30px;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin: 10px auto;
-    cursor: pointer;
-}
+
         
 .blur {
     position: absolute;
