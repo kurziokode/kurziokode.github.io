@@ -27,7 +27,7 @@ html, body {
     height: 100vh;
     z-index: 1;
     /* adjust the 8px below for more or less blur. eg, 100px will give you massive blur, while 1px barely blurs at all */
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(0px);
     display: flex;
     align-items: center;
     justify-content: center;
