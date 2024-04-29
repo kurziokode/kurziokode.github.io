@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
-    <link rel="stylesheet" href="style.css">
+    <link id="stylesheet" rel="stylesheet" href="style.css">
 
 </head>
 
@@ -164,7 +164,7 @@
         document.getElementById('toggleCssButton').addEventListener('click', function () {
             var linkElement = document.getElementById('stylesheet');
             if (linkElement.href.endsWith('style.css')) {
-                linkElement.href = 'https://kurziokode.github.io/chro/invert.css';
+                linkElement.href = 'invert.css';
             } else {
                 linkElement.href = 'style.css';
             }
