@@ -637,11 +637,12 @@ aside > div > div {
 .footer {
 background-color: #d8d8d9;
  font: 20px;
+ color: #0b0c0e;
 }
 
 .footer:hover {
   background-color: #b2b2b3;
-
+  color: #0b0c0e;
 }
 
 .footer:hover a{
