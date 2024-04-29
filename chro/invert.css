@@ -635,12 +635,12 @@ aside > div > div {
 }
 
 .footer {
-background-color: #a5a5a7;
+background-color: #d8d8d9;
  font: 20px;
 }
 
 .footer:hover {
-  background-color: transparent;
+  background-color: #b2b2b3;
 
 }
 
