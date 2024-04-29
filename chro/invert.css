@@ -656,6 +656,11 @@ background-color: #d8d8d9;
 
 }
 
+.date2:hover a {
+  color: #b2b2b3;
+
+}
+
 .edition:hover a {
   color: #fff;
 
