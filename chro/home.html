@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+<button class="toggleCssButton" id="toggleCssButton"><i class="fa fa-lightbulb"></i></button>
     <!-- partial:index.partial.html -->
     <div class="main__wrapper">
         <nav class="standard-nav">
@@ -160,7 +160,26 @@
     </div>
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
+    <script>
+        document.getElementById('toggleCssButton').addEventListener('click', function () {
+            var linkElement = document.getElementById('stylesheet');
+            if (linkElement.href.endsWith('style.css')) {
+                linkElement.href = 'invert.css';
+            } else {
+                linkElement.href = 'style.css';
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var button = document.querySelector('.toggleCssButton');
+            if (window.pageYOffset > 0) {
+                button.style.display = 'none';
+            } else {
+                button.style.display = 'block';
+            }
+        });
+    </script>
 
 </body>
 
