@@ -642,26 +642,22 @@ background-color: #d8d8d9;
 
 .footer:hover {
   background-color: #b2b2b3;
-  color: #0b0c0e;
-}
-
-.footer:hover a{
-  color: #fff;
 
 }
+
 
 .issue:hover a {
- color: #bcbaba;
+ color: #fff;
 
 }
 
 .date:hover a {
-  color: #bcbaba;
+  color: #fff;
 
 }
 
 .edition:hover a {
-  color: #bcbaba;
+  color: #fff;
 
 }
 
