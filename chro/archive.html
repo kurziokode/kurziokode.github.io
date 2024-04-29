@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
-     <link id="stylesheet" rel="stylesheet" href="style.css">
+     <link id="stylesheet" rel="stylesheet" href="invert.css">
 
 </head>
 
@@ -196,10 +196,10 @@
     <script>
         document.getElementById('toggleCssButton').addEventListener('click', function () {
             var linkElement = document.getElementById('stylesheet');
-            if (linkElement.href.endsWith('style.css')) {
-                linkElement.href = 'invert.css';
-            } else {
+            if (linkElement.href.endsWith('invert.css')) {
                 linkElement.href = 'style.css';
+            } else {
+                linkElement.href = 'invert.css';
             }
         });
     </script>
