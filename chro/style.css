@@ -310,6 +310,22 @@ aside > div > div {
   }
 }
 
+@media (max-width: 699px) {
+  h1 {
+   font-size: 2.5rem;
+    padding:1.5rem;
+    
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1080px) {
+  h1 {
+   font-size: 4rem;
+    padding:1.5rem;
+    
+  }
+}
+
 .main-text.multi-column {
   margin: 0;
 }
