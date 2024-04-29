@@ -18,7 +18,7 @@ body {
   background: var(--preview-bg);
   font-family: var(--font);
   color: var(--black);
-  background-color: #0b0c0e;
+  background-color: #070707;
 
   padding: 4rem 2rem;
   line-height: 1.3;
