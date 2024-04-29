@@ -644,6 +644,11 @@ background-color: #d8d8d9;
 
 }
 
+.footer:hover a{
+  color: #fff;
+
+}
+
 .issue:hover a {
  color: #bcbaba;
 
