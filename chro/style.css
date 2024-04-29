@@ -692,3 +692,34 @@ background-color: #00000d;
             transform: scale(1.1);
             color: #bcbaba;
         }
+
+    .toggleCssButton {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #0b0c0e;
+            border: none;
+            border-radius: 25px;
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #111216, inset -5px -5px 10px #000000;
+            color: #5b6371;
+            font-size: 18px;
+            text-decoration: none;
+}
+
+.toggleCssButton:hover {
+            box-shadow: -3px -3px 10px #111216, 3px 3px 10px #000000, inset 5px 5px 10px #000000, inset -5px -5px 10px #111216;
+            font-size: 18px;
+            transition: 0ms;
+           color: #bcbaba; 
+}
+
+        .toggleCssButton a:focus {
+            outline: none;
+        }
