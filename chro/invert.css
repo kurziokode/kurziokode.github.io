@@ -728,3 +728,32 @@ background-color: #d8d8d9;
         .toggleCssButton a:focus {
             outline: none;
         }
+
+    .toggleCssButton2 {
+            width: 50px;
+            height: 50px;
+
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: #e5e5e7;
+            border: none;
+            border-radius: 25px;
+            box-shadow: -3px -3px 10px #e6e6e6, 3px 3px 10px #fff, inset 5px 5px 10px #e6e6e6, inset -5px -5px 10px #fff;
+            color: #262525;
+            font-size: 18px;
+            text-decoration: none;
+          
+}
+
+.toggleCssButton2:hover {
+            box-shadow: -3px -3px 10px #e6e6e6, 3px 3px 10px #fff, inset 5px 5px 10px #fff, inset -5px -5px 10px #e6e6e6;
+            font-size: 18px;
+            transition: 0ms;
+           color: #fff; 
+}
+
+        .toggleCssButton2 a:focus {
+            outline: none;
+        }
