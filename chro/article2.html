@@ -101,16 +101,7 @@
     </div>
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script>
-        document.getElementById('toggleCssButton').addEventListener('click', function () {
-            var linkElement = document.getElementById('stylesheet');
-            if (linkElement.href.endsWith('invert.css')) {
-                linkElement.href = 'style.css';
-            } else {
-                linkElement.href = 'invert.css';
-            }
-        });
-    </script>
+ <script defer src='script.js'></script>
     <script>
         window.addEventListener('scroll', function () {
             var button = document.querySelector('.toggleCssButton');
