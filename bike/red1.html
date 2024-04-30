@@ -36,11 +36,16 @@ function updateDate() {
     var weekdayOptions = { timeZone: timeZone, weekday: 'long' };
     var weekday = today.toLocaleDateString("en-US", weekdayOptions);
 
-    // Combine the weekday and formatted date
-    var finalDate = weekday + ' ' + formattedDatePart;
+    // Get the time
+    var timeOptions = { timeZone: timeZone, hour: '2-digit', minute: '2-digit', hour12: true };
+    var time = today.toLocaleTimeString("en-US", timeOptions);
+
+    // Combine the weekday, formatted date, and time
+    var finalDate = weekday + ' ' + formattedDatePart + ', ' + time;
 
     document.querySelector('.date a').textContent = finalDate;
 }
+
 
     </script>
 </head>
