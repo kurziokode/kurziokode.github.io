@@ -403,7 +403,7 @@ aside > div > div {
   height: 100%;
 }
 .terrarium img {
-  height: 104%;
+  height: 80%;
   object-fit: cover;
   object-position: right;
 }
