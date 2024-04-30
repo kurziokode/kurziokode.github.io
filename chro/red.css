@@ -230,7 +230,7 @@ img {
   width: 100%;
   filter: grayscale(100%);
   margin-bottom: 0.5rem;
-  border: 1px solid #1c2128;
+ 
   transition: 0.3s ease;
 }
 
@@ -403,7 +403,7 @@ aside > div > div {
   height: 100%;
 }
 .terrarium img {
-  height: 80%;
+  height: 70%;
   object-fit: cover;
   object-position: right;
 }
