@@ -24,8 +24,6 @@
 
 <body>
 
-
-    <!-- partial:index.partial.html -->
     <div class="main__wrapper">
         <nav class="standard-nav">
             <div class="links">
@@ -50,11 +48,8 @@
                     <div class="edition"><a href="https://kurziokode.github.io/five/index.html#"
                             target="_blank">Ιστότοποι</a></div>
 
-
-
-                </div>
+               </div>
             </aside>
-
 
             <h2 class="title--large main-title">Woman spends too much time on Codepens despite advice; no plans to stop
             </h2>
@@ -97,7 +92,29 @@
     </div>
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+            <script type="text/javascript">
+                var images = new Array();
 
+                function preloadImages() {
+
+                    for (i = 0; i < preloadImages.arguments.length; i++) {
+
+                        images[i] = new Image();
+
+                        images[i].src = preloadImages.arguments[i];
+
+                    }
+
+                }
+
+                preloadImages("ol.webp");
+            </script>
+
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
 </body>
 
 </html>
