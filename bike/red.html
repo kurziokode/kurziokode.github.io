@@ -21,23 +21,28 @@
         href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
     <link rel="stylesheet" href="red.css">
     <script type="text/javascript">
-        window.onload = function() {
-            updateDate();
-            setInterval(updateDate, 1000 * 60 * 60 * 24); // Update every 24 hours
-        }
+function updateDate() {
+    var today = new Date();
+    var timeZone = "Greece/Athens"; // Specify the desired time zone here
 
-        function updateDate() {
-            var today = new Date();
-            var timeZone = "Greece/Athens"; // Specify the desired time zone here
+    // Extract the date parts
+    var options = { timeZone: timeZone, year: 'numeric', month: '2-digit', day: '2-digit' };
+    var formattedDate = today.toLocaleDateString("en-US", options);
 
-            // Use toLocaleString() to format the date in the specified time zone
-            var formattedDate = today.toLocaleString("en-US", {timeZone: timeZone});
+    // Format the date as "dd/mm/yyyy"
+    var dateParts = formattedDate.split('/');
+    var formattedDatePart = dateParts[1] + '/' + dateParts[0] + '/' + dateParts[2];
 
-            // Extract the date part from the formatted string
-            var datePart = formattedDate.split(',')[0];
+    // Get the weekday
+    var weekdayOptions = { timeZone: timeZone, weekday: 'long' };
+    var weekday = today.toLocaleDateString("en-US", weekdayOptions);
 
-            document.querySelector('.date a').textContent = datePart;
-        }
+    // Combine the weekday and formatted date
+    var finalDate = weekday + ' ' + formattedDatePart;
+
+    document.querySelector('.date a').textContent = finalDate;
+}
+
     </script>
 </head>
 
