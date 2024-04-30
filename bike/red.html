@@ -20,30 +20,26 @@
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
     <link rel="stylesheet" href="red.css">
-    <script type="text/javascript">
-function updateDate() {
-    var today = new Date();
-    var timeZone = "Greece/Athens"; // Specify the desired time zone here
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+<script type="text/javascript">
+    window.onload = function() {
+        updateDate(); // Call updateDate on page load
+        setInterval(updateDate, 1000 * 60 * 60 * 24); // Update every 24 hours
+    }
 
-    // Extract the date parts
-    var options = { timeZone: timeZone, year: 'numeric', month: '2-digit', day: '2-digit' };
-    var formattedDate = today.toLocaleDateString("en-US", options);
+    function updateDate() {
+        // Create a DateTime object for the current time in the local timezone
+        var today = luxon.DateTime.local();
 
-    // Format the date as "dd/mm/yyyy"
-    var dateParts = formattedDate.split('/');
-    var formattedDatePart = dateParts[1] + '/' + dateParts[0] + '/' + dateParts[2];
+        // Set the timezone to "Greece/Athens"
+        today = today.setZone("Europe/Athens");
 
-    // Get the weekday
-    var weekdayOptions = { timeZone: timeZone, weekday: 'long' };
-    var weekday = today.toLocaleDateString("en-US", weekdayOptions);
+        // Format the date and time
+        var formattedDate = today.toFormat("EEEE dd/MM/yyyy, hh:mm a");
 
-    // Combine the weekday and formatted date
-    var finalDate = weekday + ' ' + formattedDatePart;
-
-    document.querySelector('.date a').textContent = finalDate;
-}
-
-    </script>
+        document.querySelector('.date a').textContent = formattedDate;
+    }
+</script>
 </head>
 
 <body>
@@ -71,7 +67,7 @@ function updateDate() {
             <aside>
                 <div class="footer">
                     <div class="issue"><a href="red1.html#">Article</a></div>
-                    <div class="date"><a href="https://calendar.proton.me/u/0/" target="_blank">Tuesday 30/04/2024</a></div>
+                    <div class="date"><a href="https://calendar.proton.me/u/0/" target="_blank"></a></div>
                     <div class="edition"><a href="https://kurziokode.github.io/five/index.html#"
                             target="_blank">Projects</a></div>
 
