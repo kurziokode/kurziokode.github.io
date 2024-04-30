@@ -604,6 +604,7 @@ aside > div > div {
 
 .plan {
   padding-bottom: 1rem;
+  color: #1c2128;
 }
 @media (min-width: 700px) and (max-width: 1024px) {
   .plan {
