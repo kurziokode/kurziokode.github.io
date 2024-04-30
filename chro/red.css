@@ -3,7 +3,7 @@
   --font-title: "Playfair Display", serif;
   --font-sans-serif: "Manrope", sans-serif;
   --black: #4f5763;
-  --black2: #00000d;
+  --black2: #0d0000;
   --black--acc: #4f5763;
   --gray: #eee;
   --gray-1: #ededed;
@@ -17,7 +17,7 @@ body {
   font-size: 1.3rem;
   background: var(--preview-bg);
   font-family: var(--font);
-  color: #1c2128;
+  color: #4f5763;
   background-color: #070707;
 
   padding: 4rem 2rem;
