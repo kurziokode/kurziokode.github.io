@@ -24,15 +24,11 @@
 <script type="text/javascript">
     window.onload = function() {
         updateDate(); // Call updateDate on page load
-        setInterval(updateDate, 1000 * 60 * 60 * 24); // Update every 24 hours
+        setInterval(updateDate, 60000); // Update every minute
     }
 
     function updateDate() {
-        // Create a DateTime object for the current time in the local timezone
-        var today = luxon.DateTime.local();
-
-        // Set the timezone to "Greece/Athens"
-        today = today.setZone("Europe/Athens");
+        var today = luxon.DateTime.local().setZone("Europe/Athens");
 
         // Format the date and time
         var formattedDate = today.toFormat("EEEE dd/MM/yyyy, hh:mm a");
