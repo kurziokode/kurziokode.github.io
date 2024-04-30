@@ -28,17 +28,11 @@
     }
 
     function updateDate() {
-        // Try creating a DateTime object without specifying a timezone
+        // Create a DateTime object for the current time in the local timezone
         var today = luxon.DateTime.local();
 
-        // Attempt to set the timezone dynamically
-        try {
-            today = today.setZone("Greece/Athens");
-        } catch (error) {
-            console.error("Error setting timezone:", error);
-            // Fallback to the system's current timezone
-            today = today.setZone(luxon.DateTime.local().zone);
-        }
+        // Set the timezone to "Greece/Athens"
+        today = today.setZone("Europe/Athens");
 
         // Format the date and time
         var formattedDate = today.toFormat("EEEE dd/MM/yyyy, hh:mm a");
