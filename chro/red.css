@@ -17,7 +17,7 @@ body {
   font-size: 1.3rem;
   background: var(--preview-bg);
   font-family: var(--font);
-  color: var(--black);
+  color: #1c2128;
   background-color: #070707;
 
   padding: 4rem 2rem;
@@ -604,7 +604,7 @@ aside > div > div {
 
 .plan {
   padding-bottom: 1rem;
-  color: #1c2128;
+  
 }
 @media (min-width: 700px) and (max-width: 1024px) {
   .plan {
