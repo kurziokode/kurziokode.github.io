@@ -229,7 +229,7 @@ main .cssgrid-collection {
 img {
   width: 100%;
   filter: grayscale(100%);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
  
   transition: 0.3s ease;
 }
