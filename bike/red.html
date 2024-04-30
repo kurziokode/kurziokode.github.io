@@ -28,12 +28,15 @@
 
         function updateDate() {
             var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-            var yyyy = today.getFullYear();
+            var timeZone = "Greece/Athens"; // Specify the desired time zone here
 
-            var formattedDate = 'Tuesday ' + mm + '/' + dd + '/' + yyyy;
-            document.querySelector('.date a').textContent = formattedDate;
+            // Use toLocaleString() to format the date in the specified time zone
+            var formattedDate = today.toLocaleString("en-US", {timeZone: timeZone});
+
+            // Extract the date part from the formatted string
+            var datePart = formattedDate.split(',')[0];
+
+            document.querySelector('.date a').textContent = datePart;
         }
     </script>
 </head>
