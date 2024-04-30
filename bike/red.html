@@ -20,7 +20,22 @@
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
     <link rel="stylesheet" href="red.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            updateDate();
+            setInterval(updateDate, 1000 * 60 * 60 * 24); // Update every 24 hours
+        }
 
+        function updateDate() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+            var yyyy = today.getFullYear();
+
+            var formattedDate = 'Tuesday ' + mm + '/' + dd + '/' + yyyy;
+            document.querySelector('.date a').textContent = formattedDate;
+        }
+    </script>
 </head>
 
 <body>
@@ -48,8 +63,7 @@
             <aside>
                 <div class="footer">
                     <div class="issue"><a href="red1.html#">Άρθρο</a></div>
-                    <div class="date"><a href="https://calendar.proton.me/u/0/" target="_blank">Τρίτη, 30 Απριλίου,
-                            2024</a></div>
+                    <div class="date"><a href="https://calendar.proton.me/u/0/" target="_blank">Tuesday April 30, 2024</a></div>
                     <div class="edition"><a href="https://kurziokode.github.io/five/index.html#"
                             target="_blank">Ιστότοποι</a></div>
 
