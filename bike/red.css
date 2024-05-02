@@ -591,6 +591,7 @@ aside2 > div > div {
 .cssgrid-collection__image {
   flex: 0 0 32%;
   margin-right: 1.5rem;
+  cursor: url('start.png'), auto;
 }
 
 @media (max-width: 1024px) {
