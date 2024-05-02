@@ -61,6 +61,7 @@ body {
 }
 
 a {
+  cursor: url('start.png'), auto;
   text-decoration: none;
   display: block;
   color: var(--black);
