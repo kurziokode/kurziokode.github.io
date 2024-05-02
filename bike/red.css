@@ -550,7 +550,7 @@ aside > div > div {
 .cssgrid-collection {
   display: flex;
   align-content: stretch;
-  border-top: 1px solid;
+  border-top: 0px solid;
   padding-top: 1rem;
 }
 .cssgrid-collection h4 {
