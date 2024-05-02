@@ -84,7 +84,7 @@ whether in whole or in part, is strictly prohibited.
 </head>
 
 <body>
-
+ <div class="preloader"></div>
     <!-- partial:index.partial.html -->
     <div class="main__wrapper">
         <nav class="standard-nav">
@@ -313,6 +313,13 @@ $(document).ready(function() {
     });
 });
  </script>
+    <script>
+    window.addEventListener('load', function() {
+        const preloader = document.querySelector('.preloader');
+        preloader.style.display = 'none';
+    });
+</script>
+
 </body>
 
 </html>
