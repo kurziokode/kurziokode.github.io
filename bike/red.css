@@ -785,7 +785,7 @@ background-color: transparent;
         .standard-nav {
        
           
-            cursor: url('start.png'), auto;
+           
             z-index: 9999;
             display: flex;
             justify-content: space-between;
@@ -797,7 +797,7 @@ background-color: transparent;
 
         .links {
             padding: 0px;
-           cursor: url('start.png'), auto;
+          
         }
 
         .links a {
@@ -805,7 +805,7 @@ background-color: transparent;
             color: #5b6371;
             transition: all 0s;
             display: inline-block;
-          cursor: url('start.png'), auto;
+         
         }
 
         .links a:hover {
