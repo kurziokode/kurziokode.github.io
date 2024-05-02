@@ -301,7 +301,17 @@ whether in whole or in part, is strictly prohibited.
             link.setAttribute('rel', 'noopener noreferrer');
         });
     </script>
-
+     <script>
+$(document).ready(function() {
+    $('a[href*="#"]').on('click', function(e) {
+        e.preventDefault();
+        const target = $(this.hash);
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000); // Adjust the duration here
+    });
+});
+ </script>
 </body>
 
 </html>
