@@ -583,6 +583,13 @@ aside2 > div > div {
   flex: 0 0 32%;
   margin-right: 1.5rem;
 }
+
+@media (max-width: 1024px) {
+.cssgrid-collection__image {
+   display: none;
+  }
+}
+
 .cssgrid-collection img {
   height: 100%;
   object-fit: cover;
