@@ -313,6 +313,29 @@ aside > div > div {
   padding: 8px;
 }
 
+aside2 {
+  text-align: center;
+  padding: 3px 0;
+
+ 
+  letter-spacing: 1px;
+  margin: 1.5rem 0;
+}
+@media (min-width: 700px) {
+aside2 {
+    margin: 0;
+  }
+}
+aside2 > div {
+  display: flex;
+  align-items: center;
+
+}
+aside2 > div > div {
+  flex: 1;
+  padding: 8px;
+}
+
 @media (min-width: 700px) {
   .multi-column {
     column-count: 2;
@@ -697,6 +720,11 @@ aside > div > div {
 
 .footer {
 background-color:  #0d0000;
+ font: 20px;
+}
+
+.footer2 {
+background-color: transparent;
  font: 20px;
 }
 
