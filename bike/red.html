@@ -84,7 +84,12 @@ whether in whole or in part, is strictly prohibited.
 </head>
 
 <body>
- <div class="preloader"></div>
+    <div class="page-loader">
+        <div class="spinner"></div>
+        <div class="txt">Loading...</div>
+    </div>
+    <!-- Your website content goes here -->
+    <div class="content" style="display: none;">
     <!-- partial:index.partial.html -->
     <div class="main__wrapper">
         <nav class="standard-nav">
@@ -277,6 +282,7 @@ whether in whole or in part, is strictly prohibited.
           </div>
     </aside2>    
     </div>
+   </div>     
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script type="text/javascript">
@@ -314,10 +320,14 @@ $(document).ready(function() {
 });
  </script>
     <script>
-    window.addEventListener('load', function() {
-        const preloader = document.querySelector('.preloader');
-        preloader.style.display = 'none';
+function hideLoader() {
+    $('.page-loader').fadeOut('slow', function() {
+        $('.content').fadeIn('slow');
     });
+}
+
+$(window).on('load', hideLoader);
+
 </script>
 
 </body>
