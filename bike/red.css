@@ -796,7 +796,7 @@ background-color: transparent;
 
         .links {
             padding: 0px;
-
+           cursor: url('start.png'), auto;
         }
 
         .links a {
@@ -804,11 +804,13 @@ background-color: transparent;
             color: #5b6371;
             transition: all 0s;
             display: inline-block;
+          cursor: url('start.png'), auto;
         }
 
         .links a:hover {
             transform: scale(1.1);
             color: #bcbaba;
+          cursor: url('start.png'), auto;
         }
 
  .deep {
