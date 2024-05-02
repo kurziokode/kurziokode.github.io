@@ -73,7 +73,7 @@ body {
 }
 
 .txt {
-    color: #666;
+    color: #b30000;
     text-align: center;
     font-weight: bold;
     letter-spacing: 0.3rem;
@@ -85,7 +85,7 @@ body {
     width: 80px;
     height: 80px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #990000;
     border-radius: 100%;
     animation: sk-scaleout 1.0s infinite ease-in-out;
 }
