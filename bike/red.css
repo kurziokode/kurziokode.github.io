@@ -666,6 +666,7 @@ aside2 > div > div {
   cursor: url('start.png'), auto;
 }
 .social__image {
+  cursor: url('start.png'), auto;
   margin: 0;
   border: 0;
   grid-row: span 2;
@@ -681,7 +682,7 @@ aside2 > div > div {
 
 .social__subtitle {
   background: transparent;
-  
+  cursor: url('start.png'), auto;
   line-height: 1;
   padding:  1rem;
  
@@ -689,6 +690,7 @@ aside2 > div > div {
 }
 
 .social__subtitle:hover {
+  cursor: url('start.png'), auto;
   background: #0d0000;
   color: #8c8c8c;
 }
@@ -696,7 +698,7 @@ aside2 > div > div {
 .social__content {
   background: transparent;
   padding: 1rem;
- 
+ cursor: url('start.png'), auto;
   grid-column: 2;
 }
 
