@@ -811,7 +811,7 @@ background-color: transparent;
         .links a:hover {
             transform: scale(1.1);
             color: #bcbaba;
-          cursor: url('start.png'), auto;
+         
         }
 
  .deep {
