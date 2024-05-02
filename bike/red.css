@@ -61,13 +61,14 @@ body {
 }
 
 a {
-  cursor: url('start.png'), auto;
+  
   text-decoration: none;
   display: block;
   color: var(--black);
 }
+
 a:hover, a:focus, a:active, a:visited {
-  cursor: url('start.png'), auto;
+ 
   color: var(--black--acc);
 }
 
