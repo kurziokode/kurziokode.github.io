@@ -601,7 +601,9 @@ aside2 > div > div {
 .cssgrid-collection p a:hover {
   border-bottom: 1px solid;
 }
-
+.cssgrid-collection h4:hover {
+  background: var(--black2); 
+}
 @media (min-width: 1024px) {
   .captcha {
     margin-top: 0;
