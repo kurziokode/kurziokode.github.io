@@ -922,13 +922,61 @@ background-color: transparent;
     color: inherit; /* This makes the link color the same as the surrounding text */
  }
 
-    .glass
-      {
-        
-        height:41.35px;
-        width:auto; 
-        border-radius:10px;
-        backdrop-filter: blur(14px) saturate(100%); 
-        -webkit-backdrop-filter: blur(14px) saturate(100%);
-        background-color: rgba(179, 0, 0,0.1);  
-      }
+   *{
+    padding:0;
+    margin:0;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#2f3640;  
+}
+.pulse i{
+    color:#fff;
+    font-size:3rem;
+}
+.pulse{
+    background:#31f314;
+    height: 150px;
+    width:150px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+.pulse::before{
+    content:"";
+    position: absolute;
+    width:calc(100% + 40px);
+    height:calc(100% + 40px);
+    border:2px solid #31f314;
+    border-radius:50%;
+    animation:animate 1.5s linear infinite;
+}
+.pulse::after{
+    content:"";
+    position: absolute;
+    width:calc(100% + 40px);
+    height:calc(100% + 40px);
+    border:2px solid #31f314;
+    border-radius:50%;
+    animation:animate 1.5s linear infinite;
+    animation-delay:0.4s;
+}
+@keyframes animate{
+    0%{
+        transform:scale(0.5);
+        opacity:0;
+    }
+    50%{
+        transform:scale(1);
+        opacity:1;
+    }
+    100%{
+        transform:scale(1.4);
+        opacity:0;
+    }
+}
