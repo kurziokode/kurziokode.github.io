@@ -95,18 +95,18 @@ body {
     100% { transform: scale(1.0); opacity: 0; }
 }
 
-tag {
+.tag {
  text-align: center;
 }
 
-tag a {
+.tag a {
   color: var(--black);
   text-decoration: none;
   text-align: center;
   display: block;
 }
 
-tag a:hover {
+.tag a:hover {
   cursor: url('start.png'), auto; 
   color: var(--black--acc);
   text-decoration: none;
@@ -114,18 +114,18 @@ tag a:hover {
 
 }
 
-tag2 {
+.tag2 {
   text-align: center;
 }
 
-tag2 a {
+.tag2 a {
 color: var(--black);
   text-decoration: none;
   text-align: center;
   display: block;
 }
 
-tag2 a:hover {
+.tag2 a:hover {
   cursor: url('start.png'), auto; 
   color: var(--black--acc);
   text-decoration: none;
