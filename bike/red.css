@@ -95,11 +95,26 @@ body {
     100% { transform: scale(1.0); opacity: 0; }
 }
 
+.tag {
+  cursor: url('start.png'), auto; 
+
+  text-align: center;
+}
+
 .tag a {
+  cursor: url('start.png'), auto; 
+  color: var(--black);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.tag a:hover {
   cursor: url('start.png'), auto; 
   color: var(--black--acc);
   text-decoration: none;
   text-align: center;
+  display: block;
 }
 
 a {
