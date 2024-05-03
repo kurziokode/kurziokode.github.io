@@ -921,3 +921,14 @@ background-color: transparent;
     text-decoration: none;
     color: inherit; /* This makes the link color the same as the surrounding text */
  }
+
+    .glass
+      {
+        
+        height:41.35px;
+        width:auto; 
+        border-radius:10px;
+        backdrop-filter: blur(14px) saturate(100%); 
+        -webkit-backdrop-filter: blur(14px) saturate(100%);
+        background-color: rgba(128, 0, 0,0.07);  
+      }
