@@ -96,47 +96,41 @@ body {
 }
 
 tag {
-
-
-  text-align: center;
+ text-align: center;
 }
 
-.tag a {
-  cursor: url('start.png'), auto; 
+tag a {
   color: var(--black);
   text-decoration: none;
   text-align: center;
   display: block;
 }
 
-.tag a:hover {
+tag a:hover {
   cursor: url('start.png'), auto; 
   color: var(--black--acc);
   text-decoration: none;
   text-align: center;
-  display: block;
+
 }
 
 tag2 {
- 
-
   text-align: center;
 }
 
-.tag2 a {
-  cursor: url('start.png'), auto; 
-  color: var(--black);
+tag2 a {
+color: var(--black);
   text-decoration: none;
   text-align: center;
   display: block;
 }
 
-.tag2 a:hover {
+tag2 a:hover {
   cursor: url('start.png'), auto; 
   color: var(--black--acc);
   text-decoration: none;
   text-align: center;
-  display: block;
+ 
 }
 
 a {
