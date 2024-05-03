@@ -416,6 +416,29 @@ aside2 > div > div {
   padding: 8px;
 }
 
+aside3 {
+  text-align: center;
+  padding: 3px 0;
+ cursor: url('start.png'), auto;
+ 
+  letter-spacing: 1px;
+  margin: 1.5rem 0;
+}
+@media (min-width: 700px) {
+aside3 {
+    margin: 0;
+  }
+}
+aside3 > div {
+  display: flex;
+  align-items: center;
+
+}
+aside3 > div > div {
+  flex: 1;
+  padding: 8px;
+}
+
 @media (min-width: 700px) {
   .multi-column {
     column-count: 2;
@@ -821,6 +844,12 @@ background-color:  #0d0000;
 }
 
 .footer2 {
+background-color: transparent;
+ font: 20px;
+   cursor: url('start.png'), auto;
+}
+
+.footer3 {
 background-color: transparent;
  font: 20px;
    cursor: url('start.png'), auto;
