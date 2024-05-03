@@ -1,0 +1,357 @@
+<!--
+-----------------------------------------------------------------------
+The MIT License (MIT)
+
+Copyright (c) 2024 Olivia Ng (https://codepen.io/oliviale/pen/BaoXOOP)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-----------------------------------------------------------------------
+Original artwork by: 
+(https://cdnb.artstation.com/p/assets/images/images/007/167/941/large/rogelio-olguin-sri-v-7.jpg?1504166310)
+-----------------------------------------------------------------------
+Modified code and website content: 
+Copyright © 2024 Christos Doulos. All rights reserved. 
+Any unauthorized use, copying or distribution of this software,
+whether in whole or in part, is strictly prohibited.
+-----------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QE8B495353');
+    </script>
+    <meta charset="UTF-8">
+    <title>My Alley Bike</title>
+    <meta name="keywords" content="HTML, CSS, JavaScript, Web Development, Design">
+    <meta property="og:site_name" content="My Alley Bike">
+    <meta property="og:title" content="The Ultimate Guide to Web Development">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kurziokode.github.io/bike/red.html">
+    <meta property="og:description" content="Discover the latest in tech innovations with our comprehensive guide to cutting-edge gadgets and software. Dive into the future of technology today!" />
+    <meta name="description" content="Explore the intersection of technology and innovation with our curated collection of the most exciting tech trends and breakthroughs. Stay ahead of the curve with our in-depth articles and reviews." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, must-revalidate">
+    <meta http-equiv="Cache-Control" content="public, max-age=3600, must-revalidate">
+    <link rel="preconnect" href="https://use.fontawesome.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+        integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous">
+    </script>
+    <link rel="icon" href="nge.png" type="image/x-icon" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Playfair+Display+SC:wght@900&family=Playfair+Display:ital,wght@0,800;1,800&family=Manrope:wght@800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'>
+    <link rel="stylesheet" href="red.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            updateDate(); // Call updateDate on page load
+            setInterval(updateDate, 60000); // Update every minute
+        }
+
+        function updateDate() {
+            var today = luxon.DateTime.local().setZone("Europe/Athens");
+
+            // Format the date and time
+            var formattedDate = today.toFormat("EEEE dd/MM/yyyy, hh:mm a");
+
+            document.querySelector('.date a').textContent = formattedDate;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="page-loader">
+        <div class="spinner"></div>
+        <div class="txt">Pump Up Tires</div>
+    </div>
+    <!-- Your website content goes here -->
+    <div class="content" style="display: none;">
+    <!-- partial:index.partial.html -->
+    <div class="main__wrapper">
+        <nav class="standard-nav">
+            <div class="links">
+
+                <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+
+            </div>
+            <div class="links">
+                <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://gr.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+
+
+            </div>
+        </nav>
+        <main>
+            <h1><a href="#">My Alley Bike</a></h1>
+            <aside>
+                <div class="footer">
+                    <div class="issue"><a href="https://github.com/" target="_blank">Github</a></div>
+                    <div class="date"><a href="https://calendar.proton.me/u/0/" target="_blank"></a></div>
+                    <div class="edition"><a href="https://www.deepl.com/translator" target="_blank">DeepL</a></div>
+
+                </div>
+            </aside>
+
+            <h2 class="title--large main-title">Web Development: Building and Design</h2>
+
+            <div class="main-text multi-column">
+                <p><em>Web development</em> encompasses the creation of websites and web applications. It involves two main areas: Front-End Development: This focuses on the user-facing side, what visitors see and interact with. Here, developers use <a href="https://kurziokode.github.io/five/index.html" target="_blank" class="deep">HTML, CSS, and JavaScript</a> to structure content, style the website, and add interactivity. Back-End Development: This works behind the scenes, handling server communication, databases, and website functionality. Languages like Python, Java, and PHP are common choices for back-end development. Design skills are crucial for web development, influencing website usability and aesthetics: Visual Design: This involves creating the overall look and feel of the website, using color, typography, and imagery to create a cohesive and visually appealing experience. UI/UX Design (User Interface/User Experience): UI design focuses on the layout and elements users interact with. UX design ensures the website is intuitive, easy to navigate, and meets user needs. Tools like Adobe Photoshop and Sketch are popular for design creation. Many web professionals have a basic understanding of both development and design. Some specialize in front-end or back-end development, while others become "full-stack" developers, comfortable with both sides. Regardless of specialization, strong design skills enhance a web developer's ability to create user-friendly and visually stunning websites.</p>
+
+
+
+            </div>
+
+            <a class="terrarium" href="ol.webp" target="_blank">
+                <figure><img src="ol.webp" />
+
+                </figure>
+            </a>
+
+            <a class="social" href="https://codepen.io/trending" target="_blank">
+                <img class="social__image" src="giphy4.gif" />
+                <div class="social__subtitle">CodePen</div>
+                <div class="social__content"><em>CodePen</em> is a web playground for front-end developers. Build and
+                    test code snippets ("pens") in HTML, CSS, and JavaScript, and share them with the online community.
+                </div>
+            </a> 
+
+            <a class="item-with-image span--2 long--2" href="https://www.awwwards.com/" target="_blank">
+                <h4>Awwwards</h4>
+
+
+                <div class="multi-column">
+                    <p><em>Awwwards</em> recognizes the best in web design through its annual competition. They
+                        celebrate innovation, usability, and creativity across websites. If you're a web designer or
+                        developer, winning an Awwward is a prestigious honor. For design enthusiasts, AWWARDS offers a
+                        platform to discover inspiring websites and the latest trends. They showcase award-winning sites
+                        and provide resources for web professionals.</p>
+
+                </div>
+
+            </a>
+
+            <a class="item-with-image span--2 long--2" href="https://www.w3schools.com/" target="_blank">
+                <h4>W3Schools</h4>
+
+
+                <div class="multi-column">
+                    <p><em>W3Schools</em> is a free online learning platform for web development. Launched in 1998, it
+                        offers tutorials and references on various web technologies like HTML, CSS, JavaScript, and
+                        more. They also cover broader programming languages like Python and C++. Their interactive TryIt
+                        editor lets you experiment with code in a safe environment. W3Schools is an excellent resource
+                        for beginners and experienced developers alike, providing a comprehensive foundation for web
+                        development skills.</p>
+
+                </div>
+
+            </a>
+
+
+            <div class="sidebar">
+                <br>
+                <h3 class="title--large2">AI Links</h3>
+
+                <a class="sidebar-item slack-ui" href="https://gemini.google.com/app" target="_blank">
+                    <h5>Gemini by Google</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://chat.openai.com/" target="_blank">
+                    <h5>ChatGPT by OpenAI</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://copilot.microsoft.com/" target="_blank">
+                    <h5>Copilot by Microsoft</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://www.phind.com/" target="_blank">
+                    <h5>Phind Idea to Product</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://godmode.space/" target="_blank">
+                    <h5>Godmode</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://genai.works/" target="_blank">
+                    <h5>Generative</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://www.futurepedia.io/" target="_blank">
+                    <h5>Futurepedia</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://www.perplexity.ai/" target="_blank">
+                    <h5>Perplexity</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://supertools.therundown.ai/" target="_blank">
+                    <h5>Supertools</h5>
+
+                </a>
+
+
+                <a class="sidebar-item slack-ui" href="https://www.semanticscholar.org/" target="_blank">
+                    <h5>Semantic Scholar</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://promptwave.ai/" target="_blank">
+                    <h5>PromptWave</h5>
+
+                </a>
+
+                <a class="sidebar-item slack-ui" href="https://lexica.art/" target="_blank">
+                    <h5>Lexica Art</h5>
+
+                </a>
+          </div>
+
+        </main>
+        <br><br>
+        <aside>
+            <div class="footer">
+                <div class="issue"><a
+                        href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Subject:&to=lestiflee@gmail.com"
+                        target="_blank">Contact</a></div>
+                <div class="issue"><a href="https://kurziokode.github.io/final.mp4" target="_blank">© 2024 Chris
+                        Doulos</a></div>
+<div class="issue">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkurziokode.github.io%2Fbike%2Fred.html%23" target="_blank">Share</a>
+</div>
+
+
+            </div>
+        </aside>
+       <br>
+    <div class="item-with-image cssgrid-collection">
+        <a class="cssgrid-collection__image" href="https://www.youtube.com/c/Freecodecamp" target="_blank"><img src="pro.webp"/></a>
+      <div class="cssgrid-collection__content">
+        <a href="https://www.youtube.com/c/Freecodecamp" target="_blank">
+            <h4>Freecodecamp's YouTube channel</h4>
+        <div class="multi-column-3">
+          <p><em>FreeCodeCamp's</em> YouTube channel offers a vast library of coding tutorials, not as pre-defined playlists, but rather categorized by programming languages and development areas.  Explore courses on web development (HTML, CSS, JavaScript), Python, data science, machine learning, and more. Each section features full courses for beginners, project-based learning, and in-depth tutorials. With thousands of videos by passionate instructors, FreeCodeCamp on YouTube provides a rich and free resource for aspiring coders. Coding can be a truly rewarding journey. It's like solving puzzles, but with the power to create something tangible. As you learn, you'll unlock the ability to bring your ideas to life, whether it's a simple website or a complex application. The coding community is also incredibly supportive, with countless resources and forums available to help you along the way. So don't be discouraged by challenges – embrace them as opportunities to grow and learn. Remember, even the most experienced coders started somewhere. Most importantly, have fun with it! The process of creation and seeing your code come together can be incredibly satisfying. Happy coding!  May your lines be clean, your logic flawless, and your bugs nonexistent.</p>
+        </div></a>
+      </div>
+    </div>
+   <br><br>     
+    <aside2>
+          <div class="footer2">
+            <div class="issue"><a
+                href="https://neocities.org/"
+                target="_blank">Neocities, create your own site</a></div>
+<div class="issue"><a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"><i class="fa fa-chevron-up"></i></a></div>
+
+            <div class="issue"><a
+                href="https://playcode.io/"
+                target="_blank">Try it, PlayCode is free</a></div>
+        
+          </div>
+    </aside2>    
+    </div>
+   </div>     
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        var images = new Array();
+
+        function preloadImages() {
+
+            for (i = 0; i < preloadImages.arguments.length; i++) {
+
+                images[i] = new Image();
+
+                images[i].src = preloadImages.arguments[i];
+
+            }
+
+        }
+
+        preloadImages("ol.webp");
+    </script>
+
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
+     <script>
+$(document).ready(function() {
+    $('a[href*="#"]').on('click', function(e) {
+        e.preventDefault();
+        const target = $(this.hash);
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000); // Adjust the duration here
+    });
+});
+ </script>
+    <script>
+function hideLoader() {
+    $('.page-loader').fadeOut('slow', function() {
+        $('.content').fadeIn('slow');
+    });
+}
+
+$(window).on('load', hideLoader);
+
+</script>
+
+<script type="text/javascript">
+var sc_project=12995275; 
+var sc_invisible=1; 
+var sc_security="f02894da"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/12995275/0/f02894da/1/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+</body>
+
+</html>
