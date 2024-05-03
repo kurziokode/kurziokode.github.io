@@ -777,52 +777,6 @@ aside2 > div > div {
   grid-column: 2;
 }
 
-.social2 {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: max-content auto;
-  color: var(--black);
-  text-align: left;
-  cursor: url('start.png'), auto;
-}
-.social2__image {
-  cursor: url('start.png'), auto;
-  margin: 0;
-  border: 0;
-  grid-row: span 2;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 470px) {
- .social2__image {
-   display: none;
-  }
-}
-
-.social2__subtitle {
-  background: transparent;
-  cursor: url('start.png'), auto;
-  line-height: 1;
-  padding:  1rem;
- 
-  font: 20px var(--font-title);
-}
-
-.social2__subtitle:hover {
-  cursor: url('start.png'), auto;
-  background: #0d0000;
-  color: #8c8c8c;
-}
-
-.social2__content {
-  background: transparent;
-  padding: 1rem;
- cursor: url('start.png'), auto;
-  grid-column: 2;
-}
-
-
 .plan {
   padding-bottom: 1rem;
   
