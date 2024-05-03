@@ -88,6 +88,20 @@ whether in whole or in part, is strictly prohibited.
             document.querySelector('.date a').textContent = formattedDate;
         }
     </script>
+    
+    <style>
+    .glass
+      {
+        height:200px;
+        width:350px; 
+        border-radius:10px;
+        backdrop-filter: blur(14px) saturate(100%); 
+        -webkit-backdrop-filter: blur(14px) saturate(100%);
+        background-color: rgba(155,155,155,0.09);  
+      }
+    </style>  
+    
+  
 </head>
 
 <body>
@@ -95,10 +109,11 @@ whether in whole or in part, is strictly prohibited.
         <div class="spinner"></div>
         <div class="txt">Pump Up Tires</div>
     </div>
-    <!-- Your website content goes here -->
+    
     <div class="content" style="display: none;">
-    <!-- partial:index.partial.html -->
+    
     <div class="main__wrapper">
+        <div class="glass"></div>
         <nav class="standard-nav">
             <div class="links">
 
