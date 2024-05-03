@@ -451,8 +451,14 @@ aside3 > div > div {
 }
 .sidebar {
   margin-top: 3rem;
+
+}
+
+.sidebar a:hover {
+
   cursor: url('start.png'), auto;
 }
+
 @media (min-width: 700px) and (max-width: 1024px) {
   .sidebar {
     display: flex;
