@@ -161,7 +161,7 @@ h1 {
 }
 
 h3 {
-  font: italic 18px var(--font-title);
+  font: italic 20px var(--font-title);
   margin-bottom: 1rem;
 }
 
@@ -207,14 +207,14 @@ em {
 
 .title--large2 {
   font-family: var(--font-title);
-  font-size: 18px;
+  font-size: 20px;
   font-style: italic;
   text-align: center;
   margin-bottom: 0.8rem;
 }
 @media (min-width: 700px) {
   .title--large2 {
-    font-size: 28px;
+    font-size: 26px;
     margin: 0;
   }
 }
