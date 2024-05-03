@@ -96,7 +96,7 @@ body {
 }
 
 tag {
-  cursor: url('start.png'), auto; 
+
 
   text-align: center;
 }
@@ -110,6 +110,28 @@ tag {
 }
 
 .tag a:hover {
+  cursor: url('start.png'), auto; 
+  color: var(--black--acc);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+tag2 {
+ 
+
+  text-align: center;
+}
+
+.tag2 a {
+  cursor: url('start.png'), auto; 
+  color: var(--black);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.tag2 a:hover {
   cursor: url('start.png'), auto; 
   color: var(--black--acc);
   text-decoration: none;
