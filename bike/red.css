@@ -95,7 +95,7 @@ body {
     100% { transform: scale(1.0); opacity: 0; }
 }
 
-.tag {
+tag {
   cursor: url('start.png'), auto; 
 
   text-align: center;
