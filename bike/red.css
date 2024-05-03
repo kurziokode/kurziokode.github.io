@@ -95,6 +95,10 @@ body {
     100% { transform: scale(1.0); opacity: 0; }
 }
 
+.tag  {
+  cursor: url('start.png'), auto; 
+  color: var(--black--acc);
+}
 
 a {
 
