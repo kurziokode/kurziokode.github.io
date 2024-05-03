@@ -930,5 +930,5 @@ background-color: transparent;
         border-radius:10px;
         backdrop-filter: blur(14px) saturate(100%); 
         -webkit-backdrop-filter: blur(14px) saturate(100%);
-        background-color: rgba(153, 0, 0,0.1);  
+        background-color: rgba(179, 0, 0,0.1);  
       }
