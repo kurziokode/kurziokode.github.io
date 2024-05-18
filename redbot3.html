@@ -157,7 +157,7 @@ strictly prohibited. -->
                <div class="w-full flex items-center gap-x-1.5 group select-none hover:text-red-600">
                 <div
                     class="group-hover:bg-white/10 w-full group-active:scale-95 self-stretch pl-2 rounded flex items-center space-x-2 transition-all duration-200 dark:group-hover:text-white dark:hover:text-white text-lg">
-                    <a href="https://kurziokode.github.io/rotten.html#"><span
+                    <a href="https://kurziokode.github.io/rotten.html#" target="_blank"><span
                             class="font-QuicksandMedium">&#x2022;&nbsp;&nbsp;Cult</span></a>
                 </div>
             </div><br>
@@ -471,6 +471,10 @@ strictly prohibited. -->
         <a href="https://kurziokode.github.io/pnemo.html" target="_blank" style="text-align: center;"><span
                 class="block text-gray-600 hover:text-red-800">&copy; 2023 All Rights Reserved</span></a><br>
     </div>
+ <script>
+Array.from(document.querySelectorAll('a[target="_blank"]')).forEach(link => link.removeAttribute('target'));
+ </script>
+    
     <script>
         //Javascript to toggle the navbar menu mobile
         document.getElementById('nav-toggle').onclick = function () {
