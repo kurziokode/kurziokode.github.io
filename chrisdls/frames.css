@@ -11,6 +11,7 @@
     html {
         height: 100%;
         overflow: hidden;
+         cursor: url('https://kurziokode.github.io/curs2.png'), auto;    
     }
 
     body {
