@@ -4,6 +4,7 @@
         -moz-box-sizing: border-box;
         /* Firefox 1 - 28 */
         box-sizing: border-box;
+        cursor: url('https://kurziokode.github.io/curs2.png'), auto;
     }
     
     body,
