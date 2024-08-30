@@ -584,7 +584,7 @@ a,
   text-align: center;
   line-height: 28px;
   font-size: 22px;
-  color: #333;
+  color: #032d2d;
   opacity: 0.6;
   border-radius: 2px;
 }
@@ -592,7 +592,7 @@ a,
 .scroll-up a:hover,
 .scroll-up a:active {
   opacity: 1;
-  color: #000;
+  color: #fff;
 }
 
 /* Video */
