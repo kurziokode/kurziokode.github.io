@@ -379,7 +379,11 @@
     });
   });
 </script>
-
+    <script>
+        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    </script>
   <script src="https://themewagon.github.io/titan/assets/lib/jquery/dist/jquery.js"></script>
   <script src="https://themewagon.github.io/titan/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="https://themewagon.github.io/titan/assets/lib/wow/dist/wow.js"></script>
