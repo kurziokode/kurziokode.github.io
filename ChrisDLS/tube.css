@@ -1286,9 +1286,7 @@ General Styles - Owlcarousel
   .navbar-custom .navbar-brand {
     display: none;
   }
-  .scroll-up {
-bottom: 48px;
-  }
+
 }
 
 .navbar-custom .nav li > a {
