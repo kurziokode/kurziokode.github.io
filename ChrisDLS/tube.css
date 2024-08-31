@@ -571,7 +571,7 @@ a,
 .scroll-up {
   position: fixed;
   display: none;
-  bottom: 65px;
+  bottom: 60px;
   right: 20px;
   z-index: 999;
 }
