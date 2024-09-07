@@ -44,27 +44,7 @@
               padding: 20px;
         }
 
-        .typing-effect {
-    position: relative;
-    overflow: hidden;
-}
-
-.typing-effect span {
-    display: inline-block;
-    animation: typing 5s steps(30), blink-cursor 0.5s infinite alternate;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink-cursor {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-    </style>
+  </style>
 </head>
 
 <body>
@@ -635,35 +615,7 @@
             window.Plyr && (new Plyr('#player-youtube'));
         });
         // @formatter:on
-        document.addEventListener('DOMContentLoaded', function() {
-    const text = "UggU";
-    const element = document.querySelector('.navbar-brand');
-    
-    // Typing effect
-    element.innerHTML = '<span class="typing-effect">' + text + '</span>';
-    
-    // Sound effect
-    const sound = new Audio('397.wav'); // Replace with your sound file path
-    
-    // Function to trigger typing effect
-    function typeEffect() {
-        const span = element.querySelector('.typing-effect');
-        span.style.animationPlayState = 'running';
-        
-        setTimeout(() => {
-            span.style.animationPlayState = 'paused';
-            sound.play();
-        }, 5000); // Adjust this value based on your desired timing
-    }
-
-    // Trigger the effect after page load
-    typeEffect();
-
-    // Optional: Re-trigger the effect on page refresh
-    window.addEventListener('load', typeEffect);
-});
-
-    </script>
+ </script>
 
 </body>
 
