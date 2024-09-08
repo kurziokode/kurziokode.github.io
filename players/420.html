@@ -44,6 +44,17 @@
               padding: 20px;
         }
 
+        .social-share {
+    display: flex;
+    gap: 15px; /* Adjust spacing between icons */
+    
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+   
+}
   </style>
 </head>
 
@@ -76,9 +87,16 @@
                             <a href="https://chrisdls.pages.dev/" target="_blank" class="dropdown-item">funkhaus</a>
                             <a href="https://madmax660.github.io/less.html" target="_blank"
                                 class="dropdown-item">chrisdls</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="" class="dropdown-item">Settings</a>
-                            <a href="" class="dropdown-item">Logout</a>
+<br>
+                            <p class="badge badge-sm bg-green-lt text-uppercase ms-auto">Share on</p>
+                            <a href="" class="share-btn facebook tabler-icon-facebook dropdown-item" target="_blank">Facebook</a>
+                                                <a href="#" class="share-btn twitter tabler-icon-twitter dropdown-item" target="_blank">Twitter</a>
+                                                <a href="#" class="share-btn linkedin tabler-icon-linkedin dropdown-item" target="_blank">LinkedIn</a>
+                                                <a href="#" class="share-btn email tabler-icon-mail dropdown-item" target="_blank">Email</a>
+                                                
+                                                <a href="#" class="share-btn pinterest tabler-icon-pinterest dropdown-item" target="_blank">Pinterest</a>
+                                                <a href="https://reddit.com/submit?url=https://kurziokode.github.io/players/420.html?theme=dark&title=Your+Page+Title"
+                                                    class="share-btn reddit tabler-icon-reddit dropdown-item" target="_blank">Reddit</a>
                         </div>
                     </div>
                 </div>
@@ -618,6 +636,35 @@
         // @formatter:on
  </script>
 
+    <script>
+    function setShareLinks() {
+        const pageUrl = "https://kurziokode.github.io/players/420.html?theme=dark";
+
+        $('.share-btn.facebook').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`);
+
+        const tweetText = $('meta[property="og:description"]').attr('content');
+        const tweetUrl = pageUrl;
+        $('.share-btn.twitter').attr('href', `https://twitter.com/intent/tweet?url=${tweetUrl}&text=${tweetText}`);
+
+        $('.share-btn.linkedin').attr('href', `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}`);
+
+        $('.share-btn.email').attr('href', `mailto:?subject=Check%20out%20this%20page&body=${encodeURIComponent(tweetText)}\n\n${pageUrl}`);
+
+        // WhatsApp share link
+        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(document.title)} ${pageUrl}`;
+        $('.share-btn.whatsapp').attr('href', whatsappUrl);
+
+        // Pinterest share link
+        const pinterestUrl = `https://pinterest.com/pin/create/button/?url=${pageUrl}&media=&description=${encodeURIComponent(document.title)}`;
+        $('.share-btn.pinterest').attr('href', pinterestUrl);
+
+        // Reddit share link
+        const redditUrl = `https://reddit.com/submit?url=${encodeURIComponent(pageUrl)}&title=${encodeURIComponent(document.title)}`;
+        $('.share-btn.reddit').attr('href', redditUrl);
+    }
+
+    $(document).ready(setShareLinks);
+</script>
 </body>
 
 </html>
