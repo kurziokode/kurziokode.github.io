@@ -547,7 +547,7 @@ body.is-poptrox-visible #wrapper {
 	display: block;
 	position: relative;
 	background: rgba(255, 255, 255, 0.25);
-	cursor: default;
+	
 }
 
 #main .item.thumb h2 {
