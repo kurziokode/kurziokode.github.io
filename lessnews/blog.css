@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(new.jpg);
+	background-image: url(2.webp);
     
 }
 
@@ -807,7 +807,7 @@ footer::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("new.jpg");
+  background-image: url("2.webp");
   filter: brightness(0.15);
   z-index: -1;
 }
