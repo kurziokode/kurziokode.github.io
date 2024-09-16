@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 main-span {
-  color: #800000;
+  color: #990000;
 background-color: #15171e;
 
  font-size: 18px;
@@ -265,7 +265,7 @@ header .navbar {
 	border-radius: 0px;
 	position: absolute;
 	right: 15px;
-	top: 40px;
+	top: 30px;
 }
 .navbar .navbar-toggler-icon:after {
 	content: '\f0c9';
