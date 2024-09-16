@@ -44,29 +44,9 @@
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                                <div><img src="https://icons.iconarchive.com/icons/bootstrap/bootstrap/48/Bootstrap-emoji-sunglasses-icon.png" width="32"
-                height="32">&nbsp;&nbsp;<main-span id="AboutDevTypeText" class="typeing"></main-span></div>
+                height="32"></div>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span style="color: #990000;">☰</span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
 
-                        <li class="nav-item active">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="blog.html">Blog Entries</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="post-details.html">Post Details</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
@@ -183,36 +163,6 @@
     <!-- Additional Scripts -->
     <script src="https://templatemo.com/templates/templatemo_551_stand_blog/assets/js/custom.js"></script>
 
-
-<script>
-    var data = [
-        {
-           AboutDevTypeText: "<main-span>Good News</main-span>"
-        }
-    ];
-
-    var allElements = document.getElementsByClassName("typeing");
-    for (var j = 0; j < allElements.length; j++) {
-        var currentElementId = allElements[j].id;
-        var currentElementIdContent = data[0][currentElementId];
-        var element = document.getElementById(currentElementId);
-        var devTypeText = currentElementIdContent;
-
-        // type code
-        var i = 0, isTag, text;
-        (function type() {
-            text = devTypeText.slice(0, ++i);
-            if (text === devTypeText) return;
-            element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
-            var char = text.slice(-1);
-            if (char === "<") isTag = true;
-            if (char === ">") isTag = false;
-            if (isTag) return type();
-            setTimeout(type, 120);
-        })();
-    }
-
-</script>
 
 
     <script language="text/Javascript">
