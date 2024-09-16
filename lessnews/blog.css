@@ -36,6 +36,13 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
 
+span {
+  color: #ff0000;
+background-color: #15171e;
+ padding: 10px;
+ font-size: 18px;
+}
+
 .main-button a {
 	display: inline-block;
 	background-color: #800000;
