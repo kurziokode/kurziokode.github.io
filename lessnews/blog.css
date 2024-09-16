@@ -40,7 +40,7 @@ main-span {
   color: #990000;
 font-weight: 300;
 font-size: 28px;
-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);	
+text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);	
 }
 
 .main-button a {
