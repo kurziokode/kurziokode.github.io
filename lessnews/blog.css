@@ -24,7 +24,7 @@ p {
 	line-height: 30px;
 }
 a {
-	
+text-decoration: none!important;	
 }
 ul {
 	padding: 0;
@@ -40,7 +40,7 @@ main-span {
   color: #990000;
 font-weight: 300;
 font-size: 28px;
-text-shadow: 4 4px 4px rgba(0, 0, 0, 0.5) !important;	
+
 }
 
 .main-button a {
