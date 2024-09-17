@@ -208,6 +208,26 @@ header .navbar {
 .background-header .navbar-nav .show>.nav-link {
 	color: #800000!important;
 }
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar {
+  
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
 .navbar .navbar-brand {
 	float: 	left;
 	margin-top: 10px;
