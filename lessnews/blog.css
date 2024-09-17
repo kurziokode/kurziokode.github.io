@@ -173,11 +173,11 @@ font-size: 28px;
 
 /* Header Style */
 header {
-	position: relative;
+	position: absolute;
 	z-index: 99999;
 	width: 100%;
 	height: 100px;
-	background-color: transparent;
+	
 	-webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -o-transition: all 0.3s ease-in-out 0s;
@@ -185,18 +185,18 @@ header {
 }
 header .navbar {
 	padding: 25px 0px;
-	background-color: transparent;
+	
 }
 .background-header .navbar {
 	padding: 17px 0px;
-	background-color: transparent;
+	
 }
 .background-header {
 	top: 0;
 	height: 80px;
 	position: fixed;
 	box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
-	background-color: transparent;
+	
 }
 .background-header .navbar-brand h2 {
 	color: #121212!important;
