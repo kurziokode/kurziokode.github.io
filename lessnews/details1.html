@@ -293,14 +293,15 @@ window.addEventListener('scroll', function() {
     
     if (scrollTop > lastScrollTop) {
         // Hide navbar when scrolling down
-        document.querySelector('.navbar').style.top = '-50px';
+        document.querySelector('.navbar').style.display = 'none';
     } else {
         // Show navbar when scrolling up
-        document.querySelector('.navbar').style.top = '0';
+        document.querySelector('.navbar').style.display = 'block';
     }
     
     lastScrollTop = scrollTop;
 });
+
 </script>
     
     <script language="text/Javascript">
