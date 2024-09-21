@@ -563,10 +563,10 @@ body.is-poptrox-visible #wrapper {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: rgba(18, 21, 29, 0.4);
+	background: transparent;
 	width: 100%;
 	padding: 1em;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1em;
 	z-index: 2;
 	border-radius: 20px; 
