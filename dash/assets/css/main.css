@@ -481,10 +481,11 @@ body.is-poptrox-visible #wrapper {
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
+	
 }
 
 #main .items> :last-child {
-	border-right: solid 10px #0b0c0e;
+	border-right: solid 10px transparent;
 }
 
 #main .item {
@@ -498,12 +499,13 @@ body.is-poptrox-visible #wrapper {
 	flex-shrink: 0;
 	margin: 5px;
 	height: 16em;
-	box-shadow: 0 0 0 10px #0b0c0e;
+	box-shadow: 0 0 0 10px transparent;
 	    transition: box-shadow 0.3s ease;
+		
 }
 
 #main .item:hover {
- box-shadow: 0 0px 15px rgba(255, 25, 0, 0.933);
+    box-shadow: 0 0px 15px rgba(255, 25, 0, 0.933);
 	 transform: scale(0.95);
 }
 
@@ -520,7 +522,7 @@ body.is-poptrox-visible #wrapper {
 }
 
 #main .item.intro {
-	background-color: #0b0c0e;
+	background-color: transparent;
 	background-image: url("images/overlay.png");
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -535,6 +537,7 @@ body.is-poptrox-visible #wrapper {
 	-ms-justify-content: center;
 	justify-content: center;
 	padding: 1em 3em;
+	border-radius: 20px; 
 }
 
 #main .item.intro h1 {
@@ -553,7 +556,7 @@ body.is-poptrox-visible #wrapper {
 	display: block;
 	position: relative;
 	background: rgba(255, 255, 255, 0.25);
-	
+	border-radius: 20px; 
 }
 
 #main .item.thumb h2 {
@@ -566,6 +569,7 @@ body.is-poptrox-visible #wrapper {
 	font-weight: 400;
 	line-height: 1em;
 	z-index: 2;
+	border-radius: 20px; 
 }
 
 #main .item.thumb img {
@@ -592,6 +596,7 @@ body.is-poptrox-visible #wrapper {
 	-webkit-transition-delay: 1.25s;
 	-ms-transition-delay: 1.25s;
 	transition-delay: 1.25s;
+	 border-radius: 20px; 
 }
 
 #main .item.thumb.delay-1 img {
