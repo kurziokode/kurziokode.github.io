@@ -563,13 +563,15 @@ body.is-poptrox-visible #wrapper {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: transparent;
+	background: rgb(7, 7, 7, 0.5);
 	width: 100%;
 	padding: 1em;
 	font-weight: 700;
 	line-height: 1em;
 	z-index: 2;
-	border-radius: 20px; 
+	
+	border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
 }
 
 #main .item.thumb img {
