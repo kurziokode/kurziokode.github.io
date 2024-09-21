@@ -504,6 +504,7 @@ body.is-poptrox-visible #wrapper {
 
 #main .item:hover {
     box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+	 transform: scale(0.95);
 }
 
 #main .item.span-1 {
