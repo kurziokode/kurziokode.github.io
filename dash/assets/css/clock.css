@@ -164,7 +164,7 @@
 }
 
 .h {
-  background-color: black;
+  background-color: rgb(176, 176, 185);
   -webkit-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
