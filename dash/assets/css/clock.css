@@ -101,6 +101,7 @@
   transition: all 0.2s;
   font-size: 17px;
   border-radius: 10px;
+  filter: brightness(0.5);
 }
 
 @media screen and (min-width: 981px) {
