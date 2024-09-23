@@ -26,7 +26,7 @@
     <div id="wrapper">
 
             <section>
-    <img src="by.png" alt="Image description"
+    <img id="draggableImage" src="by.png" alt="Image description"
         style="position: absolute; top: 25px; right: 25px; width: 5%; height: auto;">		
             </section>
 	    
@@ -248,7 +248,49 @@
         </section>
 
     </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const img = document.getElementById('draggableImage');
 
+    let isDragging = false;
+    let startX, startY;
+
+    img.addEventListener('mousedown', startDrag);
+    img.addEventListener('touchstart', startDrag);
+
+    function startDrag(e) {
+        isDragging = true;
+        startX = e.clientX || e.touches[0].clientX;
+        startY = e.clientY || e.touches[0].clientY;
+    }
+
+    function stopDrag() {
+        isDragging = false;
+    }
+
+    document.addEventListener('mousemove', moveDraggedItem);
+    document.addEventListener('touchmove', moveDraggedItem);
+
+    document.addEventListener('mouseup', stopDrag);
+    document.addEventListener('touchend', stopDrag);
+
+    function moveDraggedItem(e) {
+        if (!isDragging) return;
+
+        const x = e.clientX || e.touches[0].clientX;
+        const y = e.clientY || e.touches[0].clientY;
+
+        const dx = x - startX;
+        const dy = y - startY;
+
+        img.style.transform = `translate(${dx}px, ${dy}px)`;
+        img.style.transition = 'transform 0.01s ease';
+
+        startX = x;
+        startY = y;
+    }
+});
+</script>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
