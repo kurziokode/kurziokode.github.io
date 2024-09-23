@@ -302,13 +302,13 @@ b {
 
 ul.icons {
 	cursor: default;
-	margin: 0 0 0.5em 0;
+	
 }
 
 ul.icons li {
 	display: inline-block;
 	font-size: 1.5em;
-	margin-left: 1em;
+	margin-left: 0em;
 }
 
 ul.icons li span {
@@ -316,8 +316,8 @@ ul.icons li span {
 }
 
 ul.icons li a {
-	opacity: 0.35;
-	color: #999900;
+	opacity: 1;
+	
 	-moz-transition: opacity 0.25s ease-in-out;
 	-webkit-transition: opacity 0.25s ease-in-out;
 	-ms-transition: opacity 0.25s ease-in-out;
@@ -325,7 +325,7 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-	opacity: 1.0;
+	filter: brightness(1.7);
 	
 }
 
