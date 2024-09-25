@@ -521,6 +521,12 @@ body.is-poptrox-visible #wrapper {
 	width: 21.5em;
 }
 
+#main .item.span-4 {
+	width: 40em;
+    height: 40em;
+     gap:3rem;
+}
+
 #main .item.intro {
 	background-color: transparent;
 	background-image: url("images/overlay.png");
