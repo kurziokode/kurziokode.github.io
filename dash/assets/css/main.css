@@ -973,8 +973,8 @@ body.is-preload #main .item.thumb img {
 .input {
   margin: 30px;
   background: #212121;
-  border: none;
-  outline: none;
+  border: #212121;
+  outline: #212121;
   max-width: 190px;
   padding: 10px 20px;
   font-size: 16px;
