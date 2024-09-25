@@ -972,13 +972,13 @@ body.is-preload #main .item.thumb img {
 
 .input {
   margin: 30px;
-  background: none;
+  background: #212121;
   border: none;
   outline: none;
   max-width: 190px;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 9999px;
-  box-shadow: inset 2px 5px 10px rgb(11, 12, 14);
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
   color: #fff;
 }
