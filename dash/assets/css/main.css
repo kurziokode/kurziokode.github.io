@@ -969,6 +969,11 @@ body.is-preload #main .item.thumb img {
 
 }
 
+.item2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Reduced gap between forms */
+}
 
 .input {
   margin: 30px;
@@ -981,4 +986,8 @@ body.is-preload #main .item.thumb img {
   border-radius: 9999px;
   box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
   color: #313235;
+  width: calc(100% - 20px); /* Account for gap */
 }
+
+
+
