@@ -18,6 +18,30 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
+	<style>
+.text-container {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.text-container::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  width: 200%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%);
+}
+
+.text-container h2 {
+  position: relative;
+  z-index: 1;
+}
+</style>
 </head>
 
 <body class="is-preload">
@@ -137,7 +161,9 @@
                 </article>	
 
 		 <article class="item thumb span-1">
+			 <div class="text-container">
                     <h2 style="color: #0f8c0e;">Working On It</h2>
+			</div>	 
                     <a href="#" ><img src="under.webp" alt=""></a>
                 </article>	    
 
