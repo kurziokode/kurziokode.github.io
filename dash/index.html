@@ -211,6 +211,14 @@
 </form>
             </section>
 
+    <section>
+        <form action="/search-inbox" method="POST" target="_blank" style="text-align: center;">
+            <input placeholder="Email address" class="input" name="email" required>
+            <input placeholder="Search criteria" class="input" name="criteria" required>
+        <button type="submit"></button>
+        </form>
+    </section>
+		
             <section>
                 
             <a href="#"><img src="by.png" alt="Image description" style="width: 22%; height: auto;"></a>
@@ -221,7 +229,60 @@
         </section>
 
     </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const response = await fetch('/search-inbox', {
+                method: 'POST',
+                body: formData
+            });
 
+            const result = await response.json();
+            if (result.success) {
+                // Handle successful search results
+                console.log(result.results);
+                // You could update a div with the results here
+            } else {
+                // Handle failure
+                console.error('Search failed');
+            }
+        });
+    </script>
+
+    <script>
+        const express = require('express');
+        const app = express();
+        const port = 3000;
+
+        app.use(express.json());
+
+        // Simulated inbox search function
+        function searchInbox(email, criteria) {
+            const inbox = [
+                { subject: "Meeting Reminder", sender: "john.doe@example.com", body: "..." },
+                { subject: "Project Update", sender: "jane.smith@example.com", body: "..." }
+            ];
+            
+            return inbox.filter(item => item.sender === email && item.subject.includes(criteria));
+        }
+
+        app.post('/search-inbox', (req, res) => {
+            const { email, criteria } = req.body;
+            
+            const results = searchInbox(email, criteria);
+            
+            res.json({
+                success: true,
+                results: results
+            });
+        });
+
+        app.listen(port, () => {
+            console.log(`Server running at http://localhost:${port}`);
+        });
+    </script>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
