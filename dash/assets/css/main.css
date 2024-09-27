@@ -769,6 +769,7 @@ body.is-preload #main .item.thumb img {
   bottom: 0;
   left: 0;
   background-image: url("https://kurziokode.github.io/2277.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(0.25);
   z-index: -1;
