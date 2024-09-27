@@ -771,7 +771,7 @@ body.is-preload #main .item.thumb img {
   background-image: url("https://kurziokode.github.io/dash/1111.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
   z-index: -1;
 }
 
