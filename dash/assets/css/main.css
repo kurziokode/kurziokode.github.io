@@ -768,7 +768,7 @@ body.is-preload #main .item.thumb img {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("/111.jpg");
+  background-image: url("111.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(0.25);
