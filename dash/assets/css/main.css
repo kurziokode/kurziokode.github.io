@@ -316,7 +316,7 @@ ul.icons li span {
 }
 
 ul.icons li a {
-	opacity: 1;
+	opacity: 0.4;
 	
 	-moz-transition: opacity 0.25s ease-in-out;
 	-webkit-transition: opacity 0.25s ease-in-out;
@@ -325,7 +325,7 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-	filter: brightness(2);
+	filter: brightness(3);
 	
 }
 
