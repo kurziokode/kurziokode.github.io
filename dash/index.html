@@ -245,6 +245,25 @@ background: rgba(0, 0, 0, 0.8);
     };
   
 </script>
+	<script>
+    class LazyImageLoader {
+        constructor() {
+            this.images = document.querySelectorAll('img[data-src]');
+        }
+
+        loadImages() {
+            this.images.forEach(img => {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            });
+        }
+    }
+
+    const loader = new LazyImageLoader();
+    window.addEventListener('load', () => loader.loadImages());
+
+
+</script>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
