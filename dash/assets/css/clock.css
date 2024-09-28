@@ -110,7 +110,7 @@
 }
 .item-hints .hint-dot {
   z-index: 3;
-  border: 1px solid #ffe4e4;
+  border: 1px solid #323234;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -120,7 +120,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #323234;
 }
 .item-hints .hint-radius {
   background-color: rgba(255, 255, 255, 0.1);
@@ -146,7 +146,7 @@
   padding: 35px 0;
   opacity: 0;
   transition: opacity 0.7s ease, visibility 0.7s ease;
-  color: #fff;
+  color: #323234;
   visibility: hidden;
   pointer-events: none;
 }
