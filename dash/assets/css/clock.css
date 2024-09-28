@@ -99,10 +99,10 @@
   cursor: pointer;
   display: flex;
   justify-content: flex-start;
-  padding-right: 170px;
+  padding-right: 10px;
 }
 .item-hints .hint {
-  margin: 150px auto;
+  margin: 10px auto;
   position: relative;
   display: flex;
   justify-content: center;
