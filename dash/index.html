@@ -239,10 +239,15 @@ background: rgba(0, 0, 0, 0.8);
     </div>
 
 <script>
-  const scrollToSection = (sectionId) => {
-        const section = document.querySelector(`#${sectionId}`);
-        section.scrollIntoView({ behavior: 'smooth' });
-    };
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll("a[href^='#']");
+
+  links.forEach(link => {
+    link.addEventListener("click", smoothScroll);
+  });
+
+  function smoothScroll(e)```
+
   
 </script>
 	<script>
