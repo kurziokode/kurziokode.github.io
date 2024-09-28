@@ -33,11 +33,11 @@
     ,inset 0 -230px 60px -200px rgba(255,255,255,.2)
     ,inset 0 220px 40px -200px rgba(0,0,0,.3);
   display: block;
-  font-size: 14px;
-  height: 60px;
+  font-size: 20px;
+  height: 70px;
   position: relative;
   transition: all 0.2s;
-  width: 40px;
+  width: 50px;
 }
 
 .back {
@@ -46,10 +46,10 @@
     ,-webkit-linear-gradient(0deg, rgba(245, 245, 245, 0) 30%, rgba(150,150,150,.1) 50%, rgba(150,150,150,0) 70%);
   border-radius: 115px;
   box-sizing: border-box;
-  height: 85px;
+  height: 95px;
   padding: 4px 4px;
   transition: all 0.2s;
-  width: 50px;
+  width: 60px;
 }
 
 input:checked + .back .on,input:checked + .back .off {
