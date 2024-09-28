@@ -205,4 +205,10 @@
 }
 
 
+@media screen and (max-width: 736px) {
 
+.item-hints {
+		display: none !important;
+	}
+
+}
