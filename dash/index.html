@@ -240,18 +240,28 @@ background: rgba(0, 0, 0, 0.8);
 
 <script>
 
-
-  function debounce(func, wait) {
+function debounce(func, wait) {
   let timeout;
+  let lastCallTime = 0;
+  
   return function(...args) {
+    const now = Date.now();
+    const timeSinceLastCall = now - lastCallTime;
+    
     clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), wait);
+    
+    if (timeSinceLastCall < wait) {
+      timeout = setTimeout(() => {
+        lastCallTime = now;
+        func.apply(this, args);
+      }, wait - timeSinceLastCall);
+    } else {
+      lastCallTime = now;
+      func.apply(this, args);
+    }
   };
 }
 
-const debouncedSmoothScroll = debounce(smoothScrollTo, 600);
-
-// Replace smoothScrollTo with debouncedSmoothScroll in your event listeners
 
 </script>
 	<script>
