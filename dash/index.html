@@ -238,7 +238,13 @@ background: rgba(0, 0, 0, 0.8);
 
     </div>
 
-
+<script>
+  const scrollToSection = (sectionId) => {
+        const section = document.querySelector(`#${sectionId}`);
+        section.scrollIntoView({ behavior: 'smooth' });
+    };
+  
+</script>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
