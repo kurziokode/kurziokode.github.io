@@ -256,7 +256,7 @@
   align-items: center;
   color: #323234;
 }
-.container .glass svg {
+.container .glass  {
   font-size: 3em;
   fill: #6e6f4d;
 }
