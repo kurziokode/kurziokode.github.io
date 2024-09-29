@@ -295,7 +295,7 @@
 }
 
 .stars {
-    animation: space 600s ease-in-out infinite;
+    animation: space 1000s ease-in-out infinite;
 }
 
 .stars2 {
@@ -331,7 +331,7 @@
 }
 
 .stars2 {
-    animation: space 900s ease-in-out infinite;
+    animation: space 1500s ease-in-out infinite;
 }
 
 @media screen and (max-width: 980px) {
