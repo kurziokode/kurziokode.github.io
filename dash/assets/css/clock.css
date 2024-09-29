@@ -215,7 +215,7 @@
 
 /* From Uiverse.io by codebykay101 */ 
 .container {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
