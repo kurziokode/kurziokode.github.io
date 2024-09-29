@@ -215,7 +215,7 @@
 
 /* From Uiverse.io by codebykay101 */ 
 .container {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,7 +233,7 @@
   align-items: center;
   transition: 0.5s;
   border-radius: 10px;
-  margin: 0 -5px;
+  margin: 0 -17px;
   backdrop-filter: blur(10px);
   transform: rotate(calc(var(--r) * 1deg));
 }
