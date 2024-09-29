@@ -299,7 +299,7 @@
 
 .stars2 {
     position: fixed;
-    bottom: 20%;
+    bottom: 10%;
     left: 0;
 
     width: 100%;
@@ -330,7 +330,7 @@
 }
 
 .stars2 {
-    animation: space 180s ease-in-out infinite;
+    animation: space 90s ease-in-out infinite;
 }
 
 
