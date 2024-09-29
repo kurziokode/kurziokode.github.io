@@ -211,13 +211,6 @@
 		display: none !important;
 	}
 
-.stars	 {
-		display: none !important;
-	}
-
-.stars2	 {
-		display: none !important;
-	}
 	
 }
 
@@ -339,6 +332,20 @@
 
 .stars2 {
     animation: space 900s ease-in-out infinite;
+}
+
+@media screen and (max-width: 980px) {
+
+
+
+.stars	 {
+		display: none !important;
+	}
+
+.stars2	 {
+		display: none !important;
+	}
+	
 }
 
 
