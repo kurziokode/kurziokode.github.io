@@ -234,7 +234,7 @@
   align-items: center;
   transition: 0.5s;
   border-radius: 10px;
-  margin: 0 -17px;
+  margin: 0 -px;
   backdrop-filter: blur(10px);
   transform: rotate(calc(var(--r) * 1deg));
 }
