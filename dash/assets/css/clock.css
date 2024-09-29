@@ -219,7 +219,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 60px;
 }
 
 .container .glass {
@@ -254,11 +254,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #323234;
 }
 .container .glass svg {
-  font-size: 2.5em;
-  fill: #fff;
+  font-size: 3em;
+  fill: #6e6f4d;
 }
 
 
