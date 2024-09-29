@@ -175,10 +175,9 @@ background: rgba(0, 0, 0, 0.8);
 
 <div class="item intro span-2" style="text-align: center;">
 
-          <form action="https://www.google.com/search" method="get" target="_blank">
-                    <input placeholder="Search Google…" class="input" name="q" type="text" aria-label="Google Search">
-
-                </form>
+<form id="google-search-form" action="https://www.google.com/search" method="get" target="_blank">
+    <input id="search-input" placeholder="Search Google…" class="input" name="q" type="text" aria-label="Google Search">
+</form>
         
              <form action="https://mail.google.com/mail/u/0/#inbox/search" method="get" target="_blank">
                     <input placeholder="Inbox…" class="input" name="q" type="text" aria-label="Inbox Search">
@@ -321,7 +320,16 @@ function debounce(func, wait) {
 
 </script>
 
-	
+	<script>
+document.getElementById('google-search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const searchInput = document.getElementById('search-input');
+    const searchTerm = encodeURIComponent(searchInput.value);
+    
+    window.open(`https://www.google.com/search?q=${searchTerm}`, '_blank');
+});
+</script>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
