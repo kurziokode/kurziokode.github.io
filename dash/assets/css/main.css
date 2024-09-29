@@ -995,7 +995,7 @@ body.is-preload #main .item.thumb img {
   border-radius: 9999px;
   box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
   color: #3d3e42;
-  
+  white-space: pre-wrap;
 }
 
 
