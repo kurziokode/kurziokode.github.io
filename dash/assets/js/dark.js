@@ -40,3 +40,22 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
 	// on click, check localStorage for the dark mode value, use to apply the opposite of what's saved
 	localStorage.getItem('theme') === 'white' ? enableDarkMode() : disableDarkMode();
 });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const closeBtn = document.querySelector('.close-button');
+
+        closeBtn.addEventListener('click', function () {
+            // Create a timeout to close the window after 5 seconds
+            setTimeout(function () {
+                try {
+                    window.close();
+                } catch (error) {
+                    console.error("Failed to close window:", error);
+                    // Fallback option: Redirect to a blank page
+                    window.location.href = 'about:blank';
+                }
+            }, 3000); // 5000 milliseconds = 5 seconds
+        });
+    });
+
