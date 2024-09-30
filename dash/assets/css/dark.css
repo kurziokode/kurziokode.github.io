@@ -80,8 +80,8 @@ Scroll to the bottom to start adding your dark mode styles
     #dark-mode-toggle {
         display: block;
        position: fixed;
-       top: 0%;
-       right: 48%;
+       top: -4%;
+       right: 44%;
        transform: none;
        
         width: 3rem;
@@ -123,8 +123,8 @@ Scroll to the bottom to start adding your dark mode styles
 @media only screen and (min-width: 64rem) {
     #dark-mode-toggle {
         position: fixed;
-        top: 0%;
-        right: 48%;
+        top: -2%;
+        right: 49%;
         transform: none;
    
        
