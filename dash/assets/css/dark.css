@@ -1,0 +1,134 @@
+body.dark-mode .targetElement {
+    background: #000000;
+}
+
+/*CSS for Dark Mode Toggle
+
+Copy and paste this code into it's own dark.css file. Keep all you dark mode
+styles there, and make sure when you link to this sheet in your html head,
+make it the bottom css link tag so it overrides all other styles.
+At the bottom, that's where you start to add your dark mode styles by
+starting starting with "body.dark-mode" and add your class you want to
+target at the end. For example,
+
+body.dark-mode .heading-one {}
+
+then add your css properties like normal. That's it!
+Scroll to the bottom to start adding your dark mode styles
+
+/* Add this as it's own dark.css file and linked on all pages */
+/*-- -------------------------- -->
+<---      Core Dark Styles      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    :root {
+        --dark: #0b0c0e;
+        --medium: #282828;
+        --accent: #404040;
+        --bodyTextColorWhite: #909293;
+
+    }
+
+    body.dark-mode {
+        background-color: var(--dark);
+    }
+
+    body.dark-mode p,
+    body.dark-mode li,
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6,
+    body.dark-mode .cs-title,
+    body.dark-mode .cs-text,
+    body.dark-mode .cs-li {
+        color: var(--bodyTextColorWhite);
+    }
+
+    body.dark-mode .white {
+        display: none;
+    }
+
+    body.dark-mode .dark {
+        display: block !important;
+    }
+
+    .dark {
+        /* class used to hide elements that only need to be seen when dark mode is enabled */
+        display: none;
+    }
+}
+
+/*-- -------------------------- -->
+<---      Dark Mode Toggle      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode #dark-mode-toggle .cs-sun {
+     
+        opacity: 1;
+    }
+
+    body.dark-mode #dark-mode-toggle .cs-moon {
+      
+        opacity: 0;
+    }
+
+    #dark-mode-toggle {
+        display: block;
+       position: fixed;
+       top: 0%;
+       right: 3%;
+       transform: none;
+       
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        border: none;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #dark-mode-toggle img,
+    #dark-mode-toggle svg {
+        position: absolute;
+      
+     
+        width: 1.5625rem;
+        height: 1.5625rem;
+        pointer-events: none;
+    }
+
+    #dark-mode-toggle .cs-moon {
+        z-index: 2;
+        transition: transform 0.3s,
+            opacity 0.3s,
+            fill 0.3s;
+     
+    }
+
+    #dark-mode-toggle .cs-sun {
+        z-index: 1;
+     
+        opacity: 0;
+        transition: transform 0.3s,
+            opacity 0.3s;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 64rem) {
+    #dark-mode-toggle {
+        position: fixed;
+        top: 0%;
+        right: 1%;
+        transform: none;
+   
+       
+    }
+
+
+}
