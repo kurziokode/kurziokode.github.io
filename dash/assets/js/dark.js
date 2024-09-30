@@ -44,12 +44,12 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
     const closeButton = document.getElementById('closeButton');
 
     closeButton.addEventListener('click', () => {
-        closeButton.style.animation = 'fade-out 4s forwards';
+        closeButton.style.animation = 'fade-out 3s forwards';
 
         // Set a timeout to remove the button after the fade-out completes
         setTimeout(() => {
             closeButton.remove();
-        }, 4000);
+        }, 3000);
     });
 
 
