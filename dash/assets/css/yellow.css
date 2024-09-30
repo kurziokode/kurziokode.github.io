@@ -1,0 +1,15 @@
+/* Light mode */
+:root {
+    --background-color: #b0b0ae;
+    /* Yellow background */
+    --text-color: #161414;
+    /* Black text */
+    --accent-color: #006400;
+    /* black green accent color */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
