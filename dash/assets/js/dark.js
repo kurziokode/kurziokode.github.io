@@ -41,6 +41,17 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
 	localStorage.getItem('theme') === 'white' ? enableDarkMode() : disableDarkMode();
 });
 
+    const closeButton = document.getElementById('closeButton');
+
+    closeButton.addEventListener('click', () => {
+        closeButton.style.animation = 'fade-out 3s forwards';
+
+        // Set a timeout to remove the button after the fade-out completes
+        setTimeout(() => {
+            closeButton.remove();
+        }, 3000);
+    });
+
 
     document.addEventListener('DOMContentLoaded', function () {
         const closeBtn = document.querySelector('.close-button');
