@@ -403,14 +403,14 @@
                     if (window.opener && !window.closed) {
                         window.close();
                     } else {
-                        window.location.href = 'about:blank';
+                        window.location.href = 'https://blackscreen.app/';
                     }
                 } catch (error) {
                     console.error("Failed to close window:", error);
                     // Fallback option: Redirect to a blank page
-                    window.location.href = 'about:blank';
+                    window.location.href = 'https://blackscreen.app/';
                 }
-            }, 3000); // 3000 milliseconds = 3 seconds
+            }, 4000); // 3000 milliseconds = 3 seconds
         }
 
         // Event listener for the close button
