@@ -386,7 +386,35 @@ close-button {
 
     </script>
 
+    <script>
+        // Function to open a new window
+        function openNewWindow() {
+            window.open('', '_blank');
+            return false;
+        }
 
+        // Function to close the window
+        function closeWindow() {
+            if (window.opener && !window.closed) {
+                window.close();
+            } else {
+                window.location.href = 'about:blank';
+            }
+        }
+
+        // Event listener for the close button
+        document.getElementById('closeButton').addEventListener('click', closeWindow);
+
+        // Enable the close button after the window is opened
+        window.onfocus = function() {
+            document.getElementById('closeButton').style.display = 'block';
+        };
+
+        // Hide the close button when the window loses focus
+        window.onblur = function() {
+            document.getElementById('closeButton').style.display = 'none';
+        };
+    </script>
 
 <script src="assets/js/dark.js"></script>
 
