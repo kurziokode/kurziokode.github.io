@@ -81,7 +81,7 @@ Scroll to the bottom to start adding your dark mode styles
         display: block;
        position: fixed;
        top: 0%;
-       right: 3%;
+       right: 50%;
        transform: none;
        
         width: 3rem;
@@ -124,7 +124,7 @@ Scroll to the bottom to start adding your dark mode styles
     #dark-mode-toggle {
         position: fixed;
         top: 0%;
-        right: 1%;
+        right: 50%;
         transform: none;
    
        
