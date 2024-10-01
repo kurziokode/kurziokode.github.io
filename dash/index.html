@@ -28,7 +28,8 @@
 }
 
 .close-button {
-  transition: opacity 0.3s ease;
+  transition: scroll-position 0.3s ease-out;
+ 
 }
 
     </style>
@@ -387,11 +388,28 @@ document.addEventListener('DOMContentLoaded', function() {
   
   closeButton.addEventListener('click', function() {
     setTimeout(function() {
-      // Scroll to the top of the page
-      document.body.scrollIntoView({ behavior: 'smooth' });
+      scrollToTop();
     }, 3000); // Delay for 3 seconds
   });
 });
+
+function scrollToTop() {
+  const initialScrollPosition = window.pageYOffset;
+  const targetScrollPosition = 0;
+  const duration = 300; // Duration of scroll animation in milliseconds
+  
+  requestAnimationFrame(function animate(time) {
+    const progress = time / duration;
+    const scrollPosition = initialScrollPosition + (targetScrollPosition - initialScrollPosition) * Math.min(progress, 1);
+    window.scrollTo(0, scrollPosition);
+    
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      window.scrollTo(0, targetScrollPosition);
+    }
+  });
+}
 </script>
 
 <script src="assets/js/dark.js"></script>
