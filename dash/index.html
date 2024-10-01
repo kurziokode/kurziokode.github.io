@@ -394,20 +394,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function scrollToTop() {
-  const initialScrollPosition = window.pageYOffset;
-  const targetScrollPosition = 0;
-  const duration = 300; // Duration of scroll animation in milliseconds
-  
-  requestAnimationFrame(function animate(time) {
-    const progress = time / duration;
-    const scrollPosition = initialScrollPosition + (targetScrollPosition - initialScrollPosition) * Math.min(progress, 1);
-    window.scrollTo(0, scrollPosition);
-    
-    if (progress < 1) {
-      requestAnimationFrame(animate);
-    } else {
-      window.scrollTo(0, targetScrollPosition);
-    }
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 }
 </script>
