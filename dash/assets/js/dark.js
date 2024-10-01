@@ -52,6 +52,41 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
         }, 3000);
     });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const closeButton = document.getElementById('closeButton');
+  
+  closeButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    setTimeout(function() {
+      scrollToTop();
+    }, 3000); // Delay for 3 seconds
+  });
+});
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+  // Fallback for browsers that don't support smooth scrolling
+  if (!window.scrollIntoViewOptions || !window.scrollIntoViewOptions({ behavior: 'smooth' })) {
+    window.scrollTo(0, 0);
+  }
+}
+
+// Accessibility function to manage focus
+function manageFocus(element) {
+  element.focus();
+  setTimeout(() => {
+    element.blur();
+  }, 100); // Blur after 100ms to allow keyboard navigation
+}
+
+// Add event listener for accessibility
+document.addEventListener('click', function(e) {
+  manageFocus(e.target);
+});
 
 
