@@ -387,7 +387,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   closeButton.addEventListener('click', function() {
     setTimeout(function() {
-      document.querySelector('.close-button a').click();
+      // Scroll to the top of the page
+      document.body.scrollIntoView({ behavior: 'smooth' });
     }, 3000); // Delay for 3 seconds
   });
 });
