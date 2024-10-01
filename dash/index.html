@@ -18,6 +18,17 @@
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
     <style>
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media print {
+    body {
+      scroll-behavior: auto !important;
+    }
+  }
+        
         h2 {
             background: rgba(0, 0, 0, 0.8);
         }
@@ -27,10 +38,7 @@
   to { opacity: 0; }
 }
 
-.close-button {
-  transition: scroll-position 0.3s ease-out;
- 
-}
+
 
     </style>
 </head>
@@ -398,6 +406,11 @@ function scrollToTop() {
     top: 0,
     behavior: 'smooth'
   });
+
+  // Fallback for browsers that don't support smooth scrolling
+  if (!window.scrollIntoViewOptions || !window.scrollIntoViewOptions({ behavior: 'smooth' })) {
+    window.scrollTo(0, 0);
+  }
 }
 </script>
 
