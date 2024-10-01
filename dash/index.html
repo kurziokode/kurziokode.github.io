@@ -38,7 +38,13 @@
   to { opacity: 0; }
 }
 
-
+  /* Style for smooth transition */
+  #closeButton {
+    transition: opacity 3s ease;
+  }
+  #closeButton.fade-out {
+    opacity: 0;
+  }
 
     </style>
 </head>
@@ -396,8 +402,15 @@
 <script>
   document.getElementById("closeButton").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent immediate navigation
+    
+    const button = document.getElementById("closeButton");
+    
+    // Add fade-out class to start the transition
+    button.classList.add("fade-out");
+
+    // Delay the navigation for 3 seconds to match the fade-out duration
     setTimeout(function() {
-      window.location.href = "index.html"; // Navigate to '#'
+      window.location.href = "#"; // Navigate to '#'
     }, 3000); // 3-second delay
   });
 </script>
