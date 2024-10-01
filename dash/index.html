@@ -334,7 +334,9 @@
                           
 <section>
 <div class="close-button" id="closeButton">
-  <a href="index.html"><img src="ge.png" width="48" height="48"></a>
+  <a href="https://chatgpt.com/gpts" target="_blank">
+    <img src="ge.png" width="48" height="48">
+  </a>
 </div>
 
 </section>
@@ -346,6 +348,8 @@
 
     </div>
 
+
+    
     <script>
 
         function debounce(func, wait) {
@@ -392,7 +396,22 @@
 
     </script>
 
+<script>
+  // Select the close button by its ID
+  const closeButton = document.getElementById('closeButton');
 
+  // Add a click event listener to the button
+  closeButton.addEventListener('click', function(event) {
+    // Prevent immediate navigation
+    event.preventDefault();
+
+    // Set a 3-second delay before redirecting
+    setTimeout(function() {
+      // Redirect to the target URL
+      window.location.href = closeButton.querySelector('a').href;
+    }, 3000); // 3000 milliseconds = 3 seconds
+  });
+</script>
 
 <script src="assets/js/dark.js"></script>
 
