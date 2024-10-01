@@ -381,46 +381,19 @@
 
     </script>
 
-    <script>
-        let timer;
-
-        // Function to open a new window
-        function openNewWindow() {
-            window.open('', '_blank');
-            return false;
+<script>
+document.getElementById('closeButton').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default behavior
+    
+    setTimeout(function() {
+        try {
+            window.location.href = '/'; // Redirect to homepage
+        } catch (error) {
+            console.error('Error redirecting:', error);
         }
-
-        // Function to close the window after 3 seconds
-        function closeWindowDelayed() {
-            clearTimeout(timer);
-            timer = setTimeout(function() {
-                try {
-                    if (window.opener && !window.closed) {
-                        window.close();
-                    } else {
-                        window.location.href = 'index.html';
-                    }
-                } catch (error) {
-                    console.error("Failed to close window:", error);
-                    // Fallback option: Redirect to a blank page
-                    window.location.href = 'index.html';
-                }
-            }, 3000); // 3000 milliseconds = 3 seconds
-        }
-
-        // Event listener for the close button
-        document.getElementById('closeButton').addEventListener('click', closeWindowDelayed);
-
-        // Enable the close button after the window is opened
-        window.onfocus = function() {
-            document.getElementById('closeButton').style.display = 'block';
-        };
-
-        // Hide the close button when the window loses focus
-        window.onblur = function() {
-            document.getElementById('closeButton').style.display = 'none';
-        };
-    </script>
+    }, 3000); // Delay of 3 seconds
+});
+</script>
 
 <script src="assets/js/dark.js"></script>
 
