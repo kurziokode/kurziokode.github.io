@@ -52,14 +52,5 @@ document.getElementById('dark-mode-toggle').addEventListener('click', () => {
         }, 3000);
     });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const showButton = document.getElementById('showCloseButton');
-    const closeButtonContainer = document.getElementById('closeButtonContainer');
 
-    showButton.addEventListener('click', function() {
-        setTimeout(function() {
-            closeButtonContainer.style.display = 'block';
-        }, 3000);
-    });
-});
 
