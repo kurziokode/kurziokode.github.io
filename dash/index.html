@@ -325,7 +325,7 @@
 
                           
 <section>
-    <div class="close-button" id="closeButton"><a href="#"><img src="ge.png" width="48" height="48"></a></div>
+    <div class="close-button" id="closeButton"><a href="#" onclick="event.preventDefault()"><img src="ge.png" width="48" height="48"></a></div>
 </section>
 
 
@@ -381,7 +381,17 @@
 
     </script>
 
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const closeButton = document.getElementById('closeButton');
+  
+  closeButton.addEventListener('click', function() {
+    setTimeout(function() {
+      document.querySelector('.close-button a').click();
+    }, 3000); // Delay for 3 seconds
+  });
+});
+</script>
 
 <script src="assets/js/dark.js"></script>
 
