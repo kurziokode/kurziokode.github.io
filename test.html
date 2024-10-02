@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#ff3e00" />
+	<meta name="color-scheme" content="dark light" />
+
+	<link rel="manifest" href="/manifest.json" />
+	<link rel="icon" type="image/png" href="./favicon.png" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@sveltejs" />
+	<meta name="twitter:creator" content="@sveltejs" />
+	<meta name="twitter:image" content="https://kit.svelte.dev/images/twitter-thumbnail.jpg" />
+	<meta name="og:image" content="https://kit.svelte.dev/images/twitter-thumbnail.jpg" />
+
+	<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="SvelteKit" />
+
+	<!-- add inline style and blocking script to prevent content flash/jump -->
+	<style>
+		.ts-version {
+			display: none;
+		}
+
+		body.prefers-ts .js-version {
+			display: none;
+		}
+
+		body.prefers-ts .ts-version {
+			display: block;
+		}
+
+		.no-js .ts-toggle {
+			display: none;
+		}
+	</style>
+	<script>
+		document.getElementsByTagName('html')[0].classList.remove('no-js');
+		localStorage.getItem('svelte:prefers-ts') === 'true' &&
+			document.documentElement.classList.add('prefers-ts');
+	</script>
+
+	<meta http-equiv="cache-control" content="public, max-age=60">
+	<link href="https://kit.svelte.dev/_app/immutable/assets/0.CtlLWQWD.css" rel="stylesheet">
+	<link href="https://kit.svelte.dev/_app/immutable/assets/ThemeToggle.BUU2jHid.css" rel="stylesheet">
+	<link href="https://kit.svelte.dev/_app/immutable/assets/theme.DpFXKLqd.css" rel="stylesheet">
+	<link href="https://kit.svelte.dev/_app/immutable/assets/root-scroll.Df7s2WeH.css" rel="stylesheet">
+	<link href="https://kit.svelte.dev/_app/immutable/assets/flexsearch.bundle.module.CQOMREZO.css" rel="stylesheet">
+	<link href="https://kit.svelte.dev/_app/immutable/assets/3.Dj4gPsNS.css" rel="stylesheet">
+	<link rel="preload" as="font" type="font/woff2"
+		href="https://kit.svelte.dev/_app/immutable/assets/overpass-latin-300.CV0EaOW6.woff2" crossorigin>
+	<link rel="preload" as="font" type="font/woff2"
+		href="https://kit.svelte.dev/_app/immutable/assets/overpass-latin-600.rf0jPKHA.woff2" crossorigin>
+	<link rel="preload" as="font" type="font/woff2"
+		href="https://kit.svelte.dev/_app/immutable/assets/fira-mono-latin-400.BT9Jd0tE.woff2" crossorigin>
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/entry/start.D9ivAXoP.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/entry.3YYO4MLn.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/scheduler.DR3HL06C.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/control.CYgJF_JY.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/entry/app.CkJ_srcb.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/index.eTFbXueA.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/nodes/0.7URykNSq.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/stores.LWEMSgJH.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/theme.DHRcw6LN.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/focus-outside.CyMiaDyH.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/chunks/root-scroll.DXrNww3U.js">
+	<link rel="modulepreload"
+		href="https://kit.svelte.dev/_app/immutable/chunks/flexsearch.bundle.module.min.SKiYEo_z.js">
+	<link rel="modulepreload" href="https://kit.svelte.dev/_app/immutable/nodes/3.DmVIyVpe.js">
+	<title>SvelteKit • Web development, streamlined</title><!-- HEAD_svelte-1a3ptat_START -->
+	<meta name="twitter:title" content="SvelteKit">
+	<meta name="twitter:description" content="Web development, streamlined">
+	<meta name="description" content="SvelteKit is the official Svelte application framework">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="SvelteKit • Web development, streamlined">
+	<meta property="og:description" content="SvelteKit is the official Svelte application framework">
+	<meta property="og:url" content="https://kit.svelte.dev/">
+	<meta property="og:image" content="https://raw.githubusercontent.com/sveltejs/branding/master/svelte-logo.svg">
+	<!-- HEAD_svelte-1a3ptat_END -->
+</head>
+
+<body>
+	<script>
+		const themeValue = JSON.parse(localStorage.getItem('svelte:theme'))?.current;
+		const systemPreferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+			? 'dark'
+			: 'light';
+
+		document.body.classList.remove('light', 'dark');
+		document.body.classList.add(themeValue ?? systemPreferredTheme);
+	</script>
+
+	<div style="height: 100%">
+		<div style="display: contents;">
+			<div style="display: none" data-svelte-h="svelte-qvvwta"> <svg>
+					<symbol id="arrow-left" class="icon" viewBox="0 0 24 24">
+						<line x1="19" y1="12" x2="5" y2="12"></line>
+						<polyline points="12 19 5 12 12 5"></polyline>
+					</symbol>
+					<symbol id="arrow-right" class="icon" viewBox="0 0 24 24">
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+						<polyline points="12 5 19 12 12 19"></polyline>
+					</symbol>
+					<symbol id="arrow-right-chevron" viewBox="0 0 24 24">
+						<path fill="currentColor"
+							d="M8.7 17.3q-.275-.275-.275-.7t.275-.7l3.9-3.9l-3.9-3.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.7.275t-.7-.275Z">
+						</path>
+					</symbol>
+					<symbol id="arrow-up" class="icon" viewBox="0 0 24 24">
+						<line x1="12" y1="19" x2="12" y2="5"></line>
+						<polyline points="5 12 12 5 19 12"></polyline>
+					</symbol>
+					<symbol id="arrow-down" class="icon" viewBox="0 0 24 24">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<polyline points="19 12 12 19 5 12"></polyline>
+					</symbol>
+					<symbol id="check" class="icon" viewBox="0 0 24 24">
+						<polyline points="20 6 9 17 4 12"></polyline>
+					</symbol>
+					<symbol id="close" class="icon" viewBox="0 0 24 24">
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</symbol>
+					<symbol id="download" class="icon" viewBox="0 0 24 24">
+						<path d="M21 15V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V15"></path>
+						<polyline points="7 10 12 15 17 10"></polyline>
+						<line x1="12" y1="15" x2="12" y2="3"></line>
+					</symbol>
+					<symbol id="edit" class="icon" viewBox="0 0 24 24">
+						<path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+						<polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+					</symbol>
+					<symbol viewBox="0 0 24 24" id="github" stroke-width="0">
+						<path fill="currentColor"
+							d="M12 0a12 12 0 1 0 0 24a12 12 0 0 0 0-24zm3.163 21.783h-.093a.513.513 0 0 1-.382-.14a.513.513 0 0 1-.14-.372v-1.406c.006-.467.01-.94.01-1.416a3.693 3.693 0 0 0-.151-1.028a1.832 1.832 0 0 0-.542-.875a8.014 8.014 0 0 0 2.038-.471a4.051 4.051 0 0 0 1.466-.964c.407-.427.71-.943.885-1.506a6.77 6.77 0 0 0 .3-2.13a4.138 4.138 0 0 0-.26-1.476a3.892 3.892 0 0 0-.795-1.284a2.81 2.81 0 0 0 .162-.582c.033-.2.05-.402.05-.604c0-.26-.03-.52-.09-.773a5.309 5.309 0 0 0-.221-.763a.293.293 0 0 0-.111-.02h-.11c-.23.002-.456.04-.674.111a5.34 5.34 0 0 0-.703.26a6.503 6.503 0 0 0-.661.343c-.215.127-.405.249-.573.362a9.578 9.578 0 0 0-5.143 0a13.507 13.507 0 0 0-.572-.362a6.022 6.022 0 0 0-.672-.342a4.516 4.516 0 0 0-.705-.261a2.203 2.203 0 0 0-.662-.111h-.11a.29.29 0 0 0-.11.02a5.844 5.844 0 0 0-.23.763c-.054.254-.08.513-.081.773c0 .202.017.404.051.604c.033.199.086.394.16.582A3.888 3.888 0 0 0 5.702 10a4.142 4.142 0 0 0-.263 1.476a6.871 6.871 0 0 0 .292 2.12c.181.563.483 1.08.884 1.516c.415.422.915.75 1.466.964c.653.25 1.337.41 2.033.476a1.828 1.828 0 0 0-.452.633a2.99 2.99 0 0 0-.2.744a2.754 2.754 0 0 1-1.175.27a1.788 1.788 0 0 1-1.065-.3a2.904 2.904 0 0 1-.752-.824a3.1 3.1 0 0 0-.292-.382a2.693 2.693 0 0 0-.372-.343a1.841 1.841 0 0 0-.432-.24a1.2 1.2 0 0 0-.481-.101c-.04.001-.08.005-.12.01a.649.649 0 0 0-.162.02a.408.408 0 0 0-.13.06a.116.116 0 0 0-.06.1a.33.33 0 0 0 .14.242c.093.074.17.131.232.171l.03.021c.133.103.261.214.382.333c.112.098.213.209.3.33c.09.119.168.246.231.381c.073.134.15.288.231.463c.188.474.522.875.954 1.145c.453.243.961.364 1.476.351c.174 0 .349-.01.522-.03c.172-.028.343-.057.515-.091v1.743a.5.5 0 0 1-.533.521h-.062a10.286 10.286 0 1 1 6.324 0v.005z">
+						</path>
+					</symbol>
+					<symbol viewBox="0 0 24 24" id="discord" stroke-width="0">
+						<path fill="currentColor"
+							d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z">
+						</path>
+					</symbol>
+					<symbol id="git-branch" class="icon" viewBox="0 0 24 24">
+						<line x1="6" y1="3" x2="6" y2="15"></line>
+						<circle cx="18" cy="6" r="3"></circle>
+						<circle cx="6" cy="18" r="3"></circle>
+						<path d="M18 9a9 9 0 0 1-9 9"></path>
+					</symbol>
+					<symbol id="log-in" class="icon" viewBox="0 0 24 24">
+						<path d="M15 3H19A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H15"></path>
+						<polyline points="10 17 15 12 10 7"></polyline>
+						<line x1="15" y1="12" x2="3" y2="12"></line>
+					</symbol>
+					<symbol id="maximize" class="icon" viewBox="0 0 24 24">
+						<path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+						</path>
+					</symbol>
+					<symbol id="maximize-2" class="icon" viewBox="0 0 24 24">
+						<polyline points="15 3 21 3 21 9"></polyline>
+						<polyline points="9 21 3 21 3 15"></polyline>
+						<line x1="21" y1="3" x2="14" y2="10"></line>
+						<line x1="3" y1="21" x2="10" y2="14"></line>
+					</symbol>
+					<symbol id="menu" viewBox="0 0 48 48">
+						<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+							d="M7.95 11.95h32m-32 12h32m-32 12h32"></path>
+					</symbol>
+					<symbol id="message-square" class="icon" viewBox="0 0 24 24">
+						<g transform="translate(0, 1)">
+							<path d="M16.5 19H11V15H18V11H22V19H19.5L18 20.5L16.5 19Z" stroke="currentColor" stroke-width="1.5"
+								stroke-linecap="round" stroke-linejoin="round"></path>
+							<path d="M2 3H18V15H8.5L6.5 17L4.5 15H2V3 M5 10L5 12L10 12L10 10  M5 6L5 9L13 9L13 6Z" fill="currentColor"
+								stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+						</g>
+					</symbol>
+					<symbol id="minus" class="icon" viewBox="0 0 24 24">
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</symbol>
+					<symbol id="plus" class="icon" viewBox="0 0 24 24">
+						<line x1="12" y1="5" x2="12" y2="19"></line>
+						<line x1="5" y1="12" x2="19" y2="12"></line>
+					</symbol>
+					<symbol id="save" class="icon" viewBox="0 0 24 24">
+						<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+						<polyline points="17 21 17 13 7 13 7 21"></polyline>
+						<polyline points="7 3 7 8 15 8"></polyline>
+					</symbol>
+					<symbol id="link" class="icon" viewBox="0 0 24 24">
+						<path d="M9,7L6,7A2 2 0 0 0 6,17L9,17"></path>
+						<path d="M15,7L18,7A2 2 0 0 1 18,17L15,17"></path>
+						<path d="M7,12L17,12"></path>
+					</symbol>
+					<symbol viewBox="0 0 24 24" id="external-link">
+						<path fill="currentColor" stroke-width="0"
+							d="m16 8.4l-8.875 8.9q-.3.3-.713.3t-.712-.3q-.3-.3-.3-.713t.3-.712L14.6 7H7q-.425 0-.713-.288T6 6q0-.425.288-.713T7 5h10q.425 0 .713.288T18 6v10q0 .425-.288.713T17 17q-.425 0-.713-.288T16 16V8.4Z">
+						</path>
+					</symbol>
+					<symbol id="chevron" class="icon" viewBox="0 0 24 24">
+						<path d="M2,7 L12,17 L20,7"></path>
+					</symbol>
+					<symbol id="chevron-up" class="icon" viewBox="0 0 24 24">
+						<polyline points="18 15 12 9 6 15"></polyline>
+					</symbol>
+					<symbol id="chevron-down" class="icon" viewBox="0 0 24 24">
+						<polyline points="6 9 12 15 18 9"></polyline>
+					</symbol>
+					<symbol id="delete" class="icon" viewBox="0 0 24 24">
+						<path fill="currentColor" stroke="none"
+							d="M22 4.2h-5.6L15 1.6c-.1-.2-.4-.4-.7-.4H9.6c-.2 0-.5.2-.6.4L7.6 4.2H2c-.4 0-.8.4-.8.8s.4.8.8.8h1.8V22c0 .4.3.8.8.8h15c.4 0 .8-.3.8-.8V5.8H22c.4 0 .8-.3.8-.8s-.4-.8-.8-.8zM10.8 16.5c0 .4-.3.8-.8.8s-.8-.3-.8-.8V10c0-.4.3-.8.8-.8s.8.3.8.8v6.5zm4 0c0 .4-.3.8-.8.8s-.8-.3-.8-.8V10c0-.4.3-.8.8-.8s.8.3.8.8v6.5z">
+						</path>
+					</symbol>
+					<symbol id="home" viewBox="0 0 256 256">
+						<path fill="currentColor"
+							d="m221.56 100.85l-79.95-75.47l-.16-.15a19.93 19.93 0 0 0-26.91 0l-.17.15l-79.93 75.47a20.07 20.07 0 0 0-6.44 14.7V208a20 20 0 0 0 20 20h48a20 20 0 0 0 20-20v-44h24v44a20 20 0 0 0 20 20h48a20 20 0 0 0 20-20v-92.45a20.07 20.07 0 0 0-6.44-14.7ZM204 204h-40v-44a20 20 0 0 0-20-20h-32a20 20 0 0 0-20 20v44H52v-86.72l76-71.75l76 71.75Z">
+						</path>
+					</symbol>
+					<symbol id="search" viewBox="0 0 24 24">
+						<path stroke-width="0.2" fill="currentColor"
+							d="m18.9 20.3l-5.6-5.6q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.625 5.625q.275.275.275.675t-.3.7q-.275.275-.7.275t-.7-.275ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z">
+						</path>
+					</symbol>
+					<symbol id="docs" viewBox="0 0 16 16">
+						<path fill="currentColor"
+							d="M1 3.25C1 2.56 1.56 2 2.249 2h.5c.69 0 1.248.56 1.248 1.25v9.495c0 .69-.559 1.25-1.248 1.25h-.5A1.25 1.25 0 0 1 1 12.744V3.249ZM2.249 3a.25.25 0 0 0-.25.25v9.495c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25V3.249a.25.25 0 0 0-.25-.25h-.5Zm2.748.25c0-.69.559-1.25 1.249-1.25h.5c.689 0 1.248.56 1.248 1.25v9.495c0 .69-.56 1.25-1.249 1.25h-.5a1.25 1.25 0 0 1-1.248-1.25V3.249ZM6.246 3a.25.25 0 0 0-.25.25v9.495c0 .138.112.25.25.25h.5a.25.25 0 0 0 .249-.25V3.249a.25.25 0 0 0-.25-.25h-.5Zm5.726 1.777a1.249 1.249 0 0 0-1.57-.713l-.583.204a1.25 1.25 0 0 0-.746 1.645l2.937 7.304c.249.62.94.933 1.571.713l.582-.204a1.25 1.25 0 0 0 .746-1.646l-2.937-7.303Zm-1.24.23a.25.25 0 0 1 .313.143l2.937 7.303a.25.25 0 0 1-.149.33l-.582.203a.25.25 0 0 1-.314-.142L10 5.54a.25.25 0 0 1 .149-.329l.582-.204Z">
+						</path>
+					</symbol>
+					<symbol id="contents" viewBox="0 0 256 256" stroke-width="0">
+						<path fill="currentColor"
+							d="M224 44h-64a43.86 43.86 0 0 0-32 13.85A43.86 43.86 0 0 0 96 44H32a20 20 0 0 0-20 20v128a20 20 0 0 0 20 20h64a20 20 0 0 1 20 20a12 12 0 0 0 24 0a20 20 0 0 1 20-20h64a20 20 0 0 0 20-20V64a20 20 0 0 0-20-20ZM96 188H36V68h60a20 20 0 0 1 20 20v104.81A43.79 43.79 0 0 0 96 188Zm124 0h-60a43.71 43.71 0 0 0-20 4.83V88a20 20 0 0 1 20-20h60Z">
+						</path>
+					</symbol>
+					<symbol viewBox="0 0 24 24" id="copy-to-clipboard-empty">
+						<path fill="currentColor"
+							d="M5 22q-.825 0-1.413-.588T3 20V6h2v14h11v2H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z">
+						</path>
+					</symbol>
+					<symbol viewBox="0 0 24 24" id="copy-to-clipboard-filled">
+						<path fill="currentColor"
+							d="M5 22q-.825 0-1.413-.588T3 20V6h2v14h11v2H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Z">
+						</path>
+					</symbol>
+				</svg></div> <a href="#main" class="svelte-1rscj97">Skip to main content </a>
+			<nav aria-label="Primary" class="svelte-1wcjdtw visible"><a class="home-link svelte-1wcjdtw" href="/"
+					title="Homepage"><span class="home-large svelte-1wcjdtw"><strong
+							data-svelte-h="svelte-1to94iu">kit</strong>.svelte.dev</span> <span
+						class="home-small svelte-1wcjdtw"><strong data-svelte-h="svelte-1to94iu">kit</strong>
+					</span></a>
+				<div class="desktop svelte-1wcjdtw">
+					<div class="center-area svelte-1wcjdtw">
+						<form class="search-container svelte-15l0yne" action="/search"><input value="" type="search" name="q"
+								placeholder="Search" aria-label="Search" spellcheck="false" class="svelte-15l0yne"> </form>
+					</div>
+					<div class="menu svelte-1wcjdtw"><a href="/docs/introduction">Docs </a>
+						<hr class="svelte-hbkmlj"> <a href="https://learn.svelte.dev/tutorial/introducing-sveltekit" rel="external"
+							data-svelte-h="svelte-15y8ruk">Tutorial</a> <a href="https://svelte.dev"
+							data-svelte-h="svelte-yry8a6">Svelte</a>
+						<hr class="svelte-hbkmlj"> <a href="https://svelte.dev/chat" rel="external" title="Discord Chat"><span
+								class="small svelte-egrlut" data-svelte-h="svelte-byakra">Discord</span> <span
+								class="large svelte-egrlut"> <svg class="icon svelte-5yec89" width="20" height="20">
+									<use xlink:href="#discord"></use>
+								</svg></span></a> <a href="https://github.com/sveltejs/kit" title="GitHub Repo"><span
+								class="small svelte-egrlut" data-svelte-h="svelte-1o8f6s1">GitHub</span> <span
+								class="large svelte-egrlut"> <svg class="icon svelte-5yec89" width="20" height="20">
+									<use xlink:href="#github"></use>
+								</svg></span></a>
+						<div class="appearance svelte-1wcjdtw"><span class="caption svelte-1wcjdtw">Theme</span> <button
+								type="button" aria-pressed="false" aria-label="Dark mode" class="svelte-1b9q9nc"><span
+									class="check svelte-1b9q9nc"><span class="icon svelte-1b9q9nc"></span></span>
+							</button></div>
+					</div>
+				</div>
+				<div class="mobile mobile-menu svelte-1wcjdtw"><button aria-label="Search" class="search svelte-1wcjdtw"> <svg
+							class="icon svelte-5yec89" width=".6em" height=".6em">
+							<use xlink:href="#search"></use>
+						</svg></button>
+					<div style="display: contents"><button aria-label="Toggle menu" aria-expanded="false"
+							class="menu-toggle svelte-1ih0snl"> <svg class="icon svelte-5yec89" width="1em" height="1em">
+								<use xlink:href="#menu"></use>
+							</svg></button> </div>
+				</div>
+			</nav>
+			<div class="modal-overlay svelte-1sui5a8" aria-hidden="true"></div>
+			<main id="main" class="svelte-1sui5a8">
+				<div class="home">
+					<h1 class="visually-hidden" data-svelte-h="svelte-1x8q1q4">SvelteKit</h1>
+					<section class="hero svelte-m2ltu">
+						<div class="hero-contents svelte-m2ltu">
+							<div class="hero-text svelte-m2ltu">
+								<div class="logotype svelte-m2ltu" role="img" aria-label="SvelteKit"><svg viewBox="30 31 400 50"
+										width="400" height="50" xmlns="http://www.w3.org/2000/svg">
+										<path class="svelte svelte-cwrdmj"
+											d="M48.3359 80.876C44.4451 80.9736 40.6159 79.8942 37.3519 77.78C34.3023 75.7742 32.0378 72.7827 30.9387 69.3081L37.6241 66.8581C38.5518 68.991 40.066 70.8183 41.9916 72.1286C43.9468 73.4367 46.2574 74.1149 48.6113 74.0715C50.8732 74.1893 53.1053 73.5154 54.9219 72.1661C55.7123 71.5043 56.3367 70.6675 56.7454 69.7223C57.1541 68.7772 57.3357 67.7499 57.2758 66.7223C57.2852 65.7649 57.063 64.8193 56.6281 63.9657C56.2495 63.2023 55.7547 62.5019 55.1613 61.8894C54.4103 61.2078 53.5586 60.6454 52.6361 60.222C51.4981 59.6561 50.5542 59.2252 49.8042 58.9292C49.0543 58.6332 47.9513 58.2363 46.4952 57.7385C44.6761 57.1034 43.3118 56.6046 42.4023 56.242C41.1703 55.719 39.9737 55.1164 38.8202 54.4381C37.579 53.7813 36.4506 52.9313 35.4776 51.9202C34.6349 50.9339 33.9554 49.8197 33.4647 48.6198C32.5217 46.3326 32.3235 43.8075 32.8983 41.4018C33.473 38.9961 34.7915 36.8316 36.6673 35.2143C39.3991 32.8106 43.1066 31.6085 47.7898 31.608C51.7018 31.608 54.9201 32.4699 57.4448 34.1937C59.8955 35.819 61.695 38.2524 62.528 41.0678L55.9772 43.2446C55.3192 41.7704 54.2079 40.5431 52.8042 39.7406C51.1067 38.8008 49.184 38.3416 47.2438 38.4125C45.3411 38.3039 43.4564 38.8307 41.8875 39.9098C41.247 40.4053 40.7359 41.0476 40.3976 41.7822C40.0593 42.5168 39.9038 43.322 39.9443 44.1294C39.95 44.7485 40.0866 45.3594 40.3452 45.9222C40.6037 46.485 40.9784 46.987 41.4447 47.3956C42.3512 48.2863 43.4153 49.0016 44.5833 49.5054C45.6753 49.9589 47.3356 50.5712 49.5641 51.342C50.9278 51.8419 51.9396 52.2162 52.5993 52.4648C53.259 52.7134 54.2249 53.1332 55.4968 53.7242C56.5174 54.1744 57.4987 54.7086 58.4304 55.3213C59.2647 55.9196 60.0622 56.5673 60.8187 57.261C61.6416 57.9722 62.3444 58.8107 62.9003 59.7445C63.4302 60.7128 63.8425 61.7406 64.1285 62.8062C64.4763 64.0584 64.6485 65.3527 64.6401 66.6521C64.6401 71.0984 63.1162 74.5802 60.0685 77.0972C57.0207 79.6143 53.1098 80.8739 48.3359 80.876ZM92.0693 80.0599L75.6946 32.4241H83.3367L94.1846 65.6331C94.784 67.4193 95.2852 69.2369 95.6858 71.0777C96.085 69.2366 96.5861 67.4189 97.187 65.6331L107.899 32.4241H115.472L99.1646 80.0599H92.0693ZM129.935 80.0599V32.4241H159.546V39.0937H137.031V52.159H151.563V58.8286H137.031V73.3903H161.05V80.0599H129.935ZM179.126 80.0599V32.4241H186.223V73.2546H209.556V80.0599H179.126ZM236.301 39.2295V80.0599H229.204V39.2295H215.696V32.4241H249.813V39.2295H236.301ZM264.478 80.0599V32.4241H294.088V39.0937H271.574V52.159H286.106V58.8286H271.574V73.3903H295.593V80.0599H264.478Z">
+										</path>
+										<path class="kit svelte-cwrdmj"
+											d="M348.645 80.0599L335.205 55.1536L326.745 65.3616V80.0599H319.648V32.4241H326.745V55.4938L345.169 32.4241H353.356L339.986 49.1652L356.974 80.0599H348.645ZM372.319 80.0599V32.4241H379.416V80.0599H372.319ZM416.394 39.2295V80.0599H409.3V39.2295H395.789V32.4241H429.902V39.2295H416.394Z">
+										</path>
+									</svg></div>
+								<div class="tagline svelte-m2ltu" data-svelte-h="svelte-6ix6uu">web development,
+									streamlined</div> <a href="./docs/introduction" class="cta svelte-m2ltu"
+									data-svelte-h="svelte-1f64j6n">read the docs</a>
+							</div>
+							<div class="hero-image-wrapper svelte-m2ltu">
+								<picture>
+									<source
+										srcset="/https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.BDHNYkkI.avif 1440w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.BtE0jp-d.avif 1080w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.XTbHoo4E.avif 768w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.DFurx5jt.avif 640w"
+										sizes="(min-width: 768px) min(100vw, 108rem), 64rem" type="image/avif">
+									<source
+										srcset="/https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.DyY-mmzl.webp 1440w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.B-xFT5XX.webp 1080w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.wm5DY1FA.webp 768w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.DU43cgVd.webp 640w"
+										sizes="(min-width: 768px) min(100vw, 108rem), 64rem" type="image/webp">
+									<source
+										srcset="/https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.D9RaRv8H.png 1440w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.Bamn0-2W.png 1080w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.ChIxUKYE.png 768w, /https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.Ds9iDTWb.png 640w"
+										sizes="(min-width: 768px) min(100vw, 108rem), 64rem" type="image/png"><img
+										src="/https://kit.svelte.dev/_app/immutable/assets/svelte-kit-machine.D9RaRv8H.png"
+										class="hero-image svelte-m2ltu" alt="SvelteKit illustration" width="1440" height="1440">
+								</picture>
+							</div>
+						</div>
+					</section>
+					<div style="display: contents; --background:var(--sk-back-1);">
+						<div style="display: contents; --background:var(--sk-back-1);">
+							<section class="svelte-r6pgeo">
+								<div class="inner svelte-r6pgeo">
+									<div class="grid svelte-by48k3">
+										<div>
+											<div slot="one" data-svelte-h="svelte-1v2teal">
+												<h2>fast</h2>
+												<p class="svelte-1an9yx3">Powered by <a target="_blank" rel="noreferrer"
+														href="https://svelte.dev">Svelte</a> and
+													<a target="_blank" rel="noreferrer" href="https://vitejs.dev">Vite</a>, speed is baked into
+													every crevice: fast setup, fast dev, fast builds, fast page loads,
+													fast navigation. Did we
+													mention it&#39;s fast?
+												</p>
+											</div>
+										</div>
+										<div>
+											<div slot="two" data-svelte-h="svelte-10nos6n">
+												<h2>fun</h2>
+												<p class="svelte-1an9yx3">No more wasted days figuring out bundler
+													configuration, routing, SSR, CSP, TypeScript,
+													deployment settings and all the other boring stuff. Code with joy.
+												</p>
+											</div>
+										</div>
+										<div>
+											<div slot="three" data-svelte-h="svelte-1akbcbt">
+												<h2>flexible</h2>
+												<p class="svelte-1an9yx3">SPA? MPA? SSR? SSG? Check. SvelteKit gives you
+													the tools to succeed whatever it is you&#39;re
+													building. And it runs wherever JavaScript does.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class="try-container svelte-w1pn0l">
+						<div style="display: contents; --background:var(--background-2);">
+							<section class="svelte-r6pgeo">
+								<div class="inner svelte-r6pgeo">
+									<div class="grid svelte-w1pn0l" style="--columns: 2">
+										<div class="copy svelte-w1pn0l">
+											<h2 class="svelte-w1pn0l">see for yourself</h2>
+											<div class="svelte-w1pn0l">
+												Try it locally, <a target="_blank" rel="noreferrer" href="https://sveltekit.new"
+													data-svelte-h="svelte-eenv3i">on
+													StackBlitz</a>, or with
+												<a target="_blank" href="https://learn.svelte.dev" data-svelte-h="svelte-1dld4b9">the
+													interactive tutorial</a>.
+											</div>
+										</div>
+										<div class="try svelte-w1pn0l">
+											<div class="terminal svelte-1kffmf0" data-svelte-h="svelte-8477eb">
+												<div class="chrome svelte-1kffmf0"><span class="dot svelte-1kffmf0"></span> <span
+														class="dot svelte-1kffmf0"></span> <span class="dot svelte-1kffmf0"></span> <span
+														class="title svelte-1kffmf0">terminal</span></div>
+												<pre class="svelte-1kffmf0"><code class="svelte-1kffmf0"><span class="line svelte-1kffmf0">npm create <span class="orange-highlight svelte-1kffmf0">svelte</span>@latest my-app</span>
+<span class="line svelte-1kffmf0">cd my-app</span>
+<span class="line svelte-1kffmf0">npm install</span>
+<span class="line svelte-1kffmf0">npm run dev -- --open</span></code></pre>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					<div style="display: contents; --background:var(--background-1);">
+						<section class="svelte-r6pgeo">
+							<div class="inner svelte-r6pgeo">
+								<p class="definition svelte-72vhc3" data-svelte-h="svelte-1b4pwet"><em
+										class="svelte-72vhc3">/ˈsvɛlt/</em> <span class="adjective svelte-72vhc3">adjective</span> <span
+										class="description svelte-72vhc3">attractively thin, graceful and stylish</span>
+								</p>
+								<div class="grid" style="--columns: 3">
+									<div class="video-container svelte-72vhc3">
+										<div class="video-player svelte-10er4dc"><video
+												src="https://sveltejs.github.io/assets/svelte-origins-preview.mp4" loop playsinline
+												class="svelte-10er4dc" muted paused="false" currentTime="0">
+												<track kind="captions" srclang="en"
+													src="data:text/vtt;base64,V0VCVlRUCgowMDowMDowMC4wMDAgLS0+IDAwOjAwOjAxLjkyMAogW1Njb3R0IFRvbGluc2tpXSBJIHdhbnRlZCB0byBzaGFyZSBpdCBpbW1lZGlhdGVseS4KCjAwOjAwOjAxLjkyMCAtLT4gMDA6MDA6MDQuMjQwCiBJIHdhbnRlZCB0byBidWlsZCBtb3JlIHRoaW5ncyBpbiBpdC4KCjAwOjAwOjA0LjI0MCAtLT4gMDA6MDA6MDUuNjQwCiBbSmFtZXMgUSBRdWlja10gSSBsb3ZlIGl0LgoKMDA6MDA6MDUuNjQwIC0tPiAwMDowMDowNy4wODAKIFtGaXJlc2hpcF0gSXQncyB0aGUgb25seSBKYXZhU2NyaXB0IGZyYW1ld29yawoKMDA6MDA6MDcuMDgwIC0tPiAwMDowMDowOC42NDAKIHRoYXQncyBhY3R1YWxseSBlbmpveWFibGUgdG8gdXNlLgoKMDA6MDA6MDguNjQwIC0tPiAwMDowMDoxMC41NDAKIFtCZW4gTWNDYW5uXSBTdmVsdGUgaW50cm9kdWNlZCBhIG5ldyBlcmdvbm9taWNzCgowMDowMDoxMC41NDAgLS0+IDAwOjAwOjEzLjE2MAogdG8gYnVpbGRpbmcgYSB3ZWJzaXRlIHRoYXQncyBtYWRlIGl0IG1vcmUgZnVuCgowMDowMDoxMy4xNjAgLS0+IDAwOjAwOjE1LjQ0MAogYW5kIGVhc2llciB0aGFuIGl0J3MgYmVlbiBpbiBhIGxvbmcgdGltZS4KCjAwOjAwOjE1LjQ0MCAtLT4gMDA6MDA6MTguNzIwCiBBbmQgdGhlIHdheSB0aGF0IGl0J3MgZG9uZSB0aGF0IGlzIGJ5IGludHJvZHVjaW5nCgowMDowMDoxOC43MjAgLS0+IDAwOjAwOjIyLjM2MAogdGhpcyBjb25jZXB0IG9mIGdlbmVyYXRpbmcgcmVhY3RpdmUgY29kZSBhdCBjb21waWxlIHRpbWUuCgowMDowMDoyMi4zNjAgLS0+IDAwOjAwOjI1LjU2MAogW1Njb3R0IFRvbGluc2tpXSBXaGF0IFN2ZWx0ZSBhbGxvd3MgdXMgdG8gZG8gaXMgdG8gd3JpdGUgY29kZQoKMDA6MDA6MjUuNTYwIC0tPiAwMDowMDoyOS40MDAKIHRoYXQncyBub3Qgb25seSBzbWFsbCBhbmQgc2ltcGxlLCBidXQgcGxhaW4gYW5kIHJlYWRhYmxlLgoKMDA6MDA6MjkuNDAwIC0tPiAwMDowMDozMi43NjAKIFtBbWVsaWEgV2F0dGVuYmVyZ2VyXSBZb3UncmUgbW9zdGx5IGp1c3QgbG9va2luZyBhdCBiYXNpYyBIVE1MLAoKMDA6MDA6MzIuNzYwIC0tPiAwMDowMDozNC43NjAKIEphdmFTY3JpcHQsIGFuZCBDU1MuCgowMDowMDozNC43NjAgLS0+IDAwOjAwOjM3LjEyMAogW0FsaXphIEF1ZnJpY2h0aWddIFRoZSB0aGluZyBJIGxpa2UgbW9zdCBhYm91dCB1c2luZyBTdmVsdGUKCjAwOjAwOjM3LjEyMCAtLT4gMDA6MDA6MzkuMjAwCiBpcyBob3cgZmFzdCB5b3UgY2FuIG1vdmUuCgowMDowMDozOS4yMDAgLS0+IDAwOjAwOjQyLjQwMAogW01vcml0eiBTdGVmYW5lcl0gQW5kIHdoZW4gSSBkaXNjb3ZlcmVkIFN2ZWx0ZSwgaXQgY2FtZSBiYWNrIHRvIHRoaXMsCgowMDowMDo0Mi40MDAgLS0+IDAwOjAwOjQ0LjgwMAogb2gsIGhlcmUncyBhIHJlYWxseSBzaW1wbGUgd2F5IHRvIGRvIHRoaW5ncy4KCjAwOjAwOjQ0LjgwMCAtLT4gMDA6MDA6NDcuNDgwCiBbU2hhd24gV2FuZ10gWW91IGRvbid0IGFjdHVhbGx5IG5lZWQgYWxsIHRoaXMgbWFjaGluZXJ5CgowMDowMDo0Ny40ODAgLS0+IDAwOjAwOjQ5LjEyMAogaW4gb3JkZXIgdG8gZG8gY29tcG9uZW50cyByaWdodC4KCjAwOjAwOjQ5LjEyMCAtLT4gMDA6MDA6NTEuNjQwCiBJIGxvb2tlZCBhdCBteSBSZWFjdCBleHBlcmllbmNlIHNvIGZhciDigJQKCjAwOjAwOjUxLjY0MCAtLT4gMDA6MDA6NTUuMTIwCiBJIGNvdWxkIG5vdCBiZSBhbnl3aGVyZSBhcyBwcm9kdWN0aXZlIGFzIEkgY291bGQgYmUgaW4gU3ZlbHRlLgoKMDA6MDA6NTUuMTIwIC0tPiAwMDowMDo1Ny41MjAKIEFuZCB0aGF0J3Mgd2hlbiBpdCBzdGFydGVkIHJlYWxseSB0YWtpbmcgaXQgc2VyaW91c2x5LgoKMDA6MDA6NTcuNTIwIC0tPiAwMDowMDo1OS44MDAKIFtBbWVsaWEgV2F0dGVuYmVyZ2VyXSBUaGVyZSdzIHF1aXRlIGEgYml0IG9mIHVzYWdlIHRoZXNlIGRheXMKCjAwOjAwOjU5LjgwMCAtLT4gMDA6MDE6MDIuNjgwCiBhbmQgc2F0aXNmYWN0aW9uIGlzIHN0aWxsLCBJIHRoaW5rLCB0aGUgaGlnaGVzdAoKMDA6MDE6MDIuNjgwIC0tPiAwMDowMTowNS45MjAKIG9yIG9uZSBvZiB0aGUgaGlnaGVzdCBmb3IgYW55IG9mIHRoZSBsYXJnZXIKCjAwOjAxOjA1LjkyMCAtLT4gMDA6MDE6MDguMTIwCiBvciBtb3JlIHVzZWQgSmF2YVNjcmlwdCBmcmFtZXdvcmtzLgoKMDA6MDE6MDguMTIwIC0tPiAwMDowMToxMC4wNDAKIFtHdWlsbGVybW8gUmF1Y2hdIFdoZW4geW91IHdyaXRlIHlvdXIgYXBwbGljYXRpb24sCgowMDowMToxMC4wNDAgLS0+IDAwOjAxOjEzLjE2MAogeW91J3JlIG1ha2luZyBpdCBmYXN0IGJ5IGNvbnN0cnVjdGlvbi4KCjAwOjAxOjEzLjE2MCAtLT4gMDA6MDE6MTQuODgwCiBJdCdzIGFsbW9zdCBpbXBvc3NpYmxlIHRvIGNyZWF0ZSBhIHNsb3cgYXBwCgowMDowMToxNC44ODAgLS0+IDAwOjAxOjE3LjIwMAogYW5kIEkgdGhpbmsgU3ZlbHRlIGhhcyBhbiBpbmNyZWRpYmxlIGFkdmFudGFnZSBoZXJlLgoKMDA6MDE6MTcuMjAwIC0tPiAwMDowMToxOC4zNjAKIFBlb3BsZSBsb3ZlIFN2ZWx0ZS4KCg=="
+													default>
+											</video>
+											<div class="top-controls svelte-10er4dc"><label class="captions svelte-10er4dc unused"><input
+														class="visually-hidden svelte-10er4dc" type="checkbox" checked>
+													<img
+														src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2027.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2024%2024'%20style='enable-background:new%200%200%2024%2024;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:%23FFFFFF;}%20%3c/style%3e%3cpath%20class='st0'%20d='M5,4C4.4,4,4,4.2,3.6,4.6C3.2,5,3,5.4,3,6v12c0,0.6,0.2,1,0.6,1.4C4,19.8,4.4,20,5,20h14c0.5,0,1-0.2,1.4-0.6%20C20.8,19,21,18.5,21,18V6c0-0.5-0.2-1-0.6-1.4C20,4.2,19.5,4,19,4H5%20M4.5,5.5h15v13h-15V5.5%20M7,9C6.7,9,6.5,9.1,6.3,9.3%20C6.1,9.5,6,9.7,6,10v4c0,0.3,0.1,0.5,0.3,0.7C6.5,14.9,6.7,15,7,15h3c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-1H9.5v0.5h-2%20v-3h2V11H11v-1c0-0.3-0.1-0.5-0.3-0.7C10.5,9.1,10.3,9,10,9H7%20M14,9c-0.3,0-0.5,0.1-0.7,0.3C13.1,9.5,13,9.7,13,10v4%20c0,0.3,0.1,0.5,0.3,0.7c0.2,0.2,0.4,0.3,0.7,0.3h3c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v-1h-1.5v0.5h-2v-3h2V11H18v-1%20c0-0.3-0.1-0.5-0.3-0.7C17.5,9.1,17.3,9,17,9H14z'/%3e%3c/svg%3e"
+														alt="hide subtitles" class="svelte-10er4dc" style="display: block;"> <img
+														src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2027.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2024%2024'%20style='enable-background:new%200%200%2024%2024;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{display:none;fill:%23FFFFFF;}%20.st1{fill:%23FFFFFF;}%20%3c/style%3e%3cpath%20class='st0'%20d='M12,3.7L9.9,5.8L12,7.9%20M4.3,2.7L3,4l4.7,4.7H3v6h4l5,5V13l4.2,4.3c-0.7,0.5-1.4,0.9-2.2,1.2v2.1%20c1.4-0.3,2.6-1,3.7-1.8l2,2l1.3-1.3l-9-9%20M19,11.7c0,0.9-0.2,1.8-0.5,2.6l1.5,1.5c0.7-1.2,1-2.6,1-4.1c0-4.3-3-7.9-7-8.8V5%20C16.9,5.9,19,8.6,19,11.7%20M16.5,11.7c0-1.8-1-3.3-2.5-4v2.2l2.5,2.4C16.5,12.2,16.5,11.9,16.5,11.7z'/%3e%3cg%3e%3cpath%20class='st1'%20d='M16.5,13.5l1.2,1.2c0.2-0.2,0.3-0.4,0.3-0.7v-1h-1.5V13.5z'/%3e%3cpath%20class='st1'%20d='M10,13H9.5v0.5h-2v-3h0L6.3,9.3C6.1,9.5,6,9.7,6,10v4c0,0.3,0.1,0.5,0.3,0.7C6.5,14.9,6.7,15,7,15h3%20c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7v0L10,13z'/%3e%3cpath%20class='st1'%20d='M14.5,11.5v-1h2V11H18v-1c0-0.3-0.1-0.5-0.3-0.7C17.5,9.1,17.3,9,17,9h-3c-0.3,0-0.5,0.1-0.7,0.3%20C13.1,9.5,13,9.7,13,10L14.5,11.5z'/%3e%3cpath%20class='st1'%20d='M20.4,4.6C20,4.2,19.5,4,19,4H5C4.5,4,4,4.2,3.6,4.6C3.2,5,3,5.4,3,6v12c0,0.6,0.2,1,0.6,1.4%20C4,19.8,4.5,20,5,20h14c0.5,0,1-0.2,1.4-0.6C20.8,19,21,18.5,21,18V6C21,5.5,20.8,5,20.4,4.6z%20M19.5,5.5v12.8L6.7,5.5H19.5z%20M4.5,18.5V5.8l12.7,12.7H4.5z'/%3e%3c/g%3e%3c/svg%3e"
+														alt="show subtitles" class="svelte-10er4dc" style="display: none;"></label> <label
+													class="mute svelte-10er4dc unused"><input class="visually-hidden svelte-10er4dc"
+														type="checkbox" checked>
+													<img
+														src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='white'%20d='M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04%2014.83,18.46%2014,18.7V20.77C15.38,20.45%2016.63,19.82%2017.68,18.96L19.73,21L21,19.73L12,10.73M19,12C19,12.94%2018.8,13.82%2018.46,14.64L19.97,16.15C20.62,14.91%2021,13.5%2021,12C21,7.72%2018,4.14%2014,3.23V5.29C16.89,6.15%2019,8.83%2019,12M16.5,12C16.5,10.23%2015.5,8.71%2014,7.97V10.18L16.45,12.63C16.5,12.43%2016.5,12.21%2016.5,12Z'%20/%3e%3c/svg%3e"
+														alt="unmute" class="svelte-10er4dc" style="display: block;">
+													<img
+														src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20fill='white'%20d='M14,3.23V5.29C16.89,6.15%2019,8.83%2019,12C19,15.17%2016.89,17.84%2014,18.7V20.77C18,19.86%2021,16.28%2021,12C21,7.72%2018,4.14%2014,3.23M16.5,12C16.5,10.23%2015.5,8.71%2014,7.97V16C15.5,15.29%2016.5,13.76%2016.5,12M3,9V15H7L12,20V4L7,9H3Z'%20/%3e%3c/svg%3e"
+														alt="mute" class="svelte-10er4dc" style="display: none;"></label></div> <label
+												class="play-pause svelte-10er4dc"><input class="visually-hidden svelte-10er4dc" type="checkbox">
+												<img
+													src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.5%2011.9999V5.93774L12.75%208.96884L18%2011.9999L12.75%2015.031L7.5%2018.0621V11.9999Z'%20fill='white'%20stroke='white'%20stroke-width='1.5'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+													alt="play" class="svelte-10er4dc" style="display: none;"> <img
+													src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='7'%20y='6'%20width='2'%20height='12'%20fill='white'%20stroke='white'%20stroke-width='1.5'%20stroke-linejoin='round'/%3e%3crect%20x='15'%20y='6'%20width='2'%20height='12'%20fill='white'%20stroke='white'%20stroke-width='1.5'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+													alt="pause" class="svelte-10er4dc" style="display: block;"></label>
+										</div>
+										<p class="svelte-72vhc3" data-svelte-h="svelte-1y2mhxp"><a target="_blank" rel="noreferrer"
+												href="https://www.offerzen.com/community/svelte-origins-documentary">Watch
+												the full Svelte Origins documentary</a></p>
+									</div>
+									<div data-svelte-h="svelte-3kxvva">
+										<p class="svelte-72vhc3">SvelteKit is built on Svelte, a UI framework that uses
+											a compiler to let you write
+											breathtakingly concise components that do minimal work in the browser, using
+											languages you
+											already know — HTML, CSS and JavaScript. <strong>It&#39;s a love letter to
+												web development.</strong></p>
+										<p class="svelte-72vhc3">But don&#39;t take our word for it. Developers
+											consistently rank Svelte as the framework they&#39;re
+											<a target="_blank" rel="noreferrer"
+												href="https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks">most</a>
+											<a target="_blank" rel="noreferrer"
+												href="https://tsh.io/state-of-frontend/#which-of-the-following-frameworks-would-you-like-to-learn-in-the-future">excited</a>
+											<a target="_blank" rel="noreferrer"
+												href="https://2021.stateofjs.com/en-US/libraries/front-end-frameworks/">about</a>
+											<a target="_blank" rel="noreferrer"
+												href="https://twitter.com/Rich_Harris/status/1589675637195042817">using</a>.
+										</p>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div style="display: contents; --background:var(--sk-back-1);">
+						<section class="svelte-r6pgeo">
+							<div class="inner svelte-r6pgeo">
+								<div class="container svelte-x0d6kl" data-svelte-h="svelte-i8bs6z">
+									<div class="features svelte-x0d6kl">
+										<h2 class="svelte-x0d6kl"><span class="svelte-x0d6kl">features? we got
+												&#39;em.</span></h2>
+										<p class="wall svelte-x0d6kl">Mix and match <strong class="svelte-x0d6kl">prerendered</strong> pages
+											for maximum performance
+											with dynamic
+											<strong class="svelte-x0d6kl">server-side rendering</strong> for maximum
+											flexibility. Turn your app into a
+											client-rendered
+											<strong class="svelte-x0d6kl">PWA</strong> with a single line of code, for
+											the whole thing or just one page. Use
+											accessible <strong class="svelte-x0d6kl">client-side routing</strong> with
+											automatic
+											<strong class="svelte-x0d6kl">preloading</strong> for slick, instantaneous
+											navigation that doesn&#39;t reload your
+											entire page (and your analytics, and all that other junk). Protect your
+											users with automatic
+											<strong class="svelte-x0d6kl">CSRF protection</strong>
+											and easy-to-use
+											<strong class="svelte-x0d6kl">Content Security Policy</strong>
+											configuration. Keep your secrets to yourself with
+											advanced <strong class="svelte-x0d6kl">environment variable</strong>
+											handling. Handle errors gracefully and
+											<strong class="svelte-x0d6kl">securely</strong>. Load data
+											<strong class="svelte-x0d6kl">directly from your database</strong>
+											and connect your back end to your front end with <strong class="svelte-x0d6kl">type-safe</strong>
+											data loading and
+											built-in <strong class="svelte-x0d6kl">form actions</strong>
+											that work with or without JavaScript. <strong class="svelte-x0d6kl">Co-exist</strong> with other
+											client-side
+											routing frameworks on the same page. Add service workers for <strong
+												class="svelte-x0d6kl">offline</strong>
+											support. Generate <strong class="svelte-x0d6kl">AMP-compliant</strong>
+											pages if you really have to. Build complex UIs with unusually powerful
+											<strong class="svelte-x0d6kl">filesystem-based routes</strong>. Nested
+											layouts? Duh. Learn
+											<strong class="svelte-x0d6kl">web standards</strong>
+											that work across environments. Integrate with <strong class="svelte-x0d6kl">Tailwind</strong>
+											and <strong class="svelte-x0d6kl">Playwright</strong> and <strong
+												class="svelte-x0d6kl">Vitest</strong> and <strong class="svelte-x0d6kl">Storybook</strong>
+											and, well, whatever you want. Build <strong class="svelte-x0d6kl">libraries</strong> as well as
+											apps.
+											<strong class="svelte-x0d6kl">Deploy anywhere</strong> with adapters.
+										</p>
+										<p class="svelte-x0d6kl">SvelteKit is the framework that
+											<strong class="svelte-x0d6kl">grows with you</strong>, whatever you end up
+											building.
+										</p>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div style="display: contents; --background:var(--background-1);">
+						<section class="svelte-r6pgeo">
+							<div class="inner svelte-r6pgeo">
+								<div class="grid" style="--columns: 3" data-svelte-h="svelte-1h1d33z">
+									<h2>deploy anywhere</h2>
+									<div class="blurb svelte-fzviev">
+										<p class="svelte-fzviev">Export static HTML files. Run your own Node server.
+											Deploy code to the edge of the world. If
+											a platform runs JavaScript, it runs SvelteKit — in some cases with
+											<strong>zero configuration</strong>.
+										</p>
+										<p class="svelte-fzviev">Want to try deploying somewhere else? Swap out your
+											adapter with a single line of code.</p>
+									</div>
+								</div>
+								<div class="grid" style="--columns: 3">
+									<div class="platforms left svelte-fzviev" data-svelte-h="svelte-1fe0al7"><a target="_blank"
+											rel="noreferrer" href="https://github.com/sveltejs/kit/tree/main/packages/adapter-static"
+											class="invert svelte-fzviev"><img
+												src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2027.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%20362.8%20512'%20style='enable-background:new%200%200%20362.8%20512;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:%23E44D26;}%20.st1{fill:%23F16529;}%20.st2{fill:%23EBEBEB;}%20.st3{fill:%23FFFFFF;}%20%3c/style%3e%3cpath%20d='M33.8,0h23v22.8H78V0h23v69H78V46H57v23H33.8%20M131.4,23h-20.3V0h63.7v23h-20.4v46h-23%20M184.9,0H209l14.8,24.3L238.6,0h24.1%20v69h-23V34.8l-16.1,24.8l-16.1-24.8V69h-22.6%20M274.1,0h23v46.2h32.6V69h-55.6'/%3e%3cpath%20class='st0'%20d='M33,471L0,100.6h362.8l-33,370.2L181.1,512'/%3e%3cpath%20class='st1'%20d='M181.4,480.5V131h148.3l-28.3,316'/%3e%3cpath%20class='st2'%20d='M67.4,176.3h114v45.4h-64.2l4.2,46.5h60v45.3H79.8%20M81.8,336.3h45.6l3.2,36.3l50.8,13.6v47.4l-93.2-26'/%3e%3cpath%20class='st3'%20d='M295,176.3H181.2v45.4h109.6%20M286.7,268.2H181.2v45.4h56l-5.3,59l-50.7,13.6v47.2l93-25.8'/%3e%3c/svg%3e"
+												alt="" class="svelte-fzviev"> <span class="svelte-fzviev"><span
+													class="large svelte-fzviev">Static</span> HTML</span></a> <a target="_blank" rel="noreferrer"
+											href="https://github.com/sveltejs/kit/tree/main/packages/adapter-node"
+											class="invert svelte-fzviev"><img
+												src="/https://kit.svelte.dev/_app/immutable/assets/node.CJ3H6Nm_.svg" alt=""
+												class="svelte-fzviev"> <span class="svelte-fzviev">Node.js</span></a> <a target="_blank"
+											rel="noreferrer" href="https://vercel.com/templates/svelte/sveltekit-boilerplate"
+											class="invert invert-hover svelte-fzviev"><img
+												src="data:image/svg+xml,%3csvg%20width='1155'%20height='1000'%20viewBox='0%200%201155%201000'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M577.344%200L1154.69%201000H0L577.344%200Z'%20fill='black'/%3e%3c/svg%3e"
+												alt="" style="transform: translate(0,-0.2rem)" class="svelte-fzviev">
+											<span class="svelte-fzviev">Vercel</span></a> <a target="_blank" rel="noreferrer"
+											href="https://github.com/sveltejs/kit/tree/main/packages/adapter-netlify"
+											class="svelte-fzviev"><img
+												src="data:image/svg+xml,%3csvg%20width='128'%20height='113'%20viewBox='0%200%20128%20113'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_236_138)'%3e%3cpath%20d='M34.593%2094.0509H33.3844L27.3514%2088.0179V86.8094L36.5743%2077.5866H42.9639L43.8158%2078.4385V84.8281L34.593%2094.0509Z'%20fill='%2305BDBA'/%3e%3cpath%20d='M27.3514%2025.816V24.6074L33.3844%2018.5744H34.593L43.8158%2027.7972V34.1868L42.9639%2035.0388H36.5743L27.3514%2025.816Z'%20fill='%2305BDBA'/%3e%3cpath%20d='M80.4594%2074.6047H71.6824L70.9493%2073.8717V53.3259C70.9493%2049.6705%2069.5129%2046.8372%2065.1046%2046.7382C62.836%2046.6787%2060.2405%2046.7382%2057.4668%2046.8471L57.0507%2047.2731V73.8618L56.3176%2074.5948H47.5406L46.8075%2073.8618V38.7636L47.5406%2038.0305H67.2939C74.9713%2038.0305%2081.1925%2044.2517%2081.1925%2051.9291V73.8717L80.4594%2074.6047Z'%20fill='%23014847'/%3e%3cpath%20d='M35.8412%2061.4491H0.73307L0%2060.716V51.9192L0.73307%2051.1861H35.8412L36.5743%2051.9192V60.716L35.8412%2061.4491Z'%20fill='%2305BDBA'/%3e%3cpath%20d='M127.277%2061.4491H92.1687L91.4356%2060.716V51.9192L92.1687%2051.1861H127.277L128.01%2051.9192V60.716L127.277%2061.4491Z'%20fill='%2305BDBA'/%3e%3cpath%20d='M58.9428%2027.0642V0.73307L59.6759%200H68.4727L69.2058%200.73307V27.0642L68.4727%2027.7972H59.6759L58.9428%2027.0642Z'%20fill='%2305BDBA'/%3e%3cpath%20d='M58.9428%20111.902V85.5711L59.6759%2084.838H68.4727L69.2058%2085.5711V111.902L68.4727%20112.635H59.6759L58.9428%20111.902Z'%20fill='%2305BDBA'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_236_138'%3e%3crect%20width='128'%20height='112.635'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+												alt="" class="svelte-fzviev"> <span class="svelte-fzviev">Netlify</span></a> <a target="_blank"
+											rel="noreferrer" href="https://github.com/sveltejs/kit/tree/main/packages/adapter-cloudflare"
+											class="svelte-fzviev"><img
+												src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2027.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2048.2%2021.8'%20style='enable-background:new%200%200%2048.2%2021.8;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:%23FFFFFF;}%20.st1{fill:%23F48120;}%20.st2{fill:%23FAAD3F;}%20%3c/style%3e%3cpath%20class='st0'%20d='M43.7,10.6l-5.6-1.3l-1-0.4L11.4,9.1v12.4l32.3,0.1V10.6z'/%3e%3cpath%20class='st1'%20d='M33.2,20.4c0.3-0.9,0.2-1.8-0.3-2.6c-0.5-0.6-1.3-1-2.1-1.1l-17.4-0.2c-0.1,0-0.2-0.1-0.3-0.1%20c-0.1-0.1-0.1-0.2,0-0.3c0,0,0,0,0,0c0.1-0.2,0.2-0.3,0.4-0.3L31,15.6c2.3-0.3,4.2-1.7,5.1-3.8l1-2.6c0-0.1,0.1-0.2,0-0.3%20c-1.4-6.1-7.5-10-13.6-8.6c-3.9,0.9-7,3.7-8.3,7.4c-1-0.7-2.3-1.1-3.6-1C9.2,7,7.3,8.9,7,11.3c-0.1,0.6,0,1.2,0.1,1.8%20c-4,0.1-7.1,3.3-7.1,7.3c0,0.4,0,0.7,0.1,1.1c0,0.2,0.1,0.3,0.3,0.3h32.1c0.2,0,0.4-0.1,0.4-0.3L33.2,20.4z'/%3e%3cpath%20class='st2'%20d='M38.7,9.2h-0.5c-0.1,0-0.2,0.1-0.3,0.2l-0.7,2.4c-0.3,0.9-0.2,1.8,0.3,2.6c0.5,0.6,1.3,1,2.1,1.1l3.7,0.2%20c0.1,0,0.2,0.1,0.3,0.1c0.1,0.1,0.1,0.2,0,0.3c0,0,0,0,0,0c-0.1,0.2-0.2,0.3-0.4,0.3l-3.8,0.2c-2.3,0.3-4.2,1.7-5.1,3.8l-0.2,0.9%20c-0.1,0.1,0,0.3,0.2,0.3h13.2c0.1,0,0.3-0.1,0.3-0.2c0,0,0-0.1,0-0.1c0.2-0.8,0.4-1.7,0.4-2.6C48.2,13.5,43.9,9.2,38.7,9.2'/%3e%3c/svg%3e"
+												alt="" class="svelte-fzviev"> <span class="svelte-fzviev">Cloudflare</span></a></div>
+									<div class="platforms right svelte-fzviev" data-svelte-h="svelte-1fg3c0m"><a target="_blank"
+											rel="noreferrer" href="https://github.com/jthegedus/svelte-adapter-firebase"
+											class="svelte-fzviev"><img
+												src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2027.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2095.4%20131.1'%20style='enable-background:new%200%200%2095.4%20131.1;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:%23FFA000;}%20.st1{fill:%23F57C00;}%20.st2{fill:%23FFCA28;}%20.st3{fill:%23FFFFFF;fill-opacity:0.2;}%20.st4{opacity:0.2;fill:%23A52714;enable-background:new%20;}%20.st5{fill:url(%23b_00000131362373916268557390000007869780652208666018_);}%20%3c/style%3e%3cpath%20class='st0'%20d='M0.1,105.7L16.2,2.5c0.2-1.3,1.2-2.3,2.4-2.5s2.5,0.4,3.1,1.5l16.7,31.1L45.1,20c0.5-1,1.5-1.6,2.6-1.6%20s2.1,0.6,2.6,1.6l45,85.7L0.1,105.7L0.1,105.7z'/%3e%3cpath%20class='st1'%20d='M55.8,65.5L38.4,32.7L0.1,105.7L55.8,65.5z'/%3e%3cpath%20class='st2'%20d='M95.4,105.7L83,29.3c-0.2-1.1-1-2-2-2.3s-2.2-0.1-3,0.7L0.1,105.7l43.1,24.2c2.7,1.5,6,1.5,8.7,0L95.4,105.7%20L95.4,105.7z'/%3e%3cpath%20class='st3'%20d='M83,29.3c-0.2-1.1-1-2-2-2.3s-2.2-0.1-3,0.7L62.5,43.2L50.4,20c-0.5-1-1.5-1.6-2.6-1.6s-2.1,0.6-2.6,1.6%20l-6.7,12.7L21.7,1.6c-0.6-1.1-1.9-1.7-3.1-1.5s-2.2,1.2-2.4,2.5L0.1,105.7H0l0.1,0.1l0.4,0.2L78,28.4c0.8-0.8,2-1.1,3-0.7%20s1.8,1.2,2,2.3l12.3,75.8l0.1-0.1L83,29.3L83,29.3z%20M0.2,105.6l16-102.3C16.4,2,17.4,1,18.6,0.8s2.5,0.4,3.1,1.5l16.7,31.1l6.7-12.7%20c0.5-1,1.5-1.6,2.6-1.6s2.1,0.6,2.6,1.6l11.9,22.7L0.2,105.6L0.2,105.6z'/%3e%3cpath%20class='st4'%20d='M51.9,129.2c-2.7,1.5-6,1.5-8.7,0l-43-24.1l-0.1,0.7l43.1,24.2c2.7,1.5,6,1.5,8.7,0l43.5-24.2l-0.1-0.7%20L51.9,129.2L51.9,129.2z'/%3e%3cg%3e%3clinearGradient%20id='b_00000160171341263379122590000009688233110000583347_'%20gradientUnits='userSpaceOnUse'%20x1='-560.111'%20y1='513.9821'%20x2='-559.0677'%20y2='513.2233'%20gradientTransform='matrix(95%200%200%20-130.9998%2053207.4414%2067353.9141)'%3e%3cstop%20offset='0'%20style='stop-color:%23FFFFFF;stop-opacity:0.1'/%3e%3cstop%20offset='0.14'%20style='stop-color:%23FFFFFF;stop-opacity:8.000000e-02'/%3e%3cstop%20offset='0.61'%20style='stop-color:%23FFFFFF;stop-opacity:2.000000e-02'/%3e%3cstop%20offset='1'%20style='stop-color:%23FFFFFF;stop-opacity:0'/%3e%3c/linearGradient%3e%3cpath%20id='b'%20style='fill:url(%23b_00000160171341263379122590000009688233110000583347_);'%20d='M82.9,29.3c-0.2-1.1-1-2-2-2.3%20c-1.1-0.3-2.2-0.1-3,0.7L62.5,43.2L50.3,20.1c-0.5-1-1.5-1.6-2.6-1.6s-2.1,0.6-2.6,1.6l-6.6,12.7L21.8,1.6%20c-0.6-1.1-1.9-1.7-3.1-1.5s-2.2,1.2-2.4,2.5L0.2,105.7l43,24.2c2.7,1.5,6,1.5,8.7,0l43.3-24.2L82.9,29.3L82.9,29.3z'/%3e%3c/g%3e%3c/svg%3e"
+												alt="" class="svelte-fzviev"> <span class="svelte-fzviev">Firebase</span></a> <a target="_blank"
+											rel="noreferrer" href="https://github.com/pluvial/svelte-adapter-deno"
+											class="invert invert-hover svelte-fzviev"><img
+												src="/https://kit.svelte.dev/_app/immutable/assets/deno.BRQiVfn6.svg" alt=""
+												class="svelte-fzviev"> <span class="svelte-fzviev">Deno</span></a> <a target="_blank"
+											rel="noreferrer" href="https://github.com/MikeBild/sveltekit-adapter-aws"
+											class="svelte-fzviev"><img
+												src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2027.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='svg5'%20xmlns:svg='http://www.w3.org/2000/svg'%20xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape'%20xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%20143.3%20149.3'%20style='enable-background:new%200%200%20143.3%20149.3;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:none;stroke:%23D86613;stroke-width:5.811;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:11.3386;}%20%3c/style%3e%3csodipodi:namedview%20bordercolor='%23111111'%20borderopacity='1'%20fit-margin-bottom='0'%20fit-margin-left='0'%20fit-margin-right='0'%20fit-margin-top='0'%20id='namedview7'%20inkscape:current-layer='layer1'%20inkscape:cx='133.7485'%20inkscape:cy='89.511268'%20inkscape:document-units='mm'%20inkscape:pagecheckerboard='1'%20inkscape:pageopacity='0'%20inkscape:pageshadow='0'%20inkscape:window-height='1001'%20inkscape:window-maximized='1'%20inkscape:window-width='1920'%20inkscape:window-x='-9'%20inkscape:window-y='-9'%20inkscape:zoom='1.4467452'%20pagecolor='%23ffffff'%20showgrid='true'%3e%3cinkscape:grid%20enabled='true'%20id='grid836'%20type='xygrid'%3e%3c/inkscape:grid%3e%3c/sodipodi:namedview%3e%3cpath%20id='path1212'%20class='st0'%20d='M26.6,2.9v32.7h23.1l53.8,110.8h36.9v-32.5h-14.3L72.2,2.9H26.6z'/%3e%3cpath%20id='path1214'%20class='st0'%20d='M43.1,61l19.2,39.6l-20.9,45.5H2.9L43.1,61z'/%3e%3c/svg%3e"
+												alt="" class="svelte-fzviev"> <span class="svelte-fzviev">AWS</span></a>
+										<a target="_blank" rel="noreferrer" href="https://github.com/geoffrich/svelte-adapter-azure-swa"
+											class="svelte-fzviev"><img
+												src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2027.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='svg8'%20xmlns:dc='http://purl.org/dc/elements/1.1/'%20xmlns:svg='http://www.w3.org/2000/svg'%20xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23'%20xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd'%20xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape'%20xmlns:cc='http://creativecommons.org/ns%23'%20inkscape:version='0.92.1%20r15371'%20sodipodi:docname='Azurey.svg'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2055.8%2043.2'%20style='enable-background:new%200%200%2055.8%2043.2;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:%230089D6;}%20%3c/style%3e%3csodipodi:namedview%20bordercolor='%23666666'%20borderopacity='1.0'%20fit-margin-bottom='0'%20fit-margin-left='0'%20fit-margin-right='0'%20fit-margin-top='0'%20id='base'%20inkscape:current-layer='layer1'%20inkscape:cx='67.4659'%20inkscape:cy='38.024323'%20inkscape:document-units='mm'%20inkscape:pagecheckerboard='true'%20inkscape:pageopacity='0.0'%20inkscape:pageshadow='2'%20inkscape:window-height='781'%20inkscape:window-maximized='0'%20inkscape:window-width='930'%20inkscape:window-x='667'%20inkscape:window-y='117'%20inkscape:zoom='6.5246067'%20pagecolor='%23ffffff'%20showgrid='false'%3e%3c/sodipodi:namedview%3e%3cpath%20id='path21'%20inkscape:connector-curvature='0'%20class='st0'%20d='M25.8,40.9c7.2-1.3,13.1-2.3,13.2-2.3l0.1,0l-6.8-8%20c-3.7-4.4-6.8-8.1-6.8-8.1c0,0,7-19.3,7-19.4c0,0,4.8,8.2,11.5,19.9c6.3,11,11.5,20,11.6,20.1l0.1,0.2l-21.5,0l-21.5,0%20C12.8,43.2,25.8,40.9,25.8,40.9z%20M0,38.5c0,0,3.2-5.5,7.1-12.3l7.1-12.3l8.3-6.9C27,3.1,30.7,0,30.7,0c0,0,0,0.1-0.1,0.3%20s-4.1,8.8-9,19.2l-8.8,18.9l-6.4,0C2.9,38.5,0,38.5,0,38.5z'/%3e%3c/svg%3e"
+												alt="" class="svelte-fzviev"> <span class="svelte-fzviev">Azure</span></a> <a target="_blank"
+											rel="noreferrer" href="https://kit.svelte.dev/docs/adapters" class="svelte-fzviev"><img
+												src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_9_689)'%3e%3cpath%20d='M12.0303%205L12.012%2019'%20stroke='%23676778'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M5%2012H19'%20stroke='%23676778'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_9_689'%3e%3crect%20width='24'%20height='24'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+												alt="" class="svelte-fzviev"> <span class="svelte-fzviev">More...</span></a>
+									</div>
+									<div class="globe svelte-fzviev"><img src="./edge.svg?light" width="100%" height="100%"
+											alt="Dynamically rendered map of the world, centered on the user's location"
+											class="svelte-fzviev"> <span class="svelte-fzviev" data-svelte-h="svelte-1nsn00u">rendered on the
+											edge, just for you</span>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div style="display: contents; --background:var(--background-2);">
+						<section class="svelte-r6pgeo">
+							<div class="inner svelte-r6pgeo">
+								<h2 class="svelte-1q6ayy1" data-svelte-h="svelte-3wg98z">showcase</h2>
+								<div class="showcase svelte-1q6ayy1"><a href="https://pudding.cool" target="_blank" rel="noreferrer"
+										class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pudding.VVVcKcBA.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/pudding.CrMkoRJA.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pudding.h3cw9-xD.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/pudding.C9r4cMer.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pudding.CzZM1rRk.png 1x, /https://kit.svelte.dev/_app/immutable/assets/pudding.CpTSHfuz.png 2x"
+												type="image/png"> <img src="/https://kit.svelte.dev/_app/immutable/assets/pudding.CpTSHfuz.png"
+												alt="" style="width:100%; height:100%; object-fit:cover" width="640" height="363">
+										</picture> <span class="svelte-1q6ayy1">pudding.cool</span>
+									</a><a href="https://www.pronauns.com" target="_blank" rel="noreferrer" class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pronauns.DqbanY8D.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/pronauns.DVz5wn_b.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pronauns.j5X6_0g1.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/pronauns.Ds-nSPRX.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pronauns.CIXO7RNO.png 1x, /https://kit.svelte.dev/_app/immutable/assets/pronauns.fcj25NN_.png 2x"
+												type="image/png"> <img src="/https://kit.svelte.dev/_app/immutable/assets/pronauns.fcj25NN_.png"
+												alt="" style="width:100%; height:100%; object-fit:cover" width="640" height="374">
+										</picture> <span class="svelte-1q6ayy1">www.pronauns.com</span>
+									</a><a href="https://www.pausly.app" target="_blank" rel="noreferrer" class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pausly.BIytht5g.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/pausly.DnqMZzgb.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pausly.DDZfzeCW.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/pausly.DfJfDkZp.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pausly.D_Rk5wpu.png 1x, /https://kit.svelte.dev/_app/immutable/assets/pausly.BCavTiru.png 2x"
+												type="image/png"> <img src="/https://kit.svelte.dev/_app/immutable/assets/pausly.BCavTiru.png"
+												alt="" style="width:100%; height:100%; object-fit:cover" width="640" height="373">
+										</picture> <span class="svelte-1q6ayy1">www.pausly.app</span>
+									</a><a href="https://asm-editor.specy.app" target="_blank" rel="noreferrer" class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/asmeditor.CFt5Tt1t.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/asmeditor.DB9wL-26.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/asmeditor.C3NfGWDw.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/asmeditor.CxZQp3Ux.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/asmeditor.CD3kNyYC.png 1x, /https://kit.svelte.dev/_app/immutable/assets/asmeditor.DzNHRbMl.png 2x"
+												type="image/png"> <img
+												src="/https://kit.svelte.dev/_app/immutable/assets/asmeditor.DzNHRbMl.png" alt=""
+												style="width:100%; height:100%; object-fit:cover" width="640" height="362">
+										</picture> <span class="svelte-1q6ayy1">asm-editor.specy.app</span>
+									</a><a href="https://raster.app" target="_blank" rel="noreferrer" class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/raster.BEh4565G.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/raster.ByhBUUgT.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/raster.Bcz9Lvli.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/raster.5GTnaFY3.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/raster.bfOLHYmo.png 1x, /https://kit.svelte.dev/_app/immutable/assets/raster.BBwOP-iz.png 2x"
+												type="image/png"> <img src="/https://kit.svelte.dev/_app/immutable/assets/raster.BBwOP-iz.png"
+												alt="" style="width:100%; height:100%; object-fit:cover" width="640" height="374">
+										</picture> <span class="svelte-1q6ayy1">raster.app</span>
+									</a><a href="https://pocketbase.io" target="_blank" rel="noreferrer" class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pocketbase.CN5JO1o2.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/pocketbase.DvT4YeQ_.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pocketbase.hlfMBHZ2.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/pocketbase.DZNpFdC-.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/pocketbase.B8CbkyOd.png 1x, /https://kit.svelte.dev/_app/immutable/assets/pocketbase.CMTsaDXm.png 2x"
+												type="image/png"> <img
+												src="/https://kit.svelte.dev/_app/immutable/assets/pocketbase.CMTsaDXm.png" alt=""
+												style="width:100%; height:100%; object-fit:cover" width="640" height="374">
+										</picture> <span class="svelte-1q6ayy1">pocketbase.io</span>
+									</a><a href="https://monogram.io" target="_blank" rel="noreferrer" class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/monogram.B8czmi6l.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/monogram.BRVhz4OC.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/monogram.DY-xjXAL.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/monogram.KWZ0W-ao.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/monogram.pWemLn3P.png 1x, /https://kit.svelte.dev/_app/immutable/assets/monogram.BC0FOk62.png 2x"
+												type="image/png"> <img src="/https://kit.svelte.dev/_app/immutable/assets/monogram.BC0FOk62.png"
+												alt="" style="width:100%; height:100%; object-fit:cover" width="640" height="363">
+										</picture> <span class="svelte-1q6ayy1">monogram.io</span>
+									</a><a href="https://tradingstrategy.ai" target="_blank" rel="noreferrer" class="svelte-1q6ayy1">
+										<picture>
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/tradingstrategy.aV0K5GgL.avif 1x, /https://kit.svelte.dev/_app/immutable/assets/tradingstrategy.QP6tyIES.avif 2x"
+												type="image/avif">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/tradingstrategy.CtxJjEB3.webp 1x, /https://kit.svelte.dev/_app/immutable/assets/tradingstrategy.2RpCWRuj.webp 2x"
+												type="image/webp">
+											<source
+												srcset="/https://kit.svelte.dev/_app/immutable/assets/tradingstrategy.BO6nKhYi.png 1x, /https://kit.svelte.dev/_app/immutable/assets/tradingstrategy.iOzk46CU.png 2x"
+												type="image/png"> <img
+												src="/https://kit.svelte.dev/_app/immutable/assets/tradingstrategy.iOzk46CU.png" alt=""
+												style="width:100%; height:100%; object-fit:cover" width="640" height="365">
+										</picture> <span class="svelte-1q6ayy1">tradingstrategy.ai</span>
+									</a></div>
+							</div>
+						</section>
+					</div>
+					<div style="display: contents; --background:var(--sk-back-4);">
+						<section class="svelte-r6pgeo">
+							<div class="inner svelte-r6pgeo">
+								<footer class="svelte-1dpq720">
+									<div class="logo svelte-1dpq720"></div>
+									<div class="links svelte-1dpq720">
+										<h2 class="svelte-1dpq720">resources</h2> <a href="/docs" class="svelte-1dpq720">documentation</a><a
+											href="https://learn.svelte.dev/tutorial/introducing-sveltekit"
+											class="svelte-1dpq720">tutorial</a><a href="https://svelte.dev/blog"
+											class="svelte-1dpq720">blog</a>
+									</div>
+									<div class="links svelte-1dpq720">
+										<h2 class="svelte-1dpq720">connect</h2> <a href="https://github.com/sveltejs/kit"
+											class="svelte-1dpq720">github</a><a href="https://opencollective.com/svelte"
+											class="svelte-1dpq720">opencollective</a><a href="https://svelte.dev/chat"
+											class="svelte-1dpq720">discord</a><a href="https://twitter.com/sveltejs"
+											class="svelte-1dpq720">twitter</a>
+									</div>
+									<div class="copyright svelte-1dpq720">
+										© 2024 <a href="https://github.com/sveltejs/svelte/graphs/contributors"
+											data-svelte-h="svelte-1xx2q1x">Svelte contributors</a> </div>
+									<div class="open-source svelte-1dpq720"><span slot="license" data-svelte-h="svelte-da6jb8">SvelteKit
+											is <a target="_blank" rel="noreferrer" href="https://github.com/sveltejs/kit">free and open
+												source software</a> released under the MIT license.</span></div>
+								</footer>
+							</div>
+						</section>
+					</div>
+				</div>
+			</main>
+			<div class="banner-bottom"> </div>
+		</div>
+
+		<script>
+			{
+				__sveltekit_1rdldjk = {
+					base: new URL(".", location).pathname.slice(0, -1)
+				};
+
+				const element = document.currentScript.parentElement;
+
+				const data = [{ "type": "data", "data": { nav_title: "", nav_links: [{ title: "Docs", prefix: "docs", pathname: "/docs/introduction", sections: [{ title: "DOCS", sections: [{ title: "Getting started", sections: [{ title: "Introduction", path: "/docs/introduction" }, { title: "Creating a project", path: "/docs/creating-a-project" }, { title: "Project structure", path: "/docs/project-structure" }, { title: "Web standards", path: "/docs/web-standards" }] }, { title: "Core concepts", sections: [{ title: "Routing", path: "/docs/routing" }, { title: "Loading data", path: "/docs/load" }, { title: "Form actions", path: "/docs/form-actions" }, { title: "Page options", path: "/docs/page-options" }, { title: "State management", path: "/docs/state-management" }] }, { title: "Build and deploy", sections: [{ title: "Building your app", path: "/docs/building-your-app" }, { title: "Adapters", path: "/docs/adapters" }, { title: "Zero-config deployments", path: "/docs/adapter-auto" }, { title: "Node servers", path: "/docs/adapter-node" }, { title: "Static site generation", path: "/docs/adapter-static" }, { title: "Single-page apps", path: "/docs/single-page-apps" }, { title: "Cloudflare Pages", path: "/docs/adapter-cloudflare" }, { title: "Cloudflare Workers", path: "/docs/adapter-cloudflare-workers" }, { title: "Netlify", path: "/docs/adapter-netlify" }, { title: "Vercel", path: "/docs/adapter-vercel" }, { title: "Writing adapters", path: "/docs/writing-adapters" }] }, { title: "Advanced", sections: [{ title: "Advanced routing", path: "/docs/advanced-routing" }, { title: "Hooks", path: "/docs/hooks" }, { title: "Errors", path: "/docs/errors" }, { title: "Link options", path: "/docs/link-options" }, { title: "Service workers", path: "/docs/service-workers" }, { title: "Server-only modules", path: "/docs/server-only-modules" }, { title: "Snapshots", path: "/docs/snapshots" }, { title: "Shallow routing", path: "/docs/shallow-routing" }, { title: "Packaging", path: "/docs/packaging" }] }, { title: "Best practices", sections: [{ title: "Performance", path: "/docs/performance" }, { title: "Images", path: "/docs/images" }, { title: "Accessibility", path: "/docs/accessibility" }, { title: "SEO", path: "/docs/seo" }] }, { title: "Reference", sections: [{ title: "Configuration", path: "/docs/configuration" }, { title: "Command Line Interface", path: "/docs/cli" }, { title: "Modules", path: "/docs/modules" }, { title: "Types", path: "/docs/types" }] }, { title: "Appendix", sections: [{ title: "Frequently asked questions", path: "/docs/faq" }, { title: "Integrations", path: "/docs/integrations" }, { title: "Breakpoint Debugging", path: "/docs/debugging" }, { title: "Migrating to SvelteKit v2", path: "/docs/migrating-to-sveltekit-2" }, { title: "Migrating from Sapper", path: "/docs/migrating" }, { title: "Additional resources", path: "/docs/additional-resources" }, { title: "Glossary", path: "/docs/glossary" }] }] }] }], banner: [{ id: "advent2023", start: 1701388800000, end: 1703462399000, arrow: true, content: { lg: "Advent of Svelte 2023 is here!", sm: "Advent of Svelte" }, href: "https://advent.sveltesociety.dev/" }, { id: "advent2023-finished", start: 1703462400000, end: 1704067200000, arrow: true, content: { lg: "Advent of Svelte 2023 is over. See you next year!", sm: "Advent of Svelte 2023 is over!" }, href: "https://advent.sveltesociety.dev/" }] }, "uses": { "url": 1 } }, null];
+
+				Promise.all([
+					import("https://kit.svelte.dev/_app/immutable/entry/start.D9ivAXoP.js"),
+					import("https://kit.svelte.dev/_app/immutable/entry/app.CkJ_srcb.js")
+				]).then(([kit, app]) => {
+					kit.start(app, element, {
+						node_ids: [0, 3],
+						data,
+						form: null,
+						error: null
+					});
+				});
+			}
+		</script>
+	</div>
+</body>
+
+</html>
