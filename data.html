@@ -34,7 +34,7 @@
     <meta name="twitter:creator" content="@barba_js" />
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="https://barba.js.org/scss/main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="main.css" type="text/css" media="all">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -43,7 +43,7 @@
     <script>
         window.BARBA = {
             root: '/',
-            menu: JSON.parse('[{"title":"Features","url":"features/user-friendly/","slug":"/features","subpages":[{"title":"User friendly","url":"features/user-friendly/"},{"title":"Easy peasy","url":"features/easy-peasy/"},{"title":"Smart","url":"features/smart/"},{"title":"Extensible","url":"features/extensible/"},{"title":"Futureproof","url":"features/futureproof/"},{"title":"Community","url":"features/community/"}]},{"title":"Examples","url":"examples/","slug":"/examples"},{"title":"Showcase","url":"showcase/","slug":"/showcase"},{"title":"Docs","url":"docs/getstarted/intro/","slug":"/docs"},{"title":"FAQ","url":"faq/","slug":"/faq"}]'),
+            menu: JSON.parse('[{"title":"Features","url":"features/user-friendly/","slug":"/features","subpages":[{"title":"User friendly","url":"features/user-friendly/"},{"title":"Easy peasy","url":"features/easy-peasy/"},{"title":"Smart","url":"features/smart/"},{"title":"Extensible","url":"features/extensible/"},{"title":"Futureproof","url":"features/futureproof/"},{"title":"Community","url":"features/community/"}]},{"title":"Examples","url":"examples/","slug":"/examples"},{"title":"Showcase","url":"showcase/","slug":"/showcase"},{"title":"Docs","url":"docs/getstarted/intro/","slug":"https://barba.js.org/docs"},{"title":"FAQ","url":"faq/","slug":"/faq"}]'),
             docs: JSON.parse('[{"title":"Get Started","url":"docs/getstarted/intro/","path":"docs/getstarted","subpages":[{"title":"Intro","url":"docs/getstarted/intro/"},{"title":"Install","url":"docs/getstarted/install/"},{"title":"Markup","url":"docs/getstarted/markup/"},{"title":"Basic transition","url":"docs/getstarted/basic-transition/"},{"title":"Run custom code","url":"docs/getstarted/custom-code/"},{"title":"Lifecycle","url":"docs/getstarted/lifecycle/"},{"title":"Legacy example","url":"docs/getstarted/legacy/"},{"title":"Browser support","url":"docs/getstarted/browser-support/"},{"title":"Useful links","url":"docs/getstarted/useful-links/"}]},{"title":"Advanced","url":"docs/advanced/options/","path":"docs/advanced","subpages":[{"title":"Options","url":"docs/advanced/options/"},{"title":"Hooks","url":"docs/advanced/hooks/"},{"title":"Transitions","url":"docs/advanced/transitions/"},{"title":"Views","url":"docs/advanced/views/"},{"title":"Strategies","url":"docs/advanced/strategies/"},{"title":"Recipes","url":"docs/advanced/recipes/"},{"title":"Third party scripts","url":"docs/advanced/third-party/"},{"title":"Utils","url":"docs/advanced/utils/"},{"title":"Developer API","url":"api/","path":"api","extern":true}]},{"title":"Plugins","url":"docs/plugins/intro/","path":"docs/plugins","subpages":[{"title":"Intro","url":"docs/plugins/intro/"},{"title":"Router","url":"docs/plugins/router/"},{"title":"Prefetch","url":"docs/plugins/prefetch/"},{"title":"Css","url":"docs/plugins/css/"},{"title":"Head","url":"docs/plugins/head/"},{"title":"Preset","url":"docs/plugins/preset/"}]}]'),
         }
 
@@ -60,25 +60,25 @@
         <header class="site-header header" role="banner" data-component="header">
             <div class="header__wrapper">
                 <div class="header__infos">
-                   
-                  
-<img src="aato.png" width="95em" height="auto">
-    <span style="font-size: 16px;  color: #2b6b28;"><strong>/ Data</strong></span>
+
+
+                    <img src="aato.png" width="95em" height="auto">
+                    <span style="font-size: 16px;  color: #2b6b28;"><strong>/ Data</strong></span>
 
                 </div>
                 <div class="header__external-links">
-                   
-                        <a class="button--fill--black--rounded--github header__external-links__github" href="https://github.com/barbajs/barba"
-                            target="_blank">
-                            <svg viewBox="0 0 32 32" aria-hidden="true" class="icon">
-                                <!-- <use attr.xlink:href="assets/svg/sprite.svg#social-github"></use> -->
-                                <use xlink:href="#social-github"></use>
-                            </svg>
-                            <span>Collaborate on <b>Github</b></span>
-                        </a>
-                     
-                      
-                   
+
+                    <a class="button--fill--black--rounded--github header__external-links__github"
+                        href="https://github.com/barbajs/barba" target="_blank">
+                        <svg viewBox="0 0 32 32" aria-hidden="true" class="icon">
+                            <!-- <use attr.xlink:href="assets/svg/sprite.svg#social-github"></use> -->
+                            <use xlink:href="#social-github"></use>
+                        </svg>
+                        <span>Collaborate on <b>Github</b></span>
+                    </a>
+
+
+
 
                     <div class="menu-trigger" data-component="menu-trigger">
                         <svg viewbox="0 0 50 50" width="50" height="50" class="menu-trigger__shape">
@@ -117,7 +117,7 @@
 
                                             <!-- Subpage -->
 
-                                      
+
 
                                             <li class="menu-subpages__item  " data-ref="menu.item">
                                                 <a class="menu-subpages__item__link" href="easy-peasy.html">
@@ -149,7 +149,7 @@
                                                 </a>
                                             </li>
 
-                                         
+
 
 
                                             <!-- Subpage [end] -->
@@ -184,7 +184,8 @@
                                 </li>
 
                                 <li class="menu__pages__item" data-ref="menu.item">
-                                    <a class="menu__pages__item__link is-active" href="/docs/getstarted/intro/">
+                                    <a class="menu__pages__item__link is-active"
+                                        href="https://barba.js.org/docs/getstarted/intro/">
                                         Docs
                                     </a>
 
@@ -213,7 +214,8 @@
 
                         <!-- Menu Footer -->
                         <div class="menu__footer">
-                            <a class="menu__footer__download" href="/docs/getstarted/intro/" data-ref="menu.item">
+                            <a class="menu__footer__download" href="https://barba.js.org/docs/getstarted/intro/"
+                                data-ref="menu.item">
                                 Get started
                             </a>
                             <div class="menu__footer__extra menu-extra">
@@ -263,7 +265,7 @@
                                 <!-- Page -->
 
                                 <li>
-                                    <a href="/docs/getstarted/intro/">
+                                    <a href="https://barba.js.org/docs/getstarted/intro/">
                                         <h1 class="docs__nav__title is-open">Get Started</h1>
                                     </a>
 
@@ -274,7 +276,7 @@
                                         <!-- Subpage -->
 
                                         <li class="is-open">
-                                            <a href="/docs/getstarted/intro/">
+                                            <a href="https://barba.js.org/docs/getstarted/intro/">
                                                 <h2 class="docs__nav__subtitle is-open">
                                                     Intro
                                                 </h2>
@@ -282,7 +284,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/install/">
+                                            <a href="https://barba.js.org/docs/getstarted/install/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Install
                                                 </h2>
@@ -290,7 +292,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/markup/">
+                                            <a href="https://barba.js.org/docs/getstarted/markup/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Markup
                                                 </h2>
@@ -298,7 +300,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/basic-transition/">
+                                            <a href="https://barba.js.org/docs/getstarted/basic-transition/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Basic transition
                                                 </h2>
@@ -306,7 +308,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/custom-code/">
+                                            <a href="https://barba.js.org/docs/getstarted/custom-code/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Run custom code
                                                 </h2>
@@ -314,7 +316,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/lifecycle/">
+                                            <a href="https://barba.js.org/docs/getstarted/lifecycle/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Lifecycle
                                                 </h2>
@@ -322,7 +324,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/legacy/">
+                                            <a href="https://barba.js.org/docs/getstarted/legacy/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Legacy example
                                                 </h2>
@@ -330,7 +332,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/browser-support/">
+                                            <a href="https://barba.js.org/docs/getstarted/browser-support/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Browser support
                                                 </h2>
@@ -338,7 +340,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/getstarted/useful-links/">
+                                            <a href="https://barba.js.org/docs/getstarted/useful-links/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Useful links
                                                 </h2>
@@ -354,7 +356,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/docs/advanced/options/">
+                                    <a href="https://barba.js.org/docs/advanced/options/">
                                         <h1 class="docs__nav__title ">Advanced</h1>
                                     </a>
 
@@ -365,7 +367,7 @@
                                         <!-- Subpage -->
 
                                         <li class="">
-                                            <a href="/docs/advanced/options/">
+                                            <a href="https://barba.js.org/docs/advanced/options/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Options
                                                 </h2>
@@ -373,7 +375,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/advanced/hooks/">
+                                            <a href="https://barba.js.org/docs/advanced/hooks/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Hooks
                                                 </h2>
@@ -381,7 +383,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/advanced/transitions/">
+                                            <a href="https://barba.js.org/docs/advanced/transitions/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Transitions
                                                 </h2>
@@ -389,7 +391,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/advanced/views/">
+                                            <a href="https://barba.js.org/docs/advanced/views/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Views
                                                 </h2>
@@ -397,7 +399,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/advanced/strategies/">
+                                            <a href="https://barba.js.org/docs/advanced/strategies/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Strategies
                                                 </h2>
@@ -405,7 +407,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/advanced/recipes/">
+                                            <a href="https://barba.js.org/docs/advanced/recipes/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Recipes
                                                 </h2>
@@ -413,7 +415,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/advanced/third-party/">
+                                            <a href="https://barba.js.org/docs/advanced/third-party/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Third party scripts
                                                 </h2>
@@ -421,7 +423,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/advanced/utils/">
+                                            <a href="https://barba.js.org/docs/advanced/utils/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Utils
                                                 </h2>
@@ -445,7 +447,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="/docs/plugins/intro/">
+                                    <a href="https://barba.js.org/docs/plugins/intro/">
                                         <h1 class="docs__nav__title ">Plugins</h1>
                                     </a>
 
@@ -456,7 +458,7 @@
                                         <!-- Subpage -->
 
                                         <li class="">
-                                            <a href="/docs/plugins/intro/">
+                                            <a href="https://barba.js.org/docs/plugins/intro/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Intro
                                                 </h2>
@@ -464,7 +466,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/plugins/router/">
+                                            <a href="https://barba.js.org/docs/plugins/router/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Router
                                                 </h2>
@@ -472,7 +474,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/plugins/prefetch/">
+                                            <a href="https://barba.js.org/docs/plugins/prefetch/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Prefetch
                                                 </h2>
@@ -480,7 +482,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/plugins/css/">
+                                            <a href="https://barba.js.org/docs/plugins/css/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Css
                                                 </h2>
@@ -488,7 +490,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/plugins/head/">
+                                            <a href="https://barba.js.org/docs/plugins/head/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Head
                                                 </h2>
@@ -496,7 +498,7 @@
                                         </li>
 
                                         <li class="">
-                                            <a href="/docs/plugins/preset/">
+                                            <a href="https://barba.js.org/docs/plugins/preset/">
                                                 <h2 class="docs__nav__subtitle ">
                                                     Preset
                                                 </h2>
@@ -556,13 +558,15 @@
                                 transitions between your website’s pages. It makes your website run like a
                                 <strong>SPA</strong> <em>(Single Page Application)</em> and help reduce the delay
                                 between your pages, minimize browser HTTP requests and enhance your user’s web
-                                experience.</p>
+                                experience.
+                            </p>
                             <blockquote>
                                 <p><strong>Notice</strong>: this guide assumes intermediate knowledge of HTML, CSS, and
                                     JavaScript. It is worth mentioning that all code examples use ES6+ syntax. If you
                                     are not comfortable with this syntax, we would encourage you to grasp the basics
                                     then come back.</p>
-                                <p>In case of emergency, check the <a href="/docs/getstarted/legacy/">“legacy” code
+                                <p>In case of emergency, check the <a
+                                        href="https://barba.js.org/docs/getstarted/legacy/">“legacy” code
                                         example</a>.</p>
                             </blockquote>
 
@@ -573,8 +577,8 @@
 
                         <div class="docs__nav__lateral" data-component="docs-nav-lateral">
 
-                            <a target="_self" href="/docs/getstarted/install/" class="docs__nav__lateral__link--next"
-                                data-ref="docs-nav-lateral.link">
+                            <a target="_self" href="https://barba.js.org/docs/getstarted/install/"
+                                class="docs__nav__lateral__link--next" data-ref="docs-nav-lateral.link">
                                 <span class="docs__nav__lateral__label">Install</span>
                                 <svg viewBox="0 0 21 15" aria-hidden="true" class="icon--barba">
                                     <!-- <use attr.xlink:href="assets/svg/sprite.svg#barba-arrow-next"></use> -->
