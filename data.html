@@ -1,0 +1,611 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>barba.js</title>
+    <meta name="description" content="Create badass, fluid and smooth transition between your website&#39;s pages." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://barba.js.org/favicons/apple-touch-icon.png?rev=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://barba.js.org/favicons/favicon-32x32.png?rev=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://barba.js.org/favicons/favicon-16x16.png?rev=1">
+    <link rel="manifest" href="https://barba.js.org/favicons/site.webmanifest?rev=1">
+    <link rel="mask-icon" href="https://barba.js.org/favicons/safari-pinned-tab.svg?rev=1" color="#5bbad5">
+    <link rel="shortcut icon" href="https://barba.js.org/favicons/favicon.ico?rev=1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://barba.js.org/favicons/browserconfig.xml?rev=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="barba.js" />
+    <meta property="og:description"
+        content="Create badass, fluid and smooth transition between your website&#39;s pages." />
+    <meta property="og:url" content="https://barba.js.org" />
+    <meta property="og:site_name" content="barba.js" />
+    <meta property="og:image" content="https://barba.js.org/share.jpg" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="500" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description"
+        content="Create badass, fluid and smooth transition between your website&#39;s pages." />
+    <meta name="twitter:title" content="barba.js" />
+    <meta name="twitter:site" content="@barba_js" />
+    <meta name="twitter:image" content="https://barba.js.org/share.jpg" />
+    <meta name="twitter:creator" content="@barba_js" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://barba.js.org/scss/main.css" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <script>
+        window.BARBA = {
+            root: '/',
+            menu: JSON.parse('[{"title":"Features","url":"features/user-friendly/","slug":"/features","subpages":[{"title":"User friendly","url":"features/user-friendly/"},{"title":"Easy peasy","url":"features/easy-peasy/"},{"title":"Smart","url":"features/smart/"},{"title":"Extensible","url":"features/extensible/"},{"title":"Futureproof","url":"features/futureproof/"},{"title":"Community","url":"features/community/"}]},{"title":"Examples","url":"examples/","slug":"/examples"},{"title":"Showcase","url":"showcase/","slug":"/showcase"},{"title":"Docs","url":"docs/getstarted/intro/","slug":"/docs"},{"title":"FAQ","url":"faq/","slug":"/faq"}]'),
+            docs: JSON.parse('[{"title":"Get Started","url":"docs/getstarted/intro/","path":"docs/getstarted","subpages":[{"title":"Intro","url":"docs/getstarted/intro/"},{"title":"Install","url":"docs/getstarted/install/"},{"title":"Markup","url":"docs/getstarted/markup/"},{"title":"Basic transition","url":"docs/getstarted/basic-transition/"},{"title":"Run custom code","url":"docs/getstarted/custom-code/"},{"title":"Lifecycle","url":"docs/getstarted/lifecycle/"},{"title":"Legacy example","url":"docs/getstarted/legacy/"},{"title":"Browser support","url":"docs/getstarted/browser-support/"},{"title":"Useful links","url":"docs/getstarted/useful-links/"}]},{"title":"Advanced","url":"docs/advanced/options/","path":"docs/advanced","subpages":[{"title":"Options","url":"docs/advanced/options/"},{"title":"Hooks","url":"docs/advanced/hooks/"},{"title":"Transitions","url":"docs/advanced/transitions/"},{"title":"Views","url":"docs/advanced/views/"},{"title":"Strategies","url":"docs/advanced/strategies/"},{"title":"Recipes","url":"docs/advanced/recipes/"},{"title":"Third party scripts","url":"docs/advanced/third-party/"},{"title":"Utils","url":"docs/advanced/utils/"},{"title":"Developer API","url":"api/","path":"api","extern":true}]},{"title":"Plugins","url":"docs/plugins/intro/","path":"docs/plugins","subpages":[{"title":"Intro","url":"docs/plugins/intro/"},{"title":"Router","url":"docs/plugins/router/"},{"title":"Prefetch","url":"docs/plugins/prefetch/"},{"title":"Css","url":"docs/plugins/css/"},{"title":"Head","url":"docs/plugins/head/"},{"title":"Preset","url":"docs/plugins/preset/"}]}]'),
+        }
+
+        document.documentElement.classList.add('js');
+
+    </script>
+    <meta name="generator" content="Hexo 4.2.1">
+</head>
+
+<body data-barba="wrapper" data-slug="docs">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <div data-barba="container" data-barba-namespace="docs">
+
+        <header class="site-header header" role="banner" data-component="header">
+            <div class="header__wrapper">
+                <div class="header__infos">
+                   
+                  
+<img src="aato.png" width="85em" height="auto">
+    <span style="font-size: 16px;  color:rgb(24, 134, 11);"><strong>/ Data</strong></span>
+
+                </div>
+                <div class="header__external-links">
+                   
+                        <a class="button--fill--black--rounded--github header__external-links__github" href="https://github.com/barbajs/barba"
+                            target="_blank">
+                            <svg viewBox="0 0 32 32" aria-hidden="true" class="icon">
+                                <!-- <use attr.xlink:href="assets/svg/sprite.svg#social-github"></use> -->
+                                <use xlink:href="#social-github"></use>
+                            </svg>
+                            <span>Collaborate on <b>Github</b></span>
+                        </a>
+                     
+                      
+                   
+
+                    <div class="menu-trigger" data-component="menu-trigger">
+                        <svg viewbox="0 0 50 50" width="50" height="50" class="menu-trigger__shape">
+                            <circle r="25" cx="25" cy="25"></circle>
+                        </svg>
+                        <span class="menu-trigger__bar"></span>
+                        <span class="menu-trigger__bar"></span>
+                        <span class="menu-trigger__bar"></span>
+                    </div>
+
+                </div>
+            </div>
+            <nav class="header__nav nav">
+                <div class="menu" data-component="menu">
+
+                    <div class="menu__overlay" data-ref="menu.overlay"></div>
+
+                    <!-- Menu Nav -->
+                    <div class="menu__panel" data-ref="menu.panel">
+
+                        <!-- Menu Pages -->
+                        <div class="menu__pages">
+                            <ul class="menu__pages__list">
+
+                                <!-- Page -->
+
+                                <li class="menu__pages__item" data-ref="menu.item">
+                                    <a class="menu__pages__item__link " href="">
+                                        Features
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <div class="menu__pages__item__subpages menu-subpages">
+                                        <ul class="menu-subpages__list">
+
+                                            <!-- Subpage -->
+
+                                      
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="easy-peasy.html">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                        Easy peasy
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="smart.html">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                        Smart
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="extensible.html">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                        Extensible
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                         
+
+
+                                            <!-- Subpage [end] -->
+
+                                        </ul>
+                                    </div>
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <li class="menu__pages__item" data-ref="menu.item">
+                                    <a class="menu__pages__item__link " href="/examples/">
+                                        Examples
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <li class="menu__pages__item" data-ref="menu.item">
+                                    <a class="menu__pages__item__link " href="/showcase/">
+                                        Showcase
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <li class="menu__pages__item" data-ref="menu.item">
+                                    <a class="menu__pages__item__link is-active" href="/docs/getstarted/intro/">
+                                        Docs
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <li class="menu__pages__item" data-ref="menu.item">
+                                    <a class="menu__pages__item__link " href="/faq/">
+                                        FAQ
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <!-- Page [end]-->
+
+                            </ul>
+                        </div>
+                        <!-- Menu Pages [end]-->
+
+                        <!-- Menu Footer -->
+                        <div class="menu__footer">
+                            <a class="menu__footer__download" href="/docs/getstarted/intro/" data-ref="menu.item">
+                                Get started
+                            </a>
+                            <div class="menu__footer__extra menu-extra">
+                                <a class="menu-extra__twitter" href="https://twitter.com/barba_js" target="_blank"
+                                    data-barba-prevent data-ref="menu.item">
+                                    <svg class="menu-extra__twitter__icon" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 16 13">
+                                        <path
+                                            d="M14.4487 3.221153c.00693.140201.00952.282132.00952.422333 0 4.318526-3.28606 9.296514-9.294778 9.296514-1.845976 0-3.562135-.540898-5.008279-1.468645.256169.03029.5158.045868.778893.045868 1.531821 0 2.939886-.522724 4.057164-1.397679-1.428835-.026829-2.636118-.970154-3.051528-2.268308.199051.037213.404159.057118.61446.057118.298575 0 .587631-.038944.861109-.113372C1.920653 7.493811.79472 6.174021.79472 4.590273v-.040676c.440507.244919.945057.392043 1.479896.409351C1.397929 4.372183.820683 3.37347.820683 2.238883c0-.598016.160972-1.159684.443104-1.642598 1.610576 1.977522 4.019085 3.277407 6.733958 3.414146-.055388-.239726-.083948-.488106-.083948-.745141C7.913797 1.461721 9.375519 0 11.17995 0c.93987 0 1.78886.395504 2.38514 1.030734.74341-.147124 1.44269-.418871 2.07445-.792739-.24405.762449-.76244 1.402872-1.43662 1.80703.66119-.07962 1.2895-.253572 1.87627-.514069-.43791.656001-.99179 1.23065-1.63049 1.690197z" />
+                                    </svg>
+                                    <div class="menu-extra__twitter__label">
+                                        barba_js
+                                    </div>
+                                </a>
+                                <div class="menu-extra__credits" data-ref="menu.item">
+                                    <a href="https://join.slack.com/t/barbajs/shared_invite/enQtNTU3NTAyMjkxMzAyLTkxYWUwZmM1YWQxMmNlYmE0ZjY4NDQxMGUxYjkwYWFlMzEzOWM4OTRhMWRmYTQyYzFlMmQ3OGFmYmI3MWY0OWY"
+                                        target="_blank" rel="nofollow">
+                                        <img src="https://img.shields.io/badge/slack-workspace-purple.svg?style=flat-square&logo=slack"
+                                            alt="Slack workspace">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Menu Footer [end]-->
+
+                    </div>
+                    <!-- Menu Nav [end]-->
+
+                </div>
+
+            </nav>
+        </header>
+
+
+        <main class="site-main" role="main">
+            <div class="site-content">
+                <div class="site-content-inner">
+
+                    <section class="docs">
+                        <div class="docs__page-transition"></div>
+
+                        <!-- Docs Nav -->
+                        <div class="docs__nav" data-component="docs-nav">
+                            <!-- <button>close</button> -->
+                            <ul class="docs__nav__list">
+
+                                <!-- Page -->
+
+                                <li>
+                                    <a href="/docs/getstarted/intro/">
+                                        <h1 class="docs__nav__title is-open">Get Started</h1>
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <ol class="docs__nav__sublist is-open">
+
+                                        <!-- Subpage -->
+
+                                        <li class="is-open">
+                                            <a href="/docs/getstarted/intro/">
+                                                <h2 class="docs__nav__subtitle is-open">
+                                                    Intro
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/install/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Install
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/markup/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Markup
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/basic-transition/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Basic transition
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/custom-code/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Run custom code
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/lifecycle/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Lifecycle
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/legacy/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Legacy example
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/browser-support/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Browser support
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/getstarted/useful-links/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Useful links
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <!-- Subpage [end]-->
+
+                                    </ol>
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <li>
+                                    <a href="/docs/advanced/options/">
+                                        <h1 class="docs__nav__title ">Advanced</h1>
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <ol class="docs__nav__sublist ">
+
+                                        <!-- Subpage -->
+
+                                        <li class="">
+                                            <a href="/docs/advanced/options/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Options
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/advanced/hooks/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Hooks
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/advanced/transitions/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Transitions
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/advanced/views/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Views
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/advanced/strategies/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Strategies
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/advanced/recipes/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Recipes
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/advanced/third-party/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Third party scripts
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/advanced/utils/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Utils
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/api/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Developer API
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <!-- Subpage [end]-->
+
+                                    </ol>
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <li>
+                                    <a href="/docs/plugins/intro/">
+                                        <h1 class="docs__nav__title ">Plugins</h1>
+                                    </a>
+
+                                    <!-- Subpages -->
+
+                                    <ol class="docs__nav__sublist ">
+
+                                        <!-- Subpage -->
+
+                                        <li class="">
+                                            <a href="/docs/plugins/intro/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Intro
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/plugins/router/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Router
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/plugins/prefetch/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Prefetch
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/plugins/css/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Css
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/plugins/head/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Head
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="/docs/plugins/preset/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    Preset
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <!-- Subpage [end]-->
+
+                                    </ol>
+
+                                    <!-- Subpages [end]-->
+
+                                </li>
+
+                                <!-- Page [end]-->
+
+                            </ul>
+                        </div>
+                        <!-- Docs Nav [end]-->
+                        <div class="docs__markdown">
+                            <h1 id="barba-js-v2"><a href="#barba-js-v2" class="headerlink"
+                                    title="barba.js [v2]"></a>barba.js <small>[v2]</small></h1>
+                            <p><img src="https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square"
+                                    alt="Stability" title="Badge"> <a
+                                    href="https://circleci.com/gh/barbajs/barba/tree/main" target="_blank"
+                                    rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/circleci/project/github/barbajs/barba/main.svg?style=flat-square"
+                                        alt="CircleCI"></a> <a
+                                    href="https://coveralls.io/github/barbajs/barba?branch=main" target="_blank"
+                                    rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/coveralls/github/barbajs/barba/main.svg?style=flat-square"
+                                        alt="Coverage Status"></a> <a href="http://commitizen.github.io/cz-cli/"
+                                    target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square"
+                                        alt="Commitizen friendly"></a> <a href="https://conventionalcommits.org"
+                                    target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square"
+                                        alt="Conventional Commits"></a> <a href="https://lerna.js.org/" target="_blank"
+                                    rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square"
+                                        alt="lerna"></a> <a href="https://github.com/barbajs/barba/blob/main/LICENSE"
+                                    target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square"
+                                        alt="License"></a> <a
+                                    href="https://join.slack.com/t/barbajs/shared_invite/enQtNTU3NTAyMjkxMzAyLTkxYWUwZmM1YWQxMmNlYmE0ZjY4NDQxMGUxYjkwYWFlMzEzOWM4OTRhMWRmYTQyYzFlMmQ3OGFmYmI3MWY0OWY"
+                                    target="_blank" rel="nofollow" title="Badge"><img
+                                        src="https://img.shields.io/badge/slack-workspace-purple.svg?style=flat-square&logo=slack"
+                                        alt="Slack workspace"></a></p>
+                            <!-- <div class="info">
+  <strong>🚧 IMPORTANT NOTE</strong>
+  <p>The current documentation reflect source code of Barba.js `main` branch, which has not been published yet on NPM. We are still working on fixing and improving the code before releasing an new version. Stay tuned, be patient and <a href="https://github.com/barbajs/barba" target="_blank">follow the repository on Github</a> for more updates!</p>
+</div> -->
+
+                            <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2>
+                            <p><strong>Barba.js</strong> — aka <em>Barba</em> — is a small <em>(7kb minified and
+                                    compressed)</em> and easy-to-use library that helps you create fluid and smooth
+                                transitions between your website’s pages. It makes your website run like a
+                                <strong>SPA</strong> <em>(Single Page Application)</em> and help reduce the delay
+                                between your pages, minimize browser HTTP requests and enhance your user’s web
+                                experience.</p>
+                            <blockquote>
+                                <p><strong>Notice</strong>: this guide assumes intermediate knowledge of HTML, CSS, and
+                                    JavaScript. It is worth mentioning that all code examples use ES6+ syntax. If you
+                                    are not comfortable with this syntax, we would encourage you to grasp the basics
+                                    then come back.</p>
+                                <p>In case of emergency, check the <a href="/docs/getstarted/legacy/">“legacy” code
+                                        example</a>.</p>
+                            </blockquote>
+
+                        </div>
+
+
+
+
+                        <div class="docs__nav__lateral" data-component="docs-nav-lateral">
+
+                            <a target="_self" href="/docs/getstarted/install/" class="docs__nav__lateral__link--next"
+                                data-ref="docs-nav-lateral.link">
+                                <span class="docs__nav__lateral__label">Install</span>
+                                <svg viewBox="0 0 21 15" aria-hidden="true" class="icon--barba">
+                                    <!-- <use attr.xlink:href="assets/svg/sprite.svg#barba-arrow-next"></use> -->
+                                    <use xlink:href="#barba-arrow-next"></use>
+                                </svg>
+                            </a>
+
+                            <button class="docs__nav__lateral__button">
+                                All topics
+                            </button>
+                        </div>
+
+
+                    </section>
+
+                </div>
+            </div><!-- end .site-content -->
+        </main><!-- end .site-main -->
+
+        <footer class="site-footer footer">
+            barba.js ©️2024<br>
+            Last updated on Aug 12th
+        </footer>
+
+    </div>
+    <div class="transition">
+        <div class="transition__title"></div>
+        <div class="transition__background"></div>
+    </div>
+
+    <script src="https://barba.js.org/js/main.js"></script>
+</body>
+
+</html>
