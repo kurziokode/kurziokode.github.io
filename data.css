@@ -1896,7 +1896,9 @@ body {
   @media only screen and (min-width: 48em) {
     .docs__nav__lateral__button {
       display: none; } }
-
+  @media only screen and (min-width: 48em) {
+    .header__external-links__github {
+      display: none; } }  
 .docs__nav__lateral__label {
   margin: 1rem; }
 
