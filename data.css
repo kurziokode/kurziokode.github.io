@@ -672,7 +672,7 @@ body {
   @media only screen and (max-width: 47.99em) {
     [class*='footer--'],
     .footer {
-      display: none; } }
+      display: block; } }
   [data-barba="container"]:not([data-barba-namespace="docs"]) [class*='footer--'], [data-barba="container"]:not([data-barba-namespace="docs"])
   .footer {
     display: none; }
