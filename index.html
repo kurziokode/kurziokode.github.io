@@ -493,6 +493,57 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <div class="transition__title"></div>
         <div class="transition__background"></div>
     </div>
+<script>
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top <= window.innerHeight &&
+    rect.bottom >= 0 &&
+    rect.left <= window.innerWidth &&
+    rect.right >= 0
+  );
+}
+
+// Function to lazy load images
+function lazyLoadImages() {
+  // Get all elements that need lazy loading
+  const elements = document.querySelectorAll('.menu__panel, .docs__nav');
+
+  elements.forEach((element) => {
+    if (!isInViewport(element)) {
+      // Add placeholder image
+      element.style.backgroundImage = 'url(placeholder.jpg)';
+      
+      // Wait for the element to enter the viewport
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Remove placeholder and load the real image
+            element.style.backgroundImage = `url(${element.getAttribute('data-src')})`;
+            element.style.backgroundImage = 'url(fre.webp)';
+            
+            // Remove observer
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observer.observe(element);
+    }
+  });
+}
+
+// Run the lazy loading function
+lazyLoadImages();
+
+// Add event listener for window resize
+window.addEventListener('resize', lazyLoadImages);
+
+// Add event listener for scroll
+window.addEventListener('scroll', lazyLoadImages);
+</script>
+    
     <script src="https://barba.js.org/js/main.js"></script>
     <!--   <script src="https://togetherjs.com/togetherjs-min.js"></script> <button onclick="TogetherJS(this); return false;">Start TogetherJS</button> -->
     <script src="//instant.page/5.2.0" type="module"
