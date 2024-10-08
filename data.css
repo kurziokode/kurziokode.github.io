@@ -521,7 +521,7 @@ body {
   overflow-x: hidden; }
   @media (prefers-color-scheme: dark) {
     body {
-      background: #0b0c0e;
+      background: #020609;
       color: #7d889b; } }
   body ::selection {
     color: #f2f;
