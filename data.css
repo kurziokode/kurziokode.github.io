@@ -688,7 +688,7 @@ body {
   @media (prefers-color-scheme: dark) {
     .header,
     [class*='header--'] {
-      background: #0b0c0e; } }
+      background: #020609; } }
   @media only screen and (min-width: 48em) {
     .header,
     [class*='header--'] {
