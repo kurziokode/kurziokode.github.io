@@ -177,6 +177,102 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-text-fill-color: transparent;
   transform: scale(2);
 }
+
+
+/* Base styles */
+
+
+#select-demo {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Select Trigger */
+.select-trigger {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.select-trigger input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* Select Content */
+.select-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+/* Select Group */
+.select-group {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.select-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.select-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.select-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #select-demo {
+        max-width: 90%;
+    }
+
+    .select-trigger input {
+        font-size: 14px;
+    }
+
+    .select-item {
+        font-size: 13px;
+    }
+
+    .select-group label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .select-trigger input {
+        padding: 8px;
+    }
+
+    .select-item {
+        padding: 8px 12px;
+    }
+}
+
         
     </style>
 
@@ -324,7 +420,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
                         <div class="docs__nav" data-component="docs-nav" style="background-image: url(err.webp); background-size: cover;
   background-repeat: no-repeat;">
-
+    <div id="select-demo">
+        <div class="select-trigger">
+            <input type="text" placeholder="Select a fruit" readonly />
+        </div>
+        <div class="select-content">
+            <div class="select-group">
+                <label>Fruits</label>
+                <a href="#" class="select-item">Apple</a>
+                <a href="#" class="select-item">Banana</a>
+                <a href="#" class="select-item">Blueberry</a>
+                <a href="#" class="select-item">Grapes</a>
+                <a href="#" class="select-item">Pineapple</a>
+            </div>
+        </div>
+    </div>
                             <ul class="docs__nav__list">
 
                                 <li>
@@ -548,7 +658,30 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <div class="transition__title"></div>
         <div class="transition__background"></div>
     </div>
-   
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectDemo = document.getElementById('select-demo');
+    
+    selectDemo.addEventListener('click', function(e) {
+        if (e.target.closest('.select-trigger')) {
+            const content = selectDemo.querySelector('.select-content');
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+
+    selectDemo.querySelectorAll('.select-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const trigger = selectDemo.querySelector('.select-trigger input');
+            trigger.value = this.textContent;
+            const content = selectDemo.querySelector('.select-content');
+            content.style.display = 'none';
+        });
+    });
+});
+
+      
+  </script> 
  <script src="https://barba.js.org/js/main.js"></script>
     <!--   <script src="https://togetherjs.com/togetherjs-min.js"></script> <button onclick="TogetherJS(this); return false;">Start TogetherJS</button> -->
     <script src="//instant.page/5.2.0" type="module"
@@ -556,3 +689,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 </body>
 
 </html>
+
+
+
+
