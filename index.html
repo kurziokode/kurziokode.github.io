@@ -195,6 +195,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     border: 1px solid #235922;
     border-radius: 4px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .select-trigger input {
@@ -211,7 +212,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .select-content {
     display: none;
     position: absolute;
-    bottom: 0%;
+    top: 20px;
     left: 0;
     right: 0;
     z-index: 1;
@@ -246,28 +247,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* Responsive adjustments */
 
-@media (max-width: 1087px) {
-.select-content {
-bottom: 0%;
-  }  
-}
-
-
-        
-@media (max-width: 815px) {
-.select-content {
-bottom: 0%;
-  }  
-}
 
     
 @media (max-width: 480px) {
 
-.select-content {
-bottom: 0%;
-  }  
+
     
     #select-demo {
+        position: relative;
         max-width: 90%;
     }
 
@@ -286,9 +273,7 @@ bottom: 0%;
 
 @media (max-width: 320px) {
 
-.select-content {
-bottom: 0%;
-  }  
+
     
     .select-trigger input {
         padding: 8px;
