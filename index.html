@@ -181,11 +181,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* Base styles */
 
-
 #select-demo {
     position: relative;
     max-width: 233px;
     margin: 0 auto;
+    overflow: visible;
 }
 
 /* Select Trigger */
@@ -211,7 +211,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* Select Content */
 .select-content {
-    display: none;
     position: absolute;
     top: 20px;
     left: 0;
@@ -220,6 +219,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     background: #020609;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border: 1px solid transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.select-content.show {
+    max-height: 500px;
+    transition: max-height 0.3s ease-in;
 }
 
 /* Select Group */
@@ -248,42 +255,31 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 /* Responsive adjustments */
 
-
-    
 @media (max-width: 480px) {
-
-
-    
     #select-demo {
-        position: relative;
         max-width: 90%;
     }
-
     .select-trigger input {
         font-size: 14px;
     }
-
     .select-item {
         font-size: 13px;
     }
-
     .select-group label {
         font-size: 14px;
     }
 }
 
 @media (max-width: 320px) {
-
-
-    
     .select-trigger input {
         padding: 8px;
     }
-
     .select-item {
         padding: 8px 12px;
     }
 }
+
+
 
         
     </style>
@@ -560,21 +556,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
                                     </ol>
                                 </li>
- <div id="select-demo" class="docs__nav__list">
-        <div class="select-trigger">
-            <input type="text" placeholder="Select a fruit" readonly />
+<div id="select-demo" class="docs__nav__list">
+    <div class="select-trigger">
+        <input type="text" placeholder="Select a fruit" readonly />
+    </div>
+    <div class="select-content">
+        <div class="select-group">
+            <a href="#" class="select-item">Apple</a>
+            <a href="#" class="select-item">Banana</a>
+            <a href="#" class="select-item">Blueberry</a>
+            <a href="#" class="select-item">Grapes</a>
         </div>
-        <div class="select-content" style="text-align: center;">
-            <div class="select-group">
-                
-                <a href="#" class="select-item">Apple</a>
-                <a href="#" class="select-item">Banana</a>
-                <a href="#" class="select-item">Blueberry</a>
-                <a href="#" class="select-item">Grapes</a>
-              
-            </div>
-        </div>
- </div>
+    </div>
+</div>
+
                             </ul>
 
         </div>
@@ -674,23 +669,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 document.addEventListener('DOMContentLoaded', function() {
     const selectDemo = document.getElementById('select-demo');
     
+    // Add click event listener to the entire select-demo
     selectDemo.addEventListener('click', function(e) {
         if (e.target.closest('.select-trigger')) {
             const content = selectDemo.querySelector('.select-content');
-            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+            content.classList.toggle('show');
+        } else if (e.target.closest('.select-item')) {
+            const trigger = selectDemo.querySelector('.select-trigger input');
+            trigger.value = e.target.textContent;
+            const content = selectDemo.querySelector('.select-content');
+            content.classList.remove('show');
         }
     });
-
-    selectDemo.querySelectorAll('.select-item').forEach(function(item) {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            const trigger = selectDemo.querySelector('.select-trigger input');
-            trigger.value = this.textContent;
-            const content = selectDemo.querySelector('.select-content');
-            content.style.display = 'none';
-        });
-    });
 });
+
 
       
   </script> 
