@@ -178,7 +178,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   transform: scale(2);
 }
 
-
+    /* Hide specific links on mobile devices */
+    @media only screen and (max-width: 767px) {
+        .social-buttons a:nth-child(-n+4) {
+            display: none;
+        }
+    }
 /* Base styles */
 
 #select-demo {
@@ -627,30 +632,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                             </button>
                         </div>
 
-    <div class="docs__nav__lateral social-buttons">
-      
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
-        <a href="#"><i class="fab fa-reddit"></i></a>
-     
-      
-        
-    </div>
+
                         
-<!--     <div class="docs__nav__lateral social-buttons">
+    <div class="docs__nav__lateral social-buttons">
+        <a href="#"><i class="fab fa-readme"></i></a>                
         <a href="#"><i class="fab fa-teamspeak"></i></a>
+        <a href="#"><i class="fab fa-reddit"></i></a>               
+        <a href="#"><i class="fab fa-pinterest"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
-        <a href="#"><i class="fab fa-reddit"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-readme"></i></a>
+        
         
     </div>  
--->
+
                         
                     </section>
 
