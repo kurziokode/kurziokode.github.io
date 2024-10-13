@@ -1804,6 +1804,11 @@ body {
   .docs__markdown h5,
   .docs__markdown h6 {
     position: relative; }
+
+.docs__markdown h2 {
+  font-size: 26px;
+}
+
     .docs__markdown h2:hover .headerlink,
     .docs__markdown h3:hover .headerlink,
     .docs__markdown h4:hover .headerlink,
