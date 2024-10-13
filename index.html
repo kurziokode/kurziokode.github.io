@@ -303,11 +303,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
 }
 
-
-
-
-        
-    </style>
+ </style>
 
 </head>
 
@@ -576,7 +572,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <a href="https://stream.radioparadise.com/flac" class="select-item">eclectic</a>
             <a href="https://www.ertecho.gr/radio/kosmos-jazz/player/" class="select-item">ertecho jazz</a>
             <a href="https://www.mixcloud.com/porkhead/" class="select-item">funkologie</a>   
-            <button id="replaceButton" class="select-item" style="background-color: transparent; border: 0px solid transparent;"></button>            
+              
         </div>
     </div>
 </div>
@@ -632,7 +628,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                         alt=""></a>                             
                             </p>
                         </div>
-                        <a class="book-container target-link" href="#" target="_blank"
+                        <a class="book-container" href="https://kurziokode.github.io/dash/index.html" target="_blank"
                             rel="noreferrer noopener">
                             <div class="book">
                                 <img alt="The Lab ChrisDLS" src="redited.jpg" />
@@ -662,8 +658,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         
     </div>  
 
-                        
-                    </section>
+  </section>
 
                 </div>
             </div>
@@ -692,40 +687,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
  </script> 
-
-        <script>
-            // Define the replacement links
-            const replacementLinks = {
-                '': 'https://kurziokode.github.io/dash/index.html'
-            };
-
-            // Function to replace links
-            function replaceLinks() {
-                // Find all links with the class 'target-link'
-                const links = document.querySelectorAll('.target-link');
-
-                // Iterate over each link
-                links.forEach(link => {
-                    // Get the old href
-                    const oldHref = link.getAttribute('href');
-
-                    // Check if there's a replacement
-                    if (replacementLinks[oldHref]) {
-                        // Replace the href with the new one
-                        link.setAttribute('href', replacementLinks[oldHref]);
-                        console.log(`Replaced ${oldHref} with ${replacementLinks[oldHref]}`);
-                    } else {
-                        console.log(`No replacement found for ${oldHref}`);
-                    }
-                });
-            }
-
-            // Add event listener to the button
-            document.addEventListener('DOMContentLoaded', () => {
-                const button = document.getElementById('replaceButton');
-                button.addEventListener('click', replaceLinks);
-            });
-        </script>    
  <script src="https://barba.js.org/js/main.js"></script>
     <!--   <script src="https://togetherjs.com/togetherjs-min.js"></script> <button onclick="TogetherJS(this); return false;">Start TogetherJS</button> -->
     <script src="//instant.page/5.2.0" type="module"
