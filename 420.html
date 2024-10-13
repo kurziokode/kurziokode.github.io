@@ -1,0 +1,700 @@
+<!-- MIT License
+Copyright (c) 2024 Luigi De Rosa, Thierry Michel, Xavier Foucrier
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<!doctype html>
+<html>
+
+<head>
+    <title>chris.dls 420</title>
+    <meta name="description" content="Explore music, art, design, and coding, a portal for creativity and innovation." />
+    <link rel="shortcut icon" href="open.png" type="image/x-icon" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QE8B495353');
+    </script>
+    <meta name="msapplication-TileColor" content="#808080fff">
+    <meta name="theme-color" content="#808080fff">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="chris.dls" />
+    <meta property="og:description"
+        content="Explore music, art, design, and coding, a portal for creativity and innovation." />
+    <meta property="og:url" content="https://kurziokode.github.io" />
+    <meta property="og:site_name" content="chris.dls" />
+    <meta property="og:image" content="https://kurziokode.github.io/redited.jpg" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="500" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description"
+        content="Explore music, art, design, and coding, a portal for creativity and innovation." />
+    <meta name="twitter:title" content="chris.dls" />
+    <meta name="twitter:site" content="@chris.dls" />
+    <meta name="twitter:image" content="https://kurziokode.github.io/redited.jpg" />
+    <meta name="twitter:creator" content="@ChrisDLS" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="data.css" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script>
+        window.BARBA = {
+            root: '/',
+            menu: JSON.parse(
+                '[{"title":"Features","url":"features/user-friendly/","slug":"/features","subpages":[{"title":"User friendly","url":"features/user-friendly/"},{"title":"Easy peasy","url":"features/easy-peasy/"},{"title":"Smart","url":"features/smart/"},{"title":"Extensible","url":"features/extensible/"},{"title":"Futureproof","url":"features/futureproof/"},{"title":"Community","url":"features/community/"}]},{"title":"Examples","url":"examples/","slug":"/examples"},{"title":"Showcase","url":"showcase/","slug":"/showcase"},{"title":"Docs","url":"docs/getstarted/intro/","slug":"https://barba.js.org/docs"},{"title":"FAQ","url":"faq/","slug":"/faq"}]'
+            ),
+            docs: JSON.parse(
+                '[{"title":"Get Started","url":"docs/getstarted/intro/","path":"docs/getstarted","subpages":[{"title":"Intro","url":"docs/getstarted/intro/"},{"title":"Install","url":"docs/getstarted/install/"},{"title":"Markup","url":"docs/getstarted/markup/"},{"title":"Basic transition","url":"docs/getstarted/basic-transition/"},{"title":"Run custom code","url":"docs/getstarted/custom-code/"},{"title":"Lifecycle","url":"docs/getstarted/lifecycle/"},{"title":"Legacy example","url":"docs/getstarted/legacy/"},{"title":"Browser support","url":"docs/getstarted/browser-support/"},{"title":"Useful links","url":"docs/getstarted/useful-links/"}]},{"title":"Advanced","url":"docs/advanced/options/","path":"docs/advanced","subpages":[{"title":"Options","url":"docs/advanced/options/"},{"title":"Hooks","url":"docs/advanced/hooks/"},{"title":"Transitions","url":"docs/advanced/transitions/"},{"title":"Views","url":"docs/advanced/views/"},{"title":"Strategies","url":"docs/advanced/strategies/"},{"title":"Recipes","url":"docs/advanced/recipes/"},{"title":"Third party scripts","url":"docs/advanced/third-party/"},{"title":"Utils","url":"docs/advanced/utils/"},{"title":"Developer API","url":"api/","path":"api","extern":true}]},{"title":"Plugins","url":"docs/plugins/intro/","path":"docs/plugins","subpages":[{"title":"Intro","url":"docs/plugins/intro/"},{"title":"Router","url":"docs/plugins/router/"},{"title":"Prefetch","url":"docs/plugins/prefetch/"},{"title":"Css","url":"docs/plugins/css/"},{"title":"Head","url":"docs/plugins/head/"},{"title":"Preset","url":"docs/plugins/preset/"}]}]'
+            ),
+        }
+        document.documentElement.classList.add('js');
+    </script>
+    <style>
+        .book-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 600px;
+        }
+
+        @keyframes initAnimation {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(-30deg);
+            }
+        }
+
+        .book {
+            width: 200px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(-25deg);
+            transition: 0.5s ease;
+            animation: 0.5s ease 0s 1 initAnimation;
+        }
+
+        .book:hover {
+            transform: rotateY(-50deg);
+        }
+
+        .book> :first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(2, 93, 13);
+            width: 200px;
+            height: 300px;
+            transform: translateZ(37.5px);
+            background-color: #310001;
+            border-radius: 0 2px 2px 0;
+            box-shadow: 5px 5px 20px transparent;
+        }
+
+        .book::before {
+            position: absolute;
+            content: ' ';
+            background-color: transparent;
+            left: 0;
+            top: 6px;
+            width: 73px;
+            height: 288px;
+            transform: translateX(156.5px) rotateY(90deg);
+            background: linear-gradient(90deg,
+                    #808080 0%,
+                    #8c8c8c 5%,
+                    #808080 10%,
+                    #8c8c8c 15%,
+                    #808080 20%,
+                    #8c8c8c 25%,
+                    #808080 30%,
+                    #8c8c8c 35%,
+                    #808080 40%,
+                    #8c8c8c 45%,
+                    #808080 50%,
+                    #8c8c8c 55%,
+                    #808080 60%,
+                    #8c8c8c 65%,
+                    #808080 70%,
+                    #8c8c8c 75%,
+                    #808080 80%,
+                    #8c8c8c 85%,
+                    #808080 90%,
+                    #8c8c8c 95%,
+                    #808080 100%);
+        }
+
+        .book::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: ' ';
+            width: 200px;
+            height: 300px;
+            transform: translateZ(-37.5px);
+            background-color: #310001;
+            border-radius: 0 2px 2px 0;
+            box-shadow: -5px 0 25px 5px #282727;
+        }
+
+.social-buttons a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  color: #595959;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 5px;
+}
+
+.social-buttons a::before{
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons a i{
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i{
+  background: linear-gradient(45deg,#1d8c96,#282a58);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2);
+}
+
+    /* Hide specific links on mobile devices */
+    @media only screen and (max-width: 767px) {
+        .social-buttons a:nth-child(-n+3) {
+            display: none;
+        }
+
+            .social-buttons a {
+           margin: 0 0px;
+        }    
+    }
+/* Base styles */
+
+#select-demo {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: visible;
+   
+}
+
+/* Select Trigger */
+.select-trigger {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+   
+}
+
+.select-trigger input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+   
+}
+
+/* Select Content */
+.select-content {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #020609;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 0px solid transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    width: calc(100% + 20px); /* Increased width by 20px */
+}
+
+.select-content.show {
+    max-height: 750px;
+    transition: max-height 0.3s ease-in;
+    width: calc(100% + 20px); /* Maintain increased width */
+}
+
+/* Select Group */
+.select-group {
+    max-height: 300px;
+    overflow-y: auto;
+  
+    padding: 0 10px; /* Added padding to increase width */
+}
+
+.select-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.select-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #b10720;
+    transition: background-color 0.3s ease;
+}
+
+.select-item:hover {
+    background-color: #000;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 480px) {
+    #select-demo {
+        max-width: 100%;
+    }
+    .select-trigger input {
+        font-size: 14px;
+    }
+    .select-item {
+        font-size: 13px;
+    }
+    .select-group label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .select-trigger input {
+        padding: 8px;
+    }
+    .select-item {
+        padding: 8px 12px;
+    }
+}
+
+ </style>
+
+</head>
+
+<body data-barba="wrapper" data-slug="docs">
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <div data-barba="container" data-barba-namespace="docs">
+
+        <header class="site-header header" role="banner" data-component="header">
+            <div class="header__wrapper">
+                <div class="header__infos">
+                    <a href=""><img src="u77.gif" width="50em" height="auto">
+</a>
+                </div>
+                <div class="header__external-links">
+                    <div class="menu-trigger" data-component="menu-trigger">
+                        <svg viewbox="0 0 50 50" width="50" height="50" class="menu-trigger__shape">
+                            <circle r="25" cx="25" cy="25"></circle>
+                        </svg>
+                        <span class="menu-trigger__bar"></span>
+                        <span class="menu-trigger__bar"></span>
+                        <span class="menu-trigger__bar"></span>
+                    </div>
+
+                </div>
+            </div>
+            <nav class="header__nav nav">
+                <div class="menu" data-component="menu">
+                    <div class="menu__overlay" data-ref="menu.overlay"></div>
+                    <div class="menu__panel" data-ref="menu.panel" style="background-image: url(err.webp); background-size: cover;
+  background-repeat: no-repeat;">
+                        <div class="menu__pages">
+                            <ul class="menu__pages__list">
+                                <li class="menu__pages__item" data-ref="menu.item">
+                                    <a class="menu__pages__item__link " href="">
+                                       ▸ Arts
+                                    </a>
+                                    <div class="menu__pages__item__subpages menu-subpages">
+                                        <ul class="menu-subpages__list">
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://hubertybreyne.com/en/artists/list/0/artists-list">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                       huberty & breyne
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://www.deviantart.com/">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                     deviant
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://www.flickr.com/search/?text=Street+Photography">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                   flickr
+                                                    </span>
+                                                </a>
+                                            </li>                                           
+                                            
+                                             <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://www.smithsonianmag.com/">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                       smithsonian
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://www.dailyartmagazine.com/">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                      daily
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://magazine.artstation.com/">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                     station  
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="menu__footer">
+                            <a class="menu__footer__download" href="https://artsandculture.google.com/category/artist?hl=en"
+                                target="_blank" style="color: #368d31;"><i class="fab fa-google" aria-hidden="true"></i><span>&nbsp;Google</span>
+                               
+                            </a>
+
+
+                        </div>
+                        <div class="menu__footer__extra menu-extra">
+
+                            <div class="menu-extra__twitter__label">
+<a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Hello+Chris&to=lestiflee@gmail.com"
+                                    target="_blank">
+                                    <img src="https://img.shields.io/badge/contact_at-Gmail-9b7f17.svg?style=flat-square"
+                                        alt="Stability" title="Badge"></a>                                
+                            </div>
+                            <div class="menu-extra__twitter__label">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io"
+                                    target="_blank"><img
+                                        src="https://img.shields.io/badge/share_on-Facebook-blue.svg?style=flat-square"
+                                         title="Badge">
+                                  
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <main class="site-main" role="main">
+            <div class="site-content">
+                <div class="site-content-inner">
+
+                    <section class="docs" >
+                        <div class="docs__page-transition" ></div>
+
+                        <div class="docs__nav" data-component="docs-nav" style="background-image: url(err.webp); background-size: cover;
+  background-repeat: no-repeat;">
+
+   
+                            <ul class="docs__nav__list">
+
+
+
+                                <li>
+
+                                    <ol class="docs__nav__sublist is-open ">
+                                        <li class="is-open">
+
+                                            <h2 class="docs__nav__subtitle is-open ">
+                                                <b>Music / Movies</b>
+                                            </h2>
+
+                                        </li>
+
+
+
+                                        <li class="">
+                                            <a href="https://bandcamp.com/discover">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    bandcamp
+                                                </h2>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="">
+                                            <a href="https://www.last.fm/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                  last fm
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://www.wbgo.org/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                 wbgo
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://www.rollingstone.com/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    rolling stone
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://www.albumoftheyear.org/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    album of the year 
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://pitchfork.com/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                  pitchfork
+                                                </h2>
+                                            </a>
+                                        </li>                                        
+
+                                        <li class="">
+                                            <a href="https://www.spin.com/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                   spin
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://www.imdb.com/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    imdb
+                                                </h2>
+                                            </a>
+                                        </li>     
+
+                                        <li class="">
+                                            <a href="https://www.rottentomatoes.com/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                   rotten tomatoes
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://www.pastemagazine.com/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                 paste
+                                                </h2>
+                                            </a>
+                                        </li>  
+                                        
+                                        <li class="">
+                                            <a href="https://www.tasteofcinema.com/">
+                                                <h2 class="docs__nav__subtitle ">
+                                                   taste of cinema
+                                                </h2>
+                                            </a>
+                                        </li>                                          
+                                    </ol>
+                                </li>
+<div id="select-demo" class="docs__nav__list">
+    <div class="select-trigger">
+        <input type="text" placeholder="Radios" readonly />
+    </div>
+    <div class="select-content">
+        <div class="select-group" style="text-align: center;">
+            <a href="https://realpunkradio.com/player/player111419.html" class="select-item">real punk</a>
+            <a href="https://stream.radioparadise.com/rock-320" class="select-item">paradise rock</a>
+            <a href="https://listen.radioking.com/radio/10713/stream/224413" class="select-item">king heavy</a>
+            <a href="https://stream.radioparadise.com/flac" class="select-item">eclectic</a>
+            <a href="https://www.ertecho.gr/radio/kosmos-jazz/player/" class="select-item">ertecho jazz</a>
+            <a href="https://www.mixcloud.com/porkhead/" class="select-item">funkologie</a>   
+              
+        </div>
+    </div>
+</div>
+
+                            </ul>
+
+        </div>
+
+                 <div class="docs__markdown">
+                           
+                            <h1 id="barba-js-v2"><a href="" class="headerlink" title=""></a>chris.dls<small>[420]</small></h1>
+                            <p>
+                                <a href="https://www.theguardian.com/europe" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/Guardian-Europe-2f8c0d.svg?style=flat-square"
+                                        alt="Commitizen friendly"></a>
+                                <a href="https://www.bbc.com/" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/BBC-News-a18212.svg?style=flat-square"
+                                        alt="Conventional Commits"></a>
+                                <a href="https://www.latimes.com/" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/LA-Times-cc00ff.svg?style=flat-square"   
+                                        alt="lerna"></a>
+
+                            </p>
+                            <h2 id="Intro" style="color: #255d22;"><a href="#Intro" class="headerlink" title="Intro"></a>Off-menu</h2>
+                            <p><strong>Life's like a dice roll</strong> — <em>sometimes you win big, other times you're stuck with a pair of twos.</em> 
+                               But the real game lives in the shadows. Exeptions are not included. 
+                            </p>
+                            <blockquote>
+                                <p><strong>Either way</strong> we'll figure it out 'cause that's what grown ups do. Now let's grab some musics and watch the world spin, okay? In case of emergency, check the <a href="https://www.folger.edu/explore/shakespeares-works/all-works/" target="_blank" rel="noopener">“Serious Shit”</a>.</p>
+                              
+                               <p> * Our feathered wacky friend in the corner is functioning like home page button. On mobile devices it's hiding the left sidebar, desktop users will get a page refresh instead. As for the underbook it conceals potentially magical mayhem to Design and Coding World. Prudence is advised. Happy browsing! </p>
+                            </blockquote>
+                         
+                         <p>
+                                <a href="https://www.windy.com/37.797/21.351?rain,37.302,21.352,8,m:eH8agKK" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/Windy%20Weather-112d06?style=for-the-badge&logo=apachestorm"
+                                        alt=""></a>
+                                <a href="https://mail.proton.me/u/1/inbox" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/Proton%20Mail-2c2407?style=for-the-badge&logo=protonmail"
+                                        alt=""></a>
+                                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/Gmail%20inbox-270231?style=for-the-badge&logo=gmail"
+                                        alt=""></a>
+                                <a href="https://www.instantstreetview.com/@37.769993,21.29357,53.57h,-1.02p,1z,CAoSLEFGMVFpcE9JYnVBa3dJdm1nWkE5Z0ctaWhaQUt0djVoM3RiZjdxcFJHZGE5" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/Instant%20View-012032?style=for-the-badge&logo=openstreetmap"       
+                                        alt=""></a>
+                                <a href="https://www.deepl.com/en/translator" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/Deepl%20Translator-310302?style=for-the-badge&logo=googletranslate"       
+                                        alt=""></a>                             
+                            </p>
+                        </div>
+                        <a class="book-container" href="index.html" 
+                            rel="noreferrer noopener">
+                            <div class="book">
+                                <img alt="The Lab ChrisDLS" src="redited.jpg" />
+                            </div>
+                        </a>
+                        <div class="docs__nav__lateral" data-component="docs-nav-lateral">
+                            <button class="docs__nav__lateral__button">
+                                <a href="" class="docs__nav__lateral__link--next" data-ref="docs-nav-lateral.link"><span>⎅ sidebar</span>
+                              
+                                </a>
+
+                            </button>
+                        </div>
+
+
+                        
+    <div class="docs__nav__lateral social-buttons">
+                    
+        <a href="https://www.nbcnews.com/now" target="_blank"><i class="fab fa-teamspeak"></i></a>
+        <a href="https://www.reddit.com/" target="_blank"><i class="fab fa-reddit"></i></a>               
+        <a href="https://gr.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+        <a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        
+        
+    </div>  
+
+  </section>
+
+                </div>
+            </div>
+        </main>
+     </div>
+    <div class="transition">
+        <div class="transition__title"></div>
+        <div class="transition__background"></div>
+    </div>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectDemo = document.getElementById('select-demo');
+    
+    // Add click event listener to the entire select-demo
+    selectDemo.addEventListener('click', function(e) {
+        if (e.target.closest('.select-trigger')) {
+            const content = selectDemo.querySelector('.select-content');
+            content.classList.toggle('show');
+        } else if (e.target.closest('.select-item')) {
+            const trigger = selectDemo.querySelector('.select-trigger input');
+            trigger.value = e.target.textContent;
+            const content = selectDemo.querySelector('.select-content');
+            content.classList.remove('show');
+        }
+    });
+});
+
+ </script> 
+ <script src="https://barba.js.org/js/main.js"></script>
+    <!--   <script src="https://togetherjs.com/togetherjs-min.js"></script> <button onclick="TogetherJS(this); return false;">Start TogetherJS</button> -->
+    <script src="//instant.page/5.2.0" type="module"
+        integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</body>
+
+</html>
+
+
+
+
