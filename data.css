@@ -1643,6 +1643,9 @@ body {
     padding-top: 2.8rem;
     font-size: 2.2rem;
     font-weight: 100; }
+    @media only screen and (max-width: 767px) {
+      .docs__markdown h2 {
+       display: none; } }
     @media only screen and (min-width: 37.5em) {
       .docs__markdown h2 {
         padding-top: 3.2rem;
