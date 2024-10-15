@@ -521,7 +521,7 @@ body {
   overflow-x: hidden; }
   @media (prefers-color-scheme: dark) {
     body {
-      background: #020609;
+      background: #020300;
       color: #7d889b; } }
   body ::selection {
     color: #f2f;
@@ -683,12 +683,12 @@ body {
   z-index: 100;
   top: 0;
   left: 0;
-  background: #020609;
+  background: #020300;
   pointer-events: none; }
   @media (prefers-color-scheme: dark) {
     .header,
     [class*='header--'] {
-      background: #020609; } }
+      background: #020300; } }
   @media only screen and (min-width: 48em) {
     .header,
     [class*='header--'] {
