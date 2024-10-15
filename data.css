@@ -1093,7 +1093,7 @@ body {
     .menu__footer__download {
       color: #16191d; } }
   .menu__footer__download:hover {
-    background: #141414; }
+    background: #000; }
   [data-feature-order='0'] .menu__footer__download {
     background-color: #38d1f1; }
   [data-feature-order='1'] .menu__footer__download {
