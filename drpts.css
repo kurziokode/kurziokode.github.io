@@ -215,7 +215,7 @@ textarea::-moz-placeholder {
 input::placeholder,
 textarea::placeholder {
     opacity: 1;
-    color: #9ca3af
+    color: #4a6cf7
 }
 
 [role=button],
