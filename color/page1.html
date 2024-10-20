@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Clone of Spotify with Astro View Transitions integration for fluid navigation">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="nn1.png">
+    <meta name="generator" content="Astro v3.0.12">
+    <title>Chris Doulos Sports</title>
+    <meta property="og:image"
+        content="https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_1_yci5uf.jpg">
+    <meta name="twitter:image"
+        content="https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_1_yci5uf.jpg">
+    <meta name="astro-view-transitions-enabled" content="true">
+    <meta name="astro-view-transitions-fallback" content="none">
+    <link rel="stylesheet" href="spot.css" />
+    <style type="text/css">
+        .title-clamp[data-astro-cid-ynobxoya] {
+            font-size: clamp(20px, 6vw, 70px);
+            line-height: 1
+        }
+    </style>
+    <script type="module" src="spot.js"></script>
+    <style>
+        [data-astro-transition-scope="astro-e25utfpp-1"] {
+            view-transition-name: playlist_1_side_box;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-md2ueubm-2"] {
+            view-transition-name: playlist_1_side_image;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-n54cedvl-3"] {
+            view-transition-name: playlist_1_side_title;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            view-transition-name: playlist_1_side_play;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            view-transition-name: page_header;
+        }
+
+        @layer astro {
+            ::view-transition-old(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <div class="relative h-screen p-2 gap-2 flex items-stretch">
+        <div class="w-[350px] flex-col hidden lg:flex overflow-y-auto">
+            <div class="flex flex-col flex-1 gap-2">
+                <div class="bg-zinc-900 rounded-lg">
+                    <ul>
+                        <li><a href="spot.html"
+                                class="flex gap-4 text-zinc-400 hover:text-zinc-100 py-3.5 px-5 font-bold transition-all duration-300"><img src="nn.png">&nbsp;&nbsp;Αρχική</a></li>
+                        <li><a href="https://www.google.com/search" method="get" target="_blank"
+                                class="flex gap-4 text-zinc-400 hover:text-zinc-100 py-3.5 px-5 font-bold transition-all duration-300"><svg
+                                    viewBox="0 0 32 32" class="h-10 w-10" astro-icon="carbon:search">
+                                    <path fill="#1f7a76"
+                                        d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29zM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9z" />
+                                </svg>&nbsp;&nbsp;Αναζήτηση</a></li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-900 rounded-lg flex-1">
+                    <ul>
+                        <li><a href="#"
+                                class="flex gap-4 text-zinc-400 hover:text-zinc-100 py-3.5 px-5 font-bold transition-all duration-300" style="color: #4d4d4d;">
+                          
+                            Σύνδεσμοι
+                            </a></li>
+                    </ul>
+                    <ul class="pl-2">
+                        <a href="https://sway.cloud.microsoft/rLQlOjxCWFWezarm?ref=Link&loc=play" target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#134e4a">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="#1f7a76"
+                                        d="M3.76 3.7L2.14 4.88L4.43 8a8.2 8.2 0 0 1 1.92-.72M11 9v2h7v.29l-5 1.42v2.79A4.5 4.5 0 1 1 8.5 11H9V9h-.5a6.5 6.5 0 1 0 6.5 6.5v-1.59L22 12V9m-5.76-5.3L13.85 7h2.47l1.54-2.12M9 2v5h2V2Z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Κανονισμοί
+                                </div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://www.fitnessblender.com/videos?exclusive%5B%5D=0&equipment%5B%5D=26"
+                            target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#14532d">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 24 24">
+                                    <g fill="none" stroke="#1f7a76" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5" color="black">
+                                        <path
+                                            d="M16 5.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0M14.36 15l.944-.546c1.075-.622 1.612-.933 1.684-1.376a1 1 0 0 0 .01-.209c-.036-.446-.546-.79-1.565-1.478l-4.707-3.177C8.877 6.966 8.452 4.69 9.75 3" />
+                                        <path
+                                            d="M10.726 8.214C8.226 10.714 7 17.632 7 21m3.726-12.786C8.877 6.966 8.452 4.69 9.75 3m.975 5.214L13.372 10m.988 5l.944-.546c1.075-.622 1.612-.933 1.684-1.376a1 1 0 0 0 .01-.209c-.036-.446-.546-.79-1.565-1.478L13.373 10M15 21c-.973-1.135-1.974-2.7-2.95-4.142c-.683-1.01-1.025-1.516-1.065-2.045M13.373 10a15.6 15.6 0 0 0-1.77 2.894c-.44.927-.659 1.39-.618 1.92m0 0L8 14" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Στο Σπίτι</div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://app.sworkit.com/exercise-library" target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#871b48">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 32 32">
+                                    <path fill="#1f7a76"
+                                        d="M2 8v16h22v-3.375l6 3V8.375l-6 3V8zm2 2h18v12H4zm24 1.625v8.75l-4-2v-4.75z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Με Βίντεο</div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://www.youtube.com/c/FitnessProjectGr/playlists" target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#7f1d1d">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 48 48">
+                                    <g fill="#1f7a76">
+                                        <path fill-rule="evenodd"
+                                            d="M15 18a4 4 0 1 0 0-8a4 4 0 0 0 0 8m0-2a2 2 0 1 0 0-4a2 2 0 0 0 0 4"
+                                            clip-rule="evenodd" />
+                                        <path d="M18.268 23.402L12.568 21l5.7 2.404zm0 0l.172.073l-.172-.26z" />
+                                        <path fill-rule="evenodd"
+                                            d="M9.82 19.99c.563-.427 1.512-.99 2.749-.99h4.996c1.363 0 2.38.718 2.875 1.118c.58.469 1.082 1.033 1.47 1.515c.619.766 1.19 1.635 1.516 2.128l.007.01q.117.18.184.278c.207.305.35.636.433.974c.073-.388.226-.767.465-1.114q.148-.216.357-.53l.011-.018c.38-.572.893-1.343 1.4-1.974c.36-.449.832-.977 1.403-1.414c.543-.416 1.468-.973 2.678-.973h4.829c1.333 0 2.324.71 2.8 1.099c.562.459 1.046 1.01 1.421 1.48c.597.749 1.15 1.597 1.463 2.078l.004.007l.003.004l.006.009q.11.17.172.262a2.915 2.915 0 0 1-2.564 4.535c.288 1.043.565 1.991.765 2.659c.314 1.053-.317 2.191-1.432 2.424c-3.61.755-6.164.731-10.044-.01a1.92 1.92 0 0 1-1.466-2.457c.206-.663.488-1.592.776-2.618a2.9 2.9 0 0 1-1.836-.509a2.9 2.9 0 0 1-1.174-1.696a3 3 0 0 1-1.268 1.949a3 3 0 0 1-2.51.402l.006.05l.667 6a3 3 0 0 1-5.941.825L15 35.248l-.04.245a3 3 0 0 1-5.942-.825l.518-4.655l.049-1.337a3 3 0 0 1-3.046-4.658q.147-.213.353-.52l.028-.041c.392-.585.923-1.375 1.448-2.02c.374-.46.863-1.001 1.452-1.448M12.57 21c-.618 0-1.144.283-1.542.584c-.406.308-.778.71-1.107 1.114c-.458.564-.939 1.277-1.342 1.877l-.014.02c-.139.207-.271.404-.384.567a1 1 0 1 0 1.64 1.143l1.956-2.81l-.244 6.665l-.526 4.73a1 1 0 0 0 1.98.274l.994-5.962l1.026-.228l1.016.238l.992 5.952a1 1 0 0 0 1.98-.275l-.667-6a1 1 0 0 0-.027-.144l-.032-.125v-5.216l.173.073l1.66 2.51l.206.308a1 1 0 1 0 1.655-1.123l-.194-.292l-3.327-1.403l-.001-.002l3.326 1.402l-.004-.005c-.329-.5-.855-1.298-1.408-1.984c-.349-.432-.748-.873-1.17-1.214c-.394-.318-.958-.674-1.619-.674zm16.284.497c.386-.295.902-.577 1.511-.577h4.829c.652 0 1.205.355 1.586.666c.41.335.797.767 1.134 1.19c.536.671 1.045 1.452 1.363 1.94l.003.005c.072.11.138.211.19.288a.995.995 0 0 1-1.65 1.113a.96.96 0 0 0-1.725.773c.457 1.816 1 3.685 1.329 4.786c-3.325.694-5.617.678-9.27-.018l.001-.003a92 92 0 0 0 1.376-4.865a.96.96 0 0 0-1.724-.773l-.072.106a.995.995 0 0 1-1.638-1.13c.109-.158.237-.35.371-.552l.005-.007c.391-.589.86-1.293 1.307-1.849c.318-.396.679-.79 1.074-1.093M33 18a4 4 0 1 0 0-8a4 4 0 0 0 0 8m0-2a2 2 0 1 0 0-4a2 2 0 0 0 0 4"
+                                            clip-rule="evenodd" />
+                                        <path
+                                            d="M29.8 37.987a1.5 1.5 0 0 1-1.3-1.487v-1.236a36 36 0 0 0 3.317.274l-.37 1.357a1.5 1.5 0 0 1-1.646 1.092m4.752-1.092l-.372-1.362a38 38 0 0 0 3.319-.283v1.25a1.5 1.5 0 0 1-2.947.395" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Προγράμματα
+                                </div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://fittoplay.org/sports/" target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#831843">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#1f7a76" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.5"
+                                        d="M14.5 4.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0M19 8.89l-5.022-.599M19 21l-.456-3.47c-.254-1.928-.38-2.892-1.053-3.4c-.672-.509-1.619-.357-3.513-.054l-1.838.295m1.838-6.08l-1.755-.209c-.803-.096-1.204-.144-1.508.062s-.416.6-.638 1.388l-.668 2.372c-.386 1.368-.579 2.053-.217 2.467c.361.414 1.054.303 2.44.081l.508-.081m1.838-6.08l-1.838 6.08M10 17l-.553 1.106a3 3 0 0 1-1.341 1.341L5 21"
+                                        color="black" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Προθέρμανση
+                                </div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://www.youtube.com/playlist?list=PLpLZE-ZyDcSnAFWwrzfWOsVWdPVRkoNLT"
+                            target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#27272a">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="#1f7a76"
+                                        d="M3.846 11.143c.09-.304.082-.686.082-1.079V7.252c0-.135.033-.52-.02-.6s-.26-.062-.404-.062c-.412 0-.595-.057-.632.336l-.016.01c-.323-.247-.63-.482-1.223-.47l-.197.015a2 2 0 0 0-.336.082a1.62 1.62 0 0 0-.886.89a3 3 0 0 0-.171.607a2 2 0 0 0-.031.62c.03.195.012.365.05.535c.145.61.43 1.083.955 1.31a1.67 1.67 0 0 0 .917.114a1.7 1.7 0 0 0 .59-.22l.223-.164h.005a1.9 1.9 0 0 1-.01.556c-.091.526-.246.704-.771.797a1.5 1.5 0 0 1-.446.011l-.435-.057l-.638-.154a.14.14 0 0 0-.103.088a3.3 3.3 0 0 0 .02.643c.073.122.31.17.457.218c.494.157 1.292.233 1.828.047c.613-.21 1-.624 1.192-1.26zM2.756 8.1v1.445a1.3 1.3 0 0 1-.356.176c-.872.274-1.202-.34-1.202-1.144a2.1 2.1 0 0 1 .093-.73c.077-.199.195-.372.39-.45c.068-.03.152-.023.227-.054a1.8 1.8 0 0 1 .642.1l.193.09c.047.083.014.438.014.567zm3.509 2.756a2.1 2.1 0 0 0 .689-.265l.274-.202c.07.092.043.231.134.301s.798.096.865 0c.068-.095.037-.302.037-.446V8.396c0-.36.027-.763-.057-1.046c-.197-.667-.76-.896-1.632-.887l-.466.03a5 5 0 0 0-.788.172c-.112.04-.283.068-.33.17c-.045.104-.036.647.026.69c.093.063.536-.083.66-.11c.357-.077 1.173-.156 1.372.1c.144.184.12.544.116.876c-.082.02-.224-.035-.31-.052L6.46 8.3a1.5 1.5 0 0 0-.435.014c-.676.116-1.154.373-1.31 1c-.243.963.592 1.746 1.549 1.544ZM6.068 9.07c.098-.058.22-.042.342-.09c.276 0 .509.043.74.053c.043.093.013.563.01.705c-.196.261-.988.521-1.257.15c-.194-.275-.064-.684.165-.818m3.175 1.318c0 .144-.018.287.072.342c.05.03.172.016.247.016c.173 0 .765.036.83-.047c.082-.103.035-.645.035-.834v-2.26a1.6 1.6 0 0 1 .503-.188c.279-.065.648-.066.787.12c.123.164.104.457.104.745v1.565c0 .213-.048.807.072.881c.074.045.412.016.528.016s.457.028.53-.026c.097-.074.056-.6.056-.788q0-1.164.005-2.33c.04-.066.202-.093.28-.12c.342-.12.875-.2 1.041.134c.082.173.057.488.057.742v1.552c0 .185-.041.687.036.788c.046.06.151.047.254.047c.155 0 .77.027.84-.026c.102-.078.061-.39.061-.565v-1.61c0-.68.053-1.298-.247-1.685c-.537-.7-1.953-.325-2.472.12h-.02c-.199-.334-.54-.522-1.081-.514l-.218.016a2.5 2.5 0 0 0-.435.098a3.3 3.3 0 0 0-.523.247l-.254.156c-.092-.11-.036-.292-.165-.368c-.05-.03-.714-.038-.807-.015a.17.17 0 0 0-.088.057c-.055.082-.027.625-.027.782zm7.936.175c.51.32 1.426.39 2.15.208c.182-.045.537-.11.6-.259a4 4 0 0 0 .01-.622a.15.15 0 0 0-.066-.077c-.065-.028-.165.02-.228.036l-.534.098a2 2 0 0 1-.59.022a3 3 0 0 1-.412-.058c-.406-.123-.675-.425-.68-.943c.097-.043.413-.01.544-.01h1.32c.19 0 .493.04.61-.047c.155-.116.144-.894.093-1.144c-.17-.85-.682-1.318-1.71-1.3l-.124.005l-.373.05c-.4.102-.746.287-.968.566a2.1 2.1 0 0 0-.306.494c-.203.482-.259 1.353-.087 1.93c.138.46.381.818.751 1.05zm.305-2.682c.093-.268.247-.463.518-.55l.232-.044c.615-.005.784.313.777.928c-.083.038-.35.01-.467.01h-1.117c-.034-.086.03-.27.057-.347zm6.398 1.087c-.247-.428-.784-.595-1.264-.792c-.227-.094-.6-.172-.653-.435c-.113-.564 1.045-.4 1.388-.316c.096.023.317.11.378.03s.032-.27.032-.393c0-.1.013-.23-.027-.295c-.059-.1-.215-.128-.336-.165a3 3 0 0 0-.964-.14l-.296.022a2.4 2.4 0 0 0-.538.144a1.22 1.22 0 0 0-.659.642c-.184.455-.01 1.058.265 1.28c.33.266.777.417 1.2.59c.215.088.458.138.504.394c.122.697-1.196.444-1.59.342c-.083-.022-.343-.11-.413-.072c-.094.053-.057.317-.057.46c0 .083-.012.2.021.254c.1.165.645.27.886.317c.956.19 1.806-.134 2.113-.736c.154-.29.182-.834.01-1.133zm-3.357 4.088l-.18.01a3 3 0 0 0-.524.058a3.6 3.6 0 0 0-1.114.39c-.083.05-.412.21-.352.36c.047.12.524.02.678.01c.305-.02.454-.046.742-.045h.528a3 3 0 0 1 .472.03a.7.7 0 0 1 .284.136c.12.103.098.452.057.616a11.5 11.5 0 0 1-.476 1.554c-.034.082-.3.602-.005.54c.133-.03.404-.33.487-.43c.412-.528.672-1.134.865-1.896c.045-.178.147-.874.046-1.036c-.165-.27-1.037-.306-1.508-.297m-.643 1.483l-.472.207l-.78.295c-.697.27-1.47.446-2.245.638l-.907.17l-1.067.14l-.342.026c-.136.03-.297.012-.45.036a7 7 0 0 1-1.02.042l-.772.005l-.555-.02l-.357-.02c-.082-.017-.18-.006-.27-.022l-1.082-.12c-.32-.06-.665-.081-.97-.164l-.253-.042l-.941-.21c-.673-.21-1.341-.375-1.97-.617c-.696-.27-1.424-.564-2.04-.928l-.61-.352c-.112-.066-.202-.164-.38-.164c-.131.065-.171.15-.081.305a1 1 0 0 0 .238.233l.28.26c.404.32.81.65 1.248.937c.38.247.783.457 1.18.69l.597.284c.34.15.694.305 1.05.445l.918.305c.495.165 1.033.248 1.566.38l1.124.163l.362.027l.612.046h.222a2.5 2.5 0 0 0 .653.006l.233-.006l.285-.005l.974-.077c.437-.098.897-.083 1.31-.208l.954-.232a16 16 0 0 0 1.673-.586a12 12 0 0 0 1.947-1.036c.211-.142.51-.247.565-.544c.047-.25-.21-.347-.427-.287" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Παιχνίδια</div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://www.youtube.com/@MVMTwithCailin/playlists" target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#7f1d1d">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 24 24">
+                                    <path fill="none" stroke="#1f7a76"
+                                        d="M0 20.5h24m-10-11H3.5a2 2 0 0 0-1.831 1.195c-.214.485.042 1.016.417 1.39l4.53 4.531a3.02 3.02 0 0 0 4.268 0L15 12.5h2s3.036.174 6.5-1.826M10 14L5.5 9.5m-2.805-2S.885 6.943.56 5.724a1.77 1.77 0 0 1 1.242-2.163a1.75 1.75 0 0 1 2.146 1.25c.324 1.219-.962 2.61-.962 2.61z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Pilates
+                                </div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://www.youtube.com/playlist?list=PLIh1VGKM_YYye-qffT9UNU-exrO9CjPSd"
+                            target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#831843">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 32 32">
+                                    <path fill="#1f7a76"
+                                        d="M14 5c-1.094 0-2 .906-2 2v1H6c-1.645 0-3 1.355-3 3v15h26V11c0-1.645-1.355-3-3-3h-6V7c0-1.094-.906-2-2-2zm0 2h4v1h-4zm-8 3h20c.566 0 1 .434 1 1v13H5V11c0-.566.434-1 1-1m9 3v3h-3v2h3v3h2v-3h3v-2h-3v-3z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Πρώτες Βοήθειες
+                                </div>
+
+                            </div>
+                        </a><br>
+                        <a href="https://www.sport24.gr/tvprogram/" target="_blank"
+                            class="playlist-item flex group relative p-2 overflow-hidden items-center gap-5 rounded-md shadow-lg hover:shadow-xl outline-none hover:bg-zinc-500/10 focus:bg-zinc-500/50"
+                            data-color="#27272a">
+                            <div class="h-12 w-12 flex-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 48 48">
+                                    <path fill="#1f7a76"
+                                        d="M8.75 8A4.75 4.75 0 0 0 4 12.75v18.5A4.75 4.75 0 0 0 8.75 36h30.5A4.75 4.75 0 0 0 44 31.25v-18.5A4.75 4.75 0 0 0 39.25 8zM6.5 12.75a2.25 2.25 0 0 1 2.25-2.25h30.5a2.25 2.25 0 0 1 2.25 2.25v18.5a2.25 2.25 0 0 1-2.25 2.25H8.75a2.25 2.25 0 0 1-2.25-2.25zm4.75 26.75a1.25 1.25 0 1 0 0 2.5h25.5a1.25 1.25 0 1 0 0-2.5z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-auto flex-col truncate">
+                                <div class="text-gray-400 font-semibold w-full flex-none truncate">Πρόγραμμα TV</div>
+
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-lg bg-zinc-900 flex-1 mx-auto overflow-y-auto">
+            <div class="relative bg-zinc-900 min-h-full flex flex-col overflow-x-hidden rounded-lg"
+                data-astro-cid-ynobxoya data-astro-transition-scope="astro-e25utfpp-1">
+                <div class="relative z-10 py-4 px-6 flex justify-between" data-astro-transition-persist="page header"
+                    data-astro-transition-scope="astro-nhjkrpzs-5"><a href="spot.html" aria-label="go back to home page"
+                        class="bg-zinc-900 rounded-full inline-flex justify-center items-center h-8 w-8"><svg
+                            viewBox="0 0 16 16" class="h-4 w-4 -ml-0.5" astro-icon="bi:chevron-left">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg></a>
+                    <div class="flex items-center gap-3">
+                        <a target="_blank" href="https://kurziokode.github.io/final.mp4"
+                            class="flex relative overflow-hidden group bg-gradient-to-br from-black/10 to-black/40 rounded-md px-2.5 h-7 text-gray-200 hover:text-white transition-colors gap-1 items-center">
+                            <span class="font-bold" style="color: #1f7a76;">Χρήστος Δούλος</span>
+                        </a>
+                        <a target="_blank" aria-label=""
+                            href="https://calendar.proton.me/u/1/"
+                            class="text-gray-200 hover:text-white">
+<svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 512 512">
+    <path fill="#80ffff"
+        d="M256 24c-67.8 0-111.5 43.46-132.4 97.8c-20 52-20.8 114.2-6.1 163.5l14.2-16.1c-10.1-43.5-8.1-97.2 8.7-141C159.5 78.54 195.7 42 256 42c60.2 0 96.5 36.54 115.6 86.2c16.8 43.8 18.8 97.5 8.7 141l14.2 16.1c14.7-49.3 13.9-111.5-6.1-163.5C367.5 67.46 323.8 24 256 24m0 92.8c-18.2 0-34.2 17.8-34.2 41.6s16 41.6 34.2 41.6s34.2-17.8 34.2-41.6s-16-41.6-34.2-41.6M231.3 211c-17.3 3.8-31.3 10.2-33.9 11.4l-74.6 84l8.3 16.6l85.9-68.7V417h30v-64h18v135h30V254.3l85.9 68.7l8.3-16.6l-74.6-84c-2.6-1.2-16.6-7.6-33.9-11.4c-7.3 4.4-15.7 7-24.7 7s-17.4-2.6-24.7-7" />
+</svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center md:flex-row md:items-stretch gap-8 px-6" data-astro-cid-ynobxoya>
+                    <div class="h-52 w-52 flex-none" data-astro-cid-ynobxoya><img
+                            src="fir.png" alt="Electronic Party"
+                            class="object-cover h-full w-full shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
+                            data-astro-cid-ynobxoya data-astro-transition-scope="astro-md2ueubm-2"></div>
+                    <div class="flex flex-col justify-between" data-astro-cid-ynobxoya>
+
+                        <div data-astro-cid-ynobxoya>
+                            <h1 class="title-clamp font-bold block" data-astro-cid-ynobxoya style="color: #404040;">A΄
+                                Δημοτικού<span data-astro-cid-ynobxoya
+                                    data-astro-transition-scope="astro-n54cedvl-3"></span></h1>
+                        </div>
+                        <div class="flex-1 flex items-end" data-astro-cid-ynobxoya>
+                            <div class="text-sm" data-astro-cid-ynobxoya>
+
+                                <div class="mt-1" data-astro-cid-ynobxoya><a href="http://ebooks.edu.gr/ebooks/handle/8547/79" target="_blank"><span class="font-bold"
+                                        data-astro-cid-ynobxoya style="color: #808080;">Βιβλία 2024-25</span></a></div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900/30 mt-6 flex-1 p-6 blur-100" data-astro-cid-ynobxoya>
+                    <div class="flex gap-1 items-center" data-astro-cid-ynobxoya>
+                        <div class="ml-4" data-astro-cid-ynobxoya data-astro-transition-scope="astro-xxzi7tl5-4"></div>
+                        <button type="button"
+                            class=" hover:scale-105 rounded-full flex items-center justify-center h-12 w-12"><a
+                                href="/playlist/4a" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 512 512">
+                                    <path fill="#1f7a76"
+                                        d="M264.234 33.64a95 95 0 0 0-10.957.608C190.895 41.376 131.82 93.06 100.975 152.756l.353-.287l7.463-5.899l5.477 7.778c1.554 2.208 2.872 4.663 4.033 7.34c7.928-17.487 21.63-34.571 40.363-46.084l7.61-4.676l4.734 7.572c2.502 4.003 4.31 8.702 5.713 14.016c9.889-16.645 25.602-32.252 45.758-41.608l8.101-3.76l3.822 8.073q.228.486.442.982c9.782-13.132 23.275-24.935 39.728-32.572l8.102-3.762l3.822 8.072c1.356 2.864 2.351 6.017 3.104 9.416c8.43-10.724 19.573-20.548 32.812-27.744c-18.601-9.895-38.4-15.936-58.178-15.972zm140.498 19.813c-21.58 4.89-40.88 18.458-50.029 31.264c-5.337 7.47-6.704 14.015-5.808 17.388s3.457 6.667 14.306 8.53c3.785.65 8.053-.756 13.291-5.094c5.239-4.338 10.728-11.384 15.358-19.36c4.629-7.974 8.462-16.865 10.949-24.75c.915-2.9 1.414-5.45 1.933-7.978m-71.066 10.74c-19.686 10.104-35.007 28.047-40.684 42.725c-1.002 2.592-1.669 5.007-2.07 7.205q-.202 2.01-.46 4.022c-.123 3.113.378 5.538 1.23 7.058c1.706 3.045 5.005 5.597 15.976 4.703c3.827-.312 7.612-2.734 11.608-8.238c3.995-5.505 7.56-13.695 10.06-22.57s4-18.44 4.45-26.696c.164-3.037.016-5.63-.11-8.209m-61.148 21.221c-15.32 10.048-27.077 25.116-32.995 38.63c.178 8.541-.428 17.78-1.966 26.833q-.005.03-.012.059c2.075 2.643 5.784 4.535 16.084 2.58c3.772-.716 7.28-3.525 10.668-9.422s6.065-14.421 7.61-23.512c1.544-9.09 2.021-18.762 1.591-27.018c-.158-3.037-.581-5.6-.98-8.15m-52.096 27.28c-18.503 12.135-31.833 31.6-35.92 46.798c-2.384 8.867-1.373 15.474.646 18.32s5.57 5.036 16.385 2.983c3.773-.716 7.28-3.527 10.668-9.424c3.389-5.897 6.065-14.419 7.61-23.51c1.544-9.09 2.021-18.761 1.591-27.017c-.158-3.038-.581-5.6-.98-8.15m172.715 1.915a65 65 0 0 1-5.164 4.795c-7.692 6.37-17.404 10.759-27.819 8.971a53 53 0 0 1-5.308-1.19a24 24 0 0 0-.545 1.585c9.883 3.882 19.338 8.95 27.293 14.312c.488.329.951.657 1.427.986c14.312-1.453 31.422-7.418 45.325-17.963c-2.27-1.23-4.543-2.485-7.352-3.652c-7.635-3.17-16.909-5.96-25.992-7.549c-.624-.109-1.244-.198-1.865-.295m-233.983 22.87c-16.968 14.203-27.946 35.087-30.238 50.658c-1.337 9.083.435 15.528 2.772 18.12s6.118 4.353 16.62 1.057c3.664-1.15 6.82-4.348 9.5-10.6c2.68-6.25 4.35-15.025 4.827-24.234c.477-9.208-.174-18.869-1.56-27.02c-.511-2.998-1.228-5.495-1.92-7.981zm167.551 2.595c-4.894 4.226-10.774 7.219-17.586 7.774c-.776.063-1.542.098-2.305.129c-4.164 5.764-3.952 9.104-2.789 11.761c1.4 3.198 6.544 7.467 15.371 9.99c15.132 4.326 38.685 2.928 58.618-6.681c-1.981-1.656-3.96-3.338-6.483-5.04c-6.855-4.62-15.39-9.193-23.978-12.552c-7.288-2.85-14.632-4.777-20.848-5.38zm86.656 15.182a107 107 0 0 1-13.511 4.318c.112.164.23.326.34.49l4.949 7.434l-7.397 5.006c-20.412 13.818-44.598 18.985-65.494 17.557c1.179 1.786 2.212 3.592 3.055 5.435l3.713 8.123l-8.094 3.776c-18.069 8.427-37.682 10.878-55.32 9.015c3.324 5.162 5.82 10.156 7.115 15.174l2.232 8.648l-8.63 2.3c-16.504 4.394-33.356 4.273-48.56 1.052c2.399 4.105 4.226 8.128 5.268 12.166l2.233 8.648l-8.631 2.3c-17.359 4.621-35.103 4.246-50.908.525c3.2 5.494 5.503 10.687 6.41 16.017l1.59 9.344l-9.414 1.103c-29.326 3.442-58.181-6.708-75.637-21.18c-4.087-3.387-7.717-7.113-10.414-11.218c17.989 59.19 62.717 123.576 62.717 123.576l-35.479 68.797c49.496 25.554 105.19 38.708 170.56 32.514c-1.767-32.096 16.473-55.814 33.022-74.514c-14.59-.975-29.987-2.226-44.846-5.064c-16.51-3.155-32.54-8.341-46.003-18.032c-13.464-9.69-24.033-24.105-28.956-43.7l17.458-4.387c3.99 15.88 11.622 26 22.011 33.478c10.39 7.478 23.863 12.094 38.87 14.961c25.516 4.875 54.75 4.428 79.554 7.643c26.748-2.02 57.07 2.601 63.441-8.596c15.568-27.36 5.054-63.93-3.44-92.492c18.463-.61 28.178-1.69 38.735-4.967c-8.607-34.5-21.86-54.883-43.703-73.5c1.629-20.453 4.194-42.05 1.164-61.75m-143.705 10.031c-3.632 2.872-7.843 4.998-12.672 5.914c-5.147.977-10.06 1.154-14.574.598c-2.391 3.278-2.569 5.739-2.08 7.879a119 119 0 0 1 9.176 7.135a140 140 0 0 1 7.195 6.628c14.405 5.749 36.32 7.451 56.233 1.496c-1.694-1.947-3.382-3.92-5.604-5.998c-6.039-5.646-13.746-11.51-21.695-16.183c-5.387-3.167-10.897-5.746-15.979-7.469m-165.892 9.828C91.6 189.035 84.35 207.673 83.58 221.33c-.47 8.343 1.653 14.076 3.498 15.916s4.091 3.065 12.469-.613c2.48-1.089 4.922-4.003 6.73-9.848s2.59-13.96 2.32-22.369c-.268-8.409-1.532-17.143-3.308-24.436c-.448-1.84-1.006-3.23-1.525-4.865m117.484 14.098c-4.367 4.56-9.797 8.02-16.357 9.266c-4.519.857-8.861 1.105-12.909.779q.006.21.02.418c.17 2.194 1.611 5.283 4.533 8.59q1.66 1.328 3.281 2.713a138 138 0 0 1 3.963 3.544c12.956 8.865 35.325 15.08 57.012 12.59c-1.326-2.214-2.642-4.454-4.465-6.888c-4.955-6.618-11.512-13.74-18.52-19.735c-5.473-4.682-11.249-8.637-16.558-11.277m-51.684 23.215c-3.888 5.477-9.097 9.938-15.865 12.062c-3.643 1.144-7.216 1.857-10.646 2.15c1.39 3.355 4.753 7.65 10.494 11.69c12.87 9.058 35.571 15.474 57.555 12.95c-1.327-2.215-2.642-4.455-4.465-6.89c-4.956-6.617-11.515-13.74-18.522-19.734c-6.165-5.274-12.72-9.645-18.55-12.228zm-48.607 26.136c-2.982 6.2-7.496 11.62-14.174 14.551c-.504.222-1.01.415-1.515.615a35 35 0 0 0 4.89 4.92c10.574 8.766 29.946 16.537 49.654 17.452c-.717-1.297-1.208-2.436-2.085-3.8c-3.937-6.115-9.315-12.875-15.207-18.734c-5.892-5.858-12.349-10.798-18.014-13.533a32 32 0 0 0-3.549-1.47zm-48.676 9.061l-33.43 21.395l9.704 15.162l38.591-24.698a30.5 30.5 0 0 1-1.767-3.634c-4.235-.94-8.022-2.876-11.012-5.858a27 27 0 0 1-2.086-2.367" />
+                                </svg>
+                            </a></button>
+
+                        <button type="button"
+                            class=" hover:scale-105 rounded-full flex items-center justify-center h-12 w-12"><a
+                                href="https://ibb.co/x1qjzZc" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 512 512">
+                                    <path fill="#1f7a76"
+                                        d="M127.1 23.61c-15.1 0-29.07 3.58-40.11 9.76c-5.16 2.87-9.68 6.27-13.49 10.09c4.99-2.71 10.75-4.42 16.8-5.71c11-2.36 23.8-3.12 36.5-2.98v.1c12.7.13 25.4 1.15 36.5 2.37h.4c1.9.29 7.5.72 14.7 1.25c-10.1-6.57-22.3-11.4-35.8-13.61c-5.2-.85-10.4-1.27-15.5-1.27M122 52.89c-10.3.1-20.1.79-27.95 2.46c-8.96 1.91-14.68 5.25-16.35 7.61c-1.63 2.31-2.35 4.98 2.3 13.04c-.48-.77 2.24 1.64 7.29 3.15c5.17 1.55 12.32 2.83 20.11 3.54c15.5 1.51 33.9.84 45.5-1.97l1.2-.3l1.4.1c70.6 3.57 91.9 3.8 154 38.48l10.9 6.1l-9.2 8.4c-27.2 24.9-52.1 53.8-68 79.8c-7.9 13-13.5 25.2-16.1 35.4c-2.5 9.8-2.1 17.2.1 22.4c38.1 42.1 56.7 47.8 115.9 70.9l6.8 2.7l-1.2 7.2c-8 47.8-13.2 87.6-10.7 135.8h83.8l.3-10l-58.3-14.1l1.9-8.7c7.4-33.7 12.4-66.3 18.2-99.7l1.6-11l.3-.8c.2-.5.4-1.2.5-1.7c.8-3.8 1.4-7.6 2.2-11.5c-8.9-21.7-25.9-40.1-74.4-65.1l-10.8-5.6l8.5-8.7c23.5-24.2 46.5-46.8 83.9-49.8l9.6-.7l.1 9.6c.2 16 3.1 40.9 4.3 66.5c1 24.2.7 49-5.8 69.5c-.8 4.1-1.6 8.3-2.3 12.4l-2.1 13.8c6.8.3 12.8-.3 17.1-2.3c6.2-2.9 11.1-8.1 13.1-23.4c-.2-52.2 18.2-104.2 9.1-150.1v-.1c-2-9.7-6.6-19.1-13-28.4c-25.3 9.6-53.7 4.2-67.7-16.6c-11.2-16.5-9.7-37.1.7-54.34c-.2-.27-.5-.52-.7-.79c-6.2-7.15-20.5-14.5-38.8-19.99C301 70.6 279 66.6 257.2 63.72c-21.7-2.89-43.1-4.69-60.3-5.96c-17.3-1.26-29.6-1.85-36-2.82l.4.1c-10.6-1.17-22.9-2.05-34.9-2.15zM59.94 74.2c-.33 13.08 5.2 26 15.54 37C87.17 123.8 105 133.6 126 137c21.1 3.5 40.9-.2 55.7-8.5c11.8-6.6 20.3-15.8 24.3-26.9c-13.7-1.3-29.7-2.02-50.5-3.05c-14.7 3.35-33.2 3.75-49.8 2.15c-8.67-.88-16.74-2.26-23.58-4.31S69.3 92.4 65.02 86.07l-.16-.24l-.15-.25c-2.22-3.77-3.81-7.61-4.77-11.38m359.76 6.16c-9.2-.1-19.2 2.67-28.6 8.69c-21.3 13.75-27.9 37.55-17.9 52.35c10 14.9 35 18.3 56.4 4.5c21.3-13.8 27.9-37.5 17.9-52.39c-5.6-8.34-16-13.07-27.8-13.15M328.2 366.2c-35.6 12.6-70.9 30.9-96 60.9c6.4 19 8.6 42.3 8.3 61.3H258c5.2-17.4 9-39 5.9-52.8l-1.5-7l61.1-29.7c1.4-10.7 2.9-21.6 4.7-32.7" />
+                                </svg>
+                            </a></button>
+
+                        <button type="button"
+                            class=" hover:scale-105 rounded-full flex items-center justify-center h-12 w-12"><a
+                                href="/playlist/4a" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 512 512">
+                                    <path fill="#1f7a76"
+                                        d="M256 23C140.57 23 73.01 90.16 24.283 171.37L23 173.507V309.85l142.268 63.228C175.353 408.092 183 436.353 183 480h18c0-2.378-.028-4.703-.07-7h22.304l.405 7.484l17.973-.968l-.35-6.516h29.14l-.366 6.496l17.973 1.008l.422-7.504h22.64c-.042 2.3-.072 4.624-.072 7h18c0-43.265 7.505-72.296 17.453-106.797L489 309.85V173.508l-1.283-2.14C438.99 90.16 371.43 23 256 23m0 18c107.607 0 167.912 59.792 215 137.563V298.15l-118.027 52.457a1183 1183 0 0 0 5.96-21.607H384v-34h-23V167H151v128h-23v34h25.023a1065 1065 0 0 0 5.81 21.52L41 298.15V178.563C88.088 100.793 148.393 41 256 41m-87 144h174v110H169zm2.61 144h43.863l1.617 30h-37.115c-2.71-9.403-5.528-19.275-8.364-30zm61.888 0h44.982l-1.683 30h-41.682zm63.012 0h43.804c-2.88 10.63-5.75 20.51-8.507 30h-36.98zm-111.377 48h32.928l1.618 30h-26.756c-2.27-10.02-4.922-19.86-7.79-30m50.953 0h39.7l-1.682 30h-36.4zm57.73 0h32.825c-2.83 10.065-5.443 19.92-7.683 30h-26.824zm-97.308 48h24.14l1.618 30h-22.14a306 306 0 0 0-3.618-30m42.166 0h34.422l-1.684 30h-31.12zm52.45 0h24.31a315 315 0 0 0-3.563 30h-22.43l1.685-30z" />
+                                </svg>
+                            </a></button>
+
+                        <button type="button"
+                            class=" hover:scale-105 rounded-full flex items-center justify-center h-12 w-12"><a
+                                href="https://roloi.net/chronometro/#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 512 512">
+                                    <path fill="#1f7a76"
+                                        d="M247 62.107v9.94h-28.88v18H247v39.074c-84.367 4.682-151.514 74.737-151.514 160.26c0 41.037 15.468 78.508 40.873 106.91l-36.237 36.237l12.727 12.73l36.238-36.24C177.49 434.425 214.96 449.894 256 449.894s78.51-15.47 106.912-40.875l36.238 36.238l12.727-12.73l-36.236-36.235c25.406-28.402 40.874-65.873 40.874-106.91c0-85.523-67.147-155.578-151.514-160.26V90.048h28.88v-18H265v-9.94h-18zm-104.906 26.58a112 112 0 0 0-11.014.465C111.1 90.97 89.15 98 73.637 113.514c-15.514 15.513-22.545 37.462-24.362 57.443c-.908 9.99-.488 19.54 1.184 27.898c1.67 8.36 4.315 15.662 9.784 21.13l6.363 6.365l6.366-6.364l113.5-113.502l-6.366-6.363c-5.47-5.468-12.77-8.112-21.128-9.784c-4.18-.836-8.658-1.358-13.34-1.56q-1.755-.076-3.546-.088zm227.812 0q-1.79.015-3.547.09c-4.682.2-9.16.723-13.34 1.56c-8.357 1.67-15.658 4.315-21.127 9.784l-6.366 6.364l6.366 6.366l113.5 113.5l6.363-6.364c5.47-5.47 8.113-12.772 9.785-21.13c1.673-8.36 2.093-17.908 1.185-27.9c-1.817-19.98-8.848-41.93-24.362-57.442C422.85 98 400.9 90.97 380.92 89.152c-3.747-.34-7.43-.494-11.014-.465M256 146.865c78.815 0 142.514 63.7 142.514 142.514S334.814 431.892 256 431.892s-142.514-63.7-142.514-142.514c0-78.816 63.7-142.515 142.514-142.515zm-88.332 41.453l-12.73 12.73l82.92 82.917a19 19 0 0 0-.797 5.414A18.94 18.94 0 0 0 256 308.317a18.94 18.94 0 0 0 16.66-9.94h59.096v-18h-59.11A18.94 18.94 0 0 0 256 270.44a19 19 0 0 0-5.408.804l-82.924-82.924z" />
+                                </svg>
+                            </a></button>
+
+                    </div>
+                    <div class="px-6 pt-4" data-astro-cid-ynobxoya>
+                        <table class="table-auto text-left min-w-full divide-y-2 divide-gray-500/30">
+                            <thead class="text-2xl" style="color: #595959;">
+                                <tr>
+                                    <th class="font-normal px-4 py-2 whitespace-nowrap">#</th>
+                                    <th class="font-normal px-4 py-2 whitespace-nowrap">Ονοματεπώνυμο</th>
+                                    <th class="font-normal px-4 py-2 whitespace-nowrap">Παρατηρήσεις</th>
+                                    <th class="font-normal px-4 py-2 whitespace-nowrap text-right">Βαθμολογία</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-2xl" style="color: #1f7a76;">
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">1</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">2</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">3</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">4</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">5</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">6</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">7</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">8</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">9</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">10</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+                                <tr class="group hover:bg-gray-500/20">
+                                    <td class="whitespace-nowrap px-4 py-2">11</td>
+                                    <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+
+                                        <div class="leading-none"><a href="#"
+                                                class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                                style="color: #808080;">The
+                                                Nights</a>
+
+                                        </div>
+                                    </td>
+                                    <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                                            class="text-gray-300 group-hover:text-white hover:underline text-sm font-bold"
+                                            style="color: #808080;">The
+                                            Days </a></td>
+                                    <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+                    style="--context-color:#2ee9d7" data-astro-cid-ynobxoya><img
+                        src="https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_1_yci5uf.jpg"
+                        alt="Electronic Party"
+                        class="el-to-fade transition-all duration-500 z-[-1] absolute inset-0 mix-blend-overlay opacity-20 scale-90 w-full h-full object-cover blur-md"
+                        data-astro-cid-ynobxoya>
+                    <div class="absolute inset-0 bg-gradient-to-t via-transparent from-zinc-900"
+                        data-astro-cid-ynobxoya></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        function setContainerColor(dataColor) {
+            const playlistContainer = document.getElementById("playlist-container");
+            const currentColor = playlistContainer?.getAttribute("data-color");
+            if (dataColor && dataColor !== currentColor) {
+                playlistContainer?.style.setProperty("--context-color", dataColor);
+                playlistContainer?.setAttribute("data-color", dataColor);
+            }
+        }
+
+        window.coloradTimeout = null;
+        for (const playlist of document.querySelectorAll(".playlist-item")) {
+            playlist.addEventListener("mouseover", () =>
+                onMouseOverColorad(playlist)
+            );
+            playlist.addEventListener("mouseout", onMouseOutColorad);
+            playlist.addEventListener("focus", () => onMouseFocusColorad(playlist));
+            playlist.addEventListener("blur", onMouseOutColorad);
+        }
+
+        function onMouseFocusColorad(el) {
+            if (el) {
+                const dataColor = el.getAttribute("data-color");
+                if (!dataColor) return;
+                setContainerColor(dataColor);
+            }
+        }
+        function onMouseOverColorad(el) {
+            if (el) {
+                const dataColor = el.getAttribute("data-color");
+                if (!dataColor) return;
+                window.coloradTimeout = setTimeout(
+                    () => setContainerColor(dataColor),
+                    200
+                );
+            }
+        }
+        function onMouseOutColorad() {
+            if (window.coloradTimeout) {
+                clearTimeout(window.coloradTimeout);
+                window.coloradTimeout = null;
+            }
+        }
+    </script>
+</body>
+
+</html>
+<script async data-explicit-opt-in="true" data-cookie-opt-in="true"
+    src="https://vercel.live/_next-live/feedback/feedback.js"></script>
