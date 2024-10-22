@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Clone of Spotify with Astro View Transitions integration for fluid navigation">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="66.png">
+    <meta name="generator" content="Astro v3.0.12">
+    <title>Chris Doulos Sports</title>
+    <meta property="og:image"
+        content="https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_1_yci5uf.jpg">
+    <meta name="twitter:image"
+        content="https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_1_yci5uf.jpg">
+    <meta name="astro-view-transitions-enabled" content="true">
+    <meta name="astro-view-transitions-fallback" content="none">
+    <link rel="stylesheet" href="spot.css" />
+    <style type="text/css">
+        .title-clamp[data-astro-cid-ynobxoya] {
+            font-size: clamp(20px, 6vw, 70px);
+            line-height: 1
+        }
+    </style>
+    <script type="module" src="spot.js"></script>
+    <style>
+        [data-astro-transition-scope="astro-e25utfpp-1"] {
+            view-transition-name: playlist_1_side_box;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_box) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-e25utfpp-1"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-e25utfpp-1"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-md2ueubm-2"] {
+            view-transition-name: playlist_1_side_image;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_image) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-md2ueubm-2"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-md2ueubm-2"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-n54cedvl-3"] {
+            view-transition-name: playlist_1_side_title;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_title) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-n54cedvl-3"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-n54cedvl-3"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            view-transition-name: playlist_1_side_play;
+        }
+
+        @layer astro {
+            ::view-transition-old(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(playlist_1_side_play) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-xxzi7tl5-4"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-xxzi7tl5-4"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+    <style>
+        [data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            view-transition-name: page_header;
+        }
+
+        @layer astro {
+            ::view-transition-old(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            ::view-transition-new(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+
+            [data-astro-transition=back]::view-transition-old(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeOut;
+            }
+
+            [data-astro-transition=back]::view-transition-new(page_header) {
+                animation-duration: 180ms;
+                animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+                animation-fill-mode: both;
+                animation-name: astroFadeIn;
+            }
+        }
+
+        [data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition-fallback="old"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition-fallback="new"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeOut;
+        }
+
+        [data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-nhjkrpzs-5"],
+        [data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-nhjkrpzs-5"] {
+            animation-duration: 180ms;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation-fill-mode: both;
+            animation-name: astroFadeIn;
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <div class="relative h-screen p-2 gap-2 flex items-stretch">
+
+        <div class="rounded-lg bg-zinc-900 flex-1 mx-auto overflow-y-auto">
+            <div class="relative bg-zinc-900 min-h-full flex flex-col overflow-x-hidden rounded-lg"
+                data-astro-cid-ynobxoya data-astro-transition-scope="astro-e25utfpp-1">
+                <div class="relative z-10 py-4 px-6 flex justify-between" data-astro-transition-persist="page header"
+                    data-astro-transition-scope="astro-nhjkrpzs-5">
+
+
+                    <a href="mob.html" class="text-gray-200 hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+                            <path fill="#c0c0c0" fill-opacity="0.25"
+                                d="M5 14.059c0-1.01 0-1.514.222-1.945c.221-.43.632-.724 1.453-1.31l4.163-2.974c.56-.4.842-.601 1.162-.601s.601.2 1.162.601l4.163 2.973c.821.587 1.232.88 1.453 1.311s.222.935.222 1.944V19c0 .943 0 1.414-.293 1.707S17.943 21 17 21H7c-.943 0-1.414 0-1.707-.293S5 19.943 5 19z" />
+                            <path fill="#c0c0c0"
+                                d="M3 12.387c0 .266 0 .4.084.441s.19-.04.4-.205l7.288-5.668c.59-.459.885-.688 1.228-.688s.638.23 1.228.688l7.288 5.668c.21.164.316.246.4.205s.084-.175.084-.441v-.409c0-.48 0-.72-.102-.928s-.291-.356-.67-.65l-7-5.445c-.59-.459-.885-.688-1.228-.688s-.638.23-1.228.688l-7 5.445c-.379.294-.569.442-.67.65S3 11.498 3 11.978zM12.5 15h-1a2 2 0 0 0-2 2v3.85c0 .083.067.15.15.15h4.7a.15.15 0 0 0 .15-.15V17a2 2 0 0 0-2-2" />
+                            <rect width="2" height="4" x="16" y="5" fill="#c0c0c0" rx=".5" />
+                        </svg>
+                    </a>
+
+                    <div class="flex items-center gap-3">
+                        <a target="_blank" href="https://kurziokode.github.io/final.mp4"
+                            class="flex relative overflow-hidden group bg-gradient-to-br from-black/10 to-black/40 rounded-md px-2.5 h-7 text-gray-200 hover:text-white transition-colors gap-1 items-center">
+                            <span class="font-semibold" style="color: #9d2f89;">Χρήστος Δούλος</span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="flex flex-col items-center md:flex-row md:items-stretch gap-8 px-6" data-astro-cid-ynobxoya>
+                    <div class="h-52 w-52 flex-none" data-astro-cid-ynobxoya><img src="pur.png" alt=""
+                            class="object-cover h-full w-full shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
+                            data-astro-cid-ynobxoya data-astro-transition-scope="astro-md2ueubm-2" style="filter: brightness(0.6);"></div>
+                    <div class="flex flex-col justify-between" data-astro-cid-ynobxoya>
+
+                        <div data-astro-cid-ynobxoya>
+                            <h1 class="title-clamp font-semibold block" data-astro-cid-ynobxoya style="color: #404040;">Ε΄
+                                Δημοτικού<span data-astro-cid-ynobxoya
+                                    data-astro-transition-scope="astro-n54cedvl-3"></span></h1>
+                        </div>
+                        <div class="flex-1 flex items-end" data-astro-cid-ynobxoya>
+                            <div class="text-sm" data-astro-cid-ynobxoya>
+
+                                <div class="mt-1" data-astro-cid-ynobxoya><a
+                                        href="http://ebooks.edu.gr/ebooks/handle/8547/83" target="_blank"><span
+                                            class="font-bold" data-astro-cid-ynobxoya style="color: #666666;">Βιβλία Φ.Α
+                                            2024-25</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900/30 mt-6 flex-1 p-6 blur-100" data-astro-cid-ynobxoya>
+                    <div class="flex gap-1 items-center" data-astro-cid-ynobxoya>
+                        <div class="ml-4" data-astro-cid-ynobxoya data-astro-transition-scope="astro-xxzi7tl5-4"></div>
+                        <button type="button" class=" hover:scale-105 rounded-full flex items-center justify-center h-12 w-12"><a
+                                href="https://calendar.proton.me/u/1/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 512 512">
+                                    <path fill="#9d2f89"
+                                        d="M119 31v66h18V31zm256 0v66h18V31zM73 89v30h366V89h-28v26h-54V89H155v26h-54V89zm0 48v302h366V137zm110 14h18v32h46v-32h18v32h46v-32h18v32h46v-32h18v32h32v18h-32v46h32v18h-32v46h32v18h-32v46h32v18H265v32h-18v-32h-46v32h-18v-32h-46v32h-18v-32H87v-18h32v-46H87v-18h32v-46H87v-18h32v-46H87v-18h96zm-46 50v46h46v-46zm64 0v46h46v-46zm64 0v46h46v-46zm64 0v46h46v-46zm-192 64v46h46v-46zm64 0v46h46v-46zm64 0v13.27A25.38 25.38 0 0 1 278.27 265zm32.73 0A25.38 25.38 0 0 1 311 278.27V265zm31.27 0v46h46v-46zm-41 16c-3.973 0-7 3.027-7 7s3.027 7 7 7s7-3.027 7-7s-3.027-7-7-7m-23 16.73V311h13.27A25.38 25.38 0 0 1 265 297.73m46 0A25.38 25.38 0 0 1 297.73 311H311zM137 329v46h46v-46zm64 0v46h46v-46zm64 0v46h46v-46zm64 0v46h46v-46z" />
+                                </svg>
+                            </a></button>
+
+                        <button type="button"
+                            class=" hover:scale-105 rounded-full flex items-center justify-center h-12 w-12"><a
+                                href="https://roloi.net/chronometro/#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                    viewBox="0 0 512 512">
+                                    <path fill="#9d2f89"
+                                        d="M247 62.107v9.94h-28.88v18H247v39.074c-84.367 4.682-151.514 74.737-151.514 160.26c0 41.037 15.468 78.508 40.873 106.91l-36.237 36.237l12.727 12.73l36.238-36.24C177.49 434.425 214.96 449.894 256 449.894s78.51-15.47 106.912-40.875l36.238 36.238l12.727-12.73l-36.236-36.235c25.406-28.402 40.874-65.873 40.874-106.91c0-85.523-67.147-155.578-151.514-160.26V90.048h28.88v-18H265v-9.94h-18zm-104.906 26.58a112 112 0 0 0-11.014.465C111.1 90.97 89.15 98 73.637 113.514c-15.514 15.513-22.545 37.462-24.362 57.443c-.908 9.99-.488 19.54 1.184 27.898c1.67 8.36 4.315 15.662 9.784 21.13l6.363 6.365l6.366-6.364l113.5-113.502l-6.366-6.363c-5.47-5.468-12.77-8.112-21.128-9.784c-4.18-.836-8.658-1.358-13.34-1.56q-1.755-.076-3.546-.088zm227.812 0q-1.79.015-3.547.09c-4.682.2-9.16.723-13.34 1.56c-8.357 1.67-15.658 4.315-21.127 9.784l-6.366 6.364l6.366 6.366l113.5 113.5l6.363-6.364c5.47-5.47 8.113-12.772 9.785-21.13c1.673-8.36 2.093-17.908 1.185-27.9c-1.817-19.98-8.848-41.93-24.362-57.442C422.85 98 400.9 90.97 380.92 89.152c-3.747-.34-7.43-.494-11.014-.465M256 146.865c78.815 0 142.514 63.7 142.514 142.514S334.814 431.892 256 431.892s-142.514-63.7-142.514-142.514c0-78.816 63.7-142.515 142.514-142.515zm-88.332 41.453l-12.73 12.73l82.92 82.917a19 19 0 0 0-.797 5.414A18.94 18.94 0 0 0 256 308.317a18.94 18.94 0 0 0 16.66-9.94h59.096v-18h-59.11A18.94 18.94 0 0 0 256 270.44a19 19 0 0 0-5.408.804l-82.924-82.924z" />
+                                </svg>
+                            </a></button>
+
+                    </div>
+                    <div class="px-6 pt-4" data-astro-cid-ynobxoya>
+                        <table class="table-auto text-left min-w-full divide-y-2 divide-gray-500/30">
+                            <thead class="text-xl" style="color: #762367;">
+                                <tr>
+                                    <th class="font-bold px-4 py-2 whitespace-nowrap">#</th>
+                                    <th class="font-bold px-4 py-2 whitespace-nowrap">Ονοματεπώνυμο</th>
+                                    <th class="font-bold px-4 py-2 whitespace-nowrap">Αφομοίωση / Εκμάθηση Δεξιοτήτων</th>
+                                    <th class="font-bold px-4 py-2 whitespace-nowrap">Προσπάθεια / Ενδιαφέρον / Συμπεριφορά</th>
+                                    <th class="font-bold px-4 py-2 whitespace-nowrap">Φυσική Κατάσταση</th>
+                                    <th class="font-bold px-4 py-2 whitespace-nowrap">Γνώσεις στα Αθλητικά Θέματα</th>
+                                    <th class="font-bold px-4 py-2 whitespace-nowrap text-right">Βαθμολογία</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-xl" style="color: #9d2f89;">
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">1</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+    
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">2</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">3</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">4</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">5</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">6</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">7</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">8</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">9</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">10</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    </tr>
+    <tr class="group hover:bg-gray-500/20">
+        <td class="whitespace-nowrap px-4 py-2">11</td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2"><a href="#"
+                class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                style="color: #808080;">The
+                Days </a>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 flex gap-3 items-center">
+    
+            <div class="leading-none"><a href="#"
+                    class="text-gray-300 group-hover:text-white hover:underline text-sm font-semibold"
+                    style="color: #808080;">The
+                    Nights</a>
+    
+            </div>
+        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-right">2:56</td>
+    
+    </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+                    style="--context-color:#2ee9d7" data-astro-cid-ynobxoya><img
+                        src="https://res.cloudinary.com/dp3ppkxo5/image/upload/v1693776174/spotify-astro/playlist_1_yci5uf.jpg"
+                        alt="Electronic Party"
+                        class="el-to-fade transition-all duration-500 z-[-1] absolute inset-0 mix-blend-overlay opacity-20 scale-90 w-full h-full object-cover blur-md"
+                        data-astro-cid-ynobxoya>
+                    <div class="absolute inset-0 bg-gradient-to-t via-transparent from-zinc-900"
+                        data-astro-cid-ynobxoya></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        function setContainerColor(dataColor) {
+            const playlistContainer = document.getElementById("playlist-container");
+            const currentColor = playlistContainer?.getAttribute("data-color");
+            if (dataColor && dataColor !== currentColor) {
+                playlistContainer?.style.setProperty("--context-color", dataColor);
+                playlistContainer?.setAttribute("data-color", dataColor);
+            }
+        }
+
+        window.coloradTimeout = null;
+        for (const playlist of document.querySelectorAll(".playlist-item")) {
+            playlist.addEventListener("mouseover", () =>
+                onMouseOverColorad(playlist)
+            );
+            playlist.addEventListener("mouseout", onMouseOutColorad);
+            playlist.addEventListener("focus", () => onMouseFocusColorad(playlist));
+            playlist.addEventListener("blur", onMouseOutColorad);
+        }
+
+        function onMouseFocusColorad(el) {
+            if (el) {
+                const dataColor = el.getAttribute("data-color");
+                if (!dataColor) return;
+                setContainerColor(dataColor);
+            }
+        }
+        function onMouseOverColorad(el) {
+            if (el) {
+                const dataColor = el.getAttribute("data-color");
+                if (!dataColor) return;
+                window.coloradTimeout = setTimeout(
+                    () => setContainerColor(dataColor),
+                    200
+                );
+            }
+        }
+        function onMouseOutColorad() {
+            if (window.coloradTimeout) {
+                clearTimeout(window.coloradTimeout);
+                window.coloradTimeout = null;
+            }
+        }
+    </script>
+</body>
+
+</html>
+<script async data-explicit-opt-in="true" data-cookie-opt-in="true"
+    src="https://vercel.live/_next-live/feedback/feedback.js"></script>
