@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="">
+<style>
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin-bottom: 10px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<table border="1">
+  <tr>
+    <th>Week</th>
+    <th>1st Grade</th>
+    <th>2nd Grade</th>
+    <th>3rd Grade</th>
+    <th>4th Grade</th>
+    <th>5th Grade</th>
+    <th>6th Grade</th>
+  </tr>
+  <tr>
+    <td>Sep 2-8, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Sep 9-15, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Sep 16-22, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Sep 23-29, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Sep 30-Oct 6, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Oct 7-13, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Oct 14-20, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Oct 21-27, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Oct 28-Nov 3, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Nov 4-10, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Nov 11-17, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Nov 18-24, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Nov 25-Dec 1, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Dec 2-8, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Dec 9-15, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Dec 16-22, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Dec 23-29, 2024</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Dec 30, 2024-Jan 5, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jan 6-12, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jan 13-19, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jan 20-26, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jan 27-Feb 2, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Feb 3-9, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Feb 10-16, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Feb 17-23, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Feb 24-Mar 2, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Mar 3-9, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Mar 10-16, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Mar 17-23, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Mar 24-30, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Mar 31-Apr 6, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Apr 7-13, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Apr 14-20, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Apr 21-27, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Apr 28-May 4, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>May 5-11, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>May 12-18, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>May 19-25, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>May 26-Jun 1, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jun 2-8, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jun 9-15, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jun 16-22, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+  <tr>
+    <td>Jun 23-29, 2025</td>
+    <td data-label="1st Grade"></td>
+    <td data-label="2nd Grade"></td>
+    <td data-label="3rd Grade"></td>
+    <td data-label="4th Grade"></td>
+    <td data-label="5th Grade"></td>
+    <td data-label="6th Grade"></td>
+  </tr>
+</table>
+<!-- partial -->
+  
+</body>
+</html>
