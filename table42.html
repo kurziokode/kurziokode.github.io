@@ -72,7 +72,7 @@ tr:hover {
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<table border="1">
+<table border="1" id="editable-table">
   <tr>
     <th>Week</th>
     <th>1st Grade</th>
@@ -471,6 +471,79 @@ tr:hover {
   </tr>
 </table>
 <!-- partial -->
-  
+<script>
+  // Function to generate unique IDs for cells
+  function generateCellId(row, col, grade) {
+    return `cell-${row}-${col}-${grade}`;
+  }
+
+  // Function to update cell content
+  function updateCellContent(cellId, newValue) {
+    const cell = document.getElementById(cellId);
+    cell.textContent = newValue;
+    localStorage.setItem(cellId, newValue);
+  }
+
+  // Function to edit cell content
+  function editCell(event) {
+    const cell = event.target;
+    const cellId = cell.id;
+    
+    // Clear cell content and show input field
+    cell.innerHTML = '';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = localStorage.getItem(cellId);
+    input.style.width = '100%';
+    input.style.border = 'none';
+    input.style.padding = '0';
+    input.style.margin = '0';
+    input.style.fontSize = '14px';
+
+    cell.appendChild(input);
+
+    // Focus on the input field
+    input.focus();
+
+    // Listen for Enter key press
+    input.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        updateCellContent(cellId, input.value);
+        input.remove();
+      }
+    });
+  }
+
+  // Initialize the table
+  const table = document.getElementById('editable-table');
+  const rows = table.getElementsByTagName('tr');
+
+  // Add event listeners to all cells
+  for (let row = 0; row < rows.length; row++) {
+    const cells = rows[row].getElementsByTagName('td');
+    for (let col = 0; col < cells.length; col++) {
+      const cell = cells[col];
+      const cellId = generateCellId(row, col, cell.dataset.label);
+      cell.id = cellId;
+      cell.addEventListener('click', editCell);
+    }
+  }
+
+  // Load saved data from localStorage
+  function loadDataFromLocalStorage() {
+    const cells = table.getElementsByTagName('td');
+    for (let cell of cells) {
+      const cellId = cell.id;
+      const savedValue = localStorage.getItem(cellId);
+      if (savedValue) {
+        cell.textContent = savedValue;
+      }
+    }
+  }
+
+  // Initial load
+  loadDataFromLocalStorage();
+</script>
 </body>
 </html>
