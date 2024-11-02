@@ -35,13 +35,24 @@ SOFTWARE.  -->
     <link href="stfu.css" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="" href="">
     <meta name="theme-color" content="oklch(var(--b1))">
-    <link rel="icon" href="vs.png" type="">
+    <link rel="icon" href="cs.png" type="">
     <link rel="icon" sizes="192x192" href="">
     <link rel="apple-touch-icon" href="">
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="description" content="">
     <meta name="twitter:description" content="">
     <title>STFU</title>
+    <style>
+        @media screen and (max-width: 639px) {
+            .title {
+                display: none;
+            }
+            .browse {
+                transform: scale(0.5);
+                filter: brightness(80%);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -68,11 +79,11 @@ SOFTWARE.  -->
 
                 <div class="mx-auto w-full max-w-2xl">
                     <div class="grid justify-items-stretch gap-6"><a
-                            class="bg-base-300 card sm:card-side hover:bg- transition-colors sm:max-w-none" href="#">
-                            <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pe-0">
-                                <img loading="lazy" src="parent2.png" class="border-base-content bg- rounded-btn "
-                                    alt="daisyUI 5 alpha is in development">
-                            </figure>
+                            class="bg- card sm:card-side hover:bg- transition-colors sm:max-w-none" href="#"><img loading="lazy" src="cs.png" style="transform: scale(0.6) scaleX(-1); filter: brightness(80%); " class="title">
+                            <figure class="mx-auto w-full object-cover p-6 max-sm:pb-0 sm:max-w-[12rem] sm:pe-0  browse">
+                                <img loading="lazy" src="parent2.png" class="border-base-content bg- rounded-btn"
+                                    alt="daisyUI 5 alpha is in development"  style="transform: scale(1.6); filter: brightness(60%); ">
+                            </figure><img loading="lazy" src="cs.png" style="transform: scale(0.6); filter: brightness(80%); " class="title">
 
                         </a>
                         <a class="bg-base-300 card sm:card-side hover:bg- transition-colors sm:max-w-none" href="#">
@@ -97,8 +108,9 @@ SOFTWARE.  -->
 
                                     <div class="form-control w-full max-w-sm">
                                         <div class="join">
-                                            <input type="text" name="q" class="join-item input  w-full max-w-sm bg-base-200"
-                                                id="mce-EMAIL" placeholder="Ask Phind" required>
+                                            <input type="text" name="q"
+                                                class="join-item input  w-full max-w-sm bg-base-200" id="mce-EMAIL"
+                                                placeholder="Ask Phind" required>
                                             <button name="subscribe" class="join-item btn btn-"
                                                 style="color: #80b444;"><svg xmlns="http://www.w3.org/2000/svg"
                                                     width="1.7rem" height="1.7rem" viewBox="0 0 32 32">
@@ -148,7 +160,7 @@ SOFTWARE.  -->
                     </div>
 
                     <div> <a target="_blank" rel="noopener, noreferrer" href="https://github.com/saadeghi/theme-change"
-                            class="link link-hover font-semibold group opacity-60">Theme <svg xmlns="http://www.w3.org/2000/svg"
+                            class="link link-hover group font-semibold opacity-60">Theme <svg xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" viewBox="0 0 24 24"
                                 class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50">
                                 <path fill-rule="evenodd"
@@ -157,7 +169,7 @@ SOFTWARE.  -->
                         </a>
                         <a target="_blank" rel="noopener, noreferrer"
                             href="https://github.com/kidonng/unocss-preset-daisy"
-                            class="link link-hover font-semibold group opacity-60">
+                            class="link link-hover group font-semibold opacity-60">
                             CSS preset
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50">
@@ -166,7 +178,7 @@ SOFTWARE.  -->
                             </svg>
                         </a>
                         <a target="_blank" rel="noopener, noreferrer" href="https://react.daisyui.com/"
-                            class="link link-hover font-semibold group opacity-60">React
+                            class="link link-hover group font-semibold opacity-60">React
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 class="inline-block w-4 fill-current opacity-0 group-hover:opacity-50">
                                 <path fill-rule="evenodd"
@@ -185,8 +197,9 @@ SOFTWARE.  -->
 
                                     <div class="form-control w-full max-w-sm ">
                                         <div class="join">
-                                            <input type="text" name="q" class="join-item input  w-full max-w-sm bg-base-300"
-                                                id="mce-EMAIL" placeholder="Ask You" required>
+                                            <input type="text" name="q"
+                                                class="join-item input  w-full max-w-sm bg-base-300" id="mce-EMAIL"
+                                                placeholder="Ask You" required>
                                             <button name="subscribe" class="join-item btn btn- "
                                                 style="color: #80b444;"><svg xmlns="http://www.w3.org/2000/svg"
                                                     width="1.7rem" height="1.7rem" viewBox="0 0 32 32">
