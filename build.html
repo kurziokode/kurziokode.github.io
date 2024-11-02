@@ -763,17 +763,18 @@ SOFTWARE.  -->
 
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
 
   <script>
     $(document).ready(function () {
         const radios = $('.join-item');
         const selectedUrlInput = $('#selectedUrl');
 
-        let currentAudio;
-
         radios.on('change', function () {
             const url = $(this).data('url');
+
+            // Change button style
+            $(this).toggleClass('active');
 
             // Stop existing audio if any
             if (currentAudio && !currentAudio.paused) {
@@ -787,6 +788,8 @@ SOFTWARE.  -->
             // Update hidden input
             selectedUrlInput.val(url);
         });
+
+        let currentAudio;
 
         function playAudio(url) {
             // Stop any currently playing audio
