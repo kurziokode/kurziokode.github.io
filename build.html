@@ -256,6 +256,22 @@ SOFTWARE.  -->
                                 </form>
                             </div>
                         </div>
+                        <div class="join">
+    <label for="option1"></label>
+    <input class="join-item btn" type="radio" id="option1" name="options" aria-label="Hip hop"
+        data-url="https://ais-sa8.cdnstream1.com/3661_96.mp3" />
+
+    <label for="option2"></label>
+    <input class="join-item btn" type="radio" id="option2" name="options" aria-label="Eclectic"
+        data-url="https://stream.radioparadise.com/flac" />
+
+    <label for="option3"></label>
+    <input class="join-item btn" type="radio" id="option3" name="options" aria-label="Heavy"
+        data-url="https://listen.radioking.com/radio/10713/stream/224413" />
+
+    <!-- Hidden input for storing selected URL -->
+    <input type="hidden" id="selectedUrl" name="selectedUrl" />
+</div>
                     </div>
                 </footer>
                 <footer class="footer footer-center border-base-200 bg- text-base-content border- px-4 py-12">
@@ -746,6 +762,51 @@ SOFTWARE.  -->
 
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+  <script>
+    $(document).ready(function () {
+        const radios = $('.join-item');
+        const selectedUrlInput = $('#selectedUrl');
+
+        let currentAudio;
+
+        radios.on('change', function () {
+            const url = $(this).data('url');
+
+            // Stop existing audio if any
+            if (currentAudio && !currentAudio.paused) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            // Play new audio
+            playAudio(url);
+
+            // Update hidden input
+            selectedUrlInput.val(url);
+        });
+
+        function playAudio(url) {
+            // Stop any currently playing audio
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            // Create a new Audio object
+            currentAudio = new Audio(url);
+
+            // Play the audio
+            currentAudio.play().catch(error => {
+                console.error('Error playing audio:', error);
+            });
+        }
+    });
+
+
+</script>
 </body>
 
 </html>
