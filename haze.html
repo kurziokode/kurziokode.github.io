@@ -49,6 +49,17 @@ SOFTWARE.  -->
             scrollbar-color: #0220c4 transparent;
         }
 
+         @media screen and (min-width: 639px)  and (max-width: 1023px) {
+            .title {
+                display: none;
+            }
+
+            .browse {
+                transform: scale(1);
+                filter: brightness(100%);
+            }
+        }       
+
         @media screen and (max-width: 639px) {
             .title {
                 display: none;
@@ -467,9 +478,9 @@ SOFTWARE.  -->
                                         </svg></span>Browse</summary>
                                 <ul>
                                     <li>
-                                        <h2 class="menu-title flex items-center gap-4 px-1.5"> <span
+                                        <h2 class="menu-title flex items-center gap-4 px-1.5 title"> <span
                                                 style="color: #7a00cc;">Artificial Intelligence</span></h2>
-                                        <ul>
+                                        <ul class="title">
                                             <li> <a href="https://www.britannica.com/chatbot" target="_blank"
                                                     class="group    ">
                                                     <span>britannica</span>
@@ -533,9 +544,9 @@ SOFTWARE.  -->
                                         </ul>
                                     </li>
                                     <li>
-                                        <h2 class="menu-title flex items-center gap-4 px-1.5"> <span
+                                        <h2 class="menu-title flex items-center gap-4 px-1.5 title"> <span
                                                 style="color: #7a00cc;">More Tools</span></h2>
-                                        <ul>
+                                        <ul class="title">
                                             <li> <a href="https://devhunt.org/" target="_blank" class="group    ">
                                                     <span>dev hunt</span>
                                                 </a></li>
