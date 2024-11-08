@@ -1,0 +1,14 @@
+* {
+	background-image: url('https://i.ibb.co/V9hpLmw/scoo.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #111;
+}
