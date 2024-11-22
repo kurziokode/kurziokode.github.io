@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Countdown Timer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./santa.css">
+    <link rel="stylesheet" href="fire.css">
+</head>
+
+<body class=" min-h-screen flex items-center justify-center p-4">
+<canvas id=c></canvas>
+    <div
+        class="relative max-w-4xl w-full mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/20">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden rounded-3xl pointer-events-none">
+            <div class="santa-sleigh absolute -right-20 animate-fly">
+                <img src="/gg.png" alt="Santa's Sleigh"
+                    class="w-30 h-30 object-contain transform -rotate-12">
+            </div>
+        </div>
+
+        <div class="text-center space-y-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 font-christmas animate-bounce">Christmas is Coming in...
+            </h1>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <div class="bg-white/20 rounded-2xl p-4 backdrop-blur-sm border border-white/30 hover:transform hover:scale-105 transition-transform"
+                    role="timer" aria-label="days remaining">
+                    <div class="text-4xl md:text-6xl font-bold text-white" id="days">00</div>
+                    <div class="text-sm uppercase tracking-wider text-white/80">Days</div>
+                </div>
+                <div class="bg-white/20 rounded-2xl p-4 backdrop-blur-sm border border-white/30 hover:transform hover:scale-105 transition-transform"
+                    role="timer" aria-label="hours remaining">
+                    <div class="text-4xl md:text-6xl font-bold text-white" id="hours">00</div>
+                    <div class="text-sm uppercase tracking-wider text-white/80">Hours</div>
+                </div>
+                <div class="bg-white/20 rounded-2xl p-4 backdrop-blur-sm border border-white/30 hover:transform hover:scale-105 transition-transform"
+                    role="timer" aria-label="minutes remaining">
+                    <div class="text-4xl md:text-6xl font-bold text-white" id="minutes">00</div>
+                    <div class="text-sm uppercase tracking-wider text-white/80">Minutes</div>
+                </div>
+                <div class="bg-white/20 rounded-2xl p-4 backdrop-blur-sm border border-white/30 hover:transform hover:scale-105 transition-transform"
+                    role="timer" aria-label="seconds remaining">
+                    <div class="text-4xl md:text-6xl font-bold text-white" id="seconds">00</div>
+                    <div class="text-sm uppercase tracking-wider text-white/80">Seconds</div>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <label class="block text-white text-lg mb-4">Πρόσθεσε τη φωτογραφία σου</label>
+                <input type="file" accept="image/*"
+                    class="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white/20 file:text-white hover:file:bg-white/30 cursor-pointer"
+                    aria-label="Upload Christmas photo">
+                <div id="preview" class="mt-4 max-w-xs mx-auto rounded-lg overflow-hidden hidden">
+                    <img src="" alt="Preview" class="w-full h-48 object-cover">
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="snowflake animate-snowfall">❄</div>
+            <div class="snowflake animate-snowfall delay-1000">❄</div>
+            <div class="snowflake animate-snowfall delay-2000">❄</div>
+            <div class="snowflake animate-snowfall delay-3000">❄</div>
+            <div class="snowflake animate-snowfall delay-4000">❄</div>
+        </div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const christmas = new Date(new Date().getFullYear(), 11, 25).getTime();
+            const now = new Date().getTime();
+            const distance = christmas - now;
+
+            document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        const fileInput = document.querySelector('input[type="file"]');
+        const preview = document.getElementById('preview');
+        fileInput.addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.querySelector('img').src = e.target.result;
+                    preview.classList.remove('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+<script src="https://kurziokode.github.io/new/script.js"></script>
+</body>
+
+</html>

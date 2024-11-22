@@ -1,0 +1,46 @@
+body {
+    background-image: url("4224.jpg");
+}
+
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10vh) translateX(0);
+    }
+    100% {
+        transform: translateY(100vh) translateX(20px);
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: translateX(100%) translateY(0);
+    }
+    100% {
+        transform: translateX(-100vw) translateY(-20px);
+    }
+}
+
+.animate-snowfall {
+    animation: snowfall 10s linear infinite;
+}
+
+.animate-fly {
+    animation: fly 15s linear infinite;
+}
+
+.font-christmas {
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.delay-1000 { animation-delay: 1s; }
+.delay-2000 { animation-delay: 2s; }
+.delay-3000 { animation-delay: 3s; }
+.delay-4000 { animation-delay: 4s; }
