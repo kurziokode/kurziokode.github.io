@@ -1,754 +1,737 @@
-<!--MIT License
+<!-- MIT License
+Copyright (c) 2024 Luigi De Rosa, Thierry Michel, Xavier Foucrier
 
-Copyright (c) 2020 Pouya Saadeghi
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.  -->
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>chris.dls 420</title>
+    <meta name="description" content="Explore music, art, design, and coding, a portal for creativity and innovation." />
+    <link rel="shortcut icon" href="open.png" type="image/x-icon" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
     <script>
-        try {
-            document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
-        } catch (e) { }
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QE8B495353');
     </script>
-    <link href="https://daisyui.com/_app/immutable/assets/2.oPV5dxMP.css" rel="stylesheet">
-    <link href="stfu.css" rel="stylesheet">
-    <meta name="theme-color" content="oklch(var(--b1))">
-    <link rel="icon" href="sma.png" type="">
-    <meta name="description" content="Tender links to live by">
-    <meta name="twitter:description" content="Tender links to live by">
-    <title>GetKicks</title>
+    <meta name="msapplication-TileColor" content="#020300">
+    <meta name="theme-color" content="#020300">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="chris.dls" />
+    <meta property="og:description"
+        content="Explore music, art, design, and coding, a portal for creativity and innovation." />
+    <meta property="og:url" content="https://kurziokode.github.io" />
+    <meta property="og:site_name" content="chris.dls" />
+    <meta property="og:image" content="https://kurziokode.github.io/redited.jpg" />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="500" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description"
+        content="Explore music, art, design, and coding, a portal for creativity and innovation." />
+    <meta name="twitter:title" content="chris.dls" />
+    <meta name="twitter:site" content="@chris.dls" />
+    <meta name="twitter:image" content="https://kurziokode.github.io/redited.jpg" />
+    <meta name="twitter:creator" content="@ChrisDLS" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="data.css" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script>
+        window.BARBA = {
+            root: '/',
+            menu: JSON.parse(
+                '[{"title":"Features","url":"features/user-friendly/","slug":"/features","subpages":[{"title":"User friendly","url":"features/user-friendly/"},{"title":"Easy peasy","url":"features/easy-peasy/"},{"title":"Smart","url":"features/smart/"},{"title":"Extensible","url":"features/extensible/"},{"title":"Futureproof","url":"features/futureproof/"},{"title":"Community","url":"features/community/"}]},{"title":"Examples","url":"examples/","slug":"/examples"},{"title":"Showcase","url":"showcase/","slug":"/showcase"},{"title":"Docs","url":"docs/getstarted/intro/","slug":"https://barba.js.org/docs"},{"title":"FAQ","url":"faq/","slug":"/faq"}]'
+            ),
+            docs: JSON.parse(
+                '[{"title":"Get Started","url":"docs/getstarted/intro/","path":"docs/getstarted","subpages":[{"title":"Intro","url":"docs/getstarted/intro/"},{"title":"Install","url":"docs/getstarted/install/"},{"title":"Markup","url":"docs/getstarted/markup/"},{"title":"Basic transition","url":"docs/getstarted/basic-transition/"},{"title":"Run custom code","url":"docs/getstarted/custom-code/"},{"title":"Lifecycle","url":"docs/getstarted/lifecycle/"},{"title":"Legacy example","url":"docs/getstarted/legacy/"},{"title":"Browser support","url":"docs/getstarted/browser-support/"},{"title":"Useful links","url":"docs/getstarted/useful-links/"}]},{"title":"Advanced","url":"docs/advanced/options/","path":"docs/advanced","subpages":[{"title":"Options","url":"docs/advanced/options/"},{"title":"Hooks","url":"docs/advanced/hooks/"},{"title":"Transitions","url":"docs/advanced/transitions/"},{"title":"Views","url":"docs/advanced/views/"},{"title":"Strategies","url":"docs/advanced/strategies/"},{"title":"Recipes","url":"docs/advanced/recipes/"},{"title":"Third party scripts","url":"docs/advanced/third-party/"},{"title":"Utils","url":"docs/advanced/utils/"},{"title":"Developer API","url":"api/","path":"api","extern":true}]},{"title":"Plugins","url":"docs/plugins/intro/","path":"docs/plugins","subpages":[{"title":"Intro","url":"docs/plugins/intro/"},{"title":"Router","url":"docs/plugins/router/"},{"title":"Prefetch","url":"docs/plugins/prefetch/"},{"title":"Css","url":"docs/plugins/css/"},{"title":"Head","url":"docs/plugins/head/"},{"title":"Preset","url":"docs/plugins/preset/"}]}]'
+            ),
+        }
+        document.documentElement.classList.add('js');
+    </script>
     <style>
-        * {
-            cursor: url('enm.png'), auto;
-            scrollbar-width: auto;
-            scrollbar-color: #0220c4 transparent;
-            scroll-behavior: smooth;
+
+        
+        .book-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 600px;
         }
 
-        @media print {
-            body {
-                scroll-behavior: auto !important;
+        @keyframes initAnimation {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(-30deg);
             }
         }
 
-        @media screen and (min-width: 639px) and (max-width: 1023px) {
-
-
-            .browse {
-                transform: scale(0.6);
-                filter: brightness(100%);
-            }
+        .book {
+            width: 200px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(-25deg);
+            transition: 0.5s ease;
+            animation: 0.5s ease 0s 1 initAnimation;
         }
 
-        @media screen and (max-width: 639px) {
-
-
-            .browse {
-                transform: scale(0.3);
-                filter: brightness(100%);
-            }
+        .book:hover {
+            transform: rotateY(-50deg);
         }
-    </style>
+
+        .book> :first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(2, 93, 13);
+            width: 200px;
+            height: 300px;
+            transform: translateZ(37.5px);
+            background-color: #310001;
+            border-radius: 0 2px 2px 0;
+            box-shadow: 5px 5px 20px transparent;
+        }
+
+        .book::before {
+            position: absolute;
+            content: ' ';
+            background-color: transparent;
+            left: 0;
+            top: 6px;
+            width: 73px;
+            height: 288px;
+            transform: translateX(156.5px) rotateY(90deg);
+            background: linear-gradient(90deg,
+                    #808080 0%,
+                    #8c8c8c 5%,
+                    #808080 10%,
+                    #8c8c8c 15%,
+                    #808080 20%,
+                    #8c8c8c 25%,
+                    #808080 30%,
+                    #8c8c8c 35%,
+                    #808080 40%,
+                    #8c8c8c 45%,
+                    #808080 50%,
+                    #8c8c8c 55%,
+                    #808080 60%,
+                    #8c8c8c 65%,
+                    #808080 70%,
+                    #8c8c8c 75%,
+                    #808080 80%,
+                    #8c8c8c 85%,
+                    #808080 90%,
+                    #8c8c8c 95%,
+                    #808080 100%);
+        }
+
+        .book::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: ' ';
+            width: 200px;
+            height: 300px;
+            transform: translateZ(-37.5px);
+            background-color: #310001;
+            border-radius: 0 2px 2px 0;
+            box-shadow: -5px 0 25px 5px #282727;
+        }
+
+.social-buttons a{
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  color: #595959;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 5px;
+}
+
+.social-buttons a::before{
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before{
+  transform: scale(0);
+}
+
+.social-buttons a i{
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i{
+  background: linear-gradient(45deg, #669900, #334d00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2);
+}
+
+    /* Hide specific links on mobile devices */
+    @media only screen and (max-width: 767px) {
+        .social-buttons a:nth-child(-n+3) {
+            display: none;
+        }
+
+            .social-buttons a {
+           margin: 0 0px;
+        }    
+    }
+/* Base styles */
+
+#select-demo {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: visible;
+   
+}
+
+/* Select Trigger */
+.select-trigger {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+   color: #5dc157;
+    font-weight: bold;
+}
+
+.select-trigger input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+   
+}
+
+/* Select Content */
+.select-content {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #020300;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 0px solid transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    width: calc(100% + 20px); /* Increased width by 20px */
+}
+
+.select-content.show {
+    max-height: 750px;
+    transition: max-height 0.3s ease-in;
+    width: calc(100% + 20px); /* Maintain increased width */
+}
+
+/* Select Group */
+.select-group {
+    max-height: 300px;
+    overflow-y: auto;
+  
+    padding: 0 10px; /* Added padding to increase width */
+}
+
+.select-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.select-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #b10720;
+    transition: background-color 0.3s ease;
+}
+
+.select-item:hover {
+    background-color: #0f0000;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 480px) {
+    #select-demo {
+        max-width: 100%;
+    }
+    .select-trigger input {
+        font-size: 14px;
+    }
+    .select-item {
+        font-size: 13px;
+    }
+    .select-group label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .select-trigger input {
+        padding: 8px;
+    }
+    .select-item {
+        padding: 8px 12px;
+    }
+}
+
+ </style>
+
 </head>
 
-<body>
+<body data-barba="wrapper" data-slug="docs">
 
-    <div>
-        <div class=" drawer lg:drawer-open"><input id="drawer" type="checkbox" class="drawer-toggle">
-            <div class="drawer-content"
-                style="background-color: #000;">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <div data-barba="container" data-barba-namespace="docs">
 
-                <div
-                    class="bg- text-base-content sticky top-0 z-30 flex h-16 w-full justify-center bg-  transition-shadow duration-100 [transform:translate3d(0,0,0)] ">
-                    <nav class="navbar w-full">
-                        <div class="flex flex-1 md:gap-1 lg:gap-2"><span
-                                class="tooltip tooltip-bottom before:text-xs before:content-[attr(data-tip)]"
-                                data-tip="Menu"><label aria-label="Open menu" for="drawer"
-                                    class="btn btn-square btn-ghost drawer-button lg:hidden "><svg width="20"
-                                        height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 6h16M4 12h16M4 18h16"></path>
-                                    </svg></label></span>
-                        </div>
-                    </nav>
-<div class="my-2"><a href="jets.html"><img loading="lazy"
-    src="https://i.ibb.co/P1tHFQx/gspeed.webp"
-    alt="The Lab of Chris" style="transform: scale(0.55); filter: brightness(90%); "></a>
-</div>    
+        <header class="site-header header" role="banner" data-component="header">
+            <div class="header__wrapper">
+                <div class="header__infos">
+                    <a href=""><img src="u77.gif" width="50em" height="auto">
+</a>
                 </div>
-
-                <div class="mx-auto w-full max-w-2xl">
-
-                    <div id="mc_embed_shell" class="card bg- my-10">
-                        <div class="card-body flex flex-col gap-4">
-
-
-                            <div id="mc_embed_signup">
-                                <form action="https://www.phind.com/search" method="get" id="mc-embedded-subscribe-form"
-                                    name="q" target="_blank">
-
-                                    <div class="form-control w-full max-w-sm">
-                                        <div class="join">
-                                            <input type="text" name="q"
-                                                class="join-item input  w-full max-w-sm bg-base-300 skeleton" id="mce-EMAIL"
-                                                placeholder="Ask" required>
-                                            <button name="subscribe" class="join-item btn btn- skeleton"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem"
-                                                    viewBox="0 0 24 24">
-                                                    <g fill="none">
-                                                        <path fill="url(#tokenBrandedAit0)"
-                                                            d="M10.11 5.983a1.76 1.76 0 0 0-1.055-.65h4.061c.65 0 1.078.611 1.211.911l4.34 7.923v3.472c-.095.684-.523 1.034-1.006 1.034c-.39 0-.972-.64-1.111-.956L10.944 7.011l-.828-1.028z" />
-                                                        <path fill="url(#tokenBrandedAit1)"
-                                                            d="M12.239 15.89H6.127c-.183.088-.578.277-.628.316c-.044.039-.372 1.655-.528 2.46h8.323c.206 0 .333-.227.233-.41z" />
-                                                        <path fill="url(#tokenBrandedAit2)"
-                                                            d="M6.205 15.978c-1.056 2.033.933 2.678.983 2.689H3.46c-1.683 0-1.572-1.356-1.305-2.033c1.76-3.328 5.31-10.056 5.433-10.34c.15-.355.578-.961 1.3-.961c.578 0 .978.317 1.1.472L10.933 7c-1.223 2.317-3.89 7.35-4.728 8.978" />
-                                                        <path fill="url(#tokenBrandedAit3)"
-                                                            d="M22 17.845a.813.813 0 0 1-.806.822H17.59c.739 0 1.01-.667 1.077-1v-11.7c0-.35.323-.64.667-.64h2.04c.35 0 .627.29.627.64z" />
-                                                        <defs>
-                                                            <linearGradient id="tokenBrandedAit0" x1="4.428" x2="14.158"
-                                                                y1="6.056" y2="21.882" gradientUnits="userSpaceOnUse">
-                                                                <stop stop-color="#06a9ee" />
-                                                                <stop offset="1" stop-color="#00529b" />
-                                                            </linearGradient>
-                                                            <linearGradient id="tokenBrandedAit1" x1="3.307" x2="21.596"
-                                                                y1="11.466" y2="11.466" gradientUnits="userSpaceOnUse">
-                                                                <stop stop-color="#134491" />
-                                                                <stop offset="1" stop-color="#00adf0" />
-                                                            </linearGradient>
-                                                            <linearGradient id="tokenBrandedAit2" x1="11.999"
-                                                                x2="11.999" y1="5.327" y2="18.672"
-                                                                gradientUnits="userSpaceOnUse">
-                                                                <stop stop-color="#0458a0" />
-                                                                <stop offset="1" stop-color="#00ace8" />
-                                                            </linearGradient>
-                                                            <linearGradient id="tokenBrandedAit3" x1="19.783"
-                                                                x2="19.783" y1="5.333" y2="18.667"
-                                                                gradientUnits="userSpaceOnUse">
-                                                                <stop stop-color="#05599f" />
-                                                                <stop offset="1" stop-color="#00adf0" />
-                                                            </linearGradient>
-                                                        </defs>
-                                                    </g>
-                                                </svg></button>
-
-                                        </div>
-
-                                    </div>
-
-                                </form>
-
-                            </div>
-
-                        </div>
-
+                <div class="header__external-links">
+                    <div class="menu-trigger" data-component="menu-trigger">
+                        <svg viewbox="0 0 50 50" width="50" height="50" class="menu-trigger__shape">
+                            <circle r="25" cx="25" cy="25"></circle>
+                        </svg>
+                        <span class="menu-trigger__bar"></span>
+                        <span class="menu-trigger__bar"></span>
+                        <span class="menu-trigger__bar"></span>
                     </div>
 
                 </div>
+            </div>
+            <nav class="header__nav nav">
+                <div class="menu" data-component="menu">
+                    <div class="menu__overlay" data-ref="menu.overlay"></div>
+                    <div class="menu__panel" data-ref="menu.panel" style="background-image: url(https://i.ibb.co/LzbvNKm/64d.webp); background-size: cover;
+  background-repeat: no-repeat;">
+                        <div class="menu__pages">
+                            <ul class="menu__pages__list">
+                                <li class="menu__pages__item" data-ref="menu.item">
+                                    <a class="menu__pages__item__link " href="">
+                                       ▸ Code
+                                    </a>
+                                    <div class="menu__pages__item__subpages menu-subpages">
+                                        <ul class="menu-subpages__list">
 
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://codepen.io/topics/" target="_blank">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                    codepen
+                                                    </span>
+                                                </a>
+                                            </li>
 
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://webcurate.co/" target="_blank"> 
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                 webcurate
+                                                    </span>
+                                                </a>
+                                            </li>
 
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://gitlab.com/dashboard/projects" target="_blank">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                  gitlab
+                                                    </span>
+                                                </a>
+                                            </li>                                           
+                                            
+                                             <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://vercel.com/lestiflees-projects" target="_blank">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                     vercel
+                                                    </span>
+                                                </a>
+                                            </li>
 
-                <div class="overflow-x-auto font-semibold">
-                    <table class="table table-">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th style="color: #2200e6;">LISTEN</th>
-                             
-                                <th style="color: #2200e6;">WATCH</th>
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://dash.cloudflare.com/84de49e34c5b7938f724d6ae4e766a89/workers-and-pages/create/pages" target="_blank">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                     cloudflare
+                                                    </span>
+                                                </a>
+                                            </li>
 
+                                            <li class="menu-subpages__item  " data-ref="menu.item">
+                                                <a class="menu-subpages__item__link" href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">
+                                                    <div class="menu-subpages__item__link__line">
+                                                    </div>
+                                                    <span class="menu-subpages__item__link__label">
+                                                    w3schools 
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                            </tr>
-                        </thead>
-                        <tbody style="color: #596273;">
-                            <tr>
-                                <th></th>
-                                <td><a href="https://www.mixcloud.com/porkhead/ " target="_blank">mixcloud</a></td>
+                                </li>
+                            </ul>
+                        </div>
 
-                              
-
-                                <td><a href="https://tainio-mania.online/ " target="_blank">mania</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://bandcamp.com/discover " target="_blank">bandcamp</a></td>
-
+                        <div class="menu__footer">
+                            <a class="menu__footer__download" href="https://github.com"
+                                target="_blank" style="color: #368d31;"><i class="fab fa-github" aria-hidden="true"></i><span>&nbsp;Github</span>
                                
-
-                                <td><a href="https://voody-online.com/ " target="_blank">voody</a></td>
-
+                            </a>
 
 
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://www.last.fm/music " target="_blank">last.fm</a></td>
+                        </div>
+                        <div class="menu__footer__extra menu-extra">
 
-                             
+                            <div class="menu-extra__twitter__label">
+<a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Hello+Chris&to=lestiflee@gmail.com"
+                                    target="_blank">
+                                    <img src="https://img.shields.io/badge/contact_at-Gmail-9b7f17.svg?style=flat-square"
+                                        alt="Stability" title="Badge"></a>                                
+                            </div>
+                            <div class="menu-extra__twitter__label">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kurziokode.github.io"
+                                    target="_blank"><img
+                                        src="https://img.shields.io/badge/share_on-Facebook-blue.svg?style=flat-square"
+                                         title="Badge">
+                                  
+                                </a>
 
-                                <td><a href="https://www.tvopen.gr/live " target="_blank">open</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://www.wbgo.org/ " target="_blank">wbgo</a></td>
-
-                          
-
-                                <td><a href="https://www.netflix.com/browse " target="_blank">netflix</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://ais-sa8.cdnstream1.com/3661_96.mp3 " target="_blank">hip hop</a>
-                                </td>
-
-                              
-
-                                <td><a href="https://www.ertflix.gr/epg/now-on-tv " target="_blank">ertflix</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://realpunkradio.com/player/player111419.html "
-                                        target="_blank">punk</a></td>
-
-                              
-
-                                <td><a href="https://filmatic.online/"
-                                        target="_blank">filmatic</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://soundcloud.com/you/sets " target="_blank">soundcloud</a></td>
-
-                              
-
-                                <td><a href=" https://www.imdb.com/" target="_blank">imdb</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://www.ertecho.gr/radio/kosmos-jazz/player/ " target="_blank">jazz</a>
-                                </td>
-
-                             
-
-                                <td><a href="https://tenies-online.best/  " target="_blank">best</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://livesessions.npr.org/" target="_blank">sessions</a></td>
-
-                              
-
-                                <td><a href="https://www.pastemagazine.com/ " target="_blank">paste</a></td>
-
-
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td><a href="https://e1.pcloud.link/publink/show?code=kZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk#returl=https%3A//e1.pcloud.link/publink/show%3Fcode%3DkZ9kBRZDxlQD2B2s17rkRmyGMNq5XErzBlk&page=login "
-                                        target="_blank">mp3</a></td>
-
-                              
-
-                                <td><a href="https://xrysoi.pro/" target="_blank">gold</a></td>
-
-
-
-                            </tr>
-
-
-
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th></th>
-                                <th><svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem"
-                                        viewBox="0 0 24 24">
-                                        <path fill="#2200e6"
-                                            d="m19.707 4.293l-1.414 1.414c2.733 2.733 2.733 7.353 0 10.086l1.414 1.414c3.5-3.5 3.5-9.414 0-12.914m-4.414 4.414c.566.566.879 1.292.879 2.043s-.313 1.477-.879 2.043l1.414 1.414c.944-.943 1.465-2.172 1.465-3.457s-.521-2.514-1.465-3.457zm-9.086-3L4.793 4.293c-3.5 3.5-3.5 9.414 0 12.914l1.414-1.414c-2.733-2.733-2.733-7.353 0-10.086" />
-                                        <path fill="#2200e6"
-                                            d="M7.293 7.293c-.944.943-1.465 2.172-1.465 3.457s.521 2.514 1.465 3.457l1.414-1.414c-.566-.566-.879-1.292-.879-2.043s.313-1.477.879-2.043zM14 10.5a2 2 0 0 0-4 0a2 2 0 0 0 .895 1.666L10.002 22h3.996l-.893-9.835c.54-.358.895-.97.895-1.665" />
-                                    </svg></th>
-
-                                <th><svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem"
-                                        viewBox="0 0 24 24">
-                                        <path fill="#2200e6"
-                                            d="M9.5 15.584V8.416a.5.5 0 0 1 .77-.42l5.576 3.583a.5.5 0 0 1 0 .842l-5.576 3.584a.5.5 0 0 1-.77-.42Z" />
-                                        <path fill="#2200e6"
-                                            d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12m11-9.5A9.5 9.5 0 0 0 2.5 12a9.5 9.5 0 0 0 9.5 9.5a9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5" />
-                                    </svg></th>
-
-
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-
-                <footer class="footer footer-center border- bg- text-base-content border- px- py-12">
-                    <div class="flex w-full max-w-6xl flex-col items-center justify-between gap-12 sm:flex-row">
-                                                <div class="flex flex-col items-center gap-4 text-left sm:flex-row">
-                            <div id="mc_embed_signup">
-                                <form action="https://mail.google.com/mail/u/0/#inbox/search" method="get"
-                                    id="mc-embedded-subscribe-form" name="q" target="_blank" novalidate=""><input
-                                        type="text" name="q" value="1" class="hidden" checked="checked">
-                                    <div class="form-control w-full max-w-sm">
-                                        <div class="join"><input type="email" autocomplete="email" name="EMAIL"
-                                                class="join-item input  w-full max-w-sm bg-base-300 skeleton" id="mce-EMAIL"
-                                                placeholder="Inbox" required> <button name="subscribe"
-                                                class="join-item btn btn- skeleton"><svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="1.2rem" height="1rem" viewBox="0 0 256 193">
-                                                    <path fill="#4285f4"
-                                                        d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z" />
-                                                    <path fill="#34a853"
-                                                        d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z" />
-                                                    <path fill="#ea4335"
-                                                        d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z" />
-                                                    <path fill="#fbbc04"
-                                                        d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z" />
-                                                    <path fill="#c5221f"
-                                                        d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z" />
-                                                </svg></button>
-                                        </div>
-                                    </div>
-                                    <div aria-hidden="true" class="hidden"><input type="text"
-                                            name="b_42813cff910e47b1bd132369a_9fd7333f07" tabindex="-1" value=""></div>
-                                </form>
                             </div>
                         </div>
-                        <div class="join">
-                            <label for="option1"></label>
-                            <input class="join-item btn " style=" background-color: #15191e;" type="radio" id="option1"
-                                name="options" aria-label="Eclectic" data-url="https://stream.radioparadise.com/flac" />
-
-                            <label for="option2"></label>
-                            <input class="join-item btn " style=" background-color: #15191e;" type="radio" id="option2"
-                                name="options" aria-label="Rock" data-url="https://stream.radioparadise.com/rock-320" />
-
-                            <label for="option3"></label>
-                            <input class="join-item btn " style=" background-color: #15191e;" type="radio" id="option3"
-                                name="options" aria-label="Heavy"
-                                data-url="https://listen.radioking.com/radio/10713/stream/224413" />
-
-                            <label for="option4"></label>
-                            <input class="join-item btn " style=" background-color: #15191e;" type="radio" id="option3" name="options"
-                                aria-label="World" data-url="https://radiostreaming.ert.gr/ert-kosmos" />
-
-                            <!-- Hidden input for storing selected URL -->
-                            <input type="hidden" id="selectedUrl" name="selectedUrl" />
-                        </div>
-                        <a href="#" rel="noopener, noreferrer"
-                            class="inline-flex items-center justify-center hover:opacity-90">
-
-                            <div class="text-left">
-
-                                <p class="font-semibold opacity-60">© 2024 <span>Chris
-                                        DLS</span>
-                                </p>
-                            </div>
-                        </a>
-
-
                     </div>
-                </footer>
 
+                </div>
+            </nav>
+        </header>
+        <main class="site-main" role="main">
+            <div class="site-content">
+                <div class="site-content-inner">
 
-            </div>
+                    <section class="docs" >
+                        <div class="docs__page-transition" ></div>
 
+                        <div class="docs__nav" data-component="docs-nav" style="background-image: url(https://i.ibb.co/LzbvNKm/64d.webp); background-size: cover;
+  background-repeat: no-repeat;">
 
-
-            <div class="drawer-side z-40" style="scroll-behavior: smooth; scroll-padding-top: 5rem; "><label
-                    for="drawer" class="drawer-overlay" aria-label="Close menu"></label>
-                <aside class="bg-base-300 min-h-screen w-80"
-                    style="background-image: url('ac44.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                
-                    <img src="toke.png" alt="" class="mx-auto w-24">
-                    <div class="h-8"></div>
-                    <ul class="menu px-4 py-0">
-
-                        <li>
-                            <details id="disclosure-components">
-                                <summary class="group  font-semibold"><span><svg xmlns="http://www.w3.org/2000/svg"
-                                            width="1.4rem" height="1.4rem" viewBox="0 0 16 16">
-                                            <path fill="#0220c4" fill-rule="evenodd"
-                                                d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255a3 3 0 0 1-1.743-.147a3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243a2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4a2 2 0 0 0 0 4" />
-                                        </svg></span><span style="color: #6f7b90;">Browse</span></summary>
-                                <ul>
-
-                                    <li>
-                                        <h2 class="menu-title flex items-center gap-4 px-1.5"> <span
-                                                style="color: #7a00cc;">Downloaders</span></h2>
-                                        <ul>
-                                            <li> <a href="https://ssyoutube.com/en785ie/" target="_blank"
-                                                    class="group    ">
-                                                    <span>ssyoutube</span>
-                                                </a></li>
-                                            <li> <a href="https://www.fdown.net/" target="_blank" class="group    ">
-                                                    <span>fdown</span>
-                                                </a></li>
-                                            <li> <a href="https://ssstwitter.com/en" target="_blank" class="group    ">
-                                                    <span>ssstwitter</span>
-                                                </a></li>
-                                            <li> <a href="https://snapinsta.app/el" target="_blank" class="group    ">
-                                                    <span>snapinsta</span>
-                                                </a></li>
-                                            <li> <a href="https://pinterestvideo.com/" target="_blank"
-                                                    class="group    ">
-                                                    <span>pinterestvideo</span>
-                                                </a></li>
-
-
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <h2 class="menu-title flex items-center gap-4 px-1.5"> <span
-                                                style="color: #7a00cc;">Explore</span></h2>
-                                        <ul>
-                                            <li> <a href="https://www.deepl.com/en/translator" target="_blank"
-                                                    class="group    ">
-                                                    <span>deepl</span>
-                                                </a></li>
-                                            <li> <a href="https://www.windy.com/37.797/21.351?rain,37.302,21.352,8,m:eH8agKK"
-                                                    target="_blank" class="group    ">
-                                                    <span>windy</span>
-                                                </a></li>
-                                            <li> <a href="https://www.instantstreetview.com/" target="_blank"
-                                                    class="group    ">
-                                                    <span>instant</span>
-                                                </a></li>
-
-                                            <li> <a href="https://www.folger.edu/explore/shakespeares-works/"
-                                                    target="_blank" class="group    ">
-                                                    <span>folger</span>
-                                                </a></li>
-                                            <li> <a href="https://www.urbandictionary.com/" target="_blank"
-                                                    class="group    ">
-                                                    <span>urban</span>
-                                                </a></li>
-                                            <li> <a href="https://magazine.artstation.com/" target="_blank"
-                                                    class="group    ">
-                                                    <span>artstation</span>
-                                                </a></li>
-                                            <li> <a href="https://www.deviantart.com/" target="_blank" class="group    ">
-                                                    <span>deviant</span>
-                                                </a></li>
-                                            <li> <a href="https://www.flickr.com/search/?text=Street+Photography" target="_blank" class="group    ">
-                                                    <span>flickr</span>
-                                                </a></li>
-
-                                            <li> <a href="https://www.goodreads.com/author/quotes/10401.James_Gleick"
-                                                    target="_blank" class="group    ">
-                                                    <span>goodreads</span>
-                                                </a></li>
-                                            <li> <a href="https://www.nationalgeographic.com/" target="_blank"
-                                                    class="group    ">
-                                                    <span>national</span>
-                                                </a></li>
-                                            <li> <a href="https://imgur.com/" target="_blank" class="group    ">
-                                                    <span>imgur</span>
-                                                </a></li>
-                                            <li> <a href="https://www.zergnet.com/" target="_blank" class="group    ">
-                                                    <span>zergnet</span>
-                                                </a></li>
-                                        </ul>
-                                    </li>
+   
+                            <ul class="docs__nav__list">
 
 
 
-                                </ul>
-                            </details>
-                        </li>
+                                <li>
 
-                        <li> <a href="https://www.facebook.com/" target="_blank" class="group   font-semibold  "><span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem"
-                                        viewBox="0 0 1536 1536">
-                                        <path fill="#0220c4"
-                                            d="M1248 0q119 0 203.5 84.5T1536 288v960q0 119-84.5 203.5T1248 1536h-188V941h199l30-232h-229V561q0-56 23.5-84t91.5-28l122-1V241q-63-9-178-9q-136 0-217.5 80T820 538v171H620v232h200v595H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0z" />
-                                    </svg> </span> <span style="color: #6f7b90;">Facebook</span>
-                                <svg width="12" height="12"
-                                    class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-                                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 11H37V29" stroke="currentColor" stroke-width="4" stroke-linecap="butt"
-                                        stroke-linejoin="bevel">
-                                    </path>
-                                    <path d="M11.5439 36.4559L36.9997 11" stroke="currentColor" stroke-width="4"
-                                        stroke-linecap="butt" stroke-linejoin="bevel"></path>
-                                </svg>
-                            </a></li>
+                                    <ol class="docs__nav__sublist is-open ">
+                                        <li class="is-open">
 
-                        <li> <a href="https://www.reddit.com/" target="_blank" class="group   font-semibold  "><span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem"
-                                        viewBox="0 0 1792 1696">
-                                        <path fill="#0220c4"
-                                            d="M1792 846q0 58-29.5 105.5T1683 1024q12 46 12 96q0 155-106.5 287T1298 1615.5T898 1692t-399.5-76.5t-290-208.5T102 1120q0-47 11-94q-51-25-82-73.5T0 846q0-82 58-140.5T199 647q85 0 145 63q218-152 515-162L975 27q3-13 15-21t26-5l369 81q18-37 54-59.5T1518 0q62 0 106 43.5t44 105.5t-44 106t-106 44t-105.5-43.5T1369 150l-334-74l-104 472q300 9 519 160q58-61 143-61q83 0 141 58.5t58 140.5M418 1045q0 62 43.5 106t105.5 44t106-44t44-106t-44-105.5T567 896q-61 0-105 44t-44 105m810 355q11-11 11-26t-11-26q-10-10-25-10t-26 10q-41 42-121 62t-160 20t-160-20t-121-62q-11-10-26-10t-25 10q-11 10-11 25.5t11 26.5q43 43 118.5 68t122.5 29.5t91 4.5t91-4.5t122.5-29.5t118.5-68m-3-205q62 0 105.5-44t43.5-106q0-61-44-105t-105-44q-62 0-106 43.5t-44 105.5t44 106t106 44" />
-                                    </svg> </span> <span style="color: #6f7b90;">Reddit</span>
-                                <svg width="12" height="12"
-                                    class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-                                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 11H37V29" stroke="currentColor" stroke-width="4" stroke-linecap="butt"
-                                        stroke-linejoin="bevel"></path>
-                                    <path d="M11.5439 36.4559L36.9997 11" stroke="currentColor" stroke-width="4"
-                                        stroke-linecap="butt" stroke-linejoin="bevel"></path>
-                                </svg>
-                            </a></li>
+                                            <h2 class="docs__nav__subtitle is-open ">
+                                                <b>Design</b>
+                                            </h2>
 
-                        <li> <a href="https://www.nbcnews.com/now" target="_blank"
-                                class="group   font-semibold  from-primary to-primary/0 hover:to-primary/10 from-[-200%] to-60% [background-image:linear-gradient(-35deg,var(--tw-gradient-stops))]"><span
-                                    class=" group-hover:text-primary transition-colors"> <svg
-                                        xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem"
-                                        viewBox="0 0 24 24">
-                                        <path fill="#0220c4"
-                                            d="M13.954 17.93a1.57 1.57 0 0 0 .811-1.443a1.805 1.805 0 0 0-1.943-1.767H9.99v6.894h3.176a1.94 1.94 0 0 0 1.982-1.975a1.86 1.86 0 0 0-1.194-1.709m-2.529-2.168h1.061a.9.9 0 1 1 0 1.793h-1.061zm1.291 4.817h-1.291v-1.994l1.291-.006a1 1 0 1 1 0 2M19.89 9.241a2.1 2.1 0 0 0-1.153.342l-5.749 3.868h6.9a2.105 2.105 0 1 0 0-4.21zM7.744 18.587L3.35 14.575v7.032h1.427v-3.859l4.394 4.013v-7.034H7.744Zm7.712-.419a3.79 3.79 0 0 0 3.887 3.681a3.7 3.7 0 0 0 1.318-.279v-1.4a2.4 2.4 0 1 1 0-4.007v-1.404a3.4 3.4 0 0 0-1.318-.273a3.79 3.79 0 0 0-3.887 3.682m-4.465-4.719L5.256 9.585a2.1 2.1 0 1 0-1.151 3.864Zm1.759-8.955c.317.016.484.1.084.267a.75.75 0 0 0-.473.913l.89 6.223l2.968-6.784a2.111 2.111 0 1 0-4.028-.613Zm-4.975.621l2.961 6.778l1.045-7.3a2.106 2.106 0 1 0-4.006.522m5.525 7.674l6.013-4.072a2.1 2.1 0 1 0-3.08-2.617ZM4.687 8.717l6 4.068L7.755 6.1a2.1 2.1 0 1 0-3.068 2.617" />
-                                    </svg> </span> <span style="color: #6f7b90;">NBC </span> <span
-                                    class="badge badge-sm font-mono text-opacity-70 bg-primary/10 text-[inherit] border-transparent uppercase font-sans font-bold"
-                                    style="color: #9900ff;">news</span>
-                            </a></li>
-
-                        <li> <a href="https://gr.pinterest.com/" target="_blank" rel="noopener noreferrer"
-                                class="group  font-semibold   "><span> <svg xmlns="http://www.w3.org/2000/svg"
-                                        width="1.4rem" height="1.4rem" viewBox="0 0 1536 1536">
-                                        <path fill="#0220c4"
-                                            d="M1536 768q0 209-103 385.5T1153.5 1433T768 1536q-111 0-218-32q59-93 78-164q9-34 54-211q20 39 73 67.5t114 28.5q121 0 216-68.5T1232 968t52-270q0-114-59.5-214T1052 321t-255-63q-105 0-196 29t-154.5 77t-109 110.5t-67 129.5T249 738q0 104 40 183t117 111q30 12 38-20q2-7 8-31t8-30q6-23-11-43q-51-61-51-151q0-151 104.5-259.5T776 389q151 0 235.5 82t84.5 213q0 170-68.5 289T852 1092q-61 0-98-43.5T731 944q8-35 26.5-93.5t30-103T799 672q0-50-27-83t-77-33q-62 0-105 57t-43 142q0 73 25 122l-99 418q-17 70-13 177q-206-91-333-281T0 768q0-209 103-385.5T382.5 103T768 0t385.5 103T1433 382.5T1536 768" />
-                                    </svg> </span> <span style="color: #6f7b90;">Pinterest</span>
-                                <svg width="12" height="12"
-                                    class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-                                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 11H37V29" stroke="currentColor" stroke-width="4" stroke-linecap="butt"
-                                        stroke-linejoin="bevel">
-                                    </path>
-                                    <path d="M11.5439 36.4559L36.9997 11" stroke="currentColor" stroke-width="4"
-                                        stroke-linecap="butt" stroke-linejoin="bevel"></path>
-                                </svg></a></li>
-
-                        <li> <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                                class="group  font-semibold   "><span> <svg xmlns="http://www.w3.org/2000/svg"
-                                        width="1.4rem" height="1.4rem" viewBox="0 0 1536 1536">
-                                        <path fill="#0220c4"
-                                            d="M1024 768q0-106-75-181t-181-75t-181 75t-75 181t75 181t181 75t181-75t75-181m138 0q0 164-115 279t-279 115t-279-115t-115-279t115-279t279-115t279 115t115 279m108-410q0 38-27 65t-65 27t-65-27t-27-65t27-65t65-27t65 27t27 65M768 138q-7 0-76.5-.5t-105.5 0t-96.5 3t-103 10T315 169q-50 20-88 58t-58 88q-11 29-18.5 71.5t-10 103t-3 96.5t0 105.5t.5 76.5t-.5 76.5t0 105.5t3 96.5t10 103T169 1221q20 50 58 88t88 58q29 11 71.5 18.5t103 10t96.5 3t105.5 0t76.5-.5t76.5.5t105.5 0t96.5-3t103-10t71.5-18.5q50-20 88-58t58-88q11-29 18.5-71.5t10-103t3-96.5t0-105.5t-.5-76.5t.5-76.5t0-105.5t-3-96.5t-10-103T1367 315q-20-50-58-88t-88-58q-29-11-71.5-18.5t-103-10t-96.5-3t-105.5 0t-76.5.5m768 630q0 229-5 317q-10 208-124 322t-322 124q-88 5-317 5t-317-5q-208-10-322-124T5 1085q-5-88-5-317t5-317q10-208 124-322T451 5q88-5 317-5t317 5q208 10 322 124t124 322q5 88 5 317" />
-                                    </svg> </span> <span style="color: #6f7b90;">Instagram</span>
-
-                                <svg width="12" height="12"
-                                    class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-                                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 11H37V29" stroke="currentColor" stroke-width="4" stroke-linecap="butt"
-                                        stroke-linejoin="bevel"></path>
-                                    <path d="M11.5439 36.4559L36.9997 11" stroke="currentColor" stroke-width="4"
-                                        stroke-linecap="butt" stroke-linejoin="bevel"></path>
-                                </svg></a></li>
-
-
-
-                        <li> <a href="https://x.com/home" target="_blank" rel="noopener noreferrer"
-                                class="group   font-semibold  "><span> <svg xmlns="http://www.w3.org/2000/svg"
-                                        width="1.4rem" height="1.4rem" viewBox="0 0 1536 1536">
-                                        <path fill="#0220c4"
-                                            d="M1280 482q-56 25-121 34q68-40 93-117q-65 38-134 51q-61-66-153-66q-87 0-148.5 61.5T755 594q0 29 5 48q-129-7-242-65T326 422q-29 50-29 106q0 114 91 175q-47-1-100-26v2q0 75 50 133.5T461 885q-29 8-51 8q-13 0-39-4q21 63 74.5 104t121.5 42q-116 90-261 90q-26 0-50-3q148 94 322 94q112 0 210-35.5t168-95t120.5-137t75-162T1176 618q0-18-1-27q63-45 105-109m256-194v960q0 119-84.5 203.5T1248 1536H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0h960q119 0 203.5 84.5T1536 288" />
-                                    </svg> </span> <span style="color: #6f7b90;">Twitter</span>
-                                <svg width="12" height="12"
-                                    class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-                                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 11H37V29" stroke="currentColor" stroke-width="4" stroke-linecap="butt"
-                                        stroke-linejoin="bevel"></path>
-                                    <path d="M11.5439 36.4559L36.9997 11" stroke="currentColor" stroke-width="4"
-                                        stroke-linecap="butt" stroke-linejoin="bevel"></path>
-                                </svg></a></li>
-
-
-
-                        <li> <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"
-                                class="group   font-semibold  "><span><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="1.23rem" height="1.4rem" viewBox="0 0 448 512">
-                                        <path fill="#0220c4"
-                                            d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25v178.72A162.55 162.55 0 1 1 185 188.31v89.89a74.62 74.62 0 1 0 52.23 71.18V0h88a121 121 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z" />
-                                    </svg> </span> <span style="color: #6f7b90;">Tiktok</span>
-                                <svg width="12" height="12"
-                                    class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-                                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 11H37V29" stroke="currentColor" stroke-width="4" stroke-linecap="butt"
-                                        stroke-linejoin="bevel">
-                                    </path>
-                                    <path d="M11.5439 36.4559L36.9997 11" stroke="currentColor" stroke-width="4"
-                                        stroke-linecap="butt" stroke-linejoin="bevel"></path>
-                                </svg></a></li>
-
-                        <li> <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-                                class="group   font-semibold  "><span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem"
-                                        viewBox="0 0 1536 1536">
-                                        <path fill="#0220c4"
-                                            d="M919 1175v-157q0-50-29-50q-17 0-33 16v224q16 16 33 16q29 0 29-49m184-122h66v-34q0-51-33-51t-33 51zM532 787v70h-80v423h-74V857h-78v-70zm201 126v367h-67v-40q-39 45-76 45q-33 0-42-28q-6-17-6-54V913h66v270q0 24 1 26q1 15 15 15q20 0 42-31V913zm252 111v146q0 52-7 73q-12 42-53 42q-35 0-68-41v36h-67V787h67v161q32-40 68-40q41 0 53 42q7 21 7 74m251 129v9q0 29-2 43q-3 22-15 40q-27 40-80 40q-52 0-81-38q-21-27-21-86v-129q0-59 20-86q29-38 80-38t78 38q21 29 21 86v76h-133v65q0 51 34 51q24 0 30-26q0-1 .5-7t.5-16.5V1153zM785 329v156q0 51-32 51t-32-51V329q0-52 32-52t32 52m533 713q0-177-19-260q-10-44-43-73.5t-76-34.5q-136-15-412-15q-275 0-411 15q-44 5-76.5 34.5T238 782q-20 87-20 260q0 176 20 260q10 43 42.5 73t75.5 35q137 15 412 15t412-15q43-5 75.5-35t42.5-73q20-84 20-260M563 391l90-296h-75l-51 195l-53-195h-78q7 23 23 69l24 69q35 103 46 158v201h74zm289 81V342q0-58-21-87q-29-38-78-38q-51 0-78 38q-21 29-21 87v130q0 58 21 87q27 38 78 38q49 0 78-38q21-27 21-87m181 120h67V222h-67v283q-22 31-42 31q-15 0-16-16q-1-2-1-26V222h-67v293q0 37 6 55q11 27 43 27q36 0 77-45zm503-304v960q0 119-84.5 203.5T1248 1536H288q-119 0-203.5-84.5T0 1248V288Q0 169 84.5 84.5T288 0h960q119 0 203.5 84.5T1536 288" />
-                                    </svg> </span> <span style="color: #6f7b90;">YouTube</span>
-
-                                <svg width="12" height="12"
-                                    class="opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
-                                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 11H37V29" stroke="currentColor" stroke-width="4" stroke-linecap="butt"
-                                        stroke-linejoin="bevel">
-                                    </path>
-                                    <path d="M11.5439 36.4559L36.9997 11" stroke="currentColor" stroke-width="4"
-                                        stroke-linecap="butt" stroke-linejoin="bevel"></path>
-                                </svg></a></li>
-
-
-
-                        <li>
-                            <details id="disclosure-docs">
-                                <summary class="group  font-semibold"><span> <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 1024 1024">
-                                    <path fill="#0220c4"
-                                        d="M928 161H699.2c-49.1 0-97.1 14.1-138.4 40.7L512 233l-48.8-31.3A255.2 255.2 0 0 0 324.8 161H96c-17.7 0-32 14.3-32 32v568c0 17.7 14.3 32 32 32h228.8c49.1 0 97.1 14.1 138.4 40.7l44.4 28.6c1.3.8 2.8 1.3 4.3 1.3s3-.4 4.3-1.3l44.4-28.6C602 807.1 650.1 793 699.2 793H928c17.7 0 32-14.3 32-32V193c0-17.7-14.3-32-32-32M324.8 721H136V233h188.8c35.4 0 69.8 10.1 99.5 29.2l48.8 31.3l6.9 4.5v462c-47.6-25.6-100.8-39-155.2-39m563.2 0H699.2c-54.4 0-107.6 13.4-155.2 39V298l6.9-4.5l48.8-31.3c29.7-19.1 64.1-29.2 99.5-29.2H888zM396.9 361H211.1c-3.9 0-7.1 3.4-7.1 7.5v45c0 4.1 3.2 7.5 7.1 7.5h185.7c3.9 0 7.1-3.4 7.1-7.5v-45c.1-4.1-3.1-7.5-7-7.5m223.1 7.5v45c0 4.1 3.2 7.5 7.1 7.5h185.7c3.9 0 7.1-3.4 7.1-7.5v-45c0-4.1-3.2-7.5-7.1-7.5H627.1c-3.9 0-7.1 3.4-7.1 7.5M396.9 501H211.1c-3.9 0-7.1 3.4-7.1 7.5v45c0 4.1 3.2 7.5 7.1 7.5h185.7c3.9 0 7.1-3.4 7.1-7.5v-45c.1-4.1-3.1-7.5-7-7.5m416 0H627.1c-3.9 0-7.1 3.4-7.1 7.5v45c0 4.1 3.2 7.5 7.1 7.5h185.7c3.9 0 7.1-3.4 7.1-7.5v-45c.1-4.1-3.1-7.5-7-7.5" />
-                                </svg> </span><span style="color: #6f7b90;">Read</span></summary>
-                                <ul>
-                                    <li> <a href="https://www.e-mme.gr/" target="_blank" class="group    ">
-                                            <span>e-mme</span>
-                                        </a></li>
-                                    <li><a href="https://librofilo.blogspot.com/" target="_blank" class="group  ">
-                                            <span>librofilo</span></a>
-                                    </li>
-                                    <li><a href="https://pandoxeio.com/" target="_blank" class="group  ">
-                                            <span>pandoxeio</span></a>
-                                    </li>
-                                    <li><a href="https://www.greek-language.gr/digitalResources/literature/tools/concordance/browse.html?cnd_id=9"
-                                            target="_blank" class="group  ">
-                                            <span>greek language</span></a>
-                                    </li>
-                                    <li><a href="https://info-war.gr/" target="_blank" class="group  ">
-                                            <span>infowar</span></a>
-                                    </li>
-                                    <li><a href="https://www.hartismag.gr/" target="_blank" class="group  ">
-                                            <span>hartis</span></a>
-                                    </li>
-                                    <li><a href="https://getpocket.com/home" target="_blank" class="group  ">
-                                            <span>pocket</span></a>
-                                    </li>
-
-                                    <li><a href="https://www.boredpanda.com/" target="_blank" class="group  ">
-                                            <span>bored panda</span></a>
-                                    </li>
-                                    <li><a href="https://www.rollingstone.com/" target="_blank" class="group  ">
-                                            <span>rolling stone</span></a>
-                                    </li>
-                                    <li><a href="https://www.theguardian.com/europe" target="_blank" class="group  ">
-                                            <span>the guardian</span></a>
-                                    </li>
-
-                                    <li><a href="https://www.bbc.com/" target="_blank" class="group  ">
-                                            <span>bbc</span></a>
-                                    </li>
-                                        <li><a href="https://www.latimes.com/" target="_blank" class="group  ">
-                                                <span>la times</span></a>
                                         </li>
-                                        <li><a href="https://www.tasteofcinema.com/" target="_blank" class="group  ">
-                                                <span>cinema</span></a>
+
+
+
+                                        <li class="">
+                                            <a href="https://new.express.adobe.com/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                   adobe
+                                                </h2>
+                                            </a>
                                         </li>
-                                </ul>
-                            </details>
-                        </li>
 
-                    </ul>
+                                        <li class="">
+                                            <a href="https://ray.so/prompts/code" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                rayso 
+                                                </h2>
+                                            </a>
+                                        </li>
 
-                </aside>
-            </div>
+                                        <li class="">
+                                            <a href="https://www.capcut.com/editor?scenario=tiktok" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                  capcut
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://playground.com/design" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                               playground
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://www.kittl.com/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                    kittl
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://undesign.learn.uno/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                  undesign 
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://convertio.co/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                 convertio
+                                                </h2>
+                                            </a>
+                                        </li>                                        
+
+                                        <li class="">
+                                            <a href="https://compress-or-die.com/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                compress  
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://www.iloveimg.com/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                  iloveimg 
+                                                </h2>
+                                            </a>
+                                        </li>     
+
+                                        <li class="">
+                                            <a href="https://pinetools.com/overlay-images" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                pinetools   
+                                                </h2>
+                                            </a>
+                                        </li>
+
+                                        <li class="">
+                                            <a href="https://app.daily.dev/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                 daily
+                                                </h2>
+                                            </a>
+                                        </li>  
+                                        
+                                        <li class="">
+                                            <a href="https://uiverse.io/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                  uiverse
+                                                </h2>
+                                            </a>
+                                        </li>   
+
+                                        <li class="">
+                                            <a href="https://www.shopify.com/tools" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                                 shopify
+                                                </h2>
+                                            </a>
+                                        </li>    
+
+                                        <li class="">
+                                            <a href="https://openalternative.co/" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                               alternative
+                                                </h2>
+                                            </a>
+                                        </li>  
+
+                                        <li class="https://www.realtimecolors.com">
+                                            <a href="" target="_blank">
+                                                <h2 class="docs__nav__subtitle ">
+                                             real time 
+                                                </h2>
+                                            </a>
+                                        </li> 
+                                        
+                                    </ol>
+                                </li>
+<div id="select-demo" class="docs__nav__list">
+    <div class="select-trigger">
+        <input type="text" placeholder="Artificial" readonly />
+    </div>
+    <div class="select-content">
+        <div class="select-group" style="text-align: center;">
+            <a href="https://gemini.google.com/app" target="_blank" class="select-item">gemini</a>
+            <a href="https://www.aitoolslist.top/" target="_blank" class="select-item">tools list</a>
+            <a href="https://genai.works/" target="_blank" class="select-item">genai</a>
+            <a href="https://www.dora.run/ai" target="_blank" class="select-item">dora run</a>
+            <a href="https://www.blackbox.ai/" target="_blank" class="select-item">blackbox</a>
+            <a href="https://www.phind.com/search?home=true" target="_blank" class="select-item">phind</a>
+            <a href="https://chatgpt.com/gpts" target="_blank" class="select-item">chatgpt</a>   
+            <a href="https://www.perplexity.ai/" target="_blank" class="select-item">perplexity</a>  
+        </div>
+    </div>
+</div>
+
+                            </ul>
+
         </div>
 
+                 <div class="docs__markdown">
+                           
+                            <h1 id="barba-js-v2"><a href="" class="headerlink" title=""></a>chris.dls<small>[420]</small></h1>
+                            <p>
+                                <a href="https://www.theguardian.com/europe" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/Guardian-Europe-2f8c0d.svg?style=flat-square"
+                                        alt="Commitizen friendly"></a>
+                                <a href="https://www.bbc.com/" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/BBC-News-a18212.svg?style=flat-square"
+                                        alt="Conventional Commits"></a>
+                                <a href="https://www.latimes.com/" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/LA-Times-cc00ff.svg?style=flat-square"   
+                                        alt="lerna"></a>
 
+                            </p>
+                            <h2 id="Intro" style="color: #255d22;"><a href="#Intro" class="headerlink" title="Intro"></a>design ⸬ code</h2>
+                            <p><strong>When you know enough</strong><em> it’s obvious that every idea you have is no good. ― James Gleick</em> 
+                           
+                            </p>    
+                            <blockquote>
+                                <p><strong>Anyway we'll figure it out</strong>, let's grab some brackets and watch the world spin. In case of emergency, check the <a href="https://www.youtube.com/c/Freecodecamp" target="_blank" rel="noopener">“Serious Shit”</a>.</p>
+                              
+                               <p>The creators of <strong><em>Barba.js</em></strong> deserve our gratitude for crafting an exceptional development environment that has significantly eased the process of building this website.* Our feathered wacky friend in the corner is functioning like home page button. On mobile devices it's hiding the left sidebar, desktop users will get a page refresh instead. As for the underbook it conceals potentially magical mayhem to Music and Arts World. Fine taste would help. Happy coding!</p>
+                            </blockquote>
+                         
+                         <p>
+                                <a href="https://www.windy.com/37.797/21.351?rain,37.302,21.352,8,m:eH8agKK" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/Windy%20Weather-112d06?style=for-the-badge&logo=apachestorm"
+                                        alt=""></a>
+                                <a href="https://calendar.proton.me/u/0/" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/Proton%20Calendar-2c2407?style=for-the-badge&logo=protoncalendar"
+                                        alt=""></a>
+                                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener"
+                                    title="Badge"><img
+                                        src="https://img.shields.io/badge/Gmail%20inbox-270231?style=for-the-badge&logo=gmail"
+                                        alt=""></a>
+                                <a href="https://www.instantstreetview.com/@37.769993,21.29357,53.57h,-1.02p,1z,CAoSLEFGMVFpcE9JYnVBa3dJdm1nWkE5Z0ctaWhaQUt0djVoM3RiZjdxcFJHZGE5" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/Instant%20View-012032?style=for-the-badge&logo=openstreetmap"       
+                                        alt=""></a>
+                                <a href="https://www.deepl.com/en/translator" target="_blank" rel="noopener" title="Badge"><img
+                                        src="https://img.shields.io/badge/Deepl%20Translator-310302?style=for-the-badge&logo=googletranslate"       
+                                        alt=""></a>                             
+                            </p>
+                        </div>
+                        <a class="book-container" href="https://trip-ezi.pages.dev/" target="_blank"
+                            rel="noreferrer noopener">
+                            <div class="book">
+                                <img alt="The Lab ChrisDLS" src="redited.jpg" />
+                            </div>
+                        </a>
+                        <div class="docs__nav__lateral" data-component="docs-nav-lateral">
+                            <button class="docs__nav__lateral__button">
+                                <a href="" class="docs__nav__lateral__link--next" data-ref="docs-nav-lateral.link"><span>⎅ sidebar</span>
+                              
+                                </a>
+
+                            </button>
+                        </div>
+
+
+                        
+    <div class="docs__nav__lateral social-buttons">
+                    
+        <a href="https://www.nbcnews.com/now" target="_blank"><i class="fab fa-teamspeak"></i></a>
+        <a href="https://www.reddit.com/" target="_blank"><i class="fab fa-reddit"></i></a>               
+        <a href="https://gr.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
+        <a href="https://x.com/home" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        
+        
+    </div>  
+
+  </section>
+
+                </div>
+            </div>
+        </main>
+     </div>
+    <div class="transition">
+        <div class="transition__title"></div>
+        <div class="transition__background"></div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectDemo = document.getElementById('select-demo');
+    
+    // Add click event listener to the entire select-demo
+    selectDemo.addEventListener('click', function(e) {
+        if (e.target.closest('.select-trigger')) {
+            const content = selectDemo.querySelector('.select-content');
+            content.classList.toggle('show');
+        } else if (e.target.closest('.select-item')) {
+            const trigger = selectDemo.querySelector('.select-trigger input');
+            trigger.value = e.target.textContent;
+            const content = selectDemo.querySelector('.select-content');
+            content.classList.remove('show');
+        }
+    });
+});
 
-
-    <script>
-        $(document).ready(function () {
-            const radios = $('.join-item');
-            const selectedUrlInput = $('#selectedUrl');
-
-            radios.on('change', function () {
-                const url = $(this).data('url');
-
-                // Change button style
-                $(this).toggleClass('active');
-
-                // Stop existing audio if any
-                if (currentAudio && !currentAudio.paused) {
-                    currentAudio.pause();
-                    currentAudio.currentTime = 0;
-                }
-
-                // Play new audio
-                playAudio(url);
-
-                // Update hidden input
-                selectedUrlInput.val(url);
-            });
-
-            let currentAudio;
-
-            function playAudio(url) {
-                // Stop any currently playing audio
-                if (currentAudio) {
-                    currentAudio.pause();
-                    currentAudio.currentTime = 0;
-                }
-
-                // Create a new Audio object
-                currentAudio = new Audio(url);
-
-                // Play the audio
-                currentAudio.play().catch(error => {
-                    console.error('Error playing audio:', error);
-                });
-            }
-        });
-
-
-    </script>
-    <script>
-        document.querySelectorAll('a[target="_blank"]').forEach(function (link) {
-            link.setAttribute('rel', 'noopener noreferrer');
-        });
-    </script>
+ </script> 
+ <script src="https://barba.js.org/js/main.js"></script>
+    <!--   <script src="https://togetherjs.com/togetherjs-min.js"></script> <button onclick="TogetherJS(this); return false;">Start TogetherJS</button> -->
+    <script src="//instant.page/5.2.0" type="module"
+        integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 </body>
 
 </html>
+
+
+
+
+
+
