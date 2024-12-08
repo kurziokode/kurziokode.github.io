@@ -111,7 +111,17 @@ SOFTWARE.  -->
 
                     <div id="mc_embed_shell" class="card bg- my-10">
                         <div class="card-body flex flex-col gap-4">
-
+                            <!-- Open the modal using ID.showModal() method -->
+                            <button class="btn w-full max-w-sm bg-base-300" onclick="my_modal_1.showModal()">What is this about ?</button>
+                            <dialog id="my_modal_1" class="modal">
+                                <form method="dialog" class="modal-box">
+                                    <p class="py-4">Whether you're looking to enhance your skills, experiment with new forms of expression, or simply marvel at the
+                                    intersection of technology and art, our website offers a wealth of innovative content and tools to inspire and educate.</p>
+                                    <div class="modal-action">
+                                        <button class="btn">Close</button>
+                                    </div>
+                                </form>
+                            </dialog><br>
 
                             <div id="mc_embed_signup">
                                 <form action="https://you.com/search" method="get" id="mc-embedded-subscribe-form"
