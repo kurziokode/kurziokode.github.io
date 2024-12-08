@@ -111,7 +111,16 @@ SOFTWARE.  -->
 
                     <div id="mc_embed_shell" class="card bg- my-10">
                         <div class="card-body flex flex-col gap-4">
-
+                            <!-- Open the modal using ID.showModal() method -->
+                            <button class="btn w-full max-w-sm bg-base-300" onclick="my_modal_1.showModal()">What is this about ?</button>
+                            <dialog id="my_modal_1" class="modal">
+                                <form method="dialog" class="modal-box">
+                                    <p class="py-4">Press ESC key or click the button below to close</p>
+                                    <div class="modal-action">
+                                        <button class="btn">Close</button>
+                                    </div>
+                                </form>
+                            </dialog><br>
 
                             <div id="mc_embed_signup">
                                 <form action="https://www.phind.com/search" method="get" id="mc-embedded-subscribe-form"
@@ -703,11 +712,15 @@ SOFTWARE.  -->
                 class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Default"
                 value="default" />
         </li>
-
         <li>
             <input type="radio" name="theme-dropdown"
-                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Retro"
-                value="valentine" />
+                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Luxury"
+                value="luxury" />
+        </li>
+        <li>
+            <input type="radio" name="theme-dropdown"
+                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Sunset"
+                value="sunset" />
         </li>
         <li>
             <input type="radio" name="theme-dropdown"
