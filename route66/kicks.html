@@ -466,7 +466,7 @@ SOFTWARE.  -->
                                     </svg></label></span>
                         </div>
                     </nav>
-                    <div class="my-2"><img src="gspeed.webp"
+                    <div id="targetElement" class="my-2"><img src="gspeed.webp"
                             alt="The Lab of Chris" style="transform: scale(0.55); filter: brightness(90%); ">
                     </div>
 
@@ -1075,7 +1075,30 @@ SOFTWARE.  -->
 
     </div>
    
+<script>
+const targetElement = document.getElementById('targetElement');
+const threshold = 200; // Adjust this value as needed
 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0 &&
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.right >= 0
+    );
+}
+
+function handleScroll() {
+    if (!isInViewport(targetElement)) {
+        targetElement.style.display = 'none';
+    } else {
+        targetElement.style.display = ''; // Reset display property
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
+</script>
 
     <script>
         $(document).ready(function () {
