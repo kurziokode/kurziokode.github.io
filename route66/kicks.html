@@ -466,7 +466,7 @@ SOFTWARE.  -->
                                     </svg></label></span>
                         </div>
                     </nav>
-                    <div id="targetElement" class="my-2"><img src="gspeed.webp"
+                    <div class="my-2"><img src="gspeed.webp"
                             alt="The Lab of Chris" style="transform: scale(0.55); filter: brightness(90%); ">
                     </div>
 
@@ -1075,31 +1075,7 @@ SOFTWARE.  -->
 
     </div>
    
-<script>
-const targetElement = document.getElementById('targetElement');
-
-function isVisible() {
-    const rect = targetElement.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-function handleScroll() {
-    if (!isVisible()) {
-        targetElement.style.visibility = 'hidden';
-    } else {
-        targetElement.style.visibility = 'visible';
-    }
-}
-
-window.addEventListener('scroll', handleScroll);
-</script>
-
-    <script>
+ <script>
         $(document).ready(function () {
             const radios = $('.join-item');
             const selectedUrlInput = $('#selectedUrl');
