@@ -24,7 +24,7 @@ SOFTWARE.   -->
 <html lang="en">
 
 <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE8B495353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -35,26 +35,25 @@ SOFTWARE.   -->
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas is Coming</title>
+    <title>Christmas Countdown Timer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./santa.css">
-    <link rel="stylesheet" href="fire.css">
+   
 </head>
 
 <body class=" min-h-screen flex items-center justify-center p-4">
-<canvas id=c></canvas>
+  
     <div
         class="relative max-w-4xl w-full mx-auto bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/20">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden rounded-3xl pointer-events-none">
             <div class="santa-sleigh absolute -right-20 animate-fly">
-                <img src="gg.png" alt="Santa's Sleigh"
-                    class="w-30 h-30 object-contain transform -rotate-12">
+                <img src="pngegg33.png" alt="Santa's Sleigh" class="w-30 h-30 object-contain transform -rotate-12">
             </div>
         </div>
 
         <div class="text-center space-y-8">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 font-christmas animate-bounce">Christmas is Coming in...
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 font-christmas animate-bounce">School's Out in...
             </h1>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
@@ -81,7 +80,7 @@ SOFTWARE.   -->
             </div>
 
             <div class="mt-12">
-              
+
                 <input type="file" accept="image/*"
                     class="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white/20 file:text-white hover:file:bg-white/30 cursor-pointer"
                     aria-label="Upload Christmas photo">
@@ -89,43 +88,50 @@ SOFTWARE.   -->
                     <img src="" alt="Preview" class="w-full h-48 object-cover">
                 </div>
             </div>
-<h1 class="text-2xl md:text-3xl font-bold text-white mb-8 font-christmas animate-bounce">by Chris Doulos
-</h1>                
+            <h1 class="text-2xl md:text-3xl font-bold text-white mb-8 font-christmas animate-bounce"><em>Drifting</em>&nbsp;&nbsp;&nbsp;&nbsp;by Chris Doulos
+            </h1>
         </div>
 
- 
+
     </div>
 
-    <script>
-        function updateCountdown() {
-            const christmas = new Date(new Date().getFullYear(), 11, 25).getTime();
-            const now = new Date().getTime();
-            const distance = christmas - now;
+<script>
+    function updateCountdown() {
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        let targetDate = new Date(currentYear, 5, 15).getTime(); // June 15th of the current year
 
-            document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        // If June 15th has already passed this year, set the target to next year
+        if (now.getTime() > targetDate) {
+            targetDate = new Date(currentYear + 1, 5, 15).getTime();
         }
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        const distance = targetDate - now.getTime();
 
-        const fileInput = document.querySelector('input[type="file"]');
-        const preview = document.getElementById('preview');
-        fileInput.addEventListener('change', function (e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    preview.querySelector('img').src = e.target.result;
-                    preview.classList.remove('hidden');
-                }
-                reader.readAsDataURL(file);
+        document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+        document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    const fileInput = document.querySelector('input[type="file"]');
+    const preview = document.getElementById('preview');
+    fileInput.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.querySelector('img').src = e.target.result;
+                preview.classList.remove('hidden');
             }
-        });
-    </script>
-<script src="https://kurziokode.github.io/new/script.js"></script>
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+ 
 </body>
 
 </html>
