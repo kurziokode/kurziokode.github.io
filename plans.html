@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πίνακας Ελέγχου Εκπαιδευτικού</title>
+    <style>
+        /* --- ΧΡΩΜΑΤΙΚΟ ΘΕΜΑ (Πορτοκαλί & Γκρι) --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #060606;
+            color: #424242;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #bf360c;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        button {
+            background-color: #232323;
+            color: #bf360c;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+            margin-top: 0.5em; 
+            margin-bottom: 0.5em;                     
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #060606;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        button.danger {
+            background-color: #232323;
+            color: #979696;
+        }
+
+        button.danger:hover {
+            background-color: #060606;
+        }
+
+        button.secondary {
+            background-color: #e0e0e0;
+            color: #424242;
+        }
+
+        button.secondary:hover {
+            background-color: #bdbdbd;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"],
+        textarea,
+        select {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: calc(100% - 18px);
+            font-size: 1em;
+            background-color: #060606;
+            color: #979696;           
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .content-editable-div {
+            border: 1px solid #555;
+            /* Προσαρμογή για dark theme */
+            padding: 8px;
+            min-height: 50px;
+            background-color: #1c1c1c;
+            /* Προσαρμογή για dark theme */
+            color: #dcdcdc;
+            /* Προσαρμογή για dark theme */
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus,
+        .content-editable-div:focus {
+            border-color: #a8320e;
+            outline: none;
+        }
+
+        .app-header {
+            background-color: #0b0c0e;
+            color: rgb(123, 122, 122);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-header>div {
+            flex-shrink: 0;
+        }
+
+
+        .app-header #date-time {
+            font-size: 1.1em;
+        }
+
+        .app-header #date-time strong {
+            font-weight: bold;
+        }
+
+        .app-header #header-left-content h1 {
+            font-size: 1.3em;
+            color: #8a8a8a;
+            margin: 0;
+            font-weight: 500;
+        }
+
+
+        .app-header #header-right-content {
+            text-align: right;
+            font-size: 0.85em;
+        }
+
+        .app-header #header-right-content p,
+        .app-header #header-right-content a {
+            margin: 1px 0;
+            color: rgb(123, 122, 122);
+            text-decoration: none;
+        }
+
+        .app-header #header-right-content a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .app-section {
+            background-color: #0b0c0e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .app-section h2 {
+            border-bottom: 2px solid #232323;
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: #983602;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #subjects-list-display li,
+        #students-list-display li {
+            background-color: #0b0c0e;
+            color: #979696;
+           
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #subjects-list-display li:hover,
+        #students-list-display li:hover {
+            background-color: #060606;
+            transform: translateY(-2px);
+            color: #983602;
+          
+        }
+
+        #subjects-list-display li .actions button,
+        #students-list-display li .actions button {
+            background-color: #060606;
+            color: #bf360c;
+            padding: 6px 10px;
+            font-size: 0.9em;
+            margin-left: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #subjects-list-display li .actions button:hover,
+        #students-list-display li .actions button:hover {
+            background-color: #232323;
+        }
+
+        /* Default li style for other lists inside modals */
+        .modal-content ul li {
+            background-color: #2c2c2c;
+            color: #c0c0c0;
+            border: 1px solid #444;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .modal-content ul li a {
+            color: #ff8c00;
+            text-decoration: none;
+        }
+
+        .modal-content ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .modal-content ul li:hover {
+            background-color: #383838;
+        }
+
+        .modal-content ul li .actions button {
+            background-color: #4a4a4a;
+            color: #ffcc80;
+        }
+
+        .modal-content ul li .actions button:hover {
+            background-color: #5c5c5c;
+        }
+
+        .modal-content ul li .actions button.danger {
+            background-color: #5e2a2a;
+            color: #ffcdd2;
+        }
+
+        .modal-content ul li .actions button.danger:hover {
+            background-color: #7a3b3b;
+        }
+
+
+        /* --- Modal Styling with Scroll Fix --- */
+        .modal {
+            display: none;
+            /* **ΔΙΟΡΘΩΣΗ: Αρχικά κρυφό** */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 10, 10, 0.75);
+            /* Οι παρακάτω θα ισχύουν όταν η JS αλλάξει το display σε flex */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .modal-content {
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+            padding: 25px;
+            border: 1px solid #a8320e;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+
+        .modal-content h3 {
+            margin-top: 0;
+            color: #e65100;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+
+        .modal-content h4 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #aaa;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .modal-close-btn:hover,
+        .modal-close-btn:focus {
+            color: #ff7043;
+            text-decoration: none;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #c0c0c0;
+        }
+
+        .modal-content .content-editable-div {
+            background-color: #2c2c2c;
+            color: #dcdcdc;
+            border: 1px solid #444;
+        }
+
+        .modal-content .content-editable-div:focus {
+            border-color: #a8320e;
+            background-color: #333;
+        }
+
+
+        .attached-links-list {
+            margin-top: 10px;
+        }
+
+        .attached-links-list li {
+            font-size: 0.9em;
+            padding: 5px;
+            background-color: #2c2c2c;
+            border-color: #444;
+        }
+
+        .attached-links-list li a {
+            color: #ff8c00;
+        }
+
+        .attached-links-list li a:hover {
+            color: #ffab40;
+        }
+
+        .student-performance-entry {
+            border: 1px dashed #a8320e;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #2a2a2a;
+        }
+
+        .student-performance-entry h5 {
+            margin-top: 0;
+            font-size: 1em;
+            color: #ff8c00;
+        }
+
+        .app-footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #0b0c0e;
+            color: #777;
+        }
+
+        .app-footer p {
+            border-bottom: 2px solid #232323; 
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            border-radius: 4px;
+        }
+
+
+        #student-subject-average {
+            font-weight: bold;
+            color: #e65100;
+            font-size: 1.1em;
+            padding: 5px 8px;
+            border: 1px solid #e65100;
+            display: inline-block;
+            margin-bottom: 10px;
+            background-color: #3a3a3a;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #student-subject-average:hover {
+            background-color: #4a4a4a;
+        }
+
+        #new-lesson-plan-form-container,
+        #ssp-form-wrapper {
+            border: 1px solid #a8320e;
+            padding: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            background-color: #252525;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="app-header">
+        <div id="date-time">
+            <strong id="current-date-display"></strong>, <span id="current-time-display"></span>
+        </div>
+        <div id="header-left-content">
+            <h1>Μαυροπίνακας</h1>
+        </div>
+        <div id="header-right-content">
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" id="header-custom-link">Χρήσιμος
+                Σύνδεσμος</a>
+            <p>Γενέθλια: <span id="birthdays-today">Κανένα</span></p>
+        </div>
+    </header>
+
+    <main>
+        <section class="app-section" id="lesson-plans-manager">
+            <h2>Σχέδια Μαθήματων</h2>
+            <div class="form-group">
+                <input type="text" id="new-subject-name-input" placeholder="Όνομα νέου μαθήματος">
+                <button onclick="addSubject()">Προσθήκη Μαθήματος</button>
+            </div>
+            <ul id="subjects-list-display"></ul>
+        </section>
+
+        <section class="app-section" id="class-management">
+            <h2>Διαχείριση Τάξης</h2>
+            <div class="form-group">
+                <input type="text" id="new-student-name-input" placeholder="Όνομα νέου μαθητή">
+                <button onclick="addStudent()">Προσθήκη Μαθητή</button>
+            </div>
+            <ul id="students-list-display"></ul>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <button onclick="exportData()">Εξαγωγή Δεδομένων (Απλό Κείμενο)</button>
+        <button
+            onclick="if(confirm('Είστε σίγουροι ότι θέλετε να διαγράψετε ΟΛΑ τα δεδομένα; Αυτή η ενέργεια ΔΕΝ αναιρείται.')) clearAllData();"
+            class="danger">Διαγραφή Όλων των Δεδομένων</button>
+        <p>© 2025 Εκπαιδευτικό Σύστημα - Όλα τα δικαιώματα διατηρούνται.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="subject-lesson-plans-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeSubjectLessonPlansModal()">×</span>
+            <h3 id="subject-lesson-plans-title">Σχέδια Μαθήματος για: </h3>
+            <button
+                onclick="toggleLessonPlanForm(document.getElementById('subject-lesson-plans-modal').dataset.subjectId)">Εμφάνιση/Απόκρυψη
+                Φόρμας</button>
+            <div id="new-lesson-plan-form-container" style="display:none;">
+                <h4 id="lesson-plan-form-title">Δημιουργία/Επεξεργασία Σχεδίου Μαθήματος</h4>
+                <input type="hidden" id="form-lesson-plan-subject-id"><input type="hidden" id="form-lesson-plan-id">
+                <div class="form-group"><label for="form-lp-title">Τίτλος/Ημερομηνία Σχεδίου:</label><input type="text"
+                        id="form-lp-title" placeholder="π.χ. Εισαγωγή στα Κλάσματα 2025-03-15"></div>
+                <div class="form-group"><label for="form-lp-enotita">Ενότητα:</label>
+                    <div id="form-lp-enotita" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-kefalaio">Κεφάλαιο:</label><input type="text"
+                        id="form-lp-kefalaio"></div>
+                <div class="form-group"><label for="form-lp-diarkeia">Διάρκεια:</label><input type="text"
+                        id="form-lp-diarkeia" placeholder="π.χ. 2 διδακτικές ώρες"></div>
+                <div class="form-group"><label for="form-lp-stoxoi">Στόχοι:</label>
+                    <div id="form-lp-stoxoi" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-methodos">Μέθοδος Διδασκαλίας:</label>
+                    <div id="form-lp-methodos" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-perigrafi">Σύντομη Περιγραφή:</label>
+                    <div id="form-lp-perigrafi" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-domi">Δομή μαθήματος:</label>
+                    <div id="form-lp-domi" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-drastiriotites">Διδακτικές δραστηριότητες:</label>
+                    <div id="form-lp-drastiriotites" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-epoptika">Εποπτικά Μέσα:</label>
+                    <div id="form-lp-epoptika" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-apotelesmata">Μαθησιακά αποτελέσματα:</label>
+                    <div id="form-lp-apotelesmata" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-aksiologisi">Αξιολόγηση διδασκαλίας:</label>
+                    <div id="form-lp-aksiologisi" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="form-lp-vivliografia">Βιβλιογραφία - Πηγές:</label>
+                    <div id="form-lp-vivliografia" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label>Επισυναπτόμενο υλικό (Σύνδεσμοι):</label><input type="text"
+                        id="form-lp-new-link-text" placeholder="Κείμενο συνδέσμου"><input type="text"
+                        id="form-lp-new-link-url" placeholder="URL (http://...)"><button type="button"
+                        onclick="addLessonPlanLinkToForm()">Προσθήκη Συνδέσμου</button>
+                    <ul id="form-lp-attached-links-list" class="attached-links-list"></ul>
+                </div>
+                <button onclick="saveLessonPlanFromInlineForm()">Αποθήκευση Σχεδίου</button><button type="button"
+                    class="secondary" onclick="cancelLessonPlanForm()">Ακύρωση</button>
+            </div>
+            <ul id="subject-lesson-plans-list"></ul>
+            <button type="button" class="secondary" onclick="closeSubjectLessonPlansModal()">Κλείσιμο</button>
+        </div>
+    </div>
+    <div id="view-lesson-plan-modal" class="modal">
+        <div class="modal-content"><span class="modal-close-btn" onclick="closeModal('view-lesson-plan-modal')">×</span>
+            <h3 id="view-lp-title-display"></h3>
+            <div id="view-lp-details"></div><button type="button" class="secondary"
+                onclick="closeModal('view-lesson-plan-modal')">Κλείσιμο</button>
+        </div>
+    </div>
+    <div id="student-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeModal('student-details-modal')">×</span>
+            <h3 id="student-name-header"></h3><input type="hidden" id="student-details-id">
+            <h4>Γενικές Πληροφορίες Μαθητή <button onclick="toggleStudentGeneralInfoEdit(true)">Επεξεργασία</button>
+            </h4>
+            <div id="student-general-info-view">
+                <p><strong>Ημερομηνία γέννησης:</strong> <span id="student-dob-view"></span></p>
+                <p><strong>Στοιχεία επικοινωνίας:</strong> <span id="student-contact-view"></span></p>
+                <p><strong>Πληροφορίες (ΚΕΔΑΣΥ, ιατρικά):</strong> <span id="student-info-view"></span></p>
+                <p><strong>Συνολικές απουσίες:</strong> <span id="student-total-absences-view"></span></p>
+            </div>
+            <div id="student-general-info-edit" style="display:none;">
+                <div class="form-group"><label for="student-dob-edit">Ημερομηνία γέννησης:</label><input type="date"
+                        id="student-dob-edit"></div>
+                <div class="form-group"><label for="student-contact-edit">Στοιχεία επικοινωνίας:</label>
+                    <div id="student-contact-edit" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="student-info-edit">Πληροφορίες (ΚΕΔΑΣΥ, ιατρικά):</label>
+                    <div id="student-info-edit" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="student-total-absences-edit">Συνολικές απουσίες
+                        (αριθμός):</label><input type="number" id="student-total-absences-edit" min="0"></div><button
+                    onclick="saveStudentGeneralInfo()">Αποθήκευση Πληροφοριών</button><button class="secondary"
+                    onclick="toggleStudentGeneralInfoEdit(false)">Ακύρωση</button>
+            </div>
+            <h4>Μέσος Όρος (Όλα τα μαθήματα):</h4>
+            <div id="student-overall-average" class="content-editable-div" contenteditable="true"></div><button
+                onclick="calculateAndDisplayOverallStudentAverage()">Υπολογισμός Συνολικού Μ.Ο.</button><button
+                onclick="saveStudentOverallAverage()">Αποθήκευση Μ.Ο.</button>
+            <h4>Επιδόσεις ανά Μάθημα:</h4>
+            <ul id="student-subjects-performance-list"></ul>
+            <button type="button" class="secondary" onclick="closeModal('student-details-modal')">Κλείσιμο</button>
+        </div>
+    </div>
+    <div id="student-subject-performance-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close-btn" onclick="closeSspModal()">×</span>
+            <h3 id="student-subject-performance-title"></h3><input type="hidden" id="ssp-student-id"><input
+                type="hidden" id="ssp-subject-id"><input type="hidden" id="ssp-record-id">
+            <h4>Μέσος Όρος Μαθήματος: <span id="student-subject-average"
+                    onclick="calculateAndDisplayStudentSubjectAverage()">Υπολογισμός</span></h4>
+            <button id="toggle-ssp-entry-form-btn" onclick="toggleSspEntryForm()">Εμφάνιση Φόρμας Καταχώρησης</button>
+            <div id="ssp-form-wrapper" style="display:none;">
+                <h4>Νέα Καταχώρηση / Επεξεργασία:</h4>
+                <div class="form-group"><label for="ssp-date">Ημερομηνία Καταχώρησης:</label><input type="date"
+                        id="ssp-date"></div>
+                <div class="form-group"><label for="ssp-custom-notes">Γενικές Σημειώσεις για την ημέρα:</label>
+                    <div id="ssp-custom-notes" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-absence">Απουσία:</label><input type="text" id="ssp-absence">
+                </div>
+                <div class="form-group"><label for="ssp-performance">Επίδοση:</label>
+                    <div id="ssp-performance" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-progress">Πρόοδος:</label>
+                    <div id="ssp-progress" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-collaboration">Συνεργασία:</label>
+                    <div id="ssp-collaboration" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-behavior">Συμπεριφορά:</label>
+                    <div id="ssp-behavior" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-participation">Συμμετοχή:</label>
+                    <div id="ssp-participation" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-understanding">Κατανόηση:</label>
+                    <div id="ssp-understanding" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-effort">Προσπάθεια:</label>
+                    <div id="ssp-effort" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-homework">Εργασίες στο σπίτι:</label>
+                    <div id="ssp-homework" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-interest">Ενδιαφέρον:</label>
+                    <div id="ssp-interest" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-positives">Θετικά Σημεία:</label>
+                    <div id="ssp-positives" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-improvements">Προς Βελτίωση:</label>
+                    <div id="ssp-improvements" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <div class="form-group"><label for="ssp-next-actions">Επόμενες Ενέργειες:</label>
+                    <div id="ssp-next-actions" class="content-editable-div" contenteditable="true"></div>
+                </div>
+                <button onclick="saveStudentSubjectPerformance()">Αποθήκευση Καταχώρησης</button><button type="button"
+                    class="secondary" onclick="resetStudentSubjectPerformanceForm(true)">Καθαρισμός / Νέα</button>
+            </div>
+            <h4>Ιστορικό Επιδόσεων για το Μάθημα:</h4>
+            <div id="ssp-history-list"></div>
+            <button type="button" class="secondary" onclick="closeSspModal()">Κλείσιμο</button>
+        </div>
+    </div>
+
+    <script>
+        let appData = {
+            settings: {},
+            subjects: [], students: [], lessonPlans: {}, studentRecords: {}
+        };
+
+        const LS_KEY = 'teacherDashboardData_v7_darkScrollFix'; // New key
+
+        function saveData() { localStorage.setItem(LS_KEY, JSON.stringify(appData)); }
+
+        function loadData() {
+            const data = localStorage.getItem(LS_KEY);
+            if (data) {
+                appData = JSON.parse(data);
+                appData.settings = appData.settings || {};
+                appData.subjects = appData.subjects || [];
+                appData.students = appData.students || [];
+                appData.lessonPlans = appData.lessonPlans || {};
+                appData.studentRecords = appData.studentRecords || {};
+            } else {
+                appData.subjects = [
+                    { id: 'subj_glossa', name: 'ΓΛΩΣΣΑ' }, { id: 'subj_math', name: 'ΜΑΘΗΜΑΤΙΚΑ' },
+                    { id: 'subj_istoria', name: 'ΙΣΤΟΡΙΑ' }, { id: 'subj_thriskeftika', name: 'ΘΡΗΣΚΕΥΤΙΚΑ' },
+                    { id: 'subj_fisiki', name: 'ΦΥΣΙΚΗ' }, { id: 'subj_meleti', name: 'ΜΕΛΕΤΗ' }
+                ];
+            }
+        }
+
+        function clearAllData() {
+            localStorage.removeItem(LS_KEY);
+            appData = {
+                settings: {},
+                subjects: [
+                    { id: 'subj_glossa', name: 'ΓΛΩΣΣΑ' }, { id: 'subj_math', name: 'ΜΑΘΗΜΑΤΙΚΑ' },
+                    { id: 'subj_istoria', name: 'ΙΣΤΟΡΙΑ' }, { id: 'subj_thriskeftika', name: 'ΘΡΗΣΚΕΥΤΙΚΑ' },
+                    { id: 'subj_fisiki', name: 'ΦΥΣΙΚΗ' }, { id: 'subj_meleti', name: 'ΜΕΛΕΤΗ' }
+                ],
+                students: [], lessonPlans: {}, studentRecords: {}
+            };
+            saveData(); location.reload();
+        }
+
+        function generateId(prefix = 'id_') { return prefix + Date.now() + Math.random().toString(36).substr(2, 9); }
+
+        function getCurrentDateTime() {
+            const now = new Date();
+            const displayDate = now.toLocaleDateString('el-GR', { day: 'numeric', month: 'numeric', year: 'numeric' });
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            return { date: displayDate, time: `${hours}:${minutes}`, todayObject: now };
+        }
+
+        function closeModal(modalId) {
+            const modalElement = document.getElementById(modalId);
+            if (modalElement) {
+                modalElement.style.display = 'none';
+            }
+        }
+        function closeSspModal() {
+            document.getElementById('ssp-form-wrapper').style.display = 'none';
+            document.getElementById('toggle-ssp-entry-form-btn').textContent = 'Εμφάνιση Φόρμας Καταχώρησης';
+            closeModal('student-subject-performance-modal');
+        }
+        function closeSubjectLessonPlansModal() { cancelLessonPlanForm(); closeModal('subject-lesson-plans-modal'); }
+
+        function openModal(modalId) {
+            const modalElement = document.getElementById(modalId);
+            if (modalElement) {
+                modalElement.style.display = 'flex'; // **ΔΙΟΡΘΩΣΗ ΕΔΩ**
+            }
+        }
+
+
+        function getContent(elementId) { return document.getElementById(elementId).innerHTML; }
+        function setContent(elementId, content) { if (document.getElementById(elementId)) { document.getElementById(elementId).innerHTML = content || ''; } }
+        function setValue(elementId, value) { if (document.getElementById(elementId)) { document.getElementById(elementId).value = value || ''; } }
+
+        function updateHeaderInfo() {
+            const { date, time, todayObject } = getCurrentDateTime();
+            document.getElementById('current-date-display').textContent = date;
+            document.getElementById('current-time-display').textContent = time;
+            let birthdayStudents = [];
+            const currentMonth = todayObject.getMonth() + 1;
+            const currentDay = todayObject.getDate();
+            const currentMonthDay = `${currentMonth}-${currentDay}`;
+            appData.students.forEach(student => {
+                if (student.dob) {
+                    const dobDate = new Date(student.dob);
+                    if (!isNaN(dobDate.valueOf())) {
+                        const studentMonthDay = `${dobDate.getMonth() + 1}-${dobDate.getDate()}`;
+                        if (studentMonthDay === currentMonthDay) {
+                            birthdayStudents.push(student.name);
+                        }
+                    }
+                }
+            });
+            document.getElementById('birthdays-today').textContent = birthdayStudents.length > 0 ? birthdayStudents.join(', ') : 'Κανένα';
+        }
+
+        function renderSubjects() {
+            const listEl = document.getElementById('subjects-list-display'); listEl.innerHTML = '';
+            appData.subjects.forEach(subject => {
+                const li = document.createElement('li'); li.textContent = subject.name;
+                li.onclick = () => openSubjectLessonPlans(subject.id, subject.name);
+                const actionsDiv = document.createElement('div'); actionsDiv.className = 'actions';
+                const removeBtn = document.createElement('button'); removeBtn.textContent = '✕';
+                removeBtn.onclick = (e) => { e.stopPropagation(); removeSubject(subject.id); };
+                actionsDiv.appendChild(removeBtn); li.appendChild(actionsDiv); listEl.appendChild(li);
+            });
+        }
+
+        function addSubject() {
+            const nameInput = document.getElementById('new-subject-name-input');
+            if (nameInput.value.trim()) {
+                appData.subjects.push({ id: generateId('subj_'), name: nameInput.value.trim() });
+                saveData(); renderSubjects(); nameInput.value = '';
+            } else { alert('Παρακαλώ δώστε όνομα για το μάθημα.'); }
+        }
+
+        function removeSubject(subjectId) {
+            if (confirm('Είστε σίγουροι; Θα διαγραφούν και όλα τα σχετικά σχέδια & επιδόσεις.')) {
+                appData.subjects = appData.subjects.filter(s => s.id !== subjectId);
+                for (const key in appData.lessonPlans) if (key.startsWith(subjectId + '_')) delete appData.lessonPlans[key];
+                for (const key in appData.studentRecords) if (key.split('_')[1] === subjectId) delete appData.studentRecords[key];
+                saveData(); renderSubjects();
+            }
+        }
+
+        function renderStudents() {
+            const listEl = document.getElementById('students-list-display'); listEl.innerHTML = '';
+            appData.students.sort((a, b) => a.name.localeCompare(b.name, 'el')).forEach(student => {
+                const li = document.createElement('li'); li.textContent = student.name;
+                li.onclick = () => openStudentDetails(student.id);
+                const actionsDiv = document.createElement('div'); actionsDiv.className = 'actions';
+                const removeBtn = document.createElement('button'); removeBtn.textContent = '✕';
+                removeBtn.onclick = (e) => { e.stopPropagation(); removeStudent(student.id); };
+                actionsDiv.appendChild(removeBtn); li.appendChild(actionsDiv); listEl.appendChild(li);
+            });
+            updateHeaderInfo();
+        }
+
+        function addStudent() {
+            const nameInput = document.getElementById('new-student-name-input');
+            if (nameInput.value.trim()) {
+                appData.students.push({ id: generateId('stud_'), name: nameInput.value.trim(), dob: '', contact: '', info: '', absences: 0, overallAverage: '' });
+                saveData(); renderStudents(); nameInput.value = '';
+            } else { alert('Παρακαλώ δώστε όνομα για τον μαθητή.'); }
+        }
+
+        function removeStudent(studentId) {
+            if (confirm('Είστε σίγουροι; Θα διαγραφούν και όλες οι επιδόσεις του.')) {
+                appData.students = appData.students.filter(s => s.id !== studentId);
+                for (const key in appData.studentRecords) if (key.startsWith(studentId + '_')) delete appData.studentRecords[key];
+                saveData(); renderStudents();
+            }
+        }
+
+        let currentLessonPlanLinksForm = [];
+
+        function openSubjectLessonPlans(subjectId, subjectName) {
+            document.getElementById('subject-lesson-plans-title').textContent = `Σχέδια Μαθήματος για: ${subjectName}`;
+            document.getElementById('subject-lesson-plans-modal').dataset.subjectId = subjectId;
+            renderLessonPlansList(subjectId); cancelLessonPlanForm(); openModal('subject-lesson-plans-modal');
+        }
+
+        function renderLessonPlansList(subjectId) {
+            const listEl = document.getElementById('subject-lesson-plans-list'); listEl.innerHTML = '';
+            const plans = Object.entries(appData.lessonPlans).filter(([k]) => k.startsWith(subjectId + '_'))
+                .map(([k, v]) => ({ ...v, fullId: k })).sort((a, b) => (a.title || "").localeCompare(b.title || "", 'el'));
+            if (plans.length === 0) { listEl.innerHTML = '<li>Δεν υπάρχουν αποθηκευμένα σχέδια.</li>'; return; }
+            plans.forEach(plan => {
+                const li = document.createElement('li'); li.textContent = plan.title || 'Χωρίς Τίτλο';
+                const actionsDiv = document.createElement('div'); actionsDiv.className = 'actions';
+                const viewBtn = document.createElement('button'); viewBtn.textContent = 'Προβολή'; viewBtn.onclick = (e) => { e.stopPropagation(); viewLessonPlan(plan.fullId); };
+                const editBtn = document.createElement('button'); editBtn.textContent = 'Επεξεργασία'; editBtn.className = 'secondary'; editBtn.onclick = (e) => { e.stopPropagation(); toggleLessonPlanForm(subjectId, plan.fullId); };
+                const deleteBtn = document.createElement('button'); deleteBtn.textContent = 'Διαγραφή'; deleteBtn.className = 'danger'; deleteBtn.onclick = (e) => { e.stopPropagation(); deleteLessonPlan(plan.fullId, subjectId); };
+                actionsDiv.append(viewBtn, editBtn, deleteBtn); li.appendChild(actionsDiv); listEl.appendChild(li);
+            });
+        }
+
+        function toggleLessonPlanForm(subjectId, planFullIdToEdit = null) {
+            const formContainer = document.getElementById('new-lesson-plan-form-container');
+            const formTitle = document.getElementById('lesson-plan-form-title');
+            document.getElementById('form-lesson-plan-subject-id').value = subjectId;
+            if (planFullIdToEdit) {
+                const plan = appData.lessonPlans[planFullIdToEdit]; if (!plan) return;
+                formTitle.textContent = 'Επεξεργασία Σχεδίου Μαθήματος';
+                document.getElementById('form-lesson-plan-id').value = planFullIdToEdit.split('_')[1];
+                setValue('form-lp-title', plan.title); setContent('form-lp-enotita', plan.enotita); setValue('form-lp-kefalaio', plan.kefalaio); setValue('form-lp-diarkeia', plan.diarkeia);
+                setContent('form-lp-stoxoi', plan.stoxoi); setContent('form-lp-methodos', plan.methodos); setContent('form-lp-perigrafi', plan.perigrafi); setContent('form-lp-domi', plan.domi);
+                setContent('form-lp-drastiriotites', plan.drastiriotites); setContent('form-lp-epoptika', plan.epoptika); setContent('form-lp-apotelesmata', plan.apotelesmata); setContent('form-lp-aksiologisi', plan.aksiologisi);
+                setContent('form-lp-vivliografia', plan.vivliografia); currentLessonPlanLinksForm = plan.attachedLinks ? [...plan.attachedLinks] : []; renderLessonPlanLinksInForm();
+                formContainer.style.display = 'block';
+            } else {
+                if (formContainer.style.display === 'block' && document.getElementById('form-lesson-plan-id').value !== '') { clearAndPrepareLessonPlanForm(subjectId); }
+                else if (formContainer.style.display === 'block') { formContainer.style.display = 'none'; }
+                else { clearAndPrepareLessonPlanForm(subjectId); formContainer.style.display = 'block'; }
+            }
+        }
+
+        function clearAndPrepareLessonPlanForm(subjectId) {
+            document.getElementById('lesson-plan-form-title').textContent = 'Δημιουργία Νέου Σχεδίου Μαθήματος';
+            document.getElementById('form-lesson-plan-subject-id').value = subjectId; document.getElementById('form-lesson-plan-id').value = '';
+            ['form-lp-title', 'form-lp-kefalaio', 'form-lp-diarkeia', 'form-lp-new-link-text', 'form-lp-new-link-url'].forEach(id => setValue(id, ''));
+            ['form-lp-enotita', 'form-lp-stoxoi', 'form-lp-methodos', 'form-lp-perigrafi', 'form-lp-domi', 'form-lp-drastiriotites', 'form-lp-epoptika', 'form-lp-apotelesmata', 'form-lp-aksiologisi', 'form-lp-vivliografia'].forEach(id => setContent(id, ''));
+            document.getElementById('form-lp-attached-links-list').innerHTML = ''; currentLessonPlanLinksForm = [];
+        }
+
+        function cancelLessonPlanForm() { document.getElementById('new-lesson-plan-form-container').style.display = 'none'; clearAndPrepareLessonPlanForm(''); }
+
+        function addLessonPlanLinkToForm() {
+            const text = document.getElementById('form-lp-new-link-text').value.trim(); const url = document.getElementById('form-lp-new-link-url').value.trim();
+            if (text && url) {
+                if (!url.startsWith('http://') && !url.startsWith('https://')) { alert('URL με http:// ή https://'); return; }
+                currentLessonPlanLinksForm.push({ text, url }); renderLessonPlanLinksInForm(); setValue('form-lp-new-link-text', ''); setValue('form-lp-new-link-url', '');
+            } else { alert('Συμπληρώστε κείμενο και URL.'); }
+        }
+
+        function renderLessonPlanLinksInForm() {
+            const listEl = document.getElementById('form-lp-attached-links-list'); listEl.innerHTML = '';
+            currentLessonPlanLinksForm.forEach((link, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a> <button type="button" class="danger" onclick="removeLessonPlanLinkFromForm(${index})" style="font-size:0.8em; padding:2px 5px; margin-left:10px;">X</button>`;
+                listEl.appendChild(li);
+            });
+        }
+
+        function removeLessonPlanLinkFromForm(index) { currentLessonPlanLinksForm.splice(index, 1); renderLessonPlanLinksInForm(); }
+
+        function saveLessonPlanFromInlineForm() {
+            const subjectId = document.getElementById('form-lesson-plan-subject-id').value;
+            let planId = document.getElementById('form-lesson-plan-id').value || generateId('plan_');
+            const fullPlanId = `${subjectId}_${planId}`;
+            appData.lessonPlans[fullPlanId] = {
+                title: document.getElementById('form-lp-title').value.trim(), enotita: getContent('form-lp-enotita'), kefalaio: document.getElementById('form-lp-kefalaio').value.trim(),
+                diarkeia: document.getElementById('form-lp-diarkeia').value.trim(), stoxoi: getContent('form-lp-stoxoi'), methodos: getContent('form-lp-methodos'), perigrafi: getContent('form-lp-perigrafi'),
+                domi: getContent('form-lp-domi'), drastiriotites: getContent('form-lp-drastiriotites'), epoptika: getContent('form-lp-epoptika'), apotelesmata: getContent('form-lp-apotelesmata'),
+                aksiologisi: getContent('form-lp-aksiologisi'), vivliografia: getContent('form-lp-vivliografia'), attachedLinks: [...currentLessonPlanLinksForm]
+            };
+            saveData(); cancelLessonPlanForm(); renderLessonPlansList(subjectId);
+        }
+
+        function deleteLessonPlan(fullPlanId, subjectId) {
+            if (confirm(`Διαγραφή σχεδίου μαθήματος;`)) { delete appData.lessonPlans[fullPlanId]; saveData(); renderLessonPlansList(subjectId); cancelLessonPlanForm(); }
+        }
+
+        function viewLessonPlan(fullPlanId) {
+            const plan = appData.lessonPlans[fullPlanId]; if (!plan) return;
+            document.getElementById('view-lp-title-display').textContent = plan.title || "Προβολή Σχεδίου";
+            const safeHtml = (html) => { const d = document.createElement('div'); d.innerHTML = html || ''; return d.innerHTML; };
+            document.getElementById('view-lp-details').innerHTML = `
+            <p><strong>Ενότητα:</strong></p><div>${safeHtml(plan.enotita)}</div> <p><strong>Κεφάλαιο:</strong> ${plan.kefalaio || '-'}</p> <p><strong>Διάρκεια:</strong> ${plan.diarkeia || '-'}</p> 
+            <p><strong>Στόχοι:</strong></p><div>${safeHtml(plan.stoxoi)}</div> <p><strong>Μέθοδος:</strong></p><div>${safeHtml(plan.methodos)}</div> <p><strong>Περιγραφή:</strong></p><div>${safeHtml(plan.perigrafi)}</div>
+            <p><strong>Δομή:</strong></p><div>${safeHtml(plan.domi)}</div> <p><strong>Δραστηριότητες:</strong></p><div>${safeHtml(plan.drastiriotites)}</div> <p><strong>Μέσα:</strong></p><div>${safeHtml(plan.epoptika)}</div>
+            <p><strong>Αποτελέσματα:</strong></p><div>${safeHtml(plan.apotelesmata)}</div> <p><strong>Αξιολόγηση:</strong></p><div>${safeHtml(plan.aksiologisi)}</div> <p><strong>Πηγές:</strong></p><div>${safeHtml(plan.vivliografia)}</div>
+            <p><strong>Σύνδεσμοι:</strong></p>${plan.attachedLinks && plan.attachedLinks.length > 0 ? '<ul>' + plan.attachedLinks.map(l => `<li><a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.text}</a></li>`).join('') + '</ul>' : '<span>-</span>'}`;
+            openModal('view-lesson-plan-modal');
+        }
+
+        function openStudentDetails(studentId) {
+            const student = appData.students.find(s => s.id === studentId); if (!student) return;
+            document.getElementById('student-name-header').textContent = `Λεπτομέρειες: ${student.name}`; document.getElementById('student-details-id').value = studentId;
+            document.getElementById('student-dob-view').textContent = student.dob ? new Date(student.dob).toLocaleDateString('el-GR') : '-';
+            document.getElementById('student-contact-view').innerHTML = student.contact || '-'; document.getElementById('student-info-view').innerHTML = student.info || '-';
+            document.getElementById('student-total-absences-view').textContent = student.absences || '0';
+            setValue('student-dob-edit', student.dob); setContent('student-contact-edit', student.contact); setContent('student-info-edit', student.info); setValue('student-total-absences-edit', student.absences || 0);
+            toggleStudentGeneralInfoEdit(false); setContent('student-overall-average', student.overallAverage || '');
+            const listPerf = document.getElementById('student-subjects-performance-list'); listPerf.innerHTML = '';
+            appData.subjects.forEach(subject => {
+                const li = document.createElement('li'); li.textContent = subject.name;
+                li.onclick = () => openStudentSubjectPerformance(studentId, student.name, subject.id); listPerf.appendChild(li);
+            });
+            openModal('student-details-modal');
+        }
+
+        function toggleStudentGeneralInfoEdit(isEditMode) {
+            document.getElementById('student-general-info-view').style.display = isEditMode ? 'none' : 'block';
+            document.getElementById('student-general-info-edit').style.display = isEditMode ? 'block' : 'none';
+        }
+
+        function saveStudentGeneralInfo() {
+            const studentId = document.getElementById('student-details-id').value;
+            const student = appData.students.find(s => s.id === studentId); if (!student) return;
+            student.dob = document.getElementById('student-dob-edit').value; student.contact = getContent('student-contact-edit'); student.info = getContent('student-info-edit');
+            student.absences = parseInt(document.getElementById('student-total-absences-edit').value) || 0; saveData();
+            document.getElementById('student-dob-view').textContent = student.dob ? new Date(student.dob).toLocaleDateString('el-GR') : '-';
+            document.getElementById('student-contact-view').innerHTML = student.contact; document.getElementById('student-info-view').innerHTML = student.info;
+            document.getElementById('student-total-absences-view').textContent = student.absences;
+            toggleStudentGeneralInfoEdit(false); updateHeaderInfo();
+        }
+
+        function saveStudentOverallAverage() {
+            const studentId = document.getElementById('student-details-id').value;
+            const student = appData.students.find(s => s.id === studentId); if (!student) return;
+            student.overallAverage = getContent('student-overall-average'); saveData(); alert('Μ.Ο. αποθηκεύτηκε.');
+        }
+
+        function calculateAndDisplayOverallStudentAverage(studentIdParam) {
+            const studentId = studentIdParam || document.getElementById('student-details-id').value;
+            const student = appData.students.find(s => s.id === studentId); if (!student) return;
+            let subjectAverages = [];
+            appData.subjects.forEach(subject => { const avg = getStudentSubjectAverage(studentId, subject.id); if (!isNaN(avg)) subjectAverages.push(avg); });
+            let overallAvgText = 'N/A';
+            if (subjectAverages.length > 0) { overallAvgText = (subjectAverages.reduce((s, a) => s + a, 0) / subjectAverages.length).toFixed(2); }
+            setContent('student-overall-average', overallAvgText); student.overallAverage = overallAvgText; saveData(); alert('Συνολικός Μ.Ο. υπολογίστηκε & αποθηκεύτηκε.');
+        }
+
+        function openStudentSubjectPerformance(studentId, studentName, subjectId) {
+            const subject = appData.subjects.find(s => s.id === subjectId); if (!subject) return;
+            document.getElementById('student-subject-performance-title').textContent = `Επίδοση: ${studentName} - Μάθημα: ${subject.name}`;
+            document.getElementById('ssp-student-id').value = studentId; document.getElementById('ssp-subject-id').value = subjectId;
+            document.getElementById('ssp-form-wrapper').style.display = 'none'; document.getElementById('toggle-ssp-entry-form-btn').textContent = 'Εμφάνιση Φόρμας Καταχώρησης';
+            resetStudentSubjectPerformanceForm(false); renderStudentSubjectPerformanceHistory(studentId, subjectId); calculateAndDisplayStudentSubjectAverage(studentId, subjectId);
+            openModal('student-subject-performance-modal');
+        }
+
+        function toggleSspEntryForm() {
+            const formWrapper = document.getElementById('ssp-form-wrapper'); const btn = document.getElementById('toggle-ssp-entry-form-btn');
+            if (formWrapper.style.display === 'none') {
+                formWrapper.style.display = 'block'; btn.textContent = 'Απόκρυψη Φόρμας Καταχώρησης';
+                if (document.getElementById('ssp-record-id').value === '') { resetStudentSubjectPerformanceForm(true); }
+            } else { formWrapper.style.display = 'none'; btn.textContent = 'Εμφάνιση Φόρμας Καταχώρησης'; }
+        }
+
+        function resetStudentSubjectPerformanceForm(forceShowForm = false) {
+            document.getElementById('ssp-record-id').value = ''; setValue('ssp-date', new Date().toISOString().split('T')[0]);
+            ['ssp-absence'].forEach(id => setValue(id, ''));
+            ['ssp-custom-notes', 'ssp-performance', 'ssp-progress', 'ssp-collaboration', 'ssp-behavior', 'ssp-participation', 'ssp-understanding', 'ssp-effort', 'ssp-homework', 'ssp-interest', 'ssp-positives', 'ssp-improvements', 'ssp-next-actions'].forEach(id => setContent(id, ''));
+            if (forceShowForm) { document.getElementById('ssp-form-wrapper').style.display = 'block'; document.getElementById('toggle-ssp-entry-form-btn').textContent = 'Απόκρυψη Φόρμας Καταχώρησης'; }
+        }
+
+        function saveStudentSubjectPerformance() {
+            const studentId = document.getElementById('ssp-student-id').value; const subjectId = document.getElementById('ssp-subject-id').value;
+            let recordId = document.getElementById('ssp-record-id').value || generateId('rec_');
+            const recordKey = `${studentId}_${subjectId}`; if (!appData.studentRecords[recordKey]) appData.studentRecords[recordKey] = [];
+            const newRecord = {
+                id: recordId, date: document.getElementById('ssp-date').value, customNotes: getContent('ssp-custom-notes'), absence: document.getElementById('ssp-absence').value.trim(),
+                performance: getContent('ssp-performance'), progress: getContent('ssp-progress'), collaboration: getContent('ssp-collaboration'), behavior: getContent('ssp-behavior'),
+                participation: getContent('ssp-participation'), understanding: getContent('ssp-understanding'), effort: getContent('ssp-effort'), homework: getContent('ssp-homework'),
+                interest: getContent('ssp-interest'), positives: getContent('ssp-positives'), improvements: getContent('ssp-improvements'), nextActions: getContent('ssp-next-actions'),
+            };
+            const existingIndex = appData.studentRecords[recordKey].findIndex(r => r.id === recordId);
+            if (existingIndex > -1) appData.studentRecords[recordKey][existingIndex] = newRecord; else appData.studentRecords[recordKey].push(newRecord);
+            appData.studentRecords[recordKey].sort((a, b) => new Date(b.date) - new Date(a.date)); saveData();
+            renderStudentSubjectPerformanceHistory(studentId, subjectId); calculateAndDisplayStudentSubjectAverage(studentId, subjectId);
+            resetStudentSubjectPerformanceForm(true);
+        }
+
+        function renderStudentSubjectPerformanceHistory(studentId, subjectId) {
+            const historyList = document.getElementById('ssp-history-list'); historyList.innerHTML = '';
+            const records = appData.studentRecords[`${studentId}_${subjectId}`] || [];
+            if (records.length === 0) { historyList.innerHTML = '<p>Δεν υπάρχουν καταχωρήσεις.</p>'; return; }
+            const s = (html) => { const d = document.createElement('div'); d.innerHTML = html || '-'; return d.innerHTML; };
+            records.forEach(record => {
+                const entryDiv = document.createElement('div'); entryDiv.className = 'student-performance-entry';
+                let html = `<h5>${new Date(record.date).toLocaleDateString('el-GR')}</h5>`;
+                const fields = { "Σημ. Ημέρας": record.customNotes, "Απουσία": record.absence, "Επίδοση": record.performance, "Πρόοδος": record.progress, "Συνεργασία": record.collaboration, "Συμπεριφορά": record.behavior, "Συμμετοχή": record.participation, "Κατανόηση": record.understanding, "Προσπάθεια": record.effort, "Εργ. Σπίτι": record.homework, "Ενδιαφέρον": record.interest, "Θετικά": record.positives, "Βελτίωση": record.improvements, "Ενέργειες": record.nextActions };
+                for (const label in fields) { if (fields[label] && getTextContentFromHtml(fields[label]).trim() !== '') html += `<p><strong>${label}:</strong></p><div>${s(fields[label])}</div>`; }
+                html += `<button onclick="editStudentSubjectPerformanceRecord('${studentId}','${subjectId}','${record.id}')">Επεξεργασία</button> <button class="danger" onclick="deleteStudentSubjectPerformanceRecord('${studentId}','${subjectId}','${record.id}')">Διαγραφή</button>`;
+                entryDiv.innerHTML = html; historyList.appendChild(entryDiv);
+            });
+        }
+
+        function editStudentSubjectPerformanceRecord(studentId, subjectId, recordId) {
+            const record = (appData.studentRecords[`${studentId}_${subjectId}`] || []).find(r => r.id === recordId); if (!record) return;
+            resetStudentSubjectPerformanceForm(true);
+            document.getElementById('ssp-record-id').value = record.id; setValue('ssp-date', record.date);
+            setContent('ssp-custom-notes', record.customNotes); setValue('ssp-absence', record.absence); setContent('ssp-performance', record.performance); setContent('ssp-progress', record.progress);
+            setContent('ssp-collaboration', record.collaboration); setContent('ssp-behavior', record.behavior); setContent('ssp-participation', record.participation); setContent('ssp-understanding', record.understanding);
+            setContent('ssp-effort', record.effort); setContent('ssp-homework', record.homework); setContent('ssp-interest', record.interest); setContent('ssp-positives', record.positives);
+            setContent('ssp-improvements', record.improvements); setContent('ssp-next-actions', record.nextActions);
+            document.getElementById('ssp-date').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function deleteStudentSubjectPerformanceRecord(studentId, subjectId, recordId) {
+            if (confirm('Διαγραφή καταχώρησης επίδοσης;')) {
+                const key = `${studentId}_${subjectId}`;
+                if (appData.studentRecords[key]) {
+                    appData.studentRecords[key] = appData.studentRecords[key].filter(r => r.id !== recordId);
+                    saveData(); renderStudentSubjectPerformanceHistory(studentId, subjectId); calculateAndDisplayStudentSubjectAverage(studentId, subjectId);
+                }
+            }
+        }
+
+        function getStudentSubjectAverage(studentId, subjectId) {
+            const records = appData.studentRecords[`${studentId}_${subjectId}`] || []; let sum = 0, count = 0;
+            records.forEach(record => {
+                const tempDiv = document.createElement('div'); tempDiv.innerHTML = record.performance;
+                const grade = parseFloat((tempDiv.textContent || "").replace(',', '.')); if (!isNaN(grade)) { sum += grade; count++; }
+            });
+            return count > 0 ? (sum / count) : NaN;
+        }
+
+        function calculateAndDisplayStudentSubjectAverage(studentId, subjectId) {
+            studentId = studentId || document.getElementById('ssp-student-id').value; subjectId = subjectId || document.getElementById('ssp-subject-id').value;
+            const avg = getStudentSubjectAverage(studentId, subjectId);
+            document.getElementById('student-subject-average').textContent = isNaN(avg) ? 'N/A' : avg.toFixed(2);
+        }
+
+        function exportData() {
+            let textOutput = "ΔΕΔΟΜΕΝΑ ΕΦΑΡΜΟΓΗΣ ΕΚΠΑΙΔΕΥΤΙΚΟΥ\n"; textOutput += `Ημερομηνία Εξαγωγής: ${new Date().toLocaleString('el-GR')}\n\n--- ΜΑΘΗΜΑΤΑ ---\n`;
+            appData.subjects.forEach(s => textOutput += `- ${s.name} (ID: ${s.id})\n`); textOutput += "\n--- ΜΑΘΗΤΕΣ ---\n";
+            appData.students.forEach(st => { textOutput += `ΜΑΘΗΤΗΣ: ${st.name} (ID: ${st.id})\n  Ημ/νία Γέννησης: ${st.dob || '-'}\n  Επικοινωνία: ${getTextContentFromHtml(st.contact) || '-'}\n  Πληροφορίες: ${getTextContentFromHtml(st.info) || '-'}\n  Απουσίες: ${st.absences || '0'}\n  Μ.Ο.: ${getTextContentFromHtml(st.overallAverage) || '-'}\n\n`; });
+            textOutput += "--- ΣΧΕΔΙΑ ΜΑΘΗΜΑΤΩΝ ---\n";
+            for (const key in appData.lessonPlans) {
+                const plan = appData.lessonPlans[key]; const subj = appData.subjects.find(s => s.id === key.split('_')[0]);
+                textOutput += `ΣΧΕΔΙΟ: ${subj ? subj.name : '-'}\n  Τίτλος: ${plan.title || '-'}\n  Ενότητα: ${getTextContentFromHtml(plan.enotita) || '-'}\n`;
+                if (plan.attachedLinks && plan.attachedLinks.length > 0) { textOutput += `  Σύνδεσμοι:\n`; plan.attachedLinks.forEach(l => textOutput += `    - ${l.text}: ${l.url}\n`); } textOutput += "\n";
+            }
+            textOutput += "--- ΕΠΙΔΟΣΕΙΣ ΜΑΘΗΤΩΝ ---\n";
+            for (const key in appData.studentRecords) {
+                const [studId, subjId] = key.split('_'); const stud = appData.students.find(s => s.id === studId); const subj = appData.subjects.find(s => s.id === subjId);
+                textOutput += `ΕΠΙΔΟΣΕΙΣ: ${stud ? stud.name : '-'} - ΜΑΘΗΜΑ: ${subj ? subj.name : '-'}\n`;
+                appData.studentRecords[key].forEach(rec => {
+                    textOutput += `  Ημ/νία: ${new Date(rec.date).toLocaleDateString('el-GR')}\n`;
+                    const fields = { "Σημ. Ημέρας": rec.customNotes, "Απουσία": rec.absence, "Επίδοση": rec.performance, "Πρόοδος": rec.progress, "Συνεργασία": rec.collaboration, "Συμπεριφορά": rec.behavior, "Συμμετοχή": rec.participation, "Κατανόηση": rec.understanding, "Προσπάθεια": rec.effort, "Εργ. Σπίτι": rec.homework, "Ενδιαφέρον": rec.interest, "Θετικά": rec.positives, "Βελτίωση": rec.improvements, "Ενέργειες": rec.nextActions };
+                    for (const label in fields) { if (fields[label] && getTextContentFromHtml(fields[label]).trim() !== '') textOutput += `    ${label}: ${getTextContentFromHtml(fields[label])}\n`; }
+                    textOutput += `    ---\n`;
+                }); textOutput += "\n";
+            }
+            const blob = new Blob([textOutput], { type: 'text/plain;charset=utf-8' }); const url = URL.createObjectURL(blob);
+            const a = document.createElement('a'); a.href = url; a.download = `teacher_dashboard_data_${new Date().toISOString().slice(0, 10).replace(/-/g, '')}.txt`;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+        }
+
+        function getTextContentFromHtml(htmlString) { if (!htmlString) return ""; const tempDiv = document.createElement('div'); tempDiv.innerHTML = htmlString; return tempDiv.textContent || tempDiv.innerText || ""; }
+
+        function initializeApp() { loadData(); updateHeaderInfo(); renderSubjects(); renderStudents(); setInterval(updateHeaderInfo, 60000); }
+        document.addEventListener('DOMContentLoaded', initializeApp);
+    </script>
+
+</body>
+
+</html>
