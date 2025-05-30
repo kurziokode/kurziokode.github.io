@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Παρατηρήσεις Μαθητών</title>
+    <style>
+        /* Dark Mode Styles (μόνο) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --primary-color: #2a2a2a;
+            --secondary-color: #2a2a2a;
+            --accent-color: #cc00cc;
+            --border-color: #444;
+            --hover-bg-color: #1e1e1e;
+            --button-bg: #00bf00;
+            --button-text: #ffffff;
+            --button-hover-bg: #009900;
+            --input-bg: #2c2c2c;
+            --input-border: #444444;
+            --sidebar-width: 250px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid transparent;
+        }
+
+        header h1 {
+            color: #cc00ccdb;
+            font-size: 1.5rem;
+        }
+
+        .app-container {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        #sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--primary-color);
+            padding: 1rem;
+            border-right: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            outline: none;
+        }
+
+        #student-list {
+            list-style: none;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        #student-list li {
+            padding: 0.75rem 0.5rem;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s;
+        }
+
+        #student-list li:hover,
+        #student-list li.selected {
+            background-color: var(--hover-bg-color);
+        }
+
+        #student-list li:last-child {
+            border-bottom: none;
+        }
+
+        #main-content {
+            flex-grow: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .form-section,
+        .student-info-display,
+        .actions-section,
+        .timeline-section {
+            background-color: var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-section h3,
+        .student-info-display h3,
+        .timeline-section h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-top: 0.7rem;
+            margin-bottom: 0.35rem;
+            font-weight: 600;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="date"],
+        .form-group input[type="datetime-local"],
+        .form-group select,
+        .form-group textarea,
+        .category-edit-input {
+            margin-top: 0.7rem;
+            margin-bottom: 0.7rem;
+            padding: 0.75rem;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .button-group {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .button-group button,
+        #add-student-btn,
+        #add-observation-btn,
+        .export-btn,
+        .clear-btn,
+        .save-all-btn,
+        .observation-action-btn,
+        #edit-categories-btn {
+            padding: 0.6rem 1rem;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+            white-space: nowrap;
+        }
+
+        .button-group button:hover,
+        #add-student-btn:hover,
+        #add-observation-btn:hover,
+        .export-btn:hover,
+        .clear-btn:hover,
+        .save-all-btn:hover,
+        .observation-action-btn:hover,
+        #edit-categories-btn:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        .clear-btn,
+        .delete-btn {
+            background-color: #dc3545;
+        }
+
+        .clear-btn:hover,
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        .edit-btn {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .edit-btn:hover {
+            background-color: #e0a800;
+        }
+
+        #performance-chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 1rem auto;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        #performance-chart-container h4 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .chart-title-dynamic {
+            font-size: 1.1em;
+            color: var(--accent-color);
+        }
+
+        #observation-history-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #observation-history-list li {
+            background-color: var(--secondary-color);
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        #observation-history-list li strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: var(--accent-color);
+        }
+
+        .observation-actions {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            border-top: 1px solid transparent;
+            font-size: 0.9rem;
+        }
+
+        #placeholder-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        #placeholder-links a:hover {
+            text-decoration: underline;
+        }
+
+        #student-year-timeline-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            background-color: var(--secondary-color);
+            border-radius: 6px;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+        }
+
+        .timeline-month {
+            display: inline-block;
+            min-width: 100px;
+            padding: 10px 15px;
+            text-align: center;
+            border-right: 1px solid var(--border-color);
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        .timeline-month:hover {
+            background-color: #333333;
+        }
+
+        .timeline-month:last-child {
+            border-right: none;
+        }
+
+        .timeline-month-name {
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .timeline-week-markers {
+            display: flex;
+            justify-content: space-around;
+            height: 10px;
+        }
+
+        .timeline-observation-marker {
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        #timeline-current-day-indicator-bar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: var(--button-bg);
+            opacity: 0.7;
+            z-index: 5;
+            pointer-events: none;
+            display: none;
+        }
+
+        #timeline-context-menu {
+            display: none;
+            position: absolute;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 5px 0;
+            min-width: 280px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #timeline-context-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #timeline-context-menu ul li {
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        #timeline-context-menu ul li.disabled {
+            color: #777;
+            cursor: not-allowed;
+        }
+
+        #timeline-context-menu ul li:not(.disabled):hover {
+            background-color: #333333;
+        }
+
+        .timeline-modal,
+        #edit-categories-modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .timeline-modal-content,
+        #edit-categories-modal .timeline-modal-content {
+            background-color: var(--primary-color);
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        #edit-categories-modal .timeline-modal-content {
+            max-width: 700px;
+        }
+
+        .timeline-modal-close {
+            color: var(--text-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .timeline-modal-close:hover,
+        .timeline-modal-close:focus {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .app-container {
+                flex-direction: column;
+            }
+
+            #sidebar {
+                width: 100%;
+                max-height: 300px;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            .button-group button,
+            #add-student-btn,
+            #add-observation-btn,
+            .export-btn,
+            .clear-btn,
+            .save-all-btn,
+            .observation-action-btn,
+            #edit-categories-btn {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.8rem;
+            }
+        }
+
+        #student-form-container,
+        #observation-form-container,
+        #student-detail-view {
+            display: none;
+        }
+
+        #student-form-container.active,
+        #observation-form-container.active,
+        #student-detail-view.active {
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 21 21">
+            <g fill="none" fill-rule="evenodd" stroke="#cc9900" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.5">
+                <path d="M10.5 2.5a3 3 0 0 1 3 3v2a3 3 0 1 1-6 0v-2a3 3 0 0 1 3-3m7 2v4m2-2h-4" />
+                <path
+                    d="M17.5 16.5v-.728c0-3.187-3.686-5.272-7-5.272s-7 2.085-7 5.272v.728a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1" />
+            </g>
+        </svg>
+        <h1>Φυσική Αγωγή</h1> <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24 24">
+            <g fill="none" stroke="#cc9900" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                color="#b506b5">
+                <path d="M21 21H10c-3.3 0-4.95 0-5.975-1.025S3 17.3 3 14V3" />
+                <path
+                    d="M7.997 16.999c3.532 0 10.915-1.464 10.7-10.566m-2.208 1.61l1.883-1.897a.497.497 0 0 1 .703-.003l1.922 1.9" />
+            </g>
+        </svg>
+    </header>
+    <div class="app-container">
+        <aside id="sidebar">
+            <h2>Μαθητές</h2> <input type="text" id="search-input" placeholder="Αναζήτηση μαθητή/σημειώσεων...">
+            <ul id="student-list"></ul> <button id="add-student-btn" style="margin-top:1rem;">+ Προσθήκη Μαθητή</button>
+        </aside>
+        <main id="main-content">
+            <div id="welcome-message">
+                <p style="margin-bottom: 1.1rem;">Επιλέξτε έναν μαθητή από τη λίστα ή προσθέστε έναν νέο για να
+                    ξεκινήσετε.</p>
+            </div>
+            <div id="student-form-container" class="form-section">
+                <h3 id="student-form-title">Προσθήκη Νέου Μαθητή</h3> <input type="hidden"
+                    id="editing-student-id-input">
+                <div class="form-group"><label for="student-name-input">Όνομα Μαθητή:</label><input type="text"
+                        id="student-name-input" required></div>
+                <div class="form-group"><label for="student-class-input">Τάξη:</label><input type="text"
+                        id="student-class-input" placeholder="π.χ. Α1, ΣΤ2"></div>
+                <div class="button-group"><button id="save-new-student-btn">Αποθήκευση Μαθητή</button><button
+                        id="cancel-new-student-btn" class="clear-btn">Άκυρο</button></div>
+            </div>
+            <div id="student-detail-view">
+                <div class="student-info-display">
+                    <h3 id="current-student-name-display"></h3>
+                    <p><strong>Τάξη:</strong> <span id="current-student-class-display"></span></p>
+                    <p><strong>Συνολικός Μέσος Όρος:</strong> <span id="current-student-overall-average">N/A</span></p>
+                    <button id="edit-student-details-btn" class="button-group button"
+                        style="margin-top:0.5rem;padding:0.4rem 0.8rem;font-size:0.8rem;display:none;">Επεξεργασία
+                        Στοιχείων</button>
+                </div>
+                <div id="observation-form-container" class="form-section">
+                    <h3 id="observation-form-title">Νέα Παρατήρηση</h3> <input type="hidden"
+                        id="current-observation-id">
+                    <div class="form-group"><label for="observation-datetime">Ημερομηνία & Ώρα:</label><input
+                            type="datetime-local" id="observation-datetime" required></div>
+                    <h4>Φυσική Κατάσταση</h4>
+                    <div class="form-grid" id="physical-categories-grid"></div>
+                    <h4>Γενική Συμπεριφορά & Δεξιότητες</h4>
+                    <div class="form-grid" id="behavioral-categories-grid"></div>
+                    <div class="form-group" style="grid-column: 1 / -1;"><label for="general-notes">Γενικές
+                            Παρατηρήσεις:</label><textarea id="general-notes"></textarea></div>
+                    <p><strong>Μέσος Όρος Παρατήρησης:</strong> <span id="current-observation-average">N/A</span></p>
+                    <div class="button-group"><button id="save-observation-btn">Αποθήκευση Παρατήρησης</button><button
+                            id="clear-observation-form-btn" class="clear-btn">Καθαρισμός Φόρμας</button></div>
+                </div>
+                <div id="performance-chart-container">
+                    <div id="chart-options-container" style="margin-bottom: 1rem; text-align: center; display: none;">
+                        <label for="chart-data-select" style="margin-right: 0.5rem;">Εμφάνιση Δεδομένων Chart:</label>
+                        <select id="chart-data-select"
+                            style="padding:0.3rem;background-color:var(--input-bg);color:var(--text-color);border:1px solid var(--input-border);border-radius:4px;font-size:0.9rem;">
+                            <option value="average_all">Μέσος Όρος Όλων</option>
+                            <option value="latest_observation">Τελευταία Παρατήρηση</option>
+                            <option value="latest_vs_average">Σύγκριση: Τελευταία vs Μ.Ο.</option>
+                        </select> </div>
+                    <h4 id="performance-chart-title">Γράφημα Απόδοσης</h4><canvas id="performanceChart"></canvas>
+                </div>
+                <div class="form-section">
+                    <h3>Ιστορικό Παρατηρήσεων</h3>
+                    <ul id="observation-history-list"></ul>
+                </div>
+            </div>
+            <div id="year-timeline-section" class="timeline-section" style="display: none;">
+                <h3>Ετήσια Εξέλιξη Μαθητή</h3>
+                <div id="student-year-timeline-container">
+                    <div id="timeline-current-day-indicator-bar"></div>
+                </div>
+            </div>
+            <div class="actions-section">
+                <h3>Γενικές Ενέργειες</h3>
+                <div class="button-group"> <button id="edit-categories-btn">Επεξεργασία Κατηγοριών</button> <button
+                        id="save-all-to-ls-btn" class="save-all-btn">Αποθήκευση Όλων</button><button
+                        id="export-data-btn" class="export-btn">Εξαγωγή Δεδομένων</button><button
+                        id="clear-all-data-btn" class="clear-btn">Καθαρισμός Όλων</button> </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>© 2025 Εφαρμογή Παρατηρήσεων Μαθητών</p>
+        <div id="placeholder-links"></div>
+    </footer>
+    <div id="timeline-context-menu">
+        <ul>
+            <li data-action="focus-chart-on-month">Εστίαση Chart σε <span class="context-month-name"></span></li>
+            <li data-action="compare-current-vs-previous-month-chart" class="disabled">Σύγκριση Chart: <span
+                    class="context-month-name"></span> vs Προηγούμενος</li>
+            <li data-action="view-monthly-average-trend-chart">Chart: Ετήσια Εξέλιξη Γενικού Μ.Ο.</li>
+            <hr style="border-color:var(--border-color);margin:3px 0;">
+            <li data-action="edit-latest-obs-in-month" class="disabled">Επεξεργασία Τελ. Παρατ. (<span
+                    class="context-month-name"></span>)</li>
+        </ul>
+    </div>
+    <div id="timeline-interaction-modal" class="timeline-modal">
+        <div class="timeline-modal-content"> <span class="timeline-modal-close" id="timeline-modal-close-btn">×</span>
+            <h3 id="timeline-modal-title">Τίτλος Modal</h3>
+            <div id="timeline-modal-body">
+                <p>Περιεχόμενο του modal...</p>
+            </div>
+        </div>
+    </div>
+    <div id="edit-categories-modal" class="timeline-modal">
+        <div class="timeline-modal-content" style="max-width: 700px;"> <span class="timeline-modal-close"
+                id="edit-categories-modal-close-btn">×</span>
+            <h3 id="edit-categories-modal-title">Επεξεργασία Κατηγοριών Αξιολόγησης</h3>
+            <div id="categories-editor-list" style="max-height: 400px; overflow-y: auto; margin-bottom: 1rem;"></div>
+            <div class="button-group"> <button id="save-edited-categories-btn">Αποθήκευση Αλλαγών</button> <button
+                    id="cancel-edit-categories-btn" class="clear-btn">Άκυρο</button> <button
+                    id="reset-categories-to-default-btn" style="background-color: #ffc107; color: #212529;">Επαναφορά
+                    Προεπιλογών</button> </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search-input'); const studentListUL = document.getElementById('student-list'); const addStudentBtn = document.getElementById('add-student-btn'); const welcomeMessageDiv = document.getElementById('welcome-message'); const studentFormContainer = document.getElementById('student-form-container'); const studentFormTitle = document.getElementById('student-form-title'); const editingStudentIdInput = document.getElementById('editing-student-id-input'); const studentNameInput = document.getElementById('student-name-input'); const studentClassInput = document.getElementById('student-class-input'); const saveNewStudentBtn = document.getElementById('save-new-student-btn'); const cancelNewStudentBtn = document.getElementById('cancel-new-student-btn'); const studentDetailView = document.getElementById('student-detail-view'); const currentStudentNameDisplay = document.getElementById('current-student-name-display'); const currentStudentClassDisplay = document.getElementById('current-student-class-display'); const currentStudentOverallAverage = document.getElementById('current-student-overall-average'); const editStudentDetailsBtn = document.getElementById('edit-student-details-btn'); const observationFormContainer = document.getElementById('observation-form-container'); const observationFormTitle = document.getElementById('observation-form-title'); const currentObservationIdInput = document.getElementById('current-observation-id'); const observationDatetimeInput = document.getElementById('observation-datetime'); const generalNotesTextarea = document.getElementById('general-notes'); const currentObservationAverageSpan = document.getElementById('current-observation-average'); const saveObservationBtn = document.getElementById('save-observation-btn'); const clearObservationFormBtn = document.getElementById('clear-observation-form-btn'); const observationHistoryListUL = document.getElementById('observation-history-list'); const performanceChartContainer = document.getElementById('performance-chart-container'); const chartOptionsContainer = document.getElementById('chart-options-container'); const chartDataSelect = document.getElementById('chart-data-select'); const performanceChartTitle = document.getElementById('performance-chart-title'); const saveAllToLsBtn = document.getElementById('save-all-to-ls-btn'); const exportDataBtn = document.getElementById('export-data-btn'); const clearAllDataBtn = document.getElementById('clear-all-data-btn'); const yearTimelineSection = document.getElementById('year-timeline-section'); const studentYearTimelineContainer = document.getElementById('student-year-timeline-container'); const timelineCurrentDayIndicatorBar = document.getElementById('timeline-current-day-indicator-bar'); const timelineContextMenu = document.getElementById('timeline-context-menu'); const timelineInteractionModal = document.getElementById('timeline-interaction-modal'); const timelineModalCloseBtn = document.getElementById('timeline-modal-close-btn'); const timelineModalTitle = document.getElementById('timeline-modal-title'); const timelineModalBody = document.getElementById('timeline-modal-body');
+            const editCategoriesBtn = document.getElementById('edit-categories-btn'); const editCategoriesModal = document.getElementById('edit-categories-modal'); const editCategoriesModalCloseBtn = document.getElementById('edit-categories-modal-close-btn'); const categoriesEditorList = document.getElementById('categories-editor-list'); const saveEditedCategoriesBtn = document.getElementById('save-edited-categories-btn'); const cancelEditCategoriesBtn = document.getElementById('cancel-edit-categories-btn'); const resetCategoriesToDefaultBtn = document.getElementById('reset-categories-to-default-btn');
+            const physicalCategoriesGrid = document.getElementById('physical-categories-grid'); const behavioralCategoriesGrid = document.getElementById('behavioral-categories-grid');
+            const monthNamesShort = ["ΙΑΝ", "ΦΕΒ", "ΜΑΡ", "ΑΠΡ", "ΜΑΪ", "ΙΟΥΝ", "ΙΟΥΛ", "ΑΥΓ", "ΣΕΠ", "ΟΚΤ", "ΝΟΕ", "ΔΕΚ"];
+
+            let performanceChartInstance = null; let students = []; let currentStudentId = null;
+            let schoolYearStartMonth = 8;
+            let evaluationCategories = [];
+
+            function getDefaultCategories() {
+                return [
+                    { id: 'stamina', group: 'physical', defaultLabel: 'Αντοχή', currentLabel: 'Αντοχή' }, { id: 'strength', group: 'physical', defaultLabel: 'Δύναμη', currentLabel: 'Δύναμη' }, { id: 'speed', group: 'physical', defaultLabel: 'Ταχύτητα', currentLabel: 'Ταχύτητα' }, { id: 'flexibility', group: 'physical', defaultLabel: 'Ευλυγισία', currentLabel: 'Ευλυγισία' }, { id: 'coordination', group: 'physical', defaultLabel: 'Νευρομυϊκή Συναρμογή', currentLabel: 'Νευρομυϊκή Συναρμογή' }, { id: 'interest', group: 'behavioral', defaultLabel: 'Ενδιαφέρον', currentLabel: 'Ενδιαφέρον' }, { id: 'effort', group: 'behavioral', defaultLabel: 'Προσπάθεια', currentLabel: 'Προσπάθεια' }, { id: 'participation', group: 'behavioral', defaultLabel: 'Συμμετοχή', currentLabel: 'Συμμετοχή' }, { id: 'cooperation', group: 'behavioral', defaultLabel: 'Συνεργασία', currentLabel: 'Συνεργασία' }, { id: 'sports_knowledge', group: 'behavioral', defaultLabel: 'Γνώσεις στον Αθλητισμό', currentLabel: 'Γνώσεις στον Αθλητισμό' }, { id: 'skill_acquisition', group: 'behavioral', defaultLabel: 'Αφομοίωση Δεξιοτήτων', currentLabel: 'Αφομοίωση Δεξιοτήτων' }
+                ];
+            }
+            function loadCategories() {
+                const storedCategories = localStorage.getItem('evaluationCategories'); const defaultCats = getDefaultCategories();
+                if (storedCategories) { const parsedCategories = JSON.parse(storedCategories); evaluationCategories = defaultCats.map(defCat => { const storedCat = parsedCategories.find(sc => sc.id === defCat.id); return storedCat ? { ...defCat, ...storedCat, currentLabel: storedCat.currentLabel || defCat.defaultLabel } : defCat; }); }
+                else { evaluationCategories = defaultCats; }
+                saveCategories();
+            }
+            function saveCategories() { localStorage.setItem('evaluationCategories', JSON.stringify(evaluationCategories)); }
+            function renderObservationFormFields() {
+                physicalCategoriesGrid.innerHTML = ''; behavioralCategoriesGrid.innerHTML = '';
+                evaluationCategories.forEach(cat => {
+                    const formGroup = document.createElement('div'); formGroup.className = 'form-group';
+                    const label = document.createElement('label'); label.htmlFor = cat.id; label.textContent = cat.currentLabel + ' :';
+                    const select = document.createElement('select'); select.id = cat.id;
+                    const defaultOption = document.createElement('option'); defaultOption.value = ""; defaultOption.textContent = "Επίδοση"; select.appendChild(defaultOption);
+                    for (let i = 1; i <= 5; i++) { const option = document.createElement('option'); option.value = i; option.textContent = i; select.appendChild(option); }
+                    select.addEventListener('change', updateObservationAverageDisplay);
+                    formGroup.appendChild(label); formGroup.appendChild(select);
+                    if (cat.group === 'physical') { physicalCategoriesGrid.appendChild(formGroup); }
+                    else if (cat.group === 'behavioral') { behavioralCategoriesGrid.appendChild(formGroup); }
+                });
+            }
+            function openEditCategoriesModal() {
+                categoriesEditorList.innerHTML = ''; evaluationCategories.forEach(cat => {
+                    const catDiv = document.createElement('div'); catDiv.className = 'form-group'; catDiv.style.borderBottom = '1px dashed var(--border-color)'; catDiv.style.paddingBottom = '10px'; catDiv.style.marginBottom = '10px';
+                    const defaultLabelDisplay = document.createElement('p'); defaultLabelDisplay.innerHTML = `Προεπιλογή: <strong>${cat.defaultLabel}</strong> (ID: <em>${cat.id}</em>)`; defaultLabelDisplay.style.fontSize = '0.8em'; defaultLabelDisplay.style.opacity = '0.7';
+                    const label = document.createElement('label'); label.textContent = `Εμφανιζόμενη Ετικέτα για "${cat.defaultLabel}":`; label.htmlFor = `edit-cat-${cat.id}`;
+                    const input = document.createElement('input'); input.type = 'text'; input.id = `edit-cat-${cat.id}`; input.className = 'category-edit-input'; input.value = cat.currentLabel; input.dataset.categoryId = cat.id;
+                    catDiv.appendChild(defaultLabelDisplay); catDiv.appendChild(label); catDiv.appendChild(input); categoriesEditorList.appendChild(catDiv);
+                });
+                editCategoriesModal.style.display = 'block';
+            }
+            editCategoriesBtn.addEventListener('click', openEditCategoriesModal);
+            editCategoriesModalCloseBtn.addEventListener('click', () => editCategoriesModal.style.display = 'none');
+            cancelEditCategoriesBtn.addEventListener('click', () => editCategoriesModal.style.display = 'none');
+            saveEditedCategoriesBtn.addEventListener('click', () => {
+                const inputs = categoriesEditorList.querySelectorAll('input[data-category-id]');
+                inputs.forEach(input => { const catId = input.dataset.categoryId; const newLabel = input.value.trim(); const category = evaluationCategories.find(c => c.id === catId); if (category && newLabel) { category.currentLabel = newLabel; } });
+                saveCategories(); renderObservationFormFields();
+                if (currentStudentId) { displayStudentDetails(currentStudentId); }
+                editCategoriesModal.style.display = 'none'; alert('Οι αλλαγές στις κατηγορίες αποθηκεύτηκαν.');
+            });
+            resetCategoriesToDefaultBtn.addEventListener('click', () => {
+                if (confirm('Είστε σίγουροι ότι θέλετε να επαναφέρετε όλες τις ετικέτες στις προεπιλεγμένες τιμές;')) {
+                    evaluationCategories.forEach(cat => { cat.currentLabel = cat.defaultLabel; });
+                    saveCategories(); renderObservationFormFields();
+                    if (currentStudentId) { displayStudentDetails(currentStudentId); }
+                    openEditCategoriesModal(); alert('Οι κατηγορίες επανήλθαν στις προεπιλογές.');
+                }
+            });
+
+            function generateId() { return '_' + Math.random().toString(36).substr(2, 9); }
+            function getLocalDateTimeStringForInput(date = new Date()) { return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}T${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`; }
+            function formatDate(dateString) { if (!dateString) return 'N/A'; const date = new Date(dateString); return date.toLocaleString('el-GR', { dateStyle: 'short', timeStyle: 'short' }); }
+            function calculateObservationAverage(observation) { let validScores = []; evaluationCategories.forEach(cat => { let scoreValue; if (observation[cat.group] && observation[cat.group].hasOwnProperty(cat.id)) { scoreValue = parseInt(observation[cat.group][cat.id]); } if (!isNaN(scoreValue) && scoreValue >= 1 && scoreValue <= 5) { validScores.push(scoreValue); } }); if (validScores.length === 0) return "0.00"; const sum = validScores.reduce((acc, score) => acc + score, 0); return (sum / validScores.length).toFixed(2); }
+            function calculateStudentOverallAverage(student) { if (!student.observations || student.observations.length === 0) return "0.00"; const sumOfAverages = student.observations.reduce((acc, obs) => acc + parseFloat(obs.averageScore || calculateObservationAverage(obs)), 0); return (sumOfAverages / student.observations.length).toFixed(2); }
+
+            // Define saveDataToLocalStorage and loadDataFromLocalStorage at this scope
+            function saveDataToLocalStorage() {
+                localStorage.setItem('studentsData', JSON.stringify(students));
+                // console.log("Student data saved.");
+            }
+
+            function loadDataFromLocalStorage() {
+                const data = localStorage.getItem('studentsData');
+                if (data) {
+                    students = JSON.parse(data);
+                    students.forEach(student => {
+                        if (!student.observations) student.observations = [];
+                        student.observations.forEach(obs => {
+                            if (!obs.id) obs.id = generateId();
+                            // Ensure observation data structure matches new category structure if necessary
+                            // This might involve migrating old data if the structure of obs.physical/obs.behavioral changed
+                            if (obs.averageScore === undefined) obs.averageScore = calculateObservationAverage(obs);
+                        });
+                        student.overallAverage = calculateStudentOverallAverage(student);
+                    });
+                } else {
+                    students = [];
+                }
+                // console.log("Student data loaded.");
+            }
+
+            function renderStudentList(filteredStudents = students) { studentListUL.innerHTML = ''; const studentsToRender = filteredStudents.length > 0 || searchInput.value ? filteredStudents : students; studentsToRender.sort((a, b) => a.name.localeCompare(b.name)).forEach(student => { const li = document.createElement('li'); li.textContent = `${student.name} (${student.class || 'N/A'})`; li.dataset.id = student.id; if (student.id === currentStudentId) li.classList.add('selected'); li.addEventListener('click', () => { currentStudentId = student.id; editingStudentIdInput.value = ''; studentFormContainer.classList.remove('active'); renderStudentList(); displayStudentDetails(student.id); welcomeMessageDiv.style.display = 'none'; }); studentListUL.appendChild(li); }); }
+            function switchToStudentForm(studentToEdit = null) { studentDetailView.classList.remove('active'); welcomeMessageDiv.style.display = 'none'; observationFormContainer.classList.remove('active'); yearTimelineSection.style.display = 'none'; studentFormContainer.classList.add('active'); if (studentToEdit) { studentFormTitle.textContent = 'Επεξεργασία Στοιχείων Μαθητή'; editingStudentIdInput.value = studentToEdit.id; studentNameInput.value = studentToEdit.name; studentClassInput.value = studentToEdit.class || ''; saveNewStudentBtn.textContent = 'Αποθήκευση Αλλαγών'; } else { studentFormTitle.textContent = 'Προσθήκη Νέου Μαθητή'; editingStudentIdInput.value = ''; studentNameInput.value = ''; studentClassInput.value = ''; saveNewStudentBtn.textContent = 'Αποθήκευση Μαθητή'; } studentNameInput.focus(); }
+            editStudentDetailsBtn.addEventListener('click', () => { const student = students.find(s => s.id === currentStudentId); if (student) switchToStudentForm(student); });
+            function displayStudentDetails(studentId) { const student = students.find(s => s.id === studentId); if (!student) { studentDetailView.classList.remove('active'); editStudentDetailsBtn.style.display = 'none'; chartOptionsContainer.style.display = 'none'; performanceChartContainer.style.display = 'none'; yearTimelineSection.style.display = 'none'; welcomeMessageDiv.style.display = 'block'; return; } currentStudentNameDisplay.textContent = student.name; currentStudentClassDisplay.textContent = student.class || 'N/A'; student.overallAverage = calculateStudentOverallAverage(student); currentStudentOverallAverage.textContent = parseFloat(student.overallAverage) > 0 ? student.overallAverage : 'N/A'; editStudentDetailsBtn.style.display = 'inline-block'; renderObservationFormFields(); setupObservationForm('new'); renderObservationHistory(student); updatePerformanceChart(student); renderYearTimeline(student); yearTimelineSection.style.display = 'block'; studentFormContainer.classList.remove('active'); studentDetailView.classList.add('active'); observationFormContainer.classList.add('active'); editingStudentIdInput.value = ''; }
+            function resetObservationFormUIFields() { observationDatetimeInput.value = getLocalDateTimeStringForInput(); evaluationCategories.forEach(cat => { const selectInput = document.getElementById(cat.id); if (selectInput) selectInput.value = ''; }); generalNotesTextarea.value = ''; updateObservationAverageDisplay(); }
+            function setupObservationForm(mode = 'new', observationToEdit = null) { if (mode === 'edit' && observationToEdit) { currentObservationIdInput.value = observationToEdit.id; observationFormTitle.textContent = 'Επεξεργασία Παρατήρησης'; saveObservationBtn.textContent = 'Αποθήκευση Αλλαγών'; observationDatetimeInput.value = observationToEdit.date; evaluationCategories.forEach(cat => { const selectInput = document.getElementById(cat.id); if (selectInput) { selectInput.value = (observationToEdit[cat.group] && observationToEdit[cat.group][cat.id]) ? observationToEdit[cat.group][cat.id] : ''; } }); generalNotesTextarea.value = observationToEdit.notes || ''; updateObservationAverageDisplay(); } else { currentObservationIdInput.value = ''; observationFormTitle.textContent = 'Νέα Παρατήρηση'; saveObservationBtn.textContent = 'Αποθήκευση Παρατήρησης'; resetObservationFormUIFields(); } }
+            function updateObservationAverageDisplay() { const tempObservationData = { physical: {}, behavioral: {} }; evaluationCategories.forEach(cat => { const selectInput = document.getElementById(cat.id); if (selectInput && selectInput.value) { if (!tempObservationData[cat.group]) tempObservationData[cat.group] = {}; tempObservationData[cat.group][cat.id] = selectInput.value; } }); const avg = calculateObservationAverage(tempObservationData); currentObservationAverageSpan.textContent = parseFloat(avg) > 0 ? avg : 'N/A'; }
+            function editObservationHandler(studentId, observationId) { const student = students.find(s => s.id === studentId); const observation = student.observations.find(obs => obs.id === observationId); if (!observation) return; setupObservationForm('edit', observation); observationFormContainer.scrollIntoView({ behavior: 'smooth' }); }
+            function deleteObservationHandler(studentId, observationId) { if (!confirm('Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την παρατήρηση;')) return; const student = students.find(s => s.id === studentId); if (student) { student.observations = student.observations.filter(obs => obs.id !== observationId); student.overallAverage = calculateStudentOverallAverage(student); saveDataToLocalStorage(); displayStudentDetails(studentId); } }
+            function renderObservationHistory(student) { observationHistoryListUL.innerHTML = ''; if (!student || !student.observations || student.observations.length === 0) { observationHistoryListUL.innerHTML = '<li>Δεν υπάρχουν καταγεγραμμένες παρατηρήσεις.</li>'; return; } student.observations.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(obs => { const li = document.createElement('li'); obs.averageScore = obs.averageScore || calculateObservationAverage(obs); let physicalText = []; let behavioralText = []; evaluationCategories.forEach(cat => { let value = '-'; if (obs[cat.group] && obs[cat.group].hasOwnProperty(cat.id)) { value = obs[cat.group][cat.id] || '-'; } const labelPart = cat.currentLabel.split(' ')[0]; const categoryText = `${labelPart}:${value}`; if (cat.group === 'physical') physicalText.push(categoryText); else if (cat.group === 'behavioral') behavioralText.push(categoryText); }); li.innerHTML = `<strong>${formatDate(obs.date)} - Μ.Ο.: ${obs.averageScore}</strong><br>Φυσική Κατάσταση: ${physicalText.join(', ') || 'N/A'}<br>Συμπεριφορά: ${behavioralText.join(', ') || 'N/A'}<br>Σημειώσεις: ${obs.notes ? obs.notes.replace(/\n/g, '<br>') : 'Καμία'}`; const actionsDiv = document.createElement('div'); actionsDiv.className = 'observation-actions'; const editBtn = document.createElement('button'); editBtn.textContent = 'Επεξεργασία'; editBtn.className = 'observation-action-btn edit-btn'; editBtn.style.fontSize = '0.8rem'; editBtn.style.padding = '0.3rem 0.6rem'; editBtn.onclick = () => editObservationHandler(student.id, obs.id); const deleteBtn = document.createElement('button'); deleteBtn.textContent = 'Διαγραφή'; deleteBtn.className = 'observation-action-btn delete-btn'; deleteBtn.style.fontSize = '0.8rem'; deleteBtn.style.padding = '0.3rem 0.6rem'; deleteBtn.onclick = () => deleteObservationHandler(student.id, obs.id); actionsDiv.appendChild(editBtn); actionsDiv.appendChild(deleteBtn); li.appendChild(actionsDiv); observationHistoryListUL.appendChild(li); }); }
+            function getCategoryAveragesForObservations(observations) { const categoryAverages = {}; const categoryCounts = {}; evaluationCategories.forEach(cat => { categoryAverages[cat.id] = 0; categoryCounts[cat.id] = 0; }); observations.forEach(obs => { evaluationCategories.forEach(cat => { let value; if (obs[cat.group] && obs[cat.group].hasOwnProperty(cat.id)) { value = parseInt(obs[cat.group][cat.id]); } if (!isNaN(value) && value >= 1 && value <= 5) { categoryAverages[cat.id] += value; categoryCounts[cat.id]++; } }); }); return evaluationCategories.map(cat => categoryCounts[cat.id] > 0 ? (categoryAverages[cat.id] / categoryCounts[cat.id]) : 0); }
+            function getChartDataForStudent(student, type = 'average_all', contextYear = null, contextMonth = null) { let datasets = []; let chartLabels = evaluationCategories.map(cat => cat.currentLabel); if (type === 'average_all' || (type === 'latest_vs_average' && contextYear === null)) { const avgDataPoints = getCategoryAveragesForObservations(student.observations); datasets.push({ label: `Μέσος Όρος (Όλων) - ${student.name}`, data: avgDataPoints, backgroundColor: 'rgba(204,0,204,0.2)', borderColor: 'rgba(204,0,204,1)', borderWidth: 2, pointBackgroundColor: 'rgba(204,0,204,1)', pointBorderColor: '#fff', pointHoverBackgroundColor: '#fff', pointHoverBorderColor: 'rgba(204,0,204,1)' }); } if (type === 'latest_observation' || (type === 'latest_vs_average' && contextYear === null)) { if (student.observations.length > 0) { const latestObs = student.observations.sort((a, b) => new Date(b.date) - new Date(a.date))[0]; const latestDataPoints = evaluationCategories.map(cat => parseInt(latestObs[cat.group]?.[cat.id]) || 0); datasets.push({ label: `Τελευταία Παρατ. (${formatDate(latestObs.date)})`, data: latestDataPoints, backgroundColor: 'rgba(0,191,0,0.2)', borderColor: 'rgba(0,191,0,1)', borderWidth: 2, pointBackgroundColor: 'rgba(0,191,0,1)', pointBorderColor: '#fff', pointHoverBackgroundColor: '#fff', pointHoverBorderColor: 'rgba(0,191,0,1)' }); if (type === 'latest_vs_average' && contextYear === null) { datasets.reverse(); } } else if (type === 'latest_observation') { datasets.push({ label: `Καμία Παρατήρηση - ${student.name}`, data: evaluationCategories.map(() => 0) }); } } if (type === 'focus_month_category_avg' && contextYear !== null && contextMonth !== null) { const obsInMonth = student.observations.filter(obs => new Date(obs.date).getFullYear() === contextYear && new Date(obs.date).getMonth() === contextMonth); const avgDataPointsMonth = getCategoryAveragesForObservations(obsInMonth); datasets = [{ label: `Μ.Ο. Κατηγοριών (${monthNamesShort[contextMonth]} ${contextYear})`, data: avgDataPointsMonth, backgroundColor: 'rgba(255,165,0,0.2)', borderColor: 'rgba(255,165,0,1)', borderWidth: 2, pointBackgroundColor: 'rgba(255,165,0,1)', pointBorderColor: '#fff' }]; } if (type === 'compare_months_category_avg' && contextYear !== null && contextMonth !== null) { const currentMonthObs = student.observations.filter(obs => new Date(obs.date).getFullYear() === contextYear && new Date(obs.date).getMonth() === contextMonth); const currentMonthData = getCategoryAveragesForObservations(currentMonthObs); datasets.push({ label: `Μ.Ο. (${monthNamesShort[contextMonth]} ${contextYear})`, data: currentMonthData, backgroundColor: 'rgba(204,0,204,0.2)', borderColor: 'rgba(204,0,204,1)', borderWidth: 2 }); let prevDate = new Date(contextYear, contextMonth - 1, 1); const prevMonthObs = student.observations.filter(obs => new Date(obs.date).getFullYear() === prevDate.getFullYear() && new Date(obs.date).getMonth() === prevDate.getMonth()); const prevMonthData = getCategoryAveragesForObservations(prevMonthObs); datasets.push({ label: `Μ.Ο. (${monthNamesShort[prevDate.getMonth()]} ${prevDate.getFullYear()})`, data: prevMonthData, backgroundColor: 'rgba(0,191,0,0.2)', borderColor: 'rgba(0,191,0,1)', borderWidth: 2 }); } if (type === 'monthly_overall_avg_trend') { chartLabels = []; const trendData = []; let currentSchoolYearForTrend = new Date().getFullYear(); if (new Date().getMonth() < schoolYearStartMonth) { currentSchoolYearForTrend--; } for (let i = 0; i < 12; i++) { let monthIndex = (schoolYearStartMonth + i) % 12; let yearForTrend = (schoolYearStartMonth + i < 12) ? currentSchoolYearForTrend : currentSchoolYearForTrend + 1; let monthLabel = `${monthNamesShort[monthIndex]} '${yearForTrend.toString().slice(-2)}`; chartLabels.push(monthLabel); const obsInThisTrendMonth = student.observations.filter(obs => new Date(obs.date).getFullYear() === yearForTrend && new Date(obs.date).getMonth() === monthIndex); if (obsInThisTrendMonth.length > 0) { const sumOfAverages = obsInThisTrendMonth.reduce((acc, obs) => acc + parseFloat(obs.averageScore || calculateObservationAverage(obs)), 0); trendData.push(parseFloat((sumOfAverages / obsInThisTrendMonth.length).toFixed(2))); } else { trendData.push(null); } } datasets = [{ label: `Ετήσια Εξέλιξη Γενικού Μ.Ο.`, data: trendData, backgroundColor: 'rgba(0,123,255,0.2)', borderColor: 'rgba(0,123,255,1)', borderWidth: 2, tension: 0.1, type: 'line', fill: true, spanGaps: true }]; } return { labels: chartLabels, datasets }; }
+            function updatePerformanceChart(student, customChartConfig = null) { const ctx = document.getElementById('performanceChart').getContext('2d'); if (performanceChartInstance) { performanceChartInstance.destroy(); performanceChartInstance = null; } const chartTextColor = getComputedStyle(document.documentElement).getPropertyValue('--text-color').trim(); const chartBorderColor = getComputedStyle(document.documentElement).getPropertyValue('--border-color').trim(); if (!student || (!customChartConfig && (!student.observations || student.observations.length === 0))) { performanceChartContainer.style.display = 'none'; chartOptionsContainer.style.display = 'none'; performanceChartTitle.textContent = "Γράφημα Απόδοσης"; performanceChartTitle.classList.remove('chart-title-dynamic'); return; } performanceChartContainer.style.display = 'block'; let chartData; let chartType = 'radar'; if (customChartConfig) { chartData = { labels: customChartConfig.labels, datasets: customChartConfig.datasets }; performanceChartTitle.textContent = customChartConfig.title || "Ειδική Προβολή Chart"; performanceChartTitle.classList.add('chart-title-dynamic'); chartOptionsContainer.style.display = 'none'; if (customChartConfig.type) chartType = customChartConfig.type; } else { const selectedChartDataType = chartDataSelect.value; chartData = getChartDataForStudent(student, selectedChartDataType); if (selectedChartDataType === 'average_all') performanceChartTitle.textContent = 'Γράφημα Απόδοσης (Μέσος Όρος Όλων)'; else if (selectedChartDataType === 'latest_observation') performanceChartTitle.textContent = 'Γράφημα Απόδοσης (Τελευταία Παρατήρηση)'; else if (selectedChartDataType === 'latest_vs_average') performanceChartTitle.textContent = 'Σύγκριση: Τελευταία Παρατήρηση vs Μ.Ο.'; performanceChartTitle.classList.remove('chart-title-dynamic'); chartOptionsContainer.style.display = 'block'; } const chartOptions = { responsive: true, maintainAspectRatio: true, plugins: { legend: { labels: { color: chartTextColor } } } }; if (chartType === 'radar') { chartOptions.scales = { r: { angleLines: { display: true, color: chartBorderColor }, grid: { color: chartBorderColor }, pointLabels: { color: chartTextColor, font: { size: 10 } }, ticks: { beginAtZero: true, min: 0, max: 5, stepSize: 1, backdropColor: 'transparent', color: chartTextColor } } }; } else if (chartType === 'line') { chartOptions.scales = { y: { beginAtZero: true, min: 0, max: 5, ticks: { color: chartTextColor, stepSize: 1 }, grid: { color: chartBorderColor } }, x: { ticks: { color: chartTextColor }, grid: { color: chartBorderColor } } }; } performanceChartInstance = new Chart(ctx, { type: chartType, data: chartData, options: chartOptions }); }
+            chartDataSelect.addEventListener('change', () => { if (currentStudentId) updatePerformanceChart(students.find(s => s.id === currentStudentId)); });
+            function renderYearTimeline(student) { studentYearTimelineContainer.innerHTML = ''; timelineCurrentDayIndicatorBar.style.display = 'none'; if (!student) return; let currentSchoolYear = new Date().getFullYear(); if (new Date().getMonth() < schoolYearStartMonth) { currentSchoolYear--; } const monthDivs = []; studentYearTimelineContainer.appendChild(timelineCurrentDayIndicatorBar); for (let i = 0; i < 12; i++) { let monthIndex = (schoolYearStartMonth + i) % 12; let year = (schoolYearStartMonth + i < 12) ? currentSchoolYear : currentSchoolYear + 1; const monthDiv = document.createElement('div'); monthDiv.className = 'timeline-month'; monthDiv.dataset.month = monthIndex; monthDiv.dataset.year = year; const monthNameDiv = document.createElement('div'); monthNameDiv.className = 'timeline-month-name'; monthNameDiv.textContent = monthNamesShort[monthIndex]; monthDiv.appendChild(monthNameDiv); const weekMarkersDiv = document.createElement('div'); weekMarkersDiv.className = 'timeline-week-markers'; const hasObservationInMonth = student.observations.some(obs => { const obsDate = new Date(obs.date); return obsDate.getFullYear() === year && obsDate.getMonth() === monthIndex; }); if (hasObservationInMonth) { const marker = document.createElement('div'); marker.className = 'timeline-observation-marker'; weekMarkersDiv.appendChild(marker); } monthDiv.appendChild(weekMarkersDiv); monthDiv.addEventListener('click', (e) => handleTimelineClick(e, student, year, monthIndex, hasObservationInMonth)); monthDiv.addEventListener('contextmenu', (e) => handleTimelineContextMenu(e, student, year, monthIndex, hasObservationInMonth)); studentYearTimelineContainer.appendChild(monthDiv); monthDivs.push(monthDiv); } requestAnimationFrame(() => { const today = new Date(); const todayYear = today.getFullYear(); const todayMonth = today.getMonth(); const todayDate = today.getDate(); let cumulativeWidth = 0; let indicatorSet = false; for (const monthDiv of monthDivs) { const monthDataYear = parseInt(monthDiv.dataset.year); const monthDataMonth = parseInt(monthDiv.dataset.month); if (todayYear === monthDataYear && todayMonth === monthDataMonth) { const daysInMonth = new Date(todayYear, todayMonth + 1, 0).getDate(); const dayPercentage = (todayDate - 1) / (daysInMonth > 0 ? daysInMonth : 1); const monthWidth = monthDiv.offsetWidth; const indicatorPosition = cumulativeWidth + (monthWidth * dayPercentage); timelineCurrentDayIndicatorBar.style.left = `${indicatorPosition}px`; timelineCurrentDayIndicatorBar.style.display = 'block'; indicatorSet = true; break; } cumulativeWidth += monthDiv.offsetWidth; } if (!indicatorSet) timelineCurrentDayIndicatorBar.style.display = 'none'; }); }
+            function handleTimelineClick(event, student, year, month, hasObservationInMonth) { event.preventDefault(); if (hasObservationInMonth) { openTimelineModal("month_summary", { student, year, month }); } else { const firstDayOfMonth = new Date(year, month, 1, 12, 0, 0); observationDatetimeInput.value = getLocalDateTimeStringForInput(firstDayOfMonth); observationFormContainer.scrollIntoView({ behavior: 'smooth' }); generalNotesTextarea.focus(); } }
+            function handleTimelineContextMenu(event, student, year, month, hasObservationInMonth) { event.preventDefault(); timelineContextMenu.style.top = `${event.pageY}px`; timelineContextMenu.style.left = `${event.pageX}px`; timelineContextMenu.style.display = 'block'; timelineContextMenu.dataset.studentId = student.id; timelineContextMenu.dataset.year = year; timelineContextMenu.dataset.month = month; const contextMonthNameSpans = timelineContextMenu.querySelectorAll('.context-month-name'); contextMonthNameSpans.forEach(span => span.textContent = monthNamesShort[month]); const editLatestObsItem = timelineContextMenu.querySelector('[data-action="edit-latest-obs-in-month"]'); const compareMonthsItem = timelineContextMenu.querySelector('[data-action="compare-current-vs-previous-month-chart"]'); if (hasObservationInMonth) { editLatestObsItem.classList.remove('disabled'); } else { editLatestObsItem.classList.add('disabled'); } let prevDate = new Date(year, month - 1, 1); const prevMonthObs = student.observations.filter(obs => new Date(obs.date).getFullYear() === prevDate.getFullYear() && new Date(obs.date).getMonth() === prevDate.getMonth()); if (prevMonthObs.length > 0 && hasObservationInMonth) { compareMonthsItem.classList.remove('disabled'); } else { compareMonthsItem.classList.add('disabled'); } document.addEventListener('click', hideTimelineContextMenu, { once: true }); }
+            function hideTimelineContextMenu() { timelineContextMenu.style.display = 'none'; }
+            timelineContextMenu.querySelectorAll('li').forEach(item => { item.addEventListener('click', (e) => { const targetLi = e.target.closest('li'); if (!targetLi || targetLi.classList.contains('disabled')) return; const action = targetLi.dataset.action; const studentId = timelineContextMenu.dataset.studentId; const year = parseInt(timelineContextMenu.dataset.year); const month = parseInt(timelineContextMenu.dataset.month); const student = students.find(s => s.id === studentId); if (!student) return; let customChartConfig = null; switch (action) { case 'focus-chart-on-month': customChartConfig = { labels: evaluationCategories.map(c => c.currentLabel), datasets: getChartDataForStudent(student, 'focus_month_category_avg', year, month).datasets, title: `Μ.Ο. Κατηγοριών - ${monthNamesShort[month]} ${year}` }; updatePerformanceChart(student, customChartConfig); performanceChartContainer.scrollIntoView({ behavior: 'smooth' }); break; case 'compare-current-vs-previous-month-chart': customChartConfig = { labels: evaluationCategories.map(c => c.currentLabel), datasets: getChartDataForStudent(student, 'compare_months_category_avg', year, month).datasets, title: `Σύγκριση: ${monthNamesShort[month]} ${year} vs Προηγούμενος` }; updatePerformanceChart(student, customChartConfig); performanceChartContainer.scrollIntoView({ behavior: 'smooth' }); break; case 'view-monthly-average-trend-chart': const trendChartData = getChartDataForStudent(student, 'monthly_overall_avg_trend', year, month); customChartConfig = { labels: trendChartData.labels, datasets: trendChartData.datasets, title: `Ετήσια Εξέλιξη Γενικού Μ.Ο.`, type: 'line' }; updatePerformanceChart(student, customChartConfig); performanceChartContainer.scrollIntoView({ behavior: 'smooth' }); break; case 'edit-latest-obs-in-month': const obsInMonth = student.observations.filter(obs => new Date(obs.date).getFullYear() === year && new Date(obs.date).getMonth() === month).sort((a, b) => new Date(b.date) - new Date(a.date)); if (obsInMonth.length > 0) { editObservationHandler(student.id, obsInMonth[0].id); } else { alert('Δεν βρέθηκαν παρατηρήσεις για επεξεργασία.'); } break; } hideTimelineContextMenu(); }); });
+            function openTimelineModal(type, data) { timelineModalBody.innerHTML = ''; switch (type) { case 'month_summary': timelineModalTitle.textContent = `Περίληψη Μήνα (${monthNamesShort[data.month]} ${data.year}) - ${data.student.name}`; const obsInMonth = data.student.observations.filter(obs => { const d = new Date(obs.date); return d.getFullYear() === data.year && d.getMonth() === data.month; }).sort((a, b) => new Date(a.date) - new Date(b.date)); if (obsInMonth.length > 0) { let summaryHtml = `<p>Βρέθηκαν ${obsInMonth.length} παρατηρήσεις:</p><ul style="max-height: 200px; overflow-y:auto;">`; obsInMonth.forEach(obs => { summaryHtml += `<li style="margin-bottom:5px; font-size:0.9em;">${formatDate(obs.date)} - Μ.Ο.: ${obs.averageScore} <button class="observation-action-btn edit-btn" data-obs-id="${obs.id}" style="font-size:0.7rem; padding:0.2rem 0.4rem; margin-left:5px;">Επεξ.</button></li>`; }); summaryHtml += `</ul>`; timelineModalBody.innerHTML = summaryHtml; timelineModalBody.querySelectorAll('.edit-btn[data-obs-id]').forEach(btn => { btn.addEventListener('click', () => { editObservationHandler(data.student.id, btn.dataset.obsId); timelineInteractionModal.style.display = 'none'; }); }); } else { timelineModalBody.innerHTML = `<p>Καμία παρατήρηση για αυτόν τον μήνα.</p>`; } break; } timelineInteractionModal.style.display = 'block'; }
+            timelineModalCloseBtn.addEventListener('click', () => { timelineInteractionModal.style.display = 'none'; });
+            window.addEventListener('click', (event) => { if (event.target == timelineInteractionModal) { timelineInteractionModal.style.display = 'none'; } });
+            addStudentBtn.addEventListener('click', () => { currentStudentId = null; renderStudentList(); switchToStudentForm(); yearTimelineSection.style.display = 'none'; });
+            cancelNewStudentBtn.addEventListener('click', () => { studentFormContainer.classList.remove('active'); editingStudentIdInput.value = ''; if (!currentStudentId) { welcomeMessageDiv.style.display = 'block'; observationFormContainer.classList.remove('active'); yearTimelineSection.style.display = 'none'; } else { displayStudentDetails(currentStudentId); } });
+            saveNewStudentBtn.addEventListener('click', () => { const name = studentNameInput.value.trim(); const studentClass = studentClassInput.value.trim(); if (!name) { alert('Το όνομα του μαθητή είναι υποχρεωτικό.'); return; } const studentIdToSave = editingStudentIdInput.value; if (studentIdToSave) { const student = students.find(s => s.id === studentIdToSave); if (student) { student.name = name; student.class = studentClass; } } else { const newStudent = { id: generateId(), name, class: studentClass, observations: [], overallAverage: 0 }; students.push(newStudent); currentStudentId = newStudent.id; } saveDataToLocalStorage(); renderStudentList(); if (currentStudentId) displayStudentDetails(currentStudentId); else welcomeMessageDiv.style.display = 'block'; studentFormContainer.classList.remove('active'); editingStudentIdInput.value = ''; });
+            saveObservationBtn.addEventListener('click', () => { if (!currentStudentId) { alert('Επιλέξτε πρώτα έναν μαθητή.'); return; } const student = students.find(s => s.id === currentStudentId); if (!student) return; if (!observationDatetimeInput.value) { alert('Η ημερομηνία και ώρα είναι υποχρεωτική.'); return; } const observationData = { id: currentObservationIdInput.value || generateId(), date: observationDatetimeInput.value, physical: {}, behavioral: {}, notes: generalNotesTextarea.value.trim() }; evaluationCategories.forEach(cat => { const selectInput = document.getElementById(cat.id); if (selectInput && selectInput.value !== "") { if (!observationData[cat.group]) observationData[cat.group] = {}; observationData[cat.group][cat.id] = selectInput.value; } }); observationData.averageScore = calculateObservationAverage(observationData); const existingObsIndex = student.observations.findIndex(obs => obs.id === observationData.id); if (existingObsIndex > -1 && currentObservationIdInput.value) { student.observations[existingObsIndex] = observationData; } else { student.observations.push(observationData); } student.overallAverage = calculateStudentOverallAverage(student); saveDataToLocalStorage(); displayStudentDetails(student.id); alert('Η παρατήρηση αποθηκεύτηκε!'); });
+            clearObservationFormBtn.addEventListener('click', () => { setupObservationForm('new'); });
+            searchInput.addEventListener('input', (e) => { const searchTerm = e.target.value.toLowerCase(); const filtered = students.filter(student => student.name.toLowerCase().includes(searchTerm) || (student.class && student.class.toLowerCase().includes(searchTerm)) || (student.observations && student.observations.some(obs => obs.notes && obs.notes.toLowerCase().includes(searchTerm)))); renderStudentList(filtered); });
+            saveAllToLsBtn.addEventListener('click', () => { saveDataToLocalStorage(); saveCategories(); alert('Όλα τα δεδομένα και οι κατηγορίες αποθηκεύτηκαν.'); });
+            exportDataBtn.addEventListener('click', () => { if (students.length === 0 && evaluationCategories.length === 0) { alert('Δεν υπάρχουν δεδομένα για εξαγωγή.'); return; } let textOutput = "Δεδομένα Παρατηρήσεων Μαθητών\n=============================\n\n"; textOutput += "Κατηγορίες Αξιολόγησης:\n"; evaluationCategories.forEach(cat => { textOutput += `- ${cat.currentLabel} (ID: ${cat.id}, Group: ${cat.group}, Default: ${cat.defaultLabel})\n`; }); textOutput += "\n\n"; students.forEach(student => { textOutput += `Μαθητής: ${student.name} (Τάξη: ${student.class || 'N/A'}) - Συνολικός Μ.Ο.: ${student.overallAverage || 'N/A'}\n`; if (student.observations && student.observations.length > 0) { student.observations.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(obs => { textOutput += `  Παρατήρηση (${formatDate(obs.date)} - Μ.Ο.: ${obs.averageScore || 'N/A'}):\n`; let physicalDetails = []; let behavioralDetails = []; evaluationCategories.forEach(cat => { let val = (obs[cat.group] && obs[cat.group][cat.id]) ? obs[cat.group][cat.id] : '-'; const labelPart = cat.currentLabel.split(' ')[0]; if (cat.group === 'physical') physicalDetails.push(`${labelPart}:${val}`); else if (cat.group === 'behavioral') behavioralDetails.push(`${labelPart}:${val}`); }); textOutput += `    Φυσική Κατάσταση: ${physicalDetails.join(', ')}\n`; textOutput += `    Συμπεριφορά: ${behavioralDetails.join(', ')}\n`; textOutput += `    Σημειώσεις: ${obs.notes || 'Καμία'}\n`; }); } else { textOutput += "  Καμία παρατήρηση.\n"; } textOutput += "\n"; }); const dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(textOutput); const dl = document.createElement('a'); dl.setAttribute("href", dataStr); dl.setAttribute("download", "student_observations_data.txt"); document.body.appendChild(dl); dl.click(); dl.remove(); });
+            clearAllDataBtn.addEventListener('click', () => { if (confirm('Είστε σίγουροι ότι θέλετε να διαγράψετε ΟΛΑ τα δεδομένα ΚΑΙ τις προσαρμοσμένες κατηγορίες; Αυτή η ενέργεια δεν αναιρείται.')) { students = []; currentStudentId = null; localStorage.removeItem('studentsData'); localStorage.removeItem('evaluationCategories'); loadCategories(); renderObservationFormFields(); renderStudentList(); studentDetailView.classList.remove('active'); studentFormContainer.classList.remove('active'); welcomeMessageDiv.style.display = 'block'; if (performanceChartInstance) { performanceChartInstance.destroy(); performanceChartInstance = null; } performanceChartContainer.style.display = 'none'; chartOptionsContainer.style.display = 'none'; editStudentDetailsBtn.style.display = 'none'; yearTimelineSection.style.display = 'none'; alert('Όλα τα δεδομένα και οι κατηγορίες διαγράφηκαν. Οι κατηγορίες επανήλθαν στις προεπιλογές.'); } });
+
+            loadCategories();
+            renderObservationFormFields();
+            loadDataFromLocalStorage();
+            renderStudentList();
+            if (!currentStudentId) {
+                welcomeMessageDiv.style.display = 'block';
+                performanceChartContainer.style.display = 'none';
+                chartOptionsContainer.style.display = 'none';
+                editStudentDetailsBtn.style.display = 'none';
+                yearTimelineSection.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
