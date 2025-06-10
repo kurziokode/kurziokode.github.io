@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Έλεγχος Άδειας</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #licenseForm {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        button {
+            font-size: 16px;
+            padding: 8px;
+            margin: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="licenseForm">
+        <h2>Εισαγωγή Κωδικού Άδειας</h2>
+        <input type="text" id="licenseInput" placeholder="License Key" required />
+        <button type="submit">Έλεγχος Άδειας</button>
+    </form>
+
+    <script>
+    const _0x545794 = _0xbac9; (function (_0x3388bc, _0x462698) { const _0x5aeed5 = _0xbac9, _0x1674ca = _0x3388bc(); while (!![]) { try { const _0x1de474 = -parseInt(_0x5aeed5(0x1a3)) / 0x1 + parseInt(_0x5aeed5(0x194)) / 0x2 * (parseInt(_0x5aeed5(0x19a)) / 0x3) + parseInt(_0x5aeed5(0x19f)) / 0x4 * (-parseInt(_0x5aeed5(0x196)) / 0x5) + -parseInt(_0x5aeed5(0x1aa)) / 0x6 + -parseInt(_0x5aeed5(0x1a7)) / 0x7 * (parseInt(_0x5aeed5(0x1ab)) / 0x8) + -parseInt(_0x5aeed5(0x1ac)) / 0x9 + parseInt(_0x5aeed5(0x1ae)) / 0xa * (parseInt(_0x5aeed5(0x198)) / 0xb); if (_0x1de474 === _0x462698) break; else _0x1674ca['push'](_0x1674ca['shift']()); } catch (_0x583a3b) { _0x1674ca['push'](_0x1674ca['shift']()); } } }(_0x47b3, 0x2194f)); function _0xbac9(_0x1cbd44, _0x1d1a66) { const _0x47b39c = _0x47b3(); return _0xbac9 = function (_0xbac947, _0x169cdb) { _0xbac947 = _0xbac947 - 0x18f; let _0x18b171 = _0x47b39c[_0xbac947]; return _0x18b171; }, _0xbac9(_0x1cbd44, _0x1d1a66); } const FIREBASE_DB_URL = _0x545794(0x195); function _0x47b3() { const _0x3ae144 = ['1027448lDDfNu', '1544670FmuMwC', 'setItem', '10YxbMhP', 'Σφάλμα:', '❌\x20Πρόβλημα\x20πρόσβασης\x20ή\x20άκυρος\x20κωδικός\x20άδειας.', '❌\x20Αυτή\x20η\x20άδεια\x20χρησιμοποιείται\x20ήδη\x20σε\x20άλλη\x20συσκευή.', 'deviceId', 'getElementById', 'value', 'error', '98886EhXaKH', 'https://blackboard-license-default-rtdb.europe-west1.firebasedatabase.app/licenses', '1325815PkhZyk', 'Παρακαλώ\x20εισάγετε\x20κωδικό\x20άδειας.', '11309639XbGhbL', 'stringify', '3DeYgot', 'location', 'href', 'getItem', '❌\x20Ο\x20κωδικός\x20άδειας\x20δεν\x20υπάρχει.', '4KxMwBP', 'trim', 'licenseKey', 'json', '181285qAiOzM', '.json', '⚠️\x20Σφάλμα\x20σύνδεσης\x20ή\x20επικοινωνίας\x20με\x20τον\x20διακομιστή.', 'licenseForm', '7pTGzxn', 'addEventListener', 'PATCH', '1161192HCILvL']; _0x47b3 = function () { return _0x3ae144; }; return _0x47b3(); } document[_0x545794(0x191)](_0x545794(0x1a6))[_0x545794(0x1a8)]('submit', async function (_0x32fcbe) { const _0x982290 = _0x545794; _0x32fcbe['preventDefault'](); const _0x2952c6 = document[_0x982290(0x191)]('licenseInput')[_0x982290(0x192)][_0x982290(0x1a0)](); if (!_0x2952c6) { alert(_0x982290(0x197)); return; } const _0x2df57d = localStorage[_0x982290(0x19d)](_0x982290(0x190)) || crypto['randomUUID'](); localStorage[_0x982290(0x1ad)](_0x982290(0x190), _0x2df57d); try { const _0x1a5be7 = await fetch(FIREBASE_DB_URL + '/' + _0x2952c6 + _0x982290(0x1a4)); if (!_0x1a5be7['ok']) { alert(_0x982290(0x1b0)); return; } const _0x3736f2 = await _0x1a5be7[_0x982290(0x1a2)](); if (!_0x3736f2) { alert(_0x982290(0x19e)); return; } if (_0x3736f2[_0x982290(0x190)] && _0x3736f2[_0x982290(0x190)] !== _0x2df57d) { alert(_0x982290(0x18f)); return; } await fetch(FIREBASE_DB_URL + '/' + _0x2952c6 + _0x982290(0x1a4), { 'method': _0x982290(0x1a9), 'headers': { 'Content-Type': 'application/json' }, 'body': JSON[_0x982290(0x199)]({ 'deviceId': _0x2df57d, 'active': !![] }) }), sessionStorage[_0x982290(0x1ad)]('licenseValid', 'true'), sessionStorage[_0x982290(0x1ad)](_0x982290(0x1a1), _0x2952c6), window[_0x982290(0x19b)][_0x982290(0x19c)] = 'index.html'; } catch (_0x147c8e) { console[_0x982290(0x193)](_0x982290(0x1af), _0x147c8e), alert(_0x982290(0x1a5)); } });
+    </script>
+    
+</body>
+
+</html>

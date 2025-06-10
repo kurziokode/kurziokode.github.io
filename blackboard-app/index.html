@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pngegg.png" type=""> 
+    <title>Μαυροπίνακας</title>
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #c37903;
+            /* Orange/Gold Accent */
+            --primary-hover: #a06301;
+            --action-color: #2f9b01;
+            /* Green for main actions */
+            --action-hover: #267c01;
+            --danger-color: #a40114;
+            --danger-hover: #840110;
+            --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            --bg-color: #1a202c;
+            /* Dark Blue/Gray Background */
+            --card-bg: #131720;
+            /* Lighter Card Background */
+            --text-color: #bcc9dc;
+            /* Light Gray Text */
+            --text-light: #94a3b8;
+            /* Lighter Text/Secondary */
+            --border-color: #4a5568;
+            /* Border Color */
+            --sidebar-bg: #1a202c;
+            --sidebar-text: #bcc9dc;
+            --sidebar-active-text: #0f172a;
+            --sidebar-hover-bg: #131720;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        html,
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            margin: 0;
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        .app-container {
+            display: flex;
+            height: 100%;
+        }
+
+        #sidebar {
+            width: 260px;
+            height: 100vh;
+            background-color: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+            border-right: 1px solid transparent;
+            box-shadow: var(--shadow);
+        }
+
+        #sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            color: #bcc9dc;
+            padding: 1.5rem 1.2rem;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
+        }
+
+        #sidebar-nav {
+            list-style: none;
+            padding: 0.5rem 0;
+            margin: 0;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        #sidebar-nav a {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            margin: 0.25rem 0.75rem;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        #sidebar-nav a:hover {
+            background-color: var(--sidebar-hover-bg);
+        }
+
+        #sidebar-nav a.active {
+            background-color: var(--primary-color);
+            color: var(--sidebar-active-text);
+        }
+
+        #sidebar-nav a i {
+            margin-right: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-footer {
+            padding: 1rem;
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--text-light);
+            border-top: 1px solid transparent;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
+        }
+
+        .main-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            height: 100%;
+            transition: margin-left 0.3s ease-in-out;
+            width: 100%;
+        }
+
+        #top-nav {
+            background-color: transparent;
+            padding: 0.75rem 1.5rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid transparent;
+            z-index: 10;
+            flex-shrink: 0;
+        }
+
+        #top-nav-left,
+        #top-nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #menu-toggle {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        #datetime-display {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* DEFINITIVE LAYOUT FIX */
+        #main-section {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 1.5rem;
+            overflow: hidden;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid transparent;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-container {
+            position: relative;
+            flex-grow: 1;
+            min-height: 0;
+        }
+
+        /* Critical for flexbox children */
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #bcc9dc !important;
+            background-color: var(--action-color);
+        }
+
+        .btn:hover {
+            background-color: var(--action-hover);
+            transform: scale(0.97);
+        }
+
+        .btn.btn-danger {
+            background-color: var(--danger-color);
+        }
+
+        .btn.btn-danger:hover {
+            background-color: var(--danger-hover);
+        }
+
+        .btn.btn-accent {
+            background-color: var(--primary-color);
+        }
+
+        .btn.btn-accent:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--text-light);
+            color: var(--bg-color) !important;
+        }
+
+        /* --- Add this rule for input fields --- */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            width: 100%; /* Make them take full width by default */
+            outline: none;
+        }
+
+        .instructions {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            background-color: var(--bg-color);
+            padding: 0.75rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .tab-button {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        #sidebar-overlay,
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+        }
+
+        #sidebar-overlay.active,
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.3s;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-container {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            width: 95%;
+            height: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s;
+        }
+
+        .modal-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .modal-close-btn {
+            font-size: 1.75rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        .modal-body {
+            flex-grow: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #sidebar {
+                transform: translateX(0);
+            }
+
+            .main-content-wrapper {
+                margin-left: 260px;
+                width: calc(100% - 260px);
+            }
+
+            #menu-toggle {
+                display: none;
+            }
+
+            #sidebar-overlay.active {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                overflow-y: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        if (sessionStorage.getItem("licenseValid") !== "true") {
+            window.location.href = "license.html";
+        }
+    </script>    
+    <div id="sidebar-overlay"></div>
+    <div class="app-container">
+        <aside id="sidebar">
+            <div class="sidebar-header">Μαυροπίνακας</div>
+            <nav id="sidebar-nav">
+                <a href="#" class="nav-link active" data-modal="dashboard"><i class="fas fa-home"></i> Αρχική</a>
+                <a href="#" class="nav-link" data-modal="organization"><i class="fas fa-sitemap"></i> Οργάνωση</a>
+                <a href="#" class="nav-link" data-modal="planning"><i class="fas fa-calendar-alt"></i>
+                    Προγραμματισμός</a>
+                <a href="#" class="nav-link" data-modal="evaluation"><i class="fas fa-user-graduate"></i> Αξιολόγηση</a>
+                <a href="#" class="nav-link" data-modal="quizzes"><i class="fas fa-question-circle"></i> Κουίζ</a>
+                <a href="#" class="nav-link" data-modal="tools"><i class="fas fa-tools"></i> Εργαλεία</a>
+                <a href="#" class="nav-link" data-modal="data"><i class="fas fa-database"></i> Δεδομένα & Αναφορές</a>
+            </nav>
+            <div class="sidebar-footer" id="copyright-footer"></div>
+        </aside>
+        <div class="main-content-wrapper">
+            <nav id="top-nav">
+                <div id="top-nav-left">
+                    <button id="menu-toggle" style="display: block;"><i class="fas fa-bars"></i></button>
+                    <select id="class-switcher" class="btn"
+                        style="padding: 0.5rem 1rem; background: var(--bg-color); color: var(--text-color); border: 1px solid var(--border-color);"></select>
+                </div>
+                <div id="top-nav-right">
+                    <div id="datetime-display"></div><button id="logoutBtn" class="button button-footer" style="margin-bottom: 10px;">Αποσύνδεση</button>
+                </div>
+            </nav>
+            <main id="main-section">
+                <div id="dashboard-view" class="dashboard-grid">
+                    <!-- Content generated by JS -->
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Modal container -->
+    <div id="app-modal" class="modal-overlay no-print">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title"></h2><button class="modal-close-btn">×</button>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+        </div>
+    </div>  
+    <script src="script.js"></script>  
+    <script>
+    const _0x347e52 = _0x30e3; function _0x30e3(_0x12696d, _0x2c750a) { const _0x36428b = _0x3642(); return _0x30e3 = function (_0x30e3f2, _0x49e9be) { _0x30e3f2 = _0x30e3f2 - 0x140; let _0xdd861b = _0x36428b[_0x30e3f2]; return _0xdd861b; }, _0x30e3(_0x12696d, _0x2c750a); } function _0x3642() { const _0x531b8f = ['79515rkRSJs', '88ckpMsN', 'logoutBtn', 'clear', '511070wPGDIt', '24aXTGfM', 'deviceId', '9968ORBeFw', '15936410atKGfR', 'error', 'license.html', '176067uhbSlP', 'href', '1430Idhwrh', 'click', '399245YKJJNe', 'getElementById', '1860360QarAON', '.json', 'https://blackboard-license-default-rtdb.europe-west1.firebasedatabase.app/licenses', 'licenseKey', 'getItem', 'Σφάλμα\x20κατά\x20το\x20logout:', 'location']; _0x3642 = function () { return _0x531b8f; }; return _0x3642(); } (function (_0x1e26dc, _0x1e9fc6) { const _0x27bf52 = _0x30e3, _0x214a97 = _0x1e26dc(); while (!![]) { try { const _0x145ccc = parseInt(_0x27bf52(0x157)) / 0x1 + parseInt(_0x27bf52(0x140)) / 0x2 * (-parseInt(_0x27bf52(0x146)) / 0x3) + -parseInt(_0x27bf52(0x142)) / 0x4 * (parseInt(_0x27bf52(0x148)) / 0x5) + -parseInt(_0x27bf52(0x14c)) / 0x6 + -parseInt(_0x27bf52(0x14a)) / 0x7 + parseInt(_0x27bf52(0x154)) / 0x8 * (parseInt(_0x27bf52(0x153)) / 0x9) + parseInt(_0x27bf52(0x143)) / 0xa; if (_0x145ccc === _0x1e9fc6) break; else _0x214a97['push'](_0x214a97['shift']()); } catch (_0x48bd41) { _0x214a97['push'](_0x214a97['shift']()); } } }(_0x3642, 0x6601d)); const FIREBASE_DB_URL = _0x347e52(0x14e); async function logout() { const _0x2c25d6 = _0x347e52, _0x262f52 = sessionStorage[_0x2c25d6(0x150)](_0x2c25d6(0x14f)), _0x545459 = localStorage[_0x2c25d6(0x150)](_0x2c25d6(0x141)); if (!_0x262f52 || !_0x545459) { sessionStorage['clear'](), window[_0x2c25d6(0x152)]['href'] = _0x2c25d6(0x145); return; } try { await fetch(FIREBASE_DB_URL + '/' + _0x262f52 + _0x2c25d6(0x14d), { 'method': 'PATCH', 'headers': { 'Content-Type': 'application/json' }, 'body': JSON['stringify']({ 'deviceId': null, 'active': ![] }) }); } catch (_0x28a0ec) { console[_0x2c25d6(0x144)](_0x2c25d6(0x151), _0x28a0ec); } sessionStorage[_0x2c25d6(0x156)](), window['location'][_0x2c25d6(0x147)] = 'license.html'; } document[_0x347e52(0x14b)](_0x347e52(0x155))['addEventListener'](_0x347e52(0x149), logout);
+    </script>    
+</body>
+
+</html>
