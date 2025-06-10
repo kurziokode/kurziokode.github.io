@@ -410,11 +410,7 @@
 </head>
 
 <body>
-    <script>
-        if (sessionStorage.getItem("licenseValid") !== "true") {
-            window.location.href = "license.html";
-        }
-    </script>    
+ 
     <div id="sidebar-overlay"></div>
     <div class="app-container">
         <aside id="sidebar">
@@ -439,7 +435,7 @@
                         style="padding: 0.5rem 1rem; background: var(--bg-color); color: var(--text-color); border: 1px solid var(--border-color);"></select>
                 </div>
                 <div id="top-nav-right">
-                    <div id="datetime-display"></div><button id="logoutBtn" class="button button-footer" style="margin-bottom: 10px;">Αποσύνδεση</button>
+                    <div id="datetime-display"></div>
                 </div>
             </nav>
             <main id="main-section">
@@ -459,9 +455,7 @@
         </div>
     </div>  
     <script src="script.js"></script>  
-    <script>
-    const _0x347e52 = _0x30e3; function _0x30e3(_0x12696d, _0x2c750a) { const _0x36428b = _0x3642(); return _0x30e3 = function (_0x30e3f2, _0x49e9be) { _0x30e3f2 = _0x30e3f2 - 0x140; let _0xdd861b = _0x36428b[_0x30e3f2]; return _0xdd861b; }, _0x30e3(_0x12696d, _0x2c750a); } function _0x3642() { const _0x531b8f = ['79515rkRSJs', '88ckpMsN', 'logoutBtn', 'clear', '511070wPGDIt', '24aXTGfM', 'deviceId', '9968ORBeFw', '15936410atKGfR', 'error', 'license.html', '176067uhbSlP', 'href', '1430Idhwrh', 'click', '399245YKJJNe', 'getElementById', '1860360QarAON', '.json', 'https://blackboard-license-default-rtdb.europe-west1.firebasedatabase.app/licenses', 'licenseKey', 'getItem', 'Σφάλμα\x20κατά\x20το\x20logout:', 'location']; _0x3642 = function () { return _0x531b8f; }; return _0x3642(); } (function (_0x1e26dc, _0x1e9fc6) { const _0x27bf52 = _0x30e3, _0x214a97 = _0x1e26dc(); while (!![]) { try { const _0x145ccc = parseInt(_0x27bf52(0x157)) / 0x1 + parseInt(_0x27bf52(0x140)) / 0x2 * (-parseInt(_0x27bf52(0x146)) / 0x3) + -parseInt(_0x27bf52(0x142)) / 0x4 * (parseInt(_0x27bf52(0x148)) / 0x5) + -parseInt(_0x27bf52(0x14c)) / 0x6 + -parseInt(_0x27bf52(0x14a)) / 0x7 + parseInt(_0x27bf52(0x154)) / 0x8 * (parseInt(_0x27bf52(0x153)) / 0x9) + parseInt(_0x27bf52(0x143)) / 0xa; if (_0x145ccc === _0x1e9fc6) break; else _0x214a97['push'](_0x214a97['shift']()); } catch (_0x48bd41) { _0x214a97['push'](_0x214a97['shift']()); } } }(_0x3642, 0x6601d)); const FIREBASE_DB_URL = _0x347e52(0x14e); async function logout() { const _0x2c25d6 = _0x347e52, _0x262f52 = sessionStorage[_0x2c25d6(0x150)](_0x2c25d6(0x14f)), _0x545459 = localStorage[_0x2c25d6(0x150)](_0x2c25d6(0x141)); if (!_0x262f52 || !_0x545459) { sessionStorage['clear'](), window[_0x2c25d6(0x152)]['href'] = _0x2c25d6(0x145); return; } try { await fetch(FIREBASE_DB_URL + '/' + _0x262f52 + _0x2c25d6(0x14d), { 'method': 'PATCH', 'headers': { 'Content-Type': 'application/json' }, 'body': JSON['stringify']({ 'deviceId': null, 'active': ![] }) }); } catch (_0x28a0ec) { console[_0x2c25d6(0x144)](_0x2c25d6(0x151), _0x28a0ec); } sessionStorage[_0x2c25d6(0x156)](), window['location'][_0x2c25d6(0x147)] = 'license.html'; } document[_0x347e52(0x14b)](_0x347e52(0x155))['addEventListener'](_0x347e52(0x149), logout);
-    </script>    
+ 
 </body>
 
 </html>
