@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Portfolio Framework",
+    "image": "https://picsum.photos/seed/project1/400/300",
+    "description": "Ένας δυναμικός σκελετός για τη δημιουργία προσωπικών portfolios, χτισμένος με vanilla JavaScript για μέγιστη ταχύτητα.",
+    "tags": ["HTML", "CSS Grid", "JavaScript", "SPA"],
+    "liveUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "E-commerce UI Concept",
+    "image": "https://picsum.photos/seed/project2/400/300",
+    "description": "Σχεδιασμός ενός μοντέρνου και καθαρού User Interface για μια πλατφόρμα ηλεκτρονικού εμπορίου, με έμφαση στην εμπειρία χρήστη.",
+    "tags": ["UI/UX", "Figma", "CSS Flexbox"],
+    "liveUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "title": "Data Visualization Dashboard",
+    "image": "https://picsum.photos/seed/project3/400/300",
+    "description": "Ένα διαδραστικό dashboard για την οπτικοποίηση δεδομένων σε πραγματικό χρόνο, χρησιμοποιώντας σύγχρονες βιβλιοθήκες JavaScript.",
+    "tags": ["JavaScript", "APIs", "Charts.js"],
+    "liveUrl": "#",
+    "repoUrl": "#"
+  }
+]
