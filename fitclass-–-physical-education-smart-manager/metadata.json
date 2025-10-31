@@ -1,0 +1,7 @@
+{
+  "name": "FitClass – Physical Education Smart Manager",
+  "description": "A comprehensive, AI-powered web application for physical education teachers to manage classes, track student performance, generate activities, and engage with parents.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
