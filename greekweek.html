@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="el">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Εβδομαδιαίο Πρόγραμμα Μαθημάτων (5ήμερο)</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #000000;
+            --muted: #555
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            padding: 20px 15px
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08)
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0 0 8px;
+            text-align: center;
+            color: var(--muted)
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+            text-align: center;
+            color: var(--muted)
+        }
+
+        p.lead {
+            color: var(--muted);
+            text-align: center;
+            margin: 0 0 20px;
+            font-size: 15px
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px
+        }
+
+        th {
+            background: #f8f9fa;
+            padding: 14px 10px;
+            text-align: center;
+            font-weight: 600;
+            border: 2px solid #333
+        }
+
+        td {
+            border: 1px solid #333;
+            padding: 18px 10px;
+            text-align: center;
+            vertical-align: middle;
+            min-height: 60px;
+            font-size: 15px
+        }
+
+        td.period {
+            background: #f0f7ff;
+            font-weight: bold;
+            font-size: 18px;
+            color: #1e40af
+        }
+
+        td[contenteditable] {
+            cursor: text;
+            outline: none
+        }
+
+        td[contenteditable]:empty::before {
+            content: "(κλικ για μάθημα)";
+            color: #999;
+            font-style: italic
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 20px 0
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 0 8px;
+            font-size: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        #printBtn {
+            background: #2563eb;
+            color: white
+        }
+
+        #printBtn:hover {
+            background: #1d4ed8
+        }
+
+        #clearBtn {
+            background: #dc2626;
+            color: white
+        }
+
+        #clearBtn:hover {
+            background: #b91c1c
+        }
+
+        #exportBtn {
+            background: #16a34a;
+            color: white
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white
+            }
+
+            .wrap {
+                box-shadow: none;
+                max-width: none
+            }
+
+            .buttons {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Εβδομαδιαίο Πρόγραμμα Μαθημάτων</h1>
+        <h2>ΤΜΗΜΑ ΕΝΤΑΞΗΣ</h2>
+        <p style="text-align: center; font-weight: bold">ΕΚΠΑΙΔΕΥΤΙΚΟΣ: ΠΑΝΑΓΙΩΤΑ ΒΛΑΧΟΥ</p>
+       
+
+        <table id="scheduleTable">
+            <thead>
+                <tr>
+                    <th style="width:80px">Ώρα</th>
+                    <th>Δευτέρα</th>
+                    <th>Τρίτη</th>
+                    <th>Τετάρτη</th>
+                    <th>Πέμπτη</th>
+                    <th>Παρασκευή</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="buttons">
+            <button id="printBtn">Εκτύπωση / Αποθήκευση σε PDF</button>
+            <button id="exportBtn">Εξαγωγή JSON (backup)</button>
+            <button id="clearBtn">Καθαρισμός Όλων</button>
+            <input id="importFile" type="file" accept="application/json" style="display:none">
+        </div>
+    </div>
+
+    <script>
+        const tbody = document.querySelector('#scheduleTable tbody');
+        const STORAGE_KEY = 'programma-5imero-v2';
+
+        const periods = [1, 2, 3, 4, 5, 6];
+
+        function createEmptySchedule() {
+            return periods.map(n => ({ period: n, cells: Array(5).fill('') })); // 5 days only
+        }
+
+        function render(data) {
+            tbody.innerHTML = '';
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                const tdPeriod = document.createElement('td');
+                tdPeriod.className = 'period';
+                tdPeriod.textContent = row.period + 'η';
+                tr.appendChild(tdPeriod);
+
+                row.cells.forEach((content, i) => {
+                    const td = document.createElement('td');
+                    td.contentEditable = true;
+                    td.innerHTML = content;
+                    td.addEventListener('input', () => {
+                        data.find(r => r.period === row.period).cells[i] = td.innerHTML;
+                        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                    });
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+            tbody.scheduleData = data;
+        }
+
+        // Φόρτωση από localStorage
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            try { render(JSON.parse(saved)); }
+            catch (e) { render(createEmptySchedule()); }
+        } else {
+            render(createEmptySchedule());
+        }
+
+        // Εκτύπωση → PDF
+        document.getElementById('printBtn').addEventListener('click', () => {
+            window.print();
+        });
+
+        // Εξαγωγή JSON (για backup)
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            const data = tbody.scheduleData || createEmptySchedule();
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'πρόγραμμα-5ημερο.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        // Καθαρισμός
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            if (confirm('Σίγουρα θέλετε να σβήσετε ΟΛΟ το πρόγραμμα;')) {
+                const empty = createEmptySchedule();
+                render(empty);
+                localStorage.removeItem(STORAGE_KEY);
+            }
+        });
+
+        // Αυτόματη αποθήκευση πριν φύγει ο χρήστης
+        window.addEventListener('beforeunload', () => {
+            if (tbody.scheduleData) localStorage.setItem(STORAGE_KEY, JSON.stringify(tbody.scheduleData));
+        });
+    </script>
+</body>
+
+</html>
