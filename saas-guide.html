@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SaaS Roadmap Assistant 🚀</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PrismJS for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .sidebar {
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #334155;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        pre {
+            margin-top: 0 !important;
+            border-radius: 0 0 0.5rem 0.5rem !important;
+        }
+
+        .check-box {
+            accent-color: #10b981;
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+        }
+
+        .step-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body class="flex">
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="sidebar w-64 bg-slate-900 border-r border-slate-800 hidden md:block p-6">
+        <h1 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-8">
+            SaaS Builder 🛠️
+        </h1>
+        <ul class="space-y-4 text-sm font-medium text-slate-400">
+            <li><a href="#quick-links" class="hover:text-white flex items-center gap-2">🔗 Quick Links</a></li>
+            <li><a href="#phase-1" class="hover:text-white flex items-center gap-2">1️⃣ Setup & Install</a></li>
+            <li><a href="#phase-2" class="hover:text-white flex items-center gap-2">2️⃣ Environment Vars</a></li>
+            <li><a href="#phase-3" class="hover:text-white flex items-center gap-2">3️⃣ Firebase Config</a></li>
+            <li><a href="#phase-4" class="hover:text-white flex items-center gap-2">4️⃣ Backend API</a></li>
+            <li><a href="#phase-5" class="hover:text-white flex items-center gap-2">5️⃣ Frontend Logic</a></li>
+            <li><a href="#phase-6" class="hover:text-white flex items-center gap-2">6️⃣ Firestore Rules</a></li>
+            <li><a href="#phase-7" class="hover:text-white flex items-center gap-2">7️⃣ Deployment</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 p-8 md:p-12 max-w-5xl mx-auto">
+
+        <header class="mb-12">
+            <h2 class="text-4xl font-extrabold text-white mb-4">The Master Plan</h2>
+            <p class="text-slate-400 text-lg">
+                Μετατροπή Local React Apps σε Production Ready SaaS με Next.js, Firebase, Gemini & Stripe.
+            </p>
+        </header>
+
+        <!-- QUICK LINKS -->
+        <section id="quick-links" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            <a href="https://console.firebase.google.com/" target="_blank"
+                class="bg-amber-500/10 hover:bg-amber-500/20 text-amber-500 border border-amber-500/20 p-4 rounded-xl text-center transition">
+                🔥 Firebase Console
+            </a>
+            <a href="https://aistudio.google.com/" target="_blank"
+                class="bg-blue-500/10 hover:bg-blue-500/20 text-blue-500 border border-blue-500/20 p-4 rounded-xl text-center transition">
+                🤖 Google AI Studio
+            </a>
+            <a href="https://dashboard.stripe.com/test/dashboard" target="_blank"
+                class="bg-purple-500/10 hover:bg-purple-500/20 text-purple-500 border border-purple-500/20 p-4 rounded-xl text-center transition">
+                💳 Stripe Dashboard
+            </a>
+            <a href="https://vercel.com/dashboard" target="_blank"
+                class="bg-white/10 hover:bg-white/20 text-white border border-white/20 p-4 rounded-xl text-center transition">
+                ▲ Vercel Dashboard
+            </a>
+        </section>
+
+        <!-- PHASE 1: SETUP -->
+        <section id="phase-1" class="step-card">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-white">Phase 1: Project Initialization</h3>
+                <input type="checkbox" class="check-box">
+            </div>
+            <p class="text-slate-400 mb-4">Άνοιξε το terminal και τρέξε τα παρακάτω.</p>
+
+            <div class="mb-4">
+                <div class="code-header">Terminal</div>
+                <pre><code class="language-bash">npx create-next-app@latest my-saas-app
+# Options: TS:Yes, ESLint:Yes, Tailwind:Yes, AppRouter:Yes
+
+cd my-saas-app
+npm install firebase firebase-admin @google/generative-ai stripe @stripe/stripe-js recharts clsx tailwind-merge</code></pre>
+            </div>
+        </section>
+
+        <!-- PHASE 2: ENV VARS -->
+        <section id="phase-2" class="step-card">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-white">Phase 2: Environment Variables</h3>
+                <input type="checkbox" class="check-box">
+            </div>
+            <div class="bg-red-500/10 border border-red-500/20 text-red-200 p-4 rounded-lg mb-6 text-sm">
+                ⚠️ <strong>ΠΡΟΣΟΧΗ:</strong> Το <code>FIREBASE_PRIVATE_KEY</code> πρέπει να μπει σε εισαγωγικά " " και
+                να περιλαμβάνει όλο το κείμενο από το JSON.
+            </div>
+
+            <div class="mb-4">
+                <div class="code-header">📄 .env.local</div>
+                <pre><code class="language-env"># --- PUBLIC (Frontend) ---
+NEXT_PUBLIC_FIREBASE_API_KEY=...
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=...
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# --- PRIVATE (Backend) ---
+GEMINI_API_KEY=...
+STRIPE_SECRET_KEY=...
+STRIPE_WEBHOOK_SECRET=... 
+
+# --- FIREBASE ADMIN ---
+FIREBASE_CLIENT_EMAIL=...
+FIREBASE_PRIVATE_KEY="..."</code></pre>
+            </div>
+            <button onclick="copyToClipboard(this)"
+                class="text-xs bg-slate-700 hover:bg-slate-600 text-white px-3 py-1 rounded">Copy Template</button>
+        </section>
+
+        <!-- PHASE 3: FIREBASE -->
+        <section id="phase-3" class="step-card">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-white">Phase 3: Firebase Config</h3>
+                <input type="checkbox" class="check-box">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="text-green-400 font-bold mb-2">Frontend (Client)</h4>
+                    <div class="code-header">📁 lib/firebase.ts</div>
+                    <pre><code class="language-typescript">import { initializeApp, getApps, getApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  // ...other keys
+};
+
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const googleProvider = new GoogleAuthProvider();</code></pre>
+                </div>
+
+                <div>
+                    <h4 class="text-red-400 font-bold mb-2">Backend (Admin)</h4>
+                    <div class="code-header">📁 lib/firebase-admin.ts</div>
+                    <pre><code class="language-typescript">import { initializeApp, getApps, cert, getApp } from "firebase-admin/app";
+import { getFirestore } from "firebase-admin/firestore";
+import { getAuth } from "firebase-admin/auth";
+
+const serviceAccount = {
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+  // Fix for Vercel line breaks
+  privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+};
+
+const adminApp = !getApps().length 
+  ? initializeApp({ credential: cert(serviceAccount) }) 
+  : getApp();
+
+export const adminDb = getFirestore(adminApp);
+export const adminAuth = getAuth(adminApp);</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHASE 4: BACKEND API -->
+        <section id="phase-4" class="step-card">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-white">Phase 4: Backend API Logic</h3>
+                <input type="checkbox" class="check-box">
+            </div>
+            <p class="text-slate-400 mb-4">Ο κώδικας που ελέγχει τα limits, το AI και τις πληρωμές.</p>
+
+            <div class="mb-8">
+                <div class="code-header">
+                    <span>📁 app/api/ai-action/route.ts</span>
+                    <button onclick="copyCode('ai-route')"
+                        class="text-xs bg-blue-600 px-2 py-1 rounded text-white">Copy</button>
+                </div>
+                <pre><code id="ai-route" class="language-typescript">import { GoogleGenerativeAI } from "@google/generative-ai";
+import { adminDb, adminAuth } from "@/lib/firebase-admin";
+import { NextResponse } from "next/server";
+import { FieldValue } from "firebase-admin/firestore";
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+const FREE_LIMIT = 5;
+
+export async function POST(req: Request) {
+  try {
+    // 1. SECURITY: Verify Token
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader?.startsWith("Bearer ")) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const token = authHeader.split("Bearer ")[1];
+    const decodedToken = await adminAuth.verifyIdToken(token);
+    const userId = decodedToken.uid;
+
+    const { prompt, contextData, action } = await req.json();
+
+    // 2. DB CHECK
+    const userRef = adminDb.collection("users").doc(userId);
+    const userSnap = await userRef.get();
+
+    if (!userSnap.exists) {
+      await userRef.set({ isPro: false, usageCount: 0, lastUsageDate: new Date().toISOString() });
+    }
+
+    const userData = userSnap.exists ? userSnap.data() : { isPro: false, usageCount: 0 };
+    
+    // 3. RESET COUNTER (Daily)
+    const lastDate = new Date(userData?.lastUsageDate);
+    const today = new Date();
+    if (lastDate.getDate() !== today.getDate()) {
+       await userRef.update({ usageCount: 0, lastUsageDate: today.toISOString() });
+       if(userData) userData.usageCount = 0;
+    }
+
+    // 4. FEATURE GATING
+    if (action === 'PREMIUM_FEATURE' && !userData?.isPro) {
+        return NextResponse.json({ error: "PREMIUM_ONLY" }, { status: 403 });
+    }
+    if (!userData?.isPro && (userData?.usageCount || 0) >= FREE_LIMIT) {
+      return NextResponse.json({ error: "LIMIT_REACHED" }, { status: 403 });
+    }
+
+    // 5. CALL AI
+    const modelName = userData?.isPro ? "gemini-1.5-pro" : "gemini-1.5-flash";
+    const model = genAI.getGenerativeModel({ model: modelName });
+    const result = await model.generateContent(`User: ${prompt} \n Context: ${JSON.stringify(contextData)}`);
+    const text = result.response.text();
+
+    // 6. INCREMENT
+    if (!userData?.isPro) {
+      await userRef.update({ usageCount: FieldValue.increment(1) });
+    }
+
+    return NextResponse.json({ result: text, isPro: userData?.isPro });
+
+  } catch (error) {
+    return NextResponse.json({ error: "Internal Error" }, { status: 500 });
+  }
+}</code></pre>
+            </div>
+
+            <div class="mb-4">
+                <div class="code-header">
+                    <span>📁 app/api/webhooks/stripe/route.ts</span>
+                    <button onclick="copyCode('stripe-webhook')"
+                        class="text-xs bg-blue-600 px-2 py-1 rounded text-white">Copy</button>
+                </div>
+                <pre><code id="stripe-webhook" class="language-typescript">import { headers } from "next/headers";
+import { NextResponse } from "next/server";
+import Stripe from "stripe";
+import { adminDb } from "@/lib/firebase-admin";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: "2023-10-16" });
+const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+
+export async function POST(req: Request) {
+  const body = await req.text();
+  const signature = headers().get("stripe-signature") as string;
+  let event: Stripe.Event;
+
+  try {
+    event = stripe.webhooks.constructEvent(body, signature, endpointSecret);
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message }, { status: 400 });
+  }
+
+  if (event.type === "checkout.session.completed") {
+    const session = event.data.object as Stripe.Checkout.Session;
+    const userId = session.metadata?.userId;
+    if (userId) {
+      await adminDb.collection("users").doc(userId).update({ isPro: true, plan: "premium" });
+    }
+  }
+  return NextResponse.json({ received: true });
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- PHASE 5: FRONTEND -->
+        <section id="phase-5" class="step-card">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-white">Phase 5: Frontend Integration</h3>
+                <input type="checkbox" class="check-box">
+            </div>
+            <p class="text-slate-400 mb-4">Εδώ ενσωματώνεις το Local App σου.</p>
+
+            <div class="mb-4">
+                <div class="code-header">
+                    <span>📁 components/Dashboard.tsx</span>
+                </div>
+                <pre><code class="language-tsx">// Critical Function to call AI securely
+const callAI = async () => {
+    if (!auth.currentUser) return;
+    const token = await auth.currentUser.getIdToken(); // <--- THE KEY
+
+    const res = await fetch("/api/ai-action", {
+        method: "POST",
+        headers: { "Authorization": `Bearer ${token}` },
+        body: JSON.stringify({ 
+            prompt: "My Prompt", 
+            action: "BASIC_OR_PREMIUM",
+            contextData: { ... } 
+        }),
+    });
+    // Handle 403 errors (Upsell opportunity)
+};</code></pre>
+            </div>
+        </section>
+
+        <!-- PHASE 6: FIRESTORE RULES -->
+        <section id="phase-6" class="step-card">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-white">Phase 6: Security Rules</h3>
+                <input type="checkbox" class="check-box">
+            </div>
+            <div class="code-header">🔥 Firestore Rules</div>
+            <pre><code class="language-js">rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if false; // Only Admin SDK writes here!
+    }
+  }
+}</code></pre>
+        </section>
+
+        <!-- PHASE 7: DEPLOYMENT -->
+        <section id="phase-7" class="step-card">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-white">Phase 7: Go Live</h3>
+                <input type="checkbox" class="check-box">
+            </div>
+            <ul class="list-decimal pl-6 space-y-3 text-slate-300">
+                <li>Ανέβασμα στο <strong>GitHub</strong>.</li>
+                <li>Import στο <strong>Vercel</strong>.</li>
+                <li>Copy/Paste τα <strong>Environment Variables</strong> (Προσοχή στο Private Key!).</li>
+                <li><strong>Deploy</strong>.</li>
+                <li>Πάρε το URL (π.χ. <code>myapp.vercel.app</code>).</li>
+                <li>Πήγαινε Stripe -> Webhooks -> Add Endpoint: <code>/api/webhooks/stripe</code>.</li>
+                <li>Πάρε το Secret και βάλτο στο Vercel Env Vars.</li>
+                <li><strong>Redeploy</strong>.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script>
+        function copyCode(id) {
+            const code = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(code);
+            alert("Code copied!");
+        }
+        function copyToClipboard(btn) {
+            const code = btn.previousElementSibling.innerText;
+            navigator.clipboard.writeText(code);
+            btn.innerText = "Copied!";
+            setTimeout(() => btn.innerText = "Copy Template", 2000);
+        }
+    </script>
+</body>
+
+</html>
