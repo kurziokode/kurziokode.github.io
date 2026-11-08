@@ -1,655 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>PE Chris DLS</title>
-	
-
-    <link rel="stylesheet" href="">
-    <style>
-        body,
-        html {
-	  overflow-x: auto;
-            font-family: Arial, sans-serif;
-            background: url('') repeat #0b0c0e;
-            color: #5b5757;
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            width: 100vw;
-        }
-
-   
-          table {
-    width: 99%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    margin-inline-start: 6px; /* Space on the left */
-    margin-inline-end: 14px; /* Space on the right */
-}
-
-
-
-        th,
-        td {
-            border: 2px solid #000;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #1a0000;
-            font-weight: bold;
-        }
-
-        tr:nth-child(even) {
-            background-color: transparent;
-        }
-
-        tr:hover {
-            background-color: #1a0000;
-        }
-
-        @media screen and (max-width: 600px) {
-
-            table,
-            thead,
-            tbody,
-            th,
-            td,
-            tr {
-                display: block;
-            }
-
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-
-            tr {
-                margin-bottom: 10px;
-            }
-
-            td {
-                border: none;
-                position: relative;
-                padding-left: 50%;
-            }
-
-            td:before {
-                position: absolute;
-                top: 6px;
-                left: 6px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-                content: attr(data-label);
-                font-weight: bold;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div style="text-align: center;">
-        <h1 style="color: #660000;">Προγραμματισμός</h1><br>
-        <h3><span style="color: #660000;">Φυσική Αγωγή&nbsp;&nbsp;&nbsp;<em>2024-25</em></span>&nbsp;&nbsp;&nbsp;Χρήστος Δούλος</h3><br>
-
-    </div>
-
-    <!-- partial:index.partial.html -->
-    <table border="1" id="editable-table" style="color: rgb(92, 92, 92);">
-        <tr>
-            <th>ΕΒΔΟΜΑΔΕΣ</th>
-            <th>Α' <em>&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;Ώρες</em></th>
-            <th>Β' <em>&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;Ώρες</em></th>
-            <th>Γ' <em>&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;Ώρες</em></th>
-            <th>Δ' <em>&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;Ώρες</em></th>
-            <th>Ε' <em>&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;Ώρες</em></th>
-            <th>ΣΤ' <em>&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;Ώρες</em></th>
-        </tr>
-        <tr style="background-color: #060607;">
-            <td data-label="3rd Grade" style="text-align:center;"><span style="color: #650101;"><b>1ο ΤΡΙΜΗΝΟ</b></span><em>&nbsp;&nbsp;* 13</em></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="6th Grade"></td>
-        </tr>
-        <tr>
-            <td>Sep 9-15, 2024 </td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Καλαθοσφαίριση</td>
-            <td data-label="6th Grade">Καλαθοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Sep 16-22, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Καλαθοσφαίριση</td>
-            <td data-label="6th Grade">Καλαθοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Sep 23-29, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Στίβος</td>
-            <td data-label="6th Grade">Στίβος</td>
-        </tr>
-        <tr>
-            <td>Sep 30-Oct 6, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Στίβος</td>
-            <td data-label="6th Grade">Στίβος</td>
-        </tr>
-        <tr>
-            <td>Oct 7-13, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Στίβος</td>
-            <td data-label="6th Grade">Στίβος</td>
-        </tr>
-        <tr>
-            <td>Oct 14-20, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Καλαθοσφαίριση</td>
-            <td data-label="6th Grade">Καλαθοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Oct 21-27, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Καλαθοσφαίριση</td>
-            <td data-label="6th Grade">Καλαθοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Oct 28-Nov 3, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Καλαθοσφαίριση</td>
-            <td data-label="6th Grade">Καλαθοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Nov 4-10, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Στίβος</td>
-            <td data-label="6th Grade">Στίβος</td>
-        </tr>
-        <tr>
-            <td>Nov 11-17, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Στίβος</td>
-            <td data-label="6th Grade">Στίβος</td>
-        </tr>
-        <tr>
-            <td>Nov 18-24, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Στίβος</td>
-            <td data-label="6th Grade">Στίβος</td>
-        </tr>
-        <tr>
-            <td>Nov 25-Dec 1, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Ελληνικοί χοροί</td>
-            <td data-label="6th Grade">Ελληνικοί χοροί</td>
-        </tr>
-        <tr>
-            <td>Dec 2-8, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Ελληνικοί χοροί</td>
-            <td data-label="6th Grade">Ελληνικοί χοροί</td>
-        </tr>
-
-        <tr style="background-color: #060607;">
-            <td data-label="3rd Grade" style="text-align:center;"><span style="color: #650101;"><b>2ο ΤΡΙΜΗΝΟ</b></span><em>&nbsp;&nbsp;* 11</em></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="6th Grade"></td>
-
-        </tr>
-        <tr>
-            <td>Dec 9-15, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Χειροσφαίριση</td>
-            <td data-label="6th Grade">Χειροσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Dec 16-22, 2024</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Χειροσφαίριση</td>
-            <td data-label="6th Grade">Χειροσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Dec 23-29, 2024 <span style="color: #1a6600;">&nbsp;&nbsp;&nbsp;&nbsp;* Διακοπές Χριστουγέννων</span>
-            </td>
-            <td data-label="1st Grade">🔒</td>
-            <td data-label="2nd Grade"></td>
-            <td data-label="3rd Grade"></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-        </tr>
-        <tr>
-            <td>Dec 30, 2024-Jan 5, 2025 <span style="color: #1a6600;">&nbsp;&nbsp;&nbsp;&nbsp;* Διακοπές
-                    Χριστουγέννων</span></td>
-            <td data-label="1st Grade">🔒</td>
-            <td data-label="2nd Grade"></td>
-            <td data-label="3rd Grade"></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-        </tr>
-        <tr>
-            <td>Jan 6-12, 2025</td>
-            <td data-label="1st Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ελληνικοί χοροί</td>
-            <td data-label="6th Grade">Ελληνικοί χοροί</td>
-        </tr>
-        <tr>
-            <td>Jan 13-19, 2025</td>
-            <td data-label="1st Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ελληνικοί χοροί</td>
-            <td data-label="6th Grade">Ελληνικοί χοροί</td>
-        </tr>
-        <tr>
-            <td>Jan 20-26, 2025</td>
-            <td data-label="1st Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Χειροσφαίριση</td>
-            <td data-label="6th Grade">Χειροσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Jan 27-Feb 2, 2025</td>
-            <td data-label="1st Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Χειροσφαίριση</td>
-            <td data-label="6th Grade">Χειροσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Feb 3-9, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Μουσικοκινητική</td>
-            <td data-label="3rd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Χειροσφαίριση</td>
-            <td data-label="6th Grade">Χειροσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Feb 10-16, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ελληνικοί χοροί</td>
-            <td data-label="6th Grade">Ελληνικοί χοροί</td>
-        </tr>
-        <tr>
-            <td>Feb 17-23, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ελληνικοί χοροί</td>
-            <td data-label="6th Grade">Ελληνικοί χοροί</td>
-        </tr>
-        <tr>
-            <td>Feb 24-Mar 2, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Γυμναστική</td>
-            <td data-label="6th Grade">Γυμναστική</td>
-        </tr>
-        <tr>
-            <td>Mar 3-9, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Μουσικοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Γυμναστική</td>
-            <td data-label="6th Grade">Γυμναστική</td>
-        </tr>
-
-        <tr style="background-color: #060607;">
-            <td data-label="3rd Grade" style="text-align:center;"><span style="color: #650101;"><b>3ο ΤΡΙΜΗΝΟ</b></span><em>&nbsp;&nbsp;* 12</em></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="6th Grade"></td>
-
-        </tr>
-        <tr>
-            <td>Mar 10-16, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ποδόσφαιρο</td>
-            <td data-label="6th Grade">Ποδόσφαιρο</td>
-        </tr>
-        <tr>
-            <td>Mar 17-23, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ποδόσφαιρο</td>
-            <td data-label="6th Grade">Ποδόσφαιρο</td>
-        </tr>
-        <tr>
-            <td>Mar 24-30, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Γυμναστική</td>
-            <td data-label="6th Grade">Γυμναστική</td>
-        </tr>
-        <tr>
-            <td>Mar 31-Apr 6, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Πετοσφαίριση</td>
-            <td data-label="6th Grade">Πετοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Apr 7-13, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="2nd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="3rd Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Πετοσφαίριση</td>
-            <td data-label="6th Grade">Πετοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>Apr 14-20, 2025 <span style="color: #1a6600;">&nbsp;&nbsp;&nbsp;&nbsp;* Διακοπές Πάσχα</span></td>
-            <td data-label="1st Grade">🔒</td>
-            <td data-label="2nd Grade"></td>
-            <td data-label="3rd Grade"></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-        </tr>
-        <tr>
-            <td>Apr 21-27, 2025 <span style="color: #1a6600;">&nbsp;&nbsp;&nbsp;&nbsp;* Διακοπές Πάσχα</span></td>
-            <td data-label="1st Grade">🔒</td>
-            <td data-label="2nd Grade"></td>
-            <td data-label="3rd Grade"></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-        </tr>
-        <tr>
-            <td>Apr 28-May 4, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Γυμναστική</td>
-            <td data-label="6th Grade">Γυμναστική</td>
-        </tr>
-        <tr>
-            <td>May 5-11, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td>
-            <td data-label="5th Grade">Πετοσφαίριση</td>
-            <td data-label="6th Grade">Πετοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>May 12-18, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Πετοσφαίριση</td>
-            <td data-label="6th Grade">Πετοσφαίριση</td>
-        </tr>
-        <tr>
-            <td>May 19-25, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ποδόσφαιρο</td>
-            <td data-label="6th Grade">Ποδόσφαιρο</td>
-        </tr>
-        <tr>
-            <td>May 26-Jun 1, 2025</td>
-            <td data-label="1st Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="2nd Grade">Ψυχοκινητική&nbsp;&nbsp;Αγωγή</td>
-            <td data-label="3rd Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="4th Grade">Ψυχοκινητική / Ελληνικοί χοροί</td>
-            <td data-label="5th Grade">Ποδόσφαιρο</td>
-            <td data-label="6th Grade">Ποδόσφαιρο</td>
-        </tr>
-        <tr>
-            <td>Jun 2-8, 2025</td>
-            <td data-label="1st Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="2nd Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="3rd Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="4th Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="5th Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="6th Grade">Αγώνες / Αθλητική Ημέρα</td>
-        </tr>
-        <tr>
-            <td>Jun 9-15, 2025</td>
-            <td data-label="1st Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="2nd Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="3rd Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="4th Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="5th Grade">Αγώνες / Αθλητική Ημέρα</td>
-            <td data-label="6th Grade">Αγώνες / Αθλητική Ημέρα</td>
-        </tr>
-
-        <tr style="background-color: #060607;">
-            <td data-label="3rd Grade"></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="6th Grade"></td>
-
-        </tr>
-        <tr style="background-color: #1a0000;">
-            <td><span><b>ΣΥΝΟΛΟ ΩΡΩΝ</b></span></td>
-            <td data-label="1st Grade"><b>108</b></td>
-            <td data-label="2nd Grade"><b>108</b></td>
-            <td data-label="3rd Grade"><b>108</b></td>
-            <td data-label="4th Grade"><b>108</b></td>
-            <td data-label="5th Grade"><b>72</b></td>
-            <td data-label="6th Grade"><b>72</b></td>
-        </tr>
-        <tr style="background-color: #0b0c0e;">
-            <td data-label="3rd Grade"></td>
-            <td data-label="4th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="5th Grade"></td>
-            <td data-label="6th Grade"></td>
-            <td data-label="6th Grade"></td>
-        
-        </tr>
-
-    </table>
-    <!-- partial -->
-    <script>
-        // Function to generate unique IDs for cells
-        function generateCellId(row, col, grade) {
-            return `cell-${row}-${col}-${grade}`;
-        }
-
-        // Function to update cell content
-        function updateCellContent(cellId, newValue) {
-            const cell = document.getElementById(cellId);
-            cell.textContent = newValue;
-            localStorage.setItem(cellId, newValue);
-        }
-
-        // Function to edit cell content
-        function editCell(event) {
-            const cell = event.target;
-            const cellId = cell.id;
-
-            // Clear cell content and show input field
-            cell.innerHTML = '';
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.value = localStorage.getItem(cellId);
-            input.style.width = '100%';
-            input.style.border = 'none';
-            input.style.padding = '0';
-            input.style.margin = '0';
-            input.style.fontSize = '14px';
-
-            cell.appendChild(input);
-
-            // Focus on the input field
-            input.focus();
-
-            // Listen for Enter key press
-            input.addEventListener('keypress', function (e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    updateCellContent(cellId, input.value);
-                    input.remove();
-                }
-            });
-        }
-
-        // Initialize the table
-        const table = document.getElementById('editable-table');
-        const rows = table.getElementsByTagName('tr');
-
-        // Add event listeners to all cells
-        for (let row = 0; row < rows.length; row++) {
-            const cells = rows[row].getElementsByTagName('td');
-            for (let col = 0; col < cells.length; col++) {
-                const cell = cells[col];
-                const cellId = generateCellId(row, col, cell.dataset.label);
-                cell.id = cellId;
-                cell.addEventListener('click', editCell);
-            }
-        }
-
-        // Load saved data from localStorage
-        function loadDataFromLocalStorage() {
-            const cells = table.getElementsByTagName('td');
-            for (let cell of cells) {
-                const cellId = cell.id;
-                const savedValue = localStorage.getItem(cellId);
-                if (savedValue) {
-                    cell.textContent = savedValue;
-                }
-            }
-        }
-
-        // Initial load
-        loadDataFromLocalStorage();
-    </script>
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-</body>
-
-</html>
+<html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PE Chris DLS</title>
+<style>
+:root{--bg:#f6f7f4;--fg:#1d2a24;--mut:#5d6b63;--line:#d5dbd4;--head:#1f4d3a;--headfg:#fff;--tri:#dfeadf;--hol:#eceee9;--games:#fff3d6}
+@media(prefers-color-scheme:dark){:root{--bg:#131a16;--fg:#e4ebe6;--mut:#9aa8a0;--line:#2c3932;--head:#2d6b50;--headfg:#fff;--tri:#1d2c24;--hol:#1a221e;--games:#3a3217}}
+*{box-sizing:border-box}
+body{margin:0;padding:24px 16px 48px;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1{margin:0 0 4px;font-size:1.9rem}h2{margin:0 0 20px;font-size:1.05rem;font-weight:500;color:var(--mut)}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:1100px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{position:sticky;top:0;background:var(--head);color:var(--headfg);border-bottom:0}
+thead small{display:block;font-weight:400;opacity:.85}
+tbody th[scope=row]{white-space:nowrap;font-weight:600}
+tbody th span{font-weight:400;color:var(--mut)}
+tr.tri th{background:var(--tri);font-size:1rem}tr.tri th span{font-weight:400}
+tr.hol{background:var(--hol)}tr.games{background:var(--games)}
+tfoot td,tfoot th{font-weight:700;border-bottom:0}
+</style></head><body>
+<h1>Προγραμματισμός</h1>
+<h2>Φυσική Αγωγή 2026-27 · Χρήστος Δούλος</h2>
+<div class="wrap"><table>
+<thead><tr><th>ΕΒΔΟΜΑΔΕΣ</th><th>Α' <small>3 Ώρες</small></th><th>Β' <small>3 Ώρες</small></th><th>Γ' <small>3 Ώρες</small></th><th>Δ' <small>3 Ώρες</small></th><th>Ε' <small>2 Ώρες</small></th><th>ΣΤ' <small>2 Ώρες</small></th></tr></thead>
+<tbody>
+<tr class="tri"><th colspan="7">1ο ΤΡΙΜΗΝΟ <span>* 13</span></th></tr>
+<tr><th scope="row">Sep 7-13, 2026</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Καλαθοσφαίριση</td><td>Καλαθοσφαίριση</td></tr>
+<tr><th scope="row">Sep 14-20, 2026</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Καλαθοσφαίριση</td><td>Καλαθοσφαίριση</td></tr>
+<tr><th scope="row">Sep 21-27, 2026</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Στίβος</td><td>Στίβος</td></tr>
+<tr><th scope="row">Sep 28-Oct 4, 2026</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Στίβος</td><td>Στίβος</td></tr>
+<tr><th scope="row">Oct 5-11, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Στίβος</td><td>Στίβος</td></tr>
+<tr><th scope="row">Oct 12-18, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Καλαθοσφαίριση</td><td>Καλαθοσφαίριση</td></tr>
+<tr><th scope="row">Oct 19-25, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Καλαθοσφαίριση</td><td>Καλαθοσφαίριση</td></tr>
+<tr><th scope="row">Oct 26-Nov 1, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Καλαθοσφαίριση</td><td>Καλαθοσφαίριση</td></tr>
+<tr><th scope="row">Nov 2-8, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Στίβος</td><td>Στίβος</td></tr>
+<tr><th scope="row">Nov 9-15, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Στίβος</td><td>Στίβος</td></tr>
+<tr><th scope="row">Nov 16-22, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Στίβος</td><td>Στίβος</td></tr>
+<tr><th scope="row">Nov 23-29, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td></tr>
+<tr><th scope="row">Nov 30-Dec 6, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td></tr>
+<tr class="tri"><th colspan="7">2ο ΤΡΙΜΗΝΟ <span>* 11</span></th></tr>
+<tr><th scope="row">Dec 7-13, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Χειροσφαίριση</td><td>Χειροσφαίριση</td></tr>
+<tr><th scope="row">Dec 14-20, 2026</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Χειροσφαίριση</td><td>Χειροσφαίριση</td></tr>
+<tr class="hol"><th scope="row">Dec 21-27, 2026 <span>* Διακοπές Χριστουγέννων</span></th><td colspan="6">🔒</td></tr>
+<tr class="hol"><th scope="row">Dec 28, 2026-Jan 3, 2027 <span>* Διακοπές Χριστουγέννων</span></th><td colspan="6">🔒</td></tr>
+<tr><th scope="row">Jan 4-10, 2027</th><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td></tr>
+<tr><th scope="row">Jan 11-17, 2027</th><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td></tr>
+<tr><th scope="row">Jan 18-24, 2027</th><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Χειροσφαίριση</td><td>Χειροσφαίριση</td></tr>
+<tr><th scope="row">Jan 25-31, 2027</th><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Χειροσφαίριση</td><td>Χειροσφαίριση</td></tr>
+<tr><th scope="row">Feb 1-7, 2027</th><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Ψυχοκινητική / Μουσικοκινητική</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Χειροσφαίριση</td><td>Χειροσφαίριση</td></tr>
+<tr><th scope="row">Feb 8-14, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td></tr>
+<tr><th scope="row">Feb 15-21, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td><td>Ελληνικοί χοροί</td></tr>
+<tr><th scope="row">Feb 22-28, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Γυμναστική</td><td>Γυμναστική</td></tr>
+<tr><th scope="row">Mar 1-7, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Μουσικοκινητική / Ελληνικοί χοροί</td><td>Γυμναστική</td><td>Γυμναστική</td></tr>
+<tr class="tri"><th colspan="7">3ο ΤΡΙΜΗΝΟ <span>* 12</span></th></tr>
+<tr><th scope="row">Mar 8-14, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Ποδόσφαιρο</td><td>Ποδόσφαιρο</td></tr>
+<tr><th scope="row">Mar 15-21, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Ποδόσφαιρο</td><td>Ποδόσφαιρο</td></tr>
+<tr><th scope="row">Mar 22-28, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Γυμναστική</td><td>Γυμναστική</td></tr>
+<tr><th scope="row">Mar 29-Apr 4, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Πετοσφαίριση</td><td>Πετοσφαίριση</td></tr>
+<tr><th scope="row">Apr 5-11, 2027</th><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Αθλοπαιδιές & Στίβος / Ελληνικοί χοροί</td><td>Πετοσφαίριση</td><td>Πετοσφαίριση</td></tr>
+<tr><th scope="row">Apr 12-18, 2027</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Γυμναστική</td><td>Γυμναστική</td></tr>
+<tr><th scope="row">Apr 19-25, 2027</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Ψυχοκινητική / Αθλοπαιδιές & Στίβος</td><td>Πετοσφαίριση</td><td>Πετοσφαίριση</td></tr>
+<tr class="hol"><th scope="row">Apr 26-May 2, 2027 <span>* Διακοπές Πάσχα</span></th><td colspan="6">🔒</td></tr>
+<tr class="hol"><th scope="row">May 3-9, 2027 <span>* Διακοπές Πάσχα</span></th><td colspan="6">🔒</td></tr>
+<tr><th scope="row">May 10-16, 2027</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Πετοσφαίριση</td><td>Πετοσφαίριση</td></tr>
+<tr><th scope="row">May 17-23, 2027</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ποδόσφαιρο</td><td>Ποδόσφαιρο</td></tr>
+<tr><th scope="row">May 24-30, 2027</th><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική Αγωγή</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ψυχοκινητική / Ελληνικοί χοροί</td><td>Ποδόσφαιρο</td><td>Ποδόσφαιρο</td></tr>
+<tr class="games"><th scope="row">May 31-Jun 6, 2027</th><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td></tr>
+<tr class="games"><th scope="row">Jun 7-13, 2027</th><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td><td>Αγώνες / Αθλητική Ημέρα</td></tr>
+</tbody>
+<tfoot><tr><th>ΣΥΝΟΛΟ ΩΡΩΝ</th><td>108</td><td>108</td><td>108</td><td>108</td><td>72</td><td>72</td></tr></tfoot>
+</table></div>
+</body></html>
